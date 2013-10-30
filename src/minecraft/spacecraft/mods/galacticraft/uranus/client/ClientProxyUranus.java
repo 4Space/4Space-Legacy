@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.core.client;
+package spacecraft.mods.galacticraft.uranus.client;
 
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
@@ -48,81 +48,48 @@ import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 
-import spacecraft.mods.galacticraft.core.CommonProxySCCore;
-import spacecraft.mods.galacticraft.core.SCCoreConfigManager;
-import spacecraft.mods.galacticraft.core.SpacecraftCore;
-import spacecraft.mods.galacticraft.core.client.fx.SCCoreEntityDropParticleFX;
-import spacecraft.mods.galacticraft.core.client.model.SCCoreModelSpaceshipTier3;
-import spacecraft.mods.galacticraft.core.client.render.item.SCCoreItemRendererSpaceshipT3;
-import spacecraft.mods.galacticraft.core.client.sounds.SCCoreSounds;
-import spacecraft.mods.galacticraft.core.entities.SCCoreEntityRocketT3;
-import spacecraft.mods.galacticraft.core.items.SCCoreItems;
+import spacecraft.mods.galacticraft.uranus.CommonProxyUranus;
+import spacecraft.mods.galacticraft.uranus.GCUranus;
+import spacecraft.mods.galacticraft.uranus.dimension.GCUranusWorldProvider;
 
-public class ClientProxySCCore extends CommonProxySCCore
+public class ClientProxyUranus extends CommonProxyUranus
 {
     private static int eggRenderID;
     private static int treasureRenderID;
     
     public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
     
-    public static Map<String, String> capeMap = new HashMap<String, String>();
-    
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(new SCCoreSounds());
+//        MinecraftForge.EVENT_BUS.register(new GCSaturnSounds());
     }
     
     @Override
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), SpacecraftCore.CHANNEL, Side.CLIENT);
-        ClientProxySCCore.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
-
-        //Blue Cape
-        String capeBlueString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeBlue.png";
-        //Green Cape
-        String capeGreenString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeGreen.png";
-        //Orange Cape
-        String capeOrangeString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeOrange.png";
-        //Red Cape
-        String capeRedString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeRed.png";
-        //Violet Cape
-        String capeVioletString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeViolet.png";
-        //Yellow Cape
-        String capeYellowString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeYellow.png";
-
-        ClientProxyCore.capeMap.put("mattparks", capeOrangeString);     
-        ClientProxyCore.capeMap.put("flashy3", capeOrangeString); 
-        ClientProxyCore.capeMap.put("ghostheart305", capeRedString); 
-        ClientProxyCore.capeMap.put("langjam350roxsox", capeBlueString); 
-        ClientProxyCore.capeMap.put("_Ja1m3", capeRedString); 
-        ClientProxyCore.capeMap.put("dinammar", capeVioletString); 
-        ClientProxyCore.capeMap.put("goldenkat99", capeOrangeString); 
-        ClientProxyCore.capeMap.put("imac123456", capeOrangeString); 
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCUranus.CHANNEL, Side.CLIENT);
+        ClientProxyUranus.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
     }
 
     @Override
     public void registerRenderInformation()
     {
-        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/spacecraftvenus/models/cargoRocket.obj");
-        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT3.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier3(), SpacecraftCore.TEXTURE_DOMAIN, "rocketT3"));
         RenderingRegistry.addNewArmourRendererPrefix("gem");
-        MinecraftForgeClient.registerItemRenderer(SCCoreItems.spaceship.itemID, new SCCoreItemRendererSpaceshipT3(cargoRocketModel));
     }
 
 
     @Override
     public int getEggRenderID()
     {
-        return ClientProxySCCore.eggRenderID;
+        return ClientProxyUranus.eggRenderID;
     }
 
     @Override
     public int getTreasureRenderID()
     {
-        return ClientProxySCCore.treasureRenderID;
+        return ClientProxyUranus.treasureRenderID;
     }
 
 
@@ -219,9 +186,11 @@ public class ClientProxySCCore extends CommonProxySCCore
             {
                 if (world != null)
                 {
+                    if (world.provider instanceof GCUranusWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
+                            world.provider.setSkyRenderer(new GCUranusSkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -236,13 +205,9 @@ public class ClientProxySCCore extends CommonProxySCCore
 
                         if (e != null)
                         {
-                            if (e instanceof SCCoreEntityRocketT3)
                             {
-                                final SCCoreEntityRocketT3 eship = (SCCoreEntityRocketT3) e;
 
-                                if (eship.rocketSoundUpdater == null)
                                 {
-                                    eship.rocketSoundUpdater = new GCCoreSoundUpdaterSpaceship(FMLClientHandler.instance().getClient().sndManager, eship, FMLClientHandler.instance().getClient().thePlayer);
                                 }
                             }
                         }
@@ -259,7 +224,7 @@ public class ClientProxySCCore extends CommonProxySCCore
         @Override
         public String getLabel()
         {
-            return "Galacticraft Venus Client";
+            return "Galacticraft Saturn Client";
         }
 
         @Override
