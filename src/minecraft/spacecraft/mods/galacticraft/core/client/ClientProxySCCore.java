@@ -81,17 +81,17 @@ public class ClientProxySCCore extends CommonProxySCCore
         ClientProxySCCore.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
 
         //Blue Cape
-        String capeBlueString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeBlue.png";
+        String capeBlueString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeBlue.png";
         //Green Cape
-        String capeGreenString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeGreen.png";
+        String capeGreenString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeGreen.png";
         //Orange Cape
-        String capeOrangeString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeOrange.png";
+        String capeOrangeString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeOrange.png";
         //Red Cape
-        String capeRedString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeRed.png";
+        String capeRedString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeRed.png";
         //Violet Cape
-        String capeVioletString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeViolet.png";
+        String capeVioletString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeViolet.png";
         //Yellow Cape
-        String capeYellowString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeYellow.png";
+        String capeYellowString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeYellow.png";
 
         ClientProxyCore.capeMap.put("mattparks", capeBlueString);     
         ClientProxyCore.capeMap.put("flashy3", capeOrangeString); 
@@ -100,6 +100,7 @@ public class ClientProxySCCore extends CommonProxySCCore
         ClientProxyCore.capeMap.put("_Ja1m3", capeRedString); 
         ClientProxyCore.capeMap.put("dinammar", capeVioletString); 
         ClientProxyCore.capeMap.put("goldenkat99", capeOrangeString); 
+        ClientProxyCore.capeMap.put("imac123456", capeOrangeString); 
     }
 
     @Override
