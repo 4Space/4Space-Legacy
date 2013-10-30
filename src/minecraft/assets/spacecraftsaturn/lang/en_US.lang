@@ -1,0 +1,18 @@
+# Starcraft Saturn Language File = UNITED STATES ENGLISH
+
+# GENERAL ITEMS
+
+# ITEMS
+
+# TOOLS
+
+# ARMOR
+
+# BLOCKS
+
+# ENTITYS
+
+# GUI
+gui.choosePlanet.desc.saturn=Gas Giant#*No Surface#Gravity: 106%
+
+dimension.Saturn.name=Saturn

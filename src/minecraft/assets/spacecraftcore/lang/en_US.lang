@@ -1,0 +1,39 @@
+# Starcraft Core Language File = UNITED STATES ENGLISH
+
+# GENERAL ITEMS
+item.tier3.desc=Tier 3
+
+# ITEMS
+item.ingotGem.name=Gem Ingot
+item.itemGem.name=Gem
+item.redGemPlate.name=Red Gem Plate
+item.venusPlate.name=Venus Plate
+item.engine.tier2booster.name=Tier 2 Rocket Booster
+item.engine.tier3engine.name=Tier 3 Rocket Engine
+item.spaceshipTier3.name=Tier 3 Rocket
+item.plateHeavyT3.name=Heavy-Duty Plate
+
+# TOOLS
+item.gemPick.name=Gem Pickaxe
+item.gemAxe.name=Gem Axe
+item.gemHoe.name=Gem Hoe
+item.gemSpade.name=Gem Shovel
+item.gemSword.name=Gem Sword
+
+# ARMOR
+item.gemHelmet.name=Gem Helmet
+item.gemChestplate.name=Gem Chestplate
+item.gemLeggings.name=Gem Leggings
+item.gemBoots.name=Gem Boots
+
+# BLOCKS
+
+# GUI
+itemGroup.spacecraftCoreTab=Spacecraft Core
+itemGroup.spacecraftMercuryTab=Spacecraft Mercury
+itemGroup.spacecraftVenusTab=Spacecraft Venus
+itemGroup.spacecraftGasTab=Spacecraft Gas Giants
+itemGroup.spacecraftPlutoTab=Spacecraft Pluto
+
+# Schematics
+schematic.rocketT3.name=Tier 3 Rocket

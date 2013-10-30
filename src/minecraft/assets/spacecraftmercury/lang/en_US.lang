@@ -1,0 +1,28 @@
+# Starcraft Mercury Language File = UNITED STATES ENGLISH
+
+# GENERAL ITEMS
+
+# ITEMS
+item.mercuryPlate.name=Mercury Plate
+
+# TOOLS
+
+# ARMOR
+
+# BLOCKS
+tile.MercuryGrass.name=Mercury Grass
+tile.MercuryDirt.name=Mercury Dirt
+tile.MercuryStone.name=Mercury Stone
+tile.MercuryCobblestone.name=Mercury Cobblestone
+tile.MercuryBrick.name=Mercury Brick
+tile.MercuryGemOre.name=Mercury Gem Ore
+tile.MercuryCoalOre.name=Mercury Coal Ore
+tile.MercuryTinOre.name=Mercury Tin Ore
+tile.MercuryCopperOre.name=Mercury Copper Ore
+
+# ENTITYS
+
+# GUI
+gui.choosePlanet.desc.mercury=Habitable#No Oxygen#Gravity: 38%
+
+dimension.Mercury.name=Mercury

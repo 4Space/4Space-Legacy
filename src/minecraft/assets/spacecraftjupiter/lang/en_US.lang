@@ -1,0 +1,21 @@
+# Starcraft Jupiter Language File = UNITED STATES ENGLISH
+
+# GENERAL ITEMS
+
+# ITEMS
+
+# TOOLS
+
+# ARMOR
+
+# BLOCKS
+tile.lightGas.name=Jupiter Light Gas
+tile.mediumGas.name=Jupiter Medium Gas
+tile.heavyGas.name=Jupiter Heavy Gas
+
+# ENTITYS
+
+# GUI
+gui.choosePlanet.desc.jupiter=Gas Giant#*No Surface#*Gravity: 254%
+
+dimension.Jupiter.name=Jupiter
