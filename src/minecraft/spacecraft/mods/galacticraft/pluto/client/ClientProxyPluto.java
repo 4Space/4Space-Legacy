@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.venus.client;
+package spacecraft.mods.galacticraft.pluto.client;
 
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
@@ -48,20 +48,14 @@ import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 
-import spacecraft.mods.galacticraft.venus.CommonProxyVenus;
-import spacecraft.mods.galacticraft.venus.GCVenus;
-import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
-import spacecraft.mods.galacticraft.venus.client.render.entities.GCVenusRenderEvolvedBlaze;
-import spacecraft.mods.galacticraft.venus.client.render.entities.GCVenusRenderFlameling;
-import spacecraft.mods.galacticraft.venus.client.render.entities.GCVenusRenderVenusianVillager;
-import spacecraft.mods.galacticraft.venus.client.sounds.GCVenusSounds;
-import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
-import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityEvolvedBlaze;
-import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityFlameling;
-import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityVenusianVillager;
-import spacecraft.mods.galacticraft.venus.items.GCVenusItems;
+import spacecraft.mods.galacticraft.pluto.CommonProxyPluto;
+import spacecraft.mods.galacticraft.pluto.GCPluto;
+import spacecraft.mods.galacticraft.pluto.GCPlutoConfigManager;
+import spacecraft.mods.galacticraft.pluto.client.sounds.GCPlutoSounds;
+import spacecraft.mods.galacticraft.pluto.dimension.GCPlutoWorldProvider;
+import spacecraft.mods.galacticraft.pluto.items.GCPlutoItems;
 
-public class ClientProxyVenus extends CommonProxyVenus
+public class ClientProxyPluto extends CommonProxyPluto
 {
     private static int eggRenderID;
     private static int treasureRenderID;
@@ -71,38 +65,34 @@ public class ClientProxyVenus extends CommonProxyVenus
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(new GCVenusSounds());
+        MinecraftForge.EVENT_BUS.register(new GCPlutoSounds());
     }
     
     @Override
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCVenus.CHANNEL, Side.CLIENT);
-        ClientProxyVenus.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCPluto.CHANNEL, Side.CLIENT);
+        ClientProxyPluto.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
     }
 
     @Override
     public void registerRenderInformation()
     {
         RenderingRegistry.addNewArmourRendererPrefix("gem");
-
-        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityVenusianVillager.class, new GCVenusRenderVenusianVillager());
-        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityFlameling.class, new GCVenusRenderFlameling());
-        //        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityEvolvedBlaze.class, new GCVenusRenderEvolvedBlaze());
     }
 
 
     @Override
     public int getEggRenderID()
     {
-        return ClientProxyVenus.eggRenderID;
+        return ClientProxyPluto.eggRenderID;
     }
 
     @Override
     public int getTreasureRenderID()
     {
-        return ClientProxyVenus.treasureRenderID;
+        return ClientProxyPluto.treasureRenderID;
     }
 
 
@@ -199,11 +189,11 @@ public class ClientProxyVenus extends CommonProxyVenus
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCVenusWorldProvider)
+                    if (world.provider instanceof GCPlutoWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
-                            world.provider.setSkyRenderer(new GCVenusSkyProvider());
+                            world.provider.setSkyRenderer(new GCPlutoSkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -237,7 +227,7 @@ public class ClientProxyVenus extends CommonProxyVenus
         @Override
         public String getLabel()
         {
-            return "Galacticraft Venus 2 Client";
+            return "Galacticraft Mercury Client";
         }
 
         @Override
