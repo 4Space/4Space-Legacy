@@ -2,7 +2,6 @@ package spacecraft.mods.galacticraft.core.util;
 
 import java.util.HashMap;
 
-import spacecraft.mods.galacticraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.inventory.GCCoreContainerParachest;

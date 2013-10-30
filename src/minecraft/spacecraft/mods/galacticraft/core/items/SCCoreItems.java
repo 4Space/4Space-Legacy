@@ -1,14 +1,6 @@
 package spacecraft.mods.galacticraft.core.items;
 
 import spacecraft.mods.galacticraft.core.SCCoreConfigManager;
-import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
-import spacecraft.mods.galacticraft.venus.items.GCVenusItemArmor;
-import spacecraft.mods.galacticraft.venus.items.GCVenusItemAxe;
-import spacecraft.mods.galacticraft.venus.items.GCVenusItemHoe;
-import spacecraft.mods.galacticraft.venus.items.GCVenusItemPickaxe;
-import spacecraft.mods.galacticraft.venus.items.GCVenusItemSpade;
-import spacecraft.mods.galacticraft.venus.items.GCVenusItemSword;
-import spacecraft.mods.galacticraft.venus.items.GCVenusItems;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemBow;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemRocketEngine;

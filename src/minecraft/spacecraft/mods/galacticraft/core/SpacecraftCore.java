@@ -9,7 +9,6 @@ import spacecraft.mods.galacticraft.core.network.SCCorePacketHandlerServer;
 import spacecraft.mods.galacticraft.core.recipe.SCCoreRecipeManager;
 import spacecraft.mods.galacticraft.core.schematic.SCCoreSchematicRocketT3;
 import spacecraft.mods.galacticraft.spacecraftBlocks.SpacecraftBlocks;
-import spacecraft.mods.galacticraft.venus.items.GCVenusItems;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;

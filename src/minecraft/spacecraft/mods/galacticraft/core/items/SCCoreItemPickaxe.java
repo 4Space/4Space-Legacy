@@ -3,7 +3,6 @@ package spacecraft.mods.galacticraft.core.items;
 import java.util.List;
 
 import spacecraft.mods.galacticraft.core.SpacecraftCore;
-import spacecraft.mods.galacticraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
