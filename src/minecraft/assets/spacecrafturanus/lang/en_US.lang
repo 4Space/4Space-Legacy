@@ -1,4 +1,4 @@
-# Starcraft Uarnus Language File = UNITED STATES ENGLISH
+# Starcraft Uranus Language File = UNITED STATES ENGLISH
 
 # GENERAL ITEMS
 
@@ -13,6 +13,6 @@
 # ENTITYS
 
 # GUI
-gui.choosePlanet.desc.uranus=?
+gui.choosePlanet.desc.uranus=Gas Giant#*No Surface#*Gravity: 89%
 
 dimension.Uranus.name=Uranus
