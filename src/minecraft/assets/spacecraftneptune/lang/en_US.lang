@@ -15,4 +15,4 @@
 # GUI
 gui.choosePlanet.desc.neptune=Gas Giant#*No Surface#*Gravity: 114%
 
-dimension.neptune.name=Neptune
+dimension.Neptune.name=Neptune
