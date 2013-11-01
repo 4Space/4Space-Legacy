@@ -18,7 +18,7 @@ LICENSE.txt
 CHANGELOG
 
 /src/minecraft/*
-!/src/minecraft/spacecraft/
+!/src/minecraft/mattparks/
 !/src/minecraft/universalelectricity/
 !/src/minecraft/assets/
 /src/minecraft/assets/forge
