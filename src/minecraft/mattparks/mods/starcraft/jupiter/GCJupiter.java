@@ -51,12 +51,12 @@ import cpw.mods.fml.relauncher.Side;
 @NetworkMod(channels = { GCJupiter.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class GCJupiter
 {
-    public static final String NAME = "Spacecraft Jupiter";
+    public static final String NAME = "Starcraft Jupiter";
     public static final String MODID = "GCJupiter";
     public static final String CHANNEL = "GCJupiter";
     public static final String CHANNELENTITIES = "GCJupiterEntities";
 
-    public static final String LANGUAGE_PATH = "/assets/spacecraftjupiter/lang/";
+    public static final String LANGUAGE_PATH = "/assets/starcraftjupiter/lang/";
     private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.jupiter.client.ClientProxyJupiter", serverSide = "mattparks.mods.starcraft.jupiter.CommonProxyJupiter")
@@ -65,7 +65,7 @@ public class GCJupiter
     @Instance(GCJupiter.MODID)
     public static GCJupiter instance;
 
-    public static final String TEXTURE_DOMAIN = "spacecraftjupiter";
+    public static final String TEXTURE_DOMAIN = "starcraftjupiter";
     public static final String TEXTURE_PREFIX = GCJupiter.TEXTURE_DOMAIN + ":";
     
     public static long tick;
@@ -76,7 +76,7 @@ public class GCJupiter
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        new GCJupiterConfigManager(new File(event.getModConfigurationDirectory(), "spacecraft/jupiter.conf"));
+        new GCJupiterConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/jupiter.conf"));
 
 //        GCVenusBlocks.initBlocks();
 //        GCVenusBlocks.setHarvestLevels();
@@ -118,7 +118,7 @@ public class GCJupiter
             languages++;
         }
 
-        GCLog.info("Spacecraft Jupiter Loaded: " + languages + " Languages.");
+        GCLog.info("Starcraft Jupiter Loaded: " + languages + " Languages.");
 
         NetworkRegistry.instance().registerGuiHandler(GCJupiter.instance, GCJupiter.proxy);
         this.registerTileEntities();

@@ -51,12 +51,12 @@ import cpw.mods.fml.relauncher.Side;
 @NetworkMod(channels = { GCUranus.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class GCUranus
 {
-    public static final String NAME = "Spacecraft Uranus";
+    public static final String NAME = "Starcraft Uranus";
     public static final String MODID = "GCUranus";
     public static final String CHANNEL = "GCUranus";
     public static final String CHANNELENTITIES = "GCUranusEntities";
 
-    public static final String LANGUAGE_PATH = "/assets/spacecrafturanus/lang/";
+    public static final String LANGUAGE_PATH = "/assets/starcrafturanus/lang/";
     private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.uranus.client.ClientProxyUranus", serverSide = "mattparks.mods.starcraft.uranus.CommonProxyUranus")
@@ -65,7 +65,7 @@ public class GCUranus
     @Instance(GCUranus.MODID)
     public static GCUranus instance;
 
-    public static final String TEXTURE_DOMAIN = "spacecrafturanus";
+    public static final String TEXTURE_DOMAIN = "starcrafturanus";
     public static final String TEXTURE_PREFIX = GCUranus.TEXTURE_DOMAIN + ":";
     
     public static long tick;
@@ -76,7 +76,7 @@ public class GCUranus
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        new GCUranusConfigManager(new File(event.getModConfigurationDirectory(), "spacecraft/uranus.conf"));
+        new GCUranusConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/uranus.conf"));
 
 //        GCVenusBlocks.initBlocks();
 //        GCVenusBlocks.setHarvestLevels();
@@ -118,7 +118,7 @@ public class GCUranus
             languages++;
         }
 
-        GCLog.info("Spacecraft Uranus Loaded: " + languages + " Languages.");
+        GCLog.info("Starcraft Uranus Loaded: " + languages + " Languages.");
 
         NetworkRegistry.instance().registerGuiHandler(GCUranus.instance, GCUranus.proxy);
         this.registerTileEntities();

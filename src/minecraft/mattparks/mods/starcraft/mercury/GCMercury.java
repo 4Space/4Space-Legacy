@@ -53,12 +53,12 @@ import cpw.mods.fml.relauncher.Side;
 @NetworkMod(channels = { GCMercury.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class GCMercury
 {
-    public static final String NAME = "Spacecraft Mercury";
+    public static final String NAME = "Starcraft Mercury";
     public static final String MODID = "GCMercury";
     public static final String CHANNEL = "GCMercury";
     public static final String CHANNELENTITIES = "GCMercuryEntities";
 
-    public static final String LANGUAGE_PATH = "/assets/spacecraftmercury/lang/";
+    public static final String LANGUAGE_PATH = "/assets/starcraftmercury/lang/";
     private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.mercury.client.ClientProxyMercury", serverSide = "mattparks.mods.starcraft.mercury.CommonProxyMercury")
@@ -67,7 +67,7 @@ public class GCMercury
     @Instance(GCMercury.MODID)
     public static GCMercury instance;
 
-    public static final String TEXTURE_DOMAIN = "spacecraftmercury";
+    public static final String TEXTURE_DOMAIN = "starcraftmercury";
     public static final String TEXTURE_PREFIX = GCMercury.TEXTURE_DOMAIN + ":";
     
     public static long tick;
@@ -78,7 +78,7 @@ public class GCMercury
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        new GCMercuryConfigManager(new File(event.getModConfigurationDirectory(), "spacecraft/mercury.conf"));
+        new GCMercuryConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/mercury.conf"));
 
 //        GCVenusBlocks.initBlocks();
 //        GCVenusBlocks.setHarvestLevels();
@@ -122,7 +122,7 @@ public class GCMercury
             languages++;
         }
 
-        GCLog.info("Spacecraft Mercury Loaded: " + languages + " Languages.");
+        GCLog.info("Starcraft Mercury Loaded: " + languages + " Languages.");
 
         NetworkRegistry.instance().registerGuiHandler(GCMercury.instance, GCMercury.proxy);
         this.registerTileEntities();

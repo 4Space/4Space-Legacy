@@ -30,11 +30,11 @@ import net.minecraftforge.common.ForgeDirection;
 
 public class GCUranusChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) SpacecraftBlocks.JupiterNitrogen.blockID;
+    final short topBlockID = (short) SpacecraftBlocks.UranusNitrogen.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) SpacecraftBlocks.JupiterHelium.blockID;
+    final short fillBlockID = (short) SpacecraftBlocks.UranusHelium.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) SpacecraftBlocks.JupiterHydrogen.blockID;
+    final short lowerBlockID = (short) SpacecraftBlocks.UranusHydrogen.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
@@ -47,7 +47,7 @@ public class GCUranusChunkProvider extends ChunkProviderGenerate
     public GCUranusBiomeDecorator biomedecoratorplanet = new GCUranusBiomeDecorator(GCUranusBiomeGenBase.venusFlat);
 
     private final World worldObj;
-    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(SpacecraftBlocks.JupiterHydrogen.blockID, 14, 8, 16, 3);
+    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(SpacecraftBlocks.UranusHydrogen.blockID, 14, 8, 16, 3);
     //Need to make Jupiter Brick
     {
     }
@@ -202,7 +202,6 @@ public class GCUranusChunkProvider extends ChunkProviderGenerate
         this.generateTerrain(par1, par2, ids, meta);
         this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
         this.replaceBlocksForBiome(par1, par2, ids, meta, this.biomesForGeneration);
-        this.dungeonGenerator.generateUsingArrays(this.worldObj, this.worldObj.getSeed(), par1 * 16, 25, par2 * 16, par1, par2, ids, meta);
 
         final Chunk var4 = new Chunk(this.worldObj, ids, meta, par1, par2);
 

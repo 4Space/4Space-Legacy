@@ -51,12 +51,12 @@ import cpw.mods.fml.relauncher.Side;
 @NetworkMod(channels = { GCSaturn.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class GCSaturn
 {
-    public static final String NAME = "Spacecraft Saturn";
+    public static final String NAME = "Starcraft Saturn";
     public static final String MODID = "GCSaturn";
     public static final String CHANNEL = "GCSaturn";
     public static final String CHANNELENTITIES = "GCSaturnEntities";
 
-    public static final String LANGUAGE_PATH = "/assets/spacecraftsaturn/lang/";
+    public static final String LANGUAGE_PATH = "/assets/starcraftsaturn/lang/";
     private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.saturn.client.ClientProxySaturn", serverSide = "mattparks.mods.starcraft.saturn.CommonProxySaturn")
@@ -65,7 +65,7 @@ public class GCSaturn
     @Instance(GCSaturn.MODID)
     public static GCSaturn instance;
 
-    public static final String TEXTURE_DOMAIN = "spacecraftsaturn";
+    public static final String TEXTURE_DOMAIN = "starcraftsaturn";
     public static final String TEXTURE_PREFIX = GCSaturn.TEXTURE_DOMAIN + ":";
     
     public static long tick;
@@ -76,7 +76,7 @@ public class GCSaturn
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        new GCSaturnConfigManager(new File(event.getModConfigurationDirectory(), "spacecraft/saturn.conf"));
+        new GCSaturnConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/saturn.conf"));
 
 //        GCVenusBlocks.initBlocks();
 //        GCVenusBlocks.setHarvestLevels();
@@ -118,7 +118,7 @@ public class GCSaturn
             languages++;
         }
 
-        GCLog.info("Spacecraft Saturn Loaded: " + languages + " Languages.");
+        GCLog.info("Starcraft Saturn Loaded: " + languages + " Languages.");
 
         NetworkRegistry.instance().registerGuiHandler(GCSaturn.instance, GCSaturn.proxy);
         this.registerTileEntities();

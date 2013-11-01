@@ -37,7 +37,7 @@ public class SCCoreItemPickaxe extends ItemPickaxe
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "spacecraftcore:"));
+        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "starcraftcore:"));
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

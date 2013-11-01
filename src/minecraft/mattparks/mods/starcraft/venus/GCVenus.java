@@ -57,12 +57,12 @@ import cpw.mods.fml.relauncher.Side;
 @NetworkMod(channels = { GCVenus.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class GCVenus
 {
-    public static final String NAME = "Galacticraft Venus";
+    public static final String NAME = "Starcraft Venus";
     public static final String MODID = "GCVenus";
     public static final String CHANNEL = "GCVenus";
     public static final String CHANNELENTITIES = "GCVenusEntities";
 
-    public static final String LANGUAGE_PATH = "/assets/spacecraftvenus/lang/";
+    public static final String LANGUAGE_PATH = "/assets/starcraftvenus/lang/";
     private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.venus.client.ClientProxyVenus", serverSide = "mattparks.mods.starcraft.venus.CommonProxyVenus")
@@ -71,7 +71,7 @@ public class GCVenus
     @Instance(GCVenus.MODID)
     public static GCVenus instance;
 
-    public static final String TEXTURE_DOMAIN = "spacecraftvenus";
+    public static final String TEXTURE_DOMAIN = "starcraftvenus";
     public static final String TEXTURE_PREFIX = GCVenus.TEXTURE_DOMAIN + ":";
     
     public static long tick;
@@ -126,7 +126,7 @@ public class GCVenus
             languages++;
         }
 
-        GCLog.info("Spacecraft Venus Loaded: " + languages + " Languages.");
+        GCLog.info("Starcraft Venus Loaded: " + languages + " Languages.");
 
         NetworkRegistry.instance().registerGuiHandler(GCVenus.instance, GCVenus.proxy);
         this.registerTileEntities();

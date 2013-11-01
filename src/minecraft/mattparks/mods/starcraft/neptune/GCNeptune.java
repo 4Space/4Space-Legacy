@@ -51,12 +51,12 @@ import cpw.mods.fml.relauncher.Side;
 @NetworkMod(channels = { GCNeptune.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class GCNeptune
 {
-    public static final String NAME = "Spacecraft Neptune";
+    public static final String NAME = "Starcraft Neptune";
     public static final String MODID = "GCNeptune";
     public static final String CHANNEL = "GCNeptune";
     public static final String CHANNELENTITIES = "GCNeptuneEntities";
 
-    public static final String LANGUAGE_PATH = "/assets/spacecraftneptune/lang/";
+    public static final String LANGUAGE_PATH = "/assets/starcraftneptune/lang/";
     private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.neptune.client.ClientProxyNeptune", serverSide = "mattparks.mods.starcraft.neptune.CommonProxyNeptune")
@@ -65,7 +65,7 @@ public class GCNeptune
     @Instance(GCNeptune.MODID)
     public static GCNeptune instance;
 
-    public static final String TEXTURE_DOMAIN = "spacecraftneptune";
+    public static final String TEXTURE_DOMAIN = "starcraftneptune";
     public static final String TEXTURE_PREFIX = GCNeptune.TEXTURE_DOMAIN + ":";
     
     public static long tick;
@@ -76,7 +76,7 @@ public class GCNeptune
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        new GCNeptuneConfigManager(new File(event.getModConfigurationDirectory(), "spacecraft/neptune.conf"));
+        new GCNeptuneConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/neptune.conf"));
 
 //        GCVenusBlocks.initBlocks();
 //        GCVenusBlocks.setHarvestLevels();
@@ -118,7 +118,7 @@ public class GCNeptune
             languages++;
         }
 
-        GCLog.info("Spacecraft Neptune Loaded: " + languages + " Languages.");
+        GCLog.info("Starcraft Neptune Loaded: " + languages + " Languages.");
 
         NetworkRegistry.instance().registerGuiHandler(GCNeptune.instance, GCNeptune.proxy);
         this.registerTileEntities();

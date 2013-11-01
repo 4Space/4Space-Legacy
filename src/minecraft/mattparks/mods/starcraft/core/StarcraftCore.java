@@ -59,7 +59,7 @@ public class StarcraftCore
     public static final String CHANNEL = "GCStarcraftCore";
     public static final String CHANNELENTITIES = "SCCoreEntities";
 
-    public static final String LANGUAGE_PATH = "/assets/spacecraftcore/lang/";
+    public static final String LANGUAGE_PATH = "/assets/starcraftcore/lang/";
     private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.core.client.ClientProxySCCore", serverSide = "mattparks.mods.starcraft.core.CommonProxySCCore")
@@ -68,37 +68,37 @@ public class StarcraftCore
     @Instance(StarcraftCore.MODID)
     public static StarcraftCore instance;
     
-	public static CreativeTabs starcraftCoreTab = new CreativeTabs("spacecraftCoreTab") {
+	public static CreativeTabs starcraftCoreTab = new CreativeTabs("starcraftCoreTab") {
 		public ItemStack getIconItemStack() {
 			return new ItemStack(SCCoreItems.spaceship, 1, 0);
 		}
 	};
 	
-	public static CreativeTabs starcraftMercuryTab = new CreativeTabs("spacecraftMercuryTab") {
+	public static CreativeTabs starcraftMercuryTab = new CreativeTabs("starcraftMercuryTab") {
 		public ItemStack getIconItemStack() {
 			return new ItemStack(SpacecraftBlocks.MercuryGrass, 1, 0);
 		}
 	};
 	
-	public static CreativeTabs starcraftVenusTab = new CreativeTabs("spacecraftVenusTab") {
+	public static CreativeTabs starcraftVenusTab = new CreativeTabs("starcraftVenusTab") {
 		public ItemStack getIconItemStack() {
 			return new ItemStack(SpacecraftBlocks.VenusGrass, 1, 0);
 		}
 	};
 	
-	public static CreativeTabs starcraftGasTab = new CreativeTabs("spacecraftGasTab") {
+	public static CreativeTabs starcraftGasTab = new CreativeTabs("starcraftGasTab") {
 		public ItemStack getIconItemStack() {
 			return new ItemStack(SpacecraftBlocks.JupiterNitrogen, 1, 0);
 		}
 	};
 
-	public static CreativeTabs starcraftPlutoTab = new CreativeTabs("spacecraftPlutoTab") {
+	public static CreativeTabs starcraftPlutoTab = new CreativeTabs("starcraftPlutoTab") {
 		public ItemStack getIconItemStack() {
 			return new ItemStack(SpacecraftBlocks.PlutoGrass, 1, 0);
 		}
 	};
 	
-    public static final String TEXTURE_DOMAIN = "spacecraftcore";
+    public static final String TEXTURE_DOMAIN = "starcraftcore";
     public static final String TEXTURE_PREFIX = StarcraftCore.TEXTURE_DOMAIN + ":";
     
     public static long tick;
@@ -109,7 +109,7 @@ public class StarcraftCore
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        new SCCoreConfigManager(new File(event.getModConfigurationDirectory(), "spacecraft/core.conf"));
+        new SCCoreConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/core.conf"));
 
 //        GCVenusBlocks.initBlocks();
 //        GCVenusBlocks.setHarvestLevels();
@@ -153,7 +153,7 @@ public class StarcraftCore
             languages++;
         }
 
-        GCLog.info("Spacecraft Core Loaded: " + languages + " Languages.");
+        GCLog.info("Starcraft Core Loaded: " + languages + " Languages.");
 
         SchematicRegistry.registerSchematicRecipe(new SCCoreSchematicRocketT3());
 

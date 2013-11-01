@@ -25,151 +25,151 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid="SpacecraftBlocks", name="Spacecraft Blocks", version="0.0.1", dependencies = "required-after:Forge@[9.10.0.789,)")
+@Mod(modid="StarcraftBlocks", name="Starcraft Blocks", version="0.0.1", dependencies = "required-after:Forge@[9.10.0.789,)")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
   public class SpacecraftBlocks 
   {
-    public static final String CHANNEL = "SpacecraftBlocks";
-    public static final String FILE_PATH = "/smattparks/mods/starcraft/spacecraftBlocks/";
+    public static final String CHANNEL = "StarcraftBlocks";
+    public static final String FILE_PATH = "/mattparks/mods/starcraft/spacecraftBlocks/";
     public static final String CLIENT_PATH = "client/";
-    public static final String CONFIG_FILE = "spacecraft/spacecraftblocks.conf";
+    public static final String CONFIG_FILE = "starcraft/starcraftBlocks.conf";
     
 	//Block Venus Grass
-	public final static Block VenusGrass = new VenusGrass(610, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("spacecraftvenus:grassVenus");
+	public final static Block VenusGrass = new VenusGrass(610, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("starcraftvenus:grassVenus");
 
 	//Block Venus Dirt
-	public final static Block VenusDirt = new VenusDirt(611, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("spacecraftvenus:dirtVenus");
+	public final static Block VenusDirt = new VenusDirt(611, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("starcraftvenus:dirtVenus");
     
 	//Block Venus Stone
-	public final static Block VenusStone = new VenusStone(612, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("spacecraftvenus:stoneVenus");
+	public final static Block VenusStone = new VenusStone(612, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("starcraftvenus:stoneVenus");
 
 	//Block Venus Cobblestone
-	public final static Block VenusCobblestone = new VenusBlock(613, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("spacecraftvenus:cobblestoneVenus");
+	public final static Block VenusCobblestone = new VenusBlock(613, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("starcraftvenus:cobblestoneVenus");
 
 	//Block Venus Gem Block
-	public final static Block VenusRedGemBlock = new VenusBlock(614, Material.rock) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("spacecraftvenus:gemBlock");
+	public final static Block VenusRedGemBlock = new VenusBlock(614, Material.rock) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("starcraftvenus:gemBlock");
 
 	//Block Venus Meteor Block
-	public final static Block VenusMeteorBlock = new VenusBlock(615, Material.rock) .setHardness(3.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteor") .setTextureName("spacecraftvenus:meteorBlock");
+	public final static Block VenusMeteorBlock = new VenusBlock(615, Material.rock) .setHardness(3.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteor") .setTextureName("starcraftvenus:meteorBlock");
 
 	//Block Venus Brick
-	public final static Block VenusBrick = new VenusBlock(616, Material.rock) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBrick") .setTextureName("spacecraftvenus:venusBrick");
+	public final static Block VenusBrick = new VenusBlock(616, Material.rock) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBrick") .setTextureName("starcraftvenus:venusBrick");
 
 	//Block Venus Sulfer
-	public final static Block VenusSulferBlock = new VenusOre(617, Material.rock) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulfer") .setTextureName("spacecraftvenus:sulferBlock");
+	public final static Block VenusSulferBlock = new VenusOre(617, Material.rock) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulfer") .setTextureName("starcraftvenus:sulferBlock");
 
 	//Block Venus Sulfer Ore
-	public final static Block VenusSulferOre = new VenusOre(618, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulferOre") .setTextureName("spacecraftvenus:sulferOre");
+	public final static Block VenusSulferOre = new VenusOre(618, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulferOre") .setTextureName("starcraftvenus:sulferOre");
 
 	//Block Venus Meteor Ore
-	public final static Block VenusMeteorOre = new VenusOre(619, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteorOre") .setTextureName("spacecraftvenus:meteorOre");
+	public final static Block VenusMeteorOre = new VenusOre(619, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteorOre") .setTextureName("starcraftvenus:meteorOre");
 
 	//Block Venus Gem Ore
-	public final static Block VenusRedGemOre = new VenusOre(620, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGemOre") .setTextureName("spacecraftvenus:gemOre");
+	public final static Block VenusRedGemOre = new VenusOre(620, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGemOre") .setTextureName("starcraftvenus:gemOre");
 
 	//Block Venus Iron Ore
-	public final static Block VenusIronOre = new VenusOre(621, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusIronOre") .setTextureName("spacecraftvenus:ironOre");
+	public final static Block VenusIronOre = new VenusOre(621, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusIronOre") .setTextureName("starcraftvenus:ironOre");
 
 	//Block Venus Coal Ore
-	public final static Block VenusCoalOre = new VenusOre(622, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCoalOre") .setTextureName("spacecraftvenus:coalOre");
+	public final static Block VenusCoalOre = new VenusOre(622, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCoalOre") .setTextureName("starcraftvenus:coalOre");
 
 	//Block Venus Iron Ore
-	public final static Block VenusTinOre = new VenusOre(623, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusTinOre") .setTextureName("spacecraftvenus:tinOre");
+	public final static Block VenusTinOre = new VenusOre(623, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusTinOre") .setTextureName("starcraftvenus:tinOre");
 
 	//Block Venus Coal Ore
-	public final static Block VenusCopperOre = new VenusOre(624, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCopperOre") .setTextureName("spacecraftvenus:copperOre");				
+	public final static Block VenusCopperOre = new VenusOre(624, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCopperOre") .setTextureName("starcraftvenus:copperOre");				
 
 	//Block Venus Basalt
-	public final static Block VenusBasalt = new VenusStone(625, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBasalt") .setTextureName("spacecraftvenus:venusBasalt");				
+	public final static Block VenusBasalt = new VenusStone(625, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBasalt") .setTextureName("starcraftvenus:venusBasalt");				
 
 	//Block Venus Half Basalt
-	public final static Block VenusHalfBasalt = new VenusHalfSlab(626, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusHalfBasalt") .setTextureName("spacecraftvenus:venusBasalt");				
+	public final static Block VenusHalfBasalt = new VenusHalfSlab(626, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusHalfBasalt") .setTextureName("starcraftvenus:venusBasalt");				
 
 	//Block Venus Blaze Egg
-	public final static Block EvolvedBlazeEgg = new VenusBlazeEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlazeEgg") .setTextureName("spacecraftvenus:evolvedBlazeEgg");				
+	public final static Block EvolvedBlazeEgg = new VenusBlazeEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlazeEgg") .setTextureName("starcraftvenus:evolvedBlazeEgg");				
 
 	//Block Pluto Grass
-	public final static Block PlutoGrass = new PlutoGrass(910, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("grassPluto") .setTextureName("spacecraftpluto:grassPluto");
+	public final static Block PlutoGrass = new PlutoGrass(910, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("grassPluto") .setTextureName("starcraftpluto:grassPluto");
 
 	//Block Pluto Dirt
-	public final static Block PlutoDirt = new PlutoDirt(911, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("dirtPluto") .setTextureName("spacecraftpluto:dirtPluto");
+	public final static Block PlutoDirt = new PlutoDirt(911, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("dirtPluto") .setTextureName("starcraftpluto:dirtPluto");
     
 	//Block Pluto Stone
-	public final static Block PlutoStone = new PlutoStone(912, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("stonePluto") .setTextureName("spacecraftpluto:stonePluto");
+	public final static Block PlutoStone = new PlutoStone(912, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("stonePluto") .setTextureName("starcraftpluto:stonePluto");
 
 	//Block Pluto Cobblestone
-	public final static Block PlutoCobblestone = new PlutoBlock(913, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("cobblestonePluto") .setTextureName("spacecraftpluto:cobblestonePluto");
+	public final static Block PlutoCobblestone = new PlutoBlock(913, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("cobblestonePluto") .setTextureName("starcraftpluto:cobblestonePluto");
 
 	//Block Pluto Brick
-	public final static Block PlutoBrick = new PlutoBlock(916, Material.rock) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("plutoBrick") .setTextureName("spacecraftpluto:plutoBrick");
+	public final static Block PlutoBrick = new PlutoBlock(916, Material.rock) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("plutoBrick") .setTextureName("starcraftpluto:plutoBrick");
 
 	
 	//Block Mercury Grass
-	public final static Block MercuryGrass = new MercuryGrass(710, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("MercuryGrass") .setTextureName("spacecraftmercury:grassMercury");
+	public final static Block MercuryGrass = new MercuryGrass(710, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("MercuryGrass") .setTextureName("starcraftmercury:grassMercury");
 
 	//Block Mercury Dirt
-	public final static Block MercuryDirt = new MercuryDirt(711, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("MercuryDirt") .setTextureName("spacecraftmercury:dirtMercury");
+	public final static Block MercuryDirt = new MercuryDirt(711, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("MercuryDirt") .setTextureName("starcraftmercury:dirtMercury");
     
 	//Block Mercury Stone
-	public final static Block MercuryStone = new MercuryStone(712, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryStone") .setTextureName("spacecraftmercury:stoneMercury");
+	public final static Block MercuryStone = new MercuryStone(712, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryStone") .setTextureName("starcraftmercury:stoneMercury");
 
 	//Block Mercury Cobblestone
-	public final static Block MercuryCobblestone = new MercuryBlock(713, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryCobblestone") .setTextureName("spacecraftmercury:cobblestoneMercury");
+	public final static Block MercuryCobblestone = new MercuryBlock(713, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryCobblestone") .setTextureName("starcraftmercury:cobblestoneMercury");
 
 	//Block Mercury Brick
-	public final static Block MercuryBrick = new MercuryBlock(716, Material.rock) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryBrick") .setTextureName("spacecraftmercury:mercuryBrick");
+	public final static Block MercuryBrick = new MercuryBlock(716, Material.rock) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryBrick") .setTextureName("starcraftmercury:mercuryBrick");
 
 	//Block Mercury Gem Ore
-	public final static Block MercuryIridiumOre = new MercuryOre(720, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryIridiumOre") .setTextureName("spacecraftmercury:iridiumOreMercury");
+	public final static Block MercuryIridiumOre = new MercuryOre(720, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryIridiumOre") .setTextureName("starcraftmercury:iridiumOreMercury");
 
 	//Block Mercury Coal Ore
-	public final static Block MercuryCoalOre = new MercuryOre(722, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryCoalOre") .setTextureName("spacecraftmercury:coalOreMercury");
+	public final static Block MercuryCoalOre = new MercuryOre(722, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryCoalOre") .setTextureName("starcraftmercury:coalOreMercury");
 
 	//Block Mercury Iron Ore
-	public final static Block MercuryTinOre = new MercuryOre(723, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryTinOre") .setTextureName("spacecraftmercury:tinOreMercury");
+	public final static Block MercuryTinOre = new MercuryOre(723, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryTinOre") .setTextureName("starcraftmercury:tinOreMercury");
 
 	//Block Mercury Coal Ore
-	public final static Block MercuryCopperOre = new MercuryOre(724, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryCopperOre") .setTextureName("spacecraftmercury:copperOreMercury");				
+	public final static Block MercuryCopperOre = new MercuryOre(724, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryCopperOre") .setTextureName("starcraftmercury:copperOreMercury");				
 
 	
 	//Block Jupiter Nitrogen
-	public final static Block JupiterNitrogen = new JupiterBlock(650, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("jupiterNitrogen") .setTextureName("spacecraftjupiter:jupiterNitrogen");
+	public final static Block JupiterNitrogen = new JupiterBlock(650, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("jupiterNitrogen") .setTextureName("starcraftjupiter:jupiterNitrogen");
 
 	//Block Jupiter Helium
-	public final static Block JupiterHelium = new JupiterDirt(651, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("jupiterHelium") .setTextureName("spacecraftjupiter:jupiterHelium");
+	public final static Block JupiterHelium = new JupiterDirt(651, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("jupiterHelium") .setTextureName("starcraftjupiter:jupiterHelium");
 
 	//Block Jupiter Hydrogen
-	public final static Block JupiterHydrogen = new JupiterDirt(652, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("jupiterHydrogen") .setTextureName("spacecraftjupiter:jupiterHydrogen");
+	public final static Block JupiterHydrogen = new JupiterDirt(652, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("jupiterHydrogen") .setTextureName("starcraftjupiter:jupiterHydrogen");
   
 
 	//Block Saturn Grass
-	public final static Block SaturnNitrogen = new JupiterDirt(653, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("saturnNitrogen") .setTextureName("spacecraftsaturn:saturnNitrogen");
+	public final static Block SaturnNitrogen = new JupiterDirt(653, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("saturnNitrogen") .setTextureName("starcraftsaturn:saturnNitrogen");
 
 	//Block Saturn Dirt
-	public final static Block SaturnHelium = new JupiterDirt(654, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("saturnHelium") .setTextureName("spacecraftsaturn:saturnHelium");
+	public final static Block SaturnHelium = new JupiterDirt(654, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("saturnHelium") .setTextureName("starcraftsaturn:saturnHelium");
     
 	//Block Saturn Stone
-	public final static Block SaturnHydrogen = new JupiterBlock(655, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("saturnHydrogen") .setTextureName("spacecraftsaturn:saturnHydrogen");
+	public final static Block SaturnHydrogen = new JupiterBlock(655, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("saturnHydrogen") .setTextureName("starcraftsaturn:saturnHydrogen");
 
 	
 	//Block Uranus Grass
-	public final static Block UranusNitrogen = new JupiterDirt(656, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("uranusNitrogen") .setTextureName("spacecrafturanus:uranusNitrogen");
+	public final static Block UranusNitrogen = new JupiterDirt(656, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("uranusNitrogen") .setTextureName("starcrafturanus:uranusNitrogen");
 
 	//Block Uranus Dirt
-	public final static Block UranusHelium = new JupiterDirt(657, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("uranusHelium") .setTextureName("spacecrafturanus:uranusHelium");
+	public final static Block UranusHelium = new JupiterDirt(657, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("uranusHelium") .setTextureName("starcrafturanus:uranusHelium");
     
 	//Block Uranus Stone
-	public final static Block UranusHydrogen = new JupiterBlock(658, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("uranusHydrogen") .setTextureName("spacecrafturanus:uranusHydrogen");
+	public final static Block UranusHydrogen = new JupiterBlock(658, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("uranusHydrogen") .setTextureName("starcrafturanus:uranusHydrogen");
 
 	
 	//Block Neptune Grass
-	public final static Block NeptuneNitrogen = new JupiterDirt(659, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("neptuneNitrogen") .setTextureName("spacecraftneptune:neptuneNitrogen");
+	public final static Block NeptuneNitrogen = new JupiterDirt(659, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("neptuneNitrogen") .setTextureName("starcraftneptune:neptuneNitrogen");
 
 	//Block Neptune Dirt
-	public final static Block NeptuneHelium = new JupiterDirt(660, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("neptuneHelium") .setTextureName("spacecraftneptune:neptuneHelium");
+	public final static Block NeptuneHelium = new JupiterDirt(660, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("neptuneHelium") .setTextureName("starcraftneptune:neptuneHelium");
     
 	//Block Neptune Stone
-	public final static Block NeptuneHydrogen = new JupiterBlock(661, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneHydrogen") .setTextureName("spacecraftneptune:neptuneHydrogen");
+	public final static Block NeptuneHydrogen = new JupiterBlock(661, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneHydrogen") .setTextureName("starcraftneptune:neptuneHydrogen");
 	 
 	    @Instance("SpacecraftBlocks")
         public static SpacecraftBlocks instance;

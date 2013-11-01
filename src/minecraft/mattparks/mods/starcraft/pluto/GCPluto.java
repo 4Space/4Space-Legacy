@@ -52,12 +52,12 @@ import cpw.mods.fml.relauncher.Side;
 @NetworkMod(channels = { GCPluto.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class GCPluto
 {
-    public static final String NAME = "Spacecraft Pluto";
+    public static final String NAME = "Starcraft Pluto";
     public static final String MODID = "GCPluto";
     public static final String CHANNEL = "GCPluto";
     public static final String CHANNELENTITIES = "GCPlutoEntities";
 
-    public static final String LANGUAGE_PATH = "/assets/spacecraftpluto/lang/";
+    public static final String LANGUAGE_PATH = "/assets/starcraftpluto/lang/";
     private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.pluto.client.ClientProxyPluto", serverSide = "mattparks.mods.starcraft.pluto.CommonProxyPluto")
@@ -66,7 +66,7 @@ public class GCPluto
     @Instance(GCPluto.MODID)
     public static GCPluto instance;
 
-    public static final String TEXTURE_DOMAIN = "spacecraftpluto";
+    public static final String TEXTURE_DOMAIN = "starcraftpluto";
     public static final String TEXTURE_PREFIX = GCPluto.TEXTURE_DOMAIN + ":";
     
     public static long tick;
@@ -77,7 +77,7 @@ public class GCPluto
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        new GCPlutoConfigManager(new File(event.getModConfigurationDirectory(), "spacecraft/pluto.conf"));
+        new GCPlutoConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/pluto.conf"));
 
 //        GCVenusBlocks.initBlocks();
 //        GCVenusBlocks.setHarvestLevels();
@@ -121,7 +121,7 @@ public class GCPluto
             languages++;
         }
 
-        GCLog.info("Spacecraft Pluto Loaded: " + languages + " Languages.");
+        GCLog.info("Starcraft Pluto Loaded: " + languages + " Languages.");
 
         NetworkRegistry.instance().registerGuiHandler(GCPluto.instance, GCPluto.proxy);
         this.registerTileEntities();
