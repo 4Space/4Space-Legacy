@@ -2,6 +2,7 @@ package mattparks.mods.starcraft.venus.recipe;
 
 import java.util.HashMap;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import mattparks.mods.starcraft.venus.items.GCVenusItems;
@@ -28,8 +29,6 @@ public class GCVenusRecipeManager
     {
         OreDictionary.registerOre("ingotSulfer", new ItemStack(GCVenusItems.venusItemBasic, 1, 0));
         OreDictionary.registerOre("plateSulfer", new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
-
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 1), new Object[] { "X", "X", 'X', "plateSulfer" });
         
         RecipeUtil.addRecipe(new ItemStack(GCVenusItems.sulferBoots), new Object[] { "X X", "X X", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2) });
 
@@ -57,9 +56,18 @@ public class GCVenusRecipeManager
 
         RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusBattery, 1, GCVenusItems.venusBattery.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T', "plateSulfer", 'R', Item.redstone, 'C', Item.coal });
         
+        RecipeUtil.addRecipe(new ItemStack(SpacecraftBlocks.VenusSulferBlock, 1, 0), new Object[] { "TTT", "TTT", "TTT", 'T', "ingotSulfer",});
+        
+        RecipeUtil.addRecipe(new ItemStack(SpacecraftBlocks.VenusRedGemBlock, 1, 0), new Object[] { "TTT", "TTT", "TTT", 'T', "ingotGen",});
+        
+        GameRegistry.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 0), new ItemStack(SpacecraftBlocks.VenusSulferBlock, 1, 0));
+        GameRegistry.addShapelessRecipe(new ItemStack(SCCoreItems.coreItemBasic, 9, 0), new ItemStack(SpacecraftBlocks.VenusRedGemBlock, 1, 0));
+        
         // Compressor recipes
         
         CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 2), "ingotSulfer", "ingotSulfer");
+        
+        CompressorRecipes.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 1), new Object[] { "X", "X", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2) });
         
         // Smelting
        
