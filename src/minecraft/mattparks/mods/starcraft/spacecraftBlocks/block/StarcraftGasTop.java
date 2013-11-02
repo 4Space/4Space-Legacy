@@ -1,5 +1,6 @@
 package mattparks.mods.starcraft.spacecraftBlocks.block;
 
+import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -13,6 +14,14 @@ public class StarcraftGasTop extends Block implements ITerraformableBlock
     	super( id, material.rock);
     }
 
+	@Override
+	public void initializeBlock()
+    {
+		this.setBurnProperties(SpacecraftBlocks.JupiterNitrogen.blockID, 5, 5);
+		this.setBurnProperties(SpacecraftBlocks.NeptuneNitrogen.blockID, 5, 5);
+		this.setBurnProperties(SpacecraftBlocks.UranusNitrogen.blockID, 5, 5);
+    }
+	
 	@Override
 	public boolean isTerraformable(World world, int x, int y, int z) {
 		return true;
