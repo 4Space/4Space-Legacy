@@ -8,30 +8,13 @@ import mattparks.mods.starcraft.pluto.dimension.GCPlutoWorldProvider;
 import mattparks.mods.starcraft.pluto.items.GCPlutoItems;
 import mattparks.mods.starcraft.pluto.network.GCPlutoPacketHandlerServer;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
-import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
-import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
-import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityAlienVillager;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityZombie;
-import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import micdoodle8.mods.galacticraft.core.world.gen.GCCoreOverworldGenerator;
-import micdoodle8.mods.galacticraft.moon.items.GCMoonItems;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -44,7 +27,6 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
@@ -66,8 +48,8 @@ public class GCPluto
     @Instance(GCPluto.MODID)
     public static GCPluto instance;
 
-    public static final String TEXTURE_DOMAIN = "starcraftpluto";
-    public static final String TEXTURE_PREFIX = GCPluto.TEXTURE_DOMAIN + ":";
+    public static final String ASSET_DOMAIN = "starcraftpluto";
+    public static final String ASSET_PREFIX = GCPluto.ASSET_DOMAIN + ":";
     
     public static long tick;
     public static long slowTick;
@@ -78,9 +60,6 @@ public class GCPluto
     public void preInit(FMLPreInitializationEvent event)
     {
         new GCPlutoConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/pluto.conf"));
-
-//        GCVenusBlocks.initBlocks();
-//        GCVenusBlocks.setHarvestLevels();
 
         GCPlutoItems.initItems();
 
@@ -131,16 +110,8 @@ public class GCPluto
 
         GalacticraftRegistry.registerTeleportType(GCPlutoWorldProvider.class, new GCPlutoTeleportType());
         GalacticraftRegistry.registerCelestialBody(new GCPlutoPlanet());
-        GalacticraftRegistry.registerRocketGui(GCPlutoWorldProvider.class, new ResourceLocation(GCPluto.TEXTURE_DOMAIN, "textures/gui/mercuryRocketGui.png"));
-
-//        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
-//        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
-    
-//        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(PlutoBlocks.MercuryRedGemOre, 5, 24, 0, 75, 7));
-//        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(MercuryBlocks.MercuryDirt, 5, 24, 0, 75, 7));
-//        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(PlutoBlocks.MercuryCoalOre, 7, 18, 0, 45, 7));
-//        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(PlutoBlocks.MercuryTinOre, 8, 3, 0, 25, 7));
-//        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(PlutoBlocks.MercuryCopperOre, 8, 3, 0, 25, 7));
+        GalacticraftRegistry.registerRocketGui(GCPlutoWorldProvider.class, new ResourceLocation(GCPluto.ASSET_DOMAIN, "textures/gui/mercuryRocketGui.png"));
+        
     }
 
     @EventHandler
@@ -151,21 +122,24 @@ public class GCPluto
 
     public void registerTileEntities()
     {
+    	;
     }
 
     public void registerCreatures()
     {
+    	;
     }
 
     public void registerOtherEntities()
     {
+    	;
     }
+    
     @EventHandler
     public void postLoad(FMLPostInitializationEvent event)
     {
         GCPluto.proxy.postInit(event);
         GCPluto.proxy.registerRenderInformation();
-//        GCPlutoRecipeManager.loadRecipes();
     }
 
     public void registerGalacticraftCreature(Class<? extends Entity> var0, String var1, int id, int back, int fore)

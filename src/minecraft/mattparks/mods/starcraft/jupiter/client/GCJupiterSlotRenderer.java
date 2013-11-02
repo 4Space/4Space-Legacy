@@ -11,7 +11,7 @@ public class GCJupiterSlotRenderer implements ICelestialBodyRenderer
     @Override
     public ResourceLocation getPlanetSprite()
     {
-        return new ResourceLocation(GCJupiter.TEXTURE_DOMAIN, "textures/gui/planets/jupiter.png");
+        return new ResourceLocation(GCJupiter.ASSET_DOMAIN, "textures/gui/planets/jupiter.png");
     }
 
     @Override

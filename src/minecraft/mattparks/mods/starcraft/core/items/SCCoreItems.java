@@ -1,15 +1,10 @@
 package mattparks.mods.starcraft.core.items;
 
 import mattparks.mods.starcraft.core.SCCoreConfigManager;
-import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
-import micdoodle8.mods.galacticraft.core.items.GCCoreItemBow;
-import micdoodle8.mods.galacticraft.core.items.GCCoreItemRocketEngine;
-import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.EnumHelper;
-import net.minecraftforge.common.MinecraftForge;
 
 public class SCCoreItems
 {

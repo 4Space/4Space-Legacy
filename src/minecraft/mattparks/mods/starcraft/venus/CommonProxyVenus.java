@@ -12,22 +12,22 @@ public class CommonProxyVenus implements IGuiHandler
 {
     public void preInit(FMLPreInitializationEvent event)
     {
-
+    	;
     }
 
     public void init(FMLInitializationEvent event)
     {
-
+    	;
     }
 
     public void postInit(FMLPostInitializationEvent event)
     {
-
+    	;
     }
 
     public void registerRenderInformation()
     {
-
+    	;
     }
 
     public int getVineRenderID()
@@ -59,28 +59,11 @@ public class CommonProxyVenus implements IGuiHandler
     {
         ;
     }
-
- //   public void opengSlimelingGui(GCMarsEntitySlimeling slimeling, int gui)
-    {
-        ;
-    }
-
+    
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
     {
         TileEntity tile = world.getBlockTileEntity(x, y, z);
-
-//        if (ID == GCMarsConfigManager.idGuiMachine)
-        {
-//            if (tile instanceof GCMarsTileEntityTerraformer)
-            {
-//                return new GCMarsContainerTerraformer(player.inventory, (GCMarsTileEntityTerraformer) tile);
-            }
-//            else if (tile instanceof GCMarsTileEntityLaunchController)
-            {
-//                return new GCMarsContainerLaunchController(player.inventory, (GCMarsTileEntityLaunchController) tile);
-            }
-        }
 
         return null;
     }

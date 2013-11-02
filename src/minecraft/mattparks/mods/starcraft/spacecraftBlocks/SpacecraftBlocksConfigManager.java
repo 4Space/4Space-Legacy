@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.spacecraftBlocks;
 import java.io.File;
 import java.util.logging.Level;
 
-import micdoodle8.mods.galacticraft.core.GCLog;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 

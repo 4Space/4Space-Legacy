@@ -2,6 +2,7 @@ package mattparks.mods.starcraft.venus.wgen.village;
 
 import java.util.List;
 import java.util.Random;
+
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.nbt.NBTTagCompound;

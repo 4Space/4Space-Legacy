@@ -22,8 +22,8 @@ import cpw.mods.fml.client.FMLClientHandler;
 
 public class GCPlutoSkyProvider extends IRenderHandler
 {
-    private static final ResourceLocation neptuneTexture = new ResourceLocation(GCPluto.TEXTURE_DOMAIN, "textures/gui/planets/neptune.png");
-    private static final ResourceLocation sunTexture = new ResourceLocation(GCPluto.TEXTURE_DOMAIN, "textures/gui/planets/sun.png");
+    private static final ResourceLocation neptuneTexture = new ResourceLocation(GCPluto.ASSET_DOMAIN, "textures/gui/planets/neptune.png");
+    private static final ResourceLocation sunTexture = new ResourceLocation(GCPluto.ASSET_DOMAIN, "textures/gui/planets/sun.png");
 
     public int starGLCallList = GLAllocation.generateDisplayLists(3);
     public int glSkyList;

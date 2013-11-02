@@ -16,7 +16,7 @@ public class GCVenusItemBattery extends ItemElectric
     {
         super(id);
         this.setUnlocalizedName(assetName);
-        this.setTextureName(GCVenus.TEXTURE_PREFIX + assetName);
+        this.setTextureName(GCVenus.ASSET_PREFIX + assetName);
     }
 
     @Override

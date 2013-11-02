@@ -11,7 +11,7 @@ public class GCNeptuneSlotRenderer implements ICelestialBodyRenderer
     @Override
     public ResourceLocation getPlanetSprite()
     {
-        return new ResourceLocation(GCNeptune.TEXTURE_DOMAIN, "textures/gui/planets/neptune.png");
+        return new ResourceLocation(GCNeptune.ASSET_DOMAIN, "textures/gui/planets/neptune.png");
     }
 
     @Override

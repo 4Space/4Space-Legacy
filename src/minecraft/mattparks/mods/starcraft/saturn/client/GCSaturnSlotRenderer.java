@@ -11,7 +11,7 @@ public class GCSaturnSlotRenderer implements ICelestialBodyRenderer
     @Override
     public ResourceLocation getPlanetSprite()
     {
-        return new ResourceLocation(GCSaturn.TEXTURE_DOMAIN, "textures/gui/planets/saturn.png");
+        return new ResourceLocation(GCSaturn.ASSET_DOMAIN, "textures/gui/planets/saturn.png");
     }
 
     @Override

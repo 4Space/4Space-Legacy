@@ -13,30 +13,15 @@ import mattparks.mods.starcraft.venus.items.GCVenusItems;
 import mattparks.mods.starcraft.venus.network.GCVenusPacketHandlerServer;
 import mattparks.mods.starcraft.venus.recipe.GCVenusRecipeManager;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
-import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
-import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
-import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityAlienVillager;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityZombie;
-import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreOverworldGenerator;
-import micdoodle8.mods.galacticraft.moon.items.GCMoonItems;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -71,8 +56,8 @@ public class GCVenus
     @Instance(GCVenus.MODID)
     public static GCVenus instance;
 
-    public static final String TEXTURE_DOMAIN = "starcraftvenus";
-    public static final String TEXTURE_PREFIX = GCVenus.TEXTURE_DOMAIN + ":";
+    public static final String ASSET_DOMAIN = "starcraftvenus";
+    public static final String ASSET_PREFIX = GCVenus.ASSET_DOMAIN + ":";
     
     public static long tick;
     public static long slowTick;
@@ -83,9 +68,6 @@ public class GCVenus
     public void preInit(FMLPreInitializationEvent event)
     {
         new GCVenusConfigManager(new File(event.getModConfigurationDirectory(), "spacecraft/venus.conf"));
-
-//        GCVenusBlocks.initBlocks();
-//        GCVenusBlocks.setHarvestLevels();
 
         GCVenusItems.initItems();
 
@@ -136,15 +118,12 @@ public class GCVenus
 
         GalacticraftRegistry.registerTeleportType(GCVenusWorldProvider.class, new GCVenusTeleportType());
         GalacticraftRegistry.registerCelestialBody(new GCVenusPlanet());
-        GalacticraftRegistry.registerRocketGui(GCVenusWorldProvider.class, new ResourceLocation(GCVenus.TEXTURE_DOMAIN, "textures/gui/venusRocketGui.png"));
-
-//        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
-//        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
+        GalacticraftRegistry.registerRocketGui(GCVenusWorldProvider.class, new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/gui/venusRocketGui.png"));
     
         GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusRedGemOre, 5, 24, 0, 75, 7));
         GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusMeteorOre, 6, 22, 0, 60, 7));
         GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusSulferOre, 7, 18, 0, 45, 7));
-//        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusDirt, 5, 24, 0, 75, 7));
+
         GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusIronOre, 6, 22, 0, 60, 7));
         GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusCoalOre, 7, 18, 0, 45, 7));
         GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusTinOre, 8, 3, 0, 25, 7));
@@ -159,6 +138,7 @@ public class GCVenus
 
     public void registerTileEntities()
     {
+    	;
     }
 
     public void registerCreatures()
@@ -170,7 +150,9 @@ public class GCVenus
 
     public void registerOtherEntities()
     {
+    	;
     }
+    
     @EventHandler
     public void postLoad(FMLPostInitializationEvent event)
     {

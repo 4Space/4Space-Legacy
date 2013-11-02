@@ -1,16 +1,9 @@
 package mattparks.mods.starcraft.spacecraftBlocks.block;
 
-import java.util.Random;
-
-import mattparks.mods.starcraft.core.StarcraftCore;
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.util.MathHelper;
-import net.minecraft.world.World;
 
 public class StarcraftOre extends Block implements IDetectableResource, IPlantableBlock
 {

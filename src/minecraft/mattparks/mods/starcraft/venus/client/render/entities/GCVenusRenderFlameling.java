@@ -14,7 +14,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class GCVenusRenderFlameling extends RenderLiving
 {
-    private static final ResourceLocation flamelingTexture = new ResourceLocation(GCVenus.TEXTURE_DOMAIN, "textures/model/flameling.png");
+    private static final ResourceLocation flamelingTexture = new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/model/flameling.png");
 
     public GCVenusRenderFlameling()
     {

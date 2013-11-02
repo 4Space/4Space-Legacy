@@ -11,7 +11,7 @@ public class GCPlutoSlotRenderer implements ICelestialBodyRenderer
     @Override
     public ResourceLocation getPlanetSprite()
     {
-        return new ResourceLocation(GCPluto.TEXTURE_DOMAIN, "textures/gui/planets/pluto.png");
+        return new ResourceLocation(GCPluto.ASSET_DOMAIN, "textures/gui/planets/pluto.png");
     }
 
     @Override

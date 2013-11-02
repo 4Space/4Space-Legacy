@@ -162,8 +162,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
     
 	//Block Neptune Stone
 	public final static Block NeptuneHydrogen = new StarcraftGasBottom(661, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneHydrogen") .setTextureName("starcraftneptune:neptuneHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
-	 
-	 
+	
+	
     //Fluid Metallic Hydrogen
     public final static Block MetallicHydrogenFlowing = new StarcraftMetallicHydrogenFlowing(920).setUnlocalizedName("MetallicHydrogenFlowing") .setCreativeTab(StarcraftCore.starcraftGasTab);
     public final static Block MetallicHydrogenStill = new StarcraftMetallicHydrogenStill(921).setUnlocalizedName("MetallicHydrogenStill") .setCreativeTab(StarcraftCore.starcraftGasTab);
@@ -184,6 +184,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
         public void load(FMLInitializationEvent event) 
         {
                 proxy.registerRenderers();
+                
                 //Registering Blocks
                 GameRegistry.registerBlock(VenusGrass, "VenusGrass");
                 GameRegistry.registerBlock(VenusDirt, "VenusDirt");
@@ -244,5 +245,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
         @EventHandler
         public void postInit(FMLPostInitializationEvent event) 
         {
+        	;
         }
 }

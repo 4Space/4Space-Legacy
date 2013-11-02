@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.core.items;
 import java.util.List;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemSchematic;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -50,7 +49,7 @@ public class SCCoreItemSchematic extends GCCoreItemSchematic implements ISchemat
         
         for (int i = 0; i < SCCoreItemSchematic.names.length; i++)
         {
-            this.icons[i] = iconRegister.registerIcon(StarcraftCore.TEXTURE_PREFIX + SCCoreItemSchematic.names[i]);
+            this.icons[i] = iconRegister.registerIcon(StarcraftCore.ASSET_PREFIX + SCCoreItemSchematic.names[i]);
         }
         
     }

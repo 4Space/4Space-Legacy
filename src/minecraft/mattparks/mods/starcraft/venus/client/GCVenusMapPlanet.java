@@ -24,7 +24,7 @@ public class GCVenusMapPlanet implements IMapObject
     {
         return 950F;
     }
-
+    
     @Override
     public float getStretchValue()
     {

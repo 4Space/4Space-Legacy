@@ -11,7 +11,7 @@ public class GCMercurySlotRenderer implements ICelestialBodyRenderer
     @Override
     public ResourceLocation getPlanetSprite()
     {
-        return new ResourceLocation(GCMercury.TEXTURE_DOMAIN, "textures/gui/planets/mercury.png");
+        return new ResourceLocation(GCMercury.ASSET_DOMAIN, "textures/gui/planets/mercury.png");
     }
 
     @Override

@@ -23,8 +23,8 @@ import cpw.mods.fml.client.FMLClientHandler;
 public class GCMercurySkyProvider extends IRenderHandler
 {
     private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.ASSET_DOMAIN, "textures/gui/planets/overworld.png");
-    private static final ResourceLocation venusTexture = new ResourceLocation(GCMercury.TEXTURE_DOMAIN, "textures/gui/planets/venus.png");
-    private static final ResourceLocation sunTexture = new ResourceLocation(GCMercury.TEXTURE_DOMAIN, "textures/gui/planets/sun.png");
+    private static final ResourceLocation venusTexture = new ResourceLocation(GCMercury.ASSET_DOMAIN, "textures/gui/planets/venus.png");
+    private static final ResourceLocation sunTexture = new ResourceLocation(GCMercury.ASSET_DOMAIN, "textures/gui/planets/sun.png");
 
     public int starGLCallList = GLAllocation.generateDisplayLists(3);
     public int glSkyList;

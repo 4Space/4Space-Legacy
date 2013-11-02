@@ -9,30 +9,14 @@ import mattparks.mods.starcraft.mercury.items.GCMercuryItems;
 import mattparks.mods.starcraft.mercury.network.GCMercuryPacketHandlerServer;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
-import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
-import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
-import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityAlienVillager;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityZombie;
-import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreOverworldGenerator;
-import micdoodle8.mods.galacticraft.moon.items.GCMoonItems;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -67,8 +51,8 @@ public class GCMercury
     @Instance(GCMercury.MODID)
     public static GCMercury instance;
 
-    public static final String TEXTURE_DOMAIN = "starcraftmercury";
-    public static final String TEXTURE_PREFIX = GCMercury.TEXTURE_DOMAIN + ":";
+    public static final String ASSET_DOMAIN = "starcraftmercury";
+    public static final String ASSET_PREFIX = GCMercury.ASSET_DOMAIN + ":";
     
     public static long tick;
     public static long slowTick;
@@ -79,9 +63,6 @@ public class GCMercury
     public void preInit(FMLPreInitializationEvent event)
     {
         new GCMercuryConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/mercury.conf"));
-
-//        GCVenusBlocks.initBlocks();
-//        GCVenusBlocks.setHarvestLevels();
 
         GCMercuryItems.initItems();
 
@@ -132,7 +113,7 @@ public class GCMercury
 
         GalacticraftRegistry.registerTeleportType(GCMercuryWorldProvider.class, new GCMercuryTeleportType());
         GalacticraftRegistry.registerCelestialBody(new GCMercuryPlanet());
-        GalacticraftRegistry.registerRocketGui(GCMercuryWorldProvider.class, new ResourceLocation(GCMercury.TEXTURE_DOMAIN, "textures/gui/mercuryRocketGui.png"));
+        GalacticraftRegistry.registerRocketGui(GCMercuryWorldProvider.class, new ResourceLocation(GCMercury.ASSET_DOMAIN, "textures/gui/mercuryRocketGui.png"));
 
 //        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
 //        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
