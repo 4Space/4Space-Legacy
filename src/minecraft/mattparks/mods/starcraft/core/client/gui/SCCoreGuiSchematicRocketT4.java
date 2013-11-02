@@ -1,7 +1,7 @@
 package mattparks.mods.starcraft.core.client.gui;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.inventory.SCCoreContainerRocketBenchT4;
+import mattparks.mods.starcraft.core.inventory.SCCoreContainerRocketBenchT3;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import net.minecraft.client.gui.GuiButton;
@@ -14,13 +14,13 @@ import org.lwjgl.opengl.GL11;
 
 public class SCCoreGuiSchematicRocketT4 extends GuiContainer implements ISchematicResultPage
 {
-    private static final ResourceLocation tier4SchematicTexture = new ResourceLocation(StarcraftCore.TEXTURE_DOMAIN, "textures/gui/schematic_rocket_T3.png");
+    private static final ResourceLocation tier4SchematicTexture = new ResourceLocation(StarcraftCore.ASSET_DOMAIN, "textures/gui/schematic_rocket_T3.png");
 
     private int pageIndex;
 
     public SCCoreGuiSchematicRocketT4(InventoryPlayer par1InventoryPlayer, int x, int y, int z)
     {
-        super(new SCCoreContainerRocketBenchT4(par1InventoryPlayer, x, y, z));
+        super(new SCCoreContainerRocketBenchT3(par1InventoryPlayer, x, y, z));
         this.ySize = 238;
     }
 

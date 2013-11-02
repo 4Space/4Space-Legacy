@@ -1,15 +1,10 @@
 package mattparks.mods.starcraft.core.items;
 
 import mattparks.mods.starcraft.core.SCCoreConfigManager;
-import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
-import micdoodle8.mods.galacticraft.core.items.GCCoreItemBow;
-import micdoodle8.mods.galacticraft.core.items.GCCoreItemRocketEngine;
-import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.EnumHelper;
-import net.minecraftforge.common.MinecraftForge;
 
 public class SCCoreItems
 {
@@ -53,7 +48,7 @@ public class SCCoreItems
         SCCoreItems.rocketEngine = new SCCoreItemRocketEngine(SCCoreConfigManager.idItemRocketEngine, "engine");
         SCCoreItems.spaceshipT3 = new SCCoreItemSpaceshipTier3(SCCoreConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");
         SCCoreItems.spaceshipT4 = new SCCoreItemSpaceshipTier4(SCCoreConfigManager.idItemSpaceshipTier4).setUnlocalizedName("spaceshipTier4");
-        SCCoreItems.spaceshipT5 = new SCCoreItemSpaceshipTier5(SCCoreConfigManager.idItemSpaceshipTier5).setUnlocalizedName("spaceshipTier5");
+        SCCoreItems.spaceshipT5 = new SCCoreItemSpaceshipTier4(SCCoreConfigManager.idItemSpaceshipTier5).setUnlocalizedName("spaceshipTier5");
         SCCoreItems.schematic = new SCCoreItemSchematic(SCCoreConfigManager.idItemSchematicMars).setUnlocalizedName("schematic");
     }
     

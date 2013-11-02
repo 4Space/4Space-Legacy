@@ -14,7 +14,7 @@ import org.lwjgl.opengl.GL11;
 
 public class SCCoreGuiSchematicRocketT5 extends GuiContainer implements ISchematicResultPage
 {
-    private static final ResourceLocation tier5SchematicTexture = new ResourceLocation(StarcraftCore.TEXTURE_DOMAIN, "textures/gui/schematic_rocket_T5.png");
+    private static final ResourceLocation tier5SchematicTexture = new ResourceLocation(StarcraftCore.ASSET_DOMAIN, "textures/gui/schematic_rocket_T5.png");
 
     private int pageIndex;
 

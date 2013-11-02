@@ -2,11 +2,9 @@ package mattparks.mods.starcraft.spacecraftBlocks.block;
 
 import java.util.Random;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
 public class VenusStone extends Block
 {

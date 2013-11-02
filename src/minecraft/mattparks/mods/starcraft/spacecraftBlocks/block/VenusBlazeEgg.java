@@ -1,10 +1,6 @@
 package mattparks.mods.starcraft.spacecraftBlocks.block;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
 import net.minecraft.block.BlockDragonEgg;
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.Explosion;

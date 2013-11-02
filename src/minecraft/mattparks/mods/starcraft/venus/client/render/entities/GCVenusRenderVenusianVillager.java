@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.venus.client.render.entities;
 import mattparks.mods.starcraft.venus.GCVenus;
 import mattparks.mods.starcraft.venus.client.model.GCVenusModelVenusianVillager;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityVenusianVillager;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -18,7 +17,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class GCVenusRenderVenusianVillager extends RenderLiving
 {
-    private static final ResourceLocation villagerTexture = new ResourceLocation(GCVenus.TEXTURE_DOMAIN, "textures/model/villager.png");
+    private static final ResourceLocation villagerTexture = new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/model/villager.png");
 
     protected GCVenusModelVenusianVillager villagerModel;
 

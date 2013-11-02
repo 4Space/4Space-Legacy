@@ -1,64 +1,42 @@
 package mattparks.mods.starcraft.venus.client;
 
+import java.io.ByteArrayInputStream;
+import java.io.DataInputStream;
+import java.util.ArrayList;
+import java.util.EnumSet;
+
 import mattparks.mods.starcraft.venus.CommonProxyVenus;
 import mattparks.mods.starcraft.venus.GCVenus;
-import mattparks.mods.starcraft.venus.GCVenusConfigManager;
-import mattparks.mods.starcraft.venus.client.render.entities.GCVenusRenderEvolvedBlaze;
 import mattparks.mods.starcraft.venus.client.render.entities.GCVenusRenderFlameling;
 import mattparks.mods.starcraft.venus.client.render.entities.GCVenusRenderVenusianVillager;
 import mattparks.mods.starcraft.venus.client.sounds.GCVenusSounds;
 import mattparks.mods.starcraft.venus.dimension.GCVenusWorldProvider;
-import mattparks.mods.starcraft.venus.entities.GCVenusEntityEvolvedBlaze;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityFlameling;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityVenusianVillager;
-import mattparks.mods.starcraft.venus.items.GCVenusItems;
-import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
-import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderAlienVillager;
-import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
-import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderZombie;
-import micdoodle8.mods.galacticraft.core.client.render.item.GCCoreItemRendererKey;
-import micdoodle8.mods.galacticraft.core.client.sounds.GCCoreSoundUpdaterSpaceship;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityAlienVillager;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityZombie;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SoundPoolEntry;
 import net.minecraft.client.multiplayer.WorldClient;
-import net.minecraft.client.particle.EntityFX;
-import net.minecraft.client.renderer.entity.RenderSlime;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-import net.minecraftforge.client.MinecraftForgeClient;
-import net.minecraftforge.client.model.AdvancedModelLoader;
-import net.minecraftforge.client.model.IModelCustom;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.client.FMLClientHandler;
-import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.TickType;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.IPacketHandler;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.Player;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
-
-import java.io.ByteArrayInputStream;
-import java.io.DataInputStream;
-import java.util.ArrayList;
-import java.util.EnumSet;
-import java.util.HashMap;
-import java.util.Map;
 
 public class ClientProxyVenus extends CommonProxyVenus
 {
@@ -88,7 +66,6 @@ public class ClientProxyVenus extends CommonProxyVenus
 
         RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityVenusianVillager.class, new GCVenusRenderVenusianVillager());
         RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityFlameling.class, new GCVenusRenderFlameling());
-        //        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityEvolvedBlaze.class, new GCVenusRenderEvolvedBlaze());
     }
 
 

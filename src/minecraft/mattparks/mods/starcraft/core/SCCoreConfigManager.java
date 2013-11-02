@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.core;
 import java.io.File;
 import java.util.logging.Level;
 
-import net.minecraft.item.Item;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 
@@ -62,7 +61,8 @@ public class SCCoreConfigManager
     public static int idSchematicRocketT3;
     public static int idSchematicRocketT4;
     public static int idSchematicRocketT5;
-    
+	
+
     // ACHIEVEMENTS
     
     // GENERAL
@@ -78,9 +78,9 @@ public class SCCoreConfigManager
             SCCoreConfigManager.idItemSpaceshipTier4 = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier4", 7553).getInt(7553);
             SCCoreConfigManager.idItemSpaceshipTier5 = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier5", 7554).getInt(7554);
             SCCoreConfigManager.idItemSchematicMars = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSchematicMars", 7541).getInt(7541);
-            SCCoreConfigManager.idItemRocketEngine = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemRocketEngineMars", 7542).getInt(7542);
+            SCCoreConfigManager.idItemRocketEngine = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemRocketEngine", 7542).getInt(7542);
             SCCoreConfigManager.idArmorJetpack = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorJetpack", 7543).getInt(7543);
-
+            
             SCCoreConfigManager.idToolGemSword = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemSword", 7544).getInt(7544);
             SCCoreConfigManager.idToolGemPickaxe = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemPickaxe", 7545).getInt(7545);
             SCCoreConfigManager.idToolGemSpade = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemSpade", 7546).getInt(7546);
@@ -95,13 +95,12 @@ public class SCCoreConfigManager
             //Block id's 7653-7654 are used by Spacecraft Pluto
             
             SCCoreConfigManager.idEntitySpaceshipTier3 = SCCoreConfigManager.configuration.get("Entities", "idEntitySpaceshipTier3", 173).getInt(173);
+            SCCoreConfigManager.idEntitySpaceshipTier4 = SCCoreConfigManager.configuration.get("Entities", "idEntitySpaceshipTier4", 174).getInt(174);
+            SCCoreConfigManager.idEntitySpaceshipTier5 = SCCoreConfigManager.configuration.get("Entities", "idEntitySpaceshipTier5", 175).getInt(175);
+            
             SCCoreConfigManager.idGuiRocketCraftingBenchT3 = SCCoreConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT3", 143).getInt(143);
-            
-            SCCoreConfigManager.idEntitySpaceshipTier4 = SCCoreConfigManager.configuration.get("Entities", "idEntitySpaceshipTier4", 194).getInt(194);
-            SCCoreConfigManager.idGuiRocketCraftingBenchT4 = SCCoreConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT4", 184).getInt(184);
-            
-            SCCoreConfigManager.idEntitySpaceshipTier5 = SCCoreConfigManager.configuration.get("Entities", "idEntitySpaceshipTier5", 195).getInt(195);
-            SCCoreConfigManager.idGuiRocketCraftingBenchT5 = SCCoreConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT5", 185).getInt(185);
+            SCCoreConfigManager.idGuiRocketCraftingBenchT4 = SCCoreConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT4", 144).getInt(144);
+            SCCoreConfigManager.idGuiRocketCraftingBenchT5 = SCCoreConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT5", 145).getInt(145);
             
             SCCoreConfigManager.idSchematicRocketT3 = SCCoreConfigManager.configuration.get("Schematic", "idSchematicRocketT3", 3).getInt(3);
             SCCoreConfigManager.idSchematicRocketT4 = SCCoreConfigManager.configuration.get("Schematic", "idSchematicRocketT4", 4).getInt(4);

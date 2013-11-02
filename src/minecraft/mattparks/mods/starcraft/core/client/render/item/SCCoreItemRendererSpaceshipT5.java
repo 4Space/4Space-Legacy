@@ -20,12 +20,12 @@ import cpw.mods.fml.client.FMLClientHandler;
 
 public class SCCoreItemRendererSpaceshipT5 extends GCCoreItemRendererSpaceship
 {
-    private static final ResourceLocation cargoRocketTexture = new ResourceLocation(StarcraftCore.TEXTURE_DOMAIN, "textures/model/cargoRocket.png");
+    private static final ResourceLocation cargoRocketTexture = new ResourceLocation(StarcraftCore.ASSET_DOMAIN, "textures/model/cargoRocket.png");
     private IModelCustom cargoRocketModel;
 
     public SCCoreItemRendererSpaceshipT5(IModelCustom cargoRocketModel)
     {
-        super(new SCCoreEntityRocketT5(FMLClientHandler.instance().getClient().theWorld), new SCCoreModelSpaceshipTier5(), new ResourceLocation(StarcraftCore.TEXTURE_DOMAIN, "textures/model/rocketT5.png"));
+        super(new SCCoreEntityRocketT5(FMLClientHandler.instance().getClient().theWorld), new SCCoreModelSpaceshipTier5(), new ResourceLocation(StarcraftCore.ASSET_DOMAIN, "textures/model/rocketT5.png"));
         this.cargoRocketModel = cargoRocketModel;
     }
 

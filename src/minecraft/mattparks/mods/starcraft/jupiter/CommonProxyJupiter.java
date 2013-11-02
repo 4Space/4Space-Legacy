@@ -12,30 +12,25 @@ public class CommonProxyJupiter implements IGuiHandler
 {
     public void preInit(FMLPreInitializationEvent event)
     {
-
+    	;
     }
 
     public void init(FMLInitializationEvent event)
     {
-
+    	;
     }
 
     public void postInit(FMLPostInitializationEvent event)
     {
-
+    	;
     }
 
     public void registerRenderInformation()
     {
-
+    	;
     }
 
     public void spawnParticle(String var1, double var2, double var4, double var6)
-    {
-        ;
-    }
-
- //   public void opengSlimelingGui(GCMarsEntitySlimeling slimeling, int gui)
     {
         ;
     }
@@ -44,18 +39,6 @@ public class CommonProxyJupiter implements IGuiHandler
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
     {
         TileEntity tile = world.getBlockTileEntity(x, y, z);
-
-//        if (ID == GCMarsConfigManager.idGuiMachine)
-        {
-//            if (tile instanceof GCMarsTileEntityTerraformer)
-            {
-//                return new GCMarsContainerTerraformer(player.inventory, (GCMarsTileEntityTerraformer) tile);
-            }
-//            else if (tile instanceof GCMarsTileEntityLaunchController)
-            {
-//                return new GCMarsContainerLaunchController(player.inventory, (GCMarsTileEntityLaunchController) tile);
-            }
-        }
 
         return null;
     }

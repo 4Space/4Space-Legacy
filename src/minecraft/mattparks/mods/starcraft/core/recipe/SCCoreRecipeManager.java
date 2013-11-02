@@ -36,7 +36,7 @@ public class SCCoreRecipeManager
 //        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 2), new Object[] { "X", 'X', new ItemStack(VenusBlocks.venusBlock, 1, 8) });
 
         // Compressor recipe
-        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 2), "ingotGem", "ingotGem");
+        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 2), new ItemStack(SCCoreItems.coreItemBasic, 1, 0), new ItemStack(SCCoreItems.coreItemBasic, 1, 0));
         
         // Smelting
         

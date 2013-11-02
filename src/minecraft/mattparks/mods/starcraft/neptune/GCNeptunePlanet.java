@@ -1,7 +1,7 @@
 package mattparks.mods.starcraft.neptune;
 
 import mattparks.mods.starcraft.neptune.client.GCNeptuneMapPlanet;
-import mattparks.mods.starcraft.neptune.dimension.*;
+import mattparks.mods.starcraft.neptune.dimension.GCNeptuneWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.IGalaxy;
 import micdoodle8.mods.galacticraft.api.world.IMapObject;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;

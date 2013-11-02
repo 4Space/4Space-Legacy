@@ -1,7 +1,7 @@
 package mattparks.mods.starcraft.uranus;
 
 import mattparks.mods.starcraft.uranus.client.GCUranusMapPlanet;
-import mattparks.mods.starcraft.uranus.dimension.*;
+import mattparks.mods.starcraft.uranus.dimension.GCUranusWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.IGalaxy;
 import micdoodle8.mods.galacticraft.api.world.IMapObject;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;

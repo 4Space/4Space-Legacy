@@ -2,6 +2,7 @@ package mattparks.mods.starcraft.venus.wgen.village;
 
 import java.util.ArrayList;
 import java.util.Random;
+
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.biome.WorldChunkManager;
 

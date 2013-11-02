@@ -2,7 +2,6 @@ package mattparks.mods.starcraft.mercury.wgen;
 
 import java.util.Random;
 
-import mattparks.mods.starcraft.mercury.GCMercury;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreWorldGenMinableMeta;

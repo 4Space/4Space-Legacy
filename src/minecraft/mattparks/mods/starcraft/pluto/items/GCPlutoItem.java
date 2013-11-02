@@ -51,7 +51,7 @@ public class GCPlutoItem extends Item
 
         for (String name : GCPlutoItem.names)
         {
-            this.icons[i++] = iconRegister.registerIcon(GCPluto.TEXTURE_PREFIX + name);
+            this.icons[i++] = iconRegister.registerIcon(GCPluto.ASSET_PREFIX + name);
         }
     }
 

@@ -61,7 +61,6 @@ public class ClientProxyNeptune extends CommonProxyNeptune
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
-//        MinecraftForge.EVENT_BUS.register(new GCSaturnSounds());
     }
     
     @Override

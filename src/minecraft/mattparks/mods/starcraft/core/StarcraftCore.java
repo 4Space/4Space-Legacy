@@ -12,30 +12,14 @@ import mattparks.mods.starcraft.core.recipe.SCCoreRecipeManager;
 import mattparks.mods.starcraft.core.schematic.SCCoreSchematicRocketT3;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
-import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
-import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityAlienVillager;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityZombie;
-import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import micdoodle8.mods.galacticraft.core.world.gen.GCCoreOverworldGenerator;
-import micdoodle8.mods.galacticraft.moon.items.GCMoonItems;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -48,7 +32,6 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
@@ -100,8 +83,8 @@ public class StarcraftCore
 		}
 	};
 	
-    public static final String TEXTURE_DOMAIN = "starcraftcore";
-    public static final String TEXTURE_PREFIX = StarcraftCore.TEXTURE_DOMAIN + ":";
+    public static final String ASSET_DOMAIN = "starcraftcore";
+    public static final String ASSET_PREFIX = StarcraftCore.ASSET_DOMAIN + ":";
     
     public static long tick;
     public static long slowTick;
@@ -112,10 +95,7 @@ public class StarcraftCore
     public void preInit(FMLPreInitializationEvent event)
     {
         new SCCoreConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/core.conf"));
-
-//        GCVenusBlocks.initBlocks();
-//        GCVenusBlocks.setHarvestLevels();
-
+        
         SCCoreItems.initItems();
 
         StarcraftCore.proxy.preInit(event);
@@ -165,9 +145,7 @@ public class StarcraftCore
         this.registerOtherEntities();
         StarcraftCore.proxy.init(event);
         GalacticraftRegistry.addDungeonLoot(2, new ItemStack(SCCoreItems.schematic, 1, 0));
-        
-//        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
-//        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
+       
     }
 
     @EventHandler
@@ -178,17 +156,19 @@ public class StarcraftCore
 
     public void registerTileEntities()
     {
+    	;
     }
 
     public void registerCreatures()
     {
+    	;
     }
 
     public void registerOtherEntities()
     {
-    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT3.class, "SpaceshipT3", SCCoreConfigManager.idEntitySpaceshipTier3, 150, 1, true);    
-		this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT4.class, "SpaceshipT4", SCCoreConfigManager.idEntitySpaceshipTier4, 150, 1, true);    
-		this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT5.class, "SpaceshipT5", SCCoreConfigManager.idEntitySpaceshipTier5, 150, 1, true);    
+    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT3.class, "SpaceshipT3", SCCoreConfigManager.idEntitySpaceshipTier3, 150, 1, true);
+    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT4.class, "SpaceshipT4", SCCoreConfigManager.idEntitySpaceshipTier4, 150, 1, true);
+    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT5.class, "SpaceshipT5", SCCoreConfigManager.idEntitySpaceshipTier5, 150, 1, true);
     }
 
     @EventHandler

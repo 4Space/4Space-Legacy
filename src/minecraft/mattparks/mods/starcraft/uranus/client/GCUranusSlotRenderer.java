@@ -11,7 +11,7 @@ public class GCUranusSlotRenderer implements ICelestialBodyRenderer
     @Override
     public ResourceLocation getPlanetSprite()
     {
-        return new ResourceLocation(GCUranus.TEXTURE_DOMAIN, "textures/gui/planets/uranus.png");
+        return new ResourceLocation(GCUranus.ASSET_DOMAIN, "textures/gui/planets/uranus.png");
     }
 
     @Override

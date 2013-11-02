@@ -3,17 +3,14 @@ package mattparks.mods.starcraft.venus.dimension;
 import mattparks.mods.starcraft.venus.GCVenusConfigManager;
 import mattparks.mods.starcraft.venus.wgen.GCVenusChunkProvider;
 import mattparks.mods.starcraft.venus.wgen.GCVenusWorldChunkManager;
-import micdoodle8.mods.galacticraft.api.event.oxygen.GCCoreOxygenSuffocationEvent;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraftforge.event.Cancelable;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
