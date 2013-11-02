@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.spacecraftBlocks.blocks;
+package mattparks.mods.starcraft.spacecraftBlocks.block;
 
 import java.util.Random;
 
@@ -8,16 +8,16 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class PlutoStone extends Block
+public class VenusStone extends Block
 {
-    public PlutoStone(int id, Material material)
+    public VenusStone(int id, Material material)
     {
     	super( id, material.rock);
-        this.setCreativeTab(StarcraftCore.starcraftPlutoTab);
+        this.setCreativeTab(StarcraftCore.starcraftVenusTab);
     }
 
     public int idDropped(int par1, Random par2Random, int par3)
     {
-        return SpacecraftBlocks.PlutoCobblestone.blockID;
+        return SpacecraftBlocks.VenusCobblestone.blockID;
     }
 }

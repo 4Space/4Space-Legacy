@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.spacecraftBlocks.blocks;
+package mattparks.mods.starcraft.spacecraftBlocks.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -10,12 +10,12 @@ import mattparks.mods.starcraft.core.StarcraftCore;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 
-public class JupiterDirt extends Block implements IPlantableBlock, ITerraformableBlock
+public class StarcraftDirt extends Block implements IPlantableBlock, ITerraformableBlock
 {
-	public JupiterDirt(int id, Material material)
+	public StarcraftDirt(int id, Material material)
     {
     	super( id, material.grass);
-		this.setCreativeTab(StarcraftCore.starcraftGasTab);
+		this.setCreativeTab(StarcraftCore.starcraftMercuryTab);
 	}
     @Override
     public int requiredLiquidBlocksNearby()

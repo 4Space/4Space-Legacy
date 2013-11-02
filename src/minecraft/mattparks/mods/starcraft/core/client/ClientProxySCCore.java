@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.core.client;
 import mattparks.mods.starcraft.core.CommonProxySCCore;
 import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.client.fx.SCCoreEntityDropParticleFX;
 import mattparks.mods.starcraft.core.client.model.SCCoreModelSpaceshipTier3;
 import mattparks.mods.starcraft.core.client.render.item.SCCoreItemRendererSpaceshipT3;
 import mattparks.mods.starcraft.core.client.sounds.SCCoreSounds;
@@ -92,14 +91,16 @@ public class ClientProxySCCore extends CommonProxySCCore
         //Yellow Cape
         String capeYellowString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeYellow.png";
 
-        ClientProxyCore.capeMap.put("mattparks", capeOrangeString);     
+        ClientProxyCore.capeMap.put("mattparks", capeBlueString);     
         ClientProxyCore.capeMap.put("flashy3", capeOrangeString); 
+        ClientProxyCore.capeMap.put("dinammar", capeVioletString); 
+        ClientProxyCore.capeMap.put("imac123456", capeOrangeString); 
+        
         ClientProxyCore.capeMap.put("ghostheart305", capeRedString); 
         ClientProxyCore.capeMap.put("langjam350roxsox", capeBlueString); 
         ClientProxyCore.capeMap.put("_Ja1m3", capeRedString); 
-        ClientProxyCore.capeMap.put("dinammar", capeVioletString); 
         ClientProxyCore.capeMap.put("goldenkat99", capeOrangeString); 
-        ClientProxyCore.capeMap.put("imac123456", capeOrangeString); 
+
     }
 
     @Override
