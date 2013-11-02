@@ -7,9 +7,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class JupiterCobblestone extends Block
+public class JupiterStone extends Block
 {
-    public JupiterCobblestone(int id, Material material)
+    public JupiterStone(int id, Material material)
     {
     	super( id, material.rock);
         this.setCreativeTab(StarcraftCore.starcraftMercuryTab);
