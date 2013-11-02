@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.core.util.SCCoreUtil;
+import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import mattparks.mods.starcraft.venus.items.GCVenusItems;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
@@ -35,10 +36,10 @@ public class SCCoreRecipeManager
 //        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 2), new Object[] { "X", 'X', new ItemStack(VenusBlocks.venusBlock, 1, 8) });
 
         // Compressor recipe
-        CompressorRecipes.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 2), "ingotGem", "ingotGem");
+        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 2), "ingotGem", "ingotGem");
         
         // Smelting
-        //FurnaceRecipes.smelting().addSmelting(SCCoreItems.venusItemBasic.itemID, 0, new ItemStack(SCCoreItems.venusItemBasic, 1, 2), 0.2F);
+        
 
         // Schematic
         HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
