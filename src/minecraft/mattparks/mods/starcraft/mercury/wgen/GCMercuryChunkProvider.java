@@ -48,7 +48,7 @@ public class GCMercuryChunkProvider extends ChunkProviderGenerate
     private final NoiseModule noiseGen3;
     private final NoiseModule noiseGen4;
 
-    public GCMercuryBiomeDecorator biomedecoratorplanet = new GCMercuryBiomeDecorator(GCMercuryBiomeGenBase.venusFlat);
+    public GCMercuryBiomeDecorator biomedecoratorplanet = new GCMercuryBiomeDecorator();
 
     private final World worldObj;
     private final GCMercuryMapGenVillage villageGenerator = new GCMercuryMapGenVillage();
@@ -277,24 +277,23 @@ public class GCMercuryChunkProvider extends ChunkProviderGenerate
     @Override
     public void populate(IChunkProvider par1IChunkProvider, int par2, int par3)
     {
-        BlockSand.fallInstantly = true;
-        final int var4 = par2 * 16;
-        final int var5 = par3 * 16;
+    	BlockSand.fallInstantly = true;
+        int var4 = par2 * 16;
+        int var5 = par3 * 16;
         this.worldObj.getBiomeGenForCoords(var4 + 16, var5 + 16);
         this.rand.setSeed(this.worldObj.getSeed());
         final long var7 = this.rand.nextLong() / 2L * 2L + 1L;
         final long var9 = this.rand.nextLong() / 2L * 2L + 1L;
         this.rand.setSeed(par2 * var7 + par3 * var9 ^ this.worldObj.getSeed());
-
+        this.decoratePlanet(this.worldObj, this.rand, var4, var5);
+        var4 += 8;
+        var5 += 8;
         this.dungeonGenerator.handleTileEntities(this.rand);
 
         if (!GCMercuryConfigManager.disableMercuryVillageGen)
         {
             this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, par2, par3);
         }
-
-        this.decoratePlanet(this.worldObj, this.rand, var4, var5);
-        BlockSand.fallInstantly = false;
     }
 
     @Override
