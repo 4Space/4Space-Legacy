@@ -3,7 +3,7 @@ package mattparks.mods.starcraft.core.items;
 import java.util.List;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT3;
+import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT4;
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
@@ -85,7 +85,7 @@ public class SCCoreItemSpaceshipTier4 extends Item implements IHoldableItem
 
                 if (par1ItemStack.getItemDamage() < 10)
                 {
-                    rocket = new SCCoreEntityRocketT3(par3World, centerX, centerY + 4.2D, centerZ, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
+                    rocket = new SCCoreEntityRocketT4(par3World, centerX, centerY + 4.2D, centerZ, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
                 }
 
                 par3World.spawnEntityInWorld(rocket);

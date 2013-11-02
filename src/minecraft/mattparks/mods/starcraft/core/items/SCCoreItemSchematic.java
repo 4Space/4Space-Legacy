@@ -78,6 +78,9 @@ public class SCCoreItemSchematic extends GCCoreItemSchematic implements ISchemat
             case 0:
                 par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT3.name"));
                 break;
+            case 1:
+                par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT4.name"));
+                break;
             }
         }
     }
