@@ -172,6 +172,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 	//Block Neptune Stone
 	public final static Block NeptuneHydrogen = new StarcraftGasBottom(661, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneHydrogen") .setTextureName("starcraftneptune:neptuneHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 	 
+	 
+        //Fluid Metallic Hydrogen
+        public final static Block MetallicHydrogenFlowing = new StarcraftMetallicHydrogenFlowing(920).setUnlocalizedName("MetallicHydrogenFlowing") .setCreativeTab(StarcraftCore.starcraftGasTab);
+        public final static Block MetallicHydrogenStill = new StarcraftMetallicHydrogenStill(921).setUnlocalizedName("MetallicHydrogenStill") .setCreativeTab(StarcraftCore.starcraftGasTab);
+    
 	    @Instance("SpacecraftBlocks")
         public static SpacecraftBlocks instance;
 
