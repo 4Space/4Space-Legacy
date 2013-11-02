@@ -13,7 +13,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 public class SCCoreItems
 {
-    public static Item venusItemBasic;
+    public static Item coreItemBasic;
     public static Item gemPickaxe;
     public static Item gemAxe;
     public static Item gemHoe;
@@ -35,7 +35,7 @@ public class SCCoreItems
     
     public static void initItems()
     {
-        SCCoreItems.venusItemBasic = new SCCoreItem(SCCoreConfigManager.idItemVenusBasic);
+        SCCoreItems.coreItemBasic = new SCCoreItem(SCCoreConfigManager.idItemVenusBasic);
         SCCoreItems.gemPickaxe = new SCCoreItemPickaxe(SCCoreConfigManager.idToolGemPickaxe, SCCoreItems.TOOLGEM).setUnlocalizedName("gemPick");
         SCCoreItems.gemAxe = new SCCoreItemAxe(SCCoreConfigManager.idToolGemAxe, SCCoreItems.TOOLGEM).setUnlocalizedName("gemAxe");
         SCCoreItems.gemHoe = new SCCoreItemHoe(SCCoreConfigManager.idToolGemHoe, SCCoreItems.TOOLGEM).setUnlocalizedName("gemHoe");
