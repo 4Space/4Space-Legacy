@@ -4,16 +4,14 @@ import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityLander;
-import micdoodle8.mods.galacticraft.core.entities.GCCorePlayerMP;
+import micdoodle8.mods.galacticraft.core.entities.player.GCCorePlayerMP;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketLanderUpdate;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet250CustomPayload;
-import net.minecraft.pathfinding.PathEntity;
 import net.minecraft.tileentity.TileEntity;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.network.IPacketHandler;
