@@ -92,8 +92,8 @@ public class SCCoreConfigManager
             SCCoreConfigManager.idEntitySpaceshipTier3 = SCCoreConfigManager.configuration.get("Entities", "idEntitySpaceshipTier3", 173).getInt(173);
             SCCoreConfigManager.idGuiRocketCraftingBenchT3 = SCCoreConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT3", 143).getInt(143);
             
-            SCCoreConfigManager.idEntitySpaceshipTier4 = SCCoreConfigManager.configuration.get("Entities", "idEntitySpaceshipTier4", 174).getInt(174);
-            SCCoreConfigManager.idGuiRocketCraftingBenchT4 = SCCoreConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT4", 144).getInt(144);
+            SCCoreConfigManager.idEntitySpaceshipTier4 = SCCoreConfigManager.configuration.get("Entities", "idEntitySpaceshipTier4", 194).getInt(194);
+            SCCoreConfigManager.idGuiRocketCraftingBenchT4 = SCCoreConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT4", 184).getInt(184);
             
             SCCoreConfigManager.idSchematicRocketT3 = SCCoreConfigManager.configuration.get("Schematic", "idSchematicRocketT3", 2).getInt(2);
         }
