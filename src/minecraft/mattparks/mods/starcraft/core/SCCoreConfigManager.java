@@ -27,14 +27,16 @@ public class SCCoreConfigManager
     
     // ITEMS
     public static int idItemVenusBasic;
+    public static int idItemSchematicMars;
+    public static int idItemRocketEngine;
+    
     public static int idItemSpaceshipTier3;
     public static int idItemSpaceshipTier4;
     public static int idItemSpaceshipTier5;
-    public static int idItemSchematicMars;
-    public static int idItemRocketEngine;
-    public static int idArmorJetpack;
     
     // ARMOR
+    public static int idArmorJetpack;
+
     public static int idArmorGemHelmet;
     public static int idArmorGemChestplate;
     public static int idArmorGemLeggings;
@@ -73,24 +75,27 @@ public class SCCoreConfigManager
         {
             SCCoreConfigManager.configuration.load();
 
-            SCCoreConfigManager.idItemVenusBasic = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 7539).getInt(7539);
-            SCCoreConfigManager.idItemSpaceshipTier3 = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier3", 7540).getInt(7540);
-            SCCoreConfigManager.idItemSpaceshipTier4 = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier4", 7553).getInt(7553);
-            SCCoreConfigManager.idItemSpaceshipTier5 = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier5", 7554).getInt(7554);
+            SCCoreConfigManager.idItemVenusBasic = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 7540).getInt(7540);
             SCCoreConfigManager.idItemSchematicMars = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSchematicMars", 7541).getInt(7541);
             SCCoreConfigManager.idItemRocketEngine = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemRocketEngine", 7542).getInt(7542);
-            SCCoreConfigManager.idArmorJetpack = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorJetpack", 7543).getInt(7543);
             
-            SCCoreConfigManager.idToolGemSword = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemSword", 7544).getInt(7544);
-            SCCoreConfigManager.idToolGemPickaxe = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemPickaxe", 7545).getInt(7545);
-            SCCoreConfigManager.idToolGemSpade = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemSpade", 7546).getInt(7546);
-            SCCoreConfigManager.idToolGemHoe = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemHoe", 7547).getInt(7547);
-            SCCoreConfigManager.idToolGemAxe = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemAxe", 7548).getInt(7548);
+            SCCoreConfigManager.idItemSpaceshipTier3 = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier3", 7543).getInt(7543);
+            SCCoreConfigManager.idItemSpaceshipTier4 = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier4", 7544).getInt(7544);
+            SCCoreConfigManager.idItemSpaceshipTier5 = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier5", 7545).getInt(7545);
 
-            SCCoreConfigManager.idArmorGemHelmet = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemHelmet", 7549).getInt(7549);
-            SCCoreConfigManager.idArmorGemChestplate = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemChestplate", 7550).getInt(7550);
-            SCCoreConfigManager.idArmorGemLeggings = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemLeggings", 7551).getInt(7551);
-            SCCoreConfigManager.idArmorGemBoots = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemBoots", 7552).getInt(7552);
+            SCCoreConfigManager.idToolGemSword = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemSword", 7546).getInt(7546);
+            SCCoreConfigManager.idToolGemPickaxe = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemPickaxe", 7547).getInt(7547);
+            SCCoreConfigManager.idToolGemSpade = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemSpade", 7548).getInt(7548);
+            SCCoreConfigManager.idToolGemHoe = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemHoe", 7549).getInt(7549);
+            SCCoreConfigManager.idToolGemAxe = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemAxe", 7550).getInt(7550);
+
+            
+            SCCoreConfigManager.idArmorJetpack = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorJetpack", 7551).getInt(7551);
+            
+            SCCoreConfigManager.idArmorGemHelmet = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemHelmet", 7552).getInt(7582);
+            SCCoreConfigManager.idArmorGemChestplate = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemChestplate", 7553).getInt(753);
+            SCCoreConfigManager.idArmorGemLeggings = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemLeggings", 7554).getInt(7554);
+            SCCoreConfigManager.idArmorGemBoots = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemBoots", 7555).getInt(7555);
 
             //Block id's 7653-7654 are used by Spacecraft Pluto
             

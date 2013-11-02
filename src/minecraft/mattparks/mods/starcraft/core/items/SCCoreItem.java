@@ -84,20 +84,31 @@ public class SCCoreItem extends Item
         return "unnamed";
     }
 
+    @Override
+    public int getMetadata(int par1)
+    {
+        return par1;
+    }
+    
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
     {
-        if (par1ItemStack != null && par1ItemStack.getItemDamage() == 3)
+        if (par2EntityPlayer.worldObj.isRemote)
         {
-            par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier3.desc"));
+            switch (par1ItemStack.getItemDamage())
+            {
+            case 3:
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier3.desc"));
+                break;
+            case 4:
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier4.desc"));
+                break;
+            case 5:
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier5.desc"));
+                break;
+            }
         }
-    }
-
-    @Override
-    public int getMetadata(int par1)
-    {
-        return par1;
     }
 }

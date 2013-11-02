@@ -103,8 +103,10 @@ public class ClientProxySCCore extends CommonProxySCCore
     public void registerRenderInformation()
     {
         IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
-        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT3.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier3(), StarcraftCore.ASSET_DOMAIN, "rocketT3"));
+        
         RenderingRegistry.addNewArmourRendererPrefix("gem");
+        
+        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT3.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier3(), StarcraftCore.ASSET_DOMAIN, "rocketT3"));
         MinecraftForgeClient.registerItemRenderer(SCCoreItems.spaceshipT3.itemID, new SCCoreItemRendererSpaceshipT3(cargoRocketModel));
     
         RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT4.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier4(), StarcraftCore.ASSET_DOMAIN, "rocketT4"));
