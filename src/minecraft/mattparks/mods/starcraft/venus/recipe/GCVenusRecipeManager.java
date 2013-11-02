@@ -27,8 +27,6 @@ public class GCVenusRecipeManager
         
         RecipeUtil.addRecipe(new ItemStack(GCVenusItems.sulferBoots), new Object[] { "X X", "X X", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 4), new Object[] { "XWX", "XYX", " Z ", 'W', Item.diamond, 'X', Item.leather, 'Y', Item.slimeBall, 'Z', Block.chest });
-
         RecipeUtil.addRecipe(new ItemStack(GCVenusItems.sulferSword), new Object[] { "X", "X", "Y", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venusItemBasic, 1, 1) });
 
         RecipeUtil.addRecipe(new ItemStack(GCVenusItems.sulferPickaxe), new Object[] { "XXX", " Y ", " Y ", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venusItemBasic, 1, 1) });
@@ -55,8 +53,17 @@ public class GCVenusRecipeManager
         
         RecipeUtil.addRecipe(new ItemStack(SpacecraftBlocks.VenusRedGemBlock, 1, 0), new Object[] { "TTT", "TTT", "TTT", 'T', new ItemStack(SCCoreItems.coreItemBasic, 1, 0)});
         
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new Object[] { "WXW", "WYW", "WZW", 'X', "compressedSteel", 'Y', Block.glass, 'Z', new ItemStack(GCCoreItems.canister, 1, 0), 'W', "plateSulfer" });
+        
         GameRegistry.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 0), new ItemStack(SpacecraftBlocks.VenusSulferBlock, 1, 0));
+        
         GameRegistry.addShapelessRecipe(new ItemStack(SCCoreItems.coreItemBasic, 9, 0), new ItemStack(SpacecraftBlocks.VenusRedGemBlock, 1, 0));
+        
+        GameRegistry.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 4), new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        
+        GameRegistry.addShapelessRecipe(new ItemStack(SpacecraftBlocks.VenusBasalt, 1, 0),  new ItemStack(GCVenusItems.venusItemBasic, 1, 7), new ItemStack(GCVenusItems.venusItemBasic, 1, 7), new ItemStack(GCVenusItems.venusItemBasic, 1, 7), new ItemStack(GCVenusItems.venusItemBasic, 1, 7));
+        
+        GameRegistry.addShapelessRecipe(new ItemStack(SpacecraftBlocks.VenusHalfBasalt, 6, 0), new ItemStack(SpacecraftBlocks.VenusBasalt, 1, 0), new ItemStack(SpacecraftBlocks.VenusBasalt, 1, 0), new ItemStack(SpacecraftBlocks.VenusBasalt, 1, 0));
         
         // Compressor recipes
         
@@ -72,5 +79,6 @@ public class GCVenusRecipeManager
         FurnaceRecipes.smelting().addSmelting(SpacecraftBlocks.VenusCopperOre.blockID, 0, new ItemStack(GCCoreItems.basicItem, 1, 3), 0.2F);
         FurnaceRecipes.smelting().addSmelting(SpacecraftBlocks.VenusTinOre.blockID, 0, new ItemStack(GCCoreItems.basicItem, 1, 4), 0.2F);
         FurnaceRecipes.smelting().addSmelting(SpacecraftBlocks.VenusRedGemOre.blockID, 0, new ItemStack(SCCoreItems.coreItemBasic, 1, 0), 0.2F);
+        FurnaceRecipes.smelting().addSmelting(GCVenusItems.venusItemBasic.itemID, 6, new ItemStack(GCVenusItems.venusItemBasic, 1, 7), 0.2F);
     }
 }

@@ -86,7 +86,7 @@ public class GCVenusItem extends Item
     @SideOnly(Side.CLIENT)
     public boolean hasEffect(ItemStack par1ItemStack)
 	{
-    	if(par1ItemStack.getItemDamage() == 3)
+    	if(par1ItemStack.getItemDamage() == 3 || par1ItemStack.getItemDamage() == 4)
     	{
     		return true;
     	}
