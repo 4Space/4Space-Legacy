@@ -9,6 +9,8 @@ import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftBlock;
 import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftDirt;
 import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftGasBottom;
 import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftGasTop;
+import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftMetallicHydrogenFlowing;
+import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftMetallicHydrogenStill;
 import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftOre;
 import mattparks.mods.starcraft.spacecraftBlocks.block.VenusBlazeEgg;
 import mattparks.mods.starcraft.spacecraftBlocks.block.VenusHalfSlab;
