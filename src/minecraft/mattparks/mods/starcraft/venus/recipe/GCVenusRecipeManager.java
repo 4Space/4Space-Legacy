@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import mattparks.mods.starcraft.venus.items.GCVenusItems;
 import mattparks.mods.starcraft.venus.util.GCVenusUtil;
+import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.util.RecipeUtil;
@@ -23,13 +24,12 @@ public class GCVenusRecipeManager
 
     private static void addUniversalRecipes()
     {
-        OreDictionary.registerOre("ingotDesh", new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
-        OreDictionary.registerOre("plateDesh", new ItemStack(GCVenusItems.venusItemBasic, 1, 5));
-        OreDictionary.registerOre("plateHeavyT2", new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        OreDictionary.registerOre("ingotSulfer", new ItemStack(GCVenusItems.venusItemBasic, 1, 0));
+        OreDictionary.registerOre("plateSulfer", new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
 
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 1), new Object[] { "X", "X", 'X', "plateSulfer" });
+        
         RecipeUtil.addRecipe(new ItemStack(GCVenusItems.sulferBoots), new Object[] { "X X", "X X", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2) });
-
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 1), new Object[] { "X", "X", 'X', "ingotDesh" });
 
         RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 4), new Object[] { "XWX", "XYX", " Z ", 'W', Item.diamond, 'X', Item.leather, 'Y', Item.slimeBall, 'Z', Block.chest });
 
@@ -55,8 +55,13 @@ public class GCVenusRecipeManager
 
 //        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 2), new Object[] { "X", 'X', new ItemStack(VenusBlocks.venusBlock, 1, 8) });
 
+        // Compressor recipes
+        
+        
+        
+        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 2), "ingotSulfer", "ingotSulfer");
         
         // Smelting
-        FurnaceRecipes.smelting().addSmelting(GCVenusItems.venusItemBasic.itemID, 0, new ItemStack(GCVenusItems.venusItemBasic, 1, 2), 0.2F);
+        //FurnaceRecipes.smelting().addSmelting(GCVenusItems.venusItemBasic.itemID, 0, new ItemStack(GCVenusItems.venusItemBasic, 1, 2), 0.2F);
     }
 }

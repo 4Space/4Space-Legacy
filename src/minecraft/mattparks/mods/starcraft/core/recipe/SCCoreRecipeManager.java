@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.core.util.SCCoreUtil;
+import mattparks.mods.starcraft.venus.items.GCVenusItems;
+import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.util.RecipeUtil;
@@ -23,33 +25,34 @@ public class SCCoreRecipeManager
 
     private static void addUniversalRecipes()
     {
-        OreDictionary.registerOre("ingotDesh", new ItemStack(SCCoreItems.venusItemBasic, 1, 2));
-        OreDictionary.registerOre("plateDesh", new ItemStack(SCCoreItems.venusItemBasic, 1, 5));
-        OreDictionary.registerOre("plateHeavyT2", new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
+    	OreDictionary.registerOre("ingotGem", new ItemStack(SCCoreItems.coreItemBasic, 1, 0));
+        OreDictionary.registerOre("plateGem", new ItemStack(SCCoreItems.coreItemBasic, 1, 2));
+    	
+        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.coreItemBasic, 1, 1), new Object[] { "X", "X", 'X', "plateGem" });
 
-        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.venusItemBasic, 1, 1), new Object[] { "X", "X", 'X', "ingotDesh" });
-
-        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.venusItemBasic, 1, 4), new Object[] { "XWX", "XYX", " Z ", 'W', Item.diamond, 'X', Item.leather, 'Y', Item.slimeBall, 'Z', Block.chest });
+        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.coreItemBasic, 1, 4), new Object[] { "XWX", "XYX", " Z ", 'W', Item.diamond, 'X', Item.leather, 'Y', Item.slimeBall, 'Z', Block.chest });
 
 //        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 2), new Object[] { "X", 'X', new ItemStack(VenusBlocks.venusBlock, 1, 8) });
 
+        // Compressor recipe
+        CompressorRecipes.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 2), "ingotGem", "ingotGem");
         
         // Smelting
-        FurnaceRecipes.smelting().addSmelting(SCCoreItems.venusItemBasic.itemID, 0, new ItemStack(SCCoreItems.venusItemBasic, 1, 2), 0.2F);
+        //FurnaceRecipes.smelting().addSmelting(SCCoreItems.venusItemBasic.itemID, 0, new ItemStack(SCCoreItems.venusItemBasic, 1, 2), 0.2F);
 
         // Schematic
         HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
         input.put(1, new ItemStack(GCCoreItems.partNoseCone));
-        input.put(2, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(3, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(4, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(5, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(6, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(7, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(8, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(9, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(10, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(11, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
+        input.put(2, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(3, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(4, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(5, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(6, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(7, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(8, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(9, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(10, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(11, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
         input.put(12, new ItemStack(GCCoreItems.rocketEngine, 1, 1));
         input.put(13, new ItemStack(GCCoreItems.partFins));
         input.put(14, new ItemStack(GCCoreItems.partFins));
@@ -109,12 +112,12 @@ public class SCCoreRecipeManager
         input = new HashMap<Integer, ItemStack>();
         input.put(1, new ItemStack(GCCoreItems.partNoseCone));
         input.put(2, new ItemStack(GCCoreItems.basicItem, 1, 14));
-        input.put(3, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(4, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(5, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(6, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(7, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
-        input.put(8, new ItemStack(SCCoreItems.venusItemBasic, 1, 3));
+        input.put(3, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(4, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(5, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(6, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(7, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
+        input.put(8, new ItemStack(SCCoreItems.coreItemBasic, 1, 3));
         input.put(9, new ItemStack(GCCoreItems.partFins));
         input.put(10, new ItemStack(GCCoreItems.partFins));
         input.put(11, new ItemStack(GCCoreItems.rocketEngine));
