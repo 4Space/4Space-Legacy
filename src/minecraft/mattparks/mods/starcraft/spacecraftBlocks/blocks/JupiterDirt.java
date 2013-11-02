@@ -1,27 +1,22 @@
-package mattparks.mods.starcraft.spacecraftBlocks.blocks.venus;
+package mattparks.mods.starcraft.spacecraftBlocks.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.IPlantable;
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 
-public class VenusGrass extends Block implements IPlantableBlock, ITerraformableBlock
+public class JupiterDirt extends Block implements IPlantableBlock, ITerraformableBlock
 {
-	public VenusGrass(int id, Material material)
+	public JupiterDirt(int id, Material material)
     {
     	super( id, material.grass);
-        this.setCreativeTab(StarcraftCore.starcraftVenusTab);
-    }
-    public int damageDropped(int par1)
-    {
-        return this.blockID == SpacecraftBlocks.VenusDirt.blockID ? 4 : 0;
+		this.setCreativeTab(StarcraftCore.starcraftGasTab);
 	}
-	
     @Override
     public int requiredLiquidBlocksNearby()
     {
@@ -46,7 +41,7 @@ public class VenusGrass extends Block implements IPlantableBlock, ITerraformable
     }
 
     @Override
-    public boolean isTerraformable(World world, int x, int y, int z)//Makes The Block TransFormable
+    public boolean isTerraformable(World world, int x, int y, int z)
     {
         int meta = world.getBlockMetadata(x, y, z);
         

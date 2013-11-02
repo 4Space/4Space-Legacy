@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.spacecraftBlocks.blocks.venus;
+package mattparks.mods.starcraft.spacecraftBlocks.blocks;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;

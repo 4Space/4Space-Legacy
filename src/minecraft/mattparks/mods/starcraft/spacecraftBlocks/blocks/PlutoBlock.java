@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.spacecraftBlocks.blocks.venus;
+package mattparks.mods.starcraft.spacecraftBlocks.blocks;
 
 import java.util.Random;
 
@@ -7,12 +7,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class VenusBlock extends Block
+public class PlutoBlock extends Block
 {
-    public VenusBlock(int id, Material material)
+    public PlutoBlock(int id, Material material)
     {
     	super( id, material.rock);
-        this.setCreativeTab(StarcraftCore.starcraftVenusTab);
+        this.setCreativeTab(StarcraftCore.starcraftPlutoTab);
     }
 
 }

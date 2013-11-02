@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.spacecraftBlocks.blocks.pluto;
+package mattparks.mods.starcraft.spacecraftBlocks.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

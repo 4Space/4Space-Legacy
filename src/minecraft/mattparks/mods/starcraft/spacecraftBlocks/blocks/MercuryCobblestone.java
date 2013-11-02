@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.spacecraftBlocks.blocks.mercury;
+package mattparks.mods.starcraft.spacecraftBlocks.blocks;
 
 import java.util.Random;
 
@@ -7,9 +7,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class MercuryBlock extends Block
+public class MercuryCobblestone extends Block
 {
-    public MercuryBlock(int id, Material material)
+    public MercuryCobblestone(int id, Material material)
     {
     	super( id, material.rock);
         this.setCreativeTab(StarcraftCore.starcraftMercuryTab);

@@ -1,22 +1,27 @@
-package mattparks.mods.starcraft.spacecraftBlocks.blocks.mercury;
+package mattparks.mods.starcraft.spacecraftBlocks.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.IPlantable;
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 
-public class MercuryDirt extends Block implements IPlantableBlock, ITerraformableBlock
+public class MercuryGrass extends Block implements IPlantableBlock, ITerraformableBlock
 {
-	public MercuryDirt(int id, Material material)
+	public MercuryGrass(int id, Material material)
     {
     	super( id, material.grass);
-		this.setCreativeTab(StarcraftCore.starcraftMercuryTab);
+        this.setCreativeTab(StarcraftCore.starcraftMercuryTab);
+    }
+    public int damageDropped(int par1)
+    {
+        return this.blockID == SpacecraftBlocks.MercuryDirt.blockID ? 4 : 0;
 	}
+	
     @Override
     public int requiredLiquidBlocksNearby()
     {
@@ -41,7 +46,7 @@ public class MercuryDirt extends Block implements IPlantableBlock, ITerraformabl
     }
 
     @Override
-    public boolean isTerraformable(World world, int x, int y, int z)
+    public boolean isTerraformable(World world, int x, int y, int z)//Makes The Block TransFormable
     {
         int meta = world.getBlockMetadata(x, y, z);
         

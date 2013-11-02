@@ -2,10 +2,24 @@ package mattparks.mods.starcraft.spacecraftBlocks;
 
 import java.io.File;
 
-import mattparks.mods.starcraft.spacecraftBlocks.blocks.jupiter.*;
-import mattparks.mods.starcraft.spacecraftBlocks.blocks.mercury.*;
-import mattparks.mods.starcraft.spacecraftBlocks.blocks.pluto.*;
-import mattparks.mods.starcraft.spacecraftBlocks.blocks.venus.*;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.JupiterBlock;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.JupiterDirt;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.MercuryBlock;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.MercuryDirt;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.MercuryGrass;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.MercuryOre;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.MercuryStone;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.PlutoBlock;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.PlutoDirt;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.PlutoGrass;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.PlutoStone;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.VenusBlazeEgg;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.VenusBlock;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.VenusDirt;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.VenusGrass;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.VenusHalfSlab;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.VenusOre;
+import mattparks.mods.starcraft.spacecraftBlocks.blocks.VenusStone;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;

@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.spacecraftBlocks.blocks.mercury;
+package mattparks.mods.starcraft.spacecraftBlocks.blocks;
 
 import java.util.Random;
 
@@ -12,12 +12,12 @@ import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class MercuryOre extends Block implements IDetectableResource, IPlantableBlock
+public class VenusOre extends Block implements IDetectableResource, IPlantableBlock
 {
-    public MercuryOre(int id, Material material)
+    public VenusOre(int id, Material material)
     {
             super( id, material.rock);
-        this.setCreativeTab(StarcraftCore.starcraftMercuryTab);
+        this.setCreativeTab(StarcraftCore.starcraftVenusTab);
     }
 
     /**
