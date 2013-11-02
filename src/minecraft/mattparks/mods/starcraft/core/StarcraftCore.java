@@ -62,7 +62,7 @@ public class StarcraftCore
 	
 	public static CreativeTabs starcraftRocketsTab = new CreativeTabs("starcraftstarcraftRocketsTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(SCCoreItems.spaceshipT4, 1, 0);
+			return new ItemStack(SCCoreItems.spaceshipT5, 1, 0);
 		}
 	};
 	

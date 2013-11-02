@@ -38,7 +38,7 @@ public class SCCoreItems
         SCCoreItems.gemHoe = new SCCoreItemHoe(SCCoreConfigManager.idToolGemHoe, SCCoreItems.TOOLGEM).setUnlocalizedName("gemHoe");
         SCCoreItems.gemSpade = new SCCoreItemSpade(SCCoreConfigManager.idToolGemSpade, SCCoreItems.TOOLGEM).setUnlocalizedName("gemSpade");
         SCCoreItems.gemSword = new SCCoreItemSword(SCCoreConfigManager.idToolGemSword, SCCoreItems.TOOLGEM).setUnlocalizedName("gemSword");
- 
+
         SCCoreItems.jetpack = new SCCoreItemJetpack(SCCoreConfigManager.idArmorJetpack, SCCoreItems.ARMORJETPACK, 11, 1, false).setUnlocalizedName("jetpack");
         
         SCCoreItems.gemHelmet = new SCCoreItemArmor(SCCoreConfigManager.idArmorGemHelmet, SCCoreItems.ARMORGEM, 7, 0, false).setUnlocalizedName("gemHelmet");
@@ -48,7 +48,7 @@ public class SCCoreItems
 
         SCCoreItems.spaceshipT3 = new SCCoreItemSpaceshipTier3(SCCoreConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");
         SCCoreItems.spaceshipT4 = new SCCoreItemSpaceshipTier4(SCCoreConfigManager.idItemSpaceshipTier4).setUnlocalizedName("spaceshipTier4");
-        SCCoreItems.spaceshipT5 = new SCCoreItemSpaceshipTier4(SCCoreConfigManager.idItemSpaceshipTier5).setUnlocalizedName("spaceshipTier5");
+        SCCoreItems.spaceshipT5 = new SCCoreItemSpaceshipTier5(SCCoreConfigManager.idItemSpaceshipTier5).setUnlocalizedName("spaceshipTier5");
         
         SCCoreItems.rocketEngine = new SCCoreItemRocketParts(SCCoreConfigManager.idItemRocketEngine, "engine");
         SCCoreItems.schematic = new SCCoreItemSchematic(SCCoreConfigManager.idItemSchematicMars).setUnlocalizedName("schematic");

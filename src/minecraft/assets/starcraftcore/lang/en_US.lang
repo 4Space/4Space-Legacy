@@ -24,6 +24,7 @@ item.spaceshipTier5.name=Tier 5 Rocket
 item.plateHeavyT3.name=Heavy-Duty Plate
 item.plateHeavyT4.name=Heavy-Duty Plate
 item.plateHeavyT5.name=Heavy-Duty Plate
+item.jetpack.name=Jetpack
 
 # TOOLS
 item.gemPick.name=Gem Pickaxe

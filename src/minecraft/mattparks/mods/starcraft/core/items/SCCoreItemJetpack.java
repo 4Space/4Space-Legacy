@@ -1,5 +1,6 @@
 package mattparks.mods.starcraft.core.items;
 
+import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -22,24 +23,11 @@ public class SCCoreItemJetpack extends ItemArmor
         }
 
         @Override
-    public void onUpdate(ItemStack itemstack, World world, Entity entity, int par4, boolean par5)
-    {
-            if (entity instanceof EntityPlayer)
-            {
-                    final EntityPlayer player = (EntityPlayer) entity;
-
-                    if (StarcraftCore.tick % 100 == 0)
-                    {
-                            if (!player.capabilities.isCreativeMode)
-                            {
-                                player.inventory.consumeInventoryItem(Item.coal.itemID);
-                            }
-                    }
-            }
-    }
-
-        public void setActive()
+        public void onArmorTickUpdate(World world, EntityPlayer player, ItemStack itemstack)
         {
-                this.active = true;
+        if (itemstack.itemID == SCCoreItems.jetpack.itemID)
+        {
+        player.capabilities.allowFlying = true;
+        }
         }
 }
