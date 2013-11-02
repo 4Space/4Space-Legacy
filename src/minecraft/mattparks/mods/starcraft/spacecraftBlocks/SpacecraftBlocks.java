@@ -3,16 +3,7 @@ package mattparks.mods.starcraft.spacecraftBlocks;
 import java.io.File;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.spacecraftBlocks.block.MercuryStone;
-import mattparks.mods.starcraft.spacecraftBlocks.block.PlutoStone;
-import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftBlock;
-import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftDirt;
-import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftGasBottom;
-import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftGasTop;
-import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftOre;
-import mattparks.mods.starcraft.spacecraftBlocks.block.VenusBlazeEgg;
-import mattparks.mods.starcraft.spacecraftBlocks.block.VenusHalfSlab;
-import mattparks.mods.starcraft.spacecraftBlocks.block.VenusStone;
+import mattparks.mods.starcraft.spacecraftBlocks.block.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import cpw.mods.fml.common.Mod;
@@ -173,9 +164,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 	public final static Block NeptuneHydrogen = new StarcraftGasBottom(661, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneHydrogen") .setTextureName("starcraftneptune:neptuneHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 	 
 	 
-        //Fluid Metallic Hydrogen
-        public final static Block MetallicHydrogenFlowing = new StarcraftMetallicHydrogenFlowing(920).setUnlocalizedName("MetallicHydrogenFlowing") .setCreativeTab(StarcraftCore.starcraftGasTab);
-        public final static Block MetallicHydrogenStill = new StarcraftMetallicHydrogenStill(921).setUnlocalizedName("MetallicHydrogenStill") .setCreativeTab(StarcraftCore.starcraftGasTab);
+    //Fluid Metallic Hydrogen
+    public final static Block MetallicHydrogenFlowing = new StarcraftMetallicHydrogenFlowing(920).setUnlocalizedName("MetallicHydrogenFlowing") .setCreativeTab(StarcraftCore.starcraftGasTab);
+    public final static Block MetallicHydrogenStill = new StarcraftMetallicHydrogenStill(921).setUnlocalizedName("MetallicHydrogenStill") .setCreativeTab(StarcraftCore.starcraftGasTab);
     
 	    @Instance("SpacecraftBlocks")
         public static SpacecraftBlocks instance;
@@ -244,6 +235,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 	            GameRegistry.registerBlock(NeptuneNitrogen, "NeptuneNitrogen");
 	            GameRegistry.registerBlock(NeptuneHelium, "NeptuneHelium");
 				GameRegistry.registerBlock(NeptuneHydrogen, "NeptuneHydrogen");
+				
+	            GameRegistry.registerBlock(MetallicHydrogenFlowing, "MetallicHydrogenFlowing");
+//				GameRegistry.registerBlock(MetallicHydrogenStill, "MetallicHydrogenStill");
 
         }
         
