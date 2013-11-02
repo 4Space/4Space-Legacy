@@ -18,7 +18,7 @@ public class SCCoreItemSchematic extends GCCoreItemSchematic implements ISchemat
 {
     protected Icon[] icons = new Icon[1];
 
-    public static final String[] names = { "schematic_rocketT3" };
+    public static final String[] names = { "schematic_rocketT3", "schematic_rocketT4" };
 
     public SCCoreItemSchematic(int itemID)
     {
@@ -76,6 +76,9 @@ public class SCCoreItemSchematic extends GCCoreItemSchematic implements ISchemat
             {
             case 0:
                 par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT3.name"));
+                break;
+            case 1:
+                par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT4.name"));
                 break;
             }
         }

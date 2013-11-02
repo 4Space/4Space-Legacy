@@ -29,6 +29,7 @@ public class SCCoreConfigManager
     // ITEMS
     public static int idItemVenusBasic;
     public static int idItemSpaceshipTier3;
+    public static int idItemSpaceshipTier4;
     public static int idItemSchematicMars;
     public static int idItemRocketEngine;
     public static int idArmorJetpack;
@@ -48,10 +49,12 @@ public class SCCoreConfigManager
 
     // ENTITIES
     public static int idEntitySpaceshipTier3;
+    public static int idEntitySpaceshipTier4;
     
     // GUI
     public static int idGuiRocketCraftingBenchT3;
-
+    public static int idGuiRocketCraftingBenchT4;
+    
     // SCHEMATIC
     public static int idSchematicRocketT3;
     public static int idSchematicCargoRocket;
@@ -68,6 +71,7 @@ public class SCCoreConfigManager
 
             SCCoreConfigManager.idItemVenusBasic = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 7539).getInt(7539);
             SCCoreConfigManager.idItemSpaceshipTier3 = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier3", 7540).getInt(7540);
+            SCCoreConfigManager.idItemSpaceshipTier4 = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier4", 7553).getInt(7553);
             SCCoreConfigManager.idItemSchematicMars = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSchematicMars", 7541).getInt(7541);
             SCCoreConfigManager.idItemRocketEngine = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemRocketEngineMars", 7542).getInt(7542);
             SCCoreConfigManager.idArmorJetpack = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorJetpack", 7543).getInt(7543);
@@ -87,7 +91,10 @@ public class SCCoreConfigManager
             
             SCCoreConfigManager.idEntitySpaceshipTier3 = SCCoreConfigManager.configuration.get("Entities", "idEntitySpaceshipTier3", 173).getInt(173);
             SCCoreConfigManager.idGuiRocketCraftingBenchT3 = SCCoreConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT3", 143).getInt(143);
-
+            
+            SCCoreConfigManager.idEntitySpaceshipTier4 = SCCoreConfigManager.configuration.get("Entities", "idEntitySpaceshipTier4", 174).getInt(174);
+            SCCoreConfigManager.idGuiRocketCraftingBenchT4 = SCCoreConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT4", 144).getInt(144);
+            
             SCCoreConfigManager.idSchematicRocketT3 = SCCoreConfigManager.configuration.get("Schematic", "idSchematicRocketT3", 2).getInt(2);
         }
         catch (final Exception e)

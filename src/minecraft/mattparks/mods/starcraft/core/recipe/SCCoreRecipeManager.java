@@ -64,49 +64,49 @@ public class SCCoreRecipeManager
         input.put(19, null);
         input.put(20, null);
         input.put(21, null);
-        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceship, 1, 0), input);
+        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceshipT3, 1, 0), input);
 
         HashMap<Integer, ItemStack> input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, new ItemStack(Block.chest));
         input2.put(20, null);
         input2.put(21, null);
-        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceship, 1, 1), input2);
+        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceshipT3, 1, 1), input2);
 
         input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, null);
         input2.put(20, new ItemStack(Block.chest));
         input2.put(21, null);
-        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceship, 1, 1), input2);
+        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceshipT3, 1, 1), input2);
 
         input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, null);
         input2.put(20, null);
         input2.put(21, new ItemStack(Block.chest));
-        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceship, 1, 1), input2);
+        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceshipT3, 1, 1), input2);
 
         input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, new ItemStack(Block.chest));
         input2.put(20, new ItemStack(Block.chest));
         input2.put(21, null);
-        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceship, 1, 2), input2);
+        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceshipT3, 1, 2), input2);
 
         input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, new ItemStack(Block.chest));
         input2.put(20, null);
         input2.put(21, new ItemStack(Block.chest));
-        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceship, 1, 2), input2);
+        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceshipT3, 1, 2), input2);
 
         input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, null);
         input2.put(20, new ItemStack(Block.chest));
         input2.put(21, new ItemStack(Block.chest));
-        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceship, 1, 2), input2);
+        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceshipT3, 1, 2), input2);
 
         input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, new ItemStack(Block.chest));
         input2.put(20, new ItemStack(Block.chest));
         input2.put(21, new ItemStack(Block.chest));
-        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceship, 1, 3), input2);
+        SCCoreUtil.addRocketBenchT3Recipe(new ItemStack(SCCoreItems.spaceshipT3, 1, 3), input2);
         
         //
         

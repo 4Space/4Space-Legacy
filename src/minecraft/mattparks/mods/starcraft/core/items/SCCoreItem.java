@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class SCCoreItem extends Item
 {
-    public static String[] names = { "ingotGem", "itemGem", "redGemPlate", "plateHeavyT3", "pressureRegulator", "heatRegulator" };
+    public static String[] names = { "ingotGem", "itemGem", "redGemPlate", "plateHeavyT3", "plateHeavyT4", "pressureRegulator", "heatRegulator" };
     protected Icon[] icons = new Icon[SCCoreItem.names.length];
 
     public SCCoreItem(int par1)

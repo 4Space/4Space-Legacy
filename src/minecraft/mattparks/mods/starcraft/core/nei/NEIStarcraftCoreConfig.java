@@ -72,39 +72,39 @@ public class NEIStarcraftCoreConfig implements IConfigureNEI
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.partFins), 18, 100 + changey));
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.partFins), 72, 82 + changey));
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.partFins), 72, 100 + changey));
-        this.registerRocketBenchRecipe(input1, new PositionedStack(new ItemStack(SCCoreItems.spaceship, 1, 0), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input1, new PositionedStack(new ItemStack(SCCoreItems.spaceshipT3, 1, 0), 139, 87 + changey));
 
         ArrayList<PositionedStack> input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 0 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceship, 1, 1), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceshipT3, 1, 1), 139, 87 + changey));
 
         input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 1 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceship, 1, 1), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceshipT3, 1, 1), 139, 87 + changey));
 
         input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 2 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceship, 1, 1), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceshipT3, 1, 1), 139, 87 + changey));
 
         input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 0 * 26, -15 + changey));
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 1 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceship, 1, 2), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceshipT3, 1, 2), 139, 87 + changey));
 
         input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 1 * 26, -15 + changey));
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 2 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceship, 1, 2), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceshipT3, 1, 2), 139, 87 + changey));
 
         input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 0 * 26, -15 + changey));
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 2 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceship, 1, 2), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceshipT3, 1, 2), 139, 87 + changey));
 
         input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 0 * 26, -15 + changey));
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 1 * 26, -15 + changey));
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 2 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceship, 1, 3), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(SCCoreItems.spaceshipT3, 1, 3), 139, 87 + changey));
     }
 }

@@ -10,9 +10,12 @@ import java.util.Map;
 import mattparks.mods.starcraft.core.CommonProxySCCore;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.core.client.model.SCCoreModelSpaceshipTier3;
+import mattparks.mods.starcraft.core.client.model.SCCoreModelSpaceshipTier4;
 import mattparks.mods.starcraft.core.client.render.item.SCCoreItemRendererSpaceshipT3;
+import mattparks.mods.starcraft.core.client.render.item.SCCoreItemRendererSpaceshipT4;
 import mattparks.mods.starcraft.core.client.sounds.SCCoreSounds;
 import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT3;
+import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT4;
 import mattparks.mods.starcraft.core.items.SCCoreItems;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
@@ -98,7 +101,11 @@ public class ClientProxySCCore extends CommonProxySCCore
         IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
         RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT3.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier3(), StarcraftCore.ASSET_DOMAIN, "rocketT3"));
         RenderingRegistry.addNewArmourRendererPrefix("gem");
-        MinecraftForgeClient.registerItemRenderer(SCCoreItems.spaceship.itemID, new SCCoreItemRendererSpaceshipT3(cargoRocketModel));
+        MinecraftForgeClient.registerItemRenderer(SCCoreItems.spaceshipT3.itemID, new SCCoreItemRendererSpaceshipT3(cargoRocketModel));
+    
+        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT4.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier4(), StarcraftCore.TEXTURE_DOMAIN, "rocketT4"));
+        MinecraftForgeClient.registerItemRenderer(SCCoreItems.spaceshipT4.itemID, new SCCoreItemRendererSpaceshipT4(cargoRocketModel));
+
     }
 
 
@@ -248,7 +255,7 @@ public class ClientProxySCCore extends CommonProxySCCore
         @Override
         public String getLabel()
         {
-            return "Galacticraft Venus Client";
+            return "Starcraft Core Client";
         }
 
         @Override
