@@ -39,7 +39,7 @@ public class SCCoreItems
         SCCoreItems.gemSpade = new SCCoreItemSpade(SCCoreConfigManager.idToolGemSpade, SCCoreItems.TOOLGEM).setUnlocalizedName("gemSpade");
         SCCoreItems.gemSword = new SCCoreItemSword(SCCoreConfigManager.idToolGemSword, SCCoreItems.TOOLGEM).setUnlocalizedName("gemSword");
 
-        SCCoreItems.jetpack = new SCCoreItemJetpack(SCCoreConfigManager.idArmorJetpack, SCCoreItems.ARMORJETPACK, 11, 1, false, null).setUnlocalizedName("jetpack");
+        SCCoreItems.jetpack = new SCCoreItemJetpack(SCCoreConfigManager.idArmorJetpack, SCCoreItems.ARMORJETPACK, 11, 1, false).setUnlocalizedName("jetpack");
         
         SCCoreItems.gemHelmet = new SCCoreItemArmor(SCCoreConfigManager.idArmorGemHelmet, SCCoreItems.ARMORGEM, 7, 0, false).setUnlocalizedName("gemHelmet");
         SCCoreItems.gemChestplate = new SCCoreItemArmor(SCCoreConfigManager.idArmorGemChestplate, SCCoreItems.ARMORGEM, 7, 1, false).setUnlocalizedName("gemChestplate");
