@@ -29,11 +29,11 @@ item.gemBoots.name=Gem Boots
 # BLOCKS
 
 # GUI
-itemGroup.spacecraftCoreTab=Spacecraft Core
-itemGroup.spacecraftMercuryTab=Spacecraft Mercury
-itemGroup.spacecraftVenusTab=Spacecraft Venus
-itemGroup.spacecraftGasTab=Spacecraft Gas Giants
-itemGroup.spacecraftPlutoTab=Spacecraft Pluto
+itemGroup.starcraftCoreTab=Spacecraft Core
+itemGroup.starcraftMercuryTab=Spacecraft Mercury
+itemGroup.starcraftVenusTab=Spacecraft Venus
+itemGroup.starcraftGasTab=Spacecraft Gas Giants
+itemGroup.starcraftPlutoTab=Spacecraft Pluto
 
 # Schematics
 schematic.rocketT3.name=Tier 3 Rocket

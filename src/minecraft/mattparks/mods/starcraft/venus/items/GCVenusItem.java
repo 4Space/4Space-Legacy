@@ -87,6 +87,17 @@ public class GCVenusItem extends Item
         return "unnamed";
     }
 
+    @SideOnly(Side.CLIENT)
+    public boolean hasEffect(ItemStack par1ItemStack)
+	{
+    	if(par1ItemStack.getItemDamage() == 3)
+    	{
+    		return true;
+    	}
+    	
+    	return false;
+	}
+    
     @Override
     public int getMetadata(int par1)
     {
