@@ -6,6 +6,7 @@ import java.util.HashMap;
 import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT3;
 import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT4;
 import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT5;
+import mattparks.mods.starcraft.core.items.SCCoreItem;
 import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.core.network.SCCorePacketHandlerServer;
 import mattparks.mods.starcraft.core.recipe.SCCoreRecipeManager;
@@ -55,7 +56,13 @@ public class StarcraftCore
     
 	public static CreativeTabs starcraftCoreTab = new CreativeTabs("starcraftCoreTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(SCCoreItems.spaceshipT3, 1, 0);
+			return new ItemStack(SCCoreItems.coreItemBasic, 0, 2);
+		}
+	};
+	
+	public static CreativeTabs starcraftRocketsTab = new CreativeTabs("starcraftstarcraftRocketsTab") {
+		public ItemStack getIconItemStack() {
+			return new ItemStack(SCCoreItems.spaceshipT4, 1, 0);
 		}
 	};
 	

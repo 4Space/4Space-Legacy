@@ -28,7 +28,7 @@ public class SCCoreItemSchematic extends GCCoreItemSchematic implements ISchemat
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftCoreTab;
+        return StarcraftCore.starcraftRocketsTab;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

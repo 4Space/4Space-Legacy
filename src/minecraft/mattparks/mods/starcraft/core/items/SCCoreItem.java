@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class SCCoreItem extends Item
 {
-    public static String[] names = { "ingotGem", "itemGem", "redGemPlate", "plateHeavyT3", "plateHeavyT4", "plateHeavyT5", "pressureRegulator", "heatRegulator" };
+    public static String[] names = { "ingotGem", "itemGem", "redGemPlate", "pressureRegulator", "heatRegulator" };
     protected Icon[] icons = new Icon[SCCoreItem.names.length];
 
     public SCCoreItem(int par1)
@@ -100,13 +100,10 @@ public class SCCoreItem extends Item
             switch (par1ItemStack.getItemDamage())
             {
             case 3:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier3.desc"));
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.pressureRegulator.desc"));
                 break;
             case 4:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier4.desc"));
-                break;
-            case 5:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier5.desc"));
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.heatRegulator.desc"));
                 break;
             }
         }

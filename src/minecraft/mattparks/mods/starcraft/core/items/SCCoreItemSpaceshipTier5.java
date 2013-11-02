@@ -44,7 +44,7 @@ public class SCCoreItemSpaceshipTier5 extends Item implements IHoldableItem
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftCoreTab;
+        return StarcraftCore.starcraftRocketsTab;
     }
 
     @Override
