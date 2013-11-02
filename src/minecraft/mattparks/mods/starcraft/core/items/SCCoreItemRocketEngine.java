@@ -16,7 +16,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class SCCoreItemRocketEngine extends Item
 {
-    public static final String[] names = { "tier3engine", "tier2booster", "tier4engine", "tier3booster" };
+    public static final String[] names = { "tier3engine", "tier2booster", "tier4engine", "tier3booster", "tier5engine", "tier4booster" };
 
     protected Icon[] icons = new Icon[SCCoreItemRocketEngine.names.length];
 

@@ -1,7 +1,7 @@
 package mattparks.mods.starcraft.core.client.gui;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.inventory.SCCoreContainerRocketBenchT4;
+import mattparks.mods.starcraft.core.inventory.SCCoreContainerRocketBenchT5;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import net.minecraft.client.gui.GuiButton;
@@ -12,15 +12,15 @@ import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
 
-public class SCCoreGuiSchematicRocketT4 extends GuiContainer implements ISchematicResultPage
+public class SCCoreGuiSchematicRocketT5 extends GuiContainer implements ISchematicResultPage
 {
-    private static final ResourceLocation tier4SchematicTexture = new ResourceLocation(StarcraftCore.TEXTURE_DOMAIN, "textures/gui/schematic_rocket_T3.png");
+    private static final ResourceLocation tier5SchematicTexture = new ResourceLocation(StarcraftCore.TEXTURE_DOMAIN, "textures/gui/schematic_rocket_T5.png");
 
     private int pageIndex;
 
-    public SCCoreGuiSchematicRocketT4(InventoryPlayer par1InventoryPlayer, int x, int y, int z)
+    public SCCoreGuiSchematicRocketT5(InventoryPlayer par1InventoryPlayer, int x, int y, int z)
     {
-        super(new SCCoreContainerRocketBenchT4(par1InventoryPlayer, x, y, z));
+        super(new SCCoreContainerRocketBenchT5(par1InventoryPlayer, x, y, z));
         this.ySize = 238;
     }
 
@@ -54,7 +54,7 @@ public class SCCoreGuiSchematicRocketT4 extends GuiContainer implements ISchemat
     @Override
     protected void drawGuiContainerForegroundLayer(int par1, int par2)
     {
-        this.fontRenderer.drawString("Tier 4 Rocket", 7, -20 + 27, 4210752);
+        this.fontRenderer.drawString("Tier 5 Rocket", 7, -20 + 27, 4210752);
         this.fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), 8, 220 - 104 + 2 + 27, 4210752);
     }
 
@@ -62,7 +62,7 @@ public class SCCoreGuiSchematicRocketT4 extends GuiContainer implements ISchemat
     protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)
     {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.renderEngine.bindTexture(SCCoreGuiSchematicRocketT4.tier4SchematicTexture);
+        this.mc.renderEngine.bindTexture(SCCoreGuiSchematicRocketT5.tier5SchematicTexture);
         final int var5 = (this.width - this.xSize) / 2;
         final int var6 = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(var5, var6, 0, 0, this.xSize, this.ySize);

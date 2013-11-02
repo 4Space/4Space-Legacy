@@ -28,6 +28,7 @@ public class SCCoreItems
     public static Item rocketEngine;
     public static Item spaceshipT3;
     public static Item spaceshipT4;
+    public static Item spaceshipT5;
     public static Item schematic;
 
     public static EnumArmorMaterial ARMORGEM = EnumHelper.addArmorMaterial("GEM", 42, new int[] { 4, 9, 7, 4 }, 12);
@@ -52,6 +53,7 @@ public class SCCoreItems
         SCCoreItems.rocketEngine = new SCCoreItemRocketEngine(SCCoreConfigManager.idItemRocketEngine, "engine");
         SCCoreItems.spaceshipT3 = new SCCoreItemSpaceshipTier3(SCCoreConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");
         SCCoreItems.spaceshipT4 = new SCCoreItemSpaceshipTier4(SCCoreConfigManager.idItemSpaceshipTier4).setUnlocalizedName("spaceshipTier4");
+        SCCoreItems.spaceshipT5 = new SCCoreItemSpaceshipTier5(SCCoreConfigManager.idItemSpaceshipTier5).setUnlocalizedName("spaceshipTier5");
         SCCoreItems.schematic = new SCCoreItemSchematic(SCCoreConfigManager.idItemSchematicMars).setUnlocalizedName("schematic");
     }
     

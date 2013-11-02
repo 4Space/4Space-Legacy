@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT3;
 import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT4;
+import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT5;
 import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.core.network.SCCorePacketHandlerServer;
 import mattparks.mods.starcraft.core.recipe.SCCoreRecipeManager;
@@ -187,7 +188,8 @@ public class StarcraftCore
     {
     	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT3.class, "SpaceshipT3", SCCoreConfigManager.idEntitySpaceshipTier3, 150, 1, true);    
 		this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT4.class, "SpaceshipT4", SCCoreConfigManager.idEntitySpaceshipTier4, 150, 1, true);    
-		}
+		this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT5.class, "SpaceshipT5", SCCoreConfigManager.idEntitySpaceshipTier5, 150, 1, true);    
+    }
 
     @EventHandler
     public void postLoad(FMLPostInitializationEvent event)
