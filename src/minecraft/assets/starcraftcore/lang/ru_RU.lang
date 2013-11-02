@@ -1,0 +1,53 @@
+# Starcraft Core Language File = RUSSIAN
+
+# GENERAL ITEMS
+item.tier3.desc=Tier 3
+item.tier4.desc=Tier 4
+item.tier5.desc=Tier 5
+
+# ITEMS
+item.ingotGem.name=Слиток жемчуга
+item.itemGem.name=Жемчуг
+item.redGemPlate.name=Пластина из красного жемчуга
+item.venusPlate.name=Пластина венеры
+item.pressureRegulator.name=Регулятор давления
+item.heatRegulator.name=Регулятор температуры
+item.engine.tier2booster.name=Ускоритель Tier 2
+item.engine.tier3engine.name=Ракетный двигатель Tier 3
+item.engine.tier3booster.name=Ускоритель Tier 3 
+item.engine.tier4engine.name=Ракетный двигатель Tier 4 
+item.engine.tier4booster.name=Ускоритель Tier 4
+item.engine.tier5engine.name=Ракетный двигатель Tier 5
+item.spaceshipTier3.name=Ракета Tier 3
+item.spaceshipTier4.name=Ракета Tier 4
+item.spaceshipTier5.name=Ракета Tier 5
+item.plateHeavyT3.name=Сверхпрочное покрытие
+item.plateHeavyT4.name=Сверхпрочное покрытие
+item.plateHeavyT5.name=Сверхпрочное покрытие
+
+# TOOLS
+item.gemPick.name=Кирка из жемчуга
+item.gemAxe.name=Топор из жемчуга
+item.gemHoe.name=Мотыга из жемчуга
+item.gemSpade.name=Лопата из жемчуга
+item.gemSword.name=Меч из жемчуга
+
+# ARMOR
+item.gemHelmet.name=Шлем из жемчуга
+item.gemChestplate.name=Нагрудник из жемчуга
+item.gemLeggings.name=Поножи из жемчуга
+item.gemBoots.name=Ботинки из жемчуга
+
+# BLOCKS
+
+# GUI
+itemGroup.starcraftCoreTab=Spacecraft Core
+itemGroup.starcraftMercuryTab=Spacecraft Mercury
+itemGroup.starcraftVenusTab=Spacecraft Venus
+itemGroup.starcraftGasTab=Spacecraft Gas Giants
+itemGroup.starcraftPlutoTab=Spacecraft Pluto
+
+# Schematics
+schematic.rocketT3.name=Ракета Tier 3
+schematic.rocketT4.name=Ракета Tier 4
+schematic.rocketT5.name=Ракета Tier 5

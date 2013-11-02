@@ -1,0 +1,29 @@
+# Starcraft Mercury Language File = RUSSIAN
+
+# GENERAL ITEMS
+
+# ITEMS
+item.mercuryPlate.name=Пластина меркурия
+
+# TOOLS
+
+# ARMOR
+
+# BLOCKS
+tile.MercuryGrass.name=Меркурианская трава
+tile.MercuryDirt.name=Меркурианский гнунт
+tile.MercuryStone.name=Меркурианский камень
+tile.MercuryCobblestone.name=Меркурианский булыжник
+tile.MercuryBrick.name=Меркурианский кирпич
+tile.MercuryGemOre.name=Меркурианский красный жемчуг
+tile.MercuryCoalOre.name=Меркурианский уголь
+tile.MercuryTinOre.name=Меркурианское олово
+tile.MercuryIridiumOre.name=Меркурианский иридий
+tile.MercuryCopperOre.name=Меркурианская медь
+
+# ENTITYS
+
+# GUI
+gui.choosePlanet.desc.mercury=Обитаема#Нету кислорода#Гравитация: 38%
+
+dimension.Mercury.name=Меркурий
