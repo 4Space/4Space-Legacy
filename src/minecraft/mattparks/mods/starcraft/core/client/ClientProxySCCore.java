@@ -103,7 +103,7 @@ public class ClientProxySCCore extends CommonProxySCCore
         RenderingRegistry.addNewArmourRendererPrefix("gem");
         MinecraftForgeClient.registerItemRenderer(SCCoreItems.spaceshipT3.itemID, new SCCoreItemRendererSpaceshipT3(cargoRocketModel));
     
-        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT4.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier4(), StarcraftCore.TEXTURE_DOMAIN, "rocketT4"));
+        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT4.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier4(), StarcraftCore.ASSET_DOMAIN, "rocketT4"));
         MinecraftForgeClient.registerItemRenderer(SCCoreItems.spaceshipT4.itemID, new SCCoreItemRendererSpaceshipT4(cargoRocketModel));
 
     }
