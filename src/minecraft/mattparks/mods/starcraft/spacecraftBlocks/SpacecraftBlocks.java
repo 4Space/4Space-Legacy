@@ -3,22 +3,18 @@ package mattparks.mods.starcraft.spacecraftBlocks;
 import java.io.File;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftBlock;
-import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftDirt;
 import mattparks.mods.starcraft.spacecraftBlocks.block.MercuryStone;
 import mattparks.mods.starcraft.spacecraftBlocks.block.PlutoStone;
+import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftBlock;
+import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftDirt;
+import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftGasBottom;
+import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftGasTop;
+import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftOre;
 import mattparks.mods.starcraft.spacecraftBlocks.block.VenusBlazeEgg;
 import mattparks.mods.starcraft.spacecraftBlocks.block.VenusHalfSlab;
-import mattparks.mods.starcraft.spacecraftBlocks.block.StarcraftOre;
 import mattparks.mods.starcraft.spacecraftBlocks.block.VenusStone;
-import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
-import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
-import micdoodle8.mods.galacticraft.api.world.IPlanet;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -28,7 +24,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid="StarcraftBlocks", name="Starcraft Blocks", version="0.0.1", dependencies = "required-after:Forge@[9.10.0.789,)")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
@@ -139,43 +134,43 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 	
 	//Block Jupiter Nitrogen
-	public final static Block JupiterNitrogen = new StarcraftBlock(650, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("jupiterNitrogen") .setTextureName("starcraftjupiter:jupiterNitrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
+	public final static Block JupiterNitrogen = new StarcraftGasTop(650, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("jupiterNitrogen") .setTextureName("starcraftjupiter:jupiterNitrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
 	//Block Jupiter Helium
-	public final static Block JupiterHelium = new StarcraftBlock(651, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("jupiterHelium") .setTextureName("starcraftjupiter:jupiterHelium") .setCreativeTab(StarcraftCore.starcraftGasTab);
+	public final static Block JupiterHelium = new StarcraftGasBottom(651, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("jupiterHelium") .setTextureName("starcraftjupiter:jupiterHelium") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
 	//Block Jupiter Hydrogen
-	public final static Block JupiterHydrogen = new StarcraftBlock(652, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("jupiterHydrogen") .setTextureName("starcraftjupiter:jupiterHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
+	public final static Block JupiterHydrogen = new StarcraftGasBottom(652, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("jupiterHydrogen") .setTextureName("starcraftjupiter:jupiterHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
   
 
 	//Block Saturn Grass
-	public final static Block SaturnNitrogen = new StarcraftBlock(653, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("saturnNitrogen") .setTextureName("starcraftsaturn:saturnNitrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
+	public final static Block SaturnNitrogen = new StarcraftGasTop(653, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("saturnNitrogen") .setTextureName("starcraftsaturn:saturnNitrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
 	//Block Saturn Dirt
-	public final static Block SaturnHelium = new StarcraftBlock(654, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("saturnHelium") .setTextureName("starcraftsaturn:saturnHelium") .setCreativeTab(StarcraftCore.starcraftGasTab);
+	public final static Block SaturnHelium = new StarcraftGasBottom(654, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("saturnHelium") .setTextureName("starcraftsaturn:saturnHelium") .setCreativeTab(StarcraftCore.starcraftGasTab);
     
 	//Block Saturn Stone
-	public final static Block SaturnHydrogen = new StarcraftBlock(655, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("saturnHydrogen") .setTextureName("starcraftsaturn:saturnHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
+	public final static Block SaturnHydrogen = new StarcraftGasBottom(655, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("saturnHydrogen") .setTextureName("starcraftsaturn:saturnHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
 	
 	//Block Uranus Grass
-	public final static Block UranusNitrogen = new StarcraftBlock(656, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("uranusNitrogen") .setTextureName("starcrafturanus:uranusNitrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
+	public final static Block UranusNitrogen = new StarcraftGasTop(656, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("uranusNitrogen") .setTextureName("starcrafturanus:uranusNitrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
 	//Block Uranus Dirt
-	public final static Block UranusHelium = new StarcraftBlock(657, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("uranusHelium") .setTextureName("starcrafturanus:uranusHelium") .setCreativeTab(StarcraftCore.starcraftGasTab);
+	public final static Block UranusHelium = new StarcraftGasBottom(657, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("uranusHelium") .setTextureName("starcrafturanus:uranusHelium") .setCreativeTab(StarcraftCore.starcraftGasTab);
     
 	//Block Uranus Stone
-	public final static Block UranusHydrogen = new StarcraftBlock(658, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("uranusHydrogen") .setTextureName("starcrafturanus:uranusHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
+	public final static Block UranusHydrogen = new StarcraftGasBottom(658, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("uranusHydrogen") .setTextureName("starcrafturanus:uranusHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
 	
 	//Block Neptune Grass
-	public final static Block NeptuneNitrogen = new StarcraftBlock(659, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("neptuneNitrogen") .setTextureName("starcraftneptune:neptuneNitrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
+	public final static Block NeptuneNitrogen = new StarcraftGasTop(659, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("neptuneNitrogen") .setTextureName("starcraftneptune:neptuneNitrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
 	//Block Neptune Dirt
-	public final static Block NeptuneHelium = new StarcraftBlock(660, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("neptuneHelium") .setTextureName("starcraftneptune:neptuneHelium") .setCreativeTab(StarcraftCore.starcraftGasTab);
+	public final static Block NeptuneHelium = new StarcraftGasBottom(660, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("neptuneHelium") .setTextureName("starcraftneptune:neptuneHelium") .setCreativeTab(StarcraftCore.starcraftGasTab);
     
 	//Block Neptune Stone
-	public final static Block NeptuneHydrogen = new StarcraftBlock(661, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneHydrogen") .setTextureName("starcraftneptune:neptuneHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
+	public final static Block NeptuneHydrogen = new StarcraftGasBottom(661, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneHydrogen") .setTextureName("starcraftneptune:neptuneHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 	 
 	    @Instance("SpacecraftBlocks")
         public static SpacecraftBlocks instance;
