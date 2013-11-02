@@ -46,7 +46,7 @@ public class StarcraftCore
     public static final String CHANNELENTITIES = "SCCoreEntities";
 
     public static final String LANGUAGE_PATH = "/assets/starcraftcore/lang/";
-    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
+    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US", "ru_RU" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.core.client.ClientProxySCCore", serverSide = "mattparks.mods.starcraft.core.CommonProxySCCore")
     public static CommonProxySCCore proxy;

@@ -39,7 +39,7 @@ public class GCUranus
     public static final String CHANNELENTITIES = "GCUranusEntities";
 
     public static final String LANGUAGE_PATH = "/assets/starcrafturanus/lang/";
-    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
+    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US", "ru_RU" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.uranus.client.ClientProxyUranus", serverSide = "mattparks.mods.starcraft.uranus.CommonProxyUranus")
     public static CommonProxyUranus proxy;

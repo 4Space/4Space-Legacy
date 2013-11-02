@@ -39,7 +39,7 @@ public class GCJupiter
     public static final String CHANNELENTITIES = "GCJupiterEntities";
 
     public static final String LANGUAGE_PATH = "/assets/starcraftjupiter/lang/";
-    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
+    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US", "ru_RU" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.jupiter.client.ClientProxyJupiter", serverSide = "mattparks.mods.starcraft.jupiter.CommonProxyJupiter")
     public static CommonProxyJupiter proxy;

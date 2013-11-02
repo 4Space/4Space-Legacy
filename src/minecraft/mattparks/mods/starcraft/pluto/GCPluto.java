@@ -40,7 +40,7 @@ public class GCPluto
     public static final String CHANNELENTITIES = "GCPlutoEntities";
 
     public static final String LANGUAGE_PATH = "/assets/starcraftpluto/lang/";
-    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
+    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US", "ru_RU" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.pluto.client.ClientProxyPluto", serverSide = "mattparks.mods.starcraft.pluto.CommonProxyPluto")
     public static CommonProxyPluto proxy;
