@@ -15,7 +15,6 @@ public class StarcraftDirt extends Block implements IPlantableBlock, ITerraforma
 	public StarcraftDirt(int id, Material material)
     {
     	super( id, material.grass);
-		this.setCreativeTab(StarcraftCore.starcraftMercuryTab);
 	}
     @Override
     public int requiredLiquidBlocksNearby()

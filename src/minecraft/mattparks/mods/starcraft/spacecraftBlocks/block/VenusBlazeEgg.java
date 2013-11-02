@@ -26,12 +26,6 @@ public class VenusBlazeEgg extends BlockDragonEgg
     }
 
     @Override
-    public CreativeTabs getCreativeTabToDisplayOn()
-    {
-        return StarcraftCore.starcraftVenusTab;
-    }
-
-    @Override
     public boolean renderAsNormalBlock()
     {
         return false;

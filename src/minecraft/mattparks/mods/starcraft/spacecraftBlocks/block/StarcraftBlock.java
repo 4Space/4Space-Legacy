@@ -12,7 +12,6 @@ public class StarcraftBlock extends Block
     public StarcraftBlock(int id, Material material)
     {
     	super( id, material.rock);
-        this.setCreativeTab(StarcraftCore.starcraftGasTab);
     }
 
 }

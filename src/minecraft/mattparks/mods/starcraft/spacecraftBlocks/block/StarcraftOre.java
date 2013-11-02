@@ -17,7 +17,6 @@ public class StarcraftOre extends Block implements IDetectableResource, IPlantab
     public StarcraftOre(int id, Material material)
     {
             super( id, material.rock);
-//        this.setCreativeTab(StarcraftCore.starcraftVenusTab);
     }
 
     @Override
@@ -25,12 +24,6 @@ public class StarcraftOre extends Block implements IDetectableResource, IPlantab
     {
         switch (metadata)
         {
-        case 0:
-            return true;
-        case 1:
-            return true;
-        case 2:
-            return true;
         default:
             return true;
         }

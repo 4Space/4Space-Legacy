@@ -22,7 +22,6 @@ public class VenusHalfSlab extends Block
 	public VenusHalfSlab(int id, Material material)
     {
     	super( id, material.rock);
-        this.setCreativeTab(StarcraftCore.starcraftVenusTab);
     }
 
     /**
