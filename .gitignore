@@ -20,6 +20,8 @@ CHANGELOG
 /src/minecraft/*
 !/src/minecraft/mattparks/
 !/src/minecraft/universalelectricity/
+!/src/minecraft/mekanism/
+
 !/src/minecraft/assets/
 /src/minecraft/assets/forge
 /src/minecraft/assets/galacticraftcore
