@@ -18,6 +18,7 @@ tile.MercuryBrick.name=Mercury Brick
 tile.MercuryGemOre.name=Mercury Gem Ore
 tile.MercuryCoalOre.name=Mercury Coal Ore
 tile.MercuryTinOre.name=Mercury Tin Ore
+tile.MercuryIridiumOre.name=Mercury Iridium Ore
 tile.MercuryCopperOre.name=Mercury Copper Ore
 
 # ENTITYS

@@ -9,9 +9,9 @@
 # ARMOR
 
 # BLOCKS
-tile.lightGas.name=Jupiter Light Gas
-tile.mediumGas.name=Jupiter Medium Gas
-tile.heavyGas.name=Jupiter Heavy Gas
+tile.jupiterNitrogen.name=Jupiter's Nitrogen Gas
+tile.jupiterHelium.name=Jupiter's Helium Gas
+tile.jupiterHydrogen.name=Jupiter's Hydrogen Gas
 
 # ENTITYS
 

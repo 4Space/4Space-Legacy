@@ -9,6 +9,9 @@
 # ARMOR
 
 # BLOCKS
+tile.uranusNitrogen.name=Uranus's Nitrogen Gas
+tile.uranusHelium.name=Uranus's Helium Gas
+tile.uranusHydrogen.name=Uranus's Hydrogen Gas
 
 # ENTITYS
 
