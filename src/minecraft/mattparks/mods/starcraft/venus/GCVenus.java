@@ -48,7 +48,7 @@ public class GCVenus
     public static final String CHANNELENTITIES = "GCVenusEntities";
 
     public static final String LANGUAGE_PATH = "/assets/starcraftvenus/lang/";
-    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
+    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US", "ru_RU" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.venus.client.ClientProxyVenus", serverSide = "mattparks.mods.starcraft.venus.CommonProxyVenus")
     public static CommonProxyVenus proxy;

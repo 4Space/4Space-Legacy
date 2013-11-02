@@ -43,7 +43,7 @@ public class GCMercury
     public static final String CHANNELENTITIES = "GCMercuryEntities";
 
     public static final String LANGUAGE_PATH = "/assets/starcraftmercury/lang/";
-    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
+    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US", "ru_RU" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.mercury.client.ClientProxyMercury", serverSide = "mattparks.mods.starcraft.mercury.CommonProxyMercury")
     public static CommonProxyMercury proxy;

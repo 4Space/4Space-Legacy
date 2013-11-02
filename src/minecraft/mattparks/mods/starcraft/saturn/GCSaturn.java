@@ -39,7 +39,7 @@ public class GCSaturn
     public static final String CHANNELENTITIES = "GCSaturnEntities";
 
     public static final String LANGUAGE_PATH = "/assets/starcraftsaturn/lang/";
-    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
+    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US", "ru_RU" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.saturn.client.ClientProxySaturn", serverSide = "mattparks.mods.starcraft.saturn.CommonProxySaturn")
     public static CommonProxySaturn proxy;

@@ -39,7 +39,7 @@ public class GCNeptune
     public static final String CHANNELENTITIES = "GCNeptuneEntities";
 
     public static final String LANGUAGE_PATH = "/assets/starcraftneptune/lang/";
-    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
+    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US", "ru_RU" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.neptune.client.ClientProxyNeptune", serverSide = "mattparks.mods.starcraft.neptune.CommonProxyNeptune")
     public static CommonProxyNeptune proxy;
