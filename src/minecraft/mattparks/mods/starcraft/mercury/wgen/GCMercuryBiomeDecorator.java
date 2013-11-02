@@ -24,7 +24,7 @@ public class GCMercuryBiomeDecorator
     protected WorldGenerator tinGen;
     protected WorldGenerator copperGen;
 
-    public GCMercuryBiomeDecorator(BiomeGenBase par1BiomeGenBase)
+    public GCMercuryBiomeDecorator()
     {
         this.gemGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryIridiumOre.blockID, 4, 0, true, SpacecraftBlocks.MercuryIridiumOre.blockID, 4);
         this.dirtGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryDirt.blockID, 32, 3, true, SpacecraftBlocks.MercuryDirt.blockID, 4); 
