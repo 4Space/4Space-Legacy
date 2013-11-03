@@ -6,6 +6,7 @@ import java.util.Random;
 
 import mattparks.mods.starcraft.eris.GCEris;
 import mattparks.mods.starcraft.eris.GCErisConfigManager;
+import mattparks.mods.starcraft.eris.wgen.dungeon.*;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
@@ -51,6 +52,19 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
     private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(SpacecraftBlocks.ErisBrick.blockID, 14, 8, 16, 3);
 
     {
+        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomChests(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomChests(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.bossRooms.add(new GCPlutoRoomBoss(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.treasureRooms.add(new GCPlutoRoomTreasure(null, 0, 0, 0, ForgeDirection.UNKNOWN));
     }
 
     private BiomeGenBase[] biomesForGeneration = { GCPlutoBiomeGenBase.venusFlat };
@@ -206,7 +220,8 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
         this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
         this.replaceBlocksForBiome(par1, par2, ids, meta, this.biomesForGeneration);
         this.caveGenerator.generate(this, this.worldObj, par1, par2, ids, meta);
-
+        this.dungeonGenerator.generateUsingArrays(this.worldObj, this.worldObj.getSeed(), par1 * 16, 25, par2 * 16, par1, par2, ids, meta);
+        
         final Chunk var4 = new Chunk(this.worldObj, ids, meta, par1, par2);
 
          if (!var4.isTerrainPopulated &&
