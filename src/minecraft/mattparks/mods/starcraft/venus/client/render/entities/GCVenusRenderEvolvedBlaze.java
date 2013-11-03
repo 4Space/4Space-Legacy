@@ -17,25 +17,16 @@ import net.minecraft.util.ResourceLocation;
 @SideOnly(Side.CLIENT)
 public class GCVenusRenderEvolvedBlaze extends RenderLiving
 {
-    private static final ResourceLocation EvolvedBlazeTextures = new ResourceLocation(GCVenus.TEXTURE_DOMAIN, "textures/entity/EvolvedBlaze.png");
+    private static final ResourceLocation EvolvedBlazeTextures = new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/entity/EvolvedBlaze.png");
     private int field_77068_a;
 
     public GCVenusRenderEvolvedBlaze()
     {
         super(new GCVenusModelEvolvedBlaze(), 0.5F);
-        this.field_77068_a = ((ModelEvolvedBlaze)this.mainModel).func_78104_a();
     }
 
     public void renderEvolvedBlaze(GCVenusEntityEvolvedBlaze par1EntityEvolvedBlaze, double par2, double par4, double par6, float par8, float par9)
     {
-        int i = ((ModelEvolvedBlaze)this.mainModel).func_78104_a();
-
-        if (i != this.field_77068_a)
-        {
-            this.field_77068_a = i;
-            this.mainModel = new ModelEvolvedBlaze();
-        }
-
         super.doRenderLiving(par1EntityEvolvedBlaze, par2, par4, par6, par8, par9);
     }
 
