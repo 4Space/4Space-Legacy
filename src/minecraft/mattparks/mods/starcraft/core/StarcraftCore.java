@@ -86,7 +86,7 @@ public class StarcraftCore
 	
 	public static CreativeTabs starcraftErisTab = new CreativeTabs("starcraftErisTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(SpacecraftBlocks.SaturnNitrogen, 1, 0);
+			return new ItemStack(SpacecraftBlocks.ErisGrass, 1, 0);
 		}
 	};
 

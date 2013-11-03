@@ -168,6 +168,23 @@ import cpw.mods.fml.common.registry.GameRegistry;
     public final static Block MetallicHydrogenFlowing = new StarcraftMetallicHydrogenFlowing(920).setUnlocalizedName("MetallicHydrogenFlowing") .setCreativeTab(StarcraftCore.starcraftGasTab);
     public final static Block MetallicHydrogenStill = new StarcraftMetallicHydrogenStill(921).setUnlocalizedName("MetallicHydrogenStill") .setCreativeTab(StarcraftCore.starcraftGasTab);
     
+    
+    
+    //Block Eris Grass
+  	public final static Block ErisGrass = new StarcraftDirt(922, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("grassEris") .setTextureName("starcrafteris:grassEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
+
+  	//Block Pluto Dirt
+  	public final static Block ErisDirt = new StarcraftDirt(923, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("dirtEris") .setTextureName("starcrafteris:dirtEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
+      
+  	//Block Eris Stone
+  	public final static Block ErisStone = new PlutoStone(924, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("stoneEris") .setTextureName("starcrafteris:stoneEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
+
+  	//Block Eris Cobblestone
+  	public final static Block ErisCobblestone = new StarcraftBlock(925, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("cobblestoneEris") .setTextureName("starcrafteris:cobblestoneEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
+
+  	//Block Eris Brick
+  	public final static Block ErisBrick = new StarcraftBlock(926, Material.rock) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("erisBrick") .setTextureName("starcrafteris:erisBrick") .setCreativeTab(StarcraftCore.starcraftErisTab);
+
 	    @Instance("SpacecraftBlocks")
         public static SpacecraftBlocks instance;
 
@@ -240,6 +257,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 	            GameRegistry.registerBlock(MetallicHydrogenFlowing, "MetallicHydrogenFlowing");
 //				GameRegistry.registerBlock(MetallicHydrogenStill, "MetallicHydrogenStill");
 
+                GameRegistry.registerBlock(ErisGrass, "ErisGrass");
+                GameRegistry.registerBlock(ErisDirt, "ErisDirt");
+				GameRegistry.registerBlock(ErisStone, "ErisStone");
+				GameRegistry.registerBlock(ErisCobblestone, "ErisCobblestone");
+				GameRegistry.registerBlock(ErisBrick, "ErisBrick");
         }
         
         @EventHandler

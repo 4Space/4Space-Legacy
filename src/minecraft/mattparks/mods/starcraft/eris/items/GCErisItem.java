@@ -103,7 +103,7 @@ public class GCErisItem extends Item
             switch (par1ItemStack.getItemDamage())
             {
             case 0:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier5.desc"));
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier6.desc"));
                 break;
             }
         }
