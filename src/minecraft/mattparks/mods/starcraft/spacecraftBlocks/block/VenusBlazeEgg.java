@@ -1,6 +1,8 @@
 package mattparks.mods.starcraft.spacecraftBlocks.block;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
 import net.minecraft.block.BlockDragonEgg;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.Explosion;
@@ -10,9 +12,13 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class VenusBlazeEgg extends BlockDragonEgg
 {
-    public VenusBlazeEgg(int par1)
-    {
-        super(par1);
+    public VenusBlazeEgg(int par1, int id, String name)
+    {        
+    	super(par1);
+        this.setUnlocalizedName(name);
+        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
+        this.setHardness(2.0F);
+
     }
 
     @Override

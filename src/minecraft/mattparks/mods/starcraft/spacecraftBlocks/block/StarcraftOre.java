@@ -5,6 +5,7 @@ import ic2.api.item.Items;
 import java.util.Random;
 
 import universalelectricity.compatibility.Compatibility;
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
@@ -14,9 +15,12 @@ import net.minecraft.item.Item;
 
 public class StarcraftOre extends Block implements IDetectableResource, IPlantableBlock
 {
-    public StarcraftOre(int id, Material material)
+    public StarcraftOre(int id, String name)
     {
-            super( id, material.rock);
+        super(id, Material.rock);
+        this.setUnlocalizedName(name);
+        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
+        this.setHardness(2.0F);
     }
 
     @Override

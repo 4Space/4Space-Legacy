@@ -329,7 +329,6 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
             monsters.add(new SpawnListEntry(GCCoreEntityZombie.class, 8, 2, 3));
             monsters.add(new SpawnListEntry(GCCoreEntitySpider.class, 8, 2, 3));
             monsters.add(new SpawnListEntry(GCVenusEntityEvolvedBlaze.class, 8, 2, 3));
-            monsters.add(new SpawnListEntry(GCVenusEntityFlameling.class, 8, 2, 3));
             monsters.add(new SpawnListEntry(GCCoreEntitySkeleton.class, 8, 2, 3));
             monsters.add(new SpawnListEntry(GCCoreEntityCreeper.class, 8, 2, 3));
             return monsters;

@@ -1,5 +1,6 @@
 package mattparks.mods.starcraft.spacecraftBlocks.block;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 import net.minecraft.block.Block;
@@ -9,9 +10,12 @@ import net.minecraft.world.World;
 
 public class StarcraftGasTop extends Block implements ITerraformableBlock
 {
-	public StarcraftGasTop(int id, Material material)
+	public StarcraftGasTop(int id, String name)
     {
-    	super( id, material.rock);
+        super(id, Material.rock);
+        this.setUnlocalizedName(name);
+        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
+        this.setHardness(2.0F);
     }
 
 	@Override

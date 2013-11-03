@@ -1,5 +1,6 @@
 package mattparks.mods.starcraft.spacecraftBlocks.block;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 import net.minecraft.block.Block;
@@ -10,10 +11,14 @@ import net.minecraftforge.common.IPlantable;
 
 public class StarcraftDirt extends Block implements IPlantableBlock, ITerraformableBlock
 {
-	public StarcraftDirt(int id, Material material)
+	public StarcraftDirt(int id, String name)
     {
-    	super( id, material.grass);
-	}
+        super(id, Material.rock);
+        this.setUnlocalizedName(name);
+        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
+        this.setHardness(2.0F);
+    }
+	
     @Override
     public int requiredLiquidBlocksNearby()
     {

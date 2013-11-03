@@ -2,6 +2,7 @@ package mattparks.mods.starcraft.spacecraftBlocks.block;
 
 import java.util.List;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -13,9 +14,12 @@ public class VenusHalfSlab extends Block
 {
     private boolean isDoubleSlab;
 
-	public VenusHalfSlab(int id, Material material)
+	public VenusHalfSlab(int id, String name)
     {
-    	super( id, material.rock);
+        super(id, Material.rock);
+        this.setUnlocalizedName(name);
+        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
+        this.setHardness(2.0F);
     }
 
     /**
