@@ -43,6 +43,7 @@ item.gemBoots.name=Gem Boots
 
 # GUI
 itemGroup.starcraftCoreTab=Spacecraft Core
+itemGroup.starcraftRocketsTab=Spacecraft Rockets
 itemGroup.starcraftMercuryTab=Spacecraft Mercury
 itemGroup.starcraftVenusTab=Spacecraft Venus
 itemGroup.starcraftGasTab=Spacecraft Gas Giants
