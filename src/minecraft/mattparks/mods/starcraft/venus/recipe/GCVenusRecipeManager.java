@@ -76,8 +76,8 @@ public class GCVenusRecipeManager
         FurnaceRecipes.smelting().addSmelting(SpacecraftBlocks.VenusSulferOre.blockID, 0, new ItemStack(GCVenusItems.venusItemBasic, 1, 0), 0.2F);
         FurnaceRecipes.smelting().addSmelting(SpacecraftBlocks.VenusCoalOre.blockID, 0, new ItemStack(Item.coal), 0.2F);
         FurnaceRecipes.smelting().addSmelting(SpacecraftBlocks.VenusIronOre.blockID, 0, new ItemStack(Item.ingotIron), 0.2F);
-        FurnaceRecipes.smelting().addSmelting(SpacecraftBlocks.VenusCopperOre.blockID, 0, new ItemStack(GCCoreItems.basicItem, 1, 3), 0.2F);
-        FurnaceRecipes.smelting().addSmelting(SpacecraftBlocks.VenusTinOre.blockID, 0, new ItemStack(GCCoreItems.basicItem, 1, 4), 0.2F);
+        FurnaceRecipes.smelting().addSmelting(SpacecraftBlocks.VenusCopperOre.blockID, 0, OreDictionary.getOres("ingotCopper").get(0), 0.2F);
+        FurnaceRecipes.smelting().addSmelting(SpacecraftBlocks.VenusTinOre.blockID, 0, OreDictionary.getOres("ingotTin").get(0), 0.2F);
         FurnaceRecipes.smelting().addSmelting(SpacecraftBlocks.VenusRedGemOre.blockID, 0, new ItemStack(SCCoreItems.coreItemBasic, 1, 0), 0.2F);
         FurnaceRecipes.smelting().addSmelting(GCVenusItems.venusItemBasic.itemID, 6, new ItemStack(GCVenusItems.venusItemBasic, 1, 7), 0.2F);
     }

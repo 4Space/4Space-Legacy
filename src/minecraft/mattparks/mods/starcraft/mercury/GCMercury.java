@@ -7,13 +7,12 @@ import mattparks.mods.starcraft.mercury.dimension.GCMercuryTeleportType;
 import mattparks.mods.starcraft.mercury.dimension.GCMercuryWorldProvider;
 import mattparks.mods.starcraft.mercury.items.GCMercuryItems;
 import mattparks.mods.starcraft.mercury.network.GCMercuryPacketHandlerServer;
-import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
+import mattparks.mods.starcraft.mercury.recipe.GCMercuryRecipeManager;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
-import micdoodle8.mods.galacticraft.core.world.gen.GCCoreOverworldGenerator;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -29,7 +28,6 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
@@ -124,21 +122,26 @@ public class GCMercury
 
     public void registerTileEntities()
     {
+    	;
     }
 
     public void registerCreatures()
     {
+    	;
     }
 
     public void registerOtherEntities()
     {
+    	;
     }
+    
     @EventHandler
     public void postLoad(FMLPostInitializationEvent event)
     {
         GCMercury.proxy.postInit(event);
         GCMercury.proxy.registerRenderInformation();
-//        GCMercuryRecipeManager.loadRecipes();
+        
+        GCMercuryRecipeManager.loadRecipes();
     }
 
     public void registerGalacticraftCreature(Class<? extends Entity> var0, String var1, int id, int back, int fore)
