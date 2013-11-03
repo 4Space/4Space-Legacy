@@ -7,10 +7,12 @@ import mattparks.mods.starcraft.mercury.GCMercury;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -87,5 +89,21 @@ public class GCMercuryItem extends Item
     public int getMetadata(int par1)
     {
         return par1;
+    }
+    
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
+    {
+        if (par2EntityPlayer.worldObj.isRemote)
+        {
+            switch (par1ItemStack.getItemDamage())
+            {
+            case 0:
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier4.desc"));
+                break;
+            }
+        }
     }
 }

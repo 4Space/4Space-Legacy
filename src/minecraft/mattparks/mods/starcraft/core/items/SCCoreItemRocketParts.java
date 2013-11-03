@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class SCCoreItemRocketParts extends Item
 {
-    public static final String[] names = { "plateHeavyT3", "plateHeavyT4", "plateHeavyT5", "noseNoneT3", "noseNoneT4", "noseNoneT5", "tier3engine", "tier2booster", "tier4engine", "tier3booster", "tier5engine", "tier4booster" };
+    public static final String[] names = { "tier3engine", "tier2booster", "tier4engine", "tier3booster", "tier5engine", "tier4booster" };
 
     protected Icon[] icons = new Icon[SCCoreItemRocketParts.names.length];
 
@@ -100,10 +100,19 @@ public class SCCoreItemRocketParts extends Item
             case 0:
                 par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier3.desc"));
                 break;
-            case 1:
+            case 2:
                 par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier4.desc"));
                 break;
-            case 2:
+            case 4:
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier5.desc"));
+                break;
+            case 1:
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier3.desc"));
+                break;
+            case 3:
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier4.desc"));
+                break;
+            case 5:
                 par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier5.desc"));
                 break;
             }

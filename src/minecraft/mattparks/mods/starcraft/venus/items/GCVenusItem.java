@@ -7,16 +7,18 @@ import mattparks.mods.starcraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCVenusItem extends Item
 {
-    public static String[] names = { "ingotSulfer", "venusPlate", "sulferPlate", "venusPowerCrystal", "venusPowerCell", "emptyCell", "rawBasalt", "basaltBrick", "vurnBerry", "venusRod", "positiveParticle", "negativeParticle", "strangeParticle" };
+    public static String[] names = { "ingotSulfer", "venusPlate", "sulferPlate", "venusPowerCrystal", "venusPowerCell", "emptyCell", "rawBasalt", "basaltBrick", "vurnBerry", "venusRod", "plateHeavyT3", "positiveParticle", "negativeParticle", "strangeParticle" };
     protected Icon[] icons = new Icon[GCVenusItem.names.length];
 
     public GCVenusItem(int par1)
@@ -98,5 +100,21 @@ public class GCVenusItem extends Item
     public int getMetadata(int par1)
     {
         return par1;
+    }
+    
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
+    {
+        if (par2EntityPlayer.worldObj.isRemote)
+        {
+            switch (par1ItemStack.getItemDamage())
+            {
+            case 10:
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier3.desc"));
+                break;
+            }
+        }
     }
 }
