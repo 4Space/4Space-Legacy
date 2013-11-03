@@ -1,8 +1,8 @@
 package mattparks.mods.starcraft.eris.wgen;
 
-public class GCPlutoBiomeGenFlat extends GCPlutoBiomeGenBase
+public class GCErisBiomeGenFlat extends GCErisBiomeGenBase
 {
-    public GCPlutoBiomeGenFlat(int par1)
+    public GCErisBiomeGenFlat(int par1)
     {
         super(par1);
         this.setBiomeName("erisFlat");

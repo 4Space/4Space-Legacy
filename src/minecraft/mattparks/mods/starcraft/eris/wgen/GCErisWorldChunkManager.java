@@ -7,12 +7,12 @@ import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManager;
 
-public class GCPlutoWorldChunkManager extends WorldChunkManager
+public class GCErisWorldChunkManager extends WorldChunkManager
 {
     @Override
     public BiomeGenBase getBiomeGenAt(int par1, int par2)
     {
-        return GCPlutoBiomeGenBase.venusFlat;
+        return GCErisBiomeGenBase.venusFlat;
     }
 
     @Override
@@ -23,7 +23,7 @@ public class GCPlutoWorldChunkManager extends WorldChunkManager
             par1ArrayOfBiomeGenBase = new BiomeGenBase[par4 * par5];
         }
 
-        Arrays.fill(par1ArrayOfBiomeGenBase, 0, par4 * par5, GCPlutoBiomeGenBase.venusFlat);
+        Arrays.fill(par1ArrayOfBiomeGenBase, 0, par4 * par5, GCErisBiomeGenBase.venusFlat);
         return par1ArrayOfBiomeGenBase;
     }
 
@@ -59,7 +59,7 @@ public class GCPlutoWorldChunkManager extends WorldChunkManager
             par1ArrayOfBiomeGenBase = new BiomeGenBase[par4 * par5];
         }
 
-        Arrays.fill(par1ArrayOfBiomeGenBase, 0, par4 * par5, GCPlutoBiomeGenBase.venusFlat);
+        Arrays.fill(par1ArrayOfBiomeGenBase, 0, par4 * par5, GCErisBiomeGenBase.venusFlat);
         return par1ArrayOfBiomeGenBase;
     }
 
@@ -73,13 +73,13 @@ public class GCPlutoWorldChunkManager extends WorldChunkManager
     @Override
     public ChunkPosition findBiomePosition(int par1, int par2, int par3, List par4List, Random par5Random)
     {
-        return par4List.contains(GCPlutoBiomeGenBase.venusFlat) ? new ChunkPosition(par1 - par3 + par5Random.nextInt(par3 * 2 + 1), 0, par2 - par3 + par5Random.nextInt(par3 * 2 + 1)) : null;
+        return par4List.contains(GCErisBiomeGenBase.venusFlat) ? new ChunkPosition(par1 - par3 + par5Random.nextInt(par3 * 2 + 1), 0, par2 - par3 + par5Random.nextInt(par3 * 2 + 1)) : null;
     }
 
     @SuppressWarnings("rawtypes")
     @Override
     public boolean areBiomesViable(int par1, int par2, int par3, List par4List)
     {
-        return par4List.contains(GCPlutoBiomeGenBase.venusFlat);
+        return par4List.contains(GCErisBiomeGenBase.venusFlat);
     }
 }

@@ -13,7 +13,7 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.ForgeDirection;
 import universalelectricity.core.vector.Vector3;
 
-public class GCPlutoRoomBoss extends GCCoreDungeonRoom
+public class GCErisRoomBoss extends GCCoreDungeonRoom
 {
 
     public int sizeX;
@@ -22,7 +22,7 @@ public class GCPlutoRoomBoss extends GCCoreDungeonRoom
     Random rand;
     ChunkCoordinates spawnerCoords;
 
-    public GCPlutoRoomBoss(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
+    public GCErisRoomBoss(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
     {
         super(dungeon, posX, posY, posZ, entranceDir);
         if (this.worldObj != null)
@@ -81,7 +81,7 @@ public class GCPlutoRoomBoss extends GCCoreDungeonRoom
     @Override
     protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
     {
-        return new GCPlutoRoomBoss(dungeon, x, y, z, dir);
+        return new GCErisRoomBoss(dungeon, x, y, z, dir);
     }
 
     @Override

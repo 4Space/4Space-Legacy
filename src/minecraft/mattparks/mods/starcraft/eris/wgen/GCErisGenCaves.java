@@ -9,7 +9,7 @@ import micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlocks;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class GCPlutoGenCaves extends GCCoreMapGenBaseMeta
+public class GCErisGenCaves extends GCCoreMapGenBaseMeta
 {
 
     public static final int BREAK_THROUGH_CHANCE = 25; // 1 in n chance
@@ -176,7 +176,7 @@ public class GCPlutoGenCaves extends GCCoreMapGenBaseMeta
                                                 {
                                                     blockIdArray[coords] = 0;
                                                 }
-                                                else if (metaArray[coords] == 5 && random.nextInt(GCPlutoGenCaves.BREAK_THROUGH_CHANCE) == 0)
+                                                else if (metaArray[coords] == 5 && random.nextInt(GCErisGenCaves.BREAK_THROUGH_CHANCE) == 0)
                                                 {
                                                     blockIdArray[coords] = 0;
                                                 }
