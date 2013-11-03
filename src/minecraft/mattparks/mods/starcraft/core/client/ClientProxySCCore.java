@@ -91,6 +91,7 @@ public class ClientProxySCCore extends CommonProxySCCore
         ClientProxyCore.capeMap.put("Dinammar", capeVioletString); 
         ClientProxyCore.capeMap.put("imac123456", capeOrangeString); 
         ClientProxyCore.capeMap.put("decaxon", capeGreenString); 
+        ClientProxyCore.capeMap.put("Henry33russian", capeBlueString); 
         
         ClientProxyCore.capeMap.put("ghostheart305", capeRedString); 
         ClientProxyCore.capeMap.put("langjam350roxsox", capeBlueString); 
