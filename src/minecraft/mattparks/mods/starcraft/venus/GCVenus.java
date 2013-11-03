@@ -119,15 +119,6 @@ public class GCVenus
         GalacticraftRegistry.registerTeleportType(GCVenusWorldProvider.class, new GCVenusTeleportType());
         GalacticraftRegistry.registerCelestialBody(new GCVenusPlanet());
         GalacticraftRegistry.registerRocketGui(GCVenusWorldProvider.class, new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/gui/venusRocketGui.png"));
-    
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusRedGemOre, 5, 24, 0, 75, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusMeteorOre, 6, 22, 0, 60, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusSulferOre, 7, 18, 0, 45, 7));
-
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusIronOre, 6, 22, 0, 60, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusCoalOre, 7, 18, 0, 45, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusTinOre, 8, 3, 0, 25, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusCopperOre, 8, 3, 0, 25, 7));
     }
 
     @EventHandler

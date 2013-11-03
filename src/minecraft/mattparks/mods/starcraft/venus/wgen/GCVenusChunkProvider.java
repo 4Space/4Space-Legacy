@@ -49,7 +49,7 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
     private final NoiseModule noiseGen3;
     private final NoiseModule noiseGen4;
 
-    public GCVenusBiomeDecorator biomedecoratorplanet = new GCVenusBiomeDecorator(GCVenusBiomeGenBase.venusFlat);
+    public GCVenusBiomeDecorator biomedecoratorplanet = new GCVenusBiomeDecorator();
 
     private final World worldObj;
     private final GCVenusMapGenVillage villageGenerator = new GCVenusMapGenVillage();
@@ -287,14 +287,15 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
         final long var9 = this.rand.nextLong() / 2L * 2L + 1L;
         this.rand.setSeed(par2 * var7 + par3 * var9 ^ this.worldObj.getSeed());
 
+        this.decoratePlanet(this.worldObj, this.rand, var4, var5);
+        
         this.dungeonGenerator.handleTileEntities(this.rand);
 
         if (!GCVenusConfigManager.disableVenusVillageGen)
         {
             this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, par2, par3);
         }
-
-        this.decoratePlanet(this.worldObj, this.rand, var4, var5);
+   
         BlockSand.fallInstantly = false;
     }
 
