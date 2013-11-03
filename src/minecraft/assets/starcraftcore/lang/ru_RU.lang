@@ -46,6 +46,7 @@ itemGroup.starcraftRocketsTab=Spacecraft Rockets
 itemGroup.starcraftMercuryTab=Spacecraft Mercury
 itemGroup.starcraftVenusTab=Spacecraft Venus
 itemGroup.starcraftGasTab=Spacecraft Gas Giants
+itemGroup.starcraftErisTab=Spacecraft Eris
 itemGroup.starcraftPlutoTab=Spacecraft Pluto
 
 # Schematics
