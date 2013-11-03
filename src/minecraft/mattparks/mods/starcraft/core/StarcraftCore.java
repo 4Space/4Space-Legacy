@@ -83,6 +83,12 @@ public class StarcraftCore
 			return new ItemStack(SpacecraftBlocks.JupiterNitrogen, 1, 0);
 		}
 	};
+	
+	public static CreativeTabs starcraftErisTab = new CreativeTabs("starcraftErisTab") {
+		public ItemStack getIconItemStack() {
+			return new ItemStack(SpacecraftBlocks.SaturnNitrogen, 1, 0);
+		}
+	};
 
 	public static CreativeTabs starcraftPlutoTab = new CreativeTabs("starcraftPlutoTab") {
 		public ItemStack getIconItemStack() {
