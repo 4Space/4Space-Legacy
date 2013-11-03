@@ -42,13 +42,18 @@ public class StarcraftOre extends Block implements IDetectableResource, IPlantab
     		return this.blockID;
     	}
     	
+    	if(SpacecraftBlocks.MercuryCoalOre.blockID == this.blockID || SpacecraftBlocks.VenusCoalOre.blockID == this.blockID)
+    	{
+    		return Item.coal.itemID;
+    	}
+    	
         return this.blockID;
     }
     
     @Override
     public int requiredLiquidBlocksNearby()
     {
-        return 5; //Set How LiquidBlocks Is Needed Nearby To Plant in.
+        return 5;
     }
     
     @Override
