@@ -14,7 +14,7 @@ tile.grassEris.name=Трава с Эриса
 tile.dirtEris.name=Грунт с Эриса
 tile.stoneEris.name=Камень с Эриса
 tile.cobblestoneEris.name=Булыжник с Эриса
-tile.ErisBrick.name=Кирпич с Эриса
+tile.erisBrick.name=Кирпич с Эриса
 
 # ENTITYS
 
