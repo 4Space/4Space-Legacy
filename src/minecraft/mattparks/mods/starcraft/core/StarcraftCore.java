@@ -157,7 +157,7 @@ public class StarcraftCore
         this.registerCreatures();
         this.registerOtherEntities();
         StarcraftCore.proxy.init(event);
-        GalacticraftRegistry.addDungeonLoot(2, new ItemStack(SCCoreItems.schematic, 1, 0));
+//        GalacticraftRegistry.addDungeonLoot(2, new ItemStack(SCCoreItems.schematic, 1, 0));
        
     }
 

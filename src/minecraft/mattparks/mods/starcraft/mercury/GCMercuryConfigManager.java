@@ -29,6 +29,7 @@ public class GCMercuryConfigManager
 
     // ITEMS
     public static int idItemMercuryBasic;
+    public static int idTtemMercuryT4Schematic;
     
     // ARMOR
 
@@ -62,6 +63,7 @@ public class GCMercuryConfigManager
             GCMercuryConfigManager.idBlockMercury = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockVenus", 7755).getInt(7755);
      
             GCMercuryConfigManager.idItemMercuryBasic = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 7756).getInt(7756);
+            GCMercuryConfigManager.idTtemMercuryT4Schematic = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idTtemMercuryT4Schematic", 7757).getInt(7757);
 
             //Block id's 7857-7870 used by Spacecraft Venus
             

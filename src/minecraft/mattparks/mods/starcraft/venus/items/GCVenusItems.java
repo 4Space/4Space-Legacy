@@ -1,5 +1,8 @@
 package mattparks.mods.starcraft.venus.items;
 
+import mattparks.mods.starcraft.mercury.GCMercuryConfigManager;
+import mattparks.mods.starcraft.mercury.items.GCMercuryItemSchematic;
+import mattparks.mods.starcraft.mercury.items.GCMercuryItems;
 import mattparks.mods.starcraft.venus.GCVenusConfigManager;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
@@ -20,6 +23,7 @@ public class GCVenusItems
     public static Item sulferLeggings;
     public static Item sulferBoots;
     public static Item venusBattery;
+    public static Item T3Schematic;
    
     public static EnumArmorMaterial ARMORSULFER = EnumHelper.addArmorMaterial("SULFER", 42, new int[] { 4, 9, 7, 4 }, 12);
     public static EnumToolMaterial TOOLSULFER = EnumHelper.addToolMaterial("SULFER", 3, 1024, 5.0F, 2.5F, 8);
@@ -39,6 +43,8 @@ public class GCVenusItems
         GCVenusItems.sulferChestplate = new GCVenusItemArmor(GCVenusConfigManager.idArmorSulferChestplate, GCVenusItems.ARMORSULFER, 7, 1, false).setUnlocalizedName("sulferChestplate");
         GCVenusItems.sulferLeggings = new GCVenusItemArmor(GCVenusConfigManager.idArmorSulferLeggings, GCVenusItems.ARMORSULFER, 7, 2, false).setUnlocalizedName("sulferLeggings");
         GCVenusItems.sulferBoots = new GCVenusItemArmor(GCVenusConfigManager.idArmorSulferBoots, GCVenusItems.ARMORSULFER, 7, 3, false).setUnlocalizedName("sulferBoots");
+    
+        GCVenusItems.T3Schematic = new GCVenusItemSchematic(GCVenusConfigManager.idTtemVenusT3Schematic);
     }
     
     public static void registerHarvestLevels()

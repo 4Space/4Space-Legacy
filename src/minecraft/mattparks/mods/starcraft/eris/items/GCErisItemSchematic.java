@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.core.items;
+package mattparks.mods.starcraft.eris.items;
 
 import java.util.List;
 
@@ -14,13 +14,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class SCCoreItemSchematic extends GCCoreItemSchematic implements ISchematicItem
+public class GCErisItemSchematic extends GCCoreItemSchematic implements ISchematicItem
 {
     protected Icon[] icons = new Icon[1];
 
-    public static final String[] names = { "schematic_rocketT3", "schematic_rocketT4", "schematic_rocketT5", "schematic_rocketT6" };
+    public static final String[] names = { "schematic_rocketT6" };
 
-    public SCCoreItemSchematic(int itemID)
+    public GCErisItemSchematic(int itemID)
     {
         super(itemID, "schematic");
     }
@@ -28,14 +28,14 @@ public class SCCoreItemSchematic extends GCCoreItemSchematic implements ISchemat
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftRocketsTab;
+        return StarcraftCore.starcraftErisTab;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     public void getSubItems(int par1, CreativeTabs par2CreativeTabs, List par3List)
     {
-        for (int i = 0; i < SCCoreItemSchematic.names.length; i++)
+        for (int i = 0; i < GCErisItemSchematic.names.length; i++)
         {
             par3List.add(new ItemStack(par1, 1, i));
         }
@@ -45,11 +45,11 @@ public class SCCoreItemSchematic extends GCCoreItemSchematic implements ISchemat
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconRegister)
     {
-        this.icons = new Icon[SCCoreItemSchematic.names.length];
+        this.icons = new Icon[GCErisItemSchematic.names.length];
         
-        for (int i = 0; i < SCCoreItemSchematic.names.length; i++)
+        for (int i = 0; i < GCErisItemSchematic.names.length; i++)
         {
-            this.icons[i] = iconRegister.registerIcon(StarcraftCore.ASSET_PREFIX + SCCoreItemSchematic.names[i]);
+            this.icons[i] = iconRegister.registerIcon(StarcraftCore.ASSET_PREFIX + GCErisItemSchematic.names[i]);
         }
         
     }
@@ -75,15 +75,6 @@ public class SCCoreItemSchematic extends GCCoreItemSchematic implements ISchemat
             switch (par1ItemStack.getItemDamage())
             {
             case 0:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT3.name"));
-                break;
-            case 1:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT4.name"));
-                break;
-            case 2:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT5.name"));
-                break;
-            case 3:
                 par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT6.name"));
                 break;
             }

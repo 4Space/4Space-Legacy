@@ -24,7 +24,7 @@ public class SCCoreItems
     public static Item spaceshipT4;
     public static Item spaceshipT5;
     public static Item rocketEngine;
-    public static Item schematic;
+//    public static Item schematic;
 
     public static EnumArmorMaterial ARMORGEM = EnumHelper.addArmorMaterial("GEM", 42, new int[] { 4, 9, 7, 4 }, 12);
     public static EnumToolMaterial TOOLGEM = EnumHelper.addToolMaterial("GEM", 3, 1024, 5.0F, 2.5F, 8);
@@ -51,7 +51,7 @@ public class SCCoreItems
         SCCoreItems.spaceshipT5 = new SCCoreItemSpaceshipTier5(SCCoreConfigManager.idItemSpaceshipTier5).setUnlocalizedName("spaceshipTier5");
         
         SCCoreItems.rocketEngine = new SCCoreItemRocketParts(SCCoreConfigManager.idItemRocketEngine, "engine");
-        SCCoreItems.schematic = new SCCoreItemSchematic(SCCoreConfigManager.idItemSchematicMars).setUnlocalizedName("schematic");
+//        SCCoreItems.schematic = new SCCoreItemSchematic(SCCoreConfigManager.idItemSchematicMars).setUnlocalizedName("schematic");
     }
     
     public static void registerHarvestLevels()

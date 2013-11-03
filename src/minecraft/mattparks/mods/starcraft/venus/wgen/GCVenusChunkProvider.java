@@ -6,6 +6,8 @@ import java.util.Random;
 
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import mattparks.mods.starcraft.venus.GCVenusConfigManager;
+import mattparks.mods.starcraft.venus.entities.GCVenusEntityEvolvedBlaze;
+import mattparks.mods.starcraft.venus.entities.GCVenusEntityFlameling;
 import mattparks.mods.starcraft.venus.wgen.dungeon.GCVenusRoomBoss;
 import mattparks.mods.starcraft.venus.wgen.dungeon.GCVenusRoomChests;
 import mattparks.mods.starcraft.venus.wgen.dungeon.GCVenusRoomEmpty;
@@ -326,7 +328,8 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
             final List monsters = new ArrayList();
             monsters.add(new SpawnListEntry(GCCoreEntityZombie.class, 8, 2, 3));
             monsters.add(new SpawnListEntry(GCCoreEntitySpider.class, 8, 2, 3));
-            monsters.add(new SpawnListEntry(EntityBlaze.class, 8, 2, 3));
+            monsters.add(new SpawnListEntry(GCVenusEntityEvolvedBlaze.class, 8, 2, 3));
+            monsters.add(new SpawnListEntry(GCVenusEntityFlameling.class, 8, 2, 3));
             monsters.add(new SpawnListEntry(GCCoreEntitySkeleton.class, 8, 2, 3));
             monsters.add(new SpawnListEntry(GCCoreEntityCreeper.class, 8, 2, 3));
             return monsters;

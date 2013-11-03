@@ -17,7 +17,7 @@ import net.minecraft.util.ResourceLocation;
 @SideOnly(Side.CLIENT)
 public class GCVenusRenderEvolvedBlaze extends RenderLiving
 {
-    private static final ResourceLocation EvolvedBlazeTextures = new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/entity/EvolvedBlaze.png");
+    private static final ResourceLocation EvolvedBlazeTextures = new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/model/EvolvedBlaze.png");
     private int field_77068_a;
 
     public GCVenusRenderEvolvedBlaze()
