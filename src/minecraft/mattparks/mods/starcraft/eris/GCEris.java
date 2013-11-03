@@ -40,7 +40,7 @@ public class GCEris
     public static final String CHANNELENTITIES = "GCErisEntities";
 
     public static final String LANGUAGE_PATH = "/assets/starcrafteris/lang/";
-    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
+    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" , "ru_RU" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.eris.client.ClientProxyEris", serverSide = "mattparks.mods.starcraft.eris.CommonProxyEris")
     public static CommonProxyEris proxy;
