@@ -28,7 +28,7 @@ public class GCPlutoBiomeDecorator
     public GCPlutoBiomeDecorator(BiomeGenBase par1BiomeGenBase)
     {
 //        this.gemGen = new GCCoreWorldGenMinableMeta(PlutoBlocks.PlutoBlocks.blockID, 4, 0, true, MercuryBlocks.PlutoBlocks.blockID, 4);
-        this.dirtGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.ErisDirt.blockID, 32, 3, true, SpacecraftBlocks.ErisDirt.blockID, 4); 
+        this.dirtGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.ErisDirt.blockID, 32, 1, false, SpacecraftBlocks.ErisStone.blockID, 4); 
 //        this.coalGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);     
 //        this.tinGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);  
 //        this.copperGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);      
@@ -46,13 +46,13 @@ public class GCPlutoBiomeDecorator
             this.randomGenerator = rand;
             this.chunkX = chunkX;
             this.chunkZ = chunkZ;
-            this.generateVenus();
+            this.generateEris();
             this.worldObj = null;
             this.randomGenerator = null;
         }
     }
 
-    protected void genStandardOre1(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY)
+    protected void genOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY)
     {
         for (int var5 = 0; var5 < amountPerChunk; ++var5)
         {
@@ -63,10 +63,10 @@ public class GCPlutoBiomeDecorator
         }
     }
 
-    protected void generateVenus()
+    protected void generateEris()
     {
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Pre(this.worldObj, this.randomGenerator, this.chunkX, this.chunkZ));
-        this.genStandardOre1(20, this.dirtGen, 0, 200);
+        this.genOre(20, this.dirtGen, 0, 200);
 //        this.genStandardOre1(26, this.gemGen, 0, 60);
 //        this.genStandardOre1(36, this.coalGen, 0, 128);
 //        this.genStandardOre1(35, this.tinGen, 0, 128);
