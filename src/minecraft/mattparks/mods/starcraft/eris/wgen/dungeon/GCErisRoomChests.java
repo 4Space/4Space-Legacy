@@ -6,28 +6,30 @@ import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonBounding
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonRoom;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
 import net.minecraft.block.Block;
-import net.minecraft.tileentity.TileEntityMobSpawner;
+import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.ChunkCoordinates;
+import net.minecraft.util.WeightedRandomChestContent;
+import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.ForgeDirection;
 
-public class GCPlutoRoomSpawner extends GCCoreDungeonRoom
+public class GCErisRoomChests extends GCCoreDungeonRoom
 {
+
     int sizeX;
     int sizeY;
     int sizeZ;
-    Random rand;
 
-    private final ArrayList<ChunkCoordinates> spawners = new ArrayList<ChunkCoordinates>();
+    private final ArrayList<ChunkCoordinates> chests = new ArrayList<ChunkCoordinates>();
 
-    public GCPlutoRoomSpawner(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
+    public GCErisRoomChests(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
     {
         super(dungeon, posX, posY, posZ, entranceDir);
         if (this.worldObj != null)
         {
-            this.rand = new Random(this.worldObj.getSeed() * posX * posY * 57 * posZ);
-            this.sizeX = this.rand.nextInt(5) + 6;
-            this.sizeY = this.rand.nextInt(2) + 4;
-            this.sizeZ = this.rand.nextInt(5) + 6;
+            final Random rand = new Random(this.worldObj.getSeed() * posX * posY * 57 * posZ);
+            this.sizeX = rand.nextInt(5) + 6;
+            this.sizeY = rand.nextInt(2) + 4;
+            this.sizeZ = rand.nextInt(5) + 6;
         }
     }
 
@@ -47,21 +49,15 @@ public class GCPlutoRoomSpawner extends GCCoreDungeonRoom
                     else
                     {
                         this.placeBlock(chunk, meta, i, j, k, cx, cz, 0, 0);
-                        if (this.rand.nextFloat() < 0.05F)
-                        {
-                            this.placeBlock(chunk, meta, i, j, k, cx, cz, Block.web.blockID, 0);
-                        }
                     }
                 }
             }
         }
-        if (this.placeBlock(chunk, meta, this.posX + 1, this.posY - 2, this.posZ + 1, cx, cz, Block.mobSpawner.blockID, 0))
+        final int hx = (this.posX + this.posX + this.sizeX) / 2;
+        final int hz = (this.posZ + this.posZ + this.sizeZ) / 2;
+        if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, Block.chest.blockID, 0))
         {
-            this.spawners.add(new ChunkCoordinates(this.posX + 1, this.posY - 2, this.posZ + 1));
-        }
-        if (this.placeBlock(chunk, meta, this.posX + this.sizeX - 1, this.posY - 2, this.posZ + this.sizeZ - 1, cx, cz, Block.mobSpawner.blockID, 0))
-        {
-            this.spawners.add(new ChunkCoordinates(this.posX + this.sizeX - 1, this.posY - 2, this.posZ + this.sizeZ - 1));
+            this.chests.add(new ChunkCoordinates(hx, this.posY, hz));
         }
     }
 
@@ -74,32 +70,21 @@ public class GCPlutoRoomSpawner extends GCCoreDungeonRoom
     @Override
     protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
     {
-        return new GCPlutoRoomSpawner(dungeon, x, y, z, dir);
+        return new GCErisRoomChests(dungeon, x, y, z, dir);
     }
 
     @Override
     protected void handleTileEntities(Random rand)
     {
-        for (final ChunkCoordinates spawnerCoords : this.spawners)
+        for (final ChunkCoordinates chestCoords : this.chests)
         {
-            final TileEntityMobSpawner spawner = (TileEntityMobSpawner) this.worldObj.getBlockTileEntity(spawnerCoords.posX, spawnerCoords.posY, spawnerCoords.posZ);
-            if (spawner != null)
-            {
-                spawner.getSpawnerLogic().setMobID(GCPlutoRoomSpawner.getMob(rand));
-            }
-        }
-    }
+            final TileEntityChest chest = (TileEntityChest) this.worldObj.getBlockTileEntity(chestCoords.posX, chestCoords.posY, chestCoords.posZ);
 
-    private static String getMob(Random rand)
-    {
-        switch (rand.nextInt(2))
-        {
-        case 0:
-            return "Evolved Spider";
-        case 1:
-            return "Evolved Skeleton";
-        default:
-            return "Evolved Zombie";
+            if (chest != null)
+            {
+                ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+                WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
+            }
         }
     }
 }

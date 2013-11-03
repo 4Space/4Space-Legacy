@@ -1,8 +1,8 @@
 package mattparks.mods.starcraft.eris.dimension;
 
 import mattparks.mods.starcraft.eris.GCErisConfigManager;
-import mattparks.mods.starcraft.eris.wgen.GCPlutoChunkProvider;
-import mattparks.mods.starcraft.eris.wgen.GCPlutoWorldChunkManager;
+import mattparks.mods.starcraft.eris.wgen.GCErisChunkProvider;
+import mattparks.mods.starcraft.eris.wgen.GCErisWorldChunkManager;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
@@ -45,7 +45,7 @@ public class GCErisWorldProvider extends WorldProvider implements IGalacticraftW
     @Override
     public void registerWorldChunkManager()
     {
-        this.worldChunkMgr = new GCPlutoWorldChunkManager();
+        this.worldChunkMgr = new GCErisWorldChunkManager();
     }
 
     @SideOnly(Side.CLIENT)
@@ -100,7 +100,7 @@ public class GCErisWorldProvider extends WorldProvider implements IGalacticraftW
     @Override
     public IChunkProvider createChunkGenerator()
     {
-        return new GCPlutoChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
+        return new GCErisChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
     }
 
     @Override

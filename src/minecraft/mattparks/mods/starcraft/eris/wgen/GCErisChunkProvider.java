@@ -30,7 +30,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraftforge.common.ForgeDirection;
 
-public class GCPlutoChunkProvider extends ChunkProviderGenerate
+public class GCErisChunkProvider extends ChunkProviderGenerate
 {
     final short topBlockID = (short) SpacecraftBlocks.ErisGrass.blockID;
     final byte topBlockMeta = 5;
@@ -46,30 +46,30 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
     private final NoiseModule noiseGen3;
     private final NoiseModule noiseGen4;
 
-    public GCPlutoBiomeDecorator biomedecoratorplanet = new GCPlutoBiomeDecorator(GCPlutoBiomeGenBase.venusFlat);
+    public GCErisBiomeDecorator biomedecoratorplanet = new GCErisBiomeDecorator(GCErisBiomeGenBase.venusFlat);
 
     private final World worldObj;
     private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(SpacecraftBlocks.ErisBrick.blockID, 14, 8, 16, 3);
 
     {
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomChests(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomChests(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.bossRooms.add(new GCPlutoRoomBoss(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.treasureRooms.add(new GCPlutoRoomTreasure(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCErisRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCErisRoomChests(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCErisRoomChests(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.bossRooms.add(new GCErisRoomBoss(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.treasureRooms.add(new GCErisRoomTreasure(null, 0, 0, 0, ForgeDirection.UNKNOWN));
     }
 
-    private BiomeGenBase[] biomesForGeneration = { GCPlutoBiomeGenBase.venusFlat };
+    private BiomeGenBase[] biomesForGeneration = { GCErisBiomeGenBase.venusFlat };
 
-    private final GCCoreMapGenBaseMeta caveGenerator = new GCPlutoGenCaves();
+    private final GCCoreMapGenBaseMeta caveGenerator = new GCErisGenCaves();
 
     private static final int CRATER_PROB = 300;
 
@@ -79,7 +79,7 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
     private static final int CHUNK_SIZE_Y = 128;
     private static final int CHUNK_SIZE_Z = 16;
 
-    public GCPlutoChunkProvider(World par1World, long par2, boolean par4)
+    public GCErisChunkProvider(World par1World, long par2, boolean par4)
     {
         super(par1World, par2, par4);
         this.worldObj = par1World;
@@ -97,9 +97,9 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
         this.noiseGen3.frequency = 0.01;
         this.noiseGen4.frequency = 0.02;
 
-        for (int x = 0; x < GCPlutoChunkProvider.CHUNK_SIZE_X; x++)
+        for (int x = 0; x < GCErisChunkProvider.CHUNK_SIZE_X; x++)
         {
-            for (int z = 0; z < GCPlutoChunkProvider.CHUNK_SIZE_Z; z++)
+            for (int z = 0; z < GCErisChunkProvider.CHUNK_SIZE_Z; z++)
             {
                 final double d = this.noiseGen1.getNoise(x + chunkX * 16, z + chunkZ * 16) * 8;
                 final double d2 = this.noiseGen2.getNoise(x + chunkX * 16, z + chunkZ * 16) * 24;
@@ -121,9 +121,9 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
                     yDev = d + (d2 - d) * d3;
                 }
 
-                for (int y = 0; y < GCPlutoChunkProvider.CHUNK_SIZE_Y; y++)
+                for (int y = 0; y < GCErisChunkProvider.CHUNK_SIZE_Y; y++)
                 {
-                    if (y < GCPlutoChunkProvider.MID_HEIGHT + yDev)
+                    if (y < GCErisChunkProvider.MID_HEIGHT + yDev)
                     {
                         idArray[this.getIndex(x, y, z)] = this.lowerBlockID;
                         metaArray[this.getIndex(x, y, z)] = this.lowerBlockMeta;

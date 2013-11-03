@@ -8,9 +8,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 
-public abstract class GCPlutoComponent extends StructureComponent
+public abstract class GCErisComponent extends StructureComponent
 {
-    public GCPlutoComponent(int var1)
+    public GCErisComponent(int var1)
     {
         super(var1);
     }
