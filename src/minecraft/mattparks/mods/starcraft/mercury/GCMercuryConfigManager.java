@@ -57,7 +57,7 @@ public class GCMercuryConfigManager
         {
             GCMercuryConfigManager.configuration.load();
 
-            GCMercuryConfigManager.dimensionIDMercury = GCMercuryConfigManager.configuration.get("Dimensions", "Venus Dimension ID", -47).getInt(-47);
+            GCMercuryConfigManager.dimensionIDMercury = GCMercuryConfigManager.configuration.get("Dimensions", "Venus Dimension ID", -42).getInt(-42);
 
             GCMercuryConfigManager.idBlockMercury = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockVenus", 7755).getInt(7755);
      

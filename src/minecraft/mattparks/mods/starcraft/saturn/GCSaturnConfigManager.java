@@ -51,7 +51,7 @@ public class GCSaturnConfigManager
         {
             GCSaturnConfigManager.configuration.load();
 
-            GCSaturnConfigManager.dimensionIDSaturn = GCSaturnConfigManager.configuration.get("Dimensions", "Saturn Dimension ID", -51).getInt(-51);
+            GCSaturnConfigManager.dimensionIDSaturn = GCSaturnConfigManager.configuration.get("Dimensions", "Saturn Dimension ID", -45).getInt(-45);
         }
         catch (final Exception e)
         {

@@ -50,7 +50,7 @@ public class GCUranusConfigManager
         {
             GCUranusConfigManager.configuration.load();
 
-            GCUranusConfigManager.dimensionIDUranus = GCUranusConfigManager.configuration.get("Dimensions", "Uranus Dimension ID", -52).getInt(-52);
+            GCUranusConfigManager.dimensionIDUranus = GCUranusConfigManager.configuration.get("Dimensions", "Uranus Dimension ID", -46).getInt(-46);
         }
         catch (final Exception e)
         {

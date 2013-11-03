@@ -50,7 +50,7 @@ public class GCNeptuneConfigManager
         {
             GCNeptuneConfigManager.configuration.load();
 
-            GCNeptuneConfigManager.dimensionIDNeptune = GCNeptuneConfigManager.configuration.get("Dimensions", "Uranus Dimension ID", -53).getInt(-53);
+            GCNeptuneConfigManager.dimensionIDNeptune = GCNeptuneConfigManager.configuration.get("Dimensions", "Uranus Dimension ID", -43).getInt(-43);
         }
         catch (final Exception e)
         {

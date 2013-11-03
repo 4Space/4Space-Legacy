@@ -53,7 +53,7 @@ public class GCPlutoConfigManager
         {
             GCPlutoConfigManager.configuration.load();
 
-            GCPlutoConfigManager.dimensionIDPluto = GCPlutoConfigManager.configuration.get("Dimensions", "Venus Dimension ID", -48).getInt(-48);
+            GCPlutoConfigManager.dimensionIDPluto = GCPlutoConfigManager.configuration.get("Dimensions", "Venus Dimension ID", -44).getInt(-44);
 
             GCPlutoConfigManager.idBlockPluto = GCPlutoConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockVenus", 7653).getInt(7653);
      

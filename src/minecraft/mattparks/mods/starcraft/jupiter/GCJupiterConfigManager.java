@@ -50,7 +50,7 @@ public class GCJupiterConfigManager
         {
             GCJupiterConfigManager.configuration.load();
 
-            GCJupiterConfigManager.dimensionIDJupiter = GCJupiterConfigManager.configuration.get("Dimensions", "Jupiter Dimension ID", -49).getInt(-49);
+            GCJupiterConfigManager.dimensionIDJupiter = GCJupiterConfigManager.configuration.get("Dimensions", "Jupiter Dimension ID", -41).getInt(-41);
         }
         catch (final Exception e)
         {

@@ -53,7 +53,7 @@ public class GCErisConfigManager
         {
             GCErisConfigManager.configuration.load();
 
-            GCErisConfigManager.dimensionIDEris = GCErisConfigManager.configuration.get("Dimensions", "Eris Dimension ID", -53).getInt(-53);
+            GCErisConfigManager.dimensionIDEris = GCErisConfigManager.configuration.get("Dimensions", "Eris Dimension ID", -40).getInt(-40);
 
 //            GCPlutoConfigManager.idBlockPluto = GCPlutoConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockVenus", 7653).getInt(7653);
      

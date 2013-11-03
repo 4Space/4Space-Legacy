@@ -67,7 +67,7 @@ public class GCVenus
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        new GCVenusConfigManager(new File(event.getModConfigurationDirectory(), "spacecraft/venus.conf"));
+        new GCVenusConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/venus.conf"));
 
         GCVenusItems.initItems();
 
