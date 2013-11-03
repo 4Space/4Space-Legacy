@@ -170,7 +170,7 @@ public class GCPlutoGenCaves extends GCCoreMapGenBaseMeta
 
                                         if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
                                         {
-                                            if (blockIdArray[coords] == SpacecraftBlocks.PlutoDirt.blockID)
+                                            if (blockIdArray[coords] == SpacecraftBlocks.ErisDirt.blockID)
                                             {
                                                 if (metaArray[coords] == 3 || metaArray[coords] == 4)
                                                 {

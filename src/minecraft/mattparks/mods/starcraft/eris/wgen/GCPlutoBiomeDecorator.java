@@ -28,7 +28,7 @@ public class GCPlutoBiomeDecorator
     public GCPlutoBiomeDecorator(BiomeGenBase par1BiomeGenBase)
     {
 //        this.gemGen = new GCCoreWorldGenMinableMeta(PlutoBlocks.PlutoBlocks.blockID, 4, 0, true, MercuryBlocks.PlutoBlocks.blockID, 4);
-        this.dirtGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.PlutoDirt.blockID, 32, 3, true, SpacecraftBlocks.PlutoDirt.blockID, 4); 
+        this.dirtGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.ErisDirt.blockID, 32, 3, true, SpacecraftBlocks.ErisDirt.blockID, 4); 
 //        this.coalGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);     
 //        this.tinGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);  
 //        this.copperGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);      

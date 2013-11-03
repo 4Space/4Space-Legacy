@@ -31,11 +31,11 @@ import net.minecraftforge.common.ForgeDirection;
 
 public class GCPlutoChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) SpacecraftBlocks.PlutoGrass.blockID;
+    final short topBlockID = (short) SpacecraftBlocks.ErisGrass.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) SpacecraftBlocks.PlutoDirt.blockID;
+    final short fillBlockID = (short) SpacecraftBlocks.ErisDirt.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) SpacecraftBlocks.PlutoStone.blockID;
+    final short lowerBlockID = (short) SpacecraftBlocks.ErisStone.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
@@ -48,7 +48,7 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
     public GCPlutoBiomeDecorator biomedecoratorplanet = new GCPlutoBiomeDecorator(GCPlutoBiomeGenBase.venusFlat);
 
     private final World worldObj;
-    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(SpacecraftBlocks.PlutoBrick.blockID, 14, 8, 16, 3);
+    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(SpacecraftBlocks.ErisBrick.blockID, 14, 8, 16, 3);
 
     {
     }
@@ -291,7 +291,7 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
     @Override
     public String makeString()
     {
-        return GCErisConfigManager.generateOtherMods ? "RandomLevelSource" : "VenusLevelSource";
+        return GCErisConfigManager.generateOtherMods ? "RandomLevelSource" : "ErisLevelSource";
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
