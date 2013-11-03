@@ -73,3 +73,21 @@ public class SCCoreItemJetpack extends ItemArmor
         }
         }
 }
+        
+//    @Override
+//    public void onUpdate(ItemStack itemstack, World world, Entity entity, int par4, boolean par5) 
+//    {
+//            if (entity instanceof EntityPlayer)
+//            {
+//                    final EntityPlayer player = (EntityPlayer) entity;
+//                    
+//                    if (StarcraftTick.tick % 100 == 0)
+//                    {
+//                            if (!player.capabilities.isCreativeMode)
+//                            {
+//                                player.inventory.consumeInventoryItem(Item.coal.itemID);
+//                            }
+//                    }
+//            }
+//    }
+//}
