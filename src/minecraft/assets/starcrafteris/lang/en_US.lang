@@ -3,12 +3,18 @@
 # GENERAL ITEMS
 
 # ITEMS
+item.erisPlate.name=Eris plate
 
 # TOOLS
 
 # ARMOR
 
 # BLOCKS
+tile.grassEris.name=Eris Grass
+tile.dirtEris.name=Eris Dirt
+tile.stoneEris.name=Eris Stone
+tile.cobblestoneEris.name=Eris Cobblestone
+tile.ErisBrick.name=Eris Brick
 
 # ENTITYS
 
