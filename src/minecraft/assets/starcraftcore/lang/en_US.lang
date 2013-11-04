@@ -40,6 +40,7 @@ item.gemLeggings.name=Gem Leggings
 item.gemBoots.name=Gem Boots
 
 # BLOCKS
+tile.caravanmodule=The portable tent
 
 # GUI
 itemGroup.starcraftCoreTab=Spacecraft Core

@@ -1,6 +1,7 @@
 package mattparks.mods.starcraft.spacecraftBlocks.block;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -18,10 +19,15 @@ public class StarcraftBlock extends Block
         this.setHardness(2.0F);
     }
 
-//    @Override
-//    @SideOnly(Side.CLIENT)
-//    public CreativeTabs getCreativeTabToDisplayOn()
-//    {
-//        return StarcraftCore.starcraftCoreTab;
-//    }
+    @Override
+    public int getMobilityFlag()
+    {
+    	if(this.blockID == SpacecraftBlocks.caravanmodulepart.blockID)
+    	{
+    		return 2;
+    	}
+    	
+        return 0;
+    }
+
 }
