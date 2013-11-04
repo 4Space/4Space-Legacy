@@ -3,14 +3,12 @@ package mattparks.mods.starcraft.core;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT3;
 import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT4;
 import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT5;
 import mattparks.mods.starcraft.core.items.SCCoreItem;
 import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.core.network.SCCorePacketHandlerServer;
 import mattparks.mods.starcraft.core.recipe.SCCoreRecipeManager;
-import mattparks.mods.starcraft.core.schematic.SCCoreSchematicRocketT3;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -138,7 +136,7 @@ public class StarcraftCore
 
         GCLog.info("Starcraft Core Loaded: " + languages + " Languages.");
 
-        SchematicRegistry.registerSchematicRecipe(new SCCoreSchematicRocketT3());
+//        SchematicRegistry.registerSchematicRecipe(new GCVenusSchematicRocketT3());
 // TODO add Tier 3-6 to craftng bench  
         
         NetworkRegistry.instance().registerGuiHandler(StarcraftCore.instance, StarcraftCore.proxy);
@@ -168,7 +166,6 @@ public class StarcraftCore
 
     public void registerOtherEntities()
     {
-    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT3.class, "SpaceshipT3", SCCoreConfigManager.idEntitySpaceshipTier3, 150, 1, true);
     	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT4.class, "SpaceshipT4", SCCoreConfigManager.idEntitySpaceshipTier4, 150, 1, true);
     	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT5.class, "SpaceshipT5", SCCoreConfigManager.idEntitySpaceshipTier5, 150, 1, true);
     }

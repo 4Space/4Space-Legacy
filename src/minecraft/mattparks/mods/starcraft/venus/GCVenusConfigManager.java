@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.venus;
 import java.io.File;
 import java.util.logging.Level;
 
+import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 
@@ -35,6 +36,8 @@ public class GCVenusConfigManager
     public static int idItemVenusBattery;
     public static int idTtemVenusT3Schematic;
     
+    public static int idItemSpaceshipTier3;
+    
     // ARMOR
     public static int idArmorSulferHelmet;
     public static int idArmorSulferChestplate;
@@ -49,10 +52,13 @@ public class GCVenusConfigManager
     public static int idToolSulferHoe;
 
     // ENTITIES
-
+    public static int idEntitySpaceshipTier3;
+    
     // GUI
-
+    public static int idGuiRocketCraftingBenchT3;
+    
     // SCHEMATIC
+    public static int idSchematicRocketT3;
 
     // ACHIEVEMENTS
     public static int idEntityEvolvedBlaze;
@@ -98,10 +104,17 @@ public class GCVenusConfigManager
             GCVenusConfigManager.idArmorSulferBoots = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorSulferBoots", 7870).getInt(7870);
 
             GCVenusConfigManager.idTtemVenusT3Schematic = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idTtemVenusT3Schematic", 7862).getInt(7862);
-
+            GCVenusConfigManager.idItemSpaceshipTier3 = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier3", 7543).getInt(7543);
+            
             GCVenusConfigManager.idEntityEvolvedBlaze = GCVenusConfigManager.configuration.get("Entities", "idEntityEvolvedBlaze", 289).getInt(289);
             GCVenusConfigManager.idEntityVenusianVillager = GCVenusConfigManager.configuration.get("Entities", "idEntityVenusianVillager", 290).getInt(290);
             GCVenusConfigManager.idEntityFlameling = GCVenusConfigManager.configuration.get("Entities", "idEntityFlameling", 292).getInt(291);
+
+            GCVenusConfigManager.idEntitySpaceshipTier3 = GCVenusConfigManager.configuration.get("Entities", "idEntitySpaceshipTier3", 173).getInt(173);
+            
+            GCVenusConfigManager.idGuiRocketCraftingBenchT3 = GCVenusConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT3", 143).getInt(143);
+            
+            GCVenusConfigManager.idSchematicRocketT3 = GCVenusConfigManager.configuration.get("Schematic", "idSchematicRocketT3", 3).getInt(3);
 
             GCVenusConfigManager.disableGemOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Venus", false).getBoolean(false);
             GCVenusConfigManager.disableMeteorOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Meteor Ore Gen on Venus", false).getBoolean(false);

@@ -5,6 +5,10 @@ import java.io.DataInputStream;
 import java.util.ArrayList;
 import java.util.EnumSet;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.venus.client.model.SCCoreModelSpaceshipTier3;
+import mattparks.mods.starcraft.venus.client.render.item.SCCoreItemRendererSpaceshipT3;
+import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.venus.CommonProxyVenus;
 import mattparks.mods.starcraft.venus.GCVenus;
 import mattparks.mods.starcraft.venus.client.render.entities.GCVenusRenderFlameling;
@@ -13,7 +17,11 @@ import mattparks.mods.starcraft.venus.client.sounds.GCVenusSounds;
 import mattparks.mods.starcraft.venus.dimension.GCVenusWorldProvider;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityFlameling;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityVenusianVillager;
+import mattparks.mods.starcraft.venus.entities.SCCoreEntityRocketT3;
+import mattparks.mods.starcraft.venus.items.GCVenusItems;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
+import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
+import micdoodle8.mods.galacticraft.core.client.sounds.GCCoreSoundUpdaterSpaceship;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -25,6 +33,9 @@ import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraftforge.client.model.AdvancedModelLoader;
+import net.minecraftforge.client.model.IModelCustom;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -66,6 +77,13 @@ public class ClientProxyVenus extends CommonProxyVenus
 
         RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityVenusianVillager.class, new GCVenusRenderVenusianVillager());
         RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityFlameling.class, new GCVenusRenderFlameling());
+  
+        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
+        // TODO remove internal cargo rocket codes
+
+        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT3.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier3(), StarcraftCore.ASSET_DOMAIN, "rocketT3"));
+        MinecraftForgeClient.registerItemRenderer(GCVenusItems.spaceshipT3.itemID, new SCCoreItemRendererSpaceshipT3(cargoRocketModel));
+    
     }
 
 
@@ -187,16 +205,20 @@ public class ClientProxyVenus extends CommonProxyVenus
                             world.provider.setCloudRenderer(new GCCoreCloudRenderer());
                         }
                     }
-
+                    
                     for (int i = 0; i < world.loadedEntityList.size(); i++)
                     {
                         final Entity e = (Entity) world.loadedEntityList.get(i);
 
                         if (e != null)
                         {
+                            if (e instanceof SCCoreEntityRocketT3)
                             {
+                                final SCCoreEntityRocketT3 eship = (SCCoreEntityRocketT3) e;
 
+                                if (eship.rocketSoundUpdater == null)
                                 {
+                                    eship.rocketSoundUpdater = new GCCoreSoundUpdaterSpaceship(FMLClientHandler.instance().getClient().sndManager, eship, FMLClientHandler.instance().getClient().thePlayer);
                                 }
                             }
                         }

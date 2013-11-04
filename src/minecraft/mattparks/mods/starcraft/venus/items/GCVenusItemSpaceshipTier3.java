@@ -1,10 +1,10 @@
-package mattparks.mods.starcraft.core.items;
+package mattparks.mods.starcraft.venus.items;
 
 import java.util.List;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT3;
 import mattparks.mods.starcraft.venus.GCVenus;
+import mattparks.mods.starcraft.venus.entities.SCCoreEntityRocketT3;
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
@@ -25,9 +25,9 @@ import net.minecraftforge.fluids.FluidStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
+public class GCVenusItemSpaceshipTier3 extends Item implements IHoldableItem
 {
-    public SCCoreItemSpaceshipTier3(int par1)
+    public GCVenusItemSpaceshipTier3(int par1)
     {
         super(par1);
         this.setMaxDamage(0);

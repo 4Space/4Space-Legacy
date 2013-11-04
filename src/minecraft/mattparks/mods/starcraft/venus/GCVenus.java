@@ -3,12 +3,14 @@ package mattparks.mods.starcraft.venus;
 import java.io.File;
 import java.util.HashMap;
 
+import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import mattparks.mods.starcraft.venus.dimension.GCVenusTeleportType;
 import mattparks.mods.starcraft.venus.dimension.GCVenusWorldProvider;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityEvolvedBlaze;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityFlameling;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityVenusianVillager;
+import mattparks.mods.starcraft.venus.entities.SCCoreEntityRocketT3;
 import mattparks.mods.starcraft.venus.items.GCVenusItems;
 import mattparks.mods.starcraft.venus.network.GCVenusPacketHandlerServer;
 import mattparks.mods.starcraft.venus.recipe.GCVenusRecipeManager;
@@ -148,7 +150,7 @@ public class GCVenus
 
     public void registerOtherEntities()
     {
-            ;
+    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT3.class, "SpaceshipT3", GCVenusConfigManager.idEntitySpaceshipTier3, 150, 1, true);
     }
     
     @EventHandler

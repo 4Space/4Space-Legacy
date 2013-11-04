@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.core.client.model;
+package mattparks.mods.starcraft.venus.client.model;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;

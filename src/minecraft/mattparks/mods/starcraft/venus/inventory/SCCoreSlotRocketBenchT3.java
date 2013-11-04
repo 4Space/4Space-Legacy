@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.core.inventory;
+package mattparks.mods.starcraft.venus.inventory;
 
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;

@@ -1,8 +1,9 @@
-package mattparks.mods.starcraft.core.schematic;
+package mattparks.mods.starcraft.venus.schematic;
 
 import mattparks.mods.starcraft.core.SCCoreConfigManager;
-import mattparks.mods.starcraft.core.client.gui.SCCoreGuiSchematicRocketT3;
-import mattparks.mods.starcraft.core.inventory.SCCoreContainerRocketBenchT3;
+import mattparks.mods.starcraft.venus.GCVenusConfigManager;
+import mattparks.mods.starcraft.venus.client.gui.SCCoreGuiSchematicRocketT3;
+import mattparks.mods.starcraft.venus.inventory.SCCoreContainerRocketBenchT3;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.client.gui.GuiScreen;
@@ -12,18 +13,18 @@ import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class SCCoreSchematicRocketT3 implements ISchematicPage
+public class GCVenusSchematicRocketT3 implements ISchematicPage
 {
     @Override
     public int getPageID()
     {
-        return SCCoreConfigManager.idSchematicRocketT3;
+        return GCVenusConfigManager.idSchematicRocketT3;
     }
 
     @Override
     public int getGuiID()
     {
-        return SCCoreConfigManager.idGuiRocketCraftingBenchT3;
+        return GCVenusConfigManager.idGuiRocketCraftingBenchT3;
     }
 
     @Override

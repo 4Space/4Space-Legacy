@@ -30,7 +30,6 @@ public class SCCoreConfigManager
     public static int idItemSchematicMars;
     public static int idItemRocketEngine;
     
-    public static int idItemSpaceshipTier3;
     public static int idItemSpaceshipTier4;
     public static int idItemSpaceshipTier5;
     
@@ -50,17 +49,14 @@ public class SCCoreConfigManager
     public static int idToolGemHoe;
 
     // ENTITIES
-    public static int idEntitySpaceshipTier3;
     public static int idEntitySpaceshipTier4;
     public static int idEntitySpaceshipTier5;
     
     // GUI
-    public static int idGuiRocketCraftingBenchT3;
     public static int idGuiRocketCraftingBenchT4;
     public static int idGuiRocketCraftingBenchT5;
     
     // SCHEMATIC
-    public static int idSchematicRocketT3;
     public static int idSchematicRocketT4;
     public static int idSchematicRocketT5;
 	
@@ -79,7 +75,6 @@ public class SCCoreConfigManager
             SCCoreConfigManager.idItemSchematicMars = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSchematicMars", 7541).getInt(7541);
             SCCoreConfigManager.idItemRocketEngine = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemRocketEngine", 7542).getInt(7542);
             
-            SCCoreConfigManager.idItemSpaceshipTier3 = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier3", 7543).getInt(7543);
             SCCoreConfigManager.idItemSpaceshipTier4 = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier4", 7544).getInt(7544);
             SCCoreConfigManager.idItemSpaceshipTier5 = SCCoreConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier5", 7545).getInt(7545);
 
@@ -99,21 +94,18 @@ public class SCCoreConfigManager
 
             //Block id's 7653-7654 are used by Spacecraft Pluto
             
-            SCCoreConfigManager.idEntitySpaceshipTier3 = SCCoreConfigManager.configuration.get("Entities", "idEntitySpaceshipTier3", 173).getInt(173);
             SCCoreConfigManager.idEntitySpaceshipTier4 = SCCoreConfigManager.configuration.get("Entities", "idEntitySpaceshipTier4", 174).getInt(174);
             SCCoreConfigManager.idEntitySpaceshipTier5 = SCCoreConfigManager.configuration.get("Entities", "idEntitySpaceshipTier5", 175).getInt(175);
             
-            SCCoreConfigManager.idGuiRocketCraftingBenchT3 = SCCoreConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT3", 143).getInt(143);
             SCCoreConfigManager.idGuiRocketCraftingBenchT4 = SCCoreConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT4", 144).getInt(144);
             SCCoreConfigManager.idGuiRocketCraftingBenchT5 = SCCoreConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT5", 145).getInt(145);
             
-            SCCoreConfigManager.idSchematicRocketT3 = SCCoreConfigManager.configuration.get("Schematic", "idSchematicRocketT3", 3).getInt(3);
             SCCoreConfigManager.idSchematicRocketT4 = SCCoreConfigManager.configuration.get("Schematic", "idSchematicRocketT4", 4).getInt(4);
             SCCoreConfigManager.idSchematicRocketT5 = SCCoreConfigManager.configuration.get("Schematic", "idSchematicRocketT5", 5).getInt(5);
         }
         catch (final Exception e)
         {
-            FMLLog.log(Level.SEVERE, e, "Galacticraft Venus has a problem loading it's configuration");
+            FMLLog.log(Level.SEVERE, e, "Starcraft Core has a problem loading it's configuration");
         }
         finally
         {

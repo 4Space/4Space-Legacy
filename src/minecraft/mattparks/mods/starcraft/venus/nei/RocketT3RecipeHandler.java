@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.core.nei;
+package mattparks.mods.starcraft.venus.nei;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class RocketT3RecipeHandler extends TemplateRecipeHandler
 
     public Set<Entry<ArrayList<PositionedStack>, PositionedStack>> getRecipes()
     {
-        return NEIStarcraftCoreConfig.getRocketBenchRecipes();
+        return NEIVenusConfig.getRocketBenchRecipes();
     }
 
     @Override

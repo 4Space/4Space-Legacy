@@ -1,6 +1,8 @@
-package mattparks.mods.starcraft.core.inventory;
+package mattparks.mods.starcraft.venus.inventory;
 
 import mattparks.mods.starcraft.core.util.RecipeUtilSCCore;
+import mattparks.mods.starcraft.venus.util.GCVenusUtil;
+import mattparks.mods.starcraft.venus.util.RecipeUtilVenus;
 import micdoodle8.mods.galacticraft.core.inventory.GCCoreSlotRocketBenchResult;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.block.Block;
@@ -101,7 +103,7 @@ public class SCCoreContainerRocketBenchT3 extends Container
     @Override
     public void onCraftMatrixChanged(IInventory par1IInventory)
     {
-        this.craftResult.setInventorySlotContents(0, RecipeUtilSCCore.findMatchingSpaceshipT3Recipe(this.craftMatrix));
+        this.craftResult.setInventorySlotContents(0, GCVenusUtil.findMatchingSpaceshipT3Recipe(this.craftMatrix));
     }
 
     @Override

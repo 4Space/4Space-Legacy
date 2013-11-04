@@ -9,14 +9,11 @@ import java.util.Map;
 
 import mattparks.mods.starcraft.core.CommonProxySCCore;
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.client.model.SCCoreModelSpaceshipTier3;
 import mattparks.mods.starcraft.core.client.model.SCCoreModelSpaceshipTier4;
 import mattparks.mods.starcraft.core.client.model.SCCoreModelSpaceshipTier5;
-import mattparks.mods.starcraft.core.client.render.item.SCCoreItemRendererSpaceshipT3;
 import mattparks.mods.starcraft.core.client.render.item.SCCoreItemRendererSpaceshipT4;
 import mattparks.mods.starcraft.core.client.render.item.SCCoreItemRendererSpaceshipT5;
 import mattparks.mods.starcraft.core.client.sounds.SCCoreSounds;
-import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT3;
 import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT4;
 import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT5;
 import mattparks.mods.starcraft.core.items.SCCoreItems;
@@ -104,9 +101,6 @@ public class ClientProxySCCore extends CommonProxySCCore
         
         RenderingRegistry.addNewArmourRendererPrefix("gem");
         
-        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT3.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier3(), StarcraftCore.ASSET_DOMAIN, "rocketT3"));
-        MinecraftForgeClient.registerItemRenderer(SCCoreItems.spaceshipT3.itemID, new SCCoreItemRendererSpaceshipT3(cargoRocketModel));
-    
         RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT4.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier4(), StarcraftCore.ASSET_DOMAIN, "rocketT4"));
         MinecraftForgeClient.registerItemRenderer(SCCoreItems.spaceshipT4.itemID, new SCCoreItemRendererSpaceshipT4(cargoRocketModel));
         
@@ -225,9 +219,9 @@ public class ClientProxySCCore extends CommonProxySCCore
 
                         if (e != null)
                         {
-                            if (e instanceof SCCoreEntityRocketT3)
+                            if (e instanceof SCCoreEntityRocketT4)
                             {
-                                final SCCoreEntityRocketT3 eship = (SCCoreEntityRocketT3) e;
+                                final SCCoreEntityRocketT4 eship = (SCCoreEntityRocketT4) e;
 
                                 if (eship.rocketSoundUpdater == null)
                                 {

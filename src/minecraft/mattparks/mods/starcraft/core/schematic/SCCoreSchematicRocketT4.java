@@ -1,8 +1,8 @@
 package mattparks.mods.starcraft.core.schematic;
 
 import mattparks.mods.starcraft.core.SCCoreConfigManager;
-import mattparks.mods.starcraft.core.client.gui.SCCoreGuiSchematicRocketT3;
-import mattparks.mods.starcraft.core.inventory.SCCoreContainerRocketBenchT3;
+import mattparks.mods.starcraft.core.client.gui.SCCoreGuiSchematicRocketT4;
+import mattparks.mods.starcraft.core.inventory.SCCoreContainerRocketBenchT4;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.client.gui.GuiScreen;
@@ -36,13 +36,13 @@ public class SCCoreSchematicRocketT4 implements ISchematicPage
     @Override
     public GuiScreen getResultScreen(EntityPlayer player, int x, int y, int z)
     {
-        return new SCCoreGuiSchematicRocketT3(player.inventory, x, y, z);
+        return new SCCoreGuiSchematicRocketT4(player.inventory, x, y, z);
     }
 
     @Override
     public Container getResultContainer(EntityPlayer player, int x, int y, int z)
     {
-        return new SCCoreContainerRocketBenchT3(player.inventory, x, y, z);
+        return new SCCoreContainerRocketBenchT4(player.inventory, x, y, z);
     }
 
     @Override

@@ -1,7 +1,7 @@
 package mattparks.mods.starcraft.core.client.gui;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.inventory.SCCoreContainerRocketBenchT3;
+import mattparks.mods.starcraft.core.inventory.SCCoreContainerRocketBenchT4;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import net.minecraft.client.gui.GuiButton;
@@ -20,7 +20,7 @@ public class SCCoreGuiSchematicRocketT4 extends GuiContainer implements ISchemat
 
     public SCCoreGuiSchematicRocketT4(InventoryPlayer par1InventoryPlayer, int x, int y, int z)
     {
-        super(new SCCoreContainerRocketBenchT3(par1InventoryPlayer, x, y, z));
+        super(new SCCoreContainerRocketBenchT4(par1InventoryPlayer, x, y, z));
         this.ySize = 238;
     }
 

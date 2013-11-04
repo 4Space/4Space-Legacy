@@ -15,7 +15,7 @@ import net.minecraft.world.World;
 
 public class SCCoreContainerRocketBenchT4 extends Container
 {
-    public SCCoreInventoryRocketBenchT3 craftMatrix = new SCCoreInventoryRocketBenchT3(this);
+    public SCCoreInventoryRocketBenchT4 craftMatrix = new SCCoreInventoryRocketBenchT4(this);
     public IInventory craftResult = new InventoryCraftResult();
     private final World worldObj;
 
@@ -28,37 +28,37 @@ public class SCCoreContainerRocketBenchT4 extends Container
         int var7;
 
         // Cone
-        this.addSlotToContainer(new SCCoreSlotRocketBenchT3(this.craftMatrix, 1, 48, -8 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SCCoreSlotRocketBenchT4(this.craftMatrix, 1, 48, -8 + change, x, y, z, par1InventoryPlayer.player));
 
         // Body
         for (var6 = 0; var6 < 5; ++var6)
         {
-            this.addSlotToContainer(new SCCoreSlotRocketBenchT3(this.craftMatrix, 2 + var6, 39, -6 + var6 * 18 + 16 + change, x, y, z, par1InventoryPlayer.player));
+            this.addSlotToContainer(new SCCoreSlotRocketBenchT4(this.craftMatrix, 2 + var6, 39, -6 + var6 * 18 + 16 + change, x, y, z, par1InventoryPlayer.player));
         }
 
         // Body Right
         for (var6 = 0; var6 < 5; ++var6)
         {
-            this.addSlotToContainer(new SCCoreSlotRocketBenchT3(this.craftMatrix, 7 + var6, 57, -6 + var6 * 18 + 16 + change, x, y, z, par1InventoryPlayer.player));
+            this.addSlotToContainer(new SCCoreSlotRocketBenchT4(this.craftMatrix, 7 + var6, 57, -6 + var6 * 18 + 16 + change, x, y, z, par1InventoryPlayer.player));
         }
 
         // Left fins
-        this.addSlotToContainer(new SCCoreSlotRocketBenchT3(this.craftMatrix, 12, 21, 64 + change, x, y, z, par1InventoryPlayer.player));
-        this.addSlotToContainer(new SCCoreSlotRocketBenchT3(this.craftMatrix, 13, 21, 82 + change, x, y, z, par1InventoryPlayer.player));
-        this.addSlotToContainer(new SCCoreSlotRocketBenchT3(this.craftMatrix, 14, 21, 100 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SCCoreSlotRocketBenchT4(this.craftMatrix, 12, 21, 64 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SCCoreSlotRocketBenchT4(this.craftMatrix, 13, 21, 82 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SCCoreSlotRocketBenchT4(this.craftMatrix, 14, 21, 100 + change, x, y, z, par1InventoryPlayer.player));
 
         // Engine
-        this.addSlotToContainer(new SCCoreSlotRocketBenchT3(this.craftMatrix, 15, 48, 100 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SCCoreSlotRocketBenchT4(this.craftMatrix, 15, 48, 100 + change, x, y, z, par1InventoryPlayer.player));
 
         // Right fins
-        this.addSlotToContainer(new SCCoreSlotRocketBenchT3(this.craftMatrix, 16, 75, 64 + change, x, y, z, par1InventoryPlayer.player));
-        this.addSlotToContainer(new SCCoreSlotRocketBenchT3(this.craftMatrix, 17, 75, 82 + change, x, y, z, par1InventoryPlayer.player));
-        this.addSlotToContainer(new SCCoreSlotRocketBenchT3(this.craftMatrix, 18, 75, 100 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SCCoreSlotRocketBenchT4(this.craftMatrix, 16, 75, 64 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SCCoreSlotRocketBenchT4(this.craftMatrix, 17, 75, 82 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SCCoreSlotRocketBenchT4(this.craftMatrix, 18, 75, 100 + change, x, y, z, par1InventoryPlayer.player));
 
         // Addons
         for (int var8 = 0; var8 < 3; var8++)
         {
-            this.addSlotToContainer(new SCCoreSlotRocketBenchT3(this.craftMatrix, 19 + var8, 93 + var8 * 26, -15 + change, x, y, z, par1InventoryPlayer.player));
+            this.addSlotToContainer(new SCCoreSlotRocketBenchT4(this.craftMatrix, 19 + var8, 93 + var8 * 26, -15 + change, x, y, z, par1InventoryPlayer.player));
         }
 
         // Player inv:
@@ -101,7 +101,7 @@ public class SCCoreContainerRocketBenchT4 extends Container
     @Override
     public void onCraftMatrixChanged(IInventory par1IInventory)
     {
-        this.craftResult.setInventorySlotContents(0, RecipeUtilSCCore.findMatchingSpaceshipT3Recipe(this.craftMatrix));
+        this.craftResult.setInventorySlotContents(0, RecipeUtilSCCore.findMatchingSpaceshipT4Recipe(this.craftMatrix));
     }
 
     @Override

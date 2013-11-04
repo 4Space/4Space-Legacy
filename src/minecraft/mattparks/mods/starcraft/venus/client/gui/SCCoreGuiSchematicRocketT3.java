@@ -1,7 +1,7 @@
-package mattparks.mods.starcraft.core.client.gui;
+package mattparks.mods.starcraft.venus.client.gui;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.inventory.SCCoreContainerRocketBenchT3;
+import mattparks.mods.starcraft.venus.inventory.SCCoreContainerRocketBenchT3;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import net.minecraft.client.gui.GuiButton;
