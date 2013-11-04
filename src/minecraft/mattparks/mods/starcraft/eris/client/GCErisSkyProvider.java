@@ -4,6 +4,7 @@ import java.util.Random;
 
 import mattparks.mods.starcraft.eris.GCEris;
 import mattparks.mods.starcraft.eris.dimension.GCErisWorldProvider;
+import mattparks.mods.starcraft.pluto.GCPluto;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.client.Minecraft;
@@ -22,7 +23,7 @@ import cpw.mods.fml.client.FMLClientHandler;
 
 public class GCErisSkyProvider extends IRenderHandler
 {
-    private static final ResourceLocation neptuneTexture = new ResourceLocation(GCEris.ASSET_DOMAIN, "textures/gui/planets/neptune.png");
+    private static final ResourceLocation plutoTexture = new ResourceLocation(GCPluto.ASSET_DOMAIN, "textures/gui/planets/pluto.png");
     private static final ResourceLocation sunTexture = new ResourceLocation(GCEris.ASSET_DOMAIN, "textures/gui/planets/sun.png");
 
     public int starGLCallList = GLAllocation.generateDisplayLists(3);
@@ -172,13 +173,13 @@ public class GCErisSkyProvider extends IRenderHandler
 
         GL11.glDisable(GL11.GL_BLEND);
 
-        // NEPTUNE:
+        // PLUTO:
         var12 = 0.5F;
         GL11.glScalef(0.6F, 0.6F, 0.6F);
         GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
         GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCErisSkyProvider.neptuneTexture);
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCErisSkyProvider.plutoTexture);
         var23.startDrawingQuads();
         var23.addVertexWithUV(-var12, -100.0D, var12, 0, 1);
         var23.addVertexWithUV(var12, -100.0D, var12, 1, 1);
