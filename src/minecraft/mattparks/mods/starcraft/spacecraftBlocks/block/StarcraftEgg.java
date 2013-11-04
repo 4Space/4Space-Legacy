@@ -10,9 +10,9 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class VenusBlazeEgg extends BlockDragonEgg
+public class StarcraftEgg extends BlockDragonEgg
 {
-    public VenusBlazeEgg(int par1, int id, String name)
+    public StarcraftEgg(int par1, int id, String name)
     {        
     	super(par1);
         this.setUnlocalizedName(name);

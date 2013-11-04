@@ -10,11 +10,11 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class VenusHalfSlab extends Block
+public class StarcraftHalfSlab extends Block
 {
     private boolean isDoubleSlab;
 
-	public VenusHalfSlab(int id, String name)
+	public StarcraftHalfSlab(int id, String name)
     {
         super(id, Material.rock);
         this.setUnlocalizedName(name);

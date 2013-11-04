@@ -26,7 +26,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
     public static final String CONFIG_FILE = "starcraft/starcraftBlocks.conf";
     
         //Block Venus Grass
-        public final static Block VenusGrass = new StarcraftBlock(610, null) .setHardness(0.4F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("starcraftvenus:grassVenus") .setCreativeTab(StarcraftCore.starcraftVenusTab);
+        public final static Block VenusGrass = new StarcraftGrass(610, null) .setHardness(0.4F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("starcraftvenus:grassVenus") .setCreativeTab(StarcraftCore.starcraftVenusTab);
 
         //Block Venus Dirt
         public final static Block VenusDirt = new StarcraftBlock(611, null) .setHardness(0.3F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("starcraftvenus:dirtVenus") .setCreativeTab(StarcraftCore.starcraftVenusTab);
@@ -71,17 +71,17 @@ import cpw.mods.fml.common.registry.GameRegistry;
         public final static Block VenusCopperOre = new StarcraftOre(624, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCopperOre") .setTextureName("starcraftvenus:copperOre") .setCreativeTab(StarcraftCore.starcraftVenusTab);                                
 
         //Block Venus Basalt
-        public final static Block VenusBasalt = new VenusStone(625, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBasalt") .setTextureName("starcraftvenus:venusBasalt") .setCreativeTab(StarcraftCore.starcraftVenusTab);                                
+        public final static Block VenusBasalt = new StarcraftBlock(625, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBasalt") .setTextureName("starcraftvenus:venusBasalt") .setCreativeTab(StarcraftCore.starcraftVenusTab);                                
 
         //Block Venus Half Basalt
-        public final static Block VenusHalfBasalt = new VenusHalfSlab(626, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusHalfBasalt") .setTextureName("starcraftvenus:venusBasalt") .setCreativeTab(StarcraftCore.starcraftVenusTab);                                
+        public final static Block VenusHalfBasalt = new StarcraftHalfSlab(626, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusHalfBasalt") .setTextureName("starcraftvenus:venusBasalt") .setCreativeTab(StarcraftCore.starcraftVenusTab);                                
 
         //Block Venus Blaze Egg
-        public final static Block EvolvedBlazeEgg = new VenusBlazeEgg(627, 0, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlazeEgg") .setTextureName("starcraftvenus:evolvedBlazeEgg") .setCreativeTab(StarcraftCore.starcraftVenusTab);                                
+        public final static Block EvolvedBlazeEgg = new StarcraftEgg(627, 0, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlazeEgg") .setTextureName("starcraftvenus:evolvedBlazeEgg") .setCreativeTab(StarcraftCore.starcraftVenusTab);                                
 
         
         //Block Pluto Grass
-        public final static Block PlutoGrass = new StarcraftBlock(910, null) .setHardness(0.4F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("grassPluto") .setTextureName("starcraftpluto:grassPluto") .setCreativeTab(StarcraftCore.starcraftPlutoTab);
+        public final static Block PlutoGrass = new StarcraftGrass(910, null) .setHardness(0.4F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("grassPluto") .setTextureName("starcraftpluto:grassPluto") .setCreativeTab(StarcraftCore.starcraftPlutoTab);
 
         //Block Pluto Dirt
         public final static Block PlutoDirt = new StarcraftBlock(911, null) .setHardness(0.3F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("dirtPluto") .setTextureName("starcraftpluto:dirtPluto") .setCreativeTab(StarcraftCore.starcraftPlutoTab);
@@ -97,7 +97,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
         
         //Block Mercury Grass
-        public final static Block MercuryGrass = new StarcraftBlock(710, null) .setHardness(0.4F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryGrass") .setTextureName("starcraftmercury:grassMercury") .setCreativeTab(StarcraftCore.starcraftMercuryTab);
+        public final static Block MercuryGrass = new StarcraftGrass(710, null) .setHardness(0.4F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryGrass") .setTextureName("starcraftmercury:grassMercury") .setCreativeTab(StarcraftCore.starcraftMercuryTab);
 
         //Block Mercury Dirt
         public final static Block MercuryDirt = new StarcraftBlock(711, null) .setHardness(0.3F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryDirt") .setTextureName("starcraftmercury:dirtMercury") .setCreativeTab(StarcraftCore.starcraftMercuryTab);
@@ -164,26 +164,26 @@ import cpw.mods.fml.common.registry.GameRegistry;
         public final static Block NeptuneHydrogen = new StarcraftGasBottom(661, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneHydrogen") .setTextureName("starcraftneptune:neptuneHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
         
         
-    //Fluid Metallic Hydrogen
-    public final static Block hydrogenFlowing = new StarcraftMetallicHydrogenFlowing(920, null).setUnlocalizedName("MetallicHydrogenFlowing") .setCreativeTab(StarcraftCore.starcraftGasTab);
-    public final static Block hydrogenStill = new StarcraftMetallicHydrogenStill(921, null).setUnlocalizedName("MetallicHydrogenStill") .setCreativeTab(StarcraftCore.starcraftGasTab);
+        //Fluid Metallic Hydrogen
+        public final static Block hydrogenFlowing = new StarcraftMetallicHydrogenFlowing(920, null).setUnlocalizedName("MetallicHydrogenFlowing") .setCreativeTab(StarcraftCore.starcraftGasTab);
+        public final static Block hydrogenStill = new StarcraftMetallicHydrogenStill(921, null).setUnlocalizedName("MetallicHydrogenStill") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
-    //Block Eris Grass
-          public final static Block ErisGrass = new StarcraftBlock(922, null) .setHardness(0.4F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("grassEris") .setTextureName("starcrafteris:grassEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
+        //Block Eris Grass
+        public final static Block ErisGrass = new StarcraftGrass(922, null) .setHardness(0.4F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("grassEris") .setTextureName("starcrafteris:grassEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
 
-          //Block Pluto Dirt
-          public final static Block ErisDirt = new StarcraftBlock(923, null) .setHardness(0.3F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("dirtEris") .setTextureName("starcrafteris:dirtEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
+        //Block Pluto Dirt
+        public final static Block ErisDirt = new StarcraftBlock(923, null) .setHardness(0.3F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("dirtEris") .setTextureName("starcrafteris:dirtEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
       
-          //Block Eris Stone
-          public final static Block ErisStone = new PlutoStone(924, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("stoneEris") .setTextureName("starcrafteris:stoneEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
+        //Block Eris Stone
+        public final static Block ErisStone = new PlutoStone(924, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("stoneEris") .setTextureName("starcrafteris:stoneEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
 
-          //Block Eris Cobblestone
-          public final static Block ErisCobblestone = new StarcraftBlock(925, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("cobblestoneEris") .setTextureName("starcrafteris:cobblestoneEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
+        //Block Eris Cobblestone
+        public final static Block ErisCobblestone = new StarcraftBlock(925, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("cobblestoneEris") .setTextureName("starcrafteris:cobblestoneEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
 
-          //Block Eris Brick
-          public final static Block ErisBrick = new StarcraftBlock(926, null) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("erisBrick") .setTextureName("starcrafteris:erisBrick") .setCreativeTab(StarcraftCore.starcraftErisTab);
+        //Block Eris Brick
+        public final static Block ErisBrick = new StarcraftBlock(926, null) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("erisBrick") .setTextureName("starcrafteris:erisBrick") .setCreativeTab(StarcraftCore.starcraftErisTab);
 
-            @Instance("SpacecraftBlocks")
+        @Instance("SpacecraftBlocks")
         public static SpacecraftBlocks instance;
 
         @SidedProxy(clientSide="mattparks.mods.starcraft.spacecraftBlocks.client.ClientProxy", serverSide="mattparks.mods.starcraft.spacecraftBlocks.CommonProxy")
@@ -203,63 +203,63 @@ import cpw.mods.fml.common.registry.GameRegistry;
                 //Registering Blocks
                 GameRegistry.registerBlock(VenusGrass, "VenusGrass");
                 GameRegistry.registerBlock(VenusDirt, "VenusDirt");
-                                GameRegistry.registerBlock(VenusStone, "VenusStone");
-                                GameRegistry.registerBlock(VenusCobblestone, "VenusCobblestone");
-                                GameRegistry.registerBlock(VenusRedGemBlock, "VenusRedGemBlock");
-                                GameRegistry.registerBlock(VenusMeteorBlock, "VenusMeteorBlock");
-                                GameRegistry.registerBlock(VenusBrick, "VenusBrick");
-                                GameRegistry.registerBlock(VenusSulferBlock, "VenusSulferBlock");
-                                GameRegistry.registerBlock(VenusRedGemOre, "VenusRedGemOre");
-                                GameRegistry.registerBlock(VenusMeteorOre, "VenusMeteorOre");
-                                GameRegistry.registerBlock(VenusSulferOre, "VenusSulferOre");
-                                GameRegistry.registerBlock(VenusIronOre, "VenusIronOre");
-                                GameRegistry.registerBlock(VenusCoalOre, "VenusCoalOre");
-                                GameRegistry.registerBlock(VenusTinOre, "VenusTinOre");
-                                GameRegistry.registerBlock(VenusCopperOre, "VenusCopperOre");
-                                GameRegistry.registerBlock(VenusBasalt, "VenusBasalt");
-                                GameRegistry.registerBlock(VenusHalfBasalt, "VenusHalfBasalt");
-                                GameRegistry.registerBlock(EvolvedBlazeEgg, "EvolvedBlazeEgg");
+                GameRegistry.registerBlock(VenusStone, "VenusStone");
+                GameRegistry.registerBlock(VenusCobblestone, "VenusCobblestone");
+                GameRegistry.registerBlock(VenusRedGemBlock, "VenusRedGemBlock");
+                GameRegistry.registerBlock(VenusMeteorBlock, "VenusMeteorBlock");
+                GameRegistry.registerBlock(VenusBrick, "VenusBrick");
+                GameRegistry.registerBlock(VenusSulferBlock, "VenusSulferBlock");
+                GameRegistry.registerBlock(VenusRedGemOre, "VenusRedGemOre");
+                GameRegistry.registerBlock(VenusMeteorOre, "VenusMeteorOre");
+                GameRegistry.registerBlock(VenusSulferOre, "VenusSulferOre");
+                GameRegistry.registerBlock(VenusIronOre, "VenusIronOre");
+                GameRegistry.registerBlock(VenusCoalOre, "VenusCoalOre");
+                GameRegistry.registerBlock(VenusTinOre, "VenusTinOre");
+                GameRegistry.registerBlock(VenusCopperOre, "VenusCopperOre");
+                GameRegistry.registerBlock(VenusBasalt, "VenusBasalt");
+                GameRegistry.registerBlock(VenusHalfBasalt, "VenusHalfBasalt");
+                GameRegistry.registerBlock(EvolvedBlazeEgg, "EvolvedBlazeEgg");
                                 
                 GameRegistry.registerBlock(PlutoGrass, "PlutoGrass");
                 GameRegistry.registerBlock(PlutoDirt, "PlutoDirt");
-                                GameRegistry.registerBlock(PlutoStone, "PlutoStone");
-                                GameRegistry.registerBlock(PlutoCobblestone, "PlutoCobblestone");
-                                GameRegistry.registerBlock(PlutoBrick, "PlutoBrick");
+                GameRegistry.registerBlock(PlutoStone, "PlutoStone");
+                GameRegistry.registerBlock(PlutoCobblestone, "PlutoCobblestone");
+                GameRegistry.registerBlock(PlutoBrick, "PlutoBrick");
                                 
-                                GameRegistry.registerBlock(MercuryGrass, "MercuryGrass");
+                GameRegistry.registerBlock(MercuryGrass, "MercuryGrass");
                 GameRegistry.registerBlock(MercuryDirt, "MercuryDirt");
-                                GameRegistry.registerBlock(MercuryStone, "MercuryStone");
-                                GameRegistry.registerBlock(MercuryCobblestone, "MercuryCobblestone");
-                                GameRegistry.registerBlock(MercuryBrick, "MercuryBrick");
-                                GameRegistry.registerBlock(MercuryIridiumOre, "MercuryIridiumOre");
-                                GameRegistry.registerBlock(MercuryCoalOre, "MercuryCoalOre");
-                                GameRegistry.registerBlock(MercuryTinOre, "MercuryTinOre");
-                                GameRegistry.registerBlock(MercuryCopperOre, "MercuryCopperOre");
+                GameRegistry.registerBlock(MercuryStone, "MercuryStone");
+                GameRegistry.registerBlock(MercuryCobblestone, "MercuryCobblestone");
+                GameRegistry.registerBlock(MercuryBrick, "MercuryBrick");
+                GameRegistry.registerBlock(MercuryIridiumOre, "MercuryIridiumOre");
+                GameRegistry.registerBlock(MercuryCoalOre, "MercuryCoalOre");
+                GameRegistry.registerBlock(MercuryTinOre, "MercuryTinOre");
+                GameRegistry.registerBlock(MercuryCopperOre, "MercuryCopperOre");
                                 
-                                GameRegistry.registerBlock(JupiterNitrogen, "JupiterNitrogen");
-                    GameRegistry.registerBlock(JupiterHelium, "JupiterHelium");
-                            GameRegistry.registerBlock(JupiterHydrogen, "JupiterHydrogen");
+                GameRegistry.registerBlock(JupiterNitrogen, "JupiterNitrogen");
+                GameRegistry.registerBlock(JupiterHelium, "JupiterHelium");
+                GameRegistry.registerBlock(JupiterHydrogen, "JupiterHydrogen");
                                         
-                    GameRegistry.registerBlock(SaturnNitrogen, "SaturnNitrogen");
-                    GameRegistry.registerBlock(SaturnHelium, "SaturnHelium");
-                            GameRegistry.registerBlock(SaturnHydrogen, "SaturnHydrogen");
+                GameRegistry.registerBlock(SaturnNitrogen, "SaturnNitrogen");
+                GameRegistry.registerBlock(SaturnHelium, "SaturnHelium");
+                GameRegistry.registerBlock(SaturnHydrogen, "SaturnHydrogen");
                                         
-                    GameRegistry.registerBlock(UranusNitrogen, "UranusNitrogen");
-                    GameRegistry.registerBlock(UranusHelium, "UranusHelium");
-                                GameRegistry.registerBlock(UranusHydrogen, "UranusHydrogen");
+                GameRegistry.registerBlock(UranusNitrogen, "UranusNitrogen");
+                GameRegistry.registerBlock(UranusHelium, "UranusHelium");
+                GameRegistry.registerBlock(UranusHydrogen, "UranusHydrogen");
                                         
-                    GameRegistry.registerBlock(NeptuneNitrogen, "NeptuneNitrogen");
-                    GameRegistry.registerBlock(NeptuneHelium, "NeptuneHelium");
-                                GameRegistry.registerBlock(NeptuneHydrogen, "NeptuneHydrogen");
+                GameRegistry.registerBlock(NeptuneNitrogen, "NeptuneNitrogen");
+                GameRegistry.registerBlock(NeptuneHelium, "NeptuneHelium");
+                GameRegistry.registerBlock(NeptuneHydrogen, "NeptuneHydrogen");
                                 
-                    GameRegistry.registerBlock(hydrogenFlowing, "MetallicHydrogenFlowing");
-//                                GameRegistry.registerBlock(hydrogenStill, "MetallicHydrogenStill");
+                GameRegistry.registerBlock(hydrogenFlowing, "MetallicHydrogenFlowing");
+//              GameRegistry.registerBlock(hydrogenStill, "MetallicHydrogenStill");
                     
                 GameRegistry.registerBlock(ErisGrass, "ErisGrass");
                 GameRegistry.registerBlock(ErisDirt, "ErisDirt");
-                                GameRegistry.registerBlock(ErisStone, "ErisStone");
-                                GameRegistry.registerBlock(ErisCobblestone, "ErisCobblestone");
-                                GameRegistry.registerBlock(ErisBrick, "ErisBrick");
+                GameRegistry.registerBlock(ErisStone, "ErisStone");
+                GameRegistry.registerBlock(ErisCobblestone, "ErisCobblestone");
+                GameRegistry.registerBlock(ErisBrick, "ErisBrick");
         }
         
         @EventHandler
