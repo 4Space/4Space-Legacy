@@ -92,6 +92,11 @@ public class StarcraftCaravanModule extends Block
     	this.breakBlocksOther(par1World, par2, par3 + 1, par4 + 4, false);
     	this.breakBlocksOther(par1World, par2, par3 + 2, par4 + 4, false);
     	
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 2, par4 - 1, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 3, par4 - 1, false);
+    	
+    	this.breakBlocksOther(par1World, par2, par3 + 3, par4 - 1, false);
+    	
     	this.setBlocks(par1World, par2, par3, par4 - 1, true, SpacecraftBlocks.caravanmodulepart.blockID);
     	this.setBlocks(par1World, par2 + 1, par3, par4 - 1, true, SpacecraftBlocks.caravanmodulepart.blockID);
     	this.setBlocks(par1World, par2 +1, par3, par4, true, SpacecraftBlocks.caravanmodulepart.blockID);
@@ -441,6 +446,7 @@ public class StarcraftCaravanModule extends Block
     	this.breakBlocks(par1World, par2 + 1, par3 + 4, par4 - 1, false);
     	this.breakBlocks(par1World, par2 + 1, par3 + 4, par4 - 2, false);
 
+    	this.breakBlocks(par1World, par2 - 1, par3 + 1, par4 - 1, false);
     }
     
     @Override
