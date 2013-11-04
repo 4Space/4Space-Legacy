@@ -189,6 +189,12 @@ import cpw.mods.fml.common.registry.GameRegistry;
         //Block Eris Brick
         public final static Block ErisBrick = new StarcraftBlock(926, null) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("erisBrick") .setTextureName("starcrafteris:erisBrick") .setCreativeTab(StarcraftCore.starcraftErisTab);
 
+        //Block Caravan Module
+        public final static Block caravanmodule = new StarcraftCaravanModule(927, null).setHardness(0.4F).setStepSound(Block.soundClothFootstep).setUnlocalizedName("caravanmodule").setTextureName("starcraftcore:caravanmodule");
+        
+        //Block Caravan Module Part
+        public final static Block caravanmodulepart = new StarcraftBlock(928, null).setHardness(1000000.0F).setStepSound(Block.soundClothFootstep).setUnlocalizedName("caravanmodulepart").setTextureName("starcraftcore:caravanmodulepart").setBlockUnbreakable();
+        
         @Instance("SpacecraftBlocks")
         public static SpacecraftBlocks instance;
 
@@ -207,6 +213,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
                 proxy.registerRenderers();
                 
                 //Registering Blocks
+                GameRegistry.registerBlock(caravanmodule, "CaravanModule");
+                GameRegistry.registerBlock(caravanmodulepart, "CaravanModulePart");
+                
                 GameRegistry.registerBlock(VenusGrass, "VenusGrass");
                 GameRegistry.registerBlock(VenusDirt, "VenusDirt");
                 GameRegistry.registerBlock(VenusStone, "VenusStone");

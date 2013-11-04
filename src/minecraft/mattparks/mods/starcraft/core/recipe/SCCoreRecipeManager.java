@@ -31,16 +31,36 @@ public class SCCoreRecipeManager
     	
         RecipeUtil.addRecipe(new ItemStack(SCCoreItems.coreItemBasic, 1, 1), new Object[] { "X", "X", 'X', "plateGem" });
 
-        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.coreItemBasic, 1, 4), new Object[] { "XWX", "XYX", " Z ", 'W', Item.diamond, 'X', Item.leather, 'Y', Item.slimeBall, 'Z', Block.chest });
+        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.gemBoots), new Object[] { "X X", "X X", 'X', "plateGem" });
+        
+        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.gemHelmet), new Object[] { "XXX", "X X", 'X', "plateGem" });
 
-//        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 2), new Object[] { "X", 'X', new ItemStack(VenusBlocks.venusBlock, 1, 8) });
+        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.gemChestplate), new Object[] { "X X", "XXX", "XXX", 'X', "plateGem" });
 
+        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.gemLeggings), new Object[] { "XXX", "X X", "X X", 'X', "plateGem" });
+        
+        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.gemSword), new Object[] { "X", "X", "Y", 'X', "plateGem", 'Y', Item.stick  });
+
+        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.gemPickaxe), new Object[] { "XXX", " Y ", " Y ", 'X', "plateGem", 'Y',Item.stick  });
+
+        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.gemSpade), new Object[] { "X", "Y", "Y", 'X', "plateGem", 'Y', Item.stick  });
+
+        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.gemHoe), new Object[] { "XX", "Y ", "Y ", 'X', "plateGem", 'Y', Item.stick  });
+
+        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.gemHoe), new Object[] { "XX", " Y", " Y", 'X', "plateGem", 'Y', Item.stick  });
+
+        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.gemAxe), new Object[] { "XX", "XY", " Y", 'X', "plateGem", 'Y', Item.stick  });
+
+        RecipeUtil.addRecipe(new ItemStack(SCCoreItems.gemAxe), new Object[] { "XX", "YX", "Y ", 'X', "plateGem", 'Y', Item.stick });
+        
+        // Temporary craft TODO
+        RecipeUtil.addRecipe(new ItemStack(SpacecraftBlocks.caravanmodule), new Object[] { "XYZ", "GJG", "GGG", 'X', Block.furnaceIdle, 'Y', Block.workbench , 'Z', Block.chest, 'G' , GCCoreItems.canvas, 'J' , new ItemStack(GCCoreItems.canister, 1, 0) });
+        
         // Compressor recipe
-        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 2), new ItemStack(SCCoreItems.coreItemBasic, 1, 0), new ItemStack(SCCoreItems.coreItemBasic, 1, 0));
+        CompressorRecipes.addShapelessRecipe(new ItemStack(SCCoreItems.coreItemBasic, 1, 2), "ingotGem", "ingotGem");
         
         // Smelting
         
-
         // Schematic
         HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
         input.put(1, new ItemStack(GCCoreItems.partNoseCone));
