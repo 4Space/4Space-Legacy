@@ -138,7 +138,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
         //Block Jupiter Hydrogen
         public final static Block JupiterHydrogen = new StarcraftGasBottom(652, null) .setHardness(0.3F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("jupiterHydrogen") .setTextureName("starcraftjupiter:jupiterHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
-  
+
+        //Block Jupiter Brick
+        public final static Block JupiterBrick = new StarcraftBlock(637, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("jupiterBrick") .setTextureName("starcraftjupiter:jupiterBrick") .setCreativeTab(StarcraftCore.starcraftGasTab);
+
 
         //Block Saturn Grass
         public final static Block SaturnNitrogen = new StarcraftGasTop(653, null) .setHardness(0.4F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("saturnNitrogen") .setTextureName("starcraftsaturn:saturnNitrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
@@ -148,6 +151,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
     
         //Block Saturn Stone
         public final static Block SaturnHydrogen = new StarcraftGasBottom(655, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("saturnHydrogen") .setTextureName("starcraftsaturn:saturnHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
+
+        //Block Saturn Brick
+        public final static Block SaturnBrick = new StarcraftBlock(628, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("saturnBrick") .setTextureName("starcraftsaturn:saturnBrick") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
         
         //Block Uranus Grass
@@ -159,6 +165,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
         //Block Uranus Stone
         public final static Block UranusHydrogen = new StarcraftGasBottom(658, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("uranusHydrogen") .setTextureName("starcrafturanus:uranusHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
+        //Block Uranus Brick
+        public final static Block UranusBrick = new StarcraftBlock(629, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("uranusBrick") .setTextureName("starcrafturanus:uranusBrick") .setCreativeTab(StarcraftCore.starcraftGasTab);
+
         
         //Block Neptune Grass
         public final static Block NeptuneNitrogen = new StarcraftGasTop(659, null) .setHardness(0.4F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneNitrogen") .setTextureName("starcraftneptune:neptuneNitrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
@@ -168,7 +177,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
     
         //Block Neptune Stone
         public final static Block NeptuneHydrogen = new StarcraftGasBottom(661, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneHydrogen") .setTextureName("starcraftneptune:neptuneHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
-        
+
+        //Block Neptune Brick
+        public final static Block NeptuneBrick = new StarcraftBlock(630, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneBrick") .setTextureName("starcraftneptune:neptuneBrick") .setCreativeTab(StarcraftCore.starcraftGasTab);
+
         
         //Fluid Metallic Hydrogen
         public final static Block hydrogenFlowing = new StarcraftMetallicHydrogenFlowing(920, null).setUnlocalizedName("MetallicHydrogenFlowing") .setCreativeTab(StarcraftCore.starcraftGasTab);
@@ -245,19 +257,23 @@ import cpw.mods.fml.common.registry.GameRegistry;
                 GameRegistry.registerBlock(JupiterNitrogen, "JupiterNitrogen");
                 GameRegistry.registerBlock(JupiterHelium, "JupiterHelium");
                 GameRegistry.registerBlock(JupiterHydrogen, "JupiterHydrogen");
-                                        
+                GameRegistry.registerBlock(JupiterBrick, "JupiterBrick");       
+                
                 GameRegistry.registerBlock(SaturnNitrogen, "SaturnNitrogen");
                 GameRegistry.registerBlock(SaturnHelium, "SaturnHelium");
                 GameRegistry.registerBlock(SaturnHydrogen, "SaturnHydrogen");
-                                        
+                GameRegistry.registerBlock(SaturnBrick, "SaturnBrick");
+                
                 GameRegistry.registerBlock(UranusNitrogen, "UranusNitrogen");
                 GameRegistry.registerBlock(UranusHelium, "UranusHelium");
                 GameRegistry.registerBlock(UranusHydrogen, "UranusHydrogen");
+                GameRegistry.registerBlock(UranusBrick, "UranusBrick");
                                         
                 GameRegistry.registerBlock(NeptuneNitrogen, "NeptuneNitrogen");
                 GameRegistry.registerBlock(NeptuneHelium, "NeptuneHelium");
                 GameRegistry.registerBlock(NeptuneHydrogen, "NeptuneHydrogen");
-                                
+                GameRegistry.registerBlock(NeptuneBrick, "NeptuneBrick");
+                
                 GameRegistry.registerBlock(hydrogenFlowing, "MetallicHydrogenFlowing");
 //              GameRegistry.registerBlock(hydrogenStill, "MetallicHydrogenStill");
                     

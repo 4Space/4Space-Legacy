@@ -110,7 +110,7 @@ public class GCPluto
 
         GalacticraftRegistry.registerTeleportType(GCPlutoWorldProvider.class, new GCPlutoTeleportType());
         GalacticraftRegistry.registerCelestialBody(new GCPlutoPlanet());
-        GalacticraftRegistry.registerRocketGui(GCPlutoWorldProvider.class, new ResourceLocation(GCPluto.ASSET_DOMAIN, "textures/gui/mercuryRocketGui.png"));
+        GalacticraftRegistry.registerRocketGui(GCPlutoWorldProvider.class, new ResourceLocation(GCPluto.ASSET_DOMAIN, "textures/gui/plutoRocketGui.png"));
         
     }
 
