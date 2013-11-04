@@ -4,6 +4,7 @@ import java.util.List;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT3;
+import mattparks.mods.starcraft.venus.GCVenus;
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
@@ -44,7 +45,7 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftVenusTab;
+        return GCVenus.starcraftVenusTab;
     }
 
     @Override

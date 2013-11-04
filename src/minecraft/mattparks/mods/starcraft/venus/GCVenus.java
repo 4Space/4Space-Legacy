@@ -19,6 +19,7 @@ import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreOverworldGenerator;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -55,7 +56,13 @@ public class GCVenus
 
     @Instance(GCVenus.MODID)
     public static GCVenus instance;
-
+	
+	public static CreativeTabs starcraftVenusTab = new CreativeTabs("starcraftVenusTab") {
+		public ItemStack getIconItemStack() {
+			return new ItemStack(SpacecraftBlocks.VenusGrass, 1, 0);
+		}
+	};
+	
     public static final String ASSET_DOMAIN = "starcraftvenus";
     public static final String ASSET_PREFIX = GCVenus.ASSET_DOMAIN + ":";
     

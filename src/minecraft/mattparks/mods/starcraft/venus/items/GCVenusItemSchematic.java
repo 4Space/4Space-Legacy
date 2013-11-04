@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.venus.items;
 import java.util.List;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemSchematic;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -28,7 +29,7 @@ public class GCVenusItemSchematic extends GCCoreItemSchematic implements ISchema
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftVenusTab;
+        return GCVenus.starcraftVenusTab;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

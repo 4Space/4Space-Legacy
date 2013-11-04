@@ -31,7 +31,7 @@ public class GCMercuryItem extends Item
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftMercuryTab;
+        return GCMercury.starcraftMercuryTab;
     }
 
     @Override

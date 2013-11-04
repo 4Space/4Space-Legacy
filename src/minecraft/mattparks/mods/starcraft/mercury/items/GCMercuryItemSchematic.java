@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.mercury.items;
 import java.util.List;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.mercury.GCMercury;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemSchematic;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -28,7 +29,7 @@ public class GCMercuryItemSchematic extends GCCoreItemSchematic implements ISche
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftMercuryTab;
+        return GCMercury.starcraftMercuryTab;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

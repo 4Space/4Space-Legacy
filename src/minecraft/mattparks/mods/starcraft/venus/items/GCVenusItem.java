@@ -31,7 +31,7 @@ public class GCVenusItem extends Item
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftVenusTab;
+        return GCVenus.starcraftVenusTab;
     }
 
     @Override

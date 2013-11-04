@@ -66,18 +66,6 @@ public class StarcraftCore
 		}
 	};
 	
-	public static CreativeTabs starcraftMercuryTab = new CreativeTabs("starcraftMercuryTab") {
-		public ItemStack getIconItemStack() {
-			return new ItemStack(SpacecraftBlocks.MercuryGrass, 1, 0);
-		}
-	};
-	
-	public static CreativeTabs starcraftVenusTab = new CreativeTabs("starcraftVenusTab") {
-		public ItemStack getIconItemStack() {
-			return new ItemStack(SpacecraftBlocks.VenusGrass, 1, 0);
-		}
-	};
-	
 	public static CreativeTabs starcraftGasTab = new CreativeTabs("starcraftGasTab") {
 		public ItemStack getIconItemStack() {
 			return new ItemStack(SpacecraftBlocks.JupiterNitrogen, 1, 0);

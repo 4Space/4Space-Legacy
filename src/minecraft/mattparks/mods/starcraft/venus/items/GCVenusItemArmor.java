@@ -1,6 +1,7 @@
 package mattparks.mods.starcraft.venus.items;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -58,7 +59,7 @@ public class GCVenusItemArmor extends ItemArmor
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftVenusTab;
+        return GCVenus.starcraftVenusTab;
     }
 
     @Override

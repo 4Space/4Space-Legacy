@@ -22,7 +22,7 @@ public class GCVenusItemBattery extends ItemElectric
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftVenusTab;
+        return GCVenus.starcraftVenusTab;
     }
 
     @Override

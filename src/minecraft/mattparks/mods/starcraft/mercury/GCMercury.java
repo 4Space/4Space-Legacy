@@ -8,11 +8,13 @@ import mattparks.mods.starcraft.mercury.dimension.GCMercuryWorldProvider;
 import mattparks.mods.starcraft.mercury.items.GCMercuryItems;
 import mattparks.mods.starcraft.mercury.network.GCMercuryPacketHandlerServer;
 import mattparks.mods.starcraft.mercury.recipe.GCMercuryRecipeManager;
+import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -48,6 +50,12 @@ public class GCMercury
 
     @Instance(GCMercury.MODID)
     public static GCMercury instance;
+    
+	public static CreativeTabs starcraftMercuryTab = new CreativeTabs("starcraftMercuryTab") {
+		public ItemStack getIconItemStack() {
+			return new ItemStack(SpacecraftBlocks.MercuryGrass, 1, 0);
+		}
+	};
 
     public static final String ASSET_DOMAIN = "starcraftmercury";
     public static final String ASSET_PREFIX = GCMercury.ASSET_DOMAIN + ":";
