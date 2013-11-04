@@ -31,6 +31,67 @@ public class StarcraftCaravanModule extends Block
     @Override
     public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)
     {    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 1, par4 + 3, false);
+    	this.breakBlocksOther(par1World, par2, par3 + 1, par4 + 3, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 1, par4 + 3, false);
+    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 1, par4 + 2, false);
+    	this.breakBlocksOther(par1World, par2, par3 + 1, par4 + 2, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 1, par4 + 2, false);
+    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 1, par4 + 1, false);
+    	this.breakBlocksOther(par1World, par2, par3 + 1, par4 + 1, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 1, par4 + 1, false);
+    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 1, par4, false);
+    	this.breakBlocksOther(par1World, par2, par3 + 1, par4, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 1, par4, false);
+    	
+    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 2, par4 + 3, false);
+    	this.breakBlocksOther(par1World, par2, par3 + 2, par4 + 3, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 2, par4 + 3, false);
+    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 2, par4 + 2, false);
+    	this.breakBlocksOther(par1World, par2, par3 + 2, par4 + 2, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 2, par4 + 2, false);
+    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 2, par4 + 1, false);
+    	this.breakBlocksOther(par1World, par2, par3 + 2, par4 + 1, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 2, par4 + 1, false);
+    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 2, par4, false);
+    	this.breakBlocksOther(par1World, par2, par3 + 2, par4, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 2, par4, false);
+    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 2, par4 - 1, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 2, par4 + 1, false);
+    	
+    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 3, par4 + 3, false);
+    	this.breakBlocksOther(par1World, par2, par3 + 3, par4 + 3, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 3, par4 + 3, false);
+    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 3, par4 + 2, false);
+    	this.breakBlocksOther(par1World, par2, par3 + 3, par4 + 2, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 3, par4 + 2, false);
+    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 3, par4 + 1, false);
+    	this.breakBlocksOther(par1World, par2, par3 + 3, par4 + 1, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 3, par4 + 1, false);
+    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 3, par4, false);
+    	this.breakBlocksOther(par1World, par2, par3 + 3, par4, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 3, par4, false);
+    	
+    	this.breakBlocksOther(par1World, par2 - 1, par3 + 3, par4 - 1, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 3, par4 + 1, false);
+    	this.breakBlocksOther(par1World, par2 + 1, par3 + 3, par4, false);
+    	
+    	
+    	this.breakBlocksOther(par1World, par2, par3 + 1, par4 + 4, false);
+    	this.breakBlocksOther(par1World, par2, par3 + 2, par4 + 4, false);
+    	
     	this.setBlocks(par1World, par2, par3, par4 - 1, true, SpacecraftBlocks.caravanmodulepart.blockID);
     	this.setBlocks(par1World, par2 + 1, par3, par4 - 1, true, SpacecraftBlocks.caravanmodulepart.blockID);
     	this.setBlocks(par1World, par2 +1, par3, par4, true, SpacecraftBlocks.caravanmodulepart.blockID);
@@ -183,66 +244,7 @@ public class StarcraftCaravanModule extends Block
     	this.setBlocks(par1World, par2 + 1, par3 + 4, par4 - 1, true, SpacecraftBlocks.caravanmodulepart.blockID);
     	this.setBlocks(par1World, par2 + 1, par3 + 4, par4 - 2, true, SpacecraftBlocks.caravanmodulepart.blockID);
     	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 1, par4 + 3, false);
-    	this.breakBlocks(par1World, par2, par3 + 1, par4 + 3, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 1, par4 + 3, false);
     	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 1, par4 + 2, false);
-    	this.breakBlocks(par1World, par2, par3 + 1, par4 + 2, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 1, par4 + 2, false);
-    	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 1, par4 + 1, false);
-    	this.breakBlocks(par1World, par2, par3 + 1, par4 + 1, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 1, par4 + 1, false);
-    	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 1, par4, false);
-    	this.breakBlocks(par1World, par2, par3 + 1, par4, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 1, par4, false);
-    	
-    	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 2, par4 + 3, false);
-    	this.breakBlocks(par1World, par2, par3 + 2, par4 + 3, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 2, par4 + 3, false);
-    	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 2, par4 + 2, false);
-    	this.breakBlocks(par1World, par2, par3 + 2, par4 + 2, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 2, par4 + 2, false);
-    	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 2, par4 + 1, false);
-    	this.breakBlocks(par1World, par2, par3 + 2, par4 + 1, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 2, par4 + 1, false);
-    	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 2, par4, false);
-    	this.breakBlocks(par1World, par2, par3 + 2, par4, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 2, par4, false);
-    	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 2, par4 - 1, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 2, par4 + 1, false);
-    	
-    	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 3, par4 + 3, false);
-    	this.breakBlocks(par1World, par2, par3 + 3, par4 + 3, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 3, par4 + 3, false);
-    	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 3, par4 + 2, false);
-    	this.breakBlocks(par1World, par2, par3 + 3, par4 + 2, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 3, par4 + 2, false);
-    	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 3, par4 + 1, false);
-    	this.breakBlocks(par1World, par2, par3 + 3, par4 + 1, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 3, par4 + 1, false);
-    	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 3, par4, false);
-    	this.breakBlocks(par1World, par2, par3 + 3, par4, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 3, par4, false);
-    	
-    	this.breakBlocks(par1World, par2 - 1, par3 + 3, par4 - 1, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 3, par4 + 1, false);
-    	this.breakBlocks(par1World, par2 + 1, par3 + 3, par4, false);
-    	
-    	
-    	this.breakBlocks(par1World, par2, par3 + 1, par4 + 4, false);
-    	this.breakBlocks(par1World, par2, par3 + 2, par4 + 4, false);
         return true;
     }
     
@@ -271,6 +273,16 @@ public class StarcraftCaravanModule extends Block
     		{
     			par1World.destroyBlock(x, y, z, item);
     		}
+    	}
+    }
+    
+    private void breakBlocksOther(World par1World, int x, int y, int z, boolean item)
+    {
+    	if(par1World.blockExists(x, y, z))
+    	{
+    		
+    		par1World.destroyBlock(x, y, z, item);
+    		
     	}
     }
     
