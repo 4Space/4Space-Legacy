@@ -22,7 +22,7 @@ public class StarcraftBlock extends Block
     @Override
     public int getMobilityFlag()
     {
-    	if(this.blockID == SpacecraftBlocks.caravanmodulepart.blockID)
+    	if(this.blockID == SpacecraftBlocks.caravanModulePart.blockID)
     	{
     		return 2;
     	}

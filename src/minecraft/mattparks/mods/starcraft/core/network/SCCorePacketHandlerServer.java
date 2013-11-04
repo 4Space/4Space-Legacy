@@ -88,11 +88,11 @@ public class SCCorePacketHandlerServer implements IPacketHandler
         }
         else if (packetType == 1)
         {
-            FMLLog.severe("Galacticraft Venus 2: Received bad packet!");
+            FMLLog.severe("Starcraft Core: Received bad packet!");
         }
         else if (packetType == 2)
         {
-            FMLLog.severe("Galacticraft Venus 2: Received bad packet!");
+            FMLLog.severe("Starcraft Core: Received bad packet!");
         }
         else if (packetType == 3)
         {

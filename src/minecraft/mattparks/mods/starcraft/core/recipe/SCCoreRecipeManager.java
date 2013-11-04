@@ -54,7 +54,7 @@ public class SCCoreRecipeManager
         RecipeUtil.addRecipe(new ItemStack(SCCoreItems.gemAxe), new Object[] { "XX", "YX", "Y ", 'X', "plateGem", 'Y', Item.stick });
         
         // Temporary craft TODO
-        RecipeUtil.addRecipe(new ItemStack(SpacecraftBlocks.caravanmodule), new Object[] { "XYZ", "GJG", "GGG", 'X', Block.furnaceIdle, 'Y', Block.workbench , 'Z', Block.chest, 'G' , GCCoreItems.canvas, 'J' , new ItemStack(GCCoreItems.canister, 1, 0) });
+        RecipeUtil.addRecipe(new ItemStack(SpacecraftBlocks.caravanModule), new Object[] { "XYZ", "GJG", "GGG", 'X', Block.furnaceIdle, 'Y', Block.workbench , 'Z', Block.chest, 'G' , GCCoreItems.canvas, 'J' , new ItemStack(GCCoreItems.canister, 1, 0) });
         
         // Compressor recipe
         CompressorRecipes.addShapelessRecipe(new ItemStack(SCCoreItems.coreItemBasic, 1, 2), "ingotGem", "ingotGem");

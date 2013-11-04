@@ -151,14 +151,15 @@ public class StarcraftCore
         GCLog.info("Starcraft Core Loaded: " + languages + " Languages.");
 
         SchematicRegistry.registerSchematicRecipe(new SCCoreSchematicRocketT3());
-
+// TODO add Tier 3-6 to craftng bench  
+        
         NetworkRegistry.instance().registerGuiHandler(StarcraftCore.instance, StarcraftCore.proxy);
         this.registerTileEntities();
         this.registerCreatures();
         this.registerOtherEntities();
         StarcraftCore.proxy.init(event);
 //        GalacticraftRegistry.addDungeonLoot(2, new ItemStack(SCCoreItems.schematic, 1, 0));
-       
+// TODO add Tier 3-6 schematics to dungeons       
     }
 
     @EventHandler

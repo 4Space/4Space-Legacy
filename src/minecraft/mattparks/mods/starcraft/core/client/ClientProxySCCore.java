@@ -53,9 +53,6 @@ import cpw.mods.fml.relauncher.Side;
 
 public class ClientProxySCCore extends CommonProxySCCore
 {
-    private static int eggRenderID;
-    private static int treasureRenderID;
-    
     public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
     
     public static Map<String, String> capeMap = new HashMap<String, String>();
@@ -71,7 +68,6 @@ public class ClientProxySCCore extends CommonProxySCCore
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), StarcraftCore.CHANNEL, Side.CLIENT);
-        ClientProxySCCore.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
 
         //Blue Cape
         String capeBlueString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeBlue.png";
@@ -104,6 +100,7 @@ public class ClientProxySCCore extends CommonProxySCCore
     public void registerRenderInformation()
     {
         IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
+        // TODO remove internal cargo rocket codes
         
         RenderingRegistry.addNewArmourRendererPrefix("gem");
         
@@ -115,19 +112,6 @@ public class ClientProxySCCore extends CommonProxySCCore
         
         RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT5.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier5(), StarcraftCore.ASSET_DOMAIN, "rocketT5"));
         MinecraftForgeClient.registerItemRenderer(SCCoreItems.spaceshipT5.itemID, new SCCoreItemRendererSpaceshipT5(cargoRocketModel));
-    }
-
-
-    @Override
-    public int getEggRenderID()
-    {
-        return ClientProxySCCore.eggRenderID;
-    }
-
-    @Override
-    public int getTreasureRenderID()
-    {
-        return ClientProxySCCore.treasureRenderID;
     }
 
 

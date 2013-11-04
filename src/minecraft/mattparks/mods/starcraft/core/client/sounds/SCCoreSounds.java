@@ -14,7 +14,7 @@ public class SCCoreSounds
         }
         catch (final Exception e)
         {
-            System.err.println("[GCVenus2] Failed to register one or more sounds.");
+            System.err.println("[SCCore] Failed to register one or more sounds.");
         }
     }
 }
