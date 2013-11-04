@@ -18,7 +18,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCVenusItem extends Item
 {
-    public static String[] names = { "ingotSulfer", "venusPlate", "sulferPlate", "venusPowerCrystal", "venusPowerCell", "emptyCell", "rawBasalt", "basaltBrick", "vurnBerry", "venusRod", "plateHeavyT3", "positiveParticle", "negativeParticle", "strangeParticle" };
+    public static String[] names = { "ingotSulfer", "venusPlate", "sulferPlate", "venusPowerCrystal", "venusPowerCell", "emptyCell", "rawBasalt", "basaltBrick", "vurnBerry", "venusRod", "plateHeavyT3"//, "positiveParticle", "negativeParticle", "strangeParticle" 
+// TODO create partials textures, effects and uses
+    };
     protected Icon[] icons = new Icon[GCVenusItem.names.length];
 
     public GCVenusItem(int par1)
