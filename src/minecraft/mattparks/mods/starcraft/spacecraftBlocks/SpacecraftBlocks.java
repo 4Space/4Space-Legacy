@@ -91,6 +91,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
         //Block Venus, Blaze Egg
         public final static Block EvolvedBlazeEgg = new StarcraftEgg(627, 0, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlazeEgg") .setTextureName("starcraftvenus:evolvedBlazeEgg") .setCreativeTab(GCVenus.starcraftVenusTab);                                
 
+        //Block Venus, Toxic Sludge
+//        public final static Block ToxicSludge = new StarcraftToxicSludge(1024, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusToxicSludge") .setTextureName("starcraftvenus:toxicSludge") .setCreativeTab(GCVenus.starcraftVenusTab);                                
+// TODO finish Venus Toxic Sludge
         
         //Block Pluto, Grass
         public final static Block PlutoGrass = new StarcraftGrass(910, null) .setHardness(0.4F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("grassPluto") .setTextureName("starcraftpluto:grassPluto") .setCreativeTab(StarcraftCore.starcraftPlutoTab);
@@ -246,6 +249,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
                 GameRegistry.registerBlock(VenusBasalt, "VenusBasalt");
                 GameRegistry.registerBlock(VenusHalfBasalt, "VenusHalfBasalt");
                 GameRegistry.registerBlock(EvolvedBlazeEgg, "EvolvedBlazeEgg");
+//                GameRegistry.registerBlock(ToxicSludge, "ToxicSludge");
                                 
                 GameRegistry.registerBlock(PlutoGrass, "PlutoGrass");
                 GameRegistry.registerBlock(PlutoDirt, "PlutoDirt");
