@@ -5,6 +5,7 @@ import java.io.File;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.spacecraftBlocks.block.*;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockStone;
 import net.minecraft.block.material.Material;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -25,6 +26,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
     public static final String CLIENT_PATH = "client/";
     public static final String CONFIG_FILE = "starcraft/starcraftBlocks.conf";
     
+    
+    
+        public final static Block stone2 = new BlockStone(1000).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("stone2").setTextureName("stone2");
+
+
         //Block Venus Grass
         public final static Block VenusGrass = new StarcraftGrass(610, null) .setHardness(0.4F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("starcraftvenus:grassVenus") .setCreativeTab(StarcraftCore.starcraftVenusTab);
 

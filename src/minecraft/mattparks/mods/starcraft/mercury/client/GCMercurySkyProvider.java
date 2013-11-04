@@ -4,6 +4,7 @@ import java.util.Random;
 
 import mattparks.mods.starcraft.mercury.GCMercury;
 import mattparks.mods.starcraft.mercury.dimension.GCMercuryWorldProvider;
+import mattparks.mods.starcraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.client.Minecraft;
@@ -22,8 +23,7 @@ import cpw.mods.fml.client.FMLClientHandler;
 
 public class GCMercurySkyProvider extends IRenderHandler
 {
-    private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.ASSET_DOMAIN, "textures/gui/planets/overworld.png");
-    private static final ResourceLocation venusTexture = new ResourceLocation(GCMercury.ASSET_DOMAIN, "textures/gui/planets/venus.png");
+    private static final ResourceLocation venusTexture = new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/gui/planets/venus.png");
     private static final ResourceLocation sunTexture = new ResourceLocation(GCMercury.ASSET_DOMAIN, "textures/gui/planets/sun.png");
 
     public int starGLCallList = GLAllocation.generateDisplayLists(3);
@@ -134,19 +134,7 @@ public class GCMercurySkyProvider extends IRenderHandler
 
         GL11.glEnable(GL11.GL_TEXTURE_2D);
 
-        // Mercury:
-        var12 = 10.5F;
-        GL11.glRotatef(0.0F, 0.0F, 0.0F, 1.0F);
-        GL11.glRotatef(150F, 1.0F, 0.0F, 0.0F);
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCMercurySkyProvider.venusTexture);
-        GL11.glColor4f(0.4F, 0.4F, 0.4F, 1.0F);
-        var23.startDrawingQuads();
-        var23.addVertexWithUV(-var12, -100.0D, var12, 0, 1);
-        var23.addVertexWithUV(var12, -100.0D, var12, 1, 1);
-        var23.addVertexWithUV(var12, -100.0D, -var12, 1, 0);
-        var23.addVertexWithUV(-var12, -100.0D, -var12, 0, 0);
-        var23.draw();
-
+        // STARS:
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         GL11.glDisable(GL11.GL_BLEND);
         GL11.glEnable(GL11.GL_ALPHA_TEST);
@@ -185,13 +173,13 @@ public class GCMercurySkyProvider extends IRenderHandler
 
         GL11.glDisable(GL11.GL_BLEND);
 
-        // HOME:
+        // VENUS:
         var12 = 0.5F;
         GL11.glScalef(0.6F, 0.6F, 0.6F);
         GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
         GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCMercurySkyProvider.overworldTexture);
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCMercurySkyProvider.venusTexture);
         var23.startDrawingQuads();
         var23.addVertexWithUV(-var12, -100.0D, var12, 0, 1);
         var23.addVertexWithUV(var12, -100.0D, var12, 1, 1);

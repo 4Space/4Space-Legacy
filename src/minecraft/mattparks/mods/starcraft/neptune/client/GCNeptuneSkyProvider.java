@@ -22,8 +22,7 @@ import cpw.mods.fml.client.FMLClientHandler;
 
 public class GCNeptuneSkyProvider extends IRenderHandler
 {
-    private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.ASSET_DOMAIN, "textures/gui/planets/overworld.png");
-    private static final ResourceLocation sunTexture = new ResourceLocation(GCNeptune.ASSET_DOMAIN, "textures/gui/planets/sun.png");
+	private static final ResourceLocation sunTexture = new ResourceLocation(GCNeptune.ASSET_DOMAIN, "textures/gui/planets/sun.png");
 
     public int starGLCallList = GLAllocation.generateDisplayLists(3);
     public int glSkyList;
@@ -171,20 +170,6 @@ public class GCNeptuneSkyProvider extends IRenderHandler
         GL11.glPushMatrix();
 
         GL11.glDisable(GL11.GL_BLEND);
-
-        // OVERWORLD:
-        var12 = 0.5F;
-        GL11.glScalef(0.6F, 0.6F, 0.6F);
-        GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
-        GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
-        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCNeptuneSkyProvider.overworldTexture);
-        var23.startDrawingQuads();
-        var23.addVertexWithUV(-var12, -100.0D, var12, 0, 1);
-        var23.addVertexWithUV(var12, -100.0D, var12, 1, 1);
-        var23.addVertexWithUV(var12, -100.0D, -var12, 1, 0);
-        var23.addVertexWithUV(-var12, -100.0D, -var12, 0, 0);
-        var23.draw();
 
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         GL11.glDisable(GL11.GL_BLEND);

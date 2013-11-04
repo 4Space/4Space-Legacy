@@ -2,6 +2,7 @@ package mattparks.mods.starcraft.pluto.client;
 
 import java.util.Random;
 
+import mattparks.mods.starcraft.neptune.GCNeptune;
 import mattparks.mods.starcraft.pluto.GCPluto;
 import mattparks.mods.starcraft.pluto.dimension.GCPlutoWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
@@ -22,7 +23,7 @@ import cpw.mods.fml.client.FMLClientHandler;
 
 public class GCPlutoSkyProvider extends IRenderHandler
 {
-    private static final ResourceLocation neptuneTexture = new ResourceLocation(GCPluto.ASSET_DOMAIN, "textures/gui/planets/neptune.png");
+    private static final ResourceLocation neptuneTexture = new ResourceLocation(GCNeptune.ASSET_DOMAIN, "textures/gui/planets/neptune.png");
     private static final ResourceLocation sunTexture = new ResourceLocation(GCPluto.ASSET_DOMAIN, "textures/gui/planets/sun.png");
 
     public int starGLCallList = GLAllocation.generateDisplayLists(3);
