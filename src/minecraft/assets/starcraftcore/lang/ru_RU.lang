@@ -39,7 +39,7 @@ item.gemLeggings.name=Поножи из жемчуга
 item.gemBoots.name=Ботинки из жемчуга
 
 # BLOCKS
-tile.caravanmodule=Переносная полатка
+tile.caravanmodule=Переносная палатка
 
 # GUI
 itemGroup.starcraftCoreTab=Spacecraft Core
