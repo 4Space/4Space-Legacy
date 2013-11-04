@@ -47,6 +47,8 @@ public class GCUranusWorldProvider extends WorldProvider implements IGalacticraf
     {
         this.worldChunkMgr = new GCUranusWorldChunkManager();
     }
+    
+    // This code adds a filter to your vision making blocks look slightly tinted (e.g with a blue filter stone would appear slightly blue) It uses RGB color where the 225Fs are ignore the 0Fs
 
     @SideOnly(Side.CLIENT)
     @Override
@@ -54,6 +56,8 @@ public class GCUranusWorldProvider extends WorldProvider implements IGalacticraf
     {
         return this.worldObj.getWorldVec3Pool().getVecFromPool((double) 0F / 255F, (double) 0F / 255F, (double) 0F / 255F);
     }
+
+// This code changes the sky color and adds a fog to it. Change the 0s in the .getVecFromPool to an RGB code. I find darker colors work better
 
     @Override
     public Vec3 getSkyColor(Entity cameraEntity, float partialTicks)
