@@ -12,6 +12,8 @@ imac123456 (AKA Dr. Nerd) - Music
 
 Flashy3 - Textures
 
+Danbak33 - Coder
+
 Development
 ===========
 
