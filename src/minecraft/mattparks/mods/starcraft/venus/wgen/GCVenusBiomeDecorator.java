@@ -33,10 +33,10 @@ public class GCVenusBiomeDecorator
         this.sulferGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.VenusSulferOre.blockID, 4, 1, false, SpacecraftBlocks.VenusStone.blockID, 4);
         this.meteorGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.VenusMeteorOre.blockID, 3, 2, false, SpacecraftBlocks.VenusStone.blockID, 4);
         this.dirtGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.VenusDirt.blockID, 32, 3, false, SpacecraftBlocks.VenusStone.blockID, 4); 
-        this.ironGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.VenusIronOre.blockID, 32, 4, false, SpacecraftBlocks.VenusStone.blockID, 4);  
-        this.coalGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.VenusCoalOre.blockID, 32, 5, false, SpacecraftBlocks.VenusStone.blockID, 4);     
-        this.tinGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.VenusTinOre.blockID, 32, 6, false, SpacecraftBlocks.VenusStone.blockID, 4);  
-        this.copperGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.VenusCopperOre.blockID, 32, 7, false, SpacecraftBlocks.VenusStone.blockID, 4);      
+        this.ironGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.VenusIronOre.blockID, 1, 4, false, SpacecraftBlocks.VenusStone.blockID, 4);  
+        this.coalGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.VenusCoalOre.blockID, 8, 5, false, SpacecraftBlocks.VenusStone.blockID, 4);     
+        this.tinGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.VenusTinOre.blockID, 3, 6, false, SpacecraftBlocks.VenusStone.blockID, 4);  
+        this.copperGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.VenusCopperOre.blockID, 4, 7, false, SpacecraftBlocks.VenusStone.blockID, 4);      
     }
 
     public void decorate(World worldObj, Random rand, int chunkX, int chunkZ)
@@ -71,14 +71,14 @@ public class GCVenusBiomeDecorator
     protected void generateVenus()
     {
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Pre(this.worldObj, this.randomGenerator, this.chunkX, this.chunkZ));
-        this.genOre(20, this.dirtGen, 0, 200);
-        this.genOre(26, this.gemGen, 0, 60);
-        this.genOre(23, this.sulferGen, 0, 60);
+        this.genOre(32, this.dirtGen, 0, 200);
+        this.genOre(2, this.gemGen, 0, 60);
+        this.genOre(3, this.sulferGen, 0, 60);
         this.genOre(12, this.meteorGen, 0, 128);
-        this.genOre(35, this.ironGen, 0, 128);
-        this.genOre(36, this.coalGen, 0, 128);
-        this.genOre(35, this.tinGen, 0, 128);
-        this.genOre(36, this.copperGen, 0, 128);
+        this.genOre(1, this.ironGen, 0, 128);
+        this.genOre(8, this.coalGen, 0, 128);
+        this.genOre(3, this.tinGen, 0, 128);
+        this.genOre(4, this.copperGen, 0, 128);
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Post(this.worldObj, this.randomGenerator, this.chunkX, this.chunkZ));
     }
 }
