@@ -19,14 +19,14 @@ public class GCMercuryBiomeDecorator
     protected int chunkZ;
 
     protected WorldGenerator dirtGen;
-    protected WorldGenerator gemGen;
+    protected WorldGenerator iridiumGen;
     protected WorldGenerator coalGen;
     protected WorldGenerator tinGen;
     protected WorldGenerator copperGen;
 
     public GCMercuryBiomeDecorator()
     {
-        this.gemGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryIridiumOre.blockID, 1, 1, false, SpacecraftBlocks.MercuryStone.blockID, 4);
+        this.iridiumGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryIridiumOre.blockID, 1, 1, false, SpacecraftBlocks.MercuryStone.blockID, 4);
         this.dirtGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryDirt.blockID, 32, 2, false, SpacecraftBlocks.MercuryStone.blockID, 4); 
         this.coalGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryCoalOre.blockID, 8, 3, false, SpacecraftBlocks.MercuryStone.blockID, 4);     
         this.tinGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryTinOre.blockID, 5, 4, false, SpacecraftBlocks.MercuryStone.blockID, 4);  
@@ -66,7 +66,7 @@ public class GCMercuryBiomeDecorator
     {
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Pre(this.worldObj, this.randomGenerator, this.chunkX, this.chunkZ));
         this.genOre(32, this.dirtGen, 0, 200);
-        this.genOre(2, this.gemGen, 0, 60);
+        this.genOre(1, this.iridiumGen, 0, 60);
         this.genOre(8, this.coalGen, 0, 128);
         this.genOre(5, this.tinGen, 0, 128);
         this.genOre(4, this.copperGen, 0, 128);
