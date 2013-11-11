@@ -228,73 +228,73 @@ import cpw.mods.fml.common.registry.GameRegistry;
                 proxy.registerRenderers();
                 
                 //Registering Blocks
-                GameRegistry.registerBlock(caravanModule, "CaravanModule");
-                GameRegistry.registerBlock(caravanModulePart, "CaravanModulePart");
+                GameRegistry.registerBlock(SpacecraftBlocks.caravanModule, "CaravanModule");
+                GameRegistry.registerBlock(SpacecraftBlocks.caravanModulePart, "CaravanModulePart");
                 
-                GameRegistry.registerBlock(VenusGrass, "VenusGrass");
-                GameRegistry.registerBlock(VenusDirt, "VenusDirt");
-                GameRegistry.registerBlock(VenusStone, "VenusStone");
-                GameRegistry.registerBlock(VenusCobblestone, "VenusCobblestone");
-                GameRegistry.registerBlock(VenusRedGemBlock, "VenusRedGemBlock");
-                GameRegistry.registerBlock(VenusMeteorBlock, "VenusMeteorBlock");
-                GameRegistry.registerBlock(VenusBrick, "VenusBrick");
-                GameRegistry.registerBlock(VenusSulferBlock, "VenusSulferBlock");
-                GameRegistry.registerBlock(VenusRedGemOre, "VenusRedGemOre");
-                GameRegistry.registerBlock(VenusMeteorOre, "VenusMeteorOre");
-                GameRegistry.registerBlock(VenusSulferOre, "VenusSulferOre");
-                GameRegistry.registerBlock(VenusIronOre, "VenusIronOre");
-                GameRegistry.registerBlock(VenusCoalOre, "VenusCoalOre");
-                GameRegistry.registerBlock(VenusTinOre, "VenusTinOre");
-                GameRegistry.registerBlock(VenusCopperOre, "VenusCopperOre");
-                GameRegistry.registerBlock(VenusBasalt, "VenusBasalt");
-                GameRegistry.registerBlock(VenusHalfBasalt, "VenusHalfBasalt");
-                GameRegistry.registerBlock(EvolvedBlazeEgg, "EvolvedBlazeEgg");
-//                GameRegistry.registerBlock(ToxicSludge, "ToxicSludge");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusGrass, "VenusGrass");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusDirt, "VenusDirt");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusStone, "VenusStone");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusCobblestone, "VenusCobblestone");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusRedGemBlock, "VenusRedGemBlock");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusMeteorBlock, "VenusMeteorBlock");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusBrick, "VenusBrick");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusSulferBlock, "VenusSulferBlock");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusRedGemOre, "VenusRedGemOre");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusMeteorOre, "VenusMeteorOre");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusSulferOre, "VenusSulferOre");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusIronOre, "VenusIronOre");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusCoalOre, "VenusCoalOre");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusTinOre, "VenusTinOre");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusCopperOre, "VenusCopperOre");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusBasalt, "VenusBasalt");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusHalfBasalt, "VenusHalfBasalt");
+                GameRegistry.registerBlock(SpacecraftBlocks.EvolvedBlazeEgg, "EvolvedBlazeEgg");
+//                GameRegistry.registerBlock(SpacecraftBlocks.ToxicSludge, "ToxicSludge");
                                 
-                GameRegistry.registerBlock(PlutoGrass, "PlutoGrass");
-                GameRegistry.registerBlock(PlutoDirt, "PlutoDirt");
-                GameRegistry.registerBlock(PlutoStone, "PlutoStone");
-                GameRegistry.registerBlock(PlutoCobblestone, "PlutoCobblestone");
-                GameRegistry.registerBlock(PlutoBrick, "PlutoBrick");
+                GameRegistry.registerBlock(SpacecraftBlocks.PlutoGrass, "PlutoGrass");
+                GameRegistry.registerBlock(SpacecraftBlocks.PlutoDirt, "PlutoDirt");
+                GameRegistry.registerBlock(SpacecraftBlocks.PlutoStone, "PlutoStone");
+                GameRegistry.registerBlock(SpacecraftBlocks.PlutoCobblestone, "PlutoCobblestone");
+                GameRegistry.registerBlock(SpacecraftBlocks.PlutoBrick, "PlutoBrick");
                                 
-                GameRegistry.registerBlock(MercuryGrass, "MercuryGrass");
-                GameRegistry.registerBlock(MercuryDirt, "MercuryDirt");
-                GameRegistry.registerBlock(MercuryStone, "MercuryStone");
-                GameRegistry.registerBlock(MercuryCobblestone, "MercuryCobblestone");
-                GameRegistry.registerBlock(MercuryBrick, "MercuryBrick");
-                GameRegistry.registerBlock(MercuryIridiumOre, "MercuryIridiumOre");
-                GameRegistry.registerBlock(MercuryCoalOre, "MercuryCoalOre");
-                GameRegistry.registerBlock(MercuryTinOre, "MercuryTinOre");
-                GameRegistry.registerBlock(MercuryCopperOre, "MercuryCopperOre");
+                GameRegistry.registerBlock(SpacecraftBlocks.MercuryGrass, "MercuryGrass");
+                GameRegistry.registerBlock(SpacecraftBlocks.MercuryDirt, "MercuryDirt");
+                GameRegistry.registerBlock(SpacecraftBlocks.MercuryStone, "MercuryStone");
+                GameRegistry.registerBlock(SpacecraftBlocks.MercuryCobblestone, "MercuryCobblestone");
+                GameRegistry.registerBlock(SpacecraftBlocks.MercuryBrick, "MercuryBrick");
+                GameRegistry.registerBlock(SpacecraftBlocks.MercuryIridiumOre, "MercuryIridiumOre");
+                GameRegistry.registerBlock(SpacecraftBlocks.MercuryCoalOre, "MercuryCoalOre");
+                GameRegistry.registerBlock(SpacecraftBlocks.MercuryTinOre, "MercuryTinOre");
+                GameRegistry.registerBlock(SpacecraftBlocks.MercuryCopperOre, "MercuryCopperOre");
                                 
-                GameRegistry.registerBlock(JupiterNitrogen, "JupiterNitrogen");
-                GameRegistry.registerBlock(JupiterHelium, "JupiterHelium");
-                GameRegistry.registerBlock(JupiterHydrogen, "JupiterHydrogen");
-                GameRegistry.registerBlock(JupiterBrick, "JupiterBrick");       
+                GameRegistry.registerBlock(SpacecraftBlocks.JupiterNitrogen, "JupiterNitrogen");
+                GameRegistry.registerBlock(SpacecraftBlocks.JupiterHelium, "JupiterHelium");
+                GameRegistry.registerBlock(SpacecraftBlocks.JupiterHydrogen, "JupiterHydrogen");
+                GameRegistry.registerBlock(SpacecraftBlocks.JupiterBrick, "JupiterBrick");       
                 
-                GameRegistry.registerBlock(SaturnNitrogen, "SaturnNitrogen");
-                GameRegistry.registerBlock(SaturnHelium, "SaturnHelium");
-                GameRegistry.registerBlock(SaturnHydrogen, "SaturnHydrogen");
-                GameRegistry.registerBlock(SaturnBrick, "SaturnBrick");
+                GameRegistry.registerBlock(SpacecraftBlocks.SaturnNitrogen, "SaturnNitrogen");
+                GameRegistry.registerBlock(SpacecraftBlocks.SaturnHelium, "SaturnHelium");
+                GameRegistry.registerBlock(SpacecraftBlocks.SaturnHydrogen, "SaturnHydrogen");
+                GameRegistry.registerBlock(SpacecraftBlocks.SaturnBrick, "SaturnBrick");
                 
-                GameRegistry.registerBlock(UranusNitrogen, "UranusNitrogen");
-                GameRegistry.registerBlock(UranusHelium, "UranusHelium");
-                GameRegistry.registerBlock(UranusHydrogen, "UranusHydrogen");
-                GameRegistry.registerBlock(UranusBrick, "UranusBrick");
+                GameRegistry.registerBlock(SpacecraftBlocks.UranusNitrogen, "UranusNitrogen");
+                GameRegistry.registerBlock(SpacecraftBlocks.UranusHelium, "UranusHelium");
+                GameRegistry.registerBlock(SpacecraftBlocks.UranusHydrogen, "UranusHydrogen");
+                GameRegistry.registerBlock(SpacecraftBlocks.UranusBrick, "UranusBrick");
                                         
-                GameRegistry.registerBlock(NeptuneNitrogen, "NeptuneNitrogen");
-                GameRegistry.registerBlock(NeptuneHelium, "NeptuneHelium");
-                GameRegistry.registerBlock(NeptuneHydrogen, "NeptuneHydrogen");
-                GameRegistry.registerBlock(NeptuneBrick, "NeptuneBrick");
+                GameRegistry.registerBlock(SpacecraftBlocks.NeptuneNitrogen, "NeptuneNitrogen");
+                GameRegistry.registerBlock(SpacecraftBlocks.NeptuneHelium, "NeptuneHelium");
+                GameRegistry.registerBlock(SpacecraftBlocks.NeptuneHydrogen, "NeptuneHydrogen");
+                GameRegistry.registerBlock(SpacecraftBlocks.NeptuneBrick, "NeptuneBrick");
                 
-                GameRegistry.registerBlock(hydrogenFlowing, "MetallicHydrogenFlowing");
-//              GameRegistry.registerBlock(hydrogenStill, "MetallicHydrogenStill");
+                GameRegistry.registerBlock(SpacecraftBlocks.hydrogenFlowing, "MetallicHydrogenFlowing");
+//              GameRegistry.registerBlock(SpacecraftBlocks.hydrogenStill, "MetallicHydrogenStill");
                     
-                GameRegistry.registerBlock(ErisGrass, "ErisGrass");
-                GameRegistry.registerBlock(ErisDirt, "ErisDirt");
-                GameRegistry.registerBlock(ErisStone, "ErisStone");
-                GameRegistry.registerBlock(ErisCobblestone, "ErisCobblestone");
-                GameRegistry.registerBlock(ErisBrick, "ErisBrick");
+                GameRegistry.registerBlock(SpacecraftBlocks.ErisGrass, "ErisGrass");
+                GameRegistry.registerBlock(SpacecraftBlocks.ErisDirt, "ErisDirt");
+                GameRegistry.registerBlock(SpacecraftBlocks.ErisStone, "ErisStone");
+                GameRegistry.registerBlock(SpacecraftBlocks.ErisCobblestone, "ErisCobblestone");
+                GameRegistry.registerBlock(SpacecraftBlocks.ErisBrick, "ErisBrick");
         }
         
         @EventHandler
