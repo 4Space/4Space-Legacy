@@ -1,7 +1,7 @@
 Starcraft-2
 ===========
 
-Starcraft addon adds Mercury, Venus, Jupiter, Saturn and Pluto. More info can be found at http://axiz.weebly.com
+Starcraft-2 addon adds all of the Solar Systems planets, and soon moons. More info can be found at http://axiz.weebly.com
 
 Contributors
 =========================
