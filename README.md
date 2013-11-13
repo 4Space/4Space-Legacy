@@ -3,16 +3,6 @@ Starcraft-2
 
 Starcraft-2 addon adds all of the Solar Systems planets, and soon moons. More info can be found at http://axiz.weebly.com
 
-Contributors
-=========================
-
-mattparks (AKA GalacticraftGamer) - Coder, Music & Textures
-
-imac123456 (AKA Dr. Nerd) - Music
-
-Flashy3 - Textures
-
-Danbak33 - Coder
 
 Development
 ===========
