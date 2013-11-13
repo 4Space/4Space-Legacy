@@ -29,10 +29,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
     public static final String CONFIG_FILE = "starcraft/starcraftBlocks.conf";
 
             //Block Core, Gravity Generator
-        public final static Block gravityGenerator = new StarcraftBlock(9862, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("GravityGenerator") .setTextureName("starcraftcore:GravityGenerator") .setCreativeTab(StarcraftCore.starcraftCoreTab);
+//        public final static Block gravityGenerator = new StarcraftBlock(9862, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("GravityGenerator") .setTextureName("starcraftcore:GravityGenerator") .setCreativeTab(StarcraftCore.starcraftCoreTab);
     	
-           //Block Core, Caravan Module
-    	public final static Block caravanModule = new StarcraftCaravanModule(927, null).setHardness(0.4F).setStepSound(Block.soundClothFootstep).setUnlocalizedName("caravanModule").setTextureName("starcraftcore:caravanModule");
+         //Block Core, Caravan Module
+   	public final static Block caravanModule = new StarcraftCaravanModule(927, null).setHardness(0.4F).setStepSound(Block.soundClothFootstep).setUnlocalizedName("caravanModule").setTextureName("starcraftcore:caravanModule");
     
     	//Block Core, Caravan Module Part
     	public final static Block caravanModulePart = new StarcraftBlock(928, null).setHardness(1000000.0F).setStepSound(Block.soundClothFootstep).setUnlocalizedName("caravanModulePart").setTextureName("starcraftcore:caravanModulePart").setBlockUnbreakable();
@@ -229,7 +229,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
                 proxy.registerRenderers();
                 
                 //Registering Blocks
-                GameRegistry.registerBlock(SpacecraftBlocks.gravityGenerator, "GravityGenerator");
+//                GameRegistry.registerBlock(SpacecraftBlocks.gravityGenerator, "GravityGenerator");
                 GameRegistry.registerBlock(SpacecraftBlocks.caravanModule, "CaravanModule");
                 GameRegistry.registerBlock(SpacecraftBlocks.caravanModulePart, "CaravanModulePart");
                 
