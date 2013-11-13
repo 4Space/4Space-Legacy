@@ -97,159 +97,307 @@ public class StarcraftCaravanModule extends Block
     	
     	this.breakBlocksOther(par1World, par2, par3 + 3, par4 - 1, false);
     	
-    	this.setBlocks(par1World, par2, par3, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 +1, par3, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 1, par3, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 1, par3, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 1, par3, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 - 1, par3, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 - 1, par3, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 - 1, par3, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 + 2, par3, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 + 1, par3, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 1, par3, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 - 2, par3, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
+     this.setBlocks(par1World, par2, par3, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
 
-    	this.setBlocks(par1World, par2 - 1, par3 + 1, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3 + 1, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 1, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 1, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 1, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 + 1, par3 + 1, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 1, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 1, par3 + 1, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 1, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 - 2, par3 + 1, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 1, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 - 1, par3 + 1, par4 - 1, false, Block.workbench.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3 + 1, par4 - 1, false, Block.chest.blockID);
-    	this.setBlocks(par1World, par2, par3 + 1, par4 - 1, false, Block.furnaceIdle.blockID);
-    	
-    	this.setBlocks(par1World, par2 - 1, par3 + 2, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3 + 2, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 2, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 2, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 2, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 + 1, par3 + 2, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 2, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 1, par3 + 2, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 2, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 - 2, par3 + 2, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 2, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 2, par4 - 1, false, GCCoreBlocks.glowstoneTorch.blockID);
-    	
-    	this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 - 1, par3 + 3, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 3, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3 + 3, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 3, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 3, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 2, par3 + 3, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 + 1, par3 + 3, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 3, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 1, par3 + 3, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 3, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 - 2, par3 + 3, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 3, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2, par3 + 4, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 4, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 4, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 4, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 4, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 4, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 4, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2, par3 + 5, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 5, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 5, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 5, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 5, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 5, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2, par3 + 5, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 1, par3 + 4, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 1, par3 + 4, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 - 1, par3 + 4, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 3, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3 + 4, par4, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3 + 4, par4 - 1, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	this.setBlocks(par1World, par2 + 1, par3 + 4, par4 - 2, true, SpacecraftBlocks.caravanModulePart.blockID);
-    	
-    	
+     this.setBlocks(par1World, par2 + 1, par3, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 +1, par3, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 1, par3, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 1, par3, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 1, par3, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 1, par3, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 - 1, par3, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 1, par3, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 - 1, par3, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 1, par3, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 - 1, par3, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 1, par3, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 + 2, par3, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 + 1, par3, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 1, par3, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 - 2, par3, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 - 1, par3 + 1, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 1, par3 + 1, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 1, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 1, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 1, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 + 1, par3 + 1, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 1, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 1, par3 + 1, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 1, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 - 2, par3 + 1, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 1, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 - 1, par3 + 1, par4 - 1, false, Block.workbench.blockID);
+
+     this.setBlocks(par1World, par2 + 1, par3 + 1, par4 - 1, false, Block.chest.blockID);
+
+     this.setBlocks(par1World, par2, par3 + 1, par4 - 1, false, Block.furnaceIdle.blockID);
+
+     
+
+     this.setBlocks(par1World, par2 - 1, par3 + 2, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 1, par3 + 2, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 2, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 2, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 2, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 + 1, par3 + 2, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 2, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 1, par3 + 2, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 2, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 - 2, par3 + 2, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 2, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 2, par4 - 1, false, GCCoreBlocks.glowstoneTorch.blockID);
+
+     
+
+     this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 - 1, par3 + 3, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 3, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 1, par3 + 3, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 3, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 3, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 2, par3 + 3, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 + 1, par3 + 3, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 3, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 1, par3 + 3, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 3, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 - 2, par3 + 3, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 3, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2, par3 + 4, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 4, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 4, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 4, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 4, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 4, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 4, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2, par3 + 5, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 5, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 5, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 5, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 5, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 5, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2, par3 + 5, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 1, par3 + 4, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 1, par3 + 4, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 - 1, par3 + 4, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
+
+     this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 3, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 1, par3 + 4, par4, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 1, par3 + 4, par4 - 1, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     this.setBlocks(par1World, par2 + 1, par3 + 4, par4 - 2, true, GCCoreBlocks.decorationBlocks.blockID, 4, 3);
+
+     
         return true;
     }
     
