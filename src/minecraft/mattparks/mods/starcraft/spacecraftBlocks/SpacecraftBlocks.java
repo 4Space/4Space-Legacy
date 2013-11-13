@@ -31,11 +31,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
             //Block Core, Gravity Generator
 //        public final static Block gravityGenerator = new StarcraftBlock(9862, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("GravityGenerator") .setTextureName("starcraftcore:GravityGenerator") .setCreativeTab(StarcraftCore.starcraftCoreTab);
     	
-         //Block Core, Caravan Module
-   	public final static Block caravanModule = new StarcraftCaravanModule(927, null).setHardness(0.4F).setStepSound(Block.soundClothFootstep).setUnlocalizedName("caravanModule").setTextureName("starcraftcore:caravanModule");
+         //Block Core, Tier1 Caravan Module
+   	public final static Block caravanModule = new StarcraftCaravanModule(927, null) .setHardness(0.4F) .setStepSound(Block.soundClothFootstep) .setUnlocalizedName("caravanModule") .setTextureName("starcraftcore:caravanModule");
     
-    	//Block Core, Caravan Module Part
-    	public final static Block caravanModulePart = new StarcraftBlock(928, null).setHardness(1000000.0F).setStepSound(Block.soundClothFootstep).setUnlocalizedName("caravanModulePart").setTextureName("starcraftcore:caravanModulePart").setBlockUnbreakable();
+    	//Block Core, Caravan Block
+//    	public final static Block caravanModulePart = new StarcraftBlock(928, null) .setHardness(1000000.0F) .setStepSound(Block.soundClothFootstep).setUnlocalizedName("caravanModulePart") .setTextureName("starcraftcore:caravanModulePart") .setBlockUnbreakable();
     
     	
         //Block Venus, Grass
@@ -57,7 +57,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
         public final static Block VenusMeteorBlock = new StarcraftBlock(615, null) .setHardness(3.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteor") .setTextureName("starcraftvenus:meteorBlock") .setCreativeTab(GCVenus.starcraftVenusTab);
 
         //Block Venus, Brick
-        public final static Block VenusBrick = new StarcraftBlock(616, null) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBrick") .setTextureName("starcraftvenus:venusBrick") .setCreativeTab(GCVenus.starcraftVenusTab);
+        public final static Block VenusBrick = new StarcraftBlock(616, null) .setHardness(1000.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBrick") .setTextureName("starcraftvenus:venusBrick") .setCreativeTab(GCVenus.starcraftVenusTab) .setBlockUnbreakable();
 
         //Block Venus, Sulfer
         public final static Block VenusSulferBlock = new StarcraftOre(617, null) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulfer") .setTextureName("starcraftvenus:sulferBlock") .setCreativeTab(GCVenus.starcraftVenusTab);
@@ -109,7 +109,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
         public final static Block PlutoCobblestone = new StarcraftBlock(913, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("cobblestonePluto") .setTextureName("starcraftpluto:cobblestonePluto") .setCreativeTab(StarcraftCore.starcraftPlutoTab);
 
         //Block Pluto, Brick
-        public final static Block PlutoBrick = new StarcraftBlock(916, null) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("plutoBrick") .setTextureName("starcraftpluto:plutoBrick") .setCreativeTab(StarcraftCore.starcraftPlutoTab);
+        public final static Block PlutoBrick = new StarcraftBlock(916, null) .setHardness(1000.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("plutoBrick") .setTextureName("starcraftpluto:plutoBrick") .setCreativeTab(StarcraftCore.starcraftPlutoTab) .setBlockUnbreakable();
 
         
         //Block Mercury, Grass
@@ -125,7 +125,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
         public final static Block MercuryCobblestone = new StarcraftBlock(713, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryCobblestone") .setTextureName("starcraftmercury:cobblestoneMercury") .setCreativeTab(GCMercury.starcraftMercuryTab);
 
         //Block Mercury, Brick
-        public final static Block MercuryBrick = new StarcraftBlock(716, null) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryBrick") .setTextureName("starcraftmercury:mercuryBrick") .setCreativeTab(GCMercury.starcraftMercuryTab);
+        public final static Block MercuryBrick = new StarcraftBlock(716, null) .setHardness(1000.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryBrick") .setTextureName("starcraftmercury:mercuryBrick") .setCreativeTab(GCMercury.starcraftMercuryTab) .setBlockUnbreakable();
 
         //Block Mercury, Gem Ore
         public final static Block MercuryIridiumOre = new StarcraftOre(720, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryIridiumOre") .setTextureName("starcraftmercury:iridiumOreMercury") .setCreativeTab(GCMercury.starcraftMercuryTab);
@@ -150,7 +150,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
         public final static Block JupiterHydrogen = new StarcraftGasBottom(652, null) .setHardness(0.3F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("jupiterHydrogen") .setTextureName("starcraftjupiter:jupiterHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
         //Block Jupiter, Brick
-        public final static Block JupiterBrick = new StarcraftBlock(637, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("jupiterBrick") .setTextureName("starcraftjupiter:jupiterBrick") .setCreativeTab(StarcraftCore.starcraftGasTab);
+        public final static Block JupiterBrick = new StarcraftBlock(637, null) .setHardness(1000.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("jupiterBrick") .setTextureName("starcraftjupiter:jupiterBrick") .setCreativeTab(StarcraftCore.starcraftGasTab) .setBlockUnbreakable();
 
 
         //Block Saturn, Nitrogen
@@ -163,7 +163,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
         public final static Block SaturnHydrogen = new StarcraftGasBottom(655, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("saturnHydrogen") .setTextureName("starcraftsaturn:saturnHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
         //Block Saturn, Brick
-        public final static Block SaturnBrick = new StarcraftBlock(628, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("saturnBrick") .setTextureName("starcraftsaturn:saturnBrick") .setCreativeTab(StarcraftCore.starcraftGasTab);
+        public final static Block SaturnBrick = new StarcraftBlock(628, null) .setHardness(100.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("saturnBrick") .setTextureName("starcraftsaturn:saturnBrick") .setCreativeTab(StarcraftCore.starcraftGasTab) .setBlockUnbreakable();
 
         
         //Block Uranus Nitrogen
@@ -176,7 +176,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
         public final static Block UranusHydrogen = new StarcraftGasBottom(658, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("uranusHydrogen") .setTextureName("starcrafturanus:uranusHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
         //Block Uranus Brick
-        public final static Block UranusBrick = new StarcraftBlock(629, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("uranusBrick") .setTextureName("starcrafturanus:uranusBrick") .setCreativeTab(StarcraftCore.starcraftGasTab);
+        public final static Block UranusBrick = new StarcraftBlock(629, null) .setHardness(1000.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("uranusBrick") .setTextureName("starcrafturanus:uranusBrick") .setCreativeTab(StarcraftCore.starcraftGasTab) .setBlockUnbreakable();
 
         
         //Block Neptune Nitrogen
@@ -189,7 +189,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
         public final static Block NeptuneHydrogen = new StarcraftGasBottom(661, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneHydrogen") .setTextureName("starcraftneptune:neptuneHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
         //Block Neptune Brick
-        public final static Block NeptuneBrick = new StarcraftBlock(630, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneBrick") .setTextureName("starcraftneptune:neptuneBrick") .setCreativeTab(StarcraftCore.starcraftGasTab);
+        public final static Block NeptuneBrick = new StarcraftBlock(630, null) .setHardness(1000.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("neptuneBrick") .setTextureName("starcraftneptune:neptuneBrick") .setCreativeTab(StarcraftCore.starcraftGasTab) .setBlockUnbreakable();
 
         
         //Fluid Metallic Hydrogen
@@ -209,7 +209,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
         public final static Block ErisCobblestone = new StarcraftBlock(925, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("cobblestoneEris") .setTextureName("starcrafteris:cobblestoneEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
 
         //Block Eris Brick
-        public final static Block ErisBrick = new StarcraftBlock(926, null) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("erisBrick") .setTextureName("starcrafteris:erisBrick") .setCreativeTab(StarcraftCore.starcraftErisTab);
+        public final static Block ErisBrick = new StarcraftBlock(926, null) .setHardness(1000.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("erisBrick") .setTextureName("starcrafteris:erisBrick") .setCreativeTab(StarcraftCore.starcraftErisTab); .setBlockUnbreakable();
 
         @Instance("SpacecraftBlocks")
         public static SpacecraftBlocks instance;
@@ -231,7 +231,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
                 //Registering Blocks
 //                GameRegistry.registerBlock(SpacecraftBlocks.gravityGenerator, "GravityGenerator");
                 GameRegistry.registerBlock(SpacecraftBlocks.caravanModule, "CaravanModule");
-                GameRegistry.registerBlock(SpacecraftBlocks.caravanModulePart, "CaravanModulePart");
+//                GameRegistry.registerBlock(SpacecraftBlocks.caravanModulePart, "CaravanModulePart");
                 
                 GameRegistry.registerBlock(SpacecraftBlocks.VenusGrass, "VenusGrass");
                 GameRegistry.registerBlock(SpacecraftBlocks.VenusDirt, "VenusDirt");
