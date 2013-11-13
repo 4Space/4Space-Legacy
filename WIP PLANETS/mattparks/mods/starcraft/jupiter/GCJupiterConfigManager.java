@@ -27,6 +27,7 @@ public class GCJupiterConfigManager
     // BLOCKS
 
     // ITEMS
+    public static int idItemJupiterBasic;
     
     // ARMOR
 
@@ -51,6 +52,8 @@ public class GCJupiterConfigManager
             GCJupiterConfigManager.configuration.load();
 
             GCJupiterConfigManager.dimensionIDJupiter = GCJupiterConfigManager.configuration.get("Dimensions", "Jupiter Dimension ID", -41).getInt(-41);
+        
+            GCJupiterConfigManager.idItemJupiterBasic = GCJupiterConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemJupiterItemBasic", 9756).getInt(9756);
         }
         catch (final Exception e)
         {
