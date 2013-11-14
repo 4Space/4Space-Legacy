@@ -422,8 +422,8 @@ public class StarcraftCaravanModule extends Block
     				|| par1World.getBlockId(x, y, z) == GCCoreBlocks.glowstoneTorch.blockID
     				|| par1World.getBlockId(x, y, z) == Block.furnaceBurning.blockID 
     				|| par1World.getBlockId(x, y, z) == Block.furnaceIdle.blockID 
-    				|| par1World.getBlockId(x, y, z) == Block.chest.blockID)
-                                || par1World.getBlockId(x, y, z) == Block.workbench.blockID)
+    				|| par1World.getBlockId(x, y, z) == Block.chest.blockID
+                    || par1World.getBlockId(x, y, z) == Block.workbench.blockID)
                 {
     			par1World.destroyBlock(x, y, z, item);
     		}
