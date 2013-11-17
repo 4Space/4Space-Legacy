@@ -1,8 +1,8 @@
-package mattparks.mods.starcraft.saturn.dimension;
+package mattparks.mods.starcraft.neptune.dimension;
 
-import mattparks.mods.starcraft.saturn.GCSaturnConfigManager;
-import mattparks.mods.starcraft.saturn.wgen.GCSaturnChunkProvider;
-import mattparks.mods.starcraft.saturn.wgen.GCSaturnWorldChunkManager;
+import mattparks.mods.starcraft.neptune.GCNeptuneConfigManager;
+import mattparks.mods.starcraft.neptune.wgen.GCNeptuneChunkProvider;
+import mattparks.mods.starcraft.neptune.wgen.GCNeptuneWorldChunkManager;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
@@ -15,7 +15,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCSaturnWorldProvider extends WorldProvider implements IGalacticraftWorldProvider, ISolarLevel
+public class GCNeptuneWorldProvider extends WorldProvider implements IGalacticraftWorldProvider, ISolarLevel
 {
     @Override
     public void setDimension(int var1)
@@ -45,7 +45,7 @@ public class GCSaturnWorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public void registerWorldChunkManager()
     {
-        this.worldChunkMgr = new GCSaturnWorldChunkManager();
+        this.worldChunkMgr = new GCNeptuneWorldChunkManager();
     }
 
     @SideOnly(Side.CLIENT)
@@ -100,7 +100,7 @@ public class GCSaturnWorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public IChunkProvider createChunkGenerator()
     {
-        return new GCSaturnChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
+        return new GCNeptuneChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
     }
 
     @Override
@@ -151,25 +151,25 @@ public class GCSaturnWorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public String getSaveFolder()
     {
-        return "DIM" + GCSaturnConfigManager.dimensionIDSaturn;
+        return "DIM" + GCNeptuneConfigManager.dimensionIDNeptune;
     }
 
     @Override
     public String getWelcomeMessage()
     {
-        return "Entering Saturn";
+        return "Entering Neptune";
     }
 
     @Override
     public String getDepartMessage()
     {
-        return "Leaving Saturn";
+        return "Leaving Neptune";
     }
 
     @Override
     public String getDimensionName()
     {
-        return "Saturn";
+        return "Neptune";
     }
 
     @Override
@@ -229,7 +229,7 @@ public class GCSaturnWorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 2;
+        return tier >= 4;
     }
 
     @Override

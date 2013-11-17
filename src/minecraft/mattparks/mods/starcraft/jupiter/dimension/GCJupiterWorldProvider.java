@@ -1,8 +1,8 @@
-package mattparks.mods.starcraft.uranus.dimension;
+package mattparks.mods.starcraft.jupiter.dimension;
 
-import mattparks.mods.starcraft.uranus.GCUranusConfigManager;
-import mattparks.mods.starcraft.uranus.wgen.GCUranusChunkProvider;
-import mattparks.mods.starcraft.uranus.wgen.GCUranusWorldChunkManager;
+import mattparks.mods.starcraft.jupiter.GCJupiterConfigManager;
+import mattparks.mods.starcraft.jupiter.wgen.GCJupiterChunkProvider;
+import mattparks.mods.starcraft.jupiter.wgen.GCJupiterWorldChunkManager;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
@@ -15,7 +15,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCUranusWorldProvider extends WorldProvider implements IGalacticraftWorldProvider, ISolarLevel
+public class GCJupiterWorldProvider extends WorldProvider implements IGalacticraftWorldProvider, ISolarLevel
 {
     @Override
     public void setDimension(int var1)
@@ -45,10 +45,8 @@ public class GCUranusWorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public void registerWorldChunkManager()
     {
-        this.worldChunkMgr = new GCUranusWorldChunkManager();
+        this.worldChunkMgr = new GCJupiterWorldChunkManager();
     }
-    
-    // This code adds a filter to your vision making blocks look slightly tinted (e.g with a blue filter stone would appear slightly blue) It uses RGB color where the 225Fs are ignore the 0Fs
 
     @SideOnly(Side.CLIENT)
     @Override
@@ -56,8 +54,6 @@ public class GCUranusWorldProvider extends WorldProvider implements IGalacticraf
     {
         return this.worldObj.getWorldVec3Pool().getVecFromPool((double) 0F / 255F, (double) 0F / 255F, (double) 0F / 255F);
     }
-
-// This code changes the sky color and adds a fog to it. Change the 0s in the .getVecFromPool to an RGB code. I find darker colors work better
 
     @Override
     public Vec3 getSkyColor(Entity cameraEntity, float partialTicks)
@@ -104,7 +100,7 @@ public class GCUranusWorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public IChunkProvider createChunkGenerator()
     {
-        return new GCUranusChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
+        return new GCJupiterChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
     }
 
     @Override
@@ -155,25 +151,25 @@ public class GCUranusWorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public String getSaveFolder()
     {
-        return "DIM" + GCUranusConfigManager.dimensionIDUranus;
+        return "DIM" + GCJupiterConfigManager.dimensionIDJupiter;
     }
 
     @Override
     public String getWelcomeMessage()
     {
-        return "Entering Uranus";
+        return "Entering Jupiter";
     }
 
     @Override
     public String getDepartMessage()
     {
-        return "Leaving Uranus";
+        return "Leaving Jupiter";
     }
 
     @Override
     public String getDimensionName()
     {
-        return "Uranus";
+        return "Jupiter";
     }
 
     @Override
@@ -233,7 +229,7 @@ public class GCUranusWorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 2;
+        return tier >= 4;
     }
 
     @Override

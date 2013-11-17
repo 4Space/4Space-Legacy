@@ -1,8 +1,8 @@
-package mattparks.mods.starcraft.jupiter.dimension;
+package mattparks.mods.starcraft.saturn.dimension;
 
-import mattparks.mods.starcraft.jupiter.GCJupiterConfigManager;
-import mattparks.mods.starcraft.jupiter.wgen.GCJupiterChunkProvider;
-import mattparks.mods.starcraft.jupiter.wgen.GCJupiterWorldChunkManager;
+import mattparks.mods.starcraft.saturn.GCSaturnConfigManager;
+import mattparks.mods.starcraft.saturn.wgen.GCSaturnChunkProvider;
+import mattparks.mods.starcraft.saturn.wgen.GCSaturnWorldChunkManager;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
@@ -15,7 +15,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCJupiterWorldProvider extends WorldProvider implements IGalacticraftWorldProvider, ISolarLevel
+public class GCSaturnWorldProvider extends WorldProvider implements IGalacticraftWorldProvider, ISolarLevel
 {
     @Override
     public void setDimension(int var1)
@@ -45,7 +45,7 @@ public class GCJupiterWorldProvider extends WorldProvider implements IGalacticra
     @Override
     public void registerWorldChunkManager()
     {
-        this.worldChunkMgr = new GCJupiterWorldChunkManager();
+        this.worldChunkMgr = new GCSaturnWorldChunkManager();
     }
 
     @SideOnly(Side.CLIENT)
@@ -100,7 +100,7 @@ public class GCJupiterWorldProvider extends WorldProvider implements IGalacticra
     @Override
     public IChunkProvider createChunkGenerator()
     {
-        return new GCJupiterChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
+        return new GCSaturnChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
     }
 
     @Override
@@ -151,25 +151,25 @@ public class GCJupiterWorldProvider extends WorldProvider implements IGalacticra
     @Override
     public String getSaveFolder()
     {
-        return "DIM" + GCJupiterConfigManager.dimensionIDJupiter;
+        return "DIM" + GCSaturnConfigManager.dimensionIDSaturn;
     }
 
     @Override
     public String getWelcomeMessage()
     {
-        return "Entering Jupiter";
+        return "Entering Saturn";
     }
 
     @Override
     public String getDepartMessage()
     {
-        return "Leaving Jupiter";
+        return "Leaving Saturn";
     }
 
     @Override
     public String getDimensionName()
     {
-        return "Jupiter";
+        return "Saturn";
     }
 
     @Override
@@ -229,7 +229,7 @@ public class GCJupiterWorldProvider extends WorldProvider implements IGalacticra
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 2;
+        return tier >= 4;
     }
 
     @Override
