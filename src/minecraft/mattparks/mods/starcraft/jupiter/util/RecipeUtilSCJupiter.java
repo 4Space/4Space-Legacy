@@ -1,11 +1,11 @@
-package mattparks.mods.starcraft.core.util;
+package mattparks.mods.starcraft.jupiter.util;
 
-import mattparks.mods.starcraft.core.inventory.SCCoreInventoryRocketBenchT5;
+import mattparks.mods.starcraft.jupiter.inventory.SCCoreInventoryRocketBenchT5;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import net.minecraft.item.ItemStack;
 
-public class RecipeUtilSCCore
+public class RecipeUtilSCJupiter
 {
 	public static ItemStack findMatchingSpaceshipT5Recipe(SCCoreInventoryRocketBenchT5 inventoryRocketBench)
     {

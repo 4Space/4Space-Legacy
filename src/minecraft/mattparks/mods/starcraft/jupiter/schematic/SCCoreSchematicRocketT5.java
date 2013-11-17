@@ -1,8 +1,8 @@
-package mattparks.mods.starcraft.core.schematic;
+package mattparks.mods.starcraft.jupiter.schematic;
 
 import mattparks.mods.starcraft.core.SCCoreConfigManager;
-import mattparks.mods.starcraft.core.client.gui.SCCoreGuiSchematicRocketT5;
-import mattparks.mods.starcraft.core.inventory.SCCoreContainerRocketBenchT5;
+import mattparks.mods.starcraft.jupiter.client.gui.SCCoreGuiSchematicRocketT5;
+import mattparks.mods.starcraft.jupiter.inventory.SCCoreContainerRocketBenchT5;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.client.gui.GuiScreen;

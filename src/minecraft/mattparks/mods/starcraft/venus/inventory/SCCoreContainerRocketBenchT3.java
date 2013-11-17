@@ -1,6 +1,5 @@
 package mattparks.mods.starcraft.venus.inventory;
 
-import mattparks.mods.starcraft.core.util.RecipeUtilSCCore;
 import mattparks.mods.starcraft.venus.util.GCVenusUtil;
 import mattparks.mods.starcraft.venus.util.RecipeUtilVenus;
 import micdoodle8.mods.galacticraft.core.inventory.GCCoreSlotRocketBenchResult;

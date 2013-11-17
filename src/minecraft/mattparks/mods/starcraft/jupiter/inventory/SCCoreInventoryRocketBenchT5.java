@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.core.inventory;
+package mattparks.mods.starcraft.jupiter.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;

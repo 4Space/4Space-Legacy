@@ -5,10 +5,18 @@ import java.io.DataInputStream;
 import java.util.ArrayList;
 import java.util.EnumSet;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.jupiter.CommonProxyJupiter;
 import mattparks.mods.starcraft.jupiter.GCJupiter;
+import mattparks.mods.starcraft.jupiter.client.model.SCCoreModelSpaceshipTier5;
+import mattparks.mods.starcraft.jupiter.client.render.item.SCCoreItemRendererSpaceshipT5;
 import mattparks.mods.starcraft.jupiter.dimension.GCJupiterWorldProvider;
+import mattparks.mods.starcraft.jupiter.entities.SCCoreEntityRocketT5;
+import mattparks.mods.starcraft.jupiter.items.GCJupiterItems;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
+import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
+import micdoodle8.mods.galacticraft.core.client.sounds.GCCoreSoundUpdaterSpaceship;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -20,6 +28,9 @@ import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraftforge.client.model.AdvancedModelLoader;
+import net.minecraftforge.client.model.IModelCustom;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.ITickHandler;
@@ -52,7 +63,13 @@ public class ClientProxyJupiter extends CommonProxyJupiter
     @Override
     public void registerRenderInformation()
     {
+        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
+        // TODO remove internal cargo rocket codes
+        
         RenderingRegistry.addNewArmourRendererPrefix("gem");
+                
+        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT5.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier5(), StarcraftCore.ASSET_DOMAIN, "rocketT5"));
+        MinecraftForgeClient.registerItemRenderer(GCJupiterItems.spaceshipT5.itemID, new SCCoreItemRendererSpaceshipT5(cargoRocketModel));
     }
 
 
@@ -168,9 +185,13 @@ public class ClientProxyJupiter extends CommonProxyJupiter
 
                         if (e != null)
                         {
+                            if (e instanceof SCCoreEntityRocketT5)
                             {
+                                final SCCoreEntityRocketT5 eship = (SCCoreEntityRocketT5) e;
 
+                                if (eship.rocketSoundUpdater == null)
                                 {
+                                    eship.rocketSoundUpdater = new GCCoreSoundUpdaterSpaceship(FMLClientHandler.instance().getClient().sndManager, eship, FMLClientHandler.instance().getClient().thePlayer);
                                 }
                             }
                         }

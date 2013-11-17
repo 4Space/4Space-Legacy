@@ -1,6 +1,5 @@
 package mattparks.mods.starcraft.mercury.inventory;
 
-import mattparks.mods.starcraft.core.util.RecipeUtilSCCore;
 import mattparks.mods.starcraft.mercury.util.RecipeUtilGCMercury;
 import micdoodle8.mods.galacticraft.core.inventory.GCCoreSlotRocketBenchResult;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;

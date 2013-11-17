@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.core;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT5;
 import mattparks.mods.starcraft.core.items.SCCoreItem;
 import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.core.network.SCCorePacketHandlerServer;
@@ -159,7 +158,7 @@ public class StarcraftCore
 
     public void registerOtherEntities()
     {
-    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT5.class, "SpaceshipT5", SCCoreConfigManager.idEntitySpaceshipTier5, 150, 1, true);
+    	;
     }
 
     @EventHandler

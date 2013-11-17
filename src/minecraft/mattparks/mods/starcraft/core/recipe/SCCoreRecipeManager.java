@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.core.recipe;
 import java.util.HashMap;
 
 import mattparks.mods.starcraft.core.items.SCCoreItems;
-import mattparks.mods.starcraft.core.util.SCCoreUtil;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;

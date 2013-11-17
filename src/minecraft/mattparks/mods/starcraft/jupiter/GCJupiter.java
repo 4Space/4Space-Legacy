@@ -3,8 +3,10 @@ package mattparks.mods.starcraft.jupiter;
 import java.io.File;
 import java.util.HashMap;
 
+import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.jupiter.dimension.GCJupiterTeleportType;
 import mattparks.mods.starcraft.jupiter.dimension.GCJupiterWorldProvider;
+import mattparks.mods.starcraft.jupiter.entities.SCCoreEntityRocketT5;
 import mattparks.mods.starcraft.jupiter.network.GCJupiterPacketHandlerServer;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.core.GCLog;
@@ -129,7 +131,7 @@ public class GCJupiter
 
     public void registerOtherEntities()
     {
-    	;
+    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT5.class, "SpaceshipT5", SCCoreConfigManager.idEntitySpaceshipTier5, 150, 1, true);
     }
     
     @EventHandler

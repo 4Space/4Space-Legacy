@@ -1,6 +1,6 @@
-package mattparks.mods.starcraft.core.inventory;
+package mattparks.mods.starcraft.jupiter.inventory;
 
-import mattparks.mods.starcraft.core.util.RecipeUtilSCCore;
+import mattparks.mods.starcraft.jupiter.util.RecipeUtilSCJupiter;
 import micdoodle8.mods.galacticraft.core.inventory.GCCoreSlotRocketBenchResult;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.block.Block;
@@ -101,7 +101,7 @@ public class SCCoreContainerRocketBenchT5 extends Container
     @Override
     public void onCraftMatrixChanged(IInventory par1IInventory)
     {
-        this.craftResult.setInventorySlotContents(0, RecipeUtilSCCore.findMatchingSpaceshipT5Recipe(this.craftMatrix));
+        this.craftResult.setInventorySlotContents(0, RecipeUtilSCJupiter.findMatchingSpaceshipT5Recipe(this.craftMatrix));
     }
 
     @Override

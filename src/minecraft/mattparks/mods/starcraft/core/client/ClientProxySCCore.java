@@ -9,10 +9,7 @@ import java.util.Map;
 
 import mattparks.mods.starcraft.core.CommonProxySCCore;
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.client.model.SCCoreModelSpaceshipTier5;
-import mattparks.mods.starcraft.core.client.render.item.SCCoreItemRendererSpaceshipT5;
 import mattparks.mods.starcraft.core.client.sounds.SCCoreSounds;
-import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT5;
 import mattparks.mods.starcraft.core.items.SCCoreItems;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
@@ -92,14 +89,8 @@ public class ClientProxySCCore extends CommonProxySCCore
 
     @Override
     public void registerRenderInformation()
-    {
-        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
-        // TODO remove internal cargo rocket codes
-        
+    {      
         RenderingRegistry.addNewArmourRendererPrefix("gem");
-                
-        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT5.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier5(), StarcraftCore.ASSET_DOMAIN, "rocketT5"));
-        MinecraftForgeClient.registerItemRenderer(SCCoreItems.spaceshipT5.itemID, new SCCoreItemRendererSpaceshipT5(cargoRocketModel));
     }
 
 

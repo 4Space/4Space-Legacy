@@ -20,7 +20,6 @@ public class SCCoreItems
     public static Item gemLeggings;
     public static Item gemBoots;
 
-    public static Item spaceshipT5;
     public static Item rocketEngine;
 //    public static Item schematic;
 
@@ -44,8 +43,6 @@ public class SCCoreItems
         SCCoreItems.gemLeggings = new SCCoreItemArmor(SCCoreConfigManager.idArmorGemLeggings, SCCoreItems.ARMORGEM, 7, 2, false).setUnlocalizedName("gemLeggings");
         SCCoreItems.gemBoots = new SCCoreItemArmor(SCCoreConfigManager.idArmorGemBoots, SCCoreItems.ARMORGEM, 7, 3, false).setUnlocalizedName("gemBoots");
 
-        SCCoreItems.spaceshipT5 = new SCCoreItemSpaceshipTier5(SCCoreConfigManager.idItemSpaceshipTier5).setUnlocalizedName("spaceshipTier5");
-        
         SCCoreItems.rocketEngine = new SCCoreItemRocketParts(SCCoreConfigManager.idItemRocketEngine, "engine");
 //        SCCoreItems.schematic = new SCCoreItemSchematic(SCCoreConfigManager.idItemSchematicMars).setUnlocalizedName("schematic");
     }
