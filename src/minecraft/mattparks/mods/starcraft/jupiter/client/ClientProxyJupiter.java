@@ -66,8 +66,6 @@ public class ClientProxyJupiter extends CommonProxyJupiter
         IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
         // TODO remove internal cargo rocket codes
         
-        RenderingRegistry.addNewArmourRendererPrefix("gem");
-                
         RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT5.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier5(), StarcraftCore.ASSET_DOMAIN, "rocketT5"));
         MinecraftForgeClient.registerItemRenderer(GCJupiterItems.spaceshipT5.itemID, new SCCoreItemRendererSpaceshipT5(cargoRocketModel));
     }

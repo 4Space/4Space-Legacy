@@ -22,4 +22,9 @@ public class GCVenusUtil
 
         return null;
     }
+
+    public static void addRocketBenchT3Recipe(ItemStack result, HashMap<Integer, ItemStack> input)
+    {
+        GalacticraftRegistry.addT2RocketRecipe(new GCCoreNasaWorkbenchRecipe(result, input));
+    }
 }

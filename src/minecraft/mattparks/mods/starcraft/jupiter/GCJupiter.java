@@ -7,6 +7,7 @@ import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.jupiter.dimension.GCJupiterTeleportType;
 import mattparks.mods.starcraft.jupiter.dimension.GCJupiterWorldProvider;
 import mattparks.mods.starcraft.jupiter.entities.SCCoreEntityRocketT5;
+import mattparks.mods.starcraft.jupiter.items.GCJupiterItems;
 import mattparks.mods.starcraft.jupiter.network.GCJupiterPacketHandlerServer;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.core.GCLog;
@@ -62,6 +63,8 @@ public class GCJupiter
     {
         new GCJupiterConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/jupiter.conf"));
 
+        GCJupiterItems.initItems();
+        
         GCJupiter.proxy.preInit(event);
     }
 
