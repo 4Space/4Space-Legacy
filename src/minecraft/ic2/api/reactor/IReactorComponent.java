@@ -20,10 +20,9 @@ public interface IReactorComponent
 	 * @param yourStack Reference to the specific instance of iterated ItemStack
 	 * @param x X-coordinate of the stack in the grid
 	 * @param y Y-coordinate of the stack in the grid
-	 * @param heatrun every Stack will cycle 2 time (true,false) first run for heat, sec for Eu calculation
 	 */
-	public void processChamber(IReactor reactor, ItemStack yourStack, int x, int y,boolean heatrun);
-
+	public void processChamber(IReactor reactor, ItemStack yourStack, int x, int y);
+	
 	/**
 	 * Can be called by Uranium-Components who attempt to generate energy by pulsing to other components.
 	 * Uranium-Uranium interaction (f.e.) uses this method.
@@ -37,7 +36,7 @@ public interface IReactorComponent
 	 * @return true if this component reacts to the pulse (and pulse is therefore meant to produce heat)
 	 */
 	public boolean acceptUraniumPulse(IReactor reactor, ItemStack yourStack, ItemStack pulsingStack, int youX, int youY, int pulseX, int pulseY);
-
+	
 	/**
 	 * Called by components to determine whether your component can be heated.
 	 * @param reactor Reference to the Reactor
@@ -47,7 +46,7 @@ public interface IReactorComponent
 	 * @return true if your component can take heat
 	 */
 	public boolean canStoreHeat(IReactor reactor, ItemStack yourStack, int x, int y);
-
+	
 	/**
 	 * Called by heat-switches to determine how much heat to distribute into which direction.
 	 * Please return the maximum capacity of your heat-containing component here.
@@ -58,7 +57,7 @@ public interface IReactorComponent
 	 * @return Maximum heat
 	 */
 	public int getMaxHeat(IReactor reactor, ItemStack yourStack, int x, int y);
-
+	
 	/**
 	 * Called by heat-switches to determine how much heat to distribute into which direction.
 	 * Please return the current amount of heat stored in this component
@@ -69,7 +68,7 @@ public interface IReactorComponent
 	 * @return Current Heat
 	 */
 	public int getCurrentHeat(IReactor reactor, ItemStack yourStack, int x, int y);
-
+	
 	/**
 	 * Called by components to distribute heat to your component.
 	 * Perform heating-calculations and increase your heat (dmg) level accordingly.
@@ -83,7 +82,7 @@ public interface IReactorComponent
 	 * @return 0 if the 'order' was accepted, return >0 to indicate the 'remaining' heat which couldn't be absorbed (and vice versa for <0)
 	 */
 	public int alterHeat(IReactor reactor, ItemStack yourStack, int x, int y, int heat);
-
+	
 	/**
 	 * Called upon reactor explosion
 	 * Alter the explosion size.

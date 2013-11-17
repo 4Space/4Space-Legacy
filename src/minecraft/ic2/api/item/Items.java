@@ -310,7 +310,6 @@ public final class Items {
 	// el. tools/devices/weapons
 	  miningDrill; 		// Mining Drill item, meta = damage value for charge level
 	  diamondDrill; 		// Diamond Tipped Mining Drill item, meta = damage value for charge level
-	  iridiumDrill;		// Iridium Tipped Mining Drill item, meta = damage value for charge level
 	  chainsaw; 			// Chainsaw item, meta = damage value for charge level
 	  electricWrench;		// Electric Wrench item, meta = damage value for charge level
 	  electricTreetap;	// Electric Treetap item, meta = damage value for charge level

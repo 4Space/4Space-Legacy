@@ -28,14 +28,15 @@ import cpw.mods.fml.common.registry.GameRegistry;
     public static final String CLIENT_PATH = "client/";
     public static final String CONFIG_FILE = "starcraft/starcraftBlocks.conf";
 
-            //Block Core, Gravity Generator
-//        public final static Block gravityGenerator = new StarcraftBlock(9862, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("GravityGenerator") .setTextureName("starcraftcore:GravityGenerator") .setCreativeTab(StarcraftCore.starcraftCoreTab);
-    	
-         //Block Core, Tier1 Caravan Module
-   	public final static Block caravanModule = new StarcraftCaravanModule(927, null) .setHardness(0.4F) .setStepSound(Block.soundClothFootstep) .setUnlocalizedName("caravanModule") .setTextureName("starcraftcore:caravanModule");
+        //Block Core, Gravity Generator
+        public final static Block gravityGenerator = new StarcraftBlock(986, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("GravityGenerator") .setTextureName("starcraftcore:GravityGenerator") .setCreativeTab(StarcraftCore.starcraftCoreTab);
+// TODO add gui to block
+        
+        //Block Core, Tier1 Caravan Module
+   	    public final static Block caravanModule = new StarcraftCaravanModule(927, null) .setHardness(0.4F) .setStepSound(Block.soundClothFootstep) .setUnlocalizedName("caravanModule") .setTextureName("starcraftcore:caravanModule");
     
     	//Block Core, Caravan Block
-//    	public final static Block caravanModulePart = new StarcraftBlock(928, null) .setHardness(1000000.0F) .setStepSound(Block.soundClothFootstep).setUnlocalizedName("caravanModulePart") .setTextureName("starcraftcore:caravanModulePart") .setBlockUnbreakable();
+    	public final static Block caravanModulePart = new StarcraftBlock(928, null) .setHardness(1000000.0F) .setStepSound(Block.soundClothFootstep).setUnlocalizedName("caravanModulePart") .setTextureName("starcraftcore:caravanModulePart") .setBlockUnbreakable();
     
     	
         //Block Venus, Grass
@@ -209,7 +210,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
         public final static Block ErisCobblestone = new StarcraftBlock(925, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("cobblestoneEris") .setTextureName("starcrafteris:cobblestoneEris") .setCreativeTab(StarcraftCore.starcraftErisTab);
 
         //Block Eris Brick
-        public final static Block ErisBrick = new StarcraftBlock(926, null) .setHardness(1000.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("erisBrick") .setTextureName("starcrafteris:erisBrick") .setCreativeTab(StarcraftCore.starcraftErisTab); .setBlockUnbreakable();
+        public final static Block ErisBrick = new StarcraftBlock(926, null) .setHardness(1000.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("erisBrick") .setTextureName("starcrafteris:erisBrick") .setCreativeTab(StarcraftCore.starcraftErisTab) .setBlockUnbreakable();
 
         @Instance("SpacecraftBlocks")
         public static SpacecraftBlocks instance;
@@ -229,9 +230,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
                 proxy.registerRenderers();
                 
                 //Registering Blocks
-//                GameRegistry.registerBlock(SpacecraftBlocks.gravityGenerator, "GravityGenerator");
+                GameRegistry.registerBlock(SpacecraftBlocks.gravityGenerator, "GravityGenerator");
                 GameRegistry.registerBlock(SpacecraftBlocks.caravanModule, "CaravanModule");
-//                GameRegistry.registerBlock(SpacecraftBlocks.caravanModulePart, "CaravanModulePart");
+                GameRegistry.registerBlock(SpacecraftBlocks.caravanModulePart, "CaravanModulePart");
                 
                 GameRegistry.registerBlock(SpacecraftBlocks.VenusGrass, "VenusGrass");
                 GameRegistry.registerBlock(SpacecraftBlocks.VenusDirt, "VenusDirt");

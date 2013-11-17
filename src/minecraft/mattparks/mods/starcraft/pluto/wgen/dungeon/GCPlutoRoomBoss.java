@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.eris.wgen.dungeon;
+package mattparks.mods.starcraft.pluto.wgen.dungeon;
 
 import java.util.Random;
 
@@ -6,14 +6,14 @@ import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityDungeonSpawner;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonBoundingBox;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonRoom;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
-import micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlocks;
+import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.ForgeDirection;
 import universalelectricity.core.vector.Vector3;
 
-public class GCErisRoomBoss extends GCCoreDungeonRoom
+public class GCPlutoRoomBoss extends GCCoreDungeonRoom
 {
 
     public int sizeX;
@@ -22,7 +22,7 @@ public class GCErisRoomBoss extends GCCoreDungeonRoom
     Random rand;
     ChunkCoordinates spawnerCoords;
 
-    public GCErisRoomBoss(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
+    public GCPlutoRoomBoss(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
     {
         super(dungeon, posX, posY, posZ, entranceDir);
         if (this.worldObj != null)
@@ -81,7 +81,7 @@ public class GCErisRoomBoss extends GCCoreDungeonRoom
     @Override
     protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
     {
-        return new GCErisRoomBoss(dungeon, x, y, z, dir);
+        return new GCPlutoRoomBoss(dungeon, x, y, z, dir);
     }
 
     @Override
@@ -92,7 +92,7 @@ public class GCErisRoomBoss extends GCCoreDungeonRoom
             return;
         }
 
-        this.worldObj.setBlock(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ, GCMoonBlocks.blockMoon.blockID, 15, 3);
+        this.worldObj.setBlock(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ, GCCoreBlocks.blockMoon.blockID, 15, 3);
 
         final TileEntity tile = this.worldObj.getBlockTileEntity(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ);
 

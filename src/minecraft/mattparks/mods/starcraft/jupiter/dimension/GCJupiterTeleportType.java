@@ -1,8 +1,8 @@
-package mattparks.mods.starcraft.pluto.dimension;
+package mattparks.mods.starcraft.jupiter.dimension;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.vector.Vector.Vector3;
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.ITeleportType;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -15,7 +15,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 
-public class GCPlutoTeleportType implements ITeleportType
+public class GCJupiterTeleportType implements ITeleportType
 {
     @Override
     public boolean useParachute()

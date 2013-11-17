@@ -21,7 +21,7 @@ public class GCJupiterItem extends Item
     public static String[] names = { "jupiterPlate", "carbonSoot", "graphiteChunks", "clearDiamond" };
     protected Icon[] icons = new Icon[GCJupiterItem.names.length];
 
-    public GCMercuryItem(int par1)
+    public GCJupiterItem(int par1)
     {
         super(par1);
         this.setMaxDamage(0);

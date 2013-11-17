@@ -10,7 +10,7 @@ public class GCJupiterItems
     
     public static void initItems()
     {
-        GCJupiterItems.mercuryItemBasic = new GCJupiterItems(GCJupiterConfigManager.idItemJupiterBasic);
+        GCJupiterItems.jupiterItemBasic = new GCJupiterItem(GCJupiterConfigManager.idItemJupiterBasic);
 //        GCJupiterItems.T5Schematic = new GCJupiterItemSchematic(GCMercuryConfigManager.idTtemMercuryT5Schematic);
     }
     

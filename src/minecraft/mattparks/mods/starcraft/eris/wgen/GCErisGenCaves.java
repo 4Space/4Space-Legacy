@@ -1,15 +1,14 @@
-package mattparks.mods.starcraft.pluto.wgen;
+package mattparks.mods.starcraft.eris.wgen;
 
 import java.util.Random;
 
-import mattparks.mods.starcraft.pluto.GCPluto;
+import mattparks.mods.starcraft.eris.GCEris;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
-import micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlocks;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class GCPlutoGenCaves extends GCCoreMapGenBaseMeta
+public class GCErisGenCaves extends GCCoreMapGenBaseMeta
 {
 
     public static final int BREAK_THROUGH_CHANCE = 25; // 1 in n chance
@@ -170,13 +169,13 @@ public class GCPlutoGenCaves extends GCCoreMapGenBaseMeta
 
                                         if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
                                         {
-                                            if (blockIdArray[coords] == SpacecraftBlocks.PlutoDirt.blockID)
+                                            if (blockIdArray[coords] == SpacecraftBlocks.ErisDirt.blockID)
                                             {
                                                 if (metaArray[coords] == 3 || metaArray[coords] == 4)
                                                 {
                                                     blockIdArray[coords] = 0;
                                                 }
-                                                else if (metaArray[coords] == 5 && random.nextInt(GCPlutoGenCaves.BREAK_THROUGH_CHANCE) == 0)
+                                                else if (metaArray[coords] == 5 && random.nextInt(GCErisGenCaves.BREAK_THROUGH_CHANCE) == 0)
                                                 {
                                                     blockIdArray[coords] = 0;
                                                 }
