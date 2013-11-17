@@ -93,6 +93,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
         //Block Venus, Blaze Egg
         public final static Block EvolvedBlazeEgg = new StarcraftEgg(627, 0, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlazeEgg") .setTextureName("starcraftvenus:evolvedBlazeEgg") .setCreativeTab(GCVenus.starcraftVenusTab);                                
 
+        //Block Venus, Venusian TNT
+        public final static Block VenusianTNT = new StarcraftVenusianTNT(629, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusianTNT") .setTextureName("starcraftvenus:venusianTNT") .setCreativeTab(GCVenus.starcraftVenusTab);                                
+
+        
         //Block Venus, Toxic Sludge
 //        public final static Block ToxicSludge = new StarcraftToxicSludge(1024, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusToxicSludge") .setTextureName("starcraftvenus:toxicSludge") .setCreativeTab(GCVenus.starcraftVenusTab);                                
 // TODO finish Venus Toxic Sludge
@@ -177,7 +181,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
         public final static Block UranusHydrogen = new StarcraftGasBottom(658, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("uranusHydrogen") .setTextureName("starcrafturanus:uranusHydrogen") .setCreativeTab(StarcraftCore.starcraftGasTab);
 
         //Block Uranus Brick
-        public final static Block UranusBrick = new StarcraftBlock(629, null) .setHardness(1000.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("uranusBrick") .setTextureName("starcrafturanus:uranusBrick") .setCreativeTab(StarcraftCore.starcraftGasTab) .setBlockUnbreakable();
+        public final static Block UranusBrick = new StarcraftBlock(699, null) .setHardness(1000.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("uranusBrick") .setTextureName("starcrafturanus:uranusBrick") .setCreativeTab(StarcraftCore.starcraftGasTab) .setBlockUnbreakable();
 
         
         //Block Neptune Nitrogen
@@ -251,9 +255,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
                 GameRegistry.registerBlock(SpacecraftBlocks.VenusCopperOre, "VenusCopperOre");
                 GameRegistry.registerBlock(SpacecraftBlocks.VenusBasalt, "VenusBasalt");
                 GameRegistry.registerBlock(SpacecraftBlocks.VenusHalfBasalt, "VenusHalfBasalt");
+                GameRegistry.registerBlock(SpacecraftBlocks.VenusianTNT, "VenusianTNT");
                 GameRegistry.registerBlock(SpacecraftBlocks.EvolvedBlazeEgg, "EvolvedBlazeEgg");
 //                GameRegistry.registerBlock(SpacecraftBlocks.ToxicSludge, "ToxicSludge");
-                                
+
                 GameRegistry.registerBlock(SpacecraftBlocks.PlutoGrass, "PlutoGrass");
                 GameRegistry.registerBlock(SpacecraftBlocks.PlutoDirt, "PlutoDirt");
                 GameRegistry.registerBlock(SpacecraftBlocks.PlutoStone, "PlutoStone");
