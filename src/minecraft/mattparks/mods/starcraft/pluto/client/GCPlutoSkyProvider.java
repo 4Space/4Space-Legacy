@@ -1,10 +1,10 @@
-package mattparks.mods.starcraft.eris.client;
+package mattparks.mods.starcraft.pluto.client;
 
 import java.util.Random;
 
 import mattparks.mods.starcraft.eris.GCEris;
-import mattparks.mods.starcraft.eris.dimension.GCErisWorldProvider;
 import mattparks.mods.starcraft.pluto.GCPluto;
+import mattparks.mods.starcraft.pluto.dimension.GCPlutoWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.client.Minecraft;
@@ -21,16 +21,16 @@ import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.client.FMLClientHandler;
 
-public class GCErisSkyProvider extends IRenderHandler
+public class GCPlutoSkyProvider extends IRenderHandler
 {
-    private static final ResourceLocation plutoTexture = new ResourceLocation(GCPluto.ASSET_DOMAIN, "textures/gui/planets/pluto.png");
-    private static final ResourceLocation sunTexture = new ResourceLocation(GCEris.ASSET_DOMAIN, "textures/gui/planets/sun.png");
+    private static final ResourceLocation erisTexture = new ResourceLocation(GCEris.ASSET_DOMAIN, "textures/gui/planets/eris.png");
+    private static final ResourceLocation charonTexture = new ResourceLocation(GCPluto.ASSET_DOMAIN, "textures/gui/planets/charon.png");
 
     public int starGLCallList = GLAllocation.generateDisplayLists(3);
     public int glSkyList;
     public int glSkyList2;
 
-    public GCErisSkyProvider()
+    public GCPlutoSkyProvider()
     {
         GL11.glPushMatrix();
         GL11.glNewList(this.starGLCallList, GL11.GL_COMPILE);
@@ -81,11 +81,11 @@ public class GCErisSkyProvider extends IRenderHandler
     @Override
     public void render(float partialTicks, WorldClient world, Minecraft mc)
     {
-        GCErisWorldProvider gcProvider = null;
+        GCPlutoWorldProvider gcProvider = null;
 
-        if (world.provider instanceof GCErisWorldProvider)
+        if (world.provider instanceof GCPlutoWorldProvider)
         {
-            gcProvider = (GCErisWorldProvider) world.provider;
+            gcProvider = (GCPlutoWorldProvider) world.provider;
         }
 
         float var10;
@@ -159,7 +159,7 @@ public class GCErisSkyProvider extends IRenderHandler
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         GL11.glRotatef(world.getCelestialAngle(partialTicks) * 360.0F, 1.0F, 0.0F, 0.0F);
         var12 = 30.0F;
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCErisSkyProvider.sunTexture);
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCPlutoSkyProvider.charonTexture);
         var23.startDrawingQuads();
         var23.addVertexWithUV(-var12, 150.0D, -var12, 0.0D, 0.0D);
         var23.addVertexWithUV(var12, 150.0D, -var12, 1.0D, 0.0D);
@@ -173,13 +173,13 @@ public class GCErisSkyProvider extends IRenderHandler
 
         GL11.glDisable(GL11.GL_BLEND);
 
-        // PLUTO:
+        // Eris:
         var12 = 0.5F;
         GL11.glScalef(0.6F, 0.6F, 0.6F);
         GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
         GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCErisSkyProvider.plutoTexture);
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCPlutoSkyProvider.erisTexture);
         var23.startDrawingQuads();
         var23.addVertexWithUV(-var12, -100.0D, var12, 0, 1);
         var23.addVertexWithUV(var12, -100.0D, var12, 1, 1);

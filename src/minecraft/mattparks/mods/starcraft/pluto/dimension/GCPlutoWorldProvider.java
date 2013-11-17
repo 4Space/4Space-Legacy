@@ -229,7 +229,7 @@ public class GCPlutoWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 2;
+        return tier >= 5;
     }
 
     @Override

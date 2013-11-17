@@ -229,7 +229,7 @@ public class GCErisWorldProvider extends WorldProvider implements IGalacticraftW
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 2;
+        return tier >= 5;
     }
 
     @Override

@@ -1,10 +1,9 @@
-package mattparks.mods.starcraft.pluto.client;
+package mattparks.mods.starcraft.eris.client;
 
 import java.util.Random;
 
-import mattparks.mods.starcraft.neptune.GCNeptune;
-import mattparks.mods.starcraft.pluto.GCPluto;
-import mattparks.mods.starcraft.pluto.dimension.GCPlutoWorldProvider;
+import mattparks.mods.starcraft.eris.GCEris;
+import mattparks.mods.starcraft.eris.dimension.GCErisWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.client.Minecraft;
@@ -21,16 +20,15 @@ import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.client.FMLClientHandler;
 
-public class GCPlutoSkyProvider extends IRenderHandler
+public class GCErisSkyProvider extends IRenderHandler
 {
-    private static final ResourceLocation neptuneTexture = new ResourceLocation(GCNeptune.ASSET_DOMAIN, "textures/gui/planets/neptune.png");
-    private static final ResourceLocation sunTexture = new ResourceLocation(GCPluto.ASSET_DOMAIN, "textures/gui/planets/sun.png");
+    private static final ResourceLocation sunTexture = new ResourceLocation(GCEris.ASSET_DOMAIN, "textures/gui/planets/sun.png");
 
     public int starGLCallList = GLAllocation.generateDisplayLists(3);
     public int glSkyList;
     public int glSkyList2;
 
-    public GCPlutoSkyProvider()
+    public GCErisSkyProvider()
     {
         GL11.glPushMatrix();
         GL11.glNewList(this.starGLCallList, GL11.GL_COMPILE);
@@ -81,11 +79,11 @@ public class GCPlutoSkyProvider extends IRenderHandler
     @Override
     public void render(float partialTicks, WorldClient world, Minecraft mc)
     {
-        GCPlutoWorldProvider gcProvider = null;
+        GCErisWorldProvider gcProvider = null;
 
-        if (world.provider instanceof GCPlutoWorldProvider)
+        if (world.provider instanceof GCErisWorldProvider)
         {
-            gcProvider = (GCPlutoWorldProvider) world.provider;
+            gcProvider = (GCErisWorldProvider) world.provider;
         }
 
         float var10;
@@ -159,7 +157,7 @@ public class GCPlutoSkyProvider extends IRenderHandler
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         GL11.glRotatef(world.getCelestialAngle(partialTicks) * 360.0F, 1.0F, 0.0F, 0.0F);
         var12 = 30.0F;
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCPlutoSkyProvider.sunTexture);
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCErisSkyProvider.sunTexture);
         var23.startDrawingQuads();
         var23.addVertexWithUV(-var12, 150.0D, -var12, 0.0D, 0.0D);
         var23.addVertexWithUV(var12, 150.0D, -var12, 1.0D, 0.0D);
@@ -172,20 +170,6 @@ public class GCPlutoSkyProvider extends IRenderHandler
         GL11.glPushMatrix();
 
         GL11.glDisable(GL11.GL_BLEND);
-
-        // NEPTUNE:
-        var12 = 0.5F;
-        GL11.glScalef(0.6F, 0.6F, 0.6F);
-        GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
-        GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
-        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCPlutoSkyProvider.neptuneTexture);
-        var23.startDrawingQuads();
-        var23.addVertexWithUV(-var12, -100.0D, var12, 0, 1);
-        var23.addVertexWithUV(var12, -100.0D, var12, 1, 1);
-        var23.addVertexWithUV(var12, -100.0D, -var12, 1, 0);
-        var23.addVertexWithUV(-var12, -100.0D, -var12, 0, 0);
-        var23.draw();
 
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         GL11.glDisable(GL11.GL_BLEND);
