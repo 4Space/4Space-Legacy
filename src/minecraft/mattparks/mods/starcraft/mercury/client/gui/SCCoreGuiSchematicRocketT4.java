@@ -1,7 +1,7 @@
-package mattparks.mods.starcraft.core.client.gui;
+package mattparks.mods.starcraft.mercury.client.gui;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.inventory.SCCoreContainerRocketBenchT4;
+import mattparks.mods.starcraft.mercury.inventory.SCCoreContainerRocketBenchT4;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import net.minecraft.client.gui.GuiButton;

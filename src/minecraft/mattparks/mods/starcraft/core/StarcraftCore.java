@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.core;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT4;
 import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT5;
 import mattparks.mods.starcraft.core.items.SCCoreItem;
 import mattparks.mods.starcraft.core.items.SCCoreItems;
@@ -57,13 +56,7 @@ public class StarcraftCore
 			return new ItemStack(SCCoreItems.coreItemBasic, 0, 2);
 		}
 	};
-	
-	public static CreativeTabs starcraftRocketsTab = new CreativeTabs("starcraftRocketsTab") {
-		public ItemStack getIconItemStack() {
-			return new ItemStack(SCCoreItems.spaceshipT5, 1, 0);
-		}
-	};
-	
+
 	public static CreativeTabs starcraftGasTab = new CreativeTabs("starcraftGasTab") {
 		public ItemStack getIconItemStack() {
 			return new ItemStack(SpacecraftBlocks.JupiterNitrogen, 1, 0);
@@ -166,7 +159,6 @@ public class StarcraftCore
 
     public void registerOtherEntities()
     {
-    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT4.class, "SpaceshipT4", SCCoreConfigManager.idEntitySpaceshipTier4, 150, 1, true);
     	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT5.class, "SpaceshipT5", SCCoreConfigManager.idEntitySpaceshipTier5, 150, 1, true);
     }
 

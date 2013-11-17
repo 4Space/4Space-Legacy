@@ -2,9 +2,6 @@ package mattparks.mods.starcraft.venus.items;
 
 import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.core.items.SCCoreItems;
-import mattparks.mods.starcraft.mercury.GCMercuryConfigManager;
-import mattparks.mods.starcraft.mercury.items.GCMercuryItemSchematic;
-import mattparks.mods.starcraft.mercury.items.GCMercuryItems;
 import mattparks.mods.starcraft.venus.GCVenusConfigManager;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;

@@ -5,11 +5,19 @@ import java.io.DataInputStream;
 import java.util.ArrayList;
 import java.util.EnumSet;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.mercury.CommonProxyMercury;
 import mattparks.mods.starcraft.mercury.GCMercury;
+import mattparks.mods.starcraft.mercury.client.model.SCCoreModelSpaceshipTier4;
+import mattparks.mods.starcraft.mercury.client.render.item.SCCoreItemRendererSpaceshipT4;
 import mattparks.mods.starcraft.mercury.client.sounds.GCMercurySounds;
 import mattparks.mods.starcraft.mercury.dimension.GCMercuryWorldProvider;
+import mattparks.mods.starcraft.mercury.entities.SCCoreEntityRocketT4;
+import mattparks.mods.starcraft.mercury.items.GCMercuryItems;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
+import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
+import micdoodle8.mods.galacticraft.core.client.sounds.GCCoreSoundUpdaterSpaceship;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -21,6 +29,9 @@ import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraftforge.client.model.AdvancedModelLoader;
+import net.minecraftforge.client.model.IModelCustom;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -58,7 +69,11 @@ public class ClientProxyMercury extends CommonProxyMercury
     @Override
     public void registerRenderInformation()
     {
-        RenderingRegistry.addNewArmourRendererPrefix("gem");
+        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
+        // TODO remove internal cargo rocket codes
+        
+        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT4.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier4(), StarcraftCore.ASSET_DOMAIN, "rocketT4"));
+        MinecraftForgeClient.registerItemRenderer(GCMercuryItems.spaceshipT4.itemID, new SCCoreItemRendererSpaceshipT4(cargoRocketModel));
     }
 
 
@@ -165,11 +180,9 @@ public class ClientProxyMercury extends CommonProxyMercury
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCMercuryWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
-                            world.provider.setSkyRenderer(new GCMercurySkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -184,13 +197,21 @@ public class ClientProxyMercury extends CommonProxyMercury
 
                         if (e != null)
                         {
-                            
+                            if (e instanceof SCCoreEntityRocketT4)
+                            {
+                                final SCCoreEntityRocketT4 eship = (SCCoreEntityRocketT4) e;
+
+                                if (eship.rocketSoundUpdater == null)
+                                {
+                                    eship.rocketSoundUpdater = new GCCoreSoundUpdaterSpaceship(FMLClientHandler.instance().getClient().sndManager, eship, FMLClientHandler.instance().getClient().thePlayer);
+                                }
+                            }
                         }
                     }
                 }
             }
         }
-
+        
         @Override
         public void tickEnd(EnumSet<TickType> type, Object... tickData)
         {

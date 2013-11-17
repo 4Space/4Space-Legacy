@@ -30,16 +30,20 @@ public class GCMercuryConfigManager
     // ITEMS
     public static int idItemMercuryBasic;
     public static int idTtemMercuryT4Schematic;
+    public static int idItemSpaceshipTier4;
     
     // ARMOR
 
     // TOOLS
 
     // ENTITIES
+    public static int idEntitySpaceshipTier4;
 
     // GUI
+    public static int idGuiRocketCraftingBenchT4;
 
     // SCHEMATIC
+    public static int idSchematicRocketT4;
 
     // ACHIEVEMENTS
 
@@ -64,9 +68,16 @@ public class GCMercuryConfigManager
      
             GCMercuryConfigManager.idItemMercuryBasic = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 7756).getInt(7756);
             GCMercuryConfigManager.idTtemMercuryT4Schematic = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idTtemMercuryT4Schematic", 7757).getInt(7757);
-
+            GCMercuryConfigManager.idItemSpaceshipTier4 = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier4", 7544).getInt(7544);
+            
             //Block id's 7857-7870 used by Spacecraft Venus
             
+            GCMercuryConfigManager.idEntitySpaceshipTier4 = GCMercuryConfigManager.configuration.get("Entities", "idEntitySpaceshipTier4", 174).getInt(174);
+    
+            GCMercuryConfigManager.idGuiRocketCraftingBenchT4 = GCMercuryConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT4", 144).getInt(144);
+
+            GCMercuryConfigManager.idSchematicRocketT4 = GCMercuryConfigManager.configuration.get("Schematic", "idSchematicRocketT4", 4).getInt(4);
+
             GCMercuryConfigManager.disableGemOreMercury = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Mercury", false).getBoolean(false);
             GCMercuryConfigManager.disableCoalOreMercury = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Coal Ore Gen on Mercury", false).getBoolean(false);
             GCMercuryConfigManager.disableTinOreMercury = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Tin Ore Gen on Mercury", false).getBoolean(false);

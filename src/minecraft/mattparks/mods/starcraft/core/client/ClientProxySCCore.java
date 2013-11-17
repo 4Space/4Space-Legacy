@@ -9,12 +9,9 @@ import java.util.Map;
 
 import mattparks.mods.starcraft.core.CommonProxySCCore;
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.client.model.SCCoreModelSpaceshipTier4;
 import mattparks.mods.starcraft.core.client.model.SCCoreModelSpaceshipTier5;
-import mattparks.mods.starcraft.core.client.render.item.SCCoreItemRendererSpaceshipT4;
 import mattparks.mods.starcraft.core.client.render.item.SCCoreItemRendererSpaceshipT5;
 import mattparks.mods.starcraft.core.client.sounds.SCCoreSounds;
-import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT4;
 import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT5;
 import mattparks.mods.starcraft.core.items.SCCoreItems;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
@@ -100,10 +97,7 @@ public class ClientProxySCCore extends CommonProxySCCore
         // TODO remove internal cargo rocket codes
         
         RenderingRegistry.addNewArmourRendererPrefix("gem");
-        
-        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT4.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier4(), StarcraftCore.ASSET_DOMAIN, "rocketT4"));
-        MinecraftForgeClient.registerItemRenderer(SCCoreItems.spaceshipT4.itemID, new SCCoreItemRendererSpaceshipT4(cargoRocketModel));
-        
+                
         RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT5.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier5(), StarcraftCore.ASSET_DOMAIN, "rocketT5"));
         MinecraftForgeClient.registerItemRenderer(SCCoreItems.spaceshipT5.itemID, new SCCoreItemRendererSpaceshipT5(cargoRocketModel));
     }
@@ -219,13 +213,13 @@ public class ClientProxySCCore extends CommonProxySCCore
 
                         if (e != null)
                         {
-                            if (e instanceof SCCoreEntityRocketT4)
+//                            if (e instanceof SCCoreEntityRocketT4)
                             {
-                                final SCCoreEntityRocketT4 eship = (SCCoreEntityRocketT4) e;
+//                                final SCCoreEntityRocketT4 eship = (SCCoreEntityRocketT4) e;
 
-                                if (eship.rocketSoundUpdater == null)
+//                                if (eship.rocketSoundUpdater == null)
                                 {
-                                    eship.rocketSoundUpdater = new GCCoreSoundUpdaterSpaceship(FMLClientHandler.instance().getClient().sndManager, eship, FMLClientHandler.instance().getClient().thePlayer);
+//                                    eship.rocketSoundUpdater = new GCCoreSoundUpdaterSpaceship(FMLClientHandler.instance().getClient().sndManager, eship, FMLClientHandler.instance().getClient().thePlayer);
                                 }
                             }
                         }

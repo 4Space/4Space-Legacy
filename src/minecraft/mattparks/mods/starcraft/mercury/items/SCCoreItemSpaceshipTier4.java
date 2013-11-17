@@ -1,9 +1,9 @@
-package mattparks.mods.starcraft.core.items;
+package mattparks.mods.starcraft.mercury.items;
 
 import java.util.List;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT4;
+import mattparks.mods.starcraft.mercury.entities.SCCoreEntityRocketT4;
 import mattparks.mods.starcraft.mercury.GCMercury;
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType;

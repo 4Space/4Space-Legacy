@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.core.entities;
+package mattparks.mods.starcraft.mercury.entities;
 
 import icbm.api.IMissile;
 

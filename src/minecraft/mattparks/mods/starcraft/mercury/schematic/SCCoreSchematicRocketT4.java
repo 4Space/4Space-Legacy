@@ -1,8 +1,9 @@
-package mattparks.mods.starcraft.core.schematic;
+package mattparks.mods.starcraft.mercury.schematic;
 
 import mattparks.mods.starcraft.core.SCCoreConfigManager;
-import mattparks.mods.starcraft.core.client.gui.SCCoreGuiSchematicRocketT4;
-import mattparks.mods.starcraft.core.inventory.SCCoreContainerRocketBenchT4;
+import mattparks.mods.starcraft.mercury.GCMercuryConfigManager;
+import mattparks.mods.starcraft.mercury.client.gui.SCCoreGuiSchematicRocketT4;
+import mattparks.mods.starcraft.mercury.inventory.SCCoreContainerRocketBenchT4;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.client.gui.GuiScreen;
@@ -17,13 +18,13 @@ public class SCCoreSchematicRocketT4 implements ISchematicPage
     @Override
     public int getPageID()
     {
-        return SCCoreConfigManager.idSchematicRocketT4;
+        return GCMercuryConfigManager.idSchematicRocketT4;
     }
 
     @Override
     public int getGuiID()
     {
-        return SCCoreConfigManager.idGuiRocketCraftingBenchT4;
+        return GCMercuryConfigManager.idGuiRocketCraftingBenchT4;
     }
 
     @Override

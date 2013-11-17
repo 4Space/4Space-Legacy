@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class SCCoreItemRocketParts extends Item
 {
-    public static final String[] names = { "tier3engine", "tier2booster", "tier4engine", "tier3booster", "tier5engine", "tier4booster" };
+    public static final String[] names = {  };
 
     protected Icon[] icons = new Icon[SCCoreItemRocketParts.names.length];
 
@@ -33,7 +33,7 @@ public class SCCoreItemRocketParts extends Item
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftRocketsTab;
+        return StarcraftCore.starcraftCoreTab;
     }
 
     @Override

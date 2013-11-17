@@ -3,8 +3,10 @@ package mattparks.mods.starcraft.mercury;
 import java.io.File;
 import java.util.HashMap;
 
+import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.mercury.dimension.GCMercuryTeleportType;
 import mattparks.mods.starcraft.mercury.dimension.GCMercuryWorldProvider;
+import mattparks.mods.starcraft.mercury.entities.SCCoreEntityRocketT4;
 import mattparks.mods.starcraft.mercury.items.GCMercuryItems;
 import mattparks.mods.starcraft.mercury.network.GCMercuryPacketHandlerServer;
 import mattparks.mods.starcraft.mercury.recipe.GCMercuryRecipeManager;
@@ -140,7 +142,7 @@ public class GCMercury
 
     public void registerOtherEntities()
     {
-    	;
+    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT4.class, "SpaceshipT4", GCMercuryConfigManager.idEntitySpaceshipTier4, 150, 1, true);
     }
     
     @EventHandler

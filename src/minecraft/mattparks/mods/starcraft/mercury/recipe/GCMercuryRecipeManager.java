@@ -2,7 +2,6 @@ package mattparks.mods.starcraft.mercury.recipe;
 
 import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
-import mattparks.mods.starcraft.venus.items.GCVenusItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;

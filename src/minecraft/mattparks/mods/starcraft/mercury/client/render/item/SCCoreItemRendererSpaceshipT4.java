@@ -1,8 +1,8 @@
-package mattparks.mods.starcraft.core.client.render.item;
+package mattparks.mods.starcraft.mercury.client.render.item;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.client.model.SCCoreModelSpaceshipTier4;
-import mattparks.mods.starcraft.core.entities.SCCoreEntityRocketT4;
+import mattparks.mods.starcraft.mercury.client.model.SCCoreModelSpaceshipTier4;
+import mattparks.mods.starcraft.mercury.entities.SCCoreEntityRocketT4;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.core.client.render.item.GCCoreItemRendererSpaceship;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityRocketT1;
