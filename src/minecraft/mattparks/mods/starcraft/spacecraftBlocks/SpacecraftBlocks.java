@@ -29,7 +29,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
     public static final String CONFIG_FILE = "starcraft/starcraftBlocks.conf";
 
         //Block Core, Gravity Generator
-        public final static Block gravityGenerator = new StarcraftBlock(986, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("GravityGenerator") .setTextureName("starcraftcore:GravityGenerator") .setCreativeTab(StarcraftCore.starcraftCoreTab);
+        public final static Block gravityGenerator = new StarcraftBlock(986, null) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("GravityGenerator") .setTextureName("starcraftcore:GravityGenerator") .setCreativeTab(GCMercury.starcraftMercuryTab);
 // TODO add gui to block
         
         //Block Core, Tier1 Caravan Module

@@ -9,8 +9,6 @@ import java.util.Map;
 
 import mattparks.mods.starcraft.core.CommonProxySCCore;
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.client.sounds.SCCoreSounds;
-import mattparks.mods.starcraft.core.items.SCCoreItems;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
@@ -51,7 +49,6 @@ public class ClientProxySCCore extends CommonProxySCCore
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(new SCCoreSounds());
     }
     
     @Override

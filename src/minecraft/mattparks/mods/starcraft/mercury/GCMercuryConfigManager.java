@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.mercury;
 import java.io.File;
 import java.util.logging.Level;
 
+import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 
@@ -33,7 +34,8 @@ public class GCMercuryConfigManager
     public static int idItemSpaceshipTier4;
     
     // ARMOR
-
+    public static int idArmorJetpack;
+    
     // TOOLS
 
     // ENTITIES
@@ -69,6 +71,9 @@ public class GCMercuryConfigManager
             GCMercuryConfigManager.idItemMercuryBasic = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 7756).getInt(7756);
             GCMercuryConfigManager.idTtemMercuryT4Schematic = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idTtemMercuryT4Schematic", 7757).getInt(7757);
             GCMercuryConfigManager.idItemSpaceshipTier4 = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier4", 7544).getInt(7544);
+            
+            GCMercuryConfigManager.idArmorJetpack = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorJetpack", 7551).getInt(7551);
+            
             
             //Block id's 7857-7870 used by Spacecraft Venus
             

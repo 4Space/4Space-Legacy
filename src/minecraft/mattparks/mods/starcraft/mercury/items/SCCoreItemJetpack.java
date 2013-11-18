@@ -1,9 +1,11 @@
-package mattparks.mods.starcraft.core.items;
+package mattparks.mods.starcraft.mercury.items;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.mercury.GCMercury;
+import mattparks.mods.starcraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -32,7 +34,7 @@ public class SCCoreItemJetpack extends ItemArmor
         @Override
         public CreativeTabs getCreativeTab()
         {
-            return StarcraftCore.starcraftCoreTab;
+            return GCMercury.starcraftMercuryTab;
         }
         
         @Override
@@ -52,9 +54,9 @@ public class SCCoreItemJetpack extends ItemArmor
         @Override
         public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
         {
-            if (this.material == SCCoreItems.ARMORJETPACK)
+            if (this.material == GCMercuryItems.ARMORJETPACK)
             {
-                if (stack.getItem().itemID == SCCoreItems.jetpack.itemID)
+                if (stack.getItem().itemID == GCMercuryItems.jetpack.itemID)
                 {
                     return "textures/model/armor/jetpack.png";
 
@@ -67,7 +69,7 @@ public class SCCoreItemJetpack extends ItemArmor
         @Override
         public void onArmorTickUpdate(World world, EntityPlayer player, ItemStack itemstack)
         {
-        if (itemstack.itemID == SCCoreItems.jetpack.itemID)
+        if (itemstack.itemID == GCMercuryItems.jetpack.itemID)
         {
         player.capabilities.allowFlying = true;
         }

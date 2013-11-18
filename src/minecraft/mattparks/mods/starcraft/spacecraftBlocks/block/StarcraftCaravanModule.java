@@ -1,6 +1,7 @@
 package mattparks.mods.starcraft.spacecraftBlocks.block;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.mercury.GCMercury;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import net.minecraft.block.Block;
@@ -25,7 +26,7 @@ public class StarcraftCaravanModule extends Block
     @SideOnly(Side.CLIENT)
     public CreativeTabs getCreativeTabToDisplayOn()
     {
-        return StarcraftCore.starcraftCoreTab;
+        return GCMercury.starcraftMercuryTab;
     }
     
     @Override

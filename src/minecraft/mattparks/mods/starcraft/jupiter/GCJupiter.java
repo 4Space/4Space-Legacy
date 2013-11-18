@@ -134,7 +134,7 @@ public class GCJupiter
 
     public void registerOtherEntities()
     {
-    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT5.class, "SpaceshipT5", SCCoreConfigManager.idEntitySpaceshipTier5, 150, 1, true);
+    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT5.class, "SpaceshipT5", GCJupiterConfigManager.idEntitySpaceshipTier5, 150, 1, true);
     }
     
     @EventHandler

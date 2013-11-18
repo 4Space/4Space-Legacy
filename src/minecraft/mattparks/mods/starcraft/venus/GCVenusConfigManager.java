@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.venus;
 import java.io.File;
 import java.util.logging.Level;
 
-import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 
@@ -43,6 +42,11 @@ public class GCVenusConfigManager
     public static int idArmorSulferChestplate;
     public static int idArmorSulferLeggings;
     public static int idArmorSulferBoots;
+    
+    public static int idArmorGemHelmet;
+    public static int idArmorGemChestplate;
+    public static int idArmorGemLeggings;
+    public static int idArmorGemBoots;
 
     // TOOLS
     public static int idToolSulferSword;
@@ -50,6 +54,12 @@ public class GCVenusConfigManager
     public static int idToolSulferAxe;
     public static int idToolSulferSpade;
     public static int idToolSulferHoe;
+    
+    public static int idToolGemSword;
+    public static int idToolGemPickaxe;
+    public static int idToolGemAxe;
+    public static int idToolGemSpade;
+    public static int idToolGemHoe;
 
     // ENTITIES
     public static int idEntitySpaceshipTier3;
@@ -98,11 +108,22 @@ public class GCVenusConfigManager
             GCVenusConfigManager.idToolSulferHoe = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolSulferHoe", 7865).getInt(7865);
             GCVenusConfigManager.idToolSulferAxe = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolSulferAxe", 7866).getInt(7866);
 
+            GCVenusConfigManager.idToolGemSword = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemSword", 7546).getInt(7546);
+            GCVenusConfigManager.idToolGemPickaxe = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemPickaxe", 7547).getInt(7547);
+            GCVenusConfigManager.idToolGemSpade = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemSpade", 7548).getInt(7548);
+            GCVenusConfigManager.idToolGemHoe = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemHoe", 7549).getInt(7549);
+            GCVenusConfigManager.idToolGemAxe = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemAxe", 7550).getInt(7550);
+            
             GCVenusConfigManager.idArmorSulferHelmet = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorSulferHelmet", 7867).getInt(7867);
             GCVenusConfigManager.idArmorSulferChestplate = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorSulferChestplate", 7868).getInt(7868);
             GCVenusConfigManager.idArmorSulferLeggings = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorSulferLeggings", 7869).getInt(7869);
             GCVenusConfigManager.idArmorSulferBoots = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorSulferBoots", 7870).getInt(7870);
 
+            GCVenusConfigManager.idArmorGemHelmet = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemHelmet", 7552).getInt(7582);
+            GCVenusConfigManager.idArmorGemChestplate = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemChestplate", 7553).getInt(753);
+            GCVenusConfigManager.idArmorGemLeggings = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemLeggings", 7554).getInt(7554);
+            GCVenusConfigManager.idArmorGemBoots = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemBoots", 7555).getInt(7555);
+            
             GCVenusConfigManager.idTtemVenusT3Schematic = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idTtemVenusT3Schematic", 7892).getInt(7892);
             GCVenusConfigManager.idItemSpaceshipTier3 = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier3", 7543).getInt(7543);
             

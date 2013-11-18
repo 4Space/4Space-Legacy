@@ -14,12 +14,12 @@ import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCVenusItemArmor extends ItemArmor
+public class GCVenusItemSulferArmor extends ItemArmor
 {
     public boolean attachedMask;
     private final EnumArmorMaterial material;
 
-    public GCVenusItemArmor(int par1, EnumArmorMaterial par2EnumArmorMaterial, int par3, int par4, boolean breathable)
+    public GCVenusItemSulferArmor(int par1, EnumArmorMaterial par2EnumArmorMaterial, int par3, int par4, boolean breathable)
     {
         super(par1, par2EnumArmorMaterial, par3, par4);
         this.material = par2EnumArmorMaterial;

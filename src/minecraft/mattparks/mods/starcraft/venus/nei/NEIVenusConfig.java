@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.venus.items.GCVenusItems;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
@@ -56,16 +55,16 @@ public class NEIVenusConfig implements IConfigureNEI
         ArrayList<PositionedStack> input1 = new ArrayList<PositionedStack>();
 
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.partNoseCone), 45, -8 + changey));
-        input1.add(new PositionedStack(new ItemStack(SCCoreItems.coreItemBasic, 1, 3), 36, -6 + 0 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(SCCoreItems.coreItemBasic, 1, 3), 36, -6 + 1 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(SCCoreItems.coreItemBasic, 1, 3), 36, -6 + 2 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(SCCoreItems.coreItemBasic, 1, 3), 36, -6 + 3 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(SCCoreItems.coreItemBasic, 1, 3), 36, -6 + 4 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(SCCoreItems.coreItemBasic, 1, 3), 54, -6 + 0 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(SCCoreItems.coreItemBasic, 1, 3), 54, -6 + 1 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(SCCoreItems.coreItemBasic, 1, 3), 54, -6 + 2 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(SCCoreItems.coreItemBasic, 1, 3), 54, -6 + 3 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(SCCoreItems.coreItemBasic, 1, 3), 54, -6 + 4 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 36, -6 + 0 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 36, -6 + 1 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 36, -6 + 2 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 36, -6 + 3 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 36, -6 + 4 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 54, -6 + 0 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 54, -6 + 1 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 54, -6 + 2 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 54, -6 + 3 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 54, -6 + 4 * 18 + 16 + changey));
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.rocketEngine), 45, 100 + changey));
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.rocketEngine, 1, 1), 18, 64 + changey));
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.rocketEngine, 1, 1), 72, 64 + changey));

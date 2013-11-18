@@ -20,7 +20,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCErisItem extends Item
 {
-    public static String[] names = { "erisPlate" };
+    public static String[] names = { "erisPlate", "warpDrive" };
     protected Icon[] icons = new Icon[GCErisItem.names.length];
 
     public GCErisItem(int par1)

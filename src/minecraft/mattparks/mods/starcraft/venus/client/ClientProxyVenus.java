@@ -8,7 +8,6 @@ import java.util.EnumSet;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.venus.client.model.SCCoreModelSpaceshipTier3;
 import mattparks.mods.starcraft.venus.client.render.item.SCCoreItemRendererSpaceshipT3;
-import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.venus.CommonProxyVenus;
 import mattparks.mods.starcraft.venus.GCVenus;
 import mattparks.mods.starcraft.venus.client.render.entities.GCVenusRenderFlameling;

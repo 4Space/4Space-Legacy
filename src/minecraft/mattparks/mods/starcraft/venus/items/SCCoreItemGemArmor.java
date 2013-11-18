@@ -1,6 +1,8 @@
-package mattparks.mods.starcraft.core.items;
+package mattparks.mods.starcraft.venus.items;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.mercury.GCMercury;
+import mattparks.mods.starcraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -13,12 +15,12 @@ import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class SCCoreItemArmor extends ItemArmor
+public class SCCoreItemGemArmor extends ItemArmor
 {
     public boolean attachedMask;
     private final EnumArmorMaterial material;
 
-    public SCCoreItemArmor(int par1, EnumArmorMaterial par2EnumArmorMaterial, int par3, int par4, boolean breathable)
+    public SCCoreItemGemArmor(int par1, EnumArmorMaterial par2EnumArmorMaterial, int par3, int par4, boolean breathable)
     {
         super(par1, par2EnumArmorMaterial, par3, par4);
         this.material = par2EnumArmorMaterial;
@@ -36,17 +38,17 @@ public class SCCoreItemArmor extends ItemArmor
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
     {
-        if (this.material == SCCoreItems.ARMORGEM)
+        if (this.material == GCVenusItems.ARMORGEM)
         {
-            if (stack.getItem().itemID == SCCoreItems.gemHelmet.itemID)
+            if (stack.getItem().itemID == GCVenusItems.gemHelmet.itemID)
             {
                 return "textures/model/armor/gem_1.png";
             }
-            else if (stack.getItem().itemID == SCCoreItems.gemChestplate.itemID || stack.getItem().itemID == SCCoreItems.gemBoots.itemID)
+            else if (stack.getItem().itemID == GCVenusItems.gemChestplate.itemID || stack.getItem().itemID == GCVenusItems.gemBoots.itemID)
             {
                 return "textures/model/armor/gem_2.png";
             }
-            else if (stack.getItem().itemID == SCCoreItems.gemLeggings.itemID)
+            else if (stack.getItem().itemID == GCVenusItems.gemLeggings.itemID)
             {
                 return "textures/model/armor/gem_3.png";
             }
@@ -58,7 +60,7 @@ public class SCCoreItemArmor extends ItemArmor
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftCoreTab;
+        return GCVenus.starcraftVenusTab;
     }
 
     @Override

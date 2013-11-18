@@ -7,14 +7,14 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.EnumToolMaterial;
-import net.minecraft.item.ItemSpade;
+import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCVenusItemSpade extends ItemSpade
+public class GCVenusItemSulferHoe extends ItemHoe
 {
-    public GCVenusItemSpade(int par1, EnumToolMaterial par2EnumToolMaterial)
+    public GCVenusItemSulferHoe(int par1, EnumToolMaterial par2EnumToolMaterial)
     {
         super(par1, par2EnumToolMaterial);
     }

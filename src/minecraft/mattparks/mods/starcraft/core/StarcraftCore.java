@@ -3,10 +3,7 @@ package mattparks.mods.starcraft.core;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.items.SCCoreItem;
-import mattparks.mods.starcraft.core.items.SCCoreItems;
 import mattparks.mods.starcraft.core.network.SCCorePacketHandlerServer;
-import mattparks.mods.starcraft.core.recipe.SCCoreRecipeManager;
 import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -50,12 +47,6 @@ public class StarcraftCore
     @Instance(StarcraftCore.MODID)
     public static StarcraftCore instance;
     
-	public static CreativeTabs starcraftCoreTab = new CreativeTabs("starcraftCoreTab") {
-		public ItemStack getIconItemStack() {
-			return new ItemStack(SCCoreItems.coreItemBasic, 0, 2);
-		}
-	};
-
 	public static CreativeTabs starcraftGasTab = new CreativeTabs("starcraftGasTab") {
 		public ItemStack getIconItemStack() {
 			return new ItemStack(SpacecraftBlocks.JupiterNitrogen, 1, 0);
@@ -86,8 +77,6 @@ public class StarcraftCore
     public void preInit(FMLPreInitializationEvent event)
     {
         new SCCoreConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/core.conf"));
-        
-        SCCoreItems.initItems();
 
         StarcraftCore.proxy.preInit(event);
     }
@@ -166,7 +155,6 @@ public class StarcraftCore
     {
         StarcraftCore.proxy.postInit(event);
         StarcraftCore.proxy.registerRenderInformation();
-        SCCoreRecipeManager.loadRecipes();
     }
 
     public void registerGalacticraftCreature(Class<? extends Entity> var0, String var1, int id, int back, int fore)

@@ -1,6 +1,7 @@
 package mattparks.mods.starcraft.jupiter.schematic;
 
 import mattparks.mods.starcraft.core.SCCoreConfigManager;
+import mattparks.mods.starcraft.jupiter.GCJupiterConfigManager;
 import mattparks.mods.starcraft.jupiter.client.gui.SCCoreGuiSchematicRocketT5;
 import mattparks.mods.starcraft.jupiter.inventory.SCCoreContainerRocketBenchT5;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
@@ -17,13 +18,13 @@ public class SCCoreSchematicRocketT5 implements ISchematicPage
     @Override
     public int getPageID()
     {
-        return SCCoreConfigManager.idSchematicRocketT5;
+        return GCJupiterConfigManager.idSchematicRocketT5;
     }
 
     @Override
     public int getGuiID()
     {
-        return SCCoreConfigManager.idGuiRocketCraftingBenchT5;
+        return GCJupiterConfigManager.idGuiRocketCraftingBenchT5;
     }
 
     @Override

@@ -17,7 +17,7 @@ public class GCJupiterItems
     public static void initItems()
     {
     	GCJupiterItems.jupiterItemBasic = new GCJupiterItem(GCJupiterConfigManager.idItemJupiterBasic).setUnlocalizedName("jupiterBasic");
-        GCJupiterItems.spaceshipT5 = new SCCoreItemSpaceshipTier5(SCCoreConfigManager.idItemSpaceshipTier5).setUnlocalizedName("spaceshipTier5");
+        GCJupiterItems.spaceshipT5 = new SCCoreItemSpaceshipTier5(GCJupiterConfigManager.idItemSpaceshipTier5).setUnlocalizedName("spaceshipTier5");
 //        SCCoreItems.schematic = new SCCoreItemSchematic(SCCoreConfigManager.idItemSchematicMars).setUnlocalizedName("schematic");
     }
     
