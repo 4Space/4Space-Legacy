@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.spacecraftBlocks.block;
+package mattparks.mods.starcraft.spacecraftBlocks.blocks;
 
 import java.util.Random;
 
@@ -7,9 +7,9 @@ import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class PlutoStone extends Block
+public class VenusStone extends Block
 {
-    public PlutoStone(int id, String name)
+    public VenusStone(int id, String name)
     {
         super(id, Material.rock);
         this.setUnlocalizedName(name);
@@ -19,6 +19,6 @@ public class PlutoStone extends Block
 
     public int idDropped(int par1, Random par2Random, int par3)
     {
-        return SpacecraftBlocks.PlutoCobblestone.blockID;
+        return SpacecraftBlocks.VenusCobblestone.blockID;
     }
 }

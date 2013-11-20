@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.spacecraftBlocks.block;
+package mattparks.mods.starcraft.spacecraftBlocks.blocks;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
 import net.minecraft.block.BlockStationary;
