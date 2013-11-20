@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.neptune;
 import java.io.File;
 import java.util.HashMap;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.neptune.dimension.GCNeptuneTeleportType;
 import mattparks.mods.starcraft.neptune.dimension.GCNeptuneWorldProvider;
 import mattparks.mods.starcraft.neptune.network.GCNeptunePacketHandlerServer;
@@ -29,7 +30,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-@Mod(name = GCNeptune.NAME, version = GalacticraftCore.LOCALMAJVERSION + "." + GalacticraftCore.LOCALMINVERSION + "." + GalacticraftCore.LOCALBUILDVERSION, useMetadata = true, modid = GCNeptune.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
+@Mod(name = GCNeptune.NAME, version = StarcraftCore.LOCALMAJVERSION + "." + StarcraftCore.LOCALMINVERSION + "." + StarcraftCore.LOCALBUILDVERSION, useMetadata = true, modid = GCNeptune.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
 @NetworkMod(channels = { GCNeptune.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class GCNeptune
 {

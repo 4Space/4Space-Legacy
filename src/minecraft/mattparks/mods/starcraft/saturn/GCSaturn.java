@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.saturn;
 import java.io.File;
 import java.util.HashMap;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.saturn.dimension.GCSaturnTeleportType;
 import mattparks.mods.starcraft.saturn.dimension.GCSaturnWorldProvider;
 import mattparks.mods.starcraft.saturn.network.GCSaturnPacketHandlerServer;
@@ -29,7 +30,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-@Mod(name = GCSaturn.NAME, version = GalacticraftCore.LOCALMAJVERSION + "." + GalacticraftCore.LOCALMINVERSION + "." + GalacticraftCore.LOCALBUILDVERSION, useMetadata = true, modid = GCSaturn.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
+@Mod(name = GCSaturn.NAME, version = StarcraftCore.LOCALMAJVERSION + "." + StarcraftCore.LOCALMINVERSION + "." + StarcraftCore.LOCALBUILDVERSION, useMetadata = true, modid = GCSaturn.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
 @NetworkMod(channels = { GCSaturn.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class GCSaturn
 {

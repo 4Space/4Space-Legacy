@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.eris;
 import java.io.File;
 import java.util.HashMap;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.eris.dimension.GCErisTeleportType;
 import mattparks.mods.starcraft.eris.dimension.GCErisWorldProvider;
 import mattparks.mods.starcraft.eris.items.GCErisItems;
@@ -30,7 +31,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-@Mod(name = GCEris.NAME, version = GalacticraftCore.LOCALMAJVERSION + "." + GalacticraftCore.LOCALMINVERSION + "." + GalacticraftCore.LOCALBUILDVERSION, useMetadata = true, modid = GCEris.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
+@Mod(name = GCEris.NAME, version = StarcraftCore.LOCALMAJVERSION + "." + StarcraftCore.LOCALMINVERSION + "." + StarcraftCore.LOCALBUILDVERSION, useMetadata = true, modid = GCEris.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
 @NetworkMod(channels = { GCEris.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class GCEris
 {

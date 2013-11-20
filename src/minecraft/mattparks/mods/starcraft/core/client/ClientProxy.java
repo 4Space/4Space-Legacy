@@ -224,7 +224,7 @@ public class ClientProxy extends CommonProxy
         @Override
         public String getLabel()
         {
-            return "Starcraft Core 2 Client";
+            return "Starcraft Core Client";
         }
 
         @Override

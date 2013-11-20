@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.pluto;
 import java.io.File;
 import java.util.HashMap;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.pluto.dimension.GCPlutoTeleportType;
 import mattparks.mods.starcraft.pluto.dimension.GCPlutoWorldProvider;
 import mattparks.mods.starcraft.pluto.items.GCPlutoItems;
@@ -30,7 +31,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-@Mod(name = GCPluto.NAME, version = GalacticraftCore.LOCALMAJVERSION + "." + GalacticraftCore.LOCALMINVERSION + "." + GalacticraftCore.LOCALBUILDVERSION, useMetadata = true, modid = GCPluto.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
+@Mod(name = GCPluto.NAME, version = StarcraftCore.LOCALMAJVERSION + "." + StarcraftCore.LOCALMINVERSION + "." + StarcraftCore.LOCALBUILDVERSION, useMetadata = true, modid = GCPluto.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
 @NetworkMod(channels = { GCPluto.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class GCPluto
 {

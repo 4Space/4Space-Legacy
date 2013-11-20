@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.uranus;
 import java.io.File;
 import java.util.HashMap;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.uranus.dimension.GCUranusTeleportType;
 import mattparks.mods.starcraft.uranus.dimension.GCUranusWorldProvider;
 import mattparks.mods.starcraft.uranus.network.GCUranusPacketHandlerServer;
@@ -29,7 +30,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-@Mod(name = GCUranus.NAME, version = GalacticraftCore.LOCALMAJVERSION + "." + GalacticraftCore.LOCALMINVERSION + "." + GalacticraftCore.LOCALBUILDVERSION, useMetadata = true, modid = GCUranus.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
+@Mod(name = GCUranus.NAME, version = StarcraftCore.LOCALMAJVERSION + "." + StarcraftCore.LOCALMINVERSION + "." + StarcraftCore.LOCALBUILDVERSION, useMetadata = true, modid = GCUranus.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
 @NetworkMod(channels = { GCUranus.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class GCUranus
 {
