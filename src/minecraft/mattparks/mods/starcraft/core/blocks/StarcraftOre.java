@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.spacecraftBlocks.blocks;
+package mattparks.mods.starcraft.core.blocks;
 
 import ic2.api.item.Items;
 
@@ -6,7 +6,7 @@ import java.util.Random;
 
 import universalelectricity.compatibility.Compatibility;
 import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftCore;
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import net.minecraft.block.Block;
@@ -36,7 +36,7 @@ public class StarcraftOre extends Block implements IDetectableResource, IPlantab
     @Override
     public int idDropped(int par1, Random par2Random, int par3)
     {
-    	if(SpacecraftBlocks.MercuryIridiumOre.blockID == this.blockID)
+    	if(StarcraftCore.MercuryIridiumOre.blockID == this.blockID)
     	{
     		if(Compatibility.isIndustrialCraft2Loaded())
     		{
@@ -46,7 +46,7 @@ public class StarcraftOre extends Block implements IDetectableResource, IPlantab
     		return this.blockID;
     	}
     	
-    	if(SpacecraftBlocks.MercuryCoalOre.blockID == this.blockID || SpacecraftBlocks.VenusCoalOre.blockID == this.blockID)
+    	if(StarcraftCore.MercuryCoalOre.blockID == this.blockID || StarcraftCore.VenusCoalOre.blockID == this.blockID)
     	{
     		return Item.coal.itemID;
     	}

@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.jupiter;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.jupiter.dimension.GCJupiterTeleportType;
 import mattparks.mods.starcraft.jupiter.dimension.GCJupiterWorldProvider;
 import mattparks.mods.starcraft.jupiter.entities.SCCoreEntityRocketT5;

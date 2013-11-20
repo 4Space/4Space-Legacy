@@ -7,7 +7,7 @@ import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 
-import mattparks.mods.starcraft.core.CommonProxySCCore;
+import mattparks.mods.starcraft.core.CommonProxy;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
@@ -40,7 +40,7 @@ import cpw.mods.fml.common.network.Player;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-public class ClientProxySCCore extends CommonProxySCCore
+public class ClientProxy extends CommonProxy
 {
     public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
     
@@ -56,6 +56,32 @@ public class ClientProxySCCore extends CommonProxySCCore
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), StarcraftCore.CHANNEL, Side.CLIENT);
+
+        //Blue Cape
+        String capeBlueString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeBlue.png";
+        //Green Cape
+        String capeGreenString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeGreen.png";
+        //Orange Cape
+        String capeOrangeString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeOrange.png";
+        //Red Cape
+        String capeRedString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeRed.png";
+        //Violet Cape
+        String capeVioletString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeViolet.png";
+        //Yellow Cape
+        String capeYellowString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeYellow.png";
+
+        ClientProxyCore.capeMap.put("mattparks", capeBlueString);     
+        ClientProxyCore.capeMap.put("flashy3", capeOrangeString); 
+        ClientProxyCore.capeMap.put("Dinammar", capeVioletString); 
+        ClientProxyCore.capeMap.put("imac123456", capeOrangeString); 
+        ClientProxyCore.capeMap.put("decaxon", capeGreenString); 
+        ClientProxyCore.capeMap.put("Henry33russian", capeBlueString); 
+        
+        ClientProxyCore.capeMap.put("ghostheart305", capeRedString); 
+        ClientProxyCore.capeMap.put("langjam350roxsox", capeBlueString); 
+        ClientProxyCore.capeMap.put("_Ja1m3", capeRedString); 
+        ClientProxyCore.capeMap.put("goldenkat99", capeOrangeString); 
+
     }
 
     @Override
@@ -198,7 +224,7 @@ public class ClientProxySCCore extends CommonProxySCCore
         @Override
         public String getLabel()
         {
-            return "Starcraft Core Client";
+            return "Starcraft Core 2 Client";
         }
 
         @Override

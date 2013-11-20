@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.mercury.GCMercuryConfigManager;
 import mattparks.mods.starcraft.mercury.wgen.dungeon.GCMercuryRoomBoss;
 import mattparks.mods.starcraft.mercury.wgen.dungeon.GCMercuryRoomChests;
@@ -11,7 +12,6 @@ import mattparks.mods.starcraft.mercury.wgen.dungeon.GCMercuryRoomEmpty;
 import mattparks.mods.starcraft.mercury.wgen.dungeon.GCMercuryRoomSpawner;
 import mattparks.mods.starcraft.mercury.wgen.dungeon.GCMercuryRoomTreasure;
 import mattparks.mods.starcraft.mercury.wgen.village.GCMercuryMapGenVillage;
-import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
@@ -34,11 +34,11 @@ import net.minecraftforge.common.ForgeDirection;
 
 public class GCMercuryChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) SpacecraftBlocks.MercuryGrass.blockID;
+    final short topBlockID = (short) StarcraftCore.MercuryGrass.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) SpacecraftBlocks.MercuryDirt.blockID;
+    final short fillBlockID = (short) StarcraftCore.MercuryDirt.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) SpacecraftBlocks.MercuryStone.blockID;
+    final short lowerBlockID = (short) StarcraftCore.MercuryStone.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
@@ -53,7 +53,7 @@ public class GCMercuryChunkProvider extends ChunkProviderGenerate
     private final World worldObj;
     private final GCMercuryMapGenVillage villageGenerator = new GCMercuryMapGenVillage();
 
-    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(SpacecraftBlocks.MercuryBrick.blockID, 14, 8, 16, 3);
+    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(StarcraftCore.MercuryBrick.blockID, 14, 8, 16, 3);
 
     {
         this.dungeonGenerator.otherRooms.add(new GCMercuryRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));

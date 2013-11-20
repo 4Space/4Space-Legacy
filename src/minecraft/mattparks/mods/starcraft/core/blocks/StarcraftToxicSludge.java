@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.spacecraftBlocks.blocks;
+package mattparks.mods.starcraft.core.blocks;
 
 import java.util.List;
 import java.util.Random;

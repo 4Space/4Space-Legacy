@@ -8,7 +8,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.IGuiHandler;
 
-public class CommonProxySCCore implements IGuiHandler
+public class CommonProxy implements IGuiHandler
 {
     public void preInit(FMLPreInitializationEvent event)
     {

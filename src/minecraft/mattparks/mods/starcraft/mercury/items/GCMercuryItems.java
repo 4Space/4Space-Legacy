@@ -1,6 +1,5 @@
 package mattparks.mods.starcraft.mercury.items;
 
-import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.mercury.GCMercuryConfigManager;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;

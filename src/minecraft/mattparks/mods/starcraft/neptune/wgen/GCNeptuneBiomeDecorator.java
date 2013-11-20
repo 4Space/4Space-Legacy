@@ -2,7 +2,7 @@ package mattparks.mods.starcraft.neptune.wgen;
 
 import java.util.Random;
 
-import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftCore;
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreWorldGenMinableMeta;
 import net.minecraft.world.World;

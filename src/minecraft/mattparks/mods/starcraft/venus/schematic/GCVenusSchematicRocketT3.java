@@ -1,6 +1,5 @@
 package mattparks.mods.starcraft.venus.schematic;
 
-import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.venus.GCVenusConfigManager;
 import mattparks.mods.starcraft.venus.client.gui.SCCoreGuiSchematicRocketT3;
 import mattparks.mods.starcraft.venus.inventory.SCCoreContainerRocketBenchT3;

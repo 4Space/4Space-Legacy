@@ -2,8 +2,8 @@ package mattparks.mods.starcraft.pluto.wgen;
 
 import java.util.Random;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.pluto.GCPluto;
-import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreWorldGenMinableMeta;
 import net.minecraft.world.World;
@@ -28,7 +28,7 @@ public class GCPlutoBiomeDecorator
     public GCPlutoBiomeDecorator(BiomeGenBase par1BiomeGenBase)
     {
 //        this.gemGen = new GCCoreWorldGenMinableMeta(PlutoBlocks.PlutoBlocks.blockID, 4, 0, true, MercuryBlocks.PlutoBlocks.blockID, 4);
-        this.dirtGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.PlutoDirt.blockID, 32, 3, true, SpacecraftBlocks.PlutoDirt.blockID, 4); 
+        this.dirtGen = new GCCoreWorldGenMinableMeta(StarcraftCore.PlutoDirt.blockID, 32, 3, true, StarcraftCore.PlutoDirt.blockID, 4); 
 //        this.coalGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);     
 //        this.tinGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);  
 //        this.copperGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);      

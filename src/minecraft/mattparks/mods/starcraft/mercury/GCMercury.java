@@ -3,14 +3,13 @@ package mattparks.mods.starcraft.mercury;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.SCCoreConfigManager;
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.mercury.dimension.GCMercuryTeleportType;
 import mattparks.mods.starcraft.mercury.dimension.GCMercuryWorldProvider;
 import mattparks.mods.starcraft.mercury.entities.SCCoreEntityRocketT4;
 import mattparks.mods.starcraft.mercury.items.GCMercuryItems;
 import mattparks.mods.starcraft.mercury.network.GCMercuryPacketHandlerServer;
 import mattparks.mods.starcraft.mercury.recipe.GCMercuryRecipeManager;
-import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -55,7 +54,7 @@ public class GCMercury
     
 	public static CreativeTabs starcraftMercuryTab = new CreativeTabs("starcraftMercuryTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(SpacecraftBlocks.MercuryGrass, 1, 0);
+			return new ItemStack(StarcraftCore.MercuryGrass, 1, 0);
 		}
 	};
 

@@ -2,7 +2,7 @@ package mattparks.mods.starcraft.mercury.wgen;
 
 import java.util.Random;
 
-import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftCore;
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreWorldGenMinableMeta;
 import net.minecraft.world.World;
@@ -26,11 +26,11 @@ public class GCMercuryBiomeDecorator
 
     public GCMercuryBiomeDecorator()
     {
-        this.gemGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryIridiumOre.blockID, 4, 1, false, SpacecraftBlocks.MercuryStone.blockID, 4);
-        this.dirtGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryDirt.blockID, 32, 2, false, SpacecraftBlocks.MercuryStone.blockID, 4); 
-        this.coalGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryCoalOre.blockID, 32, 3, false, SpacecraftBlocks.MercuryStone.blockID, 4);     
-        this.tinGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryTinOre.blockID, 32, 4, false, SpacecraftBlocks.MercuryStone.blockID, 4);  
-        this.copperGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryCopperOre.blockID, 32, 5, false,SpacecraftBlocks.MercuryStone.blockID, 4);      
+        this.gemGen = new GCCoreWorldGenMinableMeta(StarcraftCore.MercuryIridiumOre.blockID, 4, 1, false, StarcraftCore.MercuryStone.blockID, 4);
+        this.dirtGen = new GCCoreWorldGenMinableMeta(StarcraftCore.MercuryDirt.blockID, 32, 2, false, StarcraftCore.MercuryStone.blockID, 4); 
+        this.coalGen = new GCCoreWorldGenMinableMeta(StarcraftCore.MercuryCoalOre.blockID, 32, 3, false, StarcraftCore.MercuryStone.blockID, 4);     
+        this.tinGen = new GCCoreWorldGenMinableMeta(StarcraftCore.MercuryTinOre.blockID, 32, 4, false, StarcraftCore.MercuryStone.blockID, 4);  
+        this.copperGen = new GCCoreWorldGenMinableMeta(StarcraftCore.MercuryCopperOre.blockID, 32, 5, false,StarcraftCore.MercuryStone.blockID, 4);      
     }
 
     public void decorate(World worldObj, Random rand, int chunkX, int chunkZ)

@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.spacecraftBlocks.blocks;
+package mattparks.mods.starcraft.core.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

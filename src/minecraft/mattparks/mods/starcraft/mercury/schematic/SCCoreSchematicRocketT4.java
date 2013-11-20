@@ -1,6 +1,5 @@
 package mattparks.mods.starcraft.mercury.schematic;
 
-import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.mercury.GCMercuryConfigManager;
 import mattparks.mods.starcraft.mercury.client.gui.SCCoreGuiSchematicRocketT4;
 import mattparks.mods.starcraft.mercury.inventory.SCCoreContainerRocketBenchT4;

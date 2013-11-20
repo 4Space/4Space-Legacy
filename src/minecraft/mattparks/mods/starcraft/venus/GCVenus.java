@@ -3,8 +3,7 @@ package mattparks.mods.starcraft.venus;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.SCCoreConfigManager;
-import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.venus.dimension.GCVenusTeleportType;
 import mattparks.mods.starcraft.venus.dimension.GCVenusWorldProvider;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityEvolvedBlaze;
@@ -61,7 +60,7 @@ public class GCVenus
 	
 	public static CreativeTabs starcraftVenusTab = new CreativeTabs("starcraftVenusTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(SpacecraftBlocks.VenusGrass, 1, 0);
+			return new ItemStack(StarcraftCore.VenusGrass, 1, 0);
 		}
 	};
 	

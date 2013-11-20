@@ -1,6 +1,5 @@
 package mattparks.mods.starcraft.jupiter.schematic;
 
-import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.jupiter.GCJupiterConfigManager;
 import mattparks.mods.starcraft.jupiter.client.gui.SCCoreGuiSchematicRocketT5;
 import mattparks.mods.starcraft.jupiter.inventory.SCCoreContainerRocketBenchT5;

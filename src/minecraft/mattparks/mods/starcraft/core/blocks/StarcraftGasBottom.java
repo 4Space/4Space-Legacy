@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.spacecraftBlocks.blocks;
+package mattparks.mods.starcraft.core.blocks;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;

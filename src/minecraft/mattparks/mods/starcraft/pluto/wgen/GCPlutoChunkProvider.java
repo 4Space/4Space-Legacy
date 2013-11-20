@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.pluto.GCPluto;
 import mattparks.mods.starcraft.pluto.GCPlutoConfigManager;
 import mattparks.mods.starcraft.pluto.wgen.dungeon.*;
-import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
@@ -32,11 +32,11 @@ import net.minecraftforge.common.ForgeDirection;
 
 public class GCPlutoChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) SpacecraftBlocks.PlutoGrass.blockID;
+    final short topBlockID = (short) StarcraftCore.PlutoGrass.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) SpacecraftBlocks.PlutoDirt.blockID;
+    final short fillBlockID = (short) StarcraftCore.PlutoDirt.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) SpacecraftBlocks.PlutoStone.blockID;
+    final short lowerBlockID = (short) StarcraftCore.PlutoStone.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
@@ -49,7 +49,7 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
     public GCPlutoBiomeDecorator biomedecoratorplanet = new GCPlutoBiomeDecorator(GCPlutoBiomeGenBase.venusFlat);
 
     private final World worldObj;
-    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(SpacecraftBlocks.PlutoBrick.blockID, 14, 8, 16, 3);
+    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(StarcraftCore.PlutoBrick.blockID, 14, 8, 16, 3);
 
     {
         this.dungeonGenerator.otherRooms.add(new GCPlutoRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));

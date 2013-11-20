@@ -1,6 +1,5 @@
 package mattparks.mods.starcraft.jupiter.items;
 
-import mattparks.mods.starcraft.core.SCCoreConfigManager;
 import mattparks.mods.starcraft.jupiter.GCJupiterConfigManager;
 import mattparks.mods.starcraft.jupiter.items.GCJupiterItems;
 import net.minecraft.item.EnumArmorMaterial;

@@ -2,7 +2,7 @@ package mattparks.mods.starcraft.mercury.recipe;
 
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.venus.items.GCVenusItems;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
@@ -25,7 +25,7 @@ public class GCMercuryRecipeManager
     private static void addUniversalRecipes()
     {
         // Temporary craft TODO
-        RecipeUtil.addRecipe(new ItemStack(SpacecraftBlocks.caravanModule), new Object[] { "XYZ", "GJG", "GGG", 'X', Block.furnaceIdle, 'Y', Block.workbench , 'Z', Block.chest, 'G' , GCCoreItems.canvas, 'J' , new ItemStack(GCCoreItems.canister, 1, 0) });
+        RecipeUtil.addRecipe(new ItemStack(StarcraftCore.caravanModule), new Object[] { "XYZ", "GJG", "GGG", 'X', Block.furnaceIdle, 'Y', Block.workbench , 'Z', Block.chest, 'G' , GCCoreItems.canvas, 'J' , new ItemStack(GCCoreItems.canister, 1, 0) });
         
     }
 }

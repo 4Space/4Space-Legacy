@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.jupiter.GCJupiterConfigManager;
-import mattparks.mods.starcraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
@@ -25,11 +25,11 @@ import net.minecraft.world.gen.ChunkProviderGenerate;
 
 public class GCJupiterChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) SpacecraftBlocks.JupiterNitrogen.blockID;
+    final short topBlockID = (short) StarcraftCore.JupiterNitrogen.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) SpacecraftBlocks.JupiterHelium.blockID;
+    final short fillBlockID = (short) StarcraftCore.JupiterHelium.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) SpacecraftBlocks.JupiterHydrogen.blockID;
+    final short lowerBlockID = (short) StarcraftCore.JupiterHydrogen.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
