@@ -78,7 +78,7 @@ public class ClientProxySedna extends CommonProxySedna
     @Override
     public void registerRenderInformation()
     {
-        RenderingRegistry.addNewArmourRendererPrefix("gem");
+        RenderingRegistry.addNewArmourRendererPrefix("gravity");
     }
 
 

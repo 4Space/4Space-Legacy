@@ -199,7 +199,7 @@ public class GCSednaWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public float getGravity()
     {
-        return 0.077F;
+        return 0.073F;
     }
 
     @Override

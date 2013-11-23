@@ -1,9 +1,9 @@
 package mattparks.mods.starcraft.core.blocks;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.venus.entities.GCVenusEntityEvolvedBlaze;
 import net.minecraft.block.BlockDragonEgg;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
@@ -63,7 +63,7 @@ public class StarcraftEgg extends BlockDragonEgg
     {
         if (!world.isRemote)
         {
-        	EntityBlaze blaze = new EntityBlaze(world);
+        	GCVenusEntityEvolvedBlaze blaze = new GCVenusEntityEvolvedBlaze(world);
             blaze.setPosition(x + 0.5, y + 1, z + 0.5);
             world.spawnEntityInWorld(blaze);
         }

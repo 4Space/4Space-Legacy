@@ -2,6 +2,7 @@ package mattparks.mods.starcraft.sedna;
 
 import java.io.File;
 import java.util.logging.Level;
+
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.Configuration;
@@ -32,6 +33,10 @@ public class GCSednaConfigManager
     public static int idItemSednaBasic;
     
     // ARMOR
+    public static int idArmorGravityHelmet;
+    public static int idArmorGravityChestplate;
+    public static int idArmorGravityLeggings;
+    public static int idArmorGravityBoots;
 
     // TOOLS
 
@@ -59,6 +64,12 @@ public class GCSednaConfigManager
      
             GCSednaConfigManager.idItemSednaBasic = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSednaBasic", 3653).getInt(3653);
 
+            GCSednaConfigManager.idArmorGravityHelmet = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGravityHelmet", 6867).getInt(6867);
+            GCSednaConfigManager.idArmorGravityChestplate = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGravityChestplate", 6868).getInt(6868);
+            GCSednaConfigManager.idArmorGravityLeggings = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGravityLeggings", 6869).getInt(6869);
+            GCSednaConfigManager.idArmorGravityBoots = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGravityBoots", 6870).getInt(6870);
+
+            
             //Block id's 7755-7756 are used by Starcraft mercury
             
             GCSednaConfigManager.generateOtherMods = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Generate other mod's features on Eris", false).getBoolean(false);        
