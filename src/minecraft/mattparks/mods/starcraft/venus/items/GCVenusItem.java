@@ -90,7 +90,7 @@ public class GCVenusItem extends Item
     @SideOnly(Side.CLIENT)
     public boolean hasEffect(ItemStack par1ItemStack)
 	{
-    	if(par1ItemStack.getItemDamage() == 3 || par1ItemStack.getItemDamage() == 4)
+    	if(par1ItemStack.getItemDamage() == 3 || par1ItemStack.getItemDamage() == 6)
     	{
     		return true;
     	}
@@ -113,7 +113,7 @@ public class GCVenusItem extends Item
         {
             switch (par1ItemStack.getItemDamage())
             {
-            case 10:
+            case 14:
                 par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier3.desc"));
                 break;
             }

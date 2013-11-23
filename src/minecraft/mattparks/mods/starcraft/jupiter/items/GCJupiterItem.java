@@ -31,7 +31,7 @@ public class GCJupiterItem extends Item
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftGasTab;
+        return GCJupiter.starcraftGasTab;
     }
 
     @Override

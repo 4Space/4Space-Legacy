@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.eris.items;
 import java.util.List;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.eris.GCEris;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemSchematic;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -28,7 +29,7 @@ public class GCErisItemSchematic extends GCCoreItemSchematic implements ISchemat
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftErisTab;
+        return GCEris.starcraftErisTab;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

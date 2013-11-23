@@ -33,7 +33,7 @@ public class GCPlutoItem extends Item
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftPlutoTab;
+        return GCPluto.starcraftPlutoTab;
     }
 
     @Override

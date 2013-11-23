@@ -13,6 +13,7 @@ import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -54,6 +55,12 @@ public class GCEris
     
     public static long tick;
     public static long slowTick;
+    
+	public static CreativeTabs starcraftErisTab = new CreativeTabs("starcraftErisTab") {
+		public ItemStack getIconItemStack() {
+			return new ItemStack(StarcraftCore.ErisGrass, 1, 0);
+		}
+	};
     
     public static HashMap<String, ItemStack> blocksList = new HashMap<String, ItemStack>();
 

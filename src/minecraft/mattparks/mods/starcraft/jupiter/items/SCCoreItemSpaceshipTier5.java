@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.jupiter.items;
 import java.util.List;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.jupiter.GCJupiter;
 import mattparks.mods.starcraft.jupiter.entities.SCCoreEntityRocketT5;
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType;
@@ -44,7 +45,7 @@ public class SCCoreItemSpaceshipTier5 extends Item implements IHoldableItem
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return StarcraftCore.starcraftGasTab;
+        return GCJupiter.starcraftGasTab;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.eris.items;
+package mattparks.mods.starcraft.sedna.items;
 
 import java.util.List;
 
@@ -18,12 +18,12 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCErisItem extends Item
+public class GCSednaItem extends Item
 {
-    public static String[] names = { "erisPlate", "warpDrive" };
-    protected Icon[] icons = new Icon[GCErisItem.names.length];
+    public static String[] names = { "sednaPlate" };
+    protected Icon[] icons = new Icon[GCSednaItem.names.length];
 
-    public GCErisItem(int par1)
+    public GCSednaItem(int par1)
     {
         super(par1);
         this.setMaxDamage(0);
@@ -49,7 +49,7 @@ public class GCErisItem extends Item
     {
         int i = 0;
 
-        for (String name : GCErisItem.names)
+        for (String name : GCSednaItem.names)
         {
             this.icons[i++] = iconRegister.registerIcon(GCEris.ASSET_PREFIX + name);
         }
@@ -70,7 +70,7 @@ public class GCErisItem extends Item
     @Override
     public void getSubItems(int par1, CreativeTabs par2CreativeTabs, List par3List)
     {
-        for (int i = 0; i < GCErisItem.names.length; i++)
+        for (int i = 0; i < GCSednaItem.names.length; i++)
         {
             par3List.add(new ItemStack(par1, 1, i));
         }
@@ -81,7 +81,7 @@ public class GCErisItem extends Item
     {
         if (this.icons.length > par1ItemStack.getItemDamage())
         {
-            return "item." + GCErisItem.names[par1ItemStack.getItemDamage()];
+            return "item." + GCSednaItem.names[par1ItemStack.getItemDamage()];
         }
 
         return "unnamed";
