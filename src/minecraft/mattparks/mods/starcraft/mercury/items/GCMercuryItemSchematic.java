@@ -50,7 +50,7 @@ public class GCMercuryItemSchematic extends GCCoreItemSchematic implements ISche
         
         for (int i = 0; i < GCMercuryItemSchematic.names.length; i++)
         {
-            this.icons[i] = iconRegister.registerIcon(StarcraftCore.ASSET_PREFIX + GCMercuryItemSchematic.names[i]);
+            this.icons[i] = iconRegister.registerIcon(GCMercury.ASSET_PREFIX + GCMercuryItemSchematic.names[i]);
         }
         
     }

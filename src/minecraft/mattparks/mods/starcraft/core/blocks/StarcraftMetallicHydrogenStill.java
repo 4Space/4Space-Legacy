@@ -10,7 +10,7 @@ public class StarcraftMetallicHydrogenStill extends BlockStationary{
         {
             super(id, Material.lava);
             this.setUnlocalizedName(name);
-            this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
+//            this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
             this.setHardness(2.0F);
 
             this.blockHardness = 100.0F;

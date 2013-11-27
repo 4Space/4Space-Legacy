@@ -19,6 +19,8 @@ tile.plutoBrick.name=Pluto Brick
 # ENTITYS
 
 # GUI
+itemGroup.starcraftPlutoTab=Spacecraft Pluto
+
 gui.choosePlanet.desc.pluto=Very Cold#Frozen Surface#Gravity: 8%
 
 dimension.Pluto.name=Pluto

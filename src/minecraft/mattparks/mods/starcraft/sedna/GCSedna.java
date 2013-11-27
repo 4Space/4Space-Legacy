@@ -42,7 +42,7 @@ public class GCSedna
     public static final String CHANNELENTITIES = "GCsednaEntities";
 
     public static final String LANGUAGE_PATH = "/assets/starcraftsedna/lang/";
-    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" , "ru_RU" };
+    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.sedna.client.ClientProxySedna", serverSide = "mattparks.mods.starcraft.sedna.CommonProxySedna")
     public static CommonProxySedna proxy;

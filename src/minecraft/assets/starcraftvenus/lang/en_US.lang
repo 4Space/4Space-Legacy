@@ -1,8 +1,14 @@
 # Starcraft Venus Language File = UNITED STATES ENGLISH
 
 # GENERAL ITEMS
+item.tier3.desc=Tier 3
 
 # ITEMS
+item.spaceshipTier3.name=Tier 3 Rocket
+item.ingotGem.name=Gem Ingot
+item.itemGem.name=Gem
+item.redGemPlate.name=Red Gem Plate
+item.venusPlate.name=Venus Plate
 item.ingotSulfer.name=Sulfer Ingot
 item.sulferPlate.name=Sulfer Plate
 item.venusPlate.name=Venus Plate
@@ -18,6 +24,7 @@ item.venusBattery.name=Venus Battery
 item.positiveParticle.name=Positivity Charged Particle
 item.negativeParticle.name=Negativity Charged Particle
 item.strangeParticle.name=Strange Particle
+item.plateHeavyT3.name=Heavy-Duty Plate
 
 # TOOLS
 item.sulferPick.name=Sulfer Pickaxe
@@ -25,12 +32,21 @@ item.sulferAxe.name=Sulfer Axe
 item.sulferHoe.name=Sulfer Hoe
 item.sulferSpade.name=Sulfer Shovel
 item.sulferSword.name=Sulfer Sword
+item.gemPick.name=Gem Pickaxe
+item.gemAxe.name=Gem Axe
+item.gemHoe.name=Gem Hoe
+item.gemSpade.name=Gem Shovel
+item.gemSword.name=Gem Sword
 
 # ARMOR
 item.sulferHelmet.name=Sulfer Helmet
 item.sulferChestplate.name=Sulfer Chestplate
 item.sulferLeggings.name=Sulfer Leggings
 item.sulferBoots.name=Sulfer Boots
+item.gemHelmet.name=Gem Helmet
+item.gemChestplate.name=Gem Chestplate
+item.gemLeggings.name=Gem Leggings
+item.gemBoots.name=Gem Boots
 
 # BLOCKS
 tile.VenusGrass.name=Venus Grass
@@ -51,11 +67,19 @@ tile.VenusCopperOre.name=Copper Ore
 tile.VenusBasalt.name=Basalt
 tile.VenusHalfBasalt.name=Basalt Slab
 tile.EvolvedBlazeEgg.name=Evolved Blaze Egg
+tile.VenusianTNT.name=Venusian TNT
 
 # ENTITYS
 entity.GalacticraftCore.VenusianVillager.name=Venusian Villager
+entity.GalacticraftCore.Flameling.name=Flameling
+entity.GalacticraftCore.EvolvedBlaze.name=Evolved Blaze
 
 # GUI
+itemGroup.starcraftVenusTab=Spacecraft Venus
+
 gui.choosePlanet.desc.venus=Habitable#No Oxygen#Gravity: 90%
 
 dimension.Venus.name=Venus
+
+# Schematics
+schematic.rocketT3.name=Tier 3 Rocket

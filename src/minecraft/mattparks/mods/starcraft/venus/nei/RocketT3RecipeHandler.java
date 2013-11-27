@@ -6,6 +6,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.venus.GCVenus;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
@@ -18,7 +19,7 @@ import codechicken.nei.recipe.TemplateRecipeHandler;
 
 public class RocketT3RecipeHandler extends TemplateRecipeHandler
 {
-    private static final ResourceLocation rocketGuiTexture = new ResourceLocation(StarcraftCore.ASSET_DOMAIN, "textures/gui/schematic_rocket_T3.png");
+    private static final ResourceLocation rocketGuiTexture = new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/gui/schematic_rocket_T3.png");
 
     public String getRecipeId()
     {

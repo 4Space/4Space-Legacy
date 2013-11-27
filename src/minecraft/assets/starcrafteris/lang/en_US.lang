@@ -19,6 +19,8 @@ tile.erisBrick.name=Eris Brick
 # ENTITYS
 
 # GUI
+itemGroup.starcraftErisTab=Spacecraft Eris
+
 gui.choosePlanet.desc.eris=Very Cold#*Little Surface#*Gravity: 0.27%
 
 dimension.Eris.name=Eris

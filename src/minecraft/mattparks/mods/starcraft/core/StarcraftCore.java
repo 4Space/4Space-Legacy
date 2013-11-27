@@ -18,6 +18,7 @@ import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
@@ -57,20 +58,20 @@ public class StarcraftCore
 	public final static Block gravityGenerator = new StarcraftBlock(986, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("GravityGenerator")
-			.setTextureName("starcraftcore:GravityGenerator")
+			.setTextureName("starcraftmercury:GravityGenerator")
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 
 	// Block Core, Tier1 Caravan Module
 	public final static Block caravanModule = new StarcraftCaravanModule(927, null)
 			.setHardness(0.4F).setStepSound(Block.soundClothFootstep)
 			.setUnlocalizedName("caravanModule")
-			.setTextureName("starcraftcore:caravanModule");
+			.setTextureName("starcraftmercury:caravanModule");
 
 	// Block Core, Caravan Block
 	public final static Block caravanModulePart = new StarcraftBlock(928, null)
 			.setHardness(1000000.0F).setStepSound(Block.soundClothFootstep)
 			.setUnlocalizedName("caravanModulePart")
-			.setTextureName("starcraftcore:caravanModulePart")
+			.setTextureName("starcraftmercury:caravanModulePart")
 			.setBlockUnbreakable();
 
 	// Block Venus, Grass
@@ -521,8 +522,8 @@ public class StarcraftCore
     @Instance(StarcraftCore.MODID)
     public static StarcraftCore instance;
 
-    public static final String ASSET_DOMAIN = "starcraftcore";
-    public static final String ASSET_PREFIX = StarcraftCore.ASSET_DOMAIN + ":";
+//    public static final String ASSET_DOMAIN = "starcraftcore";
+//    public static final String ASSET_PREFIX = StarcraftCore.ASSET_DOMAIN + ":";
     
 //    public static long tick;
 //    public static long slowTick;
@@ -532,7 +533,7 @@ public class StarcraftCore
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        new StarcraftCoreConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/core2.conf"));
+        new StarcraftCoreConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/core.conf"));
 
         StarcraftCore.proxy.preInit(event);
     }

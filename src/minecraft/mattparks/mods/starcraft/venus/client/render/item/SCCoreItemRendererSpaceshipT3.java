@@ -1,11 +1,13 @@
 package mattparks.mods.starcraft.venus.client.render.item;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.venus.GCVenus;
 import mattparks.mods.starcraft.venus.client.model.SCCoreModelSpaceshipTier3;
 import mattparks.mods.starcraft.venus.entities.SCCoreEntityRocketT3;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.core.client.render.item.GCCoreItemRendererSpaceship;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityRocketT1;
+import micdoodle8.mods.galacticraft.mars.GalacticraftMars;
 import net.minecraft.client.model.ModelChest;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,12 +22,12 @@ import cpw.mods.fml.client.FMLClientHandler;
 
 public class SCCoreItemRendererSpaceshipT3 extends GCCoreItemRendererSpaceship
 {
-    private static final ResourceLocation cargoRocketTexture = new ResourceLocation(StarcraftCore.ASSET_DOMAIN, "textures/model/cargoRocket.png");
+    private static final ResourceLocation cargoRocketTexture = new ResourceLocation(GalacticraftMars.TEXTURE_DOMAIN, "textures/model/cargoRocket.png");
     private IModelCustom cargoRocketModel;
 
     public SCCoreItemRendererSpaceshipT3(IModelCustom cargoRocketModel)
     {
-        super(new SCCoreEntityRocketT3(FMLClientHandler.instance().getClient().theWorld), new SCCoreModelSpaceshipTier3(), new ResourceLocation(StarcraftCore.ASSET_DOMAIN, "textures/model/rocketT3.png"));
+        super(new SCCoreEntityRocketT3(FMLClientHandler.instance().getClient().theWorld), new SCCoreModelSpaceshipTier3(), new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/model/rocketT3.png"));
         this.cargoRocketModel = cargoRocketModel;
     }
 

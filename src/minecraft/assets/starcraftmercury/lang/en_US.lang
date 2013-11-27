@@ -1,9 +1,15 @@
 # Starcraft Mercury Language File = UNITED STATES ENGLISH
 
 # GENERAL ITEMS
+item.tier4.desc=Tier 4
 
 # ITEMS
+item.spaceshipTier4.name=Tier 4 Rocket
+item.plateHeavyT4.name=Heavy-Duty Plate
 item.mercuryPlate.name=Mercury Plate
+item.jetpack.name=Jetpack
+item.jetpackFuel.name=Jetpack Fuel
+item.gravityGeneratorCore.name=Gravity Generator Core
 
 # TOOLS
 
@@ -20,10 +26,17 @@ tile.MercuryCoalOre.name=Mercury Coal Ore
 tile.MercuryTinOre.name=Mercury Tin Ore
 tile.MercuryIridiumOre.name=Mercury Iridium Ore
 tile.MercuryCopperOre.name=Mercury Copper Ore
+tile.caravanModule.name=Portable Space Tent
+tile.GravityGenerator.name=Gravity Generator
 
 # ENTITYS
 
 # GUI
+itemGroup.starcraftMercuryTab=Spacecraft Mercury
+
 gui.choosePlanet.desc.mercury=Habitable#No Oxygen#Gravity: 38%
 
 dimension.Mercury.name=Mercury
+
+# Schematics
+schematic.rocketT4.name=Tier 4 Rocket

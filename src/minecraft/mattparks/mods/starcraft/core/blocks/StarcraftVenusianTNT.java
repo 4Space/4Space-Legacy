@@ -31,7 +31,7 @@ public class StarcraftVenusianTNT extends Block
     {
         super(id, Material.tnt);
         this.setUnlocalizedName(name);
-        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
+//        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
         this.setHardness(2.0F);
     }
 

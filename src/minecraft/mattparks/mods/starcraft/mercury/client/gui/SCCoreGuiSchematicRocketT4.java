@@ -1,6 +1,7 @@
 package mattparks.mods.starcraft.mercury.client.gui;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.mercury.GCMercury;
 import mattparks.mods.starcraft.mercury.inventory.SCCoreContainerRocketBenchT4;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -14,7 +15,7 @@ import org.lwjgl.opengl.GL11;
 
 public class SCCoreGuiSchematicRocketT4 extends GuiContainer implements ISchematicResultPage
 {
-    private static final ResourceLocation tier4SchematicTexture = new ResourceLocation(StarcraftCore.ASSET_DOMAIN, "textures/gui/schematic_rocket_T3.png");
+    private static final ResourceLocation tier4SchematicTexture = new ResourceLocation(GCMercury.ASSET_DOMAIN, "textures/gui/schematic_rocket_T3.png");
 
     private int pageIndex;
 

@@ -80,7 +80,7 @@ public class ClientProxyVenus extends CommonProxyVenus
         IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
         // TODO remove internal cargo rocket codes
 
-        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT3.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier3(), StarcraftCore.ASSET_DOMAIN, "rocketT3"));
+        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT3.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier3(), GCVenus.ASSET_DOMAIN, "rocketT3"));
         MinecraftForgeClient.registerItemRenderer(GCVenusItems.spaceshipT3.itemID, new SCCoreItemRendererSpaceshipT3(cargoRocketModel));
     
     }

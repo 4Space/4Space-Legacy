@@ -1,6 +1,7 @@
 package mattparks.mods.starcraft.jupiter.client.gui;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.jupiter.GCJupiter;
 import mattparks.mods.starcraft.jupiter.inventory.SCCoreContainerRocketBenchT5;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -14,7 +15,7 @@ import org.lwjgl.opengl.GL11;
 
 public class SCCoreGuiSchematicRocketT5 extends GuiContainer implements ISchematicResultPage
 {
-    private static final ResourceLocation tier5SchematicTexture = new ResourceLocation(StarcraftCore.ASSET_DOMAIN, "textures/gui/schematic_rocket_T5.png");
+    private static final ResourceLocation tier5SchematicTexture = new ResourceLocation(GCJupiter.ASSET_DOMAIN, "textures/gui/schematic_rocket_T5.png");
 
     private int pageIndex;
 

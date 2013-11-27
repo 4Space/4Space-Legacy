@@ -4,6 +4,7 @@ import java.util.List;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.eris.GCEris;
+import mattparks.mods.starcraft.sedna.GCSedna;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -33,7 +34,7 @@ public class GCSednaItem extends Item
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCEris.starcraftErisTab;
+        return GCSedna.starcraftSednaTab;
     }
 
     @Override

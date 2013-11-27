@@ -50,7 +50,7 @@ public class StarcraftToxicSludge extends BlockFlowing
     {
         super(id, Material.water);
         this.setUnlocalizedName(name);
-        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
+//        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
         this.setHardness(2.0F);
     }
 

@@ -50,7 +50,7 @@ public class GCErisItemSchematic extends GCCoreItemSchematic implements ISchemat
         
         for (int i = 0; i < GCErisItemSchematic.names.length; i++)
         {
-            this.icons[i] = iconRegister.registerIcon(StarcraftCore.ASSET_PREFIX + GCErisItemSchematic.names[i]);
+            this.icons[i] = iconRegister.registerIcon(GCEris.ASSET_PREFIX + GCErisItemSchematic.names[i]);
         }
         
     }

@@ -1,6 +1,7 @@
 package mattparks.mods.starcraft.venus.client.gui;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.venus.GCVenus;
 import mattparks.mods.starcraft.venus.inventory.SCCoreContainerRocketBenchT3;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -14,7 +15,7 @@ import org.lwjgl.opengl.GL11;
 
 public class SCCoreGuiSchematicRocketT3 extends GuiContainer implements ISchematicResultPage
 {
-    private static final ResourceLocation tier3SchematicTexture = new ResourceLocation(StarcraftCore.ASSET_DOMAIN, "textures/gui/schematic_rocket_T3.png");
+    private static final ResourceLocation tier3SchematicTexture = new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/gui/schematic_rocket_T3.png");
 
     private int pageIndex;
 

@@ -19,7 +19,7 @@ public class StarcraftOre extends Block implements IDetectableResource, IPlantab
     {
         super(id, Material.rock);
         this.setUnlocalizedName(name);
-        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
+//        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
         this.setHardness(2.0F);
     }
 

@@ -19,6 +19,8 @@ tile.SednaBrick.name=Sedna Brick
 # ENTITYS
 
 # GUI
+itemGroup.starcraftSednaTab=Spacecraft Sedna
+
 gui.choosePlanet.desc.sedna=No Life#*Very Far Away#*Gravity: 0.27%
 
 dimension.Sedna.name=Sedna

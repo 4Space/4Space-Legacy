@@ -50,7 +50,7 @@ public class GCVenusItemSchematic extends GCCoreItemSchematic implements ISchema
         
         for (int i = 0; i < GCVenusItemSchematic.names.length; i++)
         {
-            this.icons[i] = iconRegister.registerIcon(StarcraftCore.ASSET_PREFIX + GCVenusItemSchematic.names[i]);
+            this.icons[i] = iconRegister.registerIcon(GCVenus.ASSET_PREFIX + GCVenusItemSchematic.names[i]);
         }
         
     }
