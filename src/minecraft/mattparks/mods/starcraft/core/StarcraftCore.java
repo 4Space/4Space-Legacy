@@ -479,35 +479,35 @@ public class StarcraftCore
 	// Block Sedna Grass
 	public final static Block SednaGrass = new StarcraftGrass(932, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
-			.setUnlocalizedName("grassEris")
+			.setUnlocalizedName("grassSedna")
 			.setTextureName("starcraftsedna:grassSedna")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
 
 	// Block Sedna Dirt
 	public final static Block SednaDirt = new StarcraftBlock(933, null)
 			.setHardness(0.3F).setStepSound(Block.soundStoneFootstep)
-			.setUnlocalizedName("dirtEris")
+			.setUnlocalizedName("dirtSedna")
 			.setTextureName("starcraftsedna:dirtSedna")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
 
 	// Block Sedna Stone
 	public final static Block SednaStone = new PlutoStone(934, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
-			.setUnlocalizedName("stoneEris")
+			.setUnlocalizedName("stoneSedna")
 			.setTextureName("starcraftsedna:stoneSedna")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
 
 	// Block Sedna Cobblestone
 	public final static Block SednaCobblestone = new StarcraftBlock(935, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
-			.setUnlocalizedName("cobblestoneEris")
+			.setUnlocalizedName("cobblestoneSedna")
 			.setTextureName("starcraftsedna:cobblestoneSedna")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
 
 	// Block Sedna Brick
 	public final static Block SednaBrick = new StarcraftBlock(936, null)
 			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
-			.setUnlocalizedName("erisBrick")
+			.setUnlocalizedName("sednaBrick")
 			.setTextureName("starcraftsedna:sednaBrick")
 			.setCreativeTab(GCSedna.starcraftSednaTab)
 			.setBlockUnbreakable();
