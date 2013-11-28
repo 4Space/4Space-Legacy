@@ -10,6 +10,7 @@ import net.minecraftforge.common.MinecraftForge;
 public class GCVenusItems
 {
     public static Item venusItemBasic;
+    
     public static Item sulferPickaxe;
     public static Item sulferAxe;
     public static Item sulferHoe;

@@ -18,7 +18,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCVenusItem extends Item
 {
-    public static String[] names = { "ingotSulfer", "sulferDust", "sulferPlate", "itemGem", "redGemPlate", "plateHeavyT3", "venusRod", "venusRodDust", "vurnBerry", "rawBasalt", "basaltBrick", "venusPowerCrystal" };
+    public static String[] names = { "ingotSulfer", "sulferDust", "sulferPlate", "itemGem", "redGemPlate", "plateHeavyT3", "venusRod", "venusRodDust", "rawBasalt", "basaltBrick", "venusPowerCrystal" };
     protected Icon[] icons = new Icon[GCVenusItem.names.length];
 
     public GCVenusItem(int par1)
@@ -88,7 +88,7 @@ public class GCVenusItem extends Item
     @SideOnly(Side.CLIENT)
     public boolean hasEffect(ItemStack par1ItemStack)
 	{
-    	if(par1ItemStack.getItemDamage() == 11)
+    	if(par1ItemStack.getItemDamage() == 10)
     	{
     		return true;
     	}

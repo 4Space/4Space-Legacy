@@ -8,22 +8,14 @@ item.spaceshipTier3.name=Tier 3 Rocket
 item.ingotGem.name=Gem Ingot
 item.itemGem.name=Gem
 item.redGemPlate.name=Red Gem Plate
-item.venusPlate.name=Venus Plate
 item.ingotSulfer.name=Sulfer Ingot
 item.sulferPlate.name=Sulfer Plate
-item.venusPlate.name=Venus Plate
-item.reinforcedVenusPlateT3.name=Reinforced Venus Plate
-item.venusPowerCrystal.name=Venus Power Crystal
-item.venusPowerCell.name=Filled Power Cell
-item.emptyCell.name=Empty Power Cell
 item.rawBasalt.name=Raw Basalt
 item.basaltBrick.name=Basalt Brick
 item.vurnBerry.name=Vurn Berry
 item.venusRod.name=Venus Rod
+item.venusRodDust.name=Venus Rod Dust
 item.venusBattery.name=Venus Battery
-item.positiveParticle.name=Positivity Charged Particle
-item.negativeParticle.name=Negativity Charged Particle
-item.strangeParticle.name=Strange Particle
 item.plateHeavyT3.name=Heavy-Duty Plate
 
 # TOOLS
