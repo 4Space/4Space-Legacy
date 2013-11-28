@@ -18,9 +18,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCVenusItem extends Item
 {
-    public static String[] names = { "ingotSulfer", "venusPlate", "sulferPlate", "ingotGem", "itemGem", "redGemPlate", "venusPowerCrystal", "venusPowerCell", "emptyCell", "rawBasalt", "basaltBrick", "vurnBerry", "venusRod", "plateHeavyT3"//, "positiveParticle", "negativeParticle", "strangeParticle" 
-// TODO create partials textures, effects and uses
-    };
+    public static String[] names = { "ingotSulfer", "sulferDust", "sulferPlate", "itemGem", "redGemPlate", "plateHeavyT3", "venusRod", "venusRodDust", "vurnBerry", "rawBasalt", "basaltBrick", "venusPowerCrystal" };
     protected Icon[] icons = new Icon[GCVenusItem.names.length];
 
     public GCVenusItem(int par1)
@@ -90,7 +88,7 @@ public class GCVenusItem extends Item
     @SideOnly(Side.CLIENT)
     public boolean hasEffect(ItemStack par1ItemStack)
 	{
-    	if(par1ItemStack.getItemDamage() == 3 || par1ItemStack.getItemDamage() == 6)
+    	if(par1ItemStack.getItemDamage() == 11)
     	{
     		return true;
     	}
@@ -113,7 +111,7 @@ public class GCVenusItem extends Item
         {
             switch (par1ItemStack.getItemDamage())
             {
-            case 14:
+            case 5:
                 par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier3.desc"));
                 break;
             }
