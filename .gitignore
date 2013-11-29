@@ -18,6 +18,7 @@ LICENSE.txt
 CHANGELOG
 
 /src/minecraft/*
+!/src/minecraft/mcmod.info
 !/src/minecraft/mattparks/
 !/src/minecraft/universalelectricity/
 !/src/minecraft/mekanism/
