@@ -55,202 +55,202 @@ public class StarcraftCore
     public static int remoteBuildVer;
     
 	// Block Core, Gravity Generator
-	public final static Block gravityGenerator = new StarcraftBlock(986, null)
+	public static final Block gravityGenerator = new StarcraftBlock(986, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("GravityGenerator")
 			.setTextureName("starcraftmercury:GravityGenerator")
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 
 	// Block Core, Tier1 Caravan Module
-	public final static Block caravanModule = new StarcraftCaravanModule(927, null)
+	public static final Block caravanModule = new StarcraftCaravanModule(927, null)
 			.setHardness(0.4F).setStepSound(Block.soundClothFootstep)
 			.setUnlocalizedName("caravanModule")
 			.setTextureName("starcraftmercury:caravanModule");
 
 	// Block Core, Caravan Block
-	public final static Block caravanModulePart = new StarcraftBlock(928, null)
+	public static final Block caravanModulePart = new StarcraftBlock(928, null)
 			.setHardness(1000000.0F).setStepSound(Block.soundClothFootstep)
 			.setUnlocalizedName("caravanModulePart")
 			.setTextureName("starcraftmercury:caravanModulePart")
 			.setBlockUnbreakable();
 
 	// Block Venus, Grass
-	public final static Block VenusGrass = new StarcraftGrass(610, null)
+	public static final Block VenusGrass = new StarcraftGrass(610, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusGrass")
 			.setTextureName("starcraftvenus:grassVenus")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Dirt
-	public final static Block VenusDirt = new StarcraftBlock(611, null)
+	public static final Block VenusDirt = new StarcraftBlock(611, null)
 			.setHardness(0.3F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusDirt")
 			.setTextureName("starcraftvenus:dirtVenus")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Stone
-	public final static Block VenusStone = new VenusStone(612, null)
+	public static final Block VenusStone = new VenusStone(612, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusStone")
 			.setTextureName("starcraftvenus:stoneVenus")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Cobblestone
-	public final static Block VenusCobblestone = new StarcraftBlock(613, null)
+	public static final Block VenusCobblestone = new StarcraftBlock(613, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusCobblestone")
 			.setTextureName("starcraftvenus:cobblestoneVenus")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Gem Block
-	public final static Block VenusRedGemBlock = new StarcraftBlock(614, null)
+	public static final Block VenusRedGemBlock = new StarcraftBlock(614, null)
 			.setHardness(2.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusGem")
 			.setTextureName("starcraftvenus:gemBlock")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Meteor Block
-	public final static Block VenusMeteorBlock = new StarcraftBlock(615, null)
+	public static final Block VenusMeteorBlock = new StarcraftBlock(615, null)
 			.setHardness(3.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusMeteor")
 			.setTextureName("starcraftvenus:meteorBlock")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Brick
-	public final static Block VenusBrick = new StarcraftBlock(616, null)
+	public static final Block VenusBrick = new StarcraftBlock(616, null)
 			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusBrick")
 			.setTextureName("starcraftvenus:venusBrick")
 			.setCreativeTab(GCVenus.starcraftVenusTab).setBlockUnbreakable();
 
 	// Block Venus, Sulfer
-	public final static Block VenusSulferBlock = new StarcraftOre(617, null)
+	public static final Block VenusSulferBlock = new StarcraftOre(617, null)
 			.setHardness(2.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusSulfer")
 			.setTextureName("starcraftvenus:sulferBlock")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Sulfer Ore
-	public final static Block VenusSulferOre = new StarcraftOre(618, null)
+	public static final Block VenusSulferOre = new StarcraftOre(618, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusSulferOre")
 			.setTextureName("starcraftvenus:sulferOre")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Meteor Ore
-	public final static Block VenusMeteorOre = new StarcraftOre(619, null)
+	public static final Block VenusMeteorOre = new StarcraftOre(619, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusMeteorOre")
 			.setTextureName("starcraftvenus:meteorOre")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Gem Ore
-	public final static Block VenusRedGemOre = new StarcraftOre(620, null)
+	public static final Block VenusRedGemOre = new StarcraftOre(620, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusGemOre")
 			.setTextureName("starcraftvenus:gemOre")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Iron Ore
-	public final static Block VenusIronOre = new StarcraftOre(621, null)
+	public static final Block VenusIronOre = new StarcraftOre(621, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusIronOre")
 			.setTextureName("starcraftvenus:ironOre")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Coal Ore
-	public final static Block VenusCoalOre = new StarcraftOre(622, null)
+	public static final Block VenusCoalOre = new StarcraftOre(622, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusCoalOre")
 			.setTextureName("starcraftvenus:coalOre")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Iron Ore
-	public final static Block VenusTinOre = new StarcraftOre(623, null)
+	public static final Block VenusTinOre = new StarcraftOre(623, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusTinOre")
 			.setTextureName("starcraftvenus:tinOre")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Coal Ore
-	public final static Block VenusCopperOre = new StarcraftOre(624, null)
+	public static final Block VenusCopperOre = new StarcraftOre(624, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusCopperOre")
 			.setTextureName("starcraftvenus:copperOre")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Basalt
-	public final static Block VenusBasalt = new StarcraftBlock(625, null)
+	public static final Block VenusBasalt = new StarcraftBlock(625, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusBasalt")
 			.setTextureName("starcraftvenus:venusBasalt")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Half Basalt
-	public final static Block VenusHalfBasalt = new StarcraftHalfSlab(626, null)
+	public static final Block VenusHalfBasalt = new StarcraftHalfSlab(626, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusHalfBasalt")
 			.setTextureName("starcraftvenus:venusBasalt")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Blaze Egg
-	public final static Block EvolvedBlazeEgg = new StarcraftEgg(627, 0, null)
+	public static final Block EvolvedBlazeEgg = new StarcraftEgg(627, 0, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("EvolvedBlazeEgg")
 			.setTextureName("starcraftvenus:evolvedBlazeEgg")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Venusian TNT
-	public final static Block VenusianTNT = new StarcraftVenusianTNT(629, null)
+	public static final Block VenusianTNT = new StarcraftVenusianTNT(629, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VenusianTNT")
 			.setTextureName("starcraftvenus:venusianTNT")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 	
 	// Block Venus, Vurn Berry Bush
-	public final static Block VurnBerryBush = new VurnBerryBush(1630)
+	public static final Block VurnBerryBush = new VurnBerryBush(1630)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VurnBerryBush")
 			.setTextureName("starcraftvenus:VurnBerryBush")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Toxic Sludge
-// 	public final static Block ToxicSludge = new StarcraftToxicSludge(1024, null) 
+// 	public static final Block ToxicSludge = new StarcraftToxicSludge(1024, null) 
 // 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 // 			.setUnlocalizedName("VenusToxicSludge")
 // 			.setTextureName("starcraftvenus:toxicSludge")
 // 			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Pluto, Grass
-	public final static Block PlutoGrass = new StarcraftGrass(910, null)
+	public static final Block PlutoGrass = new StarcraftGrass(910, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("grassPluto")
 			.setTextureName("starcraftpluto:grassPluto")
 			.setCreativeTab(GCPluto.starcraftPlutoTab);
 
 	// Block Pluto, Dirt
-	public final static Block PlutoDirt = new StarcraftBlock(911, null)
+	public static final Block PlutoDirt = new StarcraftBlock(911, null)
 			.setHardness(0.3F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("dirtPluto")
 			.setTextureName("starcraftpluto:dirtPluto")
 			.setCreativeTab(GCPluto.starcraftPlutoTab);
 
 	// Block Pluto, Stone
-	public final static Block PlutoStone = new PlutoStone(912, null)
+	public static final Block PlutoStone = new PlutoStone(912, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("stonePluto")
 			.setTextureName("starcraftpluto:stonePluto")
 			.setCreativeTab(GCPluto.starcraftPlutoTab);
 
 	// Block Pluto, Cobblestone
-	public final static Block PlutoCobblestone = new StarcraftBlock(913, null)
+	public static final Block PlutoCobblestone = new StarcraftBlock(913, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("cobblestonePluto")
 			.setTextureName("starcraftpluto:cobblestonePluto")
 			.setCreativeTab(GCPluto.starcraftPlutoTab);
 
 	// Block Pluto, Brick
-	public final static Block PlutoBrick = new StarcraftBlock(916, null)
+	public static final Block PlutoBrick = new StarcraftBlock(916, null)
 			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("plutoBrick")
 			.setTextureName("starcraftpluto:plutoBrick")
@@ -258,35 +258,35 @@ public class StarcraftCore
 			.setBlockUnbreakable();
 
 	// Block Mercury, Grass
-	public final static Block MercuryGrass = new StarcraftGrass(710, null)
+	public static final Block MercuryGrass = new StarcraftGrass(710, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("MercuryGrass")
 			.setTextureName("starcraftmercury:grassMercury")
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 
 	// Block Mercury, Dirt
-	public final static Block MercuryDirt = new StarcraftBlock(711, null)
+	public static final Block MercuryDirt = new StarcraftBlock(711, null)
 			.setHardness(0.3F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("MercuryDirt")
 			.setTextureName("starcraftmercury:dirtMercury")
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 
 	// Block Mercury, Stone
-	public final static Block MercuryStone = new MercuryStone(712, null)
+	public static final Block MercuryStone = new MercuryStone(712, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("MercuryStone")
 			.setTextureName("starcraftmercury:stoneMercury")
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 
 	// Block Mercury, Cobblestone
-	public final static Block MercuryCobblestone = new StarcraftBlock(713, null)
+	public static final Block MercuryCobblestone = new StarcraftBlock(713, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("MercuryCobblestone")
 			.setTextureName("starcraftmercury:cobblestoneMercury")
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 
 	// Block Mercury, Brick
-	public final static Block MercuryBrick = new StarcraftBlock(716, null)
+	public static final Block MercuryBrick = new StarcraftBlock(716, null)
 			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("MercuryBrick")
 			.setTextureName("starcraftmercury:mercuryBrick")
@@ -294,35 +294,35 @@ public class StarcraftCore
 			.setBlockUnbreakable();
 
 	// Block Mercury, Gem Ore
-	public final static Block MercuryIridiumOre = new StarcraftOre(720, null)
+	public static final Block MercuryIridiumOre = new StarcraftOre(720, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("MercuryIridiumOre")
 			.setTextureName("starcraftmercury:iridiumOreMercury")
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 
 	// Block Mercury, Coal Ore
-	public final static Block MercuryCoalOre = new StarcraftOre(722, null)
+	public static final Block MercuryCoalOre = new StarcraftOre(722, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("MercuryCoalOre")
 			.setTextureName("starcraftmercury:coalOreMercury")
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 
 	// Block Mercury, Iron Ore
-	public final static Block MercuryTinOre = new StarcraftOre(723, null)
+	public static final Block MercuryTinOre = new StarcraftOre(723, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("MercuryTinOre")
 			.setTextureName("starcraftmercury:tinOreMercury")
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 
 	// Block Mercury, Coal Ore
-	public final static Block MercuryCopperOre = new StarcraftOre(724, null)
+	public static final Block MercuryCopperOre = new StarcraftOre(724, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("MercuryCopperOre")
 			.setTextureName("starcraftmercury:copperOreMercury")
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 	
 	// Block Mercury, Glowstone
-	public final static Block MercuryGlowstone = new StarcraftColored(725, null)
+	public static final Block MercuryGlowstone = new StarcraftColored(725, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("MercuryGlowstone")
 			.setLightValue(1.0F)
@@ -331,28 +331,28 @@ public class StarcraftCore
 	
 
 	// Block Jupiter, Nitrogen
-	public final static Block JupiterNitrogen = new StarcraftGasTop(650, null)
+	public static final Block JupiterNitrogen = new StarcraftGasTop(650, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("jupiterNitrogen")
 			.setTextureName("starcraftjupiter:jupiterNitrogen")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	// Block Jupiter, Helium
-	public final static Block JupiterHelium = new StarcraftGasBottom(651, null)
+	public static final Block JupiterHelium = new StarcraftGasBottom(651, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("jupiterHelium")
 			.setTextureName("starcraftjupiter:jupiterHelium")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	// Block Jupiter, Hydrogen
-	public final static Block JupiterHydrogen = new StarcraftGasBottom(652,
+	public static final Block JupiterHydrogen = new StarcraftGasBottom(652,
 			null).setHardness(0.3F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("jupiterHydrogen")
 			.setTextureName("starcraftjupiter:jupiterHydrogen")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	// Block Jupiter, Brick
-	public final static Block JupiterBrick = new StarcraftBlock(637, null)
+	public static final Block JupiterBrick = new StarcraftBlock(637, null)
 			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("jupiterBrick")
 			.setTextureName("starcraftjupiter:jupiterBrick")
@@ -360,28 +360,28 @@ public class StarcraftCore
 			.setBlockUnbreakable();
 
 	// Block Saturn, Nitrogen
-	public final static Block SaturnNitrogen = new StarcraftGasTop(653, null)
+	public static final Block SaturnNitrogen = new StarcraftGasTop(653, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("saturnNitrogen")
 			.setTextureName("starcraftsaturn:saturnNitrogen")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	// Block Saturn, Helium
-	public final static Block SaturnHelium = new StarcraftGasBottom(654, null)
+	public static final Block SaturnHelium = new StarcraftGasBottom(654, null)
 			.setHardness(0.3F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("saturnHelium")
 			.setTextureName("starcraftsaturn:saturnHelium")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	// Block Saturn, Hydrogen
-	public final static Block SaturnHydrogen = new StarcraftGasBottom(655, null)
+	public static final Block SaturnHydrogen = new StarcraftGasBottom(655, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("saturnHydrogen")
 			.setTextureName("starcraftsaturn:saturnHydrogen")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	// Block Saturn, Brick
-	public final static Block SaturnBrick = new StarcraftBlock(628, null)
+	public static final Block SaturnBrick = new StarcraftBlock(628, null)
 			.setHardness(100.0F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("saturnBrick")
 			.setTextureName("starcraftsaturn:saturnBrick")
@@ -389,28 +389,28 @@ public class StarcraftCore
 			.setBlockUnbreakable();
 
 	// Block Uranus Nitrogen
-	public final static Block UranusNitrogen = new StarcraftGasTop(656, null)
+	public static final Block UranusNitrogen = new StarcraftGasTop(656, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("uranusNitrogen")
 			.setTextureName("starcrafturanus:uranusNitrogen")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	// Block Uranus Helium
-	public final static Block UranusHelium = new StarcraftGasBottom(657, null)
+	public static final Block UranusHelium = new StarcraftGasBottom(657, null)
 			.setHardness(0.3F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("uranusHelium")
 			.setTextureName("starcrafturanus:uranusHelium")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	// Block Uranus Hydrogen
-	public final static Block UranusHydrogen = new StarcraftGasBottom(658, null)
+	public static final Block UranusHydrogen = new StarcraftGasBottom(658, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("uranusHydrogen")
 			.setTextureName("starcrafturanus:uranusHydrogen")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	// Block Uranus Brick
-	public final static Block UranusBrick = new StarcraftBlock(699, null)
+	public static final Block UranusBrick = new StarcraftBlock(699, null)
 			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("uranusBrick")
 			.setTextureName("starcrafturanus:uranusBrick")
@@ -418,28 +418,28 @@ public class StarcraftCore
 			.setBlockUnbreakable();
 
 	// Block Neptune Nitrogen
-	public final static Block NeptuneNitrogen = new StarcraftGasTop(659, null)
+	public static final Block NeptuneNitrogen = new StarcraftGasTop(659, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("neptuneNitrogen")
 			.setTextureName("starcraftneptune:neptuneNitrogen")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	// Block Neptune Helium
-	public final static Block NeptuneHelium = new StarcraftGasBottom(660, null)
+	public static final Block NeptuneHelium = new StarcraftGasBottom(660, null)
 			.setHardness(0.3F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("neptuneHelium")
 			.setTextureName("starcraftneptune:neptuneHelium")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	// Block Neptune Hydrogen
-	public final static Block NeptuneHydrogen = new StarcraftGasBottom(661,
+	public static final Block NeptuneHydrogen = new StarcraftGasBottom(661,
 			null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("neptuneHydrogen")
 			.setTextureName("starcraftneptune:neptuneHydrogen")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	// Block Neptune Brick
-	public final static Block NeptuneBrick = new StarcraftBlock(630, null)
+	public static final Block NeptuneBrick = new StarcraftBlock(630, null)
 			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("neptuneBrick")
 			.setTextureName("starcraftneptune:neptuneBrick")
@@ -447,45 +447,45 @@ public class StarcraftCore
 			.setBlockUnbreakable();
 
 	// Fluid Metallic Hydrogen Flowing
-	public final static Block hydrogenFlowing = new StarcraftMetallicHydrogenFlowing(920, null)
+	public static final Block hydrogenFlowing = new StarcraftMetallicHydrogenFlowing(920, null)
 			.setUnlocalizedName("MetallicHydrogenFlowing")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 	
 	// Fluid Metallic Hydrogen Still
-	public final static Block hydrogenStill = new StarcraftMetallicHydrogenStill(921, null)
+	public static final Block hydrogenStill = new StarcraftMetallicHydrogenStill(921, null)
 			.setUnlocalizedName("MetallicHydrogenStill")
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	// Block Eris Grass
-	public final static Block ErisGrass = new StarcraftGrass(922, null)
+	public static final Block ErisGrass = new StarcraftGrass(922, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("grassEris")
 			.setTextureName("starcrafteris:grassEris")
 			.setCreativeTab(GCEris.starcraftErisTab);
 
 	// Block Pluto Dirt
-	public final static Block ErisDirt = new StarcraftBlock(923, null)
+	public static final Block ErisDirt = new StarcraftBlock(923, null)
 			.setHardness(0.3F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("dirtEris")
 			.setTextureName("starcrafteris:dirtEris")
 			.setCreativeTab(GCEris.starcraftErisTab);
 
 	// Block Eris Stone
-	public final static Block ErisStone = new PlutoStone(924, null)
+	public static final Block ErisStone = new PlutoStone(924, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("stoneEris")
 			.setTextureName("starcrafteris:stoneEris")
 			.setCreativeTab(GCEris.starcraftErisTab);
 
 	// Block Eris Cobblestone
-	public final static Block ErisCobblestone = new StarcraftBlock(925, null)
+	public static final Block ErisCobblestone = new StarcraftBlock(925, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("cobblestoneEris")
 			.setTextureName("starcrafteris:cobblestoneEris")
 			.setCreativeTab(GCEris.starcraftErisTab);
 
 	// Block Eris Brick
-	public final static Block ErisBrick = new StarcraftBlock(926, null)
+	public static final Block ErisBrick = new StarcraftBlock(926, null)
 			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("erisBrick")
 			.setTextureName("starcrafteris:erisBrick")
@@ -493,35 +493,35 @@ public class StarcraftCore
 			.setBlockUnbreakable();
 	
 	// Block Sedna Grass
-	public final static Block SednaGrass = new StarcraftGrass(932, null)
+	public static final Block SednaGrass = new StarcraftGrass(932, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("grassSedna")
 			.setTextureName("starcraftsedna:grassSedna")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
 
 	// Block Sedna Dirt
-	public final static Block SednaDirt = new StarcraftBlock(933, null)
+	public static final Block SednaDirt = new StarcraftBlock(933, null)
 			.setHardness(0.3F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("dirtSedna")
 			.setTextureName("starcraftsedna:dirtSedna")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
 
 	// Block Sedna Stone
-	public final static Block SednaStone = new PlutoStone(934, null)
+	public static final Block SednaStone = new PlutoStone(934, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("stoneSedna")
 			.setTextureName("starcraftsedna:stoneSedna")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
 
 	// Block Sedna Cobblestone
-	public final static Block SednaCobblestone = new StarcraftBlock(935, null)
+	public static final Block SednaCobblestone = new StarcraftBlock(935, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("cobblestoneSedna")
 			.setTextureName("starcraftsedna:cobblestoneSedna")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
 
 	// Block Sedna Brick
-	public final static Block SednaBrick = new StarcraftBlock(936, null)
+	public static final Block SednaBrick = new StarcraftBlock(936, null)
 			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("sednaBrick")
 			.setTextureName("starcraftsedna:sednaBrick")
