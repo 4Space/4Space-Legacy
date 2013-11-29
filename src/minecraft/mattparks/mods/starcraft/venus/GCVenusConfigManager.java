@@ -57,7 +57,7 @@ public class GCVenusConfigManager
     public static int idToolGemSpade;
     public static int idToolGemHoe;
     
-    public static int idVurnBerryBush;
+    public static int idVurnBerry;
 
     // ENTITIES
     public static int idEntitySpaceshipTier3;
@@ -118,7 +118,7 @@ public class GCVenusConfigManager
             GCVenusConfigManager.idItemVenusBasic = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 7870).getInt(7870);
             GCVenusConfigManager.idItemVenusBattery = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemVenusBattery", 7871).getInt(7871);
             
-            GCVenusConfigManager.idVurnBerryBush = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idVurnBerryBush", 7872).getInt(7872);
+            GCVenusConfigManager.idVurnBerry = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idVurnBerry", 7872).getInt(7872);
 
             GCVenusConfigManager.idTtemVenusT3Schematic = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idTtemVenusT3Schematic", 7873).getInt(7873);
             GCVenusConfigManager.idItemSpaceshipTier3 = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier3", 7874).getInt(7874);

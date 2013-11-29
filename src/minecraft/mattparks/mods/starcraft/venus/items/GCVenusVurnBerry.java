@@ -11,7 +11,7 @@ import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.IPlantable;
 
-public class GCVenusSeedFood extends ItemFood implements IPlantable
+public class GCVenusVurnBerry extends ItemFood implements IPlantable
 {
     /** Block ID of the crop this seed food should place. */
     private int cropId;
@@ -19,7 +19,7 @@ public class GCVenusSeedFood extends ItemFood implements IPlantable
     /** Block ID of the soil this seed food should be planted on. */
     private int soilId;
 
-    public GCVenusSeedFood(int par1, int par2, float par3, int par4, int par5)
+    public GCVenusVurnBerry(int par1, int par2, float par3, int par4, int par5)
     {
         super(par1, par2, par3, false);
         this.cropId = par4;

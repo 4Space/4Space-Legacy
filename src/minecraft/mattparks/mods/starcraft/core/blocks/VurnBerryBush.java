@@ -45,7 +45,7 @@ public class VurnBerryBush extends BlockCrops
      */
     protected int getSeedItem()
     {
-        return GCVenusItems.vurnBerryBush.itemID;
+        return GCVenusItems.vurnBerry.itemID;
     }
 
     /**
@@ -53,7 +53,7 @@ public class VurnBerryBush extends BlockCrops
      */
     protected int getCropItem()
     {
-      return GCVenusItems.vurnBerryBush.itemID;
+      return GCVenusItems.vurnBerry.itemID;
     }
 
     @SideOnly(Side.CLIENT)

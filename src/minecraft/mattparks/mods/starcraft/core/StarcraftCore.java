@@ -208,7 +208,7 @@ public class StarcraftCore
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 	
 	// Block Venus, Vurn Berry Bush
-	public final static Block VurnBerryBush = new StarcraftBlock(1630, null)
+	public final static Block VurnBerryBush = new VurnBerryBush(1630)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VurnBerryBush")
 			.setTextureName("starcraftvenus:VurnBerryBush")
