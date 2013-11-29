@@ -206,6 +206,13 @@ public class StarcraftCore
 			.setUnlocalizedName("VenusianTNT")
 			.setTextureName("starcraftvenus:venusianTNT")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
+	
+	// Block Venus, Vurn Berry Bush
+	public final static Block VurnBerryBush = new StarcraftBlock(1630, null)
+			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("VurnBerryBush")
+			.setTextureName("starcraftvenus:VurnBerryBush")
+			.setCreativeTab(GCVenus.starcraftVenusTab);
 
 	// Block Venus, Toxic Sludge
 // 	public final static Block ToxicSludge = new StarcraftToxicSludge(1024, null) 

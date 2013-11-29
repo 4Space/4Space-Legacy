@@ -31,6 +31,8 @@ public class GCVenusItems
     public static Item gemLeggings;
     public static Item gemBoots;
     
+    public static Item vurnBerryBush;
+    
     public static Item venusBattery;
     
     public static Item T3Schematic;
@@ -69,6 +71,7 @@ public class GCVenusItems
         GCVenusItems.gemLeggings = new SCCoreItemGemArmor(GCVenusConfigManager.idArmorGemLeggings, GCVenusItems.ARMORGEM, 7, 2, false).setUnlocalizedName("gemLeggings");
         GCVenusItems.gemBoots = new SCCoreItemGemArmor(GCVenusConfigManager.idArmorGemBoots, GCVenusItems.ARMORGEM, 7, 3, false).setUnlocalizedName("gemBoots");
 
+        GCVenusItems.vurnBerryBush = new GCVenusSeedFood(GCVenusConfigManager.idVurnBerryBush, 0, 0, 0, 0);
         
         GCVenusItems.T3Schematic = new GCVenusItemSchematic(GCVenusConfigManager.idTtemVenusT3Schematic);
         GCVenusItems.spaceshipT3 = new GCVenusItemSpaceshipTier3(GCVenusConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");
