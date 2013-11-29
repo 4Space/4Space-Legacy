@@ -313,6 +313,15 @@ public class StarcraftCore
 			.setUnlocalizedName("MercuryCopperOre")
 			.setTextureName("starcraftmercury:copperOreMercury")
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
+	
+	// Block Mercury, Glowstone
+	public final static Block MercuryGlowstone = new StarcraftColored(725, null)
+			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("MercuryGlowstone")
+			.setLightValue(1.0F)
+			.setTextureName("starcraftmercury:glowstone")
+			.setCreativeTab(GCMercury.starcraftMercuryTab);
+	
 
 	// Block Jupiter, Nitrogen
 	public final static Block JupiterNitrogen = new StarcraftGasTop(650, null)
@@ -582,6 +591,7 @@ public class StarcraftCore
         GameRegistry.registerBlock(StarcraftCore.MercuryCoalOre, "MercuryCoalOre");
         GameRegistry.registerBlock(StarcraftCore.MercuryTinOre, "MercuryTinOre");
         GameRegistry.registerBlock(StarcraftCore.MercuryCopperOre, "MercuryCopperOre");
+        GameRegistry.registerBlock(StarcraftCore.MercuryGlowstone, "MercuryGlowstone");
                         
         GameRegistry.registerBlock(StarcraftCore.JupiterNitrogen, "JupiterNitrogen");
         GameRegistry.registerBlock(StarcraftCore.JupiterHelium, "JupiterHelium");
