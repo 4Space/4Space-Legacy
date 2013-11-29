@@ -1,16 +1,20 @@
 package mattparks.mods.starcraft.core.blocks;
 
 import mattparks.mods.starcraft.core.StarcraftCore;
+import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFlower;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.IPlantable;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class StarcraftGrass extends Block implements ITerraformableBlock
+public class StarcraftGrass extends Block implements ITerraformableBlock, IPlantableBlock
 {
     public StarcraftGrass(int id, String name)
     {
@@ -26,9 +30,54 @@ public class StarcraftGrass extends Block implements ITerraformableBlock
 //    {
 //        return StarcraftCore.starcraftCoreTab;
 //    }
-    
-	@Override
-	public boolean isTerraformable(World world, int x, int y, int z) {
-		return true;
-	}	
+
+    @Override
+    public boolean canSustainPlant(World world, int x, int y, int z, ForgeDirection direction, IPlantable plant)
+    {
+        final int metadata = world.getBlockMetadata(x, y, z);
+
+        if (metadata < 5 && metadata > 13)
+        {
+            return false;
+        }
+
+        plant.getPlantID(world, x, y + 1, z);
+
+        if (plant instanceof BlockFlower)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    public int requiredLiquidBlocksNearby()
+    {
+        return 4;
+    }
+
+    @Override
+    public boolean isPlantable(int metadata)
+    {
+        if (metadata >= 5 && metadata <= 13)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    public boolean isTerraformable(World world, int x, int y, int z)
+    {
+        int meta = world.getBlockMetadata(x, y, z);
+
+        if (meta >= 5 && meta <= 13)
+        {
+            return world.getBlockId(x, y + 1, z) == 0;
+        }
+
+        return false;
+    }
 }

@@ -322,7 +322,7 @@ public class StarcraftCore
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 	
 	// Block Mercury, Glowstone
-	public static final Block MercuryGlowstone = new StarcraftColored(725, null)
+	public static final Block MercuryGlowstone = new StarcraftGlowstone(725, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("MercuryGlowstone")
 			.setLightValue(1.0F)
