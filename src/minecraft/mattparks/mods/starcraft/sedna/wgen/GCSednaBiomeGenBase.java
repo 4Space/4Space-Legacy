@@ -6,11 +6,11 @@ import net.minecraft.world.biome.BiomeGenBase;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCErisBiomeGenBase extends BiomeGenBase
+public class GCSednaBiomeGenBase extends BiomeGenBase
 {
-    public static final BiomeGenBase venusFlat = new GCErisBiomeGenFlat(102).setBiomeName("venus");
+    public static final BiomeGenBase venusFlat = new GCSednaBiomeGenFlat(102).setBiomeName("venus");
 
-    public GCErisBiomeGenBase(int var1)
+    public GCSednaBiomeGenBase(int var1)
     {
         super(var1);
         this.spawnableMonsterList.clear();
@@ -20,9 +20,9 @@ public class GCErisBiomeGenBase extends BiomeGenBase
     }
 
     @Override
-    public GCErisBiomeGenBase setColor(int var1)
+    public GCSednaBiomeGenBase setColor(int var1)
     {
-        return (GCErisBiomeGenBase) super.setColor(var1);
+        return (GCSednaBiomeGenBase) super.setColor(var1);
     }
 
     @Override

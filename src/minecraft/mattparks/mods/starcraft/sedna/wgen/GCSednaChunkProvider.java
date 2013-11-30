@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.eris.GCEris;
-import mattparks.mods.starcraft.eris.GCErisConfigManager;
-import mattparks.mods.starcraft.eris.wgen.dungeon.*;
+import mattparks.mods.starcraft.core.StarcraftBlocks;
+import mattparks.mods.starcraft.sedna.GCSedna;
+import mattparks.mods.starcraft.sedna.GCSednaConfigManager;
+import mattparks.mods.starcraft.sedna.wgen.dungeon.*;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
@@ -30,13 +30,13 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraftforge.common.ForgeDirection;
 
-public class GCErisChunkProvider extends ChunkProviderGenerate
+public class GCSednaChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) StarcraftCore.ErisGrass.blockID;
+    final short topBlockID = (short) StarcraftBlocks.SednaGrass.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) StarcraftCore.ErisDirt.blockID;
+    final short fillBlockID = (short) StarcraftBlocks.SednaDirt.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) StarcraftCore.ErisStone.blockID;
+    final short lowerBlockID = (short) StarcraftBlocks.SednaStone.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
@@ -46,30 +46,30 @@ public class GCErisChunkProvider extends ChunkProviderGenerate
     private final NoiseModule noiseGen3;
     private final NoiseModule noiseGen4;
 
-    public GCErisBiomeDecorator biomedecoratorplanet = new GCErisBiomeDecorator(GCErisBiomeGenBase.venusFlat);
+    public GCSednaBiomeDecorator biomedecoratorplanet = new GCSednaBiomeDecorator(GCSednaBiomeGenBase.venusFlat);
 
     private final World worldObj;
-    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(StarcraftCore.ErisBrick.blockID, 14, 8, 16, 3);
+    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(StarcraftBlocks.SednaBrick.blockID, 14, 8, 16, 3);
 
     {
-        this.dungeonGenerator.otherRooms.add(new GCErisRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCErisRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCErisRoomChests(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCErisRoomChests(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.bossRooms.add(new GCErisRoomBoss(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.treasureRooms.add(new GCErisRoomTreasure(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCSednaRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCSednaRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCSednaRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCSednaRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCSednaRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCSednaRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCSednaRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCSednaRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCSednaRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCSednaRoomChests(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.otherRooms.add(new GCSednaRoomChests(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.bossRooms.add(new GCSednaRoomBoss(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+        this.dungeonGenerator.treasureRooms.add(new GCSednaRoomTreasure(null, 0, 0, 0, ForgeDirection.UNKNOWN));
     }
 
-    private BiomeGenBase[] biomesForGeneration = { GCErisBiomeGenBase.venusFlat };
+    private BiomeGenBase[] biomesForGeneration = { GCSednaBiomeGenBase.venusFlat };
 
-    private final GCCoreMapGenBaseMeta caveGenerator = new GCErisGenCaves();
+    private final GCCoreMapGenBaseMeta caveGenerator = new GCSednaGenCaves();
 
     private static final int CRATER_PROB = 300;
 
@@ -79,7 +79,7 @@ public class GCErisChunkProvider extends ChunkProviderGenerate
     private static final int CHUNK_SIZE_Y = 128;
     private static final int CHUNK_SIZE_Z = 16;
 
-    public GCErisChunkProvider(World par1World, long par2, boolean par4)
+    public GCSednaChunkProvider(World par1World, long par2, boolean par4)
     {
         super(par1World, par2, par4);
         this.worldObj = par1World;
@@ -97,9 +97,9 @@ public class GCErisChunkProvider extends ChunkProviderGenerate
         this.noiseGen3.frequency = 0.01;
         this.noiseGen4.frequency = 0.02;
 
-        for (int x = 0; x < GCErisChunkProvider.CHUNK_SIZE_X; x++)
+        for (int x = 0; x < GCSednaChunkProvider.CHUNK_SIZE_X; x++)
         {
-            for (int z = 0; z < GCErisChunkProvider.CHUNK_SIZE_Z; z++)
+            for (int z = 0; z < GCSednaChunkProvider.CHUNK_SIZE_Z; z++)
             {
                 final double d = this.noiseGen1.getNoise(x + chunkX * 16, z + chunkZ * 16) * 8;
                 final double d2 = this.noiseGen2.getNoise(x + chunkX * 16, z + chunkZ * 16) * 24;
@@ -121,9 +121,9 @@ public class GCErisChunkProvider extends ChunkProviderGenerate
                     yDev = d + (d2 - d) * d3;
                 }
 
-                for (int y = 0; y < GCErisChunkProvider.CHUNK_SIZE_Y; y++)
+                for (int y = 0; y < GCSednaChunkProvider.CHUNK_SIZE_Y; y++)
                 {
-                    if (y < GCErisChunkProvider.MID_HEIGHT + yDev)
+                    if (y < GCSednaChunkProvider.MID_HEIGHT + yDev)
                     {
                         idArray[this.getIndex(x, y, z)] = this.lowerBlockID;
                         metaArray[this.getIndex(x, y, z)] = this.lowerBlockMeta;
@@ -225,7 +225,7 @@ public class GCErisChunkProvider extends ChunkProviderGenerate
         final Chunk var4 = new Chunk(this.worldObj, ids, meta, par1, par2);
 
          if (!var4.isTerrainPopulated &&
-         GCErisConfigManager.generateOtherMods)
+         GCSednaConfigManager.generateOtherMods)
          {
          var4.isTerrainPopulated = true;
          }
@@ -306,7 +306,7 @@ public class GCErisChunkProvider extends ChunkProviderGenerate
     @Override
     public String makeString()
     {
-        return GCErisConfigManager.generateOtherMods ? "RandomLevelSource" : "ErisLevelSource";
+        return GCSednaConfigManager.generateOtherMods ? "RandomLevelSource" : "SednaLevelSource";
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

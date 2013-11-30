@@ -1,7 +1,6 @@
 package mattparks.mods.starcraft.core.blocks;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.core.StarcraftBlocks;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -22,7 +21,7 @@ public class StarcraftBlock extends Block
     @Override
     public int getMobilityFlag()
     {
-    	if(this.blockID == StarcraftCore.caravanModulePart.blockID)
+    	if(this.blockID == StarcraftBlocks.caravanModulePart.blockID)
     	{
     		return 2;
     	}

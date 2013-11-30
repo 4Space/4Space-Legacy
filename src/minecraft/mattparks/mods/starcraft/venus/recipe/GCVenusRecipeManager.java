@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.venus.recipe;
 import java.util.HashMap;
 
 import mattparks.mods.starcraft.venus.util.GCVenusUtil;
+import mattparks.mods.starcraft.core.StarcraftBlocks;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.venus.items.GCVenusItems;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
@@ -83,21 +84,21 @@ public class GCVenusRecipeManager
         RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusBattery, 1, GCVenusItems.venusBattery.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T', "plateSulfer", 'R', Item.redstone, 'C', Item.coal });
         
         
-        RecipeUtil.addRecipe(new ItemStack(StarcraftCore.VenusSulferBlock, 1, 0), new Object[] { "TTT", "TTT", "TTT", 'T', "ingotSulfer" });
+        RecipeUtil.addRecipe(new ItemStack(StarcraftBlocks.VenusSulferBlock, 1, 0), new Object[] { "TTT", "TTT", "TTT", 'T', "ingotSulfer" });
         
-        RecipeUtil.addRecipe(new ItemStack(StarcraftCore.VenusRedGemBlock, 1, 0), new Object[] { "TTT", "TTT", "TTT", 'T', new ItemStack(GCVenusItems.venusItemBasic, 1, 0)});
+        RecipeUtil.addRecipe(new ItemStack(StarcraftBlocks.VenusRedGemBlock, 1, 0), new Object[] { "TTT", "TTT", "TTT", 'T', new ItemStack(GCVenusItems.venusItemBasic, 1, 0)});
         
         RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new Object[] { "WXW", "WYW", "WZW", 'X', "compressedSteel", 'Y', Block.glass, 'Z', new ItemStack(GCCoreItems.canister, 1, 0), 'W', "plateSulfer" });
         
-        GameRegistry.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 0), new ItemStack(StarcraftCore.VenusSulferBlock, 1, 0));
+        GameRegistry.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 0), new ItemStack(StarcraftBlocks.VenusSulferBlock, 1, 0));
         
-        GameRegistry.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 0), new ItemStack(StarcraftCore.VenusRedGemBlock, 1, 0));
+        GameRegistry.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 0), new ItemStack(StarcraftBlocks.VenusRedGemBlock, 1, 0));
         
         GameRegistry.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 4), new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
         
-        GameRegistry.addShapelessRecipe(new ItemStack(StarcraftCore.VenusBasalt, 1, 0),  new ItemStack(GCVenusItems.venusItemBasic, 1, 7), new ItemStack(GCVenusItems.venusItemBasic, 1, 7), new ItemStack(GCVenusItems.venusItemBasic, 1, 7), new ItemStack(GCVenusItems.venusItemBasic, 1, 7));
+        GameRegistry.addShapelessRecipe(new ItemStack(StarcraftBlocks.VenusBasalt, 1, 0),  new ItemStack(GCVenusItems.venusItemBasic, 1, 7), new ItemStack(GCVenusItems.venusItemBasic, 1, 7), new ItemStack(GCVenusItems.venusItemBasic, 1, 7), new ItemStack(GCVenusItems.venusItemBasic, 1, 7));
         
-        GameRegistry.addShapelessRecipe(new ItemStack(StarcraftCore.VenusHalfBasalt, 6, 0), new ItemStack(StarcraftCore.VenusBasalt, 1, 0), new ItemStack(StarcraftCore.VenusBasalt, 1, 0), new ItemStack(StarcraftCore.VenusBasalt, 1, 0));
+        GameRegistry.addShapelessRecipe(new ItemStack(StarcraftBlocks.VenusHalfBasalt, 6, 0), new ItemStack(StarcraftBlocks.VenusBasalt, 1, 0), new ItemStack(StarcraftBlocks.VenusBasalt, 1, 0), new ItemStack(StarcraftBlocks.VenusBasalt, 1, 0));
         
         
         // Compressor recipes
@@ -108,12 +109,12 @@ public class GCVenusRecipeManager
 //        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 2), "ingotGem", "ingotGem");
         
         // Smelting
-        FurnaceRecipes.smelting().addSmelting(StarcraftCore.VenusSulferOre.blockID, 0, new ItemStack(GCVenusItems.venusItemBasic, 1, 1), 0.2F);
-        FurnaceRecipes.smelting().addSmelting(StarcraftCore.VenusCoalOre.blockID, 0, new ItemStack(Item.coal), 0.2F);
-        FurnaceRecipes.smelting().addSmelting(StarcraftCore.VenusIronOre.blockID, 0, new ItemStack(Item.ingotIron), 0.2F);
-        FurnaceRecipes.smelting().addSmelting(StarcraftCore.VenusCopperOre.blockID, 0, OreDictionary.getOres("ingotCopper").get(0), 0.2F);
-        FurnaceRecipes.smelting().addSmelting(StarcraftCore.VenusTinOre.blockID, 0, OreDictionary.getOres("ingotTin").get(0), 0.2F);
-        FurnaceRecipes.smelting().addSmelting(StarcraftCore.VenusRedGemOre.blockID, 0, new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 0.2F);
+        FurnaceRecipes.smelting().addSmelting(StarcraftBlocks.VenusSulferOre.blockID, 0, new ItemStack(GCVenusItems.venusItemBasic, 1, 1), 0.2F);
+        FurnaceRecipes.smelting().addSmelting(StarcraftBlocks.VenusCoalOre.blockID, 0, new ItemStack(Item.coal), 0.2F);
+        FurnaceRecipes.smelting().addSmelting(StarcraftBlocks.VenusIronOre.blockID, 0, new ItemStack(Item.ingotIron), 0.2F);
+        FurnaceRecipes.smelting().addSmelting(StarcraftBlocks.VenusCopperOre.blockID, 0, OreDictionary.getOres("ingotCopper").get(0), 0.2F);
+        FurnaceRecipes.smelting().addSmelting(StarcraftBlocks.VenusTinOre.blockID, 0, OreDictionary.getOres("ingotTin").get(0), 0.2F);
+        FurnaceRecipes.smelting().addSmelting(StarcraftBlocks.VenusRedGemOre.blockID, 0, new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 0.2F);
     
         // Schematic
         HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();

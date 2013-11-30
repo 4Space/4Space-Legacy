@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.core.StarcraftBlocks;
 import mattparks.mods.starcraft.uranus.GCUranusConfigManager;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
@@ -30,11 +30,11 @@ import net.minecraftforge.common.ForgeDirection;
 
 public class GCUranusChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) StarcraftCore.UranusNitrogen.blockID;
+    final short topBlockID = (short) StarcraftBlocks.UranusNitrogen.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) StarcraftCore.UranusHelium.blockID;
+    final short fillBlockID = (short) StarcraftBlocks.UranusHelium.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) StarcraftCore.UranusHydrogen.blockID;
+    final short lowerBlockID = (short) StarcraftBlocks.UranusHydrogen.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
@@ -47,7 +47,7 @@ public class GCUranusChunkProvider extends ChunkProviderGenerate
     public GCUranusBiomeDecorator biomedecoratorplanet = new GCUranusBiomeDecorator(GCUranusBiomeGenBase.venusFlat);
 
     private final World worldObj;
-    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(StarcraftCore.UranusHydrogen.blockID, 14, 8, 16, 3);
+    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(StarcraftBlocks.UranusHydrogen.blockID, 14, 8, 16, 3);
     //Need to make Jupiter Brick
     {
     }

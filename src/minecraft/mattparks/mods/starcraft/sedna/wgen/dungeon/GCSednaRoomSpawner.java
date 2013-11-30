@@ -10,7 +10,7 @@ import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.ForgeDirection;
 
-public class GCErisRoomSpawner extends GCCoreDungeonRoom
+public class GCSednaRoomSpawner extends GCCoreDungeonRoom
 {
     int sizeX;
     int sizeY;
@@ -19,7 +19,7 @@ public class GCErisRoomSpawner extends GCCoreDungeonRoom
 
     private final ArrayList<ChunkCoordinates> spawners = new ArrayList<ChunkCoordinates>();
 
-    public GCErisRoomSpawner(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
+    public GCSednaRoomSpawner(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
     {
         super(dungeon, posX, posY, posZ, entranceDir);
         if (this.worldObj != null)
@@ -74,7 +74,7 @@ public class GCErisRoomSpawner extends GCCoreDungeonRoom
     @Override
     protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
     {
-        return new GCErisRoomSpawner(dungeon, x, y, z, dir);
+        return new GCSednaRoomSpawner(dungeon, x, y, z, dir);
     }
 
     @Override
@@ -85,7 +85,7 @@ public class GCErisRoomSpawner extends GCCoreDungeonRoom
             final TileEntityMobSpawner spawner = (TileEntityMobSpawner) this.worldObj.getBlockTileEntity(spawnerCoords.posX, spawnerCoords.posY, spawnerCoords.posZ);
             if (spawner != null)
             {
-                spawner.getSpawnerLogic().setMobID(GCErisRoomSpawner.getMob(rand));
+                spawner.getSpawnerLogic().setMobID(GCSednaRoomSpawner.getMob(rand));
             }
         }
     }

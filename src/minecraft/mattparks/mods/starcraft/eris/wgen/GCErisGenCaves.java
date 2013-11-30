@@ -2,6 +2,7 @@ package mattparks.mods.starcraft.eris.wgen;
 
 import java.util.Random;
 
+import mattparks.mods.starcraft.core.StarcraftBlocks;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.eris.GCEris;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
@@ -169,7 +170,7 @@ public class GCErisGenCaves extends GCCoreMapGenBaseMeta
 
                                         if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
                                         {
-                                            if (blockIdArray[coords] == StarcraftCore.ErisDirt.blockID)
+                                            if (blockIdArray[coords] == StarcraftBlocks.ErisDirt.blockID)
                                             {
                                                 if (metaArray[coords] == 3 || metaArray[coords] == 4)
                                                 {

@@ -1,8 +1,8 @@
 package mattparks.mods.starcraft.sedna.wgen;
 
-public class GCErisBiomeGenFlat extends GCErisBiomeGenBase
+public class GCSednaBiomeGenFlat extends GCSednaBiomeGenBase
 {
-    public GCErisBiomeGenFlat(int par1)
+    public GCSednaBiomeGenFlat(int par1)
     {
         super(par1);
         this.setBiomeName("erisFlat");

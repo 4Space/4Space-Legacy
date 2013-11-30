@@ -1,8 +1,8 @@
 package mattparks.mods.starcraft.sedna.dimension;
 
 import mattparks.mods.starcraft.sedna.GCSednaConfigManager;
-import mattparks.mods.starcraft.sedna.wgen.GCErisChunkProvider;
-import mattparks.mods.starcraft.sedna.wgen.GCErisWorldChunkManager;
+import mattparks.mods.starcraft.sedna.wgen.GCSednaChunkProvider;
+import mattparks.mods.starcraft.sedna.wgen.GCSednaWorldChunkManager;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
@@ -45,7 +45,7 @@ public class GCSednaWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public void registerWorldChunkManager()
     {
-        this.worldChunkMgr = new GCErisWorldChunkManager();
+        this.worldChunkMgr = new GCSednaWorldChunkManager();
     }
 
     @SideOnly(Side.CLIENT)
@@ -100,7 +100,7 @@ public class GCSednaWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public IChunkProvider createChunkGenerator()
     {
-        return new GCErisChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
+        return new GCSednaChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
     }
 
     @Override

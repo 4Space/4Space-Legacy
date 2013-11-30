@@ -2,13 +2,14 @@ package mattparks.mods.starcraft.sedna.wgen;
 
 import java.util.Random;
 
+import mattparks.mods.starcraft.core.StarcraftBlocks;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.eris.GCEris;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class GCErisGenCaves extends GCCoreMapGenBaseMeta
+public class GCSednaGenCaves extends GCCoreMapGenBaseMeta
 {
 
     public static final int BREAK_THROUGH_CHANCE = 25; // 1 in n chance
@@ -169,13 +170,13 @@ public class GCErisGenCaves extends GCCoreMapGenBaseMeta
 
                                         if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
                                         {
-                                            if (blockIdArray[coords] == StarcraftCore.ErisDirt.blockID)
+                                            if (blockIdArray[coords] == StarcraftBlocks.SednaDirt.blockID)
                                             {
                                                 if (metaArray[coords] == 3 || metaArray[coords] == 4)
                                                 {
                                                     blockIdArray[coords] = 0;
                                                 }
-                                                else if (metaArray[coords] == 5 && random.nextInt(GCErisGenCaves.BREAK_THROUGH_CHANCE) == 0)
+                                                else if (metaArray[coords] == 5 && random.nextInt(GCSednaGenCaves.BREAK_THROUGH_CHANCE) == 0)
                                                 {
                                                     blockIdArray[coords] = 0;
                                                 }

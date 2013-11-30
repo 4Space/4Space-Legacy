@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.jupiter;
 import java.io.File;
 import java.util.HashMap;
 
+import mattparks.mods.starcraft.core.StarcraftBlocks;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.jupiter.dimension.GCJupiterTeleportType;
 import mattparks.mods.starcraft.jupiter.dimension.GCJupiterWorldProvider;
@@ -59,7 +60,7 @@ public class GCJupiter
     
 	public static CreativeTabs starcraftGasTab = new CreativeTabs("starcraftGasTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(StarcraftCore.JupiterNitrogen, 1, 0);
+			return new ItemStack(StarcraftBlocks.JupiterNitrogen, 1, 0);
 		}
 	};
     

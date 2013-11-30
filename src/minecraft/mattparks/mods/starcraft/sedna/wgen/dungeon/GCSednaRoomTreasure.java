@@ -17,7 +17,7 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.ForgeDirection;
 
-public class GCErisRoomTreasure extends GCCoreDungeonRoom
+public class GCSednaRoomTreasure extends GCCoreDungeonRoom
 {
 
     int sizeX;
@@ -26,7 +26,7 @@ public class GCErisRoomTreasure extends GCCoreDungeonRoom
 
     private final ArrayList<ChunkCoordinates> chests = new ArrayList<ChunkCoordinates>();
 
-    public GCErisRoomTreasure(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
+    public GCSednaRoomTreasure(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
     {
         super(dungeon, posX, posY, posZ, entranceDir);
         if (this.worldObj != null)
@@ -82,7 +82,7 @@ public class GCErisRoomTreasure extends GCCoreDungeonRoom
     @Override
     protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
     {
-        return new GCErisRoomTreasure(dungeon, x, y, z, dir);
+        return new GCSednaRoomTreasure(dungeon, x, y, z, dir);
     }
 
     @Override

@@ -2,6 +2,7 @@ package mattparks.mods.starcraft.venus.wgen;
 
 import java.util.Random;
 
+import mattparks.mods.starcraft.core.StarcraftBlocks;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
 import net.minecraft.util.MathHelper;
@@ -168,7 +169,7 @@ public class GCVenusGenCaves extends GCCoreMapGenBaseMeta
 
                                         if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
                                         {
-                                            if (blockIdArray[coords] == StarcraftCore.VenusDirt.blockID)
+                                            if (blockIdArray[coords] == StarcraftBlocks.VenusDirt.blockID)
                                             {
                                                 if (metaArray[coords] == 3 || metaArray[coords] == 4)
                                                 {

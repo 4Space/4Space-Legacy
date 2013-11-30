@@ -1,7 +1,6 @@
 package mattparks.mods.starcraft.core.blocks;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.core.StarcraftBlocks;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -14,16 +13,16 @@ public class StarcraftGasTop extends Block implements ITerraformableBlock
     {
         super(id, Material.rock);
         this.setUnlocalizedName(name);
-//        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
+//        this.setTextureName(StarcraftBlocks.ASSET_PREFIX + name);
         this.setHardness(2.0F);
     }
 
 	@Override
 	public void initializeBlock()
     {
-		this.setBurnProperties(StarcraftCore.JupiterNitrogen.blockID, 5, 5);
-		this.setBurnProperties(StarcraftCore.NeptuneNitrogen.blockID, 5, 5);
-		this.setBurnProperties(StarcraftCore.UranusNitrogen.blockID, 5, 5);
+		this.setBurnProperties(StarcraftBlocks.JupiterNitrogen.blockID, 5, 5);
+		this.setBurnProperties(StarcraftBlocks.NeptuneNitrogen.blockID, 5, 5);
+		this.setBurnProperties(StarcraftBlocks.UranusNitrogen.blockID, 5, 5);
     }
 	
 	@Override

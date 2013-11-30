@@ -8,9 +8,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 
-public abstract class GCErisComponent extends StructureComponent
+public abstract class GCSednaComponent extends StructureComponent
 {
-    public GCErisComponent(int var1)
+    public GCSednaComponent(int var1)
     {
         super(var1);
     }

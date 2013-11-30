@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.sedna;
 import java.io.File;
 import java.util.HashMap;
 
+import mattparks.mods.starcraft.core.StarcraftBlocks;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.sedna.dimension.GCSednaTeleportType;
 import mattparks.mods.starcraft.sedna.dimension.GCSednaWorldProvider;
@@ -60,7 +61,7 @@ public class GCSedna
     
 	public static CreativeTabs starcraftSednaTab = new CreativeTabs("starcraftSednaTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(StarcraftCore.SednaBrick, 1, 0);
+			return new ItemStack(StarcraftBlocks.SednaBrick, 1, 0);
 		}
 	};
     

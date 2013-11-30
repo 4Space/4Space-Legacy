@@ -1,7 +1,6 @@
 package mattparks.mods.starcraft.core.blocks;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.core.StarcraftBlocks;
 import mattparks.mods.starcraft.mercury.GCMercury;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import net.minecraft.block.Block;
@@ -18,7 +17,7 @@ public class StarcraftCaravanModule extends Block
     {
         super(id, Material.rock);
         this.setUnlocalizedName(name);
-//        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
+//        this.setTextureName(StarcraftBlocks.ASSET_PREFIX + name);
         this.setHardness(2.0F);
     }
 
@@ -98,157 +97,157 @@ public class StarcraftCaravanModule extends Block
             
             this.breakBlocksOther(par1World, par2, par3 + 3, par4 - 1, false);
             
-            this.setBlocks(par1World, par2, par3, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 +1, par3, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 1, par3, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 1, par3, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 1, par3, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 +1, par3, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 - 1, par3, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 - 1, par3, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 - 1, par3, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 + 2, par3, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 + 1, par3, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 1, par3, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 - 2, par3, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
             
 
-            this.setBlocks(par1World, par2 - 1, par3 + 1, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3 + 1, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3 + 1, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3 + 1, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 1, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 1, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 1, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 1, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 1, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 1, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 1, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 + 1, par3 + 1, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 1, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 1, par3 + 1, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 1, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3 + 1, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 1, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3 + 1, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 1, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 - 2, par3 + 1, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 1, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 1, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 1, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 1, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
             
             this.setBlocks(par1World, par2 - 1, par3 + 1, par4 - 1, false, Block.workbench.blockID);
             this.setBlocks(par1World, par2 + 1, par3 + 1, par4 - 1, false, Block.chest.blockID);
             this.setBlocks(par1World, par2, par3 + 1, par4 - 1, false, Block.furnaceIdle.blockID);
             
-            this.setBlocks(par1World, par2 - 1, par3 + 2, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3 + 2, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3 + 2, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3 + 2, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 2, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 2, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 2, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 2, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 2, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 2, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 2, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 + 1, par3 + 2, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 2, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 1, par3 + 2, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3 + 2, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 2, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3 + 2, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 2, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 2, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
             this.setBlocks(par1World, par2, par3 + 2, par4 - 1, false, GCCoreBlocks.glowstoneTorch.blockID);
             
-            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 2, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 - 1, par3 + 3, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 3, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3 + 3, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3 + 3, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 3, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3 + 3, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 3, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 3, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 2, par3 + 3, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 3, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 3, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 3, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 2, par3 + 3, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 + 1, par3 + 3, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 3, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 1, par3 + 3, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 3, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3 + 3, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 3, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3 + 3, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 3, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 - 2, par3 + 3, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 3, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 3, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 3, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 2, par3 + 3, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2, par3 + 4, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 4, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 4, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 4, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 4, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 4, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 4, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 4, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 4, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 4, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 4, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 4, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 4, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 4, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2, par3 + 5, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 5, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 5, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 5, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 5, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 5, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2, par3 + 5, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 5, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 5, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 5, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 5, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 5, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 5, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2, par3 + 5, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 1, par3 + 4, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 1, par3 + 4, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 - 1, par3 + 4, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3 + 4, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3 + 4, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3 + 4, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 - 1, par3 + 4, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
-            this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 3, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 2, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3 + 4, par4, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3 + 4, par4 - 1, true, StarcraftCore.caravanModulePart.blockID);
-            this.setBlocks(par1World, par2 + 1, par3 + 4, par4 - 2, true, StarcraftCore.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 3, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 2, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3 + 4, par4 + 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3 + 4, par4, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3 + 4, par4 - 1, true, StarcraftBlocks.caravanModulePart.blockID);
+            this.setBlocks(par1World, par2 + 1, par3 + 4, par4 - 2, true, StarcraftBlocks.caravanModulePart.blockID);
             
             
         return true;
@@ -271,7 +270,7 @@ public class StarcraftCaravanModule extends Block
     {
             if(par1World.blockExists(x, y, z))
             {
-                    if(par1World.getBlockId(x, y, z) == StarcraftCore.caravanModulePart.blockID 
+                    if(par1World.getBlockId(x, y, z) == StarcraftBlocks.caravanModulePart.blockID 
                                     || par1World.getBlockId(x, y, z) == GCCoreBlocks.glowstoneTorch.blockID
                                     || par1World.getBlockId(x, y, z) == Block.furnaceBurning.blockID 
                                     || par1World.getBlockId(x, y, z) == Block.furnaceIdle.blockID 

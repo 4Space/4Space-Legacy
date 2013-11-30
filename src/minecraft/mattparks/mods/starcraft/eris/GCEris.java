@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.eris;
 import java.io.File;
 import java.util.HashMap;
 
+import mattparks.mods.starcraft.core.StarcraftBlocks;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.eris.dimension.GCErisTeleportType;
 import mattparks.mods.starcraft.eris.dimension.GCErisWorldProvider;
@@ -58,7 +59,7 @@ public class GCEris
     
 	public static CreativeTabs starcraftErisTab = new CreativeTabs("starcraftErisTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(StarcraftCore.ErisGrass, 1, 0);
+			return new ItemStack(StarcraftBlocks.ErisGrass, 1, 0);
 		}
 	};
     

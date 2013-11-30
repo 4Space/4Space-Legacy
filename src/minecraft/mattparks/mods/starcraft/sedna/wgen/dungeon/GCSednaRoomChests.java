@@ -1,27 +1,35 @@
 package mattparks.mods.starcraft.sedna.wgen.dungeon;
 
+import java.util.ArrayList;
 import java.util.Random;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonBoundingBox;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonRoom;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
+import net.minecraft.block.Block;
+import net.minecraft.tileentity.TileEntityChest;
+import net.minecraft.util.ChunkCoordinates;
+import net.minecraft.util.WeightedRandomChestContent;
+import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.ForgeDirection;
 
-public class GCErisRoomEmpty extends GCCoreDungeonRoom
+public class GCSednaRoomChests extends GCCoreDungeonRoom
 {
 
     int sizeX;
     int sizeY;
     int sizeZ;
 
-    public GCErisRoomEmpty(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
+    private final ArrayList<ChunkCoordinates> chests = new ArrayList<ChunkCoordinates>();
+
+    public GCSednaRoomChests(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
     {
         super(dungeon, posX, posY, posZ, entranceDir);
         if (this.worldObj != null)
         {
             final Random rand = new Random(this.worldObj.getSeed() * posX * posY * 57 * posZ);
-            this.sizeX = rand.nextInt(4) + 5;
+            this.sizeX = rand.nextInt(5) + 6;
             this.sizeY = rand.nextInt(2) + 4;
-            this.sizeZ = rand.nextInt(4) + 5;
+            this.sizeZ = rand.nextInt(5) + 6;
         }
     }
 
@@ -45,6 +53,12 @@ public class GCErisRoomEmpty extends GCCoreDungeonRoom
                 }
             }
         }
+        final int hx = (this.posX + this.posX + this.sizeX) / 2;
+        final int hz = (this.posZ + this.posZ + this.sizeZ) / 2;
+        if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, Block.chest.blockID, 0))
+        {
+            this.chests.add(new ChunkCoordinates(hx, this.posY, hz));
+        }
     }
 
     @Override
@@ -56,14 +70,21 @@ public class GCErisRoomEmpty extends GCCoreDungeonRoom
     @Override
     protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
     {
-        return new GCErisRoomEmpty(dungeon, x, y, z, dir);
+        return new GCSednaRoomChests(dungeon, x, y, z, dir);
     }
 
     @Override
     protected void handleTileEntities(Random rand)
     {
-        // TODO Auto-generated method stub
+        for (final ChunkCoordinates chestCoords : this.chests)
+        {
+            final TileEntityChest chest = (TileEntityChest) this.worldObj.getBlockTileEntity(chestCoords.posX, chestCoords.posY, chestCoords.posZ);
 
+            if (chest != null)
+            {
+                ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+                WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
+            }
+        }
     }
-
 }

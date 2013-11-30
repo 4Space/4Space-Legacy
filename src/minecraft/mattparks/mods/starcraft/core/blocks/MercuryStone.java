@@ -4,8 +4,7 @@ import java.util.Random;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.core.StarcraftBlocks;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -24,6 +23,6 @@ public class MercuryStone extends Block
     
     public int idDropped(int par1, Random par2Random, int par3)
     {
-        return StarcraftCore.MercuryCobblestone.blockID;
+        return StarcraftBlocks.MercuryCobblestone.blockID;
     }
 }
