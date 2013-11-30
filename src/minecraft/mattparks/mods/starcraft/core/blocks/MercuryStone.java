@@ -13,9 +13,9 @@ import net.minecraft.item.ItemStack;
 
 public class MercuryStone extends Block
 {
-    public MercuryStone(int id, String name)
+    public MercuryStone(int par1, String name)
     {
-        super(id, Material.rock);
+        super(par1, Material.rock);
         this.setUnlocalizedName(name);
 //        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
         this.setHardness(2.0F);

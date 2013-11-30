@@ -21,9 +21,9 @@ public class StarcraftGlowstone extends Block
     @SideOnly(Side.CLIENT)
     private Icon[] iconArray;
 
-    public StarcraftGlowstone(int id, String name)
+    public StarcraftGlowstone(int par1, String name)
     {
-        super(id, Material.glass);
+        super(par1, Material.glass);
         this.setUnlocalizedName(name);
 //        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
         this.setHardness(2.0F);

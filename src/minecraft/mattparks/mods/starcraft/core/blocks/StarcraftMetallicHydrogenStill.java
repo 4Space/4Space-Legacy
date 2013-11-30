@@ -6,9 +6,9 @@ import net.minecraft.block.material.Material;
 
 public class StarcraftMetallicHydrogenStill extends BlockStationary{
        
-        public StarcraftMetallicHydrogenStill(int id, String name)
+        public StarcraftMetallicHydrogenStill(int par1, String name)
         {
-            super(id, Material.lava);
+            super(par1, Material.lava);
             this.setUnlocalizedName(name);
 //            this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
             this.setHardness(2.0F);

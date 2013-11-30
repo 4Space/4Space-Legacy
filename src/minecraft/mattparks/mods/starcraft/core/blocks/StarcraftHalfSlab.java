@@ -14,9 +14,9 @@ public class StarcraftHalfSlab extends Block
 {
     private boolean isDoubleSlab;
 
-	public StarcraftHalfSlab(int id, String name)
+	public StarcraftHalfSlab(int par1, String name)
     {
-        super(id, Material.rock);
+        super(par1, Material.rock);
         this.setUnlocalizedName(name);
 //        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
         this.setHardness(2.0F);

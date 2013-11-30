@@ -19,9 +19,9 @@ public class StarcraftGravityGenerator extends Block
     @SideOnly(Side.CLIENT)
     private Icon field_94392_b;
 
-    public StarcraftGravityGenerator(int id, String name)
+    public StarcraftGravityGenerator(int par1, String name)
     {
-        super(id, Material.rock);
+        super(par1, Material.rock);
         this.setUnlocalizedName(name);
 //        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
         this.setHardness(2.0F);

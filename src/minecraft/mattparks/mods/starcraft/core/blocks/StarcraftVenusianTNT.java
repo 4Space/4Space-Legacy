@@ -27,9 +27,9 @@ public class StarcraftVenusianTNT extends Block
     @SideOnly(Side.CLIENT)
     private Icon field_94392_b;
 
-    public StarcraftVenusianTNT(int id, String name)
+    public StarcraftVenusianTNT(int par1, String name)
     {
-        super(id, Material.tnt);
+        super(par1, Material.tnt);
         this.setUnlocalizedName(name);
 //        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
         this.setHardness(2.0F);

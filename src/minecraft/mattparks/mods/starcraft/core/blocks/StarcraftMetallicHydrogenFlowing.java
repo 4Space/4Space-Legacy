@@ -6,9 +6,9 @@ import net.minecraft.block.material.Material;
 
 public class StarcraftMetallicHydrogenFlowing extends BlockFlowing
 {
-	public StarcraftMetallicHydrogenFlowing(int id, String name)
+	public StarcraftMetallicHydrogenFlowing(int par1, String name)
     {
-        super(id, Material.lava);
+        super(par1, Material.lava);
         this.setUnlocalizedName(name);
 //        this.setTextureName(StarcraftCore.ASSET_PREFIX + name);
         this.setHardness(2.0F);

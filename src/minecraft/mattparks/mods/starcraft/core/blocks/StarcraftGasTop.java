@@ -9,9 +9,9 @@ import net.minecraft.world.World;
 
 public class StarcraftGasTop extends Block implements ITerraformableBlock
 {
-	public StarcraftGasTop(int id, String name)
+	public StarcraftGasTop(int par1, String name)
     {
-        super(id, Material.rock);
+        super(par1, Material.rock);
         this.setUnlocalizedName(name);
 //        this.setTextureName(StarcraftBlocks.ASSET_PREFIX + name);
         this.setHardness(2.0F);
