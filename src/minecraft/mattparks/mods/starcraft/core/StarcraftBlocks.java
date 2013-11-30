@@ -12,6 +12,7 @@ import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStone;
+import net.minecraft.block.BlockStoneBrick;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -37,6 +38,20 @@ public class StarcraftBlocks
     public static final String CHANNEL = "StarcraftBlocks";
     public static final String CHANNELENTITIES = "StarcraftBlocksEntities";
 
+//    public static final Block stoneBrick = (new BlockStoneBrick(98))
+//    		.setHardness(1.5F)
+//    		.setResistance(10.0F)
+//    		.setStepSound(soundStoneFootstep)
+//    		.setUnlocalizedName("stonebricksmooth")
+//    		.setTextureName("stonebrick");
+    
+	// Block, MultiBlock
+    public static final Block MultiBlock = new MultiBlock(709)
+			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("MultiBlock")
+			.setTextureName("starcraftmercury:MultiBlock")
+			.setCreativeTab(GCMercury.starcraftMercuryTab);
+    
 	// Block Mercury, Grass
     public static final Block MercuryGrass = new StarcraftGrass(710, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
@@ -529,6 +544,8 @@ public class StarcraftBlocks
         @EventHandler
         public void load(FMLInitializationEvent event) 
         {
+        		GameRegistry.registerBlock(StarcraftBlocks.MultiBlock, "MultiBlock");
+        	
                 GameRegistry.registerBlock(StarcraftBlocks.gravityGenerator, "GravityGenerator");
                 GameRegistry.registerBlock(StarcraftBlocks.caravanModule, "CaravanModule");
                 GameRegistry.registerBlock(StarcraftBlocks.caravanModulePart, "CaravanModulePart");
