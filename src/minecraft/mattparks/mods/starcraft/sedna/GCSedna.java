@@ -6,6 +6,7 @@ import java.util.HashMap;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.sedna.dimension.GCSednaTeleportType;
 import mattparks.mods.starcraft.sedna.dimension.GCSednaWorldProvider;
+import mattparks.mods.starcraft.sedna.entity.monster.EntityEvolvedEnderman;
 import mattparks.mods.starcraft.sedna.items.GCSednaItems;
 import mattparks.mods.starcraft.sedna.network.GCSednaPacketHandlerServer;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
@@ -13,6 +14,7 @@ import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
@@ -135,7 +137,7 @@ public class GCSedna
 
     public void registerCreatures()
     {
-    	;
+        GCCoreUtil.registerGalacticraftCreature(EntityEvolvedEnderman.class, "EvolvedEnderman", GCSednaConfigManager.idEntityEvolvedEnderman, 44975, 7969893);
     }
 
     public void registerOtherEntities()

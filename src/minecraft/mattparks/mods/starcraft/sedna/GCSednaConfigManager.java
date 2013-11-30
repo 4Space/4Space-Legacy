@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.sedna;
 import java.io.File;
 import java.util.logging.Level;
 
+import mattparks.mods.starcraft.venus.GCVenusConfigManager;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.Configuration;
@@ -47,6 +48,7 @@ public class GCSednaConfigManager
     // SCHEMATIC
 
     // ACHIEVEMENTS
+    public static int idEntityEvolvedEnderman;
 
     // GENERAL
   
@@ -69,6 +71,7 @@ public class GCSednaConfigManager
             GCSednaConfigManager.idArmorGravityLeggings = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGravityLeggings", 6869).getInt(6869);
             GCSednaConfigManager.idArmorGravityBoots = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGravityBoots", 6870).getInt(6870);
 
+            GCSednaConfigManager.idEntityEvolvedEnderman = GCSednaConfigManager.configuration.get("Entities", "idEntityEvolvedEnderman", 293).getInt(293);
             
             //Block id's 7755-7756 are used by Starcraft mercury
             
