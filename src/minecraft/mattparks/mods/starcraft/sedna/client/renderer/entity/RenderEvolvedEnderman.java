@@ -22,8 +22,8 @@ import org.lwjgl.opengl.GL12;
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedEnderman extends RenderLiving
 {
-    private static final ResourceLocation EvolvedEndermanEyesTexture = new ResourceLocation("spacecraftsedna:entity/EvolvedEnderman_eyes.png");
-    private static final ResourceLocation EvolvedEndermanTextures = new ResourceLocation("spacecraftsedna:entity/EvolvedEnderman.png");
+    private static final ResourceLocation EvolvedEndermanEyesTexture = new ResourceLocation("textures/entity/enderman/enderman_eyes.png");
+    private static final ResourceLocation EvolvedEndermanTextures = new ResourceLocation("textures/entity/enderman/enderman.png");
 
     /** The model of the EvolvedEnderman */
     private ModelEvolvedEnderman EvolvedEndermanModel;

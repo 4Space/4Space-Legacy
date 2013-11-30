@@ -55,7 +55,7 @@ public class StarcraftCore
     public static int remoteBuildVer;
     
 	// Block Core, Gravity Generator
-	public static final Block gravityGenerator = new StarcraftBlock(986, null)
+	public static final Block gravityGenerator = new StarcraftGravityGenerator(986, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("GravityGenerator")
 			.setTextureName("starcraftmercury:GravityGenerator")
