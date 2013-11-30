@@ -6,6 +6,7 @@ import java.util.HashMap;
 import mattparks.mods.starcraft.core.blocks.*;
 import mattparks.mods.starcraft.core.network.SCCorePacketHandlerServer;
 import mattparks.mods.starcraft.eris.GCEris;
+import mattparks.mods.starcraft.eris.items.GCErisItems;
 import mattparks.mods.starcraft.jupiter.GCJupiter;
 import mattparks.mods.starcraft.mercury.GCMercury;
 import mattparks.mods.starcraft.pluto.GCPluto;
@@ -76,6 +77,8 @@ public class StarcraftCore
     {
         new StarcraftCoreConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/core.conf"));
 
+//        SCCoreItem.initItems();
+        
         StarcraftCore.proxy.preInit(event);
     }
 
