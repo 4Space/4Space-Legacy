@@ -7,7 +7,6 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import mattparks.mods.starcraft.sedna.client.renderer.model.ModelEvolvedEnderman;
-import net.minecraft.client.model.ModelEnderman;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.texture.TextureMap;
@@ -59,8 +58,6 @@ public class RenderEvolvedEnderman extends RenderLiving
     {
         return EvolvedEndermanTextures;
     }
-
-    /**
 
     /**
      * Render the EvolvedEndermans eyes

@@ -9,9 +9,6 @@ import net.minecraft.entity.Entity;
 @SideOnly(Side.CLIENT)
 public class ModelEvolvedEnderman extends ModelBiped
 {
-    /** Is the EvolvedEnderman carrying a block? */
-    public boolean isCarrying;
-
     /** Is the EvolvedEnderman attacking an entity? */
     public boolean isAttacking;
 
@@ -102,29 +99,6 @@ public class ModelEvolvedEnderman extends ModelBiped
         {
             this.bipedLeftLeg.rotateAngleX = -f7;
         }
-
-        if (this.isCarrying)
-        {
-            this.bipedRightArm.rotateAngleX = -0.5F;
-            this.bipedLeftArm.rotateAngleX = -0.5F;
-            this.bipedRightArm.rotateAngleZ = 0.05F;
-            this.bipedLeftArm.rotateAngleZ = -0.05F;
-        }
-
-        this.bipedRightArm.rotationPointZ = 0.0F;
-        this.bipedLeftArm.rotationPointZ = 0.0F;
-        this.bipedRightLeg.rotationPointZ = 0.0F;
-        this.bipedLeftLeg.rotationPointZ = 0.0F;
-        this.bipedRightLeg.rotationPointY = 9.0F + f6;
-        this.bipedLeftLeg.rotationPointY = 9.0F + f6;
-        this.bipedHead.rotationPointZ = -0.0F;
-        this.bipedHead.rotationPointY = f6 + 1.0F;
-        this.bipedHeadwear.rotationPointX = this.bipedHead.rotationPointX;
-        this.bipedHeadwear.rotationPointY = this.bipedHead.rotationPointY;
-        this.bipedHeadwear.rotationPointZ = this.bipedHead.rotationPointZ;
-        this.bipedHeadwear.rotateAngleX = this.bipedHead.rotateAngleX;
-        this.bipedHeadwear.rotateAngleY = this.bipedHead.rotateAngleY;
-        this.bipedHeadwear.rotateAngleZ = this.bipedHead.rotateAngleZ;
 
         if (this.isAttacking)
         {

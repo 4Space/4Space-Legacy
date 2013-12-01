@@ -172,24 +172,7 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
             int k;
             int l;
 
-            if (this.getCarried() == 0)
-            {
-                if (this.rand.nextInt(20) == 0)
-                {
-                    i = MathHelper.floor_double(this.posX - 2.0D + this.rand.nextDouble() * 4.0D);
-                    j = MathHelper.floor_double(this.posY + this.rand.nextDouble() * 3.0D);
-                    k = MathHelper.floor_double(this.posZ - 2.0D + this.rand.nextDouble() * 4.0D);
-                    l = this.worldObj.getBlockId(i, j, k);
-
-                    if (carriableBlocks[l])
-                    {
-                        this.setCarried(this.worldObj.getBlockId(i, j, k));
-                        this.setCarryingData(this.worldObj.getBlockMetadata(i, j, k));
-                        this.worldObj.setBlock(i, j, k, 0);
-                    }
-                }
-            }
-            else if (this.rand.nextInt(2000) == 0)
+            if (this.rand.nextInt(2000) == 0)
             {
                 i = MathHelper.floor_double(this.posX - 1.0D + this.rand.nextDouble() * 2.0D);
                 j = MathHelper.floor_double(this.posY + this.rand.nextDouble() * 2.0D);
@@ -507,24 +490,6 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
         this.dataWatcher.updateObject(18, Byte.valueOf((byte)(par1 ? 1 : 0)));
     }
 
-    static
-    {
-        carriableBlocks[Block.grass.blockID] = true;
-        carriableBlocks[Block.dirt.blockID] = true;
-        carriableBlocks[Block.sand.blockID] = true;
-        carriableBlocks[Block.gravel.blockID] = true;
-        carriableBlocks[Block.plantYellow.blockID] = true;
-        carriableBlocks[Block.plantRed.blockID] = true;
-        carriableBlocks[Block.mushroomBrown.blockID] = true;
-        carriableBlocks[Block.mushroomRed.blockID] = true;
-        carriableBlocks[Block.tnt.blockID] = true;
-        carriableBlocks[Block.cactus.blockID] = true;
-        carriableBlocks[Block.blockClay.blockID] = true;
-        carriableBlocks[Block.pumpkin.blockID] = true;
-        carriableBlocks[Block.melon.blockID] = true;
-        carriableBlocks[Block.mycelium.blockID] = true;
-    }
-    
     @Override
     public boolean canBreath()
     {
