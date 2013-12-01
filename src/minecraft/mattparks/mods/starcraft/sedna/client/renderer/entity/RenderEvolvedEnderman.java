@@ -7,6 +7,7 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import mattparks.mods.starcraft.sedna.client.renderer.model.ModelEvolvedEnderman;
+import net.minecraft.client.model.ModelEnderman;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.texture.TextureMap;
@@ -35,13 +36,13 @@ public class RenderEvolvedEnderman extends RenderLiving
         this.EvolvedEndermanModel = (ModelEvolvedEnderman)super.mainModel;
         this.setRenderPassModel(this.EvolvedEndermanModel);
     }
+   
 
     /**
      * Renders the EvolvedEnderman
      */
     public void renderEvolvedEnderman(EntityEvolvedEnderman par1EntityEvolvedEnderman, double par2, double par4, double par6, float par8, float par9)
     {
-        this.EvolvedEndermanModel.isCarrying = par1EntityEvolvedEnderman.getCarried() > 0;
         this.EvolvedEndermanModel.isAttacking = par1EntityEvolvedEnderman.isScreaming();
 
         if (par1EntityEvolvedEnderman.isScreaming())
@@ -60,34 +61,6 @@ public class RenderEvolvedEnderman extends RenderLiving
     }
 
     /**
-     * Render the block an EvolvedEnderman is carrying
-     */
-    protected void renderCarrying(EntityEvolvedEnderman par1EntityEvolvedEnderman, float par2)
-    {
-        super.renderEquippedItems(par1EntityEvolvedEnderman, par2);
-
-        if (par1EntityEvolvedEnderman.getCarried() > 0)
-        {
-            GL11.glEnable(GL12.GL_RESCALE_NORMAL);
-            GL11.glPushMatrix();
-            float f1 = 0.5F;
-            GL11.glTranslatef(0.0F, 0.6875F, -0.75F);
-            f1 *= 1.0F;
-            GL11.glRotatef(20.0F, 1.0F, 0.0F, 0.0F);
-            GL11.glRotatef(45.0F, 0.0F, 1.0F, 0.0F);
-            GL11.glScalef(-f1, -f1, f1);
-            int i = par1EntityEvolvedEnderman.getBrightnessForRender(par2);
-            int j = i % 65536;
-            int k = i / 65536;
-            OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, (float)j / 1.0F, (float)k / 1.0F);
-            GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-            GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-            this.bindTexture(TextureMap.locationBlocksTexture);
-            this.renderBlocks.renderBlockAsItem(Block.blocksList[par1EntityEvolvedEnderman.getCarried()], par1EntityEvolvedEnderman.getCarryingData(), 1.0F);
-            GL11.glPopMatrix();
-            GL11.glDisable(GL12.GL_RESCALE_NORMAL);
-        }
-    }
 
     /**
      * Render the EvolvedEndermans eyes
@@ -140,10 +113,6 @@ public class RenderEvolvedEnderman extends RenderLiving
         return this.renderEyes((EntityEvolvedEnderman)par1EntityLivingBase, par2, par3);
     }
 
-    protected void renderEquippedItems(EntityLivingBase par1EntityLivingBase, float par2)
-    {
-        this.renderCarrying((EntityEvolvedEnderman)par1EntityLivingBase, par2);
-    }
 
     public void renderPlayer(EntityLivingBase par1EntityLivingBase, double par2, double par4, double par6, float par8, float par9)
     {
