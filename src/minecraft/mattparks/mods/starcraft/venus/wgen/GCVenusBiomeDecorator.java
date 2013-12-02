@@ -5,6 +5,7 @@ import java.util.Random;
 import mattparks.mods.starcraft.core.StarcraftBlocks;
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreWorldGenMinableMeta;
+import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -26,6 +27,8 @@ public class GCVenusBiomeDecorator
     protected WorldGenerator coalGen;
     protected WorldGenerator tinGen;
     protected WorldGenerator copperGen;
+    
+    protected WorldGenerator lavaGen;
 
     public GCVenusBiomeDecorator()
     {
@@ -37,6 +40,8 @@ public class GCVenusBiomeDecorator
         this.coalGen = new GCCoreWorldGenMinableMeta(StarcraftBlocks.VenusCoalOre.blockID, 9, 5, false, StarcraftBlocks.VenusStone.blockID, 4);     
         this.tinGen = new GCCoreWorldGenMinableMeta(StarcraftBlocks.VenusTinOre.blockID, 5, 6, false, StarcraftBlocks.VenusStone.blockID, 4);  
         this.copperGen = new GCCoreWorldGenMinableMeta(StarcraftBlocks.VenusCopperOre.blockID, 5, 7, false, StarcraftBlocks.VenusStone.blockID, 4);      
+    
+        this.lavaGen = new GCCoreWorldGenMinableMeta(Block.lavaMoving.blockID, 32, 0, false, StarcraftBlocks.VenusGrass.blockID, 4); 
     }
 
     public void decorate(World worldObj, Random rand, int chunkX, int chunkZ)
@@ -79,6 +84,9 @@ public class GCVenusBiomeDecorator
         this.genOre(36, this.coalGen, 0, 128);
         this.genOre(35, this.tinGen, 0, 128);
         this.genOre(36, this.copperGen, 0, 128);
+        
+        this.genOre(36, this.lavaGen, 0, 128);
+        
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Post(this.worldObj, this.randomGenerator, this.chunkX, this.chunkZ));
     }
 }
