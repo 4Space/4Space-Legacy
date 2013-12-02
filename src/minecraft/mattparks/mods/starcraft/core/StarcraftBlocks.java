@@ -104,12 +104,148 @@ public class StarcraftBlocks
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 	
 	// Block Mercury, Glowstone
-	public static final Block MercuryGlowstone = new StarcraftGlowstone(725, null)
-			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
-			.setUnlocalizedName("MercuryGlowstone")
-			.setLightValue(1.0F)
-			.setTextureName("starcraftmercury:glowstone")
-			.setCreativeTab(GCMercury.starcraftMercuryTab);
+//	public static final Block MercuryGlowstone = new StarcraftGlowstone(725, null)
+//			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+//			.setUnlocalizedName("MercuryGlowstone")
+//			.setLightValue(1.0F)
+//			.setTextureName("starcraftmercury:glowstone")
+//			.setCreativeTab(GCMercury.starcraftMercuryTab);
+	
+    //Black Glowstone
+    public final static Block BlackGlowstone = new StarcraftBlock(501, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("BlackGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_black")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Blue Glowstone
+    public static final Block BlueGlowstone = new StarcraftBlock(502, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("BlueGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_blue")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Brown Glowstone
+    public static final Block BrownGlowstone = new StarcraftBlock(503, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("BrownGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_brown")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Cyan Glowstone
+    public static final Block CyanGlowstone = new StarcraftBlock(504, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("CyanGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_cyan")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Green Glowstone
+    public static final Block GreenGlowstone = new StarcraftBlock(505, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("GreenGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_green")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Grey Glowstone
+    public static final Block GreyGlowstone = new StarcraftBlock(506, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("GreyGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_grey")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Light Blue Glowstone
+    public static final Block LightBlueGlowstone = new StarcraftBlock(507, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("LightBlueGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_lightblue")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Light Grey Glowstone
+    public static final Block LightGreyGlowstone = new StarcraftBlock(508, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("LightGreyGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_lightgrey")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Lime Glowstone
+    public static final Block LimeGlowstone = new StarcraftBlock(509, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("LimeGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_lime")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Magenta Glowstone
+    public static final Block MagentaGlowstone = new StarcraftBlock(510, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("MagentaGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_magenta")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Orange Glowstone
+    public static final Block OrangeGlowstone = new StarcraftBlock(511, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("OrangeGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_orange")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Pink Glowstone
+    public static final Block PinkGlowstone = new StarcraftBlock(512, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("PinkGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_pink")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Purple Glowstone
+    public static final Block PurpleGlowstone = new StarcraftBlock(513, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("PurpleGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_purple")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Rainbow Glowstone
+    public static final Block RainbowGlowstone = new StarcraftBlock(514, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("RainbowGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_rainbow")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Red Glowstone
+    public static final Block RedGlowstone = new StarcraftBlock(515, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("RedGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_red")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //White Glowstone
+    public static final Block WhiteGlowstone = new StarcraftBlock(516, null)
+    	.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    	.setUnlocalizedName("WhiteGlowstone")
+    	.setLightValue(1.0f)
+    	.setTextureName("starcraftmercury:glowstone_white")
+		.setCreativeTab(GCMercury.starcraftMercuryTab);
+
+    //Yellow Glowstone
+    public static final Block YellowGlowstone = new StarcraftBlock(517, null)
+    		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
+    		.setUnlocalizedName("YellowGlowstone")
+    		.setLightValue(1.0f)
+    		.setTextureName("starcraftmercury:glowstone_yellow")
+    		.setCreativeTab(GCMercury.starcraftMercuryTab);
 
 	// Block Mercury, Gravity Generator
 	public static final Block gravityGenerator = new StarcraftGravityGenerator(986, null)
@@ -571,8 +707,26 @@ public class StarcraftBlocks
                 GameRegistry.registerBlock(StarcraftBlocks.MercuryCoalOre, "MercuryCoalOre");
                 GameRegistry.registerBlock(StarcraftBlocks.MercuryTinOre, "MercuryTinOre");
                 GameRegistry.registerBlock(StarcraftBlocks.MercuryCopperOre, "MercuryCopperOre");
-                GameRegistry.registerBlock(StarcraftBlocks.MercuryGlowstone, "MercuryGlowstone");
-                                
+//                GameRegistry.registerBlock(StarcraftBlocks.MercuryGlowstone, "Mercury");
+                GameRegistry.registerBlock(StarcraftBlocks.BlackGlowstone, "BlackGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.BlueGlowstone, "BlueGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.BrownGlowstone, "BrownGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.CyanGlowstone, "CyanGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.GreenGlowstone, "GreenGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.GreyGlowstone, "GreyGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.LightGreyGlowstone, "LightGreyGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.LightBlueGlowstone, "LightBlueGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.LimeGlowstone, "LimeGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.MagentaGlowstone, "MagentaGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.OrangeGlowstone, "OrangeGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.PinkGlowstone, "PinkGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.PurpleGlowstone, "PurpleGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.RainbowGlowstone, "RainbowGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.RedGlowstone, "RedGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.WhiteGlowstone, "WhiteGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.YellowGlowstone, "YellowGlowstone");
+                
+                
                 GameRegistry.registerBlock(StarcraftBlocks.JupiterNitrogen, "JupiterNitrogen");
                 GameRegistry.registerBlock(StarcraftBlocks.JupiterHelium, "JupiterHelium");
                 GameRegistry.registerBlock(StarcraftBlocks.JupiterHydrogen, "JupiterHydrogen");
