@@ -1,13 +1,12 @@
 package mattparks.mods.starcraft.jupiter.client.render.item;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.jupiter.GCJupiter;
-import mattparks.mods.starcraft.jupiter.client.model.SCCoreModelSpaceshipTier5;
-import mattparks.mods.starcraft.jupiter.entities.SCCoreEntityRocketT5;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.core.client.render.item.GCCoreItemRendererSpaceship;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityRocketT1;
 import micdoodle8.mods.galacticraft.mars.GalacticraftMars;
+import mattparks.mods.starcraft.jupiter.GCJupiter;
+import mattparks.mods.starcraft.jupiter.client.model.SCCoreModelSpaceshipTier5;
+import mattparks.mods.starcraft.jupiter.entities.SCCoreEntityRocketT5;
 import net.minecraft.client.model.ModelChest;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.entity.player.EntityPlayer;
@@ -27,7 +26,7 @@ public class SCCoreItemRendererSpaceshipT5 extends GCCoreItemRendererSpaceship
 
     public SCCoreItemRendererSpaceshipT5(IModelCustom cargoRocketModel)
     {
-        super(new SCCoreEntityRocketT5(FMLClientHandler.instance().getClient().theWorld), new SCCoreModelSpaceshipTier5(), new ResourceLocation(GCJupiter.ASSET_DOMAIN, "textures/model/rocketT5.png"));
+        super(new SCCoreEntityRocketT5(FMLClientHandler.instance().getClient().theWorld), new SCCoreModelSpaceshipTier5(), new ResourceLocation(GCJupiter.ASSET_DOMAIN, "textures/model/rocketT4.png"));
         this.cargoRocketModel = cargoRocketModel;
     }
 

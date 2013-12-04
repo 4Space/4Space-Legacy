@@ -37,7 +37,7 @@ public class GCVenusItems
     
     public static Item vurnBerry;
     
-    public static Item venusBattery;
+//    public static Item venusBattery;
     
     public static Item T3Schematic;
     public static Item spaceshipT3;
@@ -51,7 +51,7 @@ public class GCVenusItems
     public static void initItems()
     {
         GCVenusItems.venusItemBasic = new GCVenusItem(GCVenusConfigManager.idItemVenusBasic);
-        GCVenusItems.venusBattery = new GCVenusItemBattery(GCVenusConfigManager.idItemVenusBattery, "venusBattery");
+//        GCVenusItems.venusBattery = new GCVenusItemBattery(GCVenusConfigManager.idItemVenusBattery, "venusBattery");
 
         GCVenusItems.sulferPickaxe = new GCVenusItemSulferPickaxe(GCVenusConfigManager.idToolSulferPickaxe, GCVenusItems.TOOLSULFER).setUnlocalizedName("sulferPick");
         GCVenusItems.sulferAxe = new GCVenusItemSulferAxe(GCVenusConfigManager.idToolSulferAxe, GCVenusItems.TOOLSULFER).setUnlocalizedName("sulferAxe");
