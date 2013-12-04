@@ -20,6 +20,7 @@ CHANGELOG
 /src/minecraft/*
 !/src/minecraft/mcmod.info
 !/src/minecraft/mattparks/
+!/src/minecraft/codechicken/
 !/src/minecraft/universalelectricity/
 !/src/minecraft/mekanism/
 !/src/minecraft/ic2/
