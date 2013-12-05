@@ -146,7 +146,7 @@ public class GCVenusConfigManager
         }
         catch (final Exception e)
         {
-            FMLLog.log(Level.SEVERE, e, "Galacticraft Venus has a problem loading it's configuration");
+            FMLLog.log(Level.SEVERE, e, "Starcraft Venus has a problem loading it's configuration");
         }
         finally
         {

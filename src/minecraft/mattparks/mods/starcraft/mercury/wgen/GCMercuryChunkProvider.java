@@ -71,7 +71,7 @@ public class GCMercuryChunkProvider extends ChunkProviderGenerate
         this.dungeonGenerator.treasureRooms.add(new GCMercuryRoomTreasure(null, 0, 0, 0, ForgeDirection.UNKNOWN));
     }
 
-    private BiomeGenBase[] biomesForGeneration = { GCMercuryBiomeGenBase.venusFlat };
+    private BiomeGenBase[] biomesForGeneration = { GCMercuryBiomeGenBase.mercuryFlat };
 
     private final GCCoreMapGenBaseMeta caveGenerator = new GCMercuryGenCaves();
 
@@ -311,7 +311,7 @@ public class GCMercuryChunkProvider extends ChunkProviderGenerate
     @Override
     public String makeString()
     {
-        return GCMercuryConfigManager.generateOtherMods ? "RandomLevelSource" : "VenusLevelSource";
+        return GCMercuryConfigManager.generateOtherMods ? "RandomLevelSource" : "MercuryLevelSource";
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

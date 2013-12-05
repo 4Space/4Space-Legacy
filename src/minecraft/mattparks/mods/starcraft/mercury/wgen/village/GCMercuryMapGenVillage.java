@@ -13,7 +13,7 @@ import cpw.mods.fml.common.FMLLog;
 
 public class GCMercuryMapGenVillage extends MapGenStructure
 {
-    public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { GCMercuryBiomeGenBase.venusFlat });
+    public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { GCMercuryBiomeGenBase.mercuryFlat });
     private final int terrainType;
     private static boolean initialized;
 

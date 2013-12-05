@@ -8,7 +8,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCMercuryBiomeGenBase extends BiomeGenBase
 {
-    public static final BiomeGenBase venusFlat = new GCMercuryBiomeGenFlat(102).setBiomeName("venus");
+    public static final BiomeGenBase mercuryFlat = new GCMercuryBiomeGenFlat(102).setBiomeName("mercury");
 
     public GCMercuryBiomeGenBase(int var1)
     {

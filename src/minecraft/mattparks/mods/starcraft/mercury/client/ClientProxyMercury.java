@@ -45,9 +45,6 @@ import cpw.mods.fml.relauncher.Side;
 
 public class ClientProxyMercury extends CommonProxyMercury
 {
-    private static int eggRenderID;
-    private static int treasureRenderID;
-    
     public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
     
     @Override
@@ -61,7 +58,6 @@ public class ClientProxyMercury extends CommonProxyMercury
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCMercury.CHANNEL, Side.CLIENT);
-        ClientProxyMercury.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
     }
 
     @Override
@@ -72,42 +68,6 @@ public class ClientProxyMercury extends CommonProxyMercury
         
         RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT4.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier4(), GCMercury.ASSET_DOMAIN, "rocketT4"));
         MinecraftForgeClient.registerItemRenderer(GCMercuryItems.spaceshipT4.itemID, new SCCoreItemRendererSpaceshipT4(cargoRocketModel));
-    }
-
-
-    @Override
-    public int getEggRenderID()
-    {
-        return ClientProxyMercury.eggRenderID;
-    }
-
-    @Override
-    public int getTreasureRenderID()
-    {
-        return ClientProxyMercury.treasureRenderID;
-    }
-
-
-    @Override
-    public void spawnParticle(String var1, double var2, double var4, double var6)
-    {
-        final Minecraft var14 = FMLClientHandler.instance().getClient();
-
-        if (var14 != null && var14.renderViewEntity != null && var14.effectRenderer != null)
-        {
-            final double var15 = var14.renderViewEntity.posX - var2;
-            final double var17 = var14.renderViewEntity.posY - var4;
-            final double var19 = var14.renderViewEntity.posZ - var6;
-            Object var21 = null;
-            final double var22 = 64.0D;
-
-            if (var15 * var15 + var17 * var17 + var19 * var19 < var22 * var22)
-            {
-                if (var1.equals("sludgeDrip"))
-                {
-                }
-            }
-        }
     }
 
     public class ClientPacketHandler implements IPacketHandler
@@ -218,7 +178,7 @@ public class ClientProxyMercury extends CommonProxyMercury
         @Override
         public String getLabel()
         {
-            return "Galacticraft Mercury Client";
+            return "Starcraft Mercury Client";
         }
 
         @Override

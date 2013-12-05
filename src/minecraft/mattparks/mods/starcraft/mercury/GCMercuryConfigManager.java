@@ -92,7 +92,7 @@ public class GCMercuryConfigManager
         }
         catch (final Exception e)
         {
-            FMLLog.log(Level.SEVERE, e, "Galacticraft Mercury has a problem loading it's configuration");
+            FMLLog.log(Level.SEVERE, e, "Starcraft Mercury has a problem loading it's configuration");
         }
         finally
         {

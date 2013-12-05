@@ -9,10 +9,12 @@ import mattparks.mods.starcraft.venus.client.model.SCCoreModelSpaceshipTier3;
 import mattparks.mods.starcraft.venus.client.render.item.SCCoreItemRendererSpaceshipT3;
 import mattparks.mods.starcraft.venus.CommonProxyVenus;
 import mattparks.mods.starcraft.venus.GCVenus;
+import mattparks.mods.starcraft.venus.client.render.entities.GCVenusRenderEvolvedBlaze;
 import mattparks.mods.starcraft.venus.client.render.entities.GCVenusRenderFlameling;
 import mattparks.mods.starcraft.venus.client.render.entities.GCVenusRenderVenusianVillager;
 import mattparks.mods.starcraft.venus.client.sounds.GCVenusSounds;
 import mattparks.mods.starcraft.venus.dimension.GCVenusWorldProvider;
+import mattparks.mods.starcraft.venus.entities.GCVenusEntityEvolvedBlaze;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityFlameling;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityVenusianVillager;
 import mattparks.mods.starcraft.venus.entities.SCCoreEntityRocketT3;
@@ -49,9 +51,6 @@ import cpw.mods.fml.relauncher.Side;
 
 public class ClientProxyVenus extends CommonProxyVenus
 {
-    private static int eggRenderID;
-    private static int treasureRenderID;
-    
     public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
     
     @Override
@@ -65,16 +64,17 @@ public class ClientProxyVenus extends CommonProxyVenus
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCVenus.CHANNEL, Side.CLIENT);
-        ClientProxyVenus.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
     }
 
     @Override
     public void registerRenderInformation()
     {
         RenderingRegistry.addNewArmourRendererPrefix("gem");
+        RenderingRegistry.addNewArmourRendererPrefix("sulfer");
 
         RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityVenusianVillager.class, new GCVenusRenderVenusianVillager());
         RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityFlameling.class, new GCVenusRenderFlameling());
+        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityEvolvedBlaze.class, new GCVenusRenderEvolvedBlaze());
   
         IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
         // TODO remove internal cargo rocket codes
@@ -82,42 +82,6 @@ public class ClientProxyVenus extends CommonProxyVenus
         RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT3.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier3(), GCVenus.ASSET_DOMAIN, "rocketT3"));
         MinecraftForgeClient.registerItemRenderer(GCVenusItems.spaceshipT3.itemID, new SCCoreItemRendererSpaceshipT3(cargoRocketModel));
     
-    }
-
-
-    @Override
-    public int getEggRenderID()
-    {
-        return ClientProxyVenus.eggRenderID;
-    }
-
-    @Override
-    public int getTreasureRenderID()
-    {
-        return ClientProxyVenus.treasureRenderID;
-    }
-
-
-    @Override
-    public void spawnParticle(String var1, double var2, double var4, double var6)
-    {
-        final Minecraft var14 = FMLClientHandler.instance().getClient();
-
-        if (var14 != null && var14.renderViewEntity != null && var14.effectRenderer != null)
-        {
-            final double var15 = var14.renderViewEntity.posX - var2;
-            final double var17 = var14.renderViewEntity.posY - var4;
-            final double var19 = var14.renderViewEntity.posZ - var6;
-            Object var21 = null;
-            final double var22 = 64.0D;
-
-            if (var15 * var15 + var17 * var17 + var19 * var19 < var22 * var22)
-            {
-                if (var1.equals("sludgeDrip"))
-                {
-                }
-            }
-        }
     }
 
     public class ClientPacketHandler implements IPacketHandler
@@ -233,7 +197,7 @@ public class ClientProxyVenus extends CommonProxyVenus
         @Override
         public String getLabel()
         {
-            return "Galacticraft Venus 2 Client";
+            return "Starcraft Venus Client";
         }
 
         @Override
