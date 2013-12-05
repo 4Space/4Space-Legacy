@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.uranus.client;
 import java.util.Random;
 
 import mattparks.mods.starcraft.neptune.GCNeptune;
+// TODO remove Neptune dependency
 import mattparks.mods.starcraft.uranus.GCUranus;
 import mattparks.mods.starcraft.uranus.dimension.GCUranusWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;

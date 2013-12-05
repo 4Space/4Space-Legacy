@@ -1,6 +1,5 @@
 package mattparks.mods.starcraft.jupiter.client.gui;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.jupiter.GCJupiter;
 import mattparks.mods.starcraft.jupiter.inventory.SCCoreContainerRocketBenchT5;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;

@@ -5,7 +5,6 @@ import java.io.DataInputStream;
 import java.util.ArrayList;
 import java.util.EnumSet;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.mercury.CommonProxyMercury;
 import mattparks.mods.starcraft.mercury.GCMercury;
 import mattparks.mods.starcraft.mercury.client.model.SCCoreModelSpaceshipTier4;

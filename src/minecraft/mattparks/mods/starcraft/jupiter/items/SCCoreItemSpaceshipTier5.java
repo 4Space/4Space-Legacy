@@ -2,7 +2,6 @@ package mattparks.mods.starcraft.jupiter.items;
 
 import java.util.List;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.jupiter.GCJupiter;
 import mattparks.mods.starcraft.jupiter.entities.SCCoreEntityRocketT5;
 import mekanism.api.EnumColor;

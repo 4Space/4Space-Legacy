@@ -2,7 +2,6 @@ package mattparks.mods.starcraft.core.blocks;
 
 import java.util.List;
 
-import mattparks.mods.starcraft.mercury.GCMercury;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockColored;
 import net.minecraft.block.material.Material;

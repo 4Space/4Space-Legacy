@@ -5,13 +5,6 @@ import java.util.HashMap;
 
 import mattparks.mods.starcraft.core.blocks.*;
 import mattparks.mods.starcraft.core.network.SCCorePacketHandlerServer;
-import mattparks.mods.starcraft.eris.GCEris;
-import mattparks.mods.starcraft.eris.items.GCErisItems;
-import mattparks.mods.starcraft.jupiter.GCJupiter;
-import mattparks.mods.starcraft.mercury.GCMercury;
-import mattparks.mods.starcraft.pluto.GCPluto;
-import mattparks.mods.starcraft.sedna.GCSedna;
-import mattparks.mods.starcraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.GCLog;

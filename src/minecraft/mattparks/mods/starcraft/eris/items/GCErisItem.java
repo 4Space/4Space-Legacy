@@ -2,7 +2,6 @@ package mattparks.mods.starcraft.eris.items;
 
 import java.util.List;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.eris.GCEris;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;

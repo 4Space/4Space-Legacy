@@ -1,9 +1,6 @@
 package mattparks.mods.starcraft.sedna.items;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.mercury.GCMercury;
 import mattparks.mods.starcraft.sedna.GCSedna;
-import mattparks.mods.starcraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;

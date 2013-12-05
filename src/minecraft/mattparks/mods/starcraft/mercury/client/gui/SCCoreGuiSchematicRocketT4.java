@@ -1,6 +1,5 @@
 package mattparks.mods.starcraft.mercury.client.gui;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.mercury.GCMercury;
 import mattparks.mods.starcraft.mercury.inventory.SCCoreContainerRocketBenchT4;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;

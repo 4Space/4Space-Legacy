@@ -2,7 +2,6 @@ package mattparks.mods.starcraft.venus.items;
 
 import java.util.List;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.venus.GCVenus;
 import mattparks.mods.starcraft.venus.entities.SCCoreEntityRocketT3;
 import mekanism.api.EnumColor;

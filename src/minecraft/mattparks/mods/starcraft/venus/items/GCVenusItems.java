@@ -1,7 +1,6 @@
 package mattparks.mods.starcraft.venus.items;
 
 import mattparks.mods.starcraft.core.StarcraftBlocks;
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.venus.GCVenusConfigManager;
 import net.minecraft.block.Block;
 import net.minecraft.item.EnumArmorMaterial;

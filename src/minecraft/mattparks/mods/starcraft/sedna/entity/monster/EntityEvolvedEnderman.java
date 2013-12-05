@@ -2,7 +2,6 @@ package mattparks.mods.starcraft.sedna.entity.monster;
 
 import java.util.UUID;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;

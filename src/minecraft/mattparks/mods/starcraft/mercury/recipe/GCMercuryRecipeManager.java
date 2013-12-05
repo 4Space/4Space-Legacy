@@ -3,8 +3,6 @@ package mattparks.mods.starcraft.mercury.recipe;
 import java.util.HashMap;
 
 import mattparks.mods.starcraft.core.StarcraftBlocks;
-import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.venus.items.GCVenusItems;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;

@@ -5,6 +5,7 @@ import java.util.Random;
 import mattparks.mods.starcraft.saturn.GCSaturn;
 import mattparks.mods.starcraft.saturn.dimension.GCSaturnWorldProvider;
 import mattparks.mods.starcraft.uranus.GCUranus;
+//TODO remove Uranus dependency
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.client.Minecraft;

@@ -26,7 +26,7 @@ public class SCCoreItemRendererSpaceshipT5 extends GCCoreItemRendererSpaceship
 
     public SCCoreItemRendererSpaceshipT5(IModelCustom cargoRocketModel)
     {
-        super(new SCCoreEntityRocketT5(FMLClientHandler.instance().getClient().theWorld), new SCCoreModelSpaceshipTier5(), new ResourceLocation(GCJupiter.ASSET_DOMAIN, "textures/model/rocketT4.png"));
+        super(new SCCoreEntityRocketT5(FMLClientHandler.instance().getClient().theWorld), new SCCoreModelSpaceshipTier5(), new ResourceLocation(GCJupiter.ASSET_DOMAIN, "textures/model/rocketT5.png"));
         this.cargoRocketModel = cargoRocketModel;
     }
 

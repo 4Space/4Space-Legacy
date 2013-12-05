@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.venus.GCVenus;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;

@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.pluto.client;
 import java.util.Random;
 
 import mattparks.mods.starcraft.eris.GCEris;
+//TODO remove Eris dependency
 import mattparks.mods.starcraft.pluto.GCPluto;
 import mattparks.mods.starcraft.pluto.dimension.GCPlutoWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;

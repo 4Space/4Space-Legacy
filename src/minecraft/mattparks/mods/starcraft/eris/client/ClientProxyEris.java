@@ -55,10 +55,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ClientProxyEris extends CommonProxyEris
-{
-    private static int eggRenderID;
-    private static int treasureRenderID;
-    
+{    
     public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
     
     @Override
@@ -72,50 +69,14 @@ public class ClientProxyEris extends CommonProxyEris
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCEris.CHANNEL, Side.CLIENT);
-        ClientProxyEris.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
     }
 
     @Override
     public void registerRenderInformation()
     {
-        RenderingRegistry.addNewArmourRendererPrefix("gem");
+    	;
     }
 
-
-    @Override
-    public int getEggRenderID()
-    {
-        return ClientProxyEris.eggRenderID;
-    }
-
-    @Override
-    public int getTreasureRenderID()
-    {
-        return ClientProxyEris.treasureRenderID;
-    }
-
-
-    @Override
-    public void spawnParticle(String var1, double var2, double var4, double var6)
-    {
-        final Minecraft var14 = FMLClientHandler.instance().getClient();
-
-        if (var14 != null && var14.renderViewEntity != null && var14.effectRenderer != null)
-        {
-            final double var15 = var14.renderViewEntity.posX - var2;
-            final double var17 = var14.renderViewEntity.posY - var4;
-            final double var19 = var14.renderViewEntity.posZ - var6;
-            Object var21 = null;
-            final double var22 = 64.0D;
-
-            if (var15 * var15 + var17 * var17 + var19 * var19 < var22 * var22)
-            {
-                if (var1.equals("sludgeDrip"))
-                {
-                }
-            }
-        }
-    }
 
     public class ClientPacketHandler implements IPacketHandler
     {
@@ -142,18 +103,6 @@ public class ClientProxyEris extends CommonProxyEris
 
                     {
                     }
-
-                    player.openContainer.windowId = (Integer) packetReadout[0];
-                    break;
-                case 1:
-                    entityID = (Integer) packetReadout[2];
-                    entity = player.worldObj.getEntityByID(entityID);
-
-                    {
-                    }
-
-                    player.openContainer.windowId = (Integer) packetReadout[0];
-                    break;
                 }
             }
         }
@@ -226,7 +175,7 @@ public class ClientProxyEris extends CommonProxyEris
         @Override
         public String getLabel()
         {
-            return "Galacticraft Mercury Client";
+            return "Starcarft Eris Client";
         }
 
         @Override

@@ -2,7 +2,6 @@ package mattparks.mods.starcraft.mercury.items;
 
 import java.util.List;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.mercury.GCMercury;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemSchematic;

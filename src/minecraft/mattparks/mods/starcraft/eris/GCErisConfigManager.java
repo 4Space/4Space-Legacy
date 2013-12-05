@@ -26,7 +26,6 @@ public class GCErisConfigManager
     public static int dimensionIDEris;
 
     // BLOCKS
-    public static int idBlockEris;
 
     // ITEMS
     public static int idItemErisBasic;
@@ -55,17 +54,13 @@ public class GCErisConfigManager
 
             GCErisConfigManager.dimensionIDEris = GCErisConfigManager.configuration.get("Dimensions", "Eris Dimension ID", -40).getInt(-40);
 
-//            GCPlutoConfigManager.idBlockPluto = GCPlutoConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockVenus", 7653).getInt(7653);
-     
             GCErisConfigManager.idItemErisBasic = GCErisConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemErisBasic", 9654).getInt(9654);
 
-            //Block id's 7755-7756 are used by Starcraft mercury
-            
             GCErisConfigManager.generateOtherMods = GCErisConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Generate other mod's features on Eris", false).getBoolean(false);        
         }
         catch (final Exception e)
         {
-            FMLLog.log(Level.SEVERE, e, "Galacticraft Eris has a problem loading it's configuration");
+            FMLLog.log(Level.SEVERE, e, "Starcrfat Eris has a problem loading it's configuration");
         }
         finally
         {

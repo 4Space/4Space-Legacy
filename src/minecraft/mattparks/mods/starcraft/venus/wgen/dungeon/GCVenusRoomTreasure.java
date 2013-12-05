@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.venus.wgen.dungeon;
 import java.util.ArrayList;
 import java.util.Random;
 
+import mattparks.mods.starcraft.venus.items.GCVenusItems;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityTreasureChest;
@@ -110,6 +111,8 @@ public class GCVenusRoomTreasure extends GCCoreDungeonRoom
             return new ItemStack(GCCoreItems.schematic, 1, 0);
         case 1:
             return new ItemStack(GCCoreItems.schematic, 1, 1);
+        case 2:
+            return new ItemStack(GCVenusItems.T3Schematic, 1, 0);
         }
 
         return null;

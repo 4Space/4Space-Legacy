@@ -2,7 +2,6 @@ package mattparks.mods.starcraft.pluto.items;
 
 import java.util.List;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.pluto.GCPluto;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;

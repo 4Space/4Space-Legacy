@@ -1,7 +1,6 @@
 package mattparks.mods.starcraft.core.blocks;
 
 import mattparks.mods.starcraft.core.StarcraftBlocks;
-import mattparks.mods.starcraft.mercury.GCMercury;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -19,13 +18,6 @@ public class StarcraftCaravanModule extends Block
         this.setUnlocalizedName(name);
 //        this.setTextureName(StarcraftBlocks.ASSET_PREFIX + name);
         this.setHardness(2.0F);
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public CreativeTabs getCreativeTabToDisplayOn()
-    {
-        return GCMercury.starcraftMercuryTab;
     }
     
     @Override

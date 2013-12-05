@@ -258,7 +258,8 @@ public class StarcraftBlocks
 	public static final Block caravanModule = new StarcraftCaravanModule(927, null)
 			.setHardness(0.4F).setStepSound(Block.soundClothFootstep)
 			.setUnlocalizedName("caravanModule")
-			.setTextureName("starcraftmercury:caravanModule");
+			.setTextureName("starcraftmercury:caravanModule")
+			.setCreativeTab(GCMercury.starcraftMercuryTab);
 
 	// Block Mercury, Caravan Block
 	public static final Block caravanModulePart = new StarcraftBlock(928, null)

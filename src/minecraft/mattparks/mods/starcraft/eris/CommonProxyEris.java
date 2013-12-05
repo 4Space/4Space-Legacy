@@ -30,55 +30,15 @@ public class CommonProxyEris implements IGuiHandler
 
     }
 
-    public int getVineRenderID()
-    {
-        return -1;
-    }
-
-    public int getEggRenderID()
-    {
-        return -1;
-    }
-
-    public int getTreasureRenderID()
-    {
-        return -1;
-    }
-
-    public int getMachineRenderID()
-    {
-        return -1;
-    }
-
-    public int getTintedGlassPaneRenderID()
-    {
-        return -1;
-    }
-
-    public void spawnParticle(String var1, double var2, double var4, double var6)
-    {
-        ;
-    }
-
- //   public void opengSlimelingGui(GCMarsEntitySlimeling slimeling, int gui)
-    {
-        ;
-    }
-
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
     {
         TileEntity tile = world.getBlockTileEntity(x, y, z);
 
-//        if (ID == GCMarsConfigManager.idGuiMachine)
         {
-//            if (tile instanceof GCMarsTileEntityTerraformer)
             {
-//                return new GCMarsContainerTerraformer(player.inventory, (GCMarsTileEntityTerraformer) tile);
             }
-//            else if (tile instanceof GCMarsTileEntityLaunchController)
             {
-//                return new GCMarsContainerLaunchController(player.inventory, (GCMarsTileEntityLaunchController) tile);
             }
         }
 

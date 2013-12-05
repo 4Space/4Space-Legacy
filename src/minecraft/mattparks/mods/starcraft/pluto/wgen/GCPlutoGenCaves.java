@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.pluto.wgen;
 import java.util.Random;
 
 import mattparks.mods.starcraft.core.StarcraftBlocks;
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.pluto.GCPluto;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
 import net.minecraft.util.MathHelper;

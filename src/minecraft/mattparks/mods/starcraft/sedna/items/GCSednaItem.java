@@ -2,8 +2,6 @@ package mattparks.mods.starcraft.sedna.items;
 
 import java.util.List;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.eris.GCEris;
 import mattparks.mods.starcraft.sedna.GCSedna;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -52,7 +50,7 @@ public class GCSednaItem extends Item
 
         for (String name : GCSednaItem.names)
         {
-            this.icons[i++] = iconRegister.registerIcon(GCEris.ASSET_PREFIX + name);
+            this.icons[i++] = iconRegister.registerIcon(GCSedna.ASSET_PREFIX + name);
         }
     }
 

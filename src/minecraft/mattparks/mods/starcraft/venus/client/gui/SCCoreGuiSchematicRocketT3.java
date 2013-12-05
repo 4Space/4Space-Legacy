@@ -1,6 +1,5 @@
 package mattparks.mods.starcraft.venus.client.gui;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.venus.GCVenus;
 import mattparks.mods.starcraft.venus.inventory.SCCoreContainerRocketBenchT3;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
