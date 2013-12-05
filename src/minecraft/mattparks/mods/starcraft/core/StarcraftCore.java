@@ -43,26 +43,17 @@ public class StarcraftCore
 
     public static final int LOCALMAJVERSION = 0;
     public static final int LOCALMINVERSION = 0;
-    public static final int LOCALBUILDVERSION = 2;
+    public static final int LOCALBUILDVERSION = 3;
     public static int remoteMajVer;
     public static int remoteMinVer;
     public static int remoteBuildVer;
-
-//    public static final String LANGUAGE_PATH = "/assets/starcraftcore/lang/";
-//    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US", "ru_RU" };
-
+    
     @SidedProxy(clientSide = "mattparks.mods.starcraft.core.client.ClientProxy", serverSide = "mattparks.mods.starcraft.core.CommonProxy")
     public static CommonProxy proxy;
 
     @Instance(StarcraftCore.MODID)
     public static StarcraftCore instance;
 
-//    public static final String ASSET_DOMAIN = "starcraftcore";
-//    public static final String ASSET_PREFIX = StarcraftCore.ASSET_DOMAIN + ":";
-    
-//    public static long tick;
-//    public static long slowTick;
-    
     public static HashMap<String, ItemStack> blocksList = new HashMap<String, ItemStack>();
 
     @EventHandler
@@ -70,57 +61,17 @@ public class StarcraftCore
     {
         new StarcraftCoreConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/core.conf"));
 
-//        SCCoreItem.initItems();
-        
         StarcraftCore.proxy.preInit(event);
     }
 
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
-//        int languages = 0;
-//
-//        for (String language : StarcraftCore2.LANGUAGES_SUPPORTED)
-//        {
-//            LanguageRegistry.instance().loadLocalization(StarcraftCore2.LANGUAGE_PATH + language + ".lang", language, false);
-//
-//            if (LanguageRegistry.instance().getStringLocalization("children", language) != "")
-//            {
-//                try
-//                {
-//                    String[] children = LanguageRegistry.instance().getStringLocalization("children", language).split(",");
-//
-//                    for (String child : children)
-//                    {
-//                        if (child != "" || child != null)
-//                        {
-//                            LanguageRegistry.instance().loadLocalization(StarcraftCore2.LANGUAGE_PATH + language + ".lang", child, false);
-//                            languages++;
-//                        }
-//                    }
-//                }
-//                catch (Exception e)
-//                {
-//                    FMLLog.severe("Failed to load a child language file.");
-//                    e.printStackTrace();
-//                }
-//            }
-//
-//            languages++;
-//        }
-//
-//        GCLog.info("Starcraft Core Loaded: " + languages + " Languages.");
-
-//        SchematicRegistry.registerSchematicRecipe(new GCVenusSchematicRocketT3());
-        // TODO add Tier 3-6 to crafting bench  
-        
         NetworkRegistry.instance().registerGuiHandler(StarcraftCore.instance, StarcraftCore.proxy);
         this.registerTileEntities();
         this.registerCreatures();
         this.registerOtherEntities();
-        StarcraftCore.proxy.init(event);
-//        GalacticraftRegistry.addDungeonLoot(2, new ItemStack(SCCoreItems.schematic, 1, 0));
-        // TODO add Tier 3-6 schematics to dungeons       
+        StarcraftCore.proxy.init(event);  
     }
 
     @EventHandler
