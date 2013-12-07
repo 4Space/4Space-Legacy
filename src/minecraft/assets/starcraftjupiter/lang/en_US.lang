@@ -6,25 +6,29 @@ item.tier5.desc=Tier 5
 # ITEMS
 item.spaceshipTier5.name=Tier 5 Rocket
 item.plateHeavyT5.name=Heavy-Duty Plate
+item.carbonSoot.name=Carbon Soot
+item.graphiteChunks.name=Graphite Chunks
+item.clearDiamond.name=Clear Diamond
 
 # TOOLS
-item.clearDiamondPick.name=Clear Diamond Pickaxe
-item.clearDiamondAxe.name=Clear Diamond Axe
-item.clearDiamondHoe.name=Clear Diamond Hoe
-item.clearDiamondSpade.name=Clear Diamond Shovel
-item.clearDiamondSword.name=Clear Diamond Sword
+item.ClearDiamondPick.name=Clear Diamond Pickaxe
+item.ClearDiamondAxe.name=Clear Diamond Axe
+item.ClearDiamondHoe.name=Clear Diamond Hoe
+item.ClearDiamondSpade.name=Clear Diamond Shovel
+item.ClearDiamondSword.name=Clear Diamond Sword
 
 # ARMOR
-item.clearDiamondHelmet.name=Clear Diamond Helmet
-item.clearDiamondChestplate.name=Clear Diamond Chestplate
-item.clearDiamondLeggings.name=Clear Diamond Leggings
-item.clearDiamondBoots.name=Clear Diamond Boots
+item.ClearDiamondHelmet.name=Clear Diamond Helmet
+item.ClearDiamondChestplate.name=Clear Diamond Chestplate
+item.ClearDiamondLeggings.name=Clear Diamond Leggings
+item.ClearDiamondBoots.name=Clear Diamond Boots
 
 # BLOCKS
 tile.jupiterNitrogen.name=Jupiter Nitrogen Gas
 tile.jupiterHelium.name=Jupiter Helium Gas
 tile.jupiterHydrogen.name=Jupiter Hydrogen Gas
 tile.jupiterBrick.name=Jupiter Brick
+tile.MetallicHydrogenFlowing.name=Metallic Hydrogen
 
 # ENTITYS
 

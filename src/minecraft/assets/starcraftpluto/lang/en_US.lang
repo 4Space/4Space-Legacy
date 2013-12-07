@@ -1,6 +1,7 @@
 # Starcraft Pluto Language File = UNITED STATES ENGLISH
 
 # GENERAL ITEMS
+item.tier6.desc=Tier 6
 
 # ITEMS
 item.plutoPlate.name=Pluto Plate

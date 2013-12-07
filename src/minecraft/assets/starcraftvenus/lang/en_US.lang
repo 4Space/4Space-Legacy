@@ -18,6 +18,13 @@ item.venusRodDust.name=Venus Rod Dust
 item.venusBattery.name=Venus Battery
 item.plateHeavyT3.name=Heavy-Duty Plate
 
+item.sulferDust.name=Sulfer Dust
+item.venusPowerCrystal.name=Power Crystal
+item.lazerCore.name=Lazer Core
+item.blueLazer.name=Blue Lazer
+item.redLazer.name=Red Lazer
+item.greenLazer.name=Green Lazer
+
 # TOOLS
 item.sulferPick.name=Sulfer Pickaxe
 item.sulferAxe.name=Sulfer Axe

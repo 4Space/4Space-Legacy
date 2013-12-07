@@ -19,7 +19,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCErisItem extends Item
 {
-    public static String[] names = { "erisPlate", "warpDrive" };
+    public static String[] names = { "erisPlate" };
     protected Icon[] icons = new Icon[GCErisItem.names.length];
 
     public GCErisItem(int par1)
@@ -102,7 +102,7 @@ public class GCErisItem extends Item
             switch (par1ItemStack.getItemDamage())
             {
             case 0:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier6.desc"));
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier7.desc"));
                 break;
             }
         }

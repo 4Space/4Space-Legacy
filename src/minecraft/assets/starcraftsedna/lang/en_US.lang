@@ -1,6 +1,7 @@
 # Starcraft Sedna Language File = UNITED STATES ENGLISH
 
 # GENERAL ITEMS
+item.tier8.desc=Tier 8
 
 # ITEMS
 item.sednaPlate.name=Sedna plate
@@ -8,13 +9,17 @@ item.sednaPlate.name=Sedna plate
 # TOOLS
 
 # ARMOR
+item.gravityHelmet.name=Gravity Helmet
+item.gravityChestplate.name=Gravity Chestplate
+item.gravityLeggings.name=Gravity Leggings
+item.gravityBoots.name=Gravity Boots
 
 # BLOCKS
 tile.grassSedna.name=Sedna Grass
 tile.dirtSedna.name=Sedna Dirt
 tile.stoneSedna.name=Sedna Stone
 tile.cobblestoneSedna.name=Sedna Cobblestone
-tile.SednaBrick.name=Sedna Brick
+tile.sednaBrick.name=Sedna Brick
 
 # ENTITYS
 

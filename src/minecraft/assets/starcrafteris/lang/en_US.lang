@@ -1,6 +1,7 @@
 # Starcraft Eris Language File = UNITED STATES ENGLISH
 
 # GENERAL ITEMS
+item.tier7.desc=Tier 7
 
 # ITEMS
 item.erisPlate.name=Eris plate

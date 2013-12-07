@@ -102,7 +102,7 @@ public class GCSednaItem extends Item
             switch (par1ItemStack.getItemDamage())
             {
             case 0:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier6.desc"));
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier8.desc"));
                 break;
             }
         }
