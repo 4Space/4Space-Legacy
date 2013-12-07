@@ -31,6 +31,8 @@ public class GCVenusConfigManager
     public static int idItemVenusBattery;
     public static int idTtemVenusT3Schematic;
     
+    public static int idVurnBerry;
+    
     public static int idItemSpaceshipTier3;
     
     // ARMOR
@@ -56,8 +58,6 @@ public class GCVenusConfigManager
     public static int idToolGemAxe;
     public static int idToolGemSpade;
     public static int idToolGemHoe;
-    
-    public static int idVurnBerry;
 
     // ENTITIES
     public static int idEntitySpaceshipTier3;

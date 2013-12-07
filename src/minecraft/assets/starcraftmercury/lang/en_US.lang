@@ -26,25 +26,26 @@ tile.MercuryCoalOre.name=Mercury Coal Ore
 tile.MercuryTinOre.name=Mercury Tin Ore
 tile.MercuryIridiumOre.name=Mercury Iridium Ore
 tile.MercuryCopperOre.name=Mercury Copper Ore
+
 tile.caravanModule.name=Portable Space Tent
 tile.GravityGenerator.name=Gravity Generator
 
-tile.MercuryGlowstone.white.name=White Space Glowstone
-tile.MercuryGlowstone.orange.name=Orange Space Glowstone
-tile.MercuryGlowstone.magenta.name=Magenta Space Glowstone
-tile.MercuryGlowstone.light_blue.name=Light Blue Space Glowstone
-tile.MercuryGlowstone.yellow.name=Yellow Space Glowstone
-tile.MercuryGlowstone.lime.name=Lime Space Glowstone
-tile.MercuryGlowstone.pink.name=Pink Space Glowstone
-tile.MercuryGlowstone.gray.name=Gray Space Glowstone
-tile.MercuryGlowstone.silver.name=Silver Space Glowstone
-tile.MercuryGlowstone.cyan.name=Cyan Space Glowstone
-tile.MercuryGlowstone.purple.name=Purple Space Glowstone
-tile.MercuryGlowstone.blue.name=Blue Space Glowstone
-tile.MercuryGlowstone.brown.name=Brown Space Glowstone
-tile.MercuryGlowstone.green.name=Green Space Glowstone
-tile.MercuryGlowstone.red.name=Red Space Glowstone
-tile.MercuryGlowstone.black.name=Black Space Glowstone
+tile.WhiteGlowstone.name=White Space Glowstone
+tile.OrangeGlowstone.name=Orange Space Glowstone
+tile.MagentaGlowstone.name=Magenta Space Glowstone
+tile.Light_blueGlowstone.name=Light Blue Space Glowstone
+tile.YellowGlowstone.name=Yellow Space Glowstone
+tile.LimeGlowstone.name=Lime Space Glowstone
+tile.PinkGlowstone.name=Pink Space Glowstone
+tile.GrayGlowstone.name=Gray Space Glowstone
+tile.SilverGlowstone.name=Silver Space Glowstone
+tile.CyanGlowstone.name=Cyan Space Glowstone
+tile.PurpleGlowstone.name=Purple Space Glowstone
+tile.BlueGlowstone.name=Blue Space Glowstone
+tile.BrownGlowstone.name=Brown Space Glowstone
+tile.GreenGlowstone.name=Green Space Glowstone
+tile.RedGlowstone.name=Red Space Glowstone
+tile.BlackGlowstone.name=Black Space Glowstone
 
 # ENTITYS
 

@@ -9,9 +9,10 @@
 # ARMOR
 
 # BLOCKS
-tile.saturnNitrogen.name=Saturn's Nitrogen Gas
-tile.saturnHelium.name=Saturn's Helium Gas
-tile.saturnHydrogen.name=Saturn's Hydrogen Gas
+tile.saturnNitrogen.name=Saturn Nitrogen Gas
+tile.saturnHelium.name=Saturn Helium Gas
+tile.saturnHydrogen.name=Saturn Hydrogen Gas
+tile.saturnBrick.name=Saturn Brick
 
 # ENTITYS
 

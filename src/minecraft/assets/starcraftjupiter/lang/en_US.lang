@@ -1,21 +1,39 @@
 # Starcraft Jupiter Language File = UNITED STATES ENGLISH
 
 # GENERAL ITEMS
+item.tier5.desc=Tier 5
 
 # ITEMS
+item.spaceshipTier5.name=Tier 5 Rocket
+item.plateHeavyT5.name=Heavy-Duty Plate
 
 # TOOLS
+item.clearDiamondPick.name=Clear Diamond Pickaxe
+item.clearDiamondAxe.name=Clear Diamond Axe
+item.clearDiamondHoe.name=Clear Diamond Hoe
+item.clearDiamondSpade.name=Clear Diamond Shovel
+item.clearDiamondSword.name=Clear Diamond Sword
 
 # ARMOR
+item.clearDiamondHelmet.name=Clear Diamond Helmet
+item.clearDiamondChestplate.name=Clear Diamond Chestplate
+item.clearDiamondLeggings.name=Clear Diamond Leggings
+item.clearDiamondBoots.name=Clear Diamond Boots
 
 # BLOCKS
-tile.jupiterNitrogen.name=Jupiter's Nitrogen Gas
-tile.jupiterHelium.name=Jupiter's Helium Gas
-tile.jupiterHydrogen.name=Jupiter's Hydrogen Gas
+tile.jupiterNitrogen.name=Jupiter Nitrogen Gas
+tile.jupiterHelium.name=Jupiter Helium Gas
+tile.jupiterHydrogen.name=Jupiter Hydrogen Gas
+tile.jupiterBrick.name=Jupiter Brick
 
 # ENTITYS
 
 # GUI
 gui.choosePlanet.desc.jupiter=Gas Giant#*No Surface#*Gravity: 254%
 
+itemGroup.starcraftGasTab=Spacecraft Gas Giants
+
 dimension.Jupiter.name=Jupiter
+
+# Schematics
+schematic.rocketT5.name=Tier 5 Rocket

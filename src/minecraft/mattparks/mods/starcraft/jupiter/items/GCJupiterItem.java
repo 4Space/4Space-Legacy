@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCJupiterItem extends Item
 {
-    public static String[] names = { "jupiterPlate", "carbonSoot", "graphiteChunks", "clearDiamond" };
+    public static String[] names = { "plateHeavyT3", "carbonSoot", "graphiteChunks", "clearDiamond" };
     protected Icon[] icons = new Icon[GCJupiterItem.names.length];
 
     public GCJupiterItem(int par1)

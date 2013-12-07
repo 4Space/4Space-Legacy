@@ -9,9 +9,10 @@
 # ARMOR
 
 # BLOCKS
-tile.neptuneNitrogen.name=Neptune's Nitrogen Gas
-tile.neptuneHelium.name=Neptune's Helium Gas
-tile.neptuneHydrogen.name=Neptune's Hydrogen Gas
+tile.neptuneNitrogen.name=Neptune Nitrogen Gas
+tile.neptuneHelium.name=Neptune Helium Gas
+tile.neptuneHydrogen.name=Neptune Hydrogen Gas
+tile.neptuneBrick.name=Neptune Brick
 
 # ENTITYS
 
