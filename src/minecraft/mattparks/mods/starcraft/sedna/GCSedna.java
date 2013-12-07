@@ -61,7 +61,7 @@ public class GCSedna
     
 	public static CreativeTabs starcraftSednaTab = new CreativeTabs("starcraftSednaTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(StarcraftBlocks.SednaBrick, 1, 0);
+			return new ItemStack(GCSednaItems.gravityBoots, 1, 0);
 		}
 	};
     

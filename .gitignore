@@ -31,7 +31,6 @@ CHANGELOG
 /src/minecraft/assets/galacticraftmoon
 /src/minecraft/assets/galacticraftmars
 /src/minecraft/assets/dependencies
-/src/minecraft/assets/minecraft
 !/src/minecraft/META-INF/
 !/src/minecraft/starcraft_at.cfg
 !/src/minecraft/mcmod.info

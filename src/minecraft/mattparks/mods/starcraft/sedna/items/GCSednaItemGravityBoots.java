@@ -38,17 +38,9 @@ public class GCSednaItemGravityBoots extends ItemArmor
     {
         if (this.material == GCSednaItems.ARMORGRAVITY)
         {
-            if (stack.getItem().itemID == GCSednaItems.gravityHelmet.itemID)
-            {
-                return "textures/model/armor/gravity_1.png";
-            }
-            else if (stack.getItem().itemID == GCSednaItems.gravityChestplate.itemID || stack.getItem().itemID == GCSednaItems.gravityBoots.itemID)
+            if (stack.getItem().itemID == GCSednaItems.gravityBoots.itemID)
             {
                 return "textures/model/armor/gravity_2.png";
-            }
-            else if (stack.getItem().itemID == GCSednaItems.gravityLeggings.itemID)
-            {
-                return "textures/model/armor/gravity_3.png";
             }
         }
 
@@ -72,6 +64,6 @@ public class GCSednaItemGravityBoots extends ItemArmor
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "starcraftcore:"));
+        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "starcraftsedna:"));
     }
 }
