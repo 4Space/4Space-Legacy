@@ -6,7 +6,6 @@ item.tier4.desc=Tier 4
 # ITEMS
 item.spaceshipTier4.name=Tier 4 Rocket
 item.plateHeavyT4.name=Heavy-Duty Plate
-item.mercuryPlate.name=Mercury Plate
 item.jetpack.name=Jetpack
 item.jetpackFuel.name=Jetpack Fuel
 item.gravityGeneratorCore.name=Gravity Generator Core
@@ -30,22 +29,22 @@ tile.MercuryCopperOre.name=Mercury Copper Ore
 tile.caravanModule.name=Portable Space Tent
 tile.GravityGenerator.name=Gravity Generator
 
-tile.WhiteGlowstone.name=White Space Glowstone
-tile.OrangeGlowstone.name=Orange Space Glowstone
-tile.MagentaGlowstone.name=Magenta Space Glowstone
-tile.Light_blueGlowstone.name=Light Blue Space Glowstone
-tile.YellowGlowstone.name=Yellow Space Glowstone
-tile.LimeGlowstone.name=Lime Space Glowstone
-tile.PinkGlowstone.name=Pink Space Glowstone
-tile.GrayGlowstone.name=Gray Space Glowstone
-tile.SilverGlowstone.name=Silver Space Glowstone
-tile.CyanGlowstone.name=Cyan Space Glowstone
-tile.PurpleGlowstone.name=Purple Space Glowstone
-tile.BlueGlowstone.name=Blue Space Glowstone
-tile.BrownGlowstone.name=Brown Space Glowstone
-tile.GreenGlowstone.name=Green Space Glowstone
-tile.RedGlowstone.name=Red Space Glowstone
-tile.BlackGlowstone.name=Black Space Glowstone
+tile.WhiteGlowstone.name=White Glowstone
+tile.OrangeGlowstone.name=Orange Glowstone
+tile.MagentaGlowstone.name=Magenta Glowstone
+tile.Light_blueGlowstone.name=Light Blue Glowstone
+tile.YellowGlowstone.name=Yellow Glowstone
+tile.LimeGlowstone.name=Lime Glowstone
+tile.PinkGlowstone.name=Pink Glowstone
+tile.GrayGlowstone.name=Gray Glowstone
+tile.SilverGlowstone.name=Silver Glowstone
+tile.CyanGlowstone.name=Cyan Glowstone
+tile.PurpleGlowstone.name=Purple Glowstone
+tile.BlueGlowstone.name=Blue Glowstone
+tile.BrownGlowstone.name=Brown Glowstone
+tile.GreenGlowstone.name=Green Glowstone
+tile.RedGlowstone.name=Red Glowstone
+tile.BlackGlowstone.name=Black Glowstone
 
 # ENTITYS
 
