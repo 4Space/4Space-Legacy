@@ -159,20 +159,20 @@ public class StarcraftBlocks
     		.setTextureName("starcraftmercury:glowstone_grey")
     		.setCreativeTab(GCMercury.starcraftMercuryTab);
 
-    //Light Blue Glowstone
+    // Light Blue Glowstone
     public static final Block LightBlueGlowstone = new StarcraftBlock(507, null)
     		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
     		.setUnlocalizedName("LightBlueGlowstone")
     		.setLightValue(1.0f)
-    		.setTextureName("starcraftmercury:glowstone_lightblue")
+    		.setTextureName("starcraftmercury:glowstone_light_blue")
     		.setCreativeTab(GCMercury.starcraftMercuryTab);
 
-    //Light Grey Glowstone
-    public static final Block LightGreyGlowstone = new StarcraftBlock(508, null)
+    //Silver Glowstone
+    public static final Block SilverGlowstone = new StarcraftBlock(508, null)
     		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
-    		.setUnlocalizedName("LightGreyGlowstone")
+    		.setUnlocalizedName("SilverGlowstone")
     		.setLightValue(1.0f)
-    		.setTextureName("starcraftmercury:glowstone_lightgrey")
+    		.setTextureName("starcraftmercury:glowstone_silver")
     		.setCreativeTab(GCMercury.starcraftMercuryTab);
 
     //Lime Glowstone
@@ -707,7 +707,7 @@ public class StarcraftBlocks
                 GameRegistry.registerBlock(StarcraftBlocks.CyanGlowstone, "CyanGlowstone");
                 GameRegistry.registerBlock(StarcraftBlocks.GreenGlowstone, "GreenGlowstone");
                 GameRegistry.registerBlock(StarcraftBlocks.GreyGlowstone, "GreyGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.LightGreyGlowstone, "LightGreyGlowstone");
+                GameRegistry.registerBlock(StarcraftBlocks.SilverGlowstone, "SilverGlowstone");
                 GameRegistry.registerBlock(StarcraftBlocks.LightBlueGlowstone, "LightBlueGlowstone");
                 GameRegistry.registerBlock(StarcraftBlocks.LimeGlowstone, "LimeGlowstone");
                 GameRegistry.registerBlock(StarcraftBlocks.MagentaGlowstone, "MagentaGlowstone");
