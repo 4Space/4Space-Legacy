@@ -25,7 +25,11 @@ CHANGELOG
 !/src/minecraft/icbm/
 !/src/minecraft/mekanism/
 !/src/minecraft/universalelectricity/
-!/src/minecraft/micdoodle8/mods/galacticraft/api/
+
+!/src/minecraft/micdoodle8/
+/src/minecraft/micdoodle8/mods/galacticraft/core
+/src/minecraft/micdoodle8/mods/galacticraft/mars
+/src/minecraft/micdoodle8/mods/galacticraft/moon
 
 !/src/minecraft/assets/
 /src/minecraft/assets/forge
