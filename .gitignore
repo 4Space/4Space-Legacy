@@ -37,6 +37,14 @@ CHANGELOG
 /src/minecraft/assets/galacticraftmoon
 /src/minecraft/assets/galacticraftmars
 /src/minecraft/assets/dependencies
+!/src/minecraft/assets/minecraft/textures/model/armor/desh_1
+!/src/minecraft/assets/minecraft/textures/model/armor/desh_2
+!/src/minecraft/assets/minecraft/textures/model/armor/desh_3
+!/src/minecraft/assets/minecraft/textures/model/armor/sensor_1
+!/src/minecraft/assets/minecraft/textures/model/armor/titanium_1
+!/src/minecraft/assets/minecraft/textures/model/armor/titanium_2
+!/src/minecraft/assets/minecraft/textures/model/armor/titanium_3
+
 !/src/minecraft/META-INF/
 !/src/minecraft/starcraft_at.cfg
 !/src/minecraft/mcmod.info
