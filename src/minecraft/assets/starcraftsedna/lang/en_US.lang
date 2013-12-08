@@ -5,6 +5,8 @@ item.tier8.desc=Tier 8
 
 # ITEMS
 item.plateHeavyT8.name=Heavy-Duty Plate
+item.rawPalladium.name=Raw Palladium
+item.refinedPalladium.name=Refined Palladium
 
 # TOOLS
 
@@ -20,6 +22,9 @@ tile.dirtSedna.name=Sedna Dirt
 tile.stoneSedna.name=Sedna Stone
 tile.cobblestoneSedna.name=Sedna Cobblestone
 tile.sednaBrick.name=Sedna Brick
+
+tile.PalladiumOre.name=Palladium Ore
+tile.PalladiumBlock.name=Palladium Block
 
 # ENTITYS
 

@@ -641,7 +641,20 @@ public class StarcraftBlocks
 			.setTextureName("starcraftsedna:sednaBrick")
 			.setCreativeTab(GCSedna.starcraftSednaTab)
 			.setBlockUnbreakable();
-
+	
+	// Block Sedna Ore Palladium
+	public static final Block PalladiumOre = new StarcraftOre(937, null)
+			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("PalladiumOre")
+			.setTextureName("starcraftsedna:orePalladium")
+			.setCreativeTab(GCSedna.starcraftSednaTab);
+	
+	// Block Sedna Palladium Block
+	public static final Block PalladiumBlock = new StarcraftBlock(938, null)
+			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("PalladiumBlock")
+			.setTextureName("starcraftsedna:palladiumBlock")
+			.setCreativeTab(GCSedna.starcraftSednaTab);
 		
 		
         @Instance(value = "StarcraftBlocks")
@@ -752,6 +765,10 @@ public class StarcraftBlocks
                 GameRegistry.registerBlock(StarcraftBlocks.SednaStone, "SednaStone");
                 GameRegistry.registerBlock(StarcraftBlocks.SednaCobblestone, "SednaCobblestone");
                 GameRegistry.registerBlock(StarcraftBlocks.SednaBrick, "SednaBrick");
+                GameRegistry.registerBlock(StarcraftBlocks.PalladiumOre, "PalladiumOre");
+                GameRegistry.registerBlock(StarcraftBlocks.PalladiumBlock, "PalladiumBlock");
+                
+            	//orePalladium and palladiumBlock
         }
         
         @EventHandler

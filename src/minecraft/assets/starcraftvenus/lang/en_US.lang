@@ -31,21 +31,21 @@ item.sulferAxe.name=Sulfer Axe
 item.sulferHoe.name=Sulfer Hoe
 item.sulferSpade.name=Sulfer Shovel
 item.sulferSword.name=Sulfer Sword
-item.gemPick.name=Gem Pickaxe
-item.gemAxe.name=Gem Axe
-item.gemHoe.name=Gem Hoe
-item.gemSpade.name=Gem Shovel
-item.gemSword.name=Gem Sword
+item.gemPick.name=Red Gem Pickaxe
+item.gemAxe.name=Red Gem Axe
+item.gemHoe.name=Red Gem Hoe
+item.gemSpade.name=Red Gem Shovel
+item.gemSword.name=Red Gem Sword
 
 # ARMOR
 item.sulferHelmet.name=Sulfer Helmet
 item.sulferChestplate.name=Sulfer Chestplate
 item.sulferLeggings.name=Sulfer Leggings
 item.sulferBoots.name=Sulfer Boots
-item.gemHelmet.name=Gem Helmet
-item.gemChestplate.name=Gem Chestplate
-item.gemLeggings.name=Gem Leggings
-item.gemBoots.name=Gem Boots
+item.gemHelmet.name=Red Gem Helmet
+item.gemChestplate.name=Red Gem Chestplate
+item.gemLeggings.name=Red Gem Leggings
+item.gemBoots.name=Red Gem Boots
 
 # BLOCKS
 tile.VenusGrass.name=Venus Grass

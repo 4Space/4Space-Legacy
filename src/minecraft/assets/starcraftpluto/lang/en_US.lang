@@ -5,10 +5,23 @@ item.tier6.desc=Tier 6
 
 # ITEMS
 item.plateHeavyT6.name=Heavy-Duty Plate
+item.rawUnunpetium.name=Raw Ununpetium
+item.rayGun.name=Ray Gun
+item.blueGem.name=Blue Gem
+item.blueGemPlate.name=Blue Gem Plate
 
 # TOOLS
+item.blueGemPick.name=Blue Gem Pickaxe
+item.blueGemAxe.name=Blue Gem Axe
+item.blueGemHoe.name=Blue Gem Hoe
+item.blueGemSpade.name=Blue Gem Shovel
+item.blueGemSword.name=Blue Gem Sword
 
 # ARMOR
+item.blueGemHelmet.name=Blue Gem Helmet
+item.blueGemChestplate.name=Blue Gem Chestplate
+item.blueGemLeggings.name=Blue Gem Leggings
+item.blueGemBoots.name=Blue Gem Boots
 
 # BLOCKS
 tile.grassPluto.name=Pluto Grass
