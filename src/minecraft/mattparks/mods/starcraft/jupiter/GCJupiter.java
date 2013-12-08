@@ -60,7 +60,7 @@ public class GCJupiter
     
 	public static CreativeTabs starcraftGasTab = new CreativeTabs("starcraftGasTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(StarcraftBlocks.JupiterNitrogen, 1, 0);
+			return new ItemStack(GCJupiterItems.spaceshipT5, 1, 0);
 		}
 	};
     

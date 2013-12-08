@@ -51,6 +51,7 @@ item.gemBoots.name=Gem Boots
 tile.VenusGrass.name=Venus Grass
 tile.VenusDirt.name=Venus Dirt
 tile.VenusStone.name=Venus Stone
+tile.VenusBurnStone.name=Venus Burn Stone
 tile.VenusCobblestone.name=Venus Cobblestone
 tile.VenusGem.name=Red Gem Block
 tile.VenusMeteor.name=Meteor Block

@@ -9,6 +9,7 @@ item.plateHeavyT5.name=Heavy-Duty Plate
 item.carbonSoot.name=Carbon Soot
 item.graphiteChunks.name=Graphite Chunks
 item.clearDiamond.name=Clear Diamond
+item.clearDiamondPlate.name=Clear Diamond Plate
 
 # TOOLS
 item.ClearDiamondPick.name=Clear Diamond Pickaxe

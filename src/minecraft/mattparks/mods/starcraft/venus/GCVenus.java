@@ -61,7 +61,7 @@ public class GCVenus
 	
 	public static CreativeTabs starcraftVenusTab = new CreativeTabs("starcraftVenusTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(StarcraftBlocks.VenusGrass, 1, 0);
+			return new ItemStack(StarcraftBlocks.EvolvedBlazeEgg, 1, 0);
 		}
 	};
 	

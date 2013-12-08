@@ -59,7 +59,7 @@ public class GCPluto
     
 	public static CreativeTabs starcraftPlutoTab = new CreativeTabs("starcraftPlutoTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(StarcraftBlocks.PlutoGrass, 1, 0);
+			return new ItemStack(StarcraftBlocks.PlutoBrick, 1, 0);
 		}
 	};
     

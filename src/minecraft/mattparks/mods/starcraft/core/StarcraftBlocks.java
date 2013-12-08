@@ -103,14 +103,6 @@ public class StarcraftBlocks
 			.setTextureName("starcraftmercury:copperOreMercury")
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 	
-	// Block Mercury, Glowstone
-//	public static final Block MercuryGlowstone = new StarcraftGlowstone(725, null)
-//			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
-//			.setUnlocalizedName("MercuryGlowstone")
-//			.setLightValue(1.0F)
-//			.setTextureName("starcraftmercury:glowstone")
-//			.setCreativeTab(GCMercury.starcraftMercuryTab);
-	
     //Black Glowstone
     public final static Block BlackGlowstone = new StarcraftBlock(501, null)
     		.setHardness(0.3F).setStepSound(Block.soundGlassFootstep)
@@ -401,6 +393,13 @@ public class StarcraftBlocks
 			.setTextureName("starcraftvenus:VurnBerryBush")
 			.setCreativeTab(GCVenus.starcraftVenusTab);
 	
+	// Block Venus, Burn Stone
+		public static final Block VenusBurnStone = new BurnStone(1631, null)
+			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("VenusBurnStone")
+			.setTextureName("starcraftvenus:burnStoneVenus")
+			.setCreativeTab(GCVenus.starcraftVenusTab);
+		
 	
 	// Block Jupiter, Nitrogen
 	public static final Block JupiterNitrogen = new StarcraftGasTop(650, null)
@@ -683,7 +682,7 @@ public class StarcraftBlocks
                 GameRegistry.registerBlock(StarcraftBlocks.VenusHalfBasalt, "VenusHalfBasalt");
                 GameRegistry.registerBlock(StarcraftBlocks.VenusianTNT, "VenusianTNT");
                 GameRegistry.registerBlock(StarcraftBlocks.EvolvedBlazeEgg, "EvolvedBlazeEgg");
-//                GameRegistry.registerBlock(StarcraftCore2.ToxicSludge, "ToxicSludge");
+                GameRegistry.registerBlock(StarcraftBlocks.VenusBurnStone, "VenusBurnStone");
 
                 GameRegistry.registerBlock(StarcraftBlocks.PlutoGrass, "PlutoGrass");
                 GameRegistry.registerBlock(StarcraftBlocks.PlutoDirt, "PlutoDirt");
