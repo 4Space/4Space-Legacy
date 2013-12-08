@@ -21,9 +21,11 @@ CHANGELOG
 !/src/minecraft/mcmod.info
 !/src/minecraft/mattparks/
 !/src/minecraft/codechicken/
-!/src/minecraft/universalelectricity/
-!/src/minecraft/mekanism/
 !/src/minecraft/ic2/
+!/src/minecraft/icbm/
+!/src/minecraft/mekanism/
+!/src/minecraft/universalelectricity/
+!/src/minecraft/micdoodle8/mods/galacticraft/api/
 
 !/src/minecraft/assets/
 /src/minecraft/assets/forge
