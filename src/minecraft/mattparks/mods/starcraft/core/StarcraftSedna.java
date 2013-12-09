@@ -1,5 +1,7 @@
 package mattparks.mods.starcraft.core;
 
+import mattparks.mods.starcraft.core.CommonProxy;
+import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.core.blocks.*;
 import mattparks.mods.starcraft.eris.GCEris;
 import mattparks.mods.starcraft.jupiter.GCJupiter;
@@ -33,10 +35,10 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(channels = { StarcraftSedna.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class StarcraftSedna 
 {
-    public static final String NAME = "Starcraft Blocks";
-    public static final String MODID = "StarcraftBlocks";
-    public static final String CHANNEL = "StarcraftBlocks";
-    public static final String CHANNELENTITIES = "StarcraftBlocksEntities";
+    public static final String NAME = "Starcraft Sedna";
+    public static final String MODID = "StarcraftSedna";
+    public static final String CHANNEL = "StarcraftSedna";
+    public static final String CHANNELENTITIES = "StarcraftSednaEntities";
 
     
 	// Block Sedna Grass

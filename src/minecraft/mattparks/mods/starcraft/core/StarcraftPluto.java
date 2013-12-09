@@ -29,8 +29,16 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
+@Mod(name = StarcraftPluto.NAME, version = StarcraftCore.LOCALMAJVERSION + "." + StarcraftCore.LOCALMINVERSION + "." + StarcraftCore.LOCALBUILDVERSION, useMetadata = true, modid = StarcraftPluto.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
+@NetworkMod(channels = { StarcraftPluto.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class StarcraftPluto 
 {
+    public static final String NAME = "Starcraft Pluto";
+    public static final String MODID = "StarcraftPluto";
+    public static final String CHANNEL = "StarcraftPluto";
+    public static final String CHANNELENTITIES = "StarcraftPlutoEntities";
+
+
 	// Block Pluto, Grass
 	public static final Block PlutoGrass = new StarcraftGrass(910, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)

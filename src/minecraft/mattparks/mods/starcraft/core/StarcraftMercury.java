@@ -29,8 +29,16 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
+@Mod(name = StarcraftMercury.NAME, version = StarcraftCore.LOCALMAJVERSION + "." + StarcraftCore.LOCALMINVERSION + "." + StarcraftCore.LOCALBUILDVERSION, useMetadata = true, modid = StarcraftMercury.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
+@NetworkMod(channels = { StarcraftMercury.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class StarcraftMercury 
-{    
+{
+    public static final String NAME = "Starcraft Mercury";
+    public static final String MODID = "StarcraftMercury";
+    public static final String CHANNEL = "StarcraftMercury";
+    public static final String CHANNELENTITIES = "StarcraftMercuryEntities";
+
+    
 	// Block Mercury, Grass
     public static final Block MercuryGrass = new StarcraftGrass(710, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)

@@ -29,8 +29,15 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
+@Mod(name = StarcraftEris.NAME, version = StarcraftCore.LOCALMAJVERSION + "." + StarcraftCore.LOCALMINVERSION + "." + StarcraftCore.LOCALBUILDVERSION, useMetadata = true, modid = StarcraftEris.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
+@NetworkMod(channels = { StarcraftEris.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class StarcraftEris 
 {
+    public static final String NAME = "Starcraft Eris";
+    public static final String MODID = "StarcraftEris";
+    public static final String CHANNEL = "StarcraftBlocks";
+    public static final String CHANNELENTITIES = "StarcraftErisEntities";
+
 	// Block Eris Grass
 	public static final Block ErisGrass = new StarcraftGrass(922, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)

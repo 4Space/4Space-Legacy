@@ -29,8 +29,16 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-public class StarcraftGasPlanets 
+@Mod(name = StarcraftGas.NAME, version = StarcraftCore.LOCALMAJVERSION + "." + StarcraftCore.LOCALMINVERSION + "." + StarcraftCore.LOCALBUILDVERSION, useMetadata = true, modid = StarcraftGas.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
+@NetworkMod(channels = { StarcraftGas.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
+public class StarcraftGas 
 {
+    public static final String NAME = "Starcraft Gas";
+    public static final String MODID = "StarcraftGas";
+    public static final String CHANNEL = "StarcraftGas";
+    public static final String CHANNELENTITIES = "StarcraftGasEntities";
+
+    
 	// Block Jupiter, Nitrogen
 	public static final Block JupiterNitrogen = new StarcraftGasTop(650, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
@@ -169,8 +177,8 @@ public class StarcraftGasPlanets
 			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	
-        @Instance(value = "StarcraftGasPlanets")
-        public static StarcraftGasPlanets instance;
+        @Instance(value = "StarcraftGas")
+        public static StarcraftGas instance;
         
         @SidedProxy(clientSide = "mattparks.mods.starcraft.core.client.ClientProxy", serverSide = "mattparks.mods.starcraft.core.CommonProxy")
         public static CommonProxy proxy;
@@ -184,29 +192,29 @@ public class StarcraftGasPlanets
         @EventHandler
         public void load(FMLInitializationEvent event) 
         {
-                GameRegistry.registerBlock(StarcraftGasPlanets.JupiterNitrogen, "JupiterNitrogen");
-                GameRegistry.registerBlock(StarcraftGasPlanets.JupiterHelium, "JupiterHelium");
-                GameRegistry.registerBlock(StarcraftGasPlanets.JupiterHydrogen, "JupiterHydrogen");
-                GameRegistry.registerBlock(StarcraftGasPlanets.JupiterBrick, "JupiterBrick");    
-                GameRegistry.registerBlock(StarcraftGasPlanets.ClearDiamondBlock, "ClearDiamondBlock");
+                GameRegistry.registerBlock(StarcraftGas.JupiterNitrogen, "JupiterNitrogen");
+                GameRegistry.registerBlock(StarcraftGas.JupiterHelium, "JupiterHelium");
+                GameRegistry.registerBlock(StarcraftGas.JupiterHydrogen, "JupiterHydrogen");
+                GameRegistry.registerBlock(StarcraftGas.JupiterBrick, "JupiterBrick");    
+                GameRegistry.registerBlock(StarcraftGas.ClearDiamondBlock, "ClearDiamondBlock");
                 
-                GameRegistry.registerBlock(StarcraftGasPlanets.hydrogenFlowing, "MetallicHydrogenFlowing");
+                GameRegistry.registerBlock(StarcraftGas.hydrogenFlowing, "MetallicHydrogenFlowing");
 //              GameRegistry.registerBlock(StarcraftCore2.hydrogenStill, "MetallicHydrogenStill");
                 
-                GameRegistry.registerBlock(StarcraftGasPlanets.SaturnNitrogen, "SaturnNitrogen");
-                GameRegistry.registerBlock(StarcraftGasPlanets.SaturnHelium, "SaturnHelium");
-                GameRegistry.registerBlock(StarcraftGasPlanets.SaturnHydrogen, "SaturnHydrogen");
-                GameRegistry.registerBlock(StarcraftGasPlanets.SaturnBrick, "SaturnBrick");
+                GameRegistry.registerBlock(StarcraftGas.SaturnNitrogen, "SaturnNitrogen");
+                GameRegistry.registerBlock(StarcraftGas.SaturnHelium, "SaturnHelium");
+                GameRegistry.registerBlock(StarcraftGas.SaturnHydrogen, "SaturnHydrogen");
+                GameRegistry.registerBlock(StarcraftGas.SaturnBrick, "SaturnBrick");
                 
-                GameRegistry.registerBlock(StarcraftGasPlanets.UranusNitrogen, "UranusNitrogen");
-                GameRegistry.registerBlock(StarcraftGasPlanets.UranusHelium, "UranusHelium");
-                GameRegistry.registerBlock(StarcraftGasPlanets.UranusHydrogen, "UranusHydrogen");
-                GameRegistry.registerBlock(StarcraftGasPlanets.UranusBrick, "UranusBrick");
+                GameRegistry.registerBlock(StarcraftGas.UranusNitrogen, "UranusNitrogen");
+                GameRegistry.registerBlock(StarcraftGas.UranusHelium, "UranusHelium");
+                GameRegistry.registerBlock(StarcraftGas.UranusHydrogen, "UranusHydrogen");
+                GameRegistry.registerBlock(StarcraftGas.UranusBrick, "UranusBrick");
                                         
-                GameRegistry.registerBlock(StarcraftGasPlanets.NeptuneNitrogen, "NeptuneNitrogen");
-                GameRegistry.registerBlock(StarcraftGasPlanets.NeptuneHelium, "NeptuneHelium");
-                GameRegistry.registerBlock(StarcraftGasPlanets.NeptuneHydrogen, "NeptuneHydrogen");
-                GameRegistry.registerBlock(StarcraftGasPlanets.NeptuneBrick, "NeptuneBrick");                    
+                GameRegistry.registerBlock(StarcraftGas.NeptuneNitrogen, "NeptuneNitrogen");
+                GameRegistry.registerBlock(StarcraftGas.NeptuneHelium, "NeptuneHelium");
+                GameRegistry.registerBlock(StarcraftGas.NeptuneHydrogen, "NeptuneHydrogen");
+                GameRegistry.registerBlock(StarcraftGas.NeptuneBrick, "NeptuneBrick");                    
         }
         
         @EventHandler

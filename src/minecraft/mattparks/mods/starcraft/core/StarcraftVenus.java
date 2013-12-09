@@ -29,8 +29,16 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
+@Mod(name = StarcraftVenus.NAME, version = StarcraftCore.LOCALMAJVERSION + "." + StarcraftCore.LOCALMINVERSION + "." + StarcraftCore.LOCALBUILDVERSION, useMetadata = true, modid = StarcraftVenus.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
+@NetworkMod(channels = { StarcraftVenus.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class StarcraftVenus 
 {
+    public static final String NAME = "Starcraft Venus";
+    public static final String MODID = "StarcraftVenus";
+    public static final String CHANNEL = "StarcraftVenus";
+    public static final String CHANNELENTITIES = "StarcraftVenusEntities";
+
+
 	// Block Venus, Grass
 	public static final Block VenusGrass = new StarcraftGrass(610, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)

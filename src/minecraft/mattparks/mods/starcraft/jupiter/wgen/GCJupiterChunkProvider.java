@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import mattparks.mods.starcraft.core.StarcraftGasPlanets;
+import mattparks.mods.starcraft.core.StarcraftGas;
 import mattparks.mods.starcraft.jupiter.GCJupiterConfigManager;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
@@ -25,11 +25,11 @@ import net.minecraft.world.gen.ChunkProviderGenerate;
 
 public class GCJupiterChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) StarcraftGasPlanets.JupiterNitrogen.blockID;
+    final short topBlockID = (short) StarcraftGas.JupiterNitrogen.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) StarcraftGasPlanets.JupiterHelium.blockID;
+    final short fillBlockID = (short) StarcraftGas.JupiterHelium.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) StarcraftGasPlanets.JupiterHydrogen.blockID;
+    final short lowerBlockID = (short) StarcraftGas.JupiterHydrogen.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
