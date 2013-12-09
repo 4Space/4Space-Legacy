@@ -218,6 +218,7 @@ public class GCErisChunkProvider extends ChunkProviderGenerate
         final byte[] meta = new byte[32768 * 2];
         this.generateTerrain(par1, par2, ids, meta);
         this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
+        this.createCraters(par1, par2, ids, meta);
         this.replaceBlocksForBiome(par1, par2, ids, meta, this.biomesForGeneration);
         this.caveGenerator.generate(this, this.worldObj, par1, par2, ids, meta);
         this.dungeonGenerator.generateUsingArrays(this.worldObj, this.worldObj.getSeed(), par1 * 16, 25, par2 * 16, par1, par2, ids, meta);
@@ -233,6 +234,66 @@ public class GCErisChunkProvider extends ChunkProviderGenerate
         var4.generateSkylightMap();
         return var4;
     }
+    
+    
+    public void createCraters(int chunkX, int chunkZ, short[] chunkArray, byte[] metaArray)
+    {
+        for (int cx = chunkX - 2; cx <= chunkX + 2; cx++)
+        {
+            for (int cz = chunkZ - 2; cz <= chunkZ + 2; cz++)
+            {
+                for (int x = 0; x < GCErisChunkProvider.CHUNK_SIZE_X; x++)
+                {
+                    for (int z = 0; z < GCErisChunkProvider.CHUNK_SIZE_Z; z++)
+                    {
+                        if (Math.abs(this.randFromPoint(cx * 16 + x, (cz * 16 + z) * 1000)) < this.noiseGen4.getNoise(x * GCErisChunkProvider.CHUNK_SIZE_X + x, cz * GCErisChunkProvider.CHUNK_SIZE_Z + z) / GCErisChunkProvider.CRATER_PROB)
+                        {
+                            final Random random = new Random(cx * 16 + x + (cz * 16 + z) * 5000);
+                            final GCCoreCraterSize cSize = GCCoreCraterSize.sizeArray[random.nextInt(GCCoreCraterSize.sizeArray.length)];
+                            final int size = random.nextInt(cSize.MAX_SIZE - cSize.MIN_SIZE) + cSize.MIN_SIZE;
+                            this.makeCrater(cx * 16 + x, cz * 16 + z, chunkX * 16, chunkZ * 16, size, chunkArray, metaArray);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public void makeCrater(int craterX, int craterZ, int chunkX, int chunkZ, int size, short[] chunkArray, byte[] metaArray)
+    {
+        for (int x = 0; x < GCErisChunkProvider.CHUNK_SIZE_X; x++)
+        {
+            for (int z = 0; z < GCErisChunkProvider.CHUNK_SIZE_Z; z++)
+            {
+                double xDev = craterX - (chunkX + x);
+                double zDev = craterZ - (chunkZ + z);
+                if (xDev * xDev + zDev * zDev < size * size)
+                {
+                    xDev /= size;
+                    zDev /= size;
+                    final double sqrtY = xDev * xDev + zDev * zDev;
+                    double yDev = sqrtY * sqrtY * 6;
+                    yDev = 5 - yDev;
+                    int helper = 0;
+                    for (int y = 127; y > 0; y--)
+                    {
+                        if (chunkArray[this.getIndex(x, y, z)] != 0 && helper <= yDev)
+                        {
+                            chunkArray[this.getIndex(x, y, z)] = 0;
+                            metaArray[this.getIndex(x, y, z)] = 0;
+                            helper++;
+                        }
+                        if (helper > yDev)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 
     @Override
     public boolean chunkExists(int par1, int par2)
