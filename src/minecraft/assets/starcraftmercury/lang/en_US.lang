@@ -9,10 +9,20 @@ item.plateHeavyT4.name=Heavy-Duty Plate
 item.jetpack.name=Jetpack
 item.jetpackFuel.name=Jetpack Fuel
 item.gravityGeneratorCore.name=Gravity Generator Core
+item.iridiumCrystals.name=Iridium Crystals
 
 # TOOLS
+item.iridiumPick.name=Iridium Pickaxe
+item.iridiumAxe.name=Iridium Axe
+item.iridiumHoe.name=Iridium Hoe
+item.iridiumSpade.name=Iridium Shovel
+item.iridiumSword.name=Iridium Sword
 
 # ARMOR
+item.iridiumHelmet.name=Iridium Helmet
+item.iridiumChestplate.name=Iridium Chestplate
+item.iridiumLeggings.name=Iridium Leggings
+item.iridiumBoots.name=Iridium Boots
 
 # BLOCKS
 tile.MercuryGrass.name=Mercury Grass

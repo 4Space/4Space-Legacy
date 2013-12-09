@@ -34,8 +34,19 @@ public class GCMercuryConfigManager
     
     // ARMOR
     public static int idArmorJetpack;
-    
+ 
+    public static int idArmorIridiumHelmet;
+    public static int idArmorIridiumChestplate;
+    public static int idArmorIridiumLeggings;
+    public static int idArmorIridiumBoots;
+
     // TOOLS
+ 
+    public static int idToolIridiumSword;
+    public static int idToolIridiumPickaxe;
+    public static int idToolIridiumAxe;
+    public static int idToolIridiumSpade;
+    public static int idToolIridiumHoe;
 
     // ENTITIES
     public static int idEntitySpaceshipTier4;
@@ -72,6 +83,18 @@ public class GCMercuryConfigManager
             GCMercuryConfigManager.idItemSpaceshipTier4 = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier4", 7544).getInt(7544);
             
             GCMercuryConfigManager.idArmorJetpack = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorJetpack", 7551).getInt(7551);
+            
+            GCMercuryConfigManager.idArmorIridiumHelmet = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorIridiumHelmet", 9652).getInt(9652);
+            GCMercuryConfigManager.idArmorIridiumChestplate = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorIridiumChestplate", 9653).getInt(9653);
+            GCMercuryConfigManager.idArmorIridiumLeggings = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorIridiumLeggings", 9654).getInt(9654);
+            GCMercuryConfigManager.idArmorIridiumBoots = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorIridiumBoots", 9655).getInt(9655);
+            
+            GCMercuryConfigManager.idToolIridiumSword = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolIridiumSword", 9656).getInt(9656);
+            GCMercuryConfigManager.idToolIridiumPickaxe = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolIridiumPickaxe", 9657).getInt(9657);
+            GCMercuryConfigManager.idToolIridiumSpade = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolIridiumSpade", 9658).getInt(9658);
+            GCMercuryConfigManager.idToolIridiumHoe = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolIridiumHoe", 9659).getInt(9659);
+            GCMercuryConfigManager.idToolIridiumAxe = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolIridiumAxe", 9660).getInt(9660);
+            
             
             
             //Block id's 7857-7870 used by Spacecraft Venus
