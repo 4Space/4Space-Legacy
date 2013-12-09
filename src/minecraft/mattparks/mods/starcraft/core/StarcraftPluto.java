@@ -108,7 +108,7 @@ public class StarcraftPluto
 	public static final Block BlueGemBlock = new StarcraftBlock(821, null)
 			.setHardness(5.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("BlockBlueGem")
-			.setTextureName("starcraftpluto:blockBlueGem")
+			.setTextureName("starcraftpluto:blueGemBlock")
 			.setCreativeTab(GCPluto.starcraftPlutoTab);
 	
 	// Block Pluto, Frozen Iron Block

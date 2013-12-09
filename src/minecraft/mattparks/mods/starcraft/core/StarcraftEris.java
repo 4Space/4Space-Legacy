@@ -109,6 +109,13 @@ public class StarcraftEris
 			.setTextureName("starcrafteris:oreTin")
 			.setCreativeTab(GCEris.starcraftErisTab);
 	
+	// Block Eris Green Gem Block
+	public static final Block GreenGemBlock = new StarcraftOre(1935, null)
+			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("GreenGemBlock")
+			.setTextureName("starcrafteris:greenGemBlock")
+			.setCreativeTab(GCEris.starcraftErisTab);
+	
 	
         @Instance(value = "StarcraftEris")
         public static StarcraftEris instance;
@@ -135,6 +142,7 @@ public class StarcraftEris
                 GameRegistry.registerBlock(StarcraftEris.ErisIronOre, "ErisIronOre");
                 GameRegistry.registerBlock(StarcraftEris.ErisMeteorOre, "ErisMeteorOre");
 				GameRegistry.registerBlock(StarcraftEris.ErisTinOre, "ErisTinOre");
+				GameRegistry.registerBlock(StarcraftEris.GreenGemBlock, "GreenGemBlock");
         }
         
         @EventHandler
