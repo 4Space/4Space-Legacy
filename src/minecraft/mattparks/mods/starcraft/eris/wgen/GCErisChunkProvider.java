@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import mattparks.mods.starcraft.core.StarcraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftEris;
 import mattparks.mods.starcraft.eris.GCEris;
 import mattparks.mods.starcraft.eris.GCErisConfigManager;
 import mattparks.mods.starcraft.eris.wgen.dungeon.*;
@@ -32,11 +32,11 @@ import net.minecraftforge.common.ForgeDirection;
 
 public class GCErisChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) StarcraftBlocks.ErisGrass.blockID;
+    final short topBlockID = (short) StarcraftEris.ErisGrass.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) StarcraftBlocks.ErisDirt.blockID;
+    final short fillBlockID = (short) StarcraftEris.ErisDirt.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) StarcraftBlocks.ErisStone.blockID;
+    final short lowerBlockID = (short) StarcraftEris.ErisStone.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
@@ -49,7 +49,7 @@ public class GCErisChunkProvider extends ChunkProviderGenerate
     public GCErisBiomeDecorator biomedecoratorplanet = new GCErisBiomeDecorator(GCErisBiomeGenBase.venusFlat);
 
     private final World worldObj;
-    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(StarcraftBlocks.ErisBrick.blockID, 14, 8, 16, 3);
+    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(StarcraftEris.ErisBrick.blockID, 14, 8, 16, 3);
 
     {
         this.dungeonGenerator.otherRooms.add(new GCErisRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));

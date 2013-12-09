@@ -2,7 +2,7 @@ package mattparks.mods.starcraft.mercury.wgen;
 
 import java.util.Random;
 
-import mattparks.mods.starcraft.core.StarcraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftMercury;
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreWorldGenMinableMeta;
 import net.minecraft.world.World;
@@ -26,11 +26,11 @@ public class GCMercuryBiomeDecorator
 
     public GCMercuryBiomeDecorator()
     {
-        this.gemGen = new GCCoreWorldGenMinableMeta(StarcraftBlocks.MercuryIridiumOre.blockID, 2, 1, false, StarcraftBlocks.MercuryStone.blockID, 4);
-        this.dirtGen = new GCCoreWorldGenMinableMeta(StarcraftBlocks.MercuryDirt.blockID, 8, 2, false, StarcraftBlocks.MercuryStone.blockID, 4); 
-        this.coalGen = new GCCoreWorldGenMinableMeta(StarcraftBlocks.MercuryCoalOre.blockID, 6, 3, false, StarcraftBlocks.MercuryStone.blockID, 4);     
-        this.tinGen = new GCCoreWorldGenMinableMeta(StarcraftBlocks.MercuryTinOre.blockID, 4, 4, false, StarcraftBlocks.MercuryStone.blockID, 4);  
-        this.copperGen = new GCCoreWorldGenMinableMeta(StarcraftBlocks.MercuryCopperOre.blockID, 5, 5, false,StarcraftBlocks.MercuryStone.blockID, 4);      
+        this.gemGen = new GCCoreWorldGenMinableMeta(StarcraftMercury.MercuryIridiumOre.blockID, 2, 1, false, StarcraftMercury.MercuryStone.blockID, 4);
+        this.dirtGen = new GCCoreWorldGenMinableMeta(StarcraftMercury.MercuryDirt.blockID, 8, 2, false, StarcraftMercury.MercuryStone.blockID, 4); 
+        this.coalGen = new GCCoreWorldGenMinableMeta(StarcraftMercury.MercuryCoalOre.blockID, 6, 3, false, StarcraftMercury.MercuryStone.blockID, 4);     
+        this.tinGen = new GCCoreWorldGenMinableMeta(StarcraftMercury.MercuryTinOre.blockID, 4, 4, false, StarcraftMercury.MercuryStone.blockID, 4);  
+        this.copperGen = new GCCoreWorldGenMinableMeta(StarcraftMercury.MercuryCopperOre.blockID, 5, 5, false,StarcraftMercury.MercuryStone.blockID, 4);      
     }
 
     public void decorate(World worldObj, Random rand, int chunkX, int chunkZ)

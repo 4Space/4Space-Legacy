@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import mattparks.mods.starcraft.core.StarcraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftSedna;
 import mattparks.mods.starcraft.sedna.GCSedna;
 import mattparks.mods.starcraft.sedna.GCSednaConfigManager;
 import mattparks.mods.starcraft.sedna.wgen.dungeon.*;
@@ -32,11 +32,11 @@ import net.minecraftforge.common.ForgeDirection;
 
 public class GCSednaChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) StarcraftBlocks.SednaGrass.blockID;
+    final short topBlockID = (short) StarcraftSedna.SednaGrass.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) StarcraftBlocks.SednaDirt.blockID;
+    final short fillBlockID = (short) StarcraftSedna.SednaDirt.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) StarcraftBlocks.SednaStone.blockID;
+    final short lowerBlockID = (short) StarcraftSedna.SednaStone.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
@@ -49,7 +49,7 @@ public class GCSednaChunkProvider extends ChunkProviderGenerate
     public GCSednaBiomeDecorator biomedecoratorplanet = new GCSednaBiomeDecorator(GCSednaBiomeGenBase.venusFlat);
 
     private final World worldObj;
-    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(StarcraftBlocks.SednaBrick.blockID, 14, 8, 16, 3);
+    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(StarcraftSedna.SednaBrick.blockID, 14, 8, 16, 3);
 
     {
         this.dungeonGenerator.otherRooms.add(new GCSednaRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));

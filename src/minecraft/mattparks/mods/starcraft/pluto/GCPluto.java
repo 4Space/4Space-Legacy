@@ -3,7 +3,7 @@ package mattparks.mods.starcraft.pluto;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.StarcraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftPluto;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.pluto.dimension.GCPlutoTeleportType;
 import mattparks.mods.starcraft.pluto.dimension.GCPlutoWorldProvider;
@@ -59,7 +59,7 @@ public class GCPluto
     
 	public static CreativeTabs starcraftPlutoTab = new CreativeTabs("starcraftPlutoTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(StarcraftBlocks.PlutoBrick, 1, 0);
+			return new ItemStack(StarcraftPluto.PlutoBrick, 1, 0);
 		}
 	};
     

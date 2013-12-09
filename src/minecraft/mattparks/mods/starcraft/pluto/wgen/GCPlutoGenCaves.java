@@ -2,7 +2,7 @@ package mattparks.mods.starcraft.pluto.wgen;
 
 import java.util.Random;
 
-import mattparks.mods.starcraft.core.StarcraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftPluto;
 import mattparks.mods.starcraft.pluto.GCPluto;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
 import net.minecraft.util.MathHelper;
@@ -169,7 +169,7 @@ public class GCPlutoGenCaves extends GCCoreMapGenBaseMeta
 
                                         if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
                                         {
-                                            if (blockIdArray[coords] == StarcraftBlocks.PlutoDirt.blockID)
+                                            if (blockIdArray[coords] == StarcraftPluto.PlutoDirt.blockID)
                                             {
                                                 if (metaArray[coords] == 3 || metaArray[coords] == 4)
                                                 {

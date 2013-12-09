@@ -1,6 +1,6 @@
 package mattparks.mods.starcraft.venus.items;
 
-import mattparks.mods.starcraft.core.StarcraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftVenus;
 import mattparks.mods.starcraft.venus.GCVenusConfigManager;
 import net.minecraft.block.Block;
 import net.minecraft.item.EnumArmorMaterial;
@@ -74,7 +74,7 @@ public class GCVenusItems
         GCVenusItems.gemLeggings = new SCCoreItemGemArmor(GCVenusConfigManager.idArmorGemLeggings, GCVenusItems.ARMORGEM, 7, 2, false).setUnlocalizedName("gemLeggings");
         GCVenusItems.gemBoots = new SCCoreItemGemArmor(GCVenusConfigManager.idArmorGemBoots, GCVenusItems.ARMORGEM, 7, 3, false).setUnlocalizedName("gemBoots");
 
-        GCVenusItems.vurnBerry = (new GCVenusVurnBerry(GCVenusConfigManager.idVurnBerry, 4, 0.6F, StarcraftBlocks.VurnBerryBush.blockID, Block.tilledField.blockID)).setUnlocalizedName("vurnBerry").setTextureName("starcraftvenus:vurnBerry");
+        GCVenusItems.vurnBerry = (new GCVenusVurnBerry(GCVenusConfigManager.idVurnBerry, 4, 0.6F, StarcraftVenus.VurnBerryBush.blockID, Block.tilledField.blockID)).setUnlocalizedName("vurnBerry").setTextureName("starcraftvenus:vurnBerry");
 
         GCVenusItems.T3Schematic = new GCVenusItemSchematic(GCVenusConfigManager.idTtemVenusT3Schematic);
         GCVenusItems.spaceshipT3 = new GCVenusItemSpaceshipTier3(GCVenusConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");

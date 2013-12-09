@@ -2,7 +2,7 @@ package mattparks.mods.starcraft.eris.wgen;
 
 import java.util.Random;
 
-import mattparks.mods.starcraft.core.StarcraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftEris;
 import mattparks.mods.starcraft.eris.GCEris;
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreWorldGenMinableMeta;
@@ -28,7 +28,7 @@ public class GCErisBiomeDecorator
     public GCErisBiomeDecorator(BiomeGenBase par1BiomeGenBase)
     {
 //        this.gemGen = new GCCoreWorldGenMinableMeta(PlutoBlocks.PlutoBlocks.blockID, 4, 0, true, MercuryBlocks.PlutoBlocks.blockID, 4);
-        this.dirtGen = new GCCoreWorldGenMinableMeta(StarcraftBlocks.ErisDirt.blockID, 32, 1, false, StarcraftBlocks.ErisStone.blockID, 4); 
+        this.dirtGen = new GCCoreWorldGenMinableMeta(StarcraftEris.ErisDirt.blockID, 32, 1, false, StarcraftEris.ErisStone.blockID, 4); 
 //        this.coalGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);     
 //        this.tinGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);  
 //        this.copperGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);      

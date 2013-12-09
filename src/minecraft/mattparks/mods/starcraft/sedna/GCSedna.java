@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.sedna;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.StarcraftBlocks;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.sedna.dimension.GCSednaTeleportType;
 import mattparks.mods.starcraft.sedna.dimension.GCSednaWorldProvider;

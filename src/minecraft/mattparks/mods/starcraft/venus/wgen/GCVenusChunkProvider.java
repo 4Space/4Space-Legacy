@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import mattparks.mods.starcraft.core.StarcraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftVenus;
 import mattparks.mods.starcraft.venus.GCVenusConfigManager;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityEvolvedBlaze;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityFlameling;
@@ -37,11 +37,11 @@ import net.minecraftforge.common.ForgeDirection;
 
 public class GCVenusChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) StarcraftBlocks.VenusGrass.blockID;
+    final short topBlockID = (short) StarcraftVenus.VenusGrass.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) StarcraftBlocks.VenusDirt.blockID;
+    final short fillBlockID = (short) StarcraftVenus.VenusDirt.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) StarcraftBlocks.VenusStone.blockID;
+    final short lowerBlockID = (short) StarcraftVenus.VenusStone.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
@@ -56,7 +56,7 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
     private final World worldObj;
     private final GCVenusMapGenVillage villageGenerator = new GCVenusMapGenVillage();
 
-    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(StarcraftBlocks.VenusBrick.blockID, 14, 8, 16, 3);
+    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(StarcraftVenus.VenusBrick.blockID, 14, 8, 16, 3);
 
     {
         this.dungeonGenerator.otherRooms.add(new GCVenusRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));

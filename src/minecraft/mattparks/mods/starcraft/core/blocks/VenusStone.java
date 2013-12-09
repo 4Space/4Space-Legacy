@@ -2,7 +2,7 @@ package mattparks.mods.starcraft.core.blocks;
 
 import java.util.Random;
 
-import mattparks.mods.starcraft.core.StarcraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftVenus;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -18,6 +18,6 @@ public class VenusStone extends Block
 
     public int idDropped(int par1, Random par2Random, int par3)
     {
-        return StarcraftBlocks.VenusCobblestone.blockID;
+        return StarcraftVenus.VenusCobblestone.blockID;
     }
 }

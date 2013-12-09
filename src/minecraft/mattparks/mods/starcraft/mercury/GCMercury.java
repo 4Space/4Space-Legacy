@@ -3,7 +3,7 @@ package mattparks.mods.starcraft.mercury;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.StarcraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftMercury;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.mercury.dimension.GCMercuryTeleportType;
 import mattparks.mods.starcraft.mercury.dimension.GCMercuryWorldProvider;
@@ -55,7 +55,7 @@ public class GCMercury
     
 	public static CreativeTabs starcraftMercuryTab = new CreativeTabs("starcraftMercuryTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(StarcraftBlocks.BlueGlowstone, 1, 0);
+			return new ItemStack(StarcraftMercury.BlueGlowstone, 1, 0);
 		}
 	};
 

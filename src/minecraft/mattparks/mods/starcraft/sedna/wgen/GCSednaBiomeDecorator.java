@@ -2,7 +2,7 @@ package mattparks.mods.starcraft.sedna.wgen;
 
 import java.util.Random;
 
-import mattparks.mods.starcraft.core.StarcraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftSedna;
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreWorldGenMinableMeta;
 import net.minecraft.world.World;
@@ -26,8 +26,8 @@ public class GCSednaBiomeDecorator
 
     public GCSednaBiomeDecorator(BiomeGenBase par1BiomeGenBase)
     {
-        this.palladiumGen = new GCCoreWorldGenMinableMeta(StarcraftBlocks.PalladiumOre.blockID, 4, 0, true, StarcraftBlocks.PalladiumOre.blockID, 4);
-        this.dirtGen = new GCCoreWorldGenMinableMeta(StarcraftBlocks.SednaDirt.blockID, 32, 1, false, StarcraftBlocks.SednaStone.blockID, 4); 
+        this.palladiumGen = new GCCoreWorldGenMinableMeta(StarcraftSedna.PalladiumOre.blockID, 4, 0, true, StarcraftSedna.PalladiumOre.blockID, 4);
+        this.dirtGen = new GCCoreWorldGenMinableMeta(StarcraftSedna.SednaDirt.blockID, 32, 1, false, StarcraftSedna.SednaStone.blockID, 4); 
 //        this.coalGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);     
 //        this.tinGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);  
 //        this.copperGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);      

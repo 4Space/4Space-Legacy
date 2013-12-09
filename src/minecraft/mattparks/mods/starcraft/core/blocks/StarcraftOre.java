@@ -5,7 +5,8 @@ import ic2.api.item.Items;
 import java.util.Random;
 
 import universalelectricity.compatibility.Compatibility;
-import mattparks.mods.starcraft.core.StarcraftBlocks;
+import mattparks.mods.starcraft.core.StarcraftMercury;
+import mattparks.mods.starcraft.core.StarcraftVenus;
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -17,7 +18,7 @@ public class StarcraftOre extends Block implements IDetectableResource
     {
         super(par1, Material.rock);
         this.setUnlocalizedName(name);
-//        this.setTextureName(StarcraftBlocks.ASSET_PREFIX + name);
+//        this.setTextureName(StarcraftMercury.ASSET_PREFIX + name);
         this.setHardness(2.0F);
     }
 
@@ -34,7 +35,7 @@ public class StarcraftOre extends Block implements IDetectableResource
     @Override
     public int idDropped(int par1, Random par2Random, int par3)
     {
-    	if(StarcraftBlocks.MercuryIridiumOre.blockID == this.blockID)
+    	if(StarcraftMercury.MercuryIridiumOre.blockID == this.blockID)
     	{
     		if(Compatibility.isIndustrialCraft2Loaded())
     		{
@@ -44,7 +45,7 @@ public class StarcraftOre extends Block implements IDetectableResource
     		return this.blockID;
     	}
     	
-    	if(StarcraftBlocks.MercuryCoalOre.blockID == this.blockID || StarcraftBlocks.VenusCoalOre.blockID == this.blockID)
+    	if(StarcraftMercury.MercuryCoalOre.blockID == this.blockID || StarcraftVenus.VenusCoalOre.blockID == this.blockID)
     	{
     		return Item.coal.itemID;
     	}
