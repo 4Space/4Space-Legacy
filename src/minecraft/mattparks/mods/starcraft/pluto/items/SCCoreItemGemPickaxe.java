@@ -2,6 +2,7 @@ package mattparks.mods.starcraft.pluto.items;
 
 import java.util.List;
 
+import mattparks.mods.starcraft.pluto.GCPluto;
 import mattparks.mods.starcraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -30,14 +31,14 @@ public class SCCoreItemGemPickaxe extends ItemPickaxe
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCVenus.starcraftVenusTab;
+        return GCPluto.starcraftPlutoTab;
     }
 
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "starcraftvenus:"));
+        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "starcraftpluto:"));
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

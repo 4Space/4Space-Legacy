@@ -16,6 +16,11 @@ tile.dirtEris.name=Eris Dirt
 tile.stoneEris.name=Eris Stone
 tile.cobblestoneEris.name=Eris Cobblestone
 tile.erisBrick.name=Eris Brick
+tile.ErisCoalOre.name=Coal Ore
+tile.ErisGreenGemOre.name=Green Gem Ore
+tile.ErisIronOre.name=Iron Ore
+tile.ErisMeteorOre.name=Meteor Ore
+tile.ErisTinOre.name=Tin Ore
 
 # ENTITYS
 

@@ -29,6 +29,11 @@ tile.dirtPluto.name=Pluto Dirt
 tile.stonePluto.name=Pluto Stone
 tile.cobblestonePluto.name=Pluto Cobblestone
 tile.plutoBrick.name=Pluto Brick
+tile.BlockUnunpetium.name=Ununpetium Block
+tile.UnunpentiumOre.name=Ununpentium Ore
+tile.BlueGemOre.name=Blue Gem Ore
+tile.FrozenIronOre.name=Frozen Iron Ore
+
 				
 # ENTITYS
 

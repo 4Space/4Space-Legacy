@@ -1,5 +1,6 @@
 package mattparks.mods.starcraft.pluto.items;
 
+import mattparks.mods.starcraft.pluto.GCPluto;
 import mattparks.mods.starcraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -28,13 +29,13 @@ public class SCCoreItemGemAxe extends ItemAxe
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCVenus.starcraftVenusTab;
+        return GCPluto.starcraftPlutoTab;
     }
 
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "starcraftvenus:"));
+        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "starcraftpluto:"));
     }
 }

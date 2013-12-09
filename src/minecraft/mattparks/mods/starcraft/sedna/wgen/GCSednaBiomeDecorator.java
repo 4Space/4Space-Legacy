@@ -19,14 +19,14 @@ public class GCSednaBiomeDecorator
     protected int chunkZ;
 
     protected WorldGenerator dirtGen;
-//    protected WorldGenerator gemGen;
+    protected WorldGenerator palladiumGen;
 //    protected WorldGenerator coalGen;
 //    protected WorldGenerator tinGen;
 //    protected WorldGenerator copperGen;
 
     public GCSednaBiomeDecorator(BiomeGenBase par1BiomeGenBase)
     {
-//        this.gemGen = new GCCoreWorldGenMinableMeta(PlutoBlocks.PlutoBlocks.blockID, 4, 0, true, MercuryBlocks.PlutoBlocks.blockID, 4);
+        this.palladiumGen = new GCCoreWorldGenMinableMeta(StarcraftBlocks.PalladiumOre.blockID, 4, 0, true, StarcraftBlocks.PalladiumOre.blockID, 4);
         this.dirtGen = new GCCoreWorldGenMinableMeta(StarcraftBlocks.SednaDirt.blockID, 32, 1, false, StarcraftBlocks.SednaStone.blockID, 4); 
 //        this.coalGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);     
 //        this.tinGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.PlutoBlocks.blockID, 32, 3, true, MercuryBlocks.PlutoBlocks.blockID, 4);  
@@ -66,7 +66,7 @@ public class GCSednaBiomeDecorator
     {
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Pre(this.worldObj, this.randomGenerator, this.chunkX, this.chunkZ));
         this.genOre(20, this.dirtGen, 0, 200);
-//        this.genStandardOre1(26, this.gemGen, 0, 60);
+        this.genOre(26, this.palladiumGen, 0, 60);
 //        this.genStandardOre1(36, this.coalGen, 0, 128);
 //        this.genStandardOre1(35, this.tinGen, 0, 128);
 //        this.genStandardOre1(36, this.copperGen, 0, 128);

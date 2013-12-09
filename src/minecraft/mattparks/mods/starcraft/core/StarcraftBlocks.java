@@ -567,8 +567,37 @@ public class StarcraftBlocks
 			.setTextureName("starcraftpluto:plutoBrick")
 			.setCreativeTab(GCPluto.starcraftPlutoTab)
 			.setBlockUnbreakable();
-
 	
+	// Block Pluto, Ununpetium Block
+	public static final Block BlockUnunpetium = new StarcraftBlock(817, null)
+			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("BlockUnunpetium")
+			.setLightValue(0.7f)
+			.setTextureName("starcraftpluto:BlockUnunpetium")
+			.setCreativeTab(GCPluto.starcraftPlutoTab);
+	
+	// Block Pluto, Ununpetium Ore
+	public static final Block UnunpentiumOre = new StarcraftBlock(818, null)
+			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("UnunpentiumOre")
+			.setTextureName("starcraftpluto:oreUnunpentium")
+			.setCreativeTab(GCPluto.starcraftPlutoTab);
+	
+	// Block Pluto, Blue Gem Ore
+	public static final Block BlueGemOre = new StarcraftBlock(819, null)
+			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("BlockUnunpetium")
+			.setTextureName("starcraftpluto:oreBlueGem")
+			.setCreativeTab(GCPluto.starcraftPlutoTab);
+	
+	// Block Pluto, Frozen Iron Ore
+	public static final Block FrozenIronOre = new StarcraftBlock(820, null)
+			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("FrozenIronOre")
+			.setTextureName("starcraftpluto:oreFrozenIron")
+			.setCreativeTab(GCPluto.starcraftPlutoTab);
+	
+
 	// Block Eris Grass
 	public static final Block ErisGrass = new StarcraftGrass(922, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
@@ -604,6 +633,41 @@ public class StarcraftBlocks
 			.setTextureName("starcrafteris:erisBrick")
 			.setCreativeTab(GCEris.starcraftErisTab)
 			.setBlockUnbreakable();
+	
+	// Block Eris Coal Ore
+	public static final Block ErisCoalOre = new StarcraftOre(1930, null)
+			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("ErisCoalOre")
+			.setTextureName("starcrafteris:oreCoal")
+			.setCreativeTab(GCEris.starcraftErisTab);
+			
+	// Block Eris Green Gem Ore
+	public static final Block ErisGreenGemOre = new StarcraftOre(1931, null)
+			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("ErisGreenGemOre")
+			.setTextureName("starcrafteris:oreGreenGem")
+			.setCreativeTab(GCEris.starcraftErisTab);
+			
+	// Block Eris Iron Ore
+	public static final Block ErisIronOre = new StarcraftOre(1932, null)
+			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("ErisIronOre")
+			.setTextureName("starcrafteris:oreIron")
+			.setCreativeTab(GCEris.starcraftErisTab);
+			
+	// Block Eris Meteor Ore
+	public static final Block ErisMeteorOre = new StarcraftOre(1933, null)
+			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("ErisMeteorOre")
+			.setTextureName("starcrafteris:oreMeteor")
+			.setCreativeTab(GCEris.starcraftErisTab);
+			
+	// Block Eris Tin Ore
+	public static final Block ErisTinOre = new StarcraftOre(1934, null)
+			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("ErisTinOre")
+			.setTextureName("starcrafteris:oreTin")
+			.setCreativeTab(GCEris.starcraftErisTab);
 	
 	
 	// Block Sedna Grass
@@ -672,6 +736,31 @@ public class StarcraftBlocks
         @EventHandler
         public void load(FMLInitializationEvent event) 
         {
+            	GameRegistry.registerBlock(StarcraftBlocks.MercuryGrass, "MercuryGrass");
+            	GameRegistry.registerBlock(StarcraftBlocks.MercuryDirt, "MercuryDirt");
+            	GameRegistry.registerBlock(StarcraftBlocks.MercuryStone, "MercuryStone");
+            	GameRegistry.registerBlock(StarcraftBlocks.MercuryCobblestone, "MercuryCobblestone");
+            	GameRegistry.registerBlock(StarcraftBlocks.MercuryBrick, "MercuryBrick");
+            	GameRegistry.registerBlock(StarcraftBlocks.MercuryIridiumOre, "MercuryIridiumOre");
+            	GameRegistry.registerBlock(StarcraftBlocks.MercuryCoalOre, "MercuryCoalOre");
+            	GameRegistry.registerBlock(StarcraftBlocks.MercuryTinOre, "MercuryTinOre");
+            	GameRegistry.registerBlock(StarcraftBlocks.MercuryCopperOre, "MercuryCopperOre");
+            	GameRegistry.registerBlock(StarcraftBlocks.BlackGlowstone, "BlackGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.BlueGlowstone, "BlueGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.BrownGlowstone, "BrownGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.CyanGlowstone, "CyanGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.GreenGlowstone, "GreenGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.GreyGlowstone, "GreyGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.SilverGlowstone, "SilverGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.LightBlueGlowstone, "LightBlueGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.LimeGlowstone, "LimeGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.MagentaGlowstone, "MagentaGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.OrangeGlowstone, "OrangeGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.PinkGlowstone, "PinkGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.PurpleGlowstone, "PurpleGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.RedGlowstone, "RedGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.WhiteGlowstone, "WhiteGlowstone");
+            	GameRegistry.registerBlock(StarcraftBlocks.YellowGlowstone, "YellowGlowstone");
                 GameRegistry.registerBlock(StarcraftBlocks.gravityGenerator, "GravityGenerator");
                 GameRegistry.registerBlock(StarcraftBlocks.caravanModule, "CaravanModule");
                 GameRegistry.registerBlock(StarcraftBlocks.caravanModulePart, "CaravanModulePart");
@@ -696,45 +785,13 @@ public class StarcraftBlocks
                 GameRegistry.registerBlock(StarcraftBlocks.VenusianTNT, "VenusianTNT");
                 GameRegistry.registerBlock(StarcraftBlocks.EvolvedBlazeEgg, "EvolvedBlazeEgg");
                 GameRegistry.registerBlock(StarcraftBlocks.VenusBurnStone, "VenusBurnStone");
-
-                GameRegistry.registerBlock(StarcraftBlocks.PlutoGrass, "PlutoGrass");
-                GameRegistry.registerBlock(StarcraftBlocks.PlutoDirt, "PlutoDirt");
-                GameRegistry.registerBlock(StarcraftBlocks.PlutoStone, "PlutoStone");
-                GameRegistry.registerBlock(StarcraftBlocks.PlutoCobblestone, "PlutoCobblestone");
-                GameRegistry.registerBlock(StarcraftBlocks.PlutoBrick, "PlutoBrick");
-                                
-                GameRegistry.registerBlock(StarcraftBlocks.MercuryGrass, "MercuryGrass");
-                GameRegistry.registerBlock(StarcraftBlocks.MercuryDirt, "MercuryDirt");
-                GameRegistry.registerBlock(StarcraftBlocks.MercuryStone, "MercuryStone");
-                GameRegistry.registerBlock(StarcraftBlocks.MercuryCobblestone, "MercuryCobblestone");
-                GameRegistry.registerBlock(StarcraftBlocks.MercuryBrick, "MercuryBrick");
-                GameRegistry.registerBlock(StarcraftBlocks.MercuryIridiumOre, "MercuryIridiumOre");
-                GameRegistry.registerBlock(StarcraftBlocks.MercuryCoalOre, "MercuryCoalOre");
-                GameRegistry.registerBlock(StarcraftBlocks.MercuryTinOre, "MercuryTinOre");
-                GameRegistry.registerBlock(StarcraftBlocks.MercuryCopperOre, "MercuryCopperOre");
-//                GameRegistry.registerBlock(StarcraftBlocks.MercuryGlowstone, "Mercury");
-                GameRegistry.registerBlock(StarcraftBlocks.BlackGlowstone, "BlackGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.BlueGlowstone, "BlueGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.BrownGlowstone, "BrownGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.CyanGlowstone, "CyanGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.GreenGlowstone, "GreenGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.GreyGlowstone, "GreyGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.SilverGlowstone, "SilverGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.LightBlueGlowstone, "LightBlueGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.LimeGlowstone, "LimeGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.MagentaGlowstone, "MagentaGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.OrangeGlowstone, "OrangeGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.PinkGlowstone, "PinkGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.PurpleGlowstone, "PurpleGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.RedGlowstone, "RedGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.WhiteGlowstone, "WhiteGlowstone");
-                GameRegistry.registerBlock(StarcraftBlocks.YellowGlowstone, "YellowGlowstone");
-                
                 
                 GameRegistry.registerBlock(StarcraftBlocks.JupiterNitrogen, "JupiterNitrogen");
                 GameRegistry.registerBlock(StarcraftBlocks.JupiterHelium, "JupiterHelium");
                 GameRegistry.registerBlock(StarcraftBlocks.JupiterHydrogen, "JupiterHydrogen");
-                GameRegistry.registerBlock(StarcraftBlocks.JupiterBrick, "JupiterBrick");       
+                GameRegistry.registerBlock(StarcraftBlocks.JupiterBrick, "JupiterBrick");      
+                GameRegistry.registerBlock(StarcraftBlocks.hydrogenFlowing, "MetallicHydrogenFlowing");
+//              GameRegistry.registerBlock(StarcraftCore2.hydrogenStill, "MetallicHydrogenStill");
                 
                 GameRegistry.registerBlock(StarcraftBlocks.SaturnNitrogen, "SaturnNitrogen");
                 GameRegistry.registerBlock(StarcraftBlocks.SaturnHelium, "SaturnHelium");
@@ -749,16 +806,28 @@ public class StarcraftBlocks
                 GameRegistry.registerBlock(StarcraftBlocks.NeptuneNitrogen, "NeptuneNitrogen");
                 GameRegistry.registerBlock(StarcraftBlocks.NeptuneHelium, "NeptuneHelium");
                 GameRegistry.registerBlock(StarcraftBlocks.NeptuneHydrogen, "NeptuneHydrogen");
-                GameRegistry.registerBlock(StarcraftBlocks.NeptuneBrick, "NeptuneBrick");
+                GameRegistry.registerBlock(StarcraftBlocks.NeptuneBrick, "NeptuneBrick");                    
+
+                GameRegistry.registerBlock(StarcraftBlocks.PlutoGrass, "PlutoGrass");
+                GameRegistry.registerBlock(StarcraftBlocks.PlutoDirt, "PlutoDirt");
+                GameRegistry.registerBlock(StarcraftBlocks.PlutoStone, "PlutoStone");
+                GameRegistry.registerBlock(StarcraftBlocks.PlutoCobblestone, "PlutoCobblestone");
+                GameRegistry.registerBlock(StarcraftBlocks.PlutoBrick, "PlutoBrick");
+                GameRegistry.registerBlock(StarcraftBlocks.BlockUnunpetium, "BlockUnunpetium");
+                GameRegistry.registerBlock(StarcraftBlocks.UnunpentiumOre, "UnunpentiumOre");
+                GameRegistry.registerBlock(StarcraftBlocks.BlueGemOre, "BlueGemOre");
+                GameRegistry.registerBlock(StarcraftBlocks.FrozenIronOre, "FrozenIronOre");
                 
-                GameRegistry.registerBlock(StarcraftBlocks.hydrogenFlowing, "MetallicHydrogenFlowing");
-//              GameRegistry.registerBlock(StarcraftCore2.hydrogenStill, "MetallicHydrogenStill");
-                    
                 GameRegistry.registerBlock(StarcraftBlocks.ErisGrass, "ErisGrass");
                 GameRegistry.registerBlock(StarcraftBlocks.ErisDirt, "ErisDirt");
                 GameRegistry.registerBlock(StarcraftBlocks.ErisStone, "ErisStone");
                 GameRegistry.registerBlock(StarcraftBlocks.ErisCobblestone, "ErisCobblestone");
                 GameRegistry.registerBlock(StarcraftBlocks.ErisBrick, "ErisBrick");
+                GameRegistry.registerBlock(StarcraftBlocks.ErisCoalOre, "ErisCoalOre");
+                GameRegistry.registerBlock(StarcraftBlocks.ErisGreenGemOre, "ErisGreenGemOre");
+                GameRegistry.registerBlock(StarcraftBlocks.ErisIronOre, "ErisIronOre");
+                GameRegistry.registerBlock(StarcraftBlocks.ErisMeteorOre, "ErisMeteorOre");
+				GameRegistry.registerBlock(StarcraftBlocks.ErisTinOre, "ErisTinOre");
                 
                 GameRegistry.registerBlock(StarcraftBlocks.SednaGrass, "SednaGrass");
                 GameRegistry.registerBlock(StarcraftBlocks.SednaDirt, "SednaDirt");
@@ -767,8 +836,6 @@ public class StarcraftBlocks
                 GameRegistry.registerBlock(StarcraftBlocks.SednaBrick, "SednaBrick");
                 GameRegistry.registerBlock(StarcraftBlocks.PalladiumOre, "PalladiumOre");
                 GameRegistry.registerBlock(StarcraftBlocks.PalladiumBlock, "PalladiumBlock");
-                
-            	//orePalladium and palladiumBlock
         }
         
         @EventHandler
