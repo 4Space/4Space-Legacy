@@ -429,6 +429,13 @@ public class StarcraftBlocks
 			.setTextureName("starcraftjupiter:jupiterBrick")
 			.setCreativeTab(GCJupiter.starcraftGasTab)
 			.setBlockUnbreakable();
+	
+	// Block Jupiter, Clear Diamond Block
+	public static final Block ClearDiamondBlock = new StarcraftBlock(638, null)
+			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("ClearDiamondBlock")
+			.setTextureName("starcraftjupiter:clearDiamondBlock")
+			.setCreativeTab(GCJupiter.starcraftGasTab);
 
 	
 	// Block Saturn, Nitrogen
@@ -570,7 +577,7 @@ public class StarcraftBlocks
 	
 	// Block Pluto, Ununpetium Block
 	public static final Block BlockUnunpetium = new StarcraftBlock(817, null)
-			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
+			.setHardness(5.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("BlockUnunpetium")
 			.setLightValue(0.7f)
 			.setTextureName("starcraftpluto:BlockUnunpetium")
@@ -578,23 +585,37 @@ public class StarcraftBlocks
 	
 	// Block Pluto, Ununpetium Ore
 	public static final Block UnunpentiumOre = new StarcraftBlock(818, null)
-			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
+			.setHardness(5.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("UnunpentiumOre")
 			.setTextureName("starcraftpluto:oreUnunpentium")
 			.setCreativeTab(GCPluto.starcraftPlutoTab);
 	
 	// Block Pluto, Blue Gem Ore
 	public static final Block BlueGemOre = new StarcraftBlock(819, null)
-			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
-			.setUnlocalizedName("BlockUnunpetium")
+			.setHardness(5.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("BlueGemOre")
 			.setTextureName("starcraftpluto:oreBlueGem")
 			.setCreativeTab(GCPluto.starcraftPlutoTab);
 	
 	// Block Pluto, Frozen Iron Ore
 	public static final Block FrozenIronOre = new StarcraftBlock(820, null)
-			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
+			.setHardness(5.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("FrozenIronOre")
 			.setTextureName("starcraftpluto:oreFrozenIron")
+			.setCreativeTab(GCPluto.starcraftPlutoTab);
+	
+	// Block Pluto, Blue Gem Block
+	public static final Block BlueGemBlock = new StarcraftBlock(821, null)
+			.setHardness(5.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("BlockBlueGem")
+			.setTextureName("starcraftpluto:blockBlueGem")
+			.setCreativeTab(GCPluto.starcraftPlutoTab);
+	
+	// Block Pluto, Frozen Iron Block
+	public static final Block FrozenIronBlock = new StarcraftBlock(822, null)
+			.setHardness(5.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("FrozenIronBlock")
+			.setTextureName("starcraftpluto:blockFrozenIron")
 			.setCreativeTab(GCPluto.starcraftPlutoTab);
 	
 
@@ -792,6 +813,7 @@ public class StarcraftBlocks
                 GameRegistry.registerBlock(StarcraftBlocks.JupiterBrick, "JupiterBrick");      
                 GameRegistry.registerBlock(StarcraftBlocks.hydrogenFlowing, "MetallicHydrogenFlowing");
 //              GameRegistry.registerBlock(StarcraftCore2.hydrogenStill, "MetallicHydrogenStill");
+                GameRegistry.registerBlock(StarcraftBlocks.ClearDiamondBlock, "ClearDiamondBlock");
                 
                 GameRegistry.registerBlock(StarcraftBlocks.SaturnNitrogen, "SaturnNitrogen");
                 GameRegistry.registerBlock(StarcraftBlocks.SaturnHelium, "SaturnHelium");
@@ -817,6 +839,8 @@ public class StarcraftBlocks
                 GameRegistry.registerBlock(StarcraftBlocks.UnunpentiumOre, "UnunpentiumOre");
                 GameRegistry.registerBlock(StarcraftBlocks.BlueGemOre, "BlueGemOre");
                 GameRegistry.registerBlock(StarcraftBlocks.FrozenIronOre, "FrozenIronOre");
+                GameRegistry.registerBlock(StarcraftBlocks.BlueGemBlock, "BlueGemBlock");
+                GameRegistry.registerBlock(StarcraftBlocks.FrozenIronBlock, "FrozenIronBlock");
                 
                 GameRegistry.registerBlock(StarcraftBlocks.ErisGrass, "ErisGrass");
                 GameRegistry.registerBlock(StarcraftBlocks.ErisDirt, "ErisDirt");

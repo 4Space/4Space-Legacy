@@ -19,7 +19,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCSednaItem extends Item
 {
-    public static String[] names = { "plateHeavyT8", "rawPalladium", "refinedPalladium" };
+    public static String[] names = { "plateHeavyT8", "rawPalladium", "refinedPalladium", "ingotPalladium" };
     protected Icon[] icons = new Icon[GCSednaItem.names.length];
 
     public GCSednaItem(int par1)

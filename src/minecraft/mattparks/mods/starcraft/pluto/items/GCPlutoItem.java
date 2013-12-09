@@ -19,7 +19,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCPlutoItem extends Item
 {
-    public static String[] names = { "plateHeavyT6", "rawUnunpetium", "rayGun", "blueGem", "blueGemPlate" };
+    public static String[] names = { "plateHeavyT6", "rawUnunpetium", "rayGun", "blueGem", "blueGemPlate", "frozenIronIngot" };
     protected Icon[] icons = new Icon[GCPlutoItem.names.length];
 
     public GCPlutoItem(int par1)

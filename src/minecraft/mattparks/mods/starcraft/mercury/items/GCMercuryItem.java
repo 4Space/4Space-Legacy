@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCMercuryItem extends Item
 {
-    public static String[] names = { "plateHeavyT4", "jetpackFuel", "gravityGeneratorCore", "iridiumCrystals" };
+    public static String[] names = { "plateHeavyT4", "jetpackFuel", "gravityGeneratorCore", "iridiumCrystals", "iridiumIngot" };
     protected Icon[] icons = new Icon[GCMercuryItem.names.length];
 
     public GCMercuryItem(int par1)
