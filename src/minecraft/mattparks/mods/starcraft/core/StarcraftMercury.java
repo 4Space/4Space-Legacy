@@ -75,7 +75,7 @@ public class StarcraftMercury
 			.setCreativeTab(GCMercury.starcraftMercuryTab)
 			.setBlockUnbreakable();
 
-	// Block Mercury, Gem Ore
+	// Block Mercury, Iridium Ore
 	public static final Block MercuryIridiumOre = new StarcraftOre(720, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("MercuryIridiumOre")
@@ -101,6 +101,13 @@ public class StarcraftMercury
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("MercuryCopperOre")
 			.setTextureName("starcraftmercury:copperOreMercury")
+			.setCreativeTab(GCMercury.starcraftMercuryTab);
+	
+	// Block Mercury, Iridium
+	public static final Block IridiumBlock = new StarcraftOre(725, null)
+			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+			.setUnlocalizedName("IridiumBlock")
+			.setTextureName("starcraftmercury:iridiumBlock")
 			.setCreativeTab(GCMercury.starcraftMercuryTab);
 	
     //Black Glowstone
@@ -277,6 +284,8 @@ public class StarcraftMercury
             	GameRegistry.registerBlock(StarcraftMercury.MercuryCoalOre, "MercuryCoalOre");
             	GameRegistry.registerBlock(StarcraftMercury.MercuryTinOre, "MercuryTinOre");
             	GameRegistry.registerBlock(StarcraftMercury.MercuryCopperOre, "MercuryCopperOre");
+            	GameRegistry.registerBlock(StarcraftMercury.IridiumBlock, "IridiumBlock");
+            	
             	GameRegistry.registerBlock(StarcraftMercury.BlackGlowstone, "BlackGlowstone");
             	GameRegistry.registerBlock(StarcraftMercury.BlueGlowstone, "BlueGlowstone");
             	GameRegistry.registerBlock(StarcraftMercury.BrownGlowstone, "BrownGlowstone");
