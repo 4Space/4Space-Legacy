@@ -13,27 +13,9 @@ public class GCNeptunePlanet implements IPlanet
     private final IMapObject Neptune = new GCNeptuneMapPlanet();
 
     @Override
-    public String getName()
-    {
-        return "Neptune";
-    }
-
-    @Override
-    public boolean isReachable()
+    public boolean addToList()
     {
         return false;
-    }
-
-    @Override
-    public IGalaxy getParentGalaxy()
-    {
-        return GalacticraftCore.galaxyMilkyWay;
-    }
-
-    @Override
-    public IMapObject getMapObject()
-    {
-        return this.Neptune;
     }
 
     @Override
@@ -43,9 +25,27 @@ public class GCNeptunePlanet implements IPlanet
     }
 
     @Override
-    public boolean addToList()
+    public int getDimensionID()
     {
-        return false;
+        return GCNeptuneConfigManager.dimensionIDNeptune;
+    }
+
+    @Override
+    public IMapObject getMapObject()
+    {
+        return this.Neptune;
+    }
+
+    @Override
+    public String getName()
+    {
+        return "Neptune";
+    }
+
+    @Override
+    public IGalaxy getParentGalaxy()
+    {
+        return GalacticraftCore.galaxyMilkyWay;
     }
 
     @Override
@@ -55,8 +55,8 @@ public class GCNeptunePlanet implements IPlanet
     }
 
     @Override
-    public int getDimensionID()
+    public boolean isReachable()
     {
-        return GCNeptuneConfigManager.dimensionIDNeptune;
+        return false;
     }
 }

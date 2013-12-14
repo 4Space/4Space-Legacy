@@ -12,15 +12,6 @@ public class GCSednaConfigManager
 
     static Configuration configuration;
 
-    public GCSednaConfigManager(File file)
-    {
-        if (!GCSednaConfigManager.loaded)
-        {
-            GCSednaConfigManager.configuration = new Configuration(file);
-            this.setDefaultValues();
-        }
-    }
-
     // DIMENSIONS
     public static int dimensionIDSedna;
 
@@ -29,12 +20,15 @@ public class GCSednaConfigManager
 
     // ITEMS
     public static int idItemSednaBasic;
-    
+
     // ARMOR
     public static int idArmorGravityHelmet;
+    
     public static int idArmorGravityChestplate;
     public static int idArmorGravityLeggings;
     public static int idArmorGravityBoots;
+    // ACHIEVEMENTS
+    public static int idEntityEvolvedEnderman;
 
     // TOOLS
 
@@ -44,12 +38,18 @@ public class GCSednaConfigManager
 
     // SCHEMATIC
 
-    // ACHIEVEMENTS
-    public static int idEntityEvolvedEnderman;
+    public static boolean generateOtherMods;
 
     // GENERAL
   
-    public static boolean generateOtherMods;
+    public GCSednaConfigManager(File file)
+    {
+        if (!GCSednaConfigManager.loaded)
+        {
+            GCSednaConfigManager.configuration = new Configuration(file);
+            this.setDefaultValues();
+        }
+    }
 
     private void setDefaultValues()
     {

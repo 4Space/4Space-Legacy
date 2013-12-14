@@ -57,14 +57,6 @@ public class GCNeptune
     public static HashMap<String, ItemStack> blocksList = new HashMap<String, ItemStack>();
 
     @EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
-        new GCNeptuneConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/neptune.conf"));
-
-        GCNeptune.proxy.preInit(event);
-    }
-
-    @EventHandler
     public void load(FMLInitializationEvent event)
     {
         int languages = 0;
@@ -112,31 +104,23 @@ public class GCNeptune
     }
 
     @EventHandler
-    public void serverStarting(FMLServerStartingEvent event)
+    public void postLoad(FMLPostInitializationEvent event)
     {
-        NetworkRegistry.instance().registerChannel(new GCNeptunePacketHandlerServer(), GCNeptune.CHANNEL, Side.SERVER);
+        GCNeptune.proxy.postInit(event);
+        GCNeptune.proxy.registerRenderInformation();
     }
 
-    public void registerTileEntities()
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event)
     {
-    	;
+        new GCNeptuneConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/neptune.conf"));
+
+        GCNeptune.proxy.preInit(event);
     }
 
     public void registerCreatures()
     {
     	;
-    }
-
-    public void registerOtherEntities()
-    {
-    	;
-    }
-    
-    @EventHandler
-    public void postLoad(FMLPostInitializationEvent event)
-    {
-        GCNeptune.proxy.postInit(event);
-        GCNeptune.proxy.registerRenderInformation();
     }
 
     public void registerGalacticraftCreature(Class<? extends Entity> var0, String var1, int id, int back, int fore)
@@ -148,5 +132,21 @@ public class GCNeptune
     public void registerGalacticraftNonMobEntity(Class<? extends Entity> var0, String var1, int id, int trackingDistance, int updateFreq, boolean sendVel)
     {
         EntityRegistry.registerModEntity(var0, var1, id, this, trackingDistance, updateFreq, sendVel);
+    }
+    
+    public void registerOtherEntities()
+    {
+    	;
+    }
+
+    public void registerTileEntities()
+    {
+    	;
+    }
+
+    @EventHandler
+    public void serverStarting(FMLServerStartingEvent event)
+    {
+        NetworkRegistry.instance().registerChannel(new GCNeptunePacketHandlerServer(), GCNeptune.CHANNEL, Side.SERVER);
     }
 }

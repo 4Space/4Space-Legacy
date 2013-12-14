@@ -16,11 +16,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class GCVenusRecipeManager
 {
-    public static void loadRecipes()
-    {
-        GCVenusRecipeManager.addUniversalRecipes();
-    }
-
     private static void addUniversalRecipes()
     {
     	OreDictionary.registerOre("ingotSulfer", new ItemStack(GCVenusItems.venusItemBasic, 1, 0));
@@ -202,5 +197,10 @@ public class GCVenusRecipeManager
         input2.put(14, new ItemStack(Block.chest));
         input2.put(15, null);
         input2.put(16, null);
+    }
+
+    public static void loadRecipes()
+    {
+        GCVenusRecipeManager.addUniversalRecipes();
     }
 }

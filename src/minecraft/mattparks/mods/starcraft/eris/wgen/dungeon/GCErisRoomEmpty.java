@@ -55,16 +55,16 @@ public class GCErisRoomEmpty extends GCCoreDungeonRoom
     }
 
     @Override
-    protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
-    {
-        return new GCErisRoomEmpty(dungeon, x, y, z, dir);
-    }
-
-    @Override
     protected void handleTileEntities(Random rand)
     {
         // TODO Auto-generated method stub
 
+    }
+
+    @Override
+    protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
+    {
+        return new GCErisRoomEmpty(dungeon, x, y, z, dir);
     }
 
 }

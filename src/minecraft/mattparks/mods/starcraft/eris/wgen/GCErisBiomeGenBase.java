@@ -20,9 +20,12 @@ public class GCErisBiomeGenBase extends BiomeGenBase
     }
 
     @Override
-    public GCErisBiomeGenBase setColor(int var1)
+    @SideOnly(Side.CLIENT)
+    public int getBiomeGrassColor()
     {
-        return (GCErisBiomeGenBase) super.setColor(var1);
+        double d0 = MathHelper.clamp_float(this.getFloatTemperature(), 0.0F, 1.0F);
+        double d1 = MathHelper.clamp_float(this.getFloatRainfall(), 0.0F, 1.0F);
+        return this.getModdedBiomeGrassColor(ColorizerGrass.getGrassColor(d0, d1));
     }
 
     @Override
@@ -32,11 +35,8 @@ public class GCErisBiomeGenBase extends BiomeGenBase
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public int getBiomeGrassColor()
+    public GCErisBiomeGenBase setColor(int var1)
     {
-        double d0 = MathHelper.clamp_float(this.getFloatTemperature(), 0.0F, 1.0F);
-        double d1 = MathHelper.clamp_float(this.getFloatRainfall(), 0.0F, 1.0F);
-        return this.getModdedBiomeGrassColor(ColorizerGrass.getGrassColor(d0, d1));
+        return (GCErisBiomeGenBase) super.setColor(var1);
     }
 }

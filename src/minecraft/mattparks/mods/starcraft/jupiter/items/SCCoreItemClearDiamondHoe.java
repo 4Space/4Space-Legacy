@@ -19,16 +19,16 @@ public class SCCoreItemClearDiamondHoe extends ItemHoe
     }
 
     @Override
+    public CreativeTabs getCreativeTab()
+    {
+        return GCJupiter.starcraftGasTab;
+    }
+
+    @Override
     @SideOnly(Side.CLIENT)
     public EnumRarity getRarity(ItemStack par1ItemStack)
     {
         return ClientProxyCore.galacticraftItem;
-    }
-
-    @Override
-    public CreativeTabs getCreativeTab()
-    {
-        return GCJupiter.starcraftGasTab;
     }
 
     @Override

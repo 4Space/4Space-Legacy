@@ -51,39 +51,6 @@ import cpw.mods.fml.relauncher.Side;
 
 public class ClientProxyVenus extends CommonProxyVenus
 {
-    public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
-    
-    @Override
-    public void preInit(FMLPreInitializationEvent event)
-    {
-        MinecraftForge.EVENT_BUS.register(new GCVenusSounds());
-    }
-    
-    @Override
-    public void init(FMLInitializationEvent event)
-    {
-        TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCVenus.CHANNEL, Side.CLIENT);
-    }
-
-    @Override
-    public void registerRenderInformation()
-    {
-        RenderingRegistry.addNewArmourRendererPrefix("gem");
-        RenderingRegistry.addNewArmourRendererPrefix("sulfer");
-
-        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityVenusianVillager.class, new GCVenusRenderVenusianVillager());
-        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityFlameling.class, new GCVenusRenderFlameling());
-        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityEvolvedBlaze.class, new GCVenusRenderEvolvedBlaze());
-  
-        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
-        // TODO remove internal cargo rocket codes
-
-        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT3.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier3(), GCVenus.ASSET_DOMAIN, "rocketT3"));
-        MinecraftForgeClient.registerItemRenderer(GCVenusItems.spaceshipT3.itemID, new SCCoreItemRendererSpaceshipT3(cargoRocketModel));
-    
-    }
-
     public class ClientPacketHandler implements IPacketHandler
     {
         @Override
@@ -125,25 +92,26 @@ public class ClientProxyVenus extends CommonProxyVenus
             }
         }
     }
-
-    {
-    }
-
-    public static boolean handleLavaMovement(EntityPlayer player)
-    {
-        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.lava);
-    }
-
-    public static boolean handleWaterMovement(EntityPlayer player)
-    {
-        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.water);
-    }
-
-    {
-    }
-
+    
     public static class TickHandlerClient implements ITickHandler
     {
+        @Override
+        public String getLabel()
+        {
+            return "Starcraft Venus Client";
+        }
+
+        @Override
+        public void tickEnd(EnumSet<TickType> type, Object... tickData)
+        {
+        }
+
+        @Override
+        public EnumSet<TickType> ticks()
+        {
+            return EnumSet.of(TickType.CLIENT);
+        }
+
         @Override
         public void tickStart(EnumSet<TickType> type, Object... tickData)
         {
@@ -188,23 +156,24 @@ public class ClientProxyVenus extends CommonProxyVenus
                 }
             }
         }
+    }
+    
+    public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
 
-        @Override
-        public void tickEnd(EnumSet<TickType> type, Object... tickData)
-        {
-        }
+    public static boolean handleLavaMovement(EntityPlayer player)
+    {
+        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.lava);
+    }
 
-        @Override
-        public String getLabel()
-        {
-            return "Starcraft Venus Client";
-        }
+    public static boolean handleWaterMovement(EntityPlayer player)
+    {
+        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.water);
+    }
 
-        @Override
-        public EnumSet<TickType> ticks()
-        {
-            return EnumSet.of(TickType.CLIENT);
-        }
+    {
+    }
+
+    {
     }
 
     @Override
@@ -213,5 +182,36 @@ public class ClientProxyVenus extends CommonProxyVenus
         TileEntity tile = world.getBlockTileEntity(x, y, z);
 
         return null;
+    }
+
+    @Override
+    public void init(FMLInitializationEvent event)
+    {
+        TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCVenus.CHANNEL, Side.CLIENT);
+    }
+
+    @Override
+    public void preInit(FMLPreInitializationEvent event)
+    {
+        MinecraftForge.EVENT_BUS.register(new GCVenusSounds());
+    }
+
+    @Override
+    public void registerRenderInformation()
+    {
+        RenderingRegistry.addNewArmourRendererPrefix("gem");
+        RenderingRegistry.addNewArmourRendererPrefix("sulfer");
+
+        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityVenusianVillager.class, new GCVenusRenderVenusianVillager());
+        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityFlameling.class, new GCVenusRenderFlameling());
+        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityEvolvedBlaze.class, new GCVenusRenderEvolvedBlaze());
+  
+        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
+        // TODO remove internal cargo rocket codes
+
+        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT3.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier3(), GCVenus.ASSET_DOMAIN, "rocketT3"));
+        MinecraftForgeClient.registerItemRenderer(GCVenusItems.spaceshipT3.itemID, new SCCoreItemRendererSpaceshipT3(cargoRocketModel));
+    
     }
 }

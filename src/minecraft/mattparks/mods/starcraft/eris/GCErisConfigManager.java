@@ -12,22 +12,15 @@ public class GCErisConfigManager
 
     static Configuration configuration;
 
-    public GCErisConfigManager(File file)
-    {
-        if (!GCErisConfigManager.loaded)
-        {
-            GCErisConfigManager.configuration = new Configuration(file);
-            this.setDefaultValues();
-        }
-    }
-
     // DIMENSIONS
     public static int dimensionIDEris;
 
-    // BLOCKS
-
     // ITEMS
     public static int idItemErisBasic;
+
+    // BLOCKS
+
+    public static boolean generateOtherMods;
     
     // ARMOR
 
@@ -43,7 +36,14 @@ public class GCErisConfigManager
 
     // GENERAL
   
-    public static boolean generateOtherMods;
+    public GCErisConfigManager(File file)
+    {
+        if (!GCErisConfigManager.loaded)
+        {
+            GCErisConfigManager.configuration = new Configuration(file);
+            this.setDefaultValues();
+        }
+    }
 
     private void setDefaultValues()
     {

@@ -44,31 +44,6 @@ import cpw.mods.fml.relauncher.Side;
 
 public class ClientProxyMercury extends CommonProxyMercury
 {
-    public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
-    
-    @Override
-    public void preInit(FMLPreInitializationEvent event)
-    {
-        MinecraftForge.EVENT_BUS.register(new GCMercurySounds());
-    }
-    
-    @Override
-    public void init(FMLInitializationEvent event)
-    {
-        TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCMercury.CHANNEL, Side.CLIENT);
-    }
-
-    @Override
-    public void registerRenderInformation()
-    {
-        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
-        // TODO remove internal cargo rocket codes
-        
-        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT4.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier4(), GCMercury.ASSET_DOMAIN, "rocketT4"));
-        MinecraftForgeClient.registerItemRenderer(GCMercuryItems.spaceshipT4.itemID, new SCCoreItemRendererSpaceshipT4(cargoRocketModel));
-    }
-
     public class ClientPacketHandler implements IPacketHandler
     {
         @Override
@@ -110,22 +85,26 @@ public class ClientProxyMercury extends CommonProxyMercury
             }
         }
     }
-
-    {
-    }
-
-    public static boolean handleLavaMovement(EntityPlayer player)
-    {
-        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.lava);
-    }
-
-    public static boolean handleWaterMovement(EntityPlayer player)
-    {
-        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.water);
-    }
-
+    
     public static class TickHandlerClient implements ITickHandler
     {
+        @Override
+        public String getLabel()
+        {
+            return "Starcraft Mercury Client";
+        }
+        
+        @Override
+        public void tickEnd(EnumSet<TickType> type, Object... tickData)
+        {
+        }
+
+        @Override
+        public EnumSet<TickType> ticks()
+        {
+            return EnumSet.of(TickType.CLIENT);
+        }
+
         @Override
         public void tickStart(EnumSet<TickType> type, Object... tickData)
         {
@@ -168,23 +147,21 @@ public class ClientProxyMercury extends CommonProxyMercury
                 }
             }
         }
-        
-        @Override
-        public void tickEnd(EnumSet<TickType> type, Object... tickData)
-        {
-        }
+    }
+    
+    public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
 
-        @Override
-        public String getLabel()
-        {
-            return "Starcraft Mercury Client";
-        }
+    public static boolean handleLavaMovement(EntityPlayer player)
+    {
+        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.lava);
+    }
 
-        @Override
-        public EnumSet<TickType> ticks()
-        {
-            return EnumSet.of(TickType.CLIENT);
-        }
+    public static boolean handleWaterMovement(EntityPlayer player)
+    {
+        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.water);
+    }
+
+    {
     }
 
     @Override
@@ -193,5 +170,28 @@ public class ClientProxyMercury extends CommonProxyMercury
         TileEntity tile = world.getBlockTileEntity(x, y, z);
 
         return null;
+    }
+
+    @Override
+    public void init(FMLInitializationEvent event)
+    {
+        TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCMercury.CHANNEL, Side.CLIENT);
+    }
+
+    @Override
+    public void preInit(FMLPreInitializationEvent event)
+    {
+        MinecraftForge.EVENT_BUS.register(new GCMercurySounds());
+    }
+
+    @Override
+    public void registerRenderInformation()
+    {
+        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
+        // TODO remove internal cargo rocket codes
+        
+        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT4.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier4(), GCMercury.ASSET_DOMAIN, "rocketT4"));
+        MinecraftForgeClient.registerItemRenderer(GCMercuryItems.spaceshipT4.itemID, new SCCoreItemRendererSpaceshipT4(cargoRocketModel));
     }
 }

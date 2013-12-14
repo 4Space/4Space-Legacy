@@ -13,27 +13,9 @@ public class GCErisPlanet implements IPlanet
     private final IMapObject Eris = new GCErisMapPlanet();
 
     @Override
-    public String getName()
+    public boolean addToList()
     {
-        return "Eris";
-    }
-
-    @Override
-    public boolean isReachable()
-    {
-        return true;
-    }
-
-    @Override
-    public IGalaxy getParentGalaxy()
-    {
-        return GalacticraftCore.galaxyMilkyWay;
-    }
-
-    @Override
-    public IMapObject getMapObject()
-    {
-        return this.Eris;
+        return false;
     }
 
     @Override
@@ -43,9 +25,27 @@ public class GCErisPlanet implements IPlanet
     }
 
     @Override
-    public boolean addToList()
+    public int getDimensionID()
     {
-        return false;
+        return GCErisConfigManager.dimensionIDEris;
+    }
+
+    @Override
+    public IMapObject getMapObject()
+    {
+        return this.Eris;
+    }
+
+    @Override
+    public String getName()
+    {
+        return "Eris";
+    }
+
+    @Override
+    public IGalaxy getParentGalaxy()
+    {
+        return GalacticraftCore.galaxyMilkyWay;
     }
 
     @Override
@@ -55,8 +55,8 @@ public class GCErisPlanet implements IPlanet
     }
 
     @Override
-    public int getDimensionID()
+    public boolean isReachable()
     {
-        return GCErisConfigManager.dimensionIDEris;
+        return true;
     }
 }

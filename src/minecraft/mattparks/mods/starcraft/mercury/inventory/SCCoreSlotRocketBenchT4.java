@@ -27,30 +27,14 @@ public class SCCoreSlotRocketBenchT4 extends Slot
         this.player = player;
     }
 
+    /**
+     * Returns the maximum stack size for a given slot (usually the same as
+     * getInventoryStackLimit(), but 1 in the case of armor slots)
+     */
     @Override
-    public void onSlotChanged()
+    public int getSlotStackLimit()
     {
-        if (this.player instanceof EntityPlayerMP)
-        {
-            final Object[] toSend = { this.x, this.y, this.z };
-
-            for (int var12 = 0; var12 < this.player.worldObj.playerEntities.size(); ++var12)
-            {
-                final EntityPlayerMP var13 = (EntityPlayerMP) this.player.worldObj.playerEntities.get(var12);
-
-                if (var13.dimension == this.player.worldObj.provider.dimensionId)
-                {
-                    final double var14 = this.x - var13.posX;
-                    final double var16 = this.y - var13.posY;
-                    final double var18 = this.z - var13.posZ;
-
-                    if (var14 * var14 + var16 * var16 + var18 * var18 < 20 * 20)
-                    {
-                        var13.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumPacketClient.SPAWN_SPARK_PARTICLES, toSend));
-                    }
-                }
-            }
-        }
+        return 1;
     }
 
     @Override
@@ -105,13 +89,29 @@ public class SCCoreSlotRocketBenchT4 extends Slot
         return false;
     }
 
-    /**
-     * Returns the maximum stack size for a given slot (usually the same as
-     * getInventoryStackLimit(), but 1 in the case of armor slots)
-     */
     @Override
-    public int getSlotStackLimit()
+    public void onSlotChanged()
     {
-        return 1;
+        if (this.player instanceof EntityPlayerMP)
+        {
+            final Object[] toSend = { this.x, this.y, this.z };
+
+            for (int var12 = 0; var12 < this.player.worldObj.playerEntities.size(); ++var12)
+            {
+                final EntityPlayerMP var13 = (EntityPlayerMP) this.player.worldObj.playerEntities.get(var12);
+
+                if (var13.dimension == this.player.worldObj.provider.dimensionId)
+                {
+                    final double var14 = this.x - var13.posX;
+                    final double var16 = this.y - var13.posY;
+                    final double var18 = this.z - var13.posZ;
+
+                    if (var14 * var14 + var16 * var16 + var18 * var18 < 20 * 20)
+                    {
+                        var13.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumPacketClient.SPAWN_SPARK_PARTICLES, toSend));
+                    }
+                }
+            }
+        }
     }
 }

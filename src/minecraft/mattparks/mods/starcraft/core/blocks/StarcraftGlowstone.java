@@ -26,6 +26,18 @@ public class StarcraftGlowstone extends Block
         this.setHardness(2.0F);
     }
 
+    @Override
+    @SideOnly(Side.CLIENT)
+    public Icon getIcon(int par1, int par2)
+    {
+        return this.iconArray[par2 % this.iconArray.length];
+    }
+
+    public Icon getSideTextureIndex(int metadata)
+    {
+        return this.iconArray[metadata % this.iconArray.length];
+    }
+
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     @SideOnly(Side.CLIENT)
@@ -37,7 +49,8 @@ public class StarcraftGlowstone extends Block
         }
     }
 
-    @SideOnly(Side.CLIENT)
+    @Override
+	@SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister par1IconRegister)
     {
         this.iconArray = new Icon[16];
@@ -47,17 +60,5 @@ public class StarcraftGlowstone extends Block
             this.iconArray[i] = par1IconRegister.registerIcon(this.getTextureName() + "_" + ItemDye.dyeItemNames[BlockColored.getDyeFromBlock(i)]);
         }
         this.blockIcon = this.iconArray[0];
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public Icon getIcon(int par1, int par2)
-    {
-        return this.iconArray[par2 % this.iconArray.length];
-    }
-
-    public Icon getSideTextureIndex(int metadata)
-    {
-        return this.iconArray[metadata % this.iconArray.length];
     }
 }

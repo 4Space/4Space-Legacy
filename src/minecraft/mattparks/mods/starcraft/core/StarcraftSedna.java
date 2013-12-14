@@ -87,12 +87,6 @@ public class StarcraftSedna
         public static CommonProxy proxy;
         
         @EventHandler
-        public void preInit(FMLPreInitializationEvent event) 
-        {
-        	;
-        }
-        
-        @EventHandler
         public void load(FMLInitializationEvent event) 
         {
                 GameRegistry.registerBlock(StarcraftSedna.SednaGrass, "SednaGrass");
@@ -106,6 +100,12 @@ public class StarcraftSedna
         
         @EventHandler
         public void postInit(FMLPostInitializationEvent event) 
+        {
+        	;
+        }
+        
+        @EventHandler
+        public void preInit(FMLPreInitializationEvent event) 
         {
         	;
         }

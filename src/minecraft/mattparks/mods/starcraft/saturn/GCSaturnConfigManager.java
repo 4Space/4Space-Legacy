@@ -12,17 +12,10 @@ public class GCSaturnConfigManager
 
     static Configuration configuration;
 
-    public GCSaturnConfigManager(File file)
-    {
-        if (!GCSaturnConfigManager.loaded)
-        {
-            GCSaturnConfigManager.configuration = new Configuration(file);
-            this.setDefaultValues();
-        }
-    }
-
     // DIMENSIONS
     public static int dimensionIDSaturn;
+
+    public static boolean generateOtherMods;
 
     // BLOCKS
 
@@ -42,7 +35,14 @@ public class GCSaturnConfigManager
 
     // GENERAL
   
-    public static boolean generateOtherMods;
+    public GCSaturnConfigManager(File file)
+    {
+        if (!GCSaturnConfigManager.loaded)
+        {
+            GCSaturnConfigManager.configuration = new Configuration(file);
+            this.setDefaultValues();
+        }
+    }
 
     private void setDefaultValues()
     {

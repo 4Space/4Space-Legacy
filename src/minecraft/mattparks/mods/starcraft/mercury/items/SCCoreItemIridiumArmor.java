@@ -26,14 +26,6 @@ public class SCCoreItemIridiumArmor extends ItemArmor
     }
 
     @Override
-    public Item setUnlocalizedName(String par1Str)
-    {
-        super.setTextureName(par1Str);
-        super.setUnlocalizedName(par1Str);
-        return this;
-    }
-
-    @Override
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
     {
         if (this.material == GCMercuryItems.ARMORIRIDIUM)
@@ -73,5 +65,13 @@ public class SCCoreItemIridiumArmor extends ItemArmor
     public void registerIcons(IconRegister par1IconRegister)
     {
         this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "starcraftmercury:"));
+    }
+
+    @Override
+    public Item setUnlocalizedName(String par1Str)
+    {
+        super.setTextureName(par1Str);
+        super.setUnlocalizedName(par1Str);
+        return this;
     }
 }

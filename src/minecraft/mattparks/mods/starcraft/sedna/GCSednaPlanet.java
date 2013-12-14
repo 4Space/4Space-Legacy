@@ -13,27 +13,9 @@ public class GCSednaPlanet implements IPlanet
     private final IMapObject Sedna = new GCSednaMapPlanet();
 
     @Override
-    public String getName()
+    public boolean addToList()
     {
-        return "Sedna";
-    }
-
-    @Override
-    public boolean isReachable()
-    {
-        return true;
-    }
-
-    @Override
-    public IGalaxy getParentGalaxy()
-    {
-        return GalacticraftCore.galaxyMilkyWay;
-    }
-
-    @Override
-    public IMapObject getMapObject()
-    {
-        return this.Sedna;
+        return false;
     }
 
     @Override
@@ -43,9 +25,27 @@ public class GCSednaPlanet implements IPlanet
     }
 
     @Override
-    public boolean addToList()
+    public int getDimensionID()
     {
-        return false;
+        return GCSednaConfigManager.dimensionIDSedna;
+    }
+
+    @Override
+    public IMapObject getMapObject()
+    {
+        return this.Sedna;
+    }
+
+    @Override
+    public String getName()
+    {
+        return "Sedna";
+    }
+
+    @Override
+    public IGalaxy getParentGalaxy()
+    {
+        return GalacticraftCore.galaxyMilkyWay;
     }
 
     @Override
@@ -55,8 +55,8 @@ public class GCSednaPlanet implements IPlanet
     }
 
     @Override
-    public int getDimensionID()
+    public boolean isReachable()
     {
-        return GCSednaConfigManager.dimensionIDSedna;
+        return true;
     }
 }

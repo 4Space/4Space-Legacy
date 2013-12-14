@@ -35,77 +35,6 @@ import cpw.mods.fml.relauncher.Side;
 
 public class ClientProxy extends CommonProxy
 {
-    public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
-    
-    public static Map<String, String> capeMap = new HashMap<String, String>();
-    
-    @Override
-    public void preInit(FMLPreInitializationEvent event)
-    {
-    }
-    
-    @Override
-    public void init(FMLInitializationEvent event)
-    {
-        TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), StarcraftCore.CHANNEL, Side.CLIENT);
-
-        //Blue Cape
-        String capeBlueString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeBlue.png";
-        //Green Cape
-        String capeGreenString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeGreen.png";
-        //Orange Cape
-        String capeOrangeString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeOrange.png";
-        //Red Cape
-        String capeRedString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeRed.png";
-        //Violet Cape
-        String capeVioletString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeViolet.png";
-        //Yellow Cape
-        String capeYellowString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeYellow.png";
-
-        ClientProxyCore.capeMap.put("mattparks", capeBlueString);     
-        ClientProxyCore.capeMap.put("flashy3", capeOrangeString); 
-        ClientProxyCore.capeMap.put("Dinammar", capeVioletString); 
-        ClientProxyCore.capeMap.put("imac123456", capeOrangeString); 
-        ClientProxyCore.capeMap.put("decaxon", capeGreenString); 
-        ClientProxyCore.capeMap.put("Henry33russian", capeBlueString); 
-        
-        ClientProxyCore.capeMap.put("ghostheart305", capeRedString); 
-        ClientProxyCore.capeMap.put("langjam350roxsox", capeBlueString); 
-        ClientProxyCore.capeMap.put("_Ja1m3", capeRedString); 
-        ClientProxyCore.capeMap.put("goldenkat99", capeOrangeString); 
-
-    }
-
-    @Override
-    public void registerRenderInformation()
-    {      
-        ;
-    }
-
-
-    @Override
-    public void spawnParticle(String var1, double var2, double var4, double var6)
-    {
-        final Minecraft var14 = FMLClientHandler.instance().getClient();
-
-        if (var14 != null && var14.renderViewEntity != null && var14.effectRenderer != null)
-        {
-            final double var15 = var14.renderViewEntity.posX - var2;
-            final double var17 = var14.renderViewEntity.posY - var4;
-            final double var19 = var14.renderViewEntity.posZ - var6;
-            Object var21 = null;
-            final double var22 = 64.0D;
-
-            if (var15 * var15 + var17 * var17 + var19 * var19 < var22 * var22)
-            {
-                if (var1.equals("sludgeDrip"))
-                {
-                }
-            }
-        }
-    }
-
     public class ClientPacketHandler implements IPacketHandler
     {
         @Override
@@ -147,25 +76,26 @@ public class ClientProxy extends CommonProxy
             }
         }
     }
-
-    {
-    }
-
-    public static boolean handleLavaMovement(EntityPlayer player)
-    {
-        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.lava);
-    }
-
-    public static boolean handleWaterMovement(EntityPlayer player)
-    {
-        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.water);
-    }
-
-    {
-    }
-
+    
     public static class TickHandlerClient implements ITickHandler
     {
+        @Override
+        public String getLabel()
+        {
+            return "Starcraft Core Client";
+        }
+
+        @Override
+        public void tickEnd(EnumSet<TickType> type, Object... tickData)
+        {
+        }
+
+        @Override
+        public EnumSet<TickType> ticks()
+        {
+            return EnumSet.of(TickType.CLIENT);
+        }
+
         @Override
         public void tickStart(EnumSet<TickType> type, Object... tickData)
         {
@@ -208,23 +138,27 @@ public class ClientProxy extends CommonProxy
                 }
             }
         }
+    }
+    
+    public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
+    
+    public static Map<String, String> capeMap = new HashMap<String, String>();
 
-        @Override
-        public void tickEnd(EnumSet<TickType> type, Object... tickData)
-        {
-        }
+    public static boolean handleLavaMovement(EntityPlayer player)
+    {
+        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.lava);
+    }
 
-        @Override
-        public String getLabel()
-        {
-            return "Starcraft Core Client";
-        }
 
-        @Override
-        public EnumSet<TickType> ticks()
-        {
-            return EnumSet.of(TickType.CLIENT);
-        }
+    public static boolean handleWaterMovement(EntityPlayer player)
+    {
+        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.water);
+    }
+
+    {
+    }
+
+    {
     }
 
     @Override
@@ -233,5 +167,71 @@ public class ClientProxy extends CommonProxy
         TileEntity tile = world.getBlockTileEntity(x, y, z);
 
         return null;
+    }
+
+    @Override
+    public void init(FMLInitializationEvent event)
+    {
+        TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), StarcraftCore.CHANNEL, Side.CLIENT);
+
+        //Blue Cape
+        String capeBlueString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeBlue.png";
+        //Green Cape
+        String capeGreenString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeGreen.png";
+        //Orange Cape
+        String capeOrangeString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeOrange.png";
+        //Red Cape
+        String capeRedString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeRed.png";
+        //Violet Cape
+        String capeVioletString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeViolet.png";
+        //Yellow Cape
+        String capeYellowString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeYellow.png";
+
+        ClientProxyCore.capeMap.put("mattparks", capeBlueString);     
+        ClientProxyCore.capeMap.put("flashy3", capeOrangeString); 
+        ClientProxyCore.capeMap.put("Dinammar", capeVioletString); 
+        ClientProxyCore.capeMap.put("imac123456", capeOrangeString); 
+        ClientProxyCore.capeMap.put("decaxon", capeGreenString); 
+        ClientProxyCore.capeMap.put("Henry33russian", capeBlueString); 
+        
+        ClientProxyCore.capeMap.put("ghostheart305", capeRedString); 
+        ClientProxyCore.capeMap.put("langjam350roxsox", capeBlueString); 
+        ClientProxyCore.capeMap.put("_Ja1m3", capeRedString); 
+        ClientProxyCore.capeMap.put("goldenkat99", capeOrangeString); 
+
+    }
+
+    @Override
+    public void preInit(FMLPreInitializationEvent event)
+    {
+    }
+
+    @Override
+    public void registerRenderInformation()
+    {      
+        ;
+    }
+
+    @Override
+    public void spawnParticle(String var1, double var2, double var4, double var6)
+    {
+        final Minecraft var14 = FMLClientHandler.instance().getClient();
+
+        if (var14 != null && var14.renderViewEntity != null && var14.effectRenderer != null)
+        {
+            final double var15 = var14.renderViewEntity.posX - var2;
+            final double var17 = var14.renderViewEntity.posY - var4;
+            final double var19 = var14.renderViewEntity.posZ - var6;
+            Object var21 = null;
+            final double var22 = 64.0D;
+
+            if (var15 * var15 + var17 * var17 + var19 * var19 < var22 * var22)
+            {
+                if (var1.equals("sludgeDrip"))
+                {
+                }
+            }
+        }
     }
 }

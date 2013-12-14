@@ -12,17 +12,10 @@ public class GCUranusConfigManager
 
     static Configuration configuration;
 
-    public GCUranusConfigManager(File file)
-    {
-        if (!GCUranusConfigManager.loaded)
-        {
-            GCUranusConfigManager.configuration = new Configuration(file);
-            this.setDefaultValues();
-        }
-    }
-
     // DIMENSIONS
     public static int dimensionIDUranus;
+
+    public static boolean generateOtherMods;
 
     // BLOCKS
 
@@ -42,7 +35,14 @@ public class GCUranusConfigManager
 
     // GENERAL
   
-    public static boolean generateOtherMods;
+    public GCUranusConfigManager(File file)
+    {
+        if (!GCUranusConfigManager.loaded)
+        {
+            GCUranusConfigManager.configuration = new Configuration(file);
+            this.setDefaultValues();
+        }
+    }
 
     private void setDefaultValues()
     {

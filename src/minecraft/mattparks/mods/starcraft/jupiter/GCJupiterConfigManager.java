@@ -12,6 +12,43 @@ public class GCJupiterConfigManager
 
     static Configuration configuration;
 
+    // DIMENSIONS
+    public static int dimensionIDJupiter;
+
+    // ITEMS
+    public static int idItemJupiterBasic;
+
+    // BLOCKS
+
+    public static int idItemSpaceshipTier5;
+    // ARMOR
+    public static int idArmorClearDiamondHelmet;
+    
+    public static int idArmorClearDiamondChestplate;
+    public static int idArmorClearDiamondLeggings;
+    public static int idArmorClearDiamondBoots;
+    // TOOLS
+    public static int idToolClearDiamondSword;
+
+    public static int idToolClearDiamondPickaxe;
+    public static int idToolClearDiamondAxe;
+    public static int idToolClearDiamondSpade;
+    public static int idToolClearDiamondHoe;
+    // ENTITIES
+    public static int idEntitySpaceshipTier5;
+
+    // GUI
+    public static int idGuiRocketCraftingBenchT5;
+    
+    // SCHEMATIC
+    public static int idSchematicRocketT5;
+    
+    public static boolean generateOtherMods;
+
+    // ACHIEVEMENTS
+
+    // GENERAL
+  
     public GCJupiterConfigManager(File file)
     {
         if (!GCJupiterConfigManager.loaded)
@@ -20,43 +57,6 @@ public class GCJupiterConfigManager
             this.setDefaultValues();
         }
     }
-
-    // DIMENSIONS
-    public static int dimensionIDJupiter;
-
-    // BLOCKS
-
-    // ITEMS
-    public static int idItemJupiterBasic;
-    public static int idItemSpaceshipTier5;
-    
-    // ARMOR
-    public static int idArmorClearDiamondHelmet;
-    public static int idArmorClearDiamondChestplate;
-    public static int idArmorClearDiamondLeggings;
-    public static int idArmorClearDiamondBoots;
-
-    // TOOLS
-    public static int idToolClearDiamondSword;
-    public static int idToolClearDiamondPickaxe;
-    public static int idToolClearDiamondAxe;
-    public static int idToolClearDiamondSpade;
-    public static int idToolClearDiamondHoe;
-
-    // ENTITIES
-    public static int idEntitySpaceshipTier5;
-    
-    // GUI
-    public static int idGuiRocketCraftingBenchT5;
-    
-    // SCHEMATIC
-    public static int idSchematicRocketT5;
-
-    // ACHIEVEMENTS
-
-    // GENERAL
-  
-    public static boolean generateOtherMods;
 
     private void setDefaultValues()
     {

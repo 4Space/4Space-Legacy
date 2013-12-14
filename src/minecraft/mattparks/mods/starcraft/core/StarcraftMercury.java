@@ -259,12 +259,6 @@ public class StarcraftMercury
         public static CommonProxy proxy;
         
         @EventHandler
-        public void preInit(FMLPreInitializationEvent event) 
-        {
-        	;
-        }
-        
-        @EventHandler
         public void load(FMLInitializationEvent event) 
         {
             	GameRegistry.registerBlock(StarcraftMercury.MercuryGrass, "MercuryGrass");
@@ -301,6 +295,12 @@ public class StarcraftMercury
         
         @EventHandler
         public void postInit(FMLPostInitializationEvent event) 
+        {
+        	;
+        }
+        
+        @EventHandler
+        public void preInit(FMLPreInitializationEvent event) 
         {
         	;
         }

@@ -26,9 +26,9 @@ public class GCVenusEntityVenusianTNTPrimed extends Entity
         this(par1World);
         this.setPosition(par2, par4, par6);
         float f = (float)(Math.random() * Math.PI * 2.0D);
-        this.motionX = (double)(-((float)Math.sin((double)f)) * 0.02F);
+        this.motionX = -((float)Math.sin(f)) * 0.02F;
         this.motionY = 0.20000000298023224D;
-        this.motionZ = (double)(-((float)Math.cos((double)f)) * 0.02F);
+        this.motionZ = -((float)Math.cos(f)) * 0.02F;
         this.fuse = 80;
         this.prevPosX = par2;
         this.prevPosY = par4;
@@ -36,29 +36,54 @@ public class GCVenusEntityVenusianTNTPrimed extends Entity
         this.tntPlacedBy = par8EntityLivingBase;
     }
 
-    protected void entityInit() {}
-
-    /**
-     * returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to
-     * prevent them from trampling crops
-     */
-    protected boolean canTriggerWalking()
-    {
-        return false;
-    }
-
     /**
      * Returns true if other Entities should be prevented from moving through this Entity.
      */
-    public boolean canBeCollidedWith()
+    @Override
+	public boolean canBeCollidedWith()
     {
         return !this.isDead;
     }
 
     /**
+     * returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to
+     * prevent them from trampling crops
+     */
+    @Override
+	protected boolean canTriggerWalking()
+    {
+        return false;
+    }
+
+    @Override
+	protected void entityInit() {}
+
+    private void explode()
+    {
+        float f = 4.0F;
+        this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, f, true);
+    }
+
+    @Override
+	@SideOnly(Side.CLIENT)
+    public float getShadowSize()
+    {
+        return 0.0F;
+    }
+
+    /**
+     * returns null or the entityliving it was placed or ignited by
+     */
+    public EntityLivingBase getTntPlacedBy()
+    {
+        return this.tntPlacedBy;
+    }
+
+    /**
      * Called to update the entity's position/logic.
      */
-    public void onUpdate()
+    @Override
+	public void onUpdate()
     {
         this.prevPosX = this.posX;
         this.prevPosY = this.posY;
@@ -91,39 +116,21 @@ public class GCVenusEntityVenusianTNTPrimed extends Entity
         }
     }
 
-    private void explode()
+    /**
+     * (abstract) Protected helper method to read subclass entity data from NBT.
+     */
+    @Override
+	protected void readEntityFromNBT(NBTTagCompound par1NBTTagCompound)
     {
-        float f = 4.0F;
-        this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, f, true);
+        this.fuse = par1NBTTagCompound.getByte("Fuse");
     }
 
     /**
      * (abstract) Protected helper method to write subclass entity data to NBT.
      */
-    protected void writeEntityToNBT(NBTTagCompound par1NBTTagCompound)
+    @Override
+	protected void writeEntityToNBT(NBTTagCompound par1NBTTagCompound)
     {
         par1NBTTagCompound.setByte("Fuse", (byte)this.fuse);
-    }
-
-    /**
-     * (abstract) Protected helper method to read subclass entity data from NBT.
-     */
-    protected void readEntityFromNBT(NBTTagCompound par1NBTTagCompound)
-    {
-        this.fuse = par1NBTTagCompound.getByte("Fuse");
-    }
-
-    @SideOnly(Side.CLIENT)
-    public float getShadowSize()
-    {
-        return 0.0F;
-    }
-
-    /**
-     * returns null or the entityliving it was placed or ignited by
-     */
-    public EntityLivingBase getTntPlacedBy()
-    {
-        return this.tntPlacedBy;
     }
 }

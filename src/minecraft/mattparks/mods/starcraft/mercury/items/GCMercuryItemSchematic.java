@@ -25,10 +25,37 @@ public class GCMercuryItemSchematic extends GCCoreItemSchematic implements ISche
         super(itemID, "schematic");
     }
 
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
+    {
+        if (par2EntityPlayer.worldObj.isRemote)
+        {
+            switch (par1ItemStack.getItemDamage())
+            {
+            case 0:
+                par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT4.name"));
+                break;
+            }
+        }
+    }
+
     @Override
     public CreativeTabs getCreativeTab()
     {
         return GCMercury.starcraftMercuryTab;
+    }
+
+    @Override
+    public Icon getIconFromDamage(int damage)
+    {
+        if (this.icons.length > damage)
+        {
+            return this.icons[damage];
+        }
+
+        return super.getIconFromDamage(damage);
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -52,32 +79,5 @@ public class GCMercuryItemSchematic extends GCCoreItemSchematic implements ISche
             this.icons[i] = iconRegister.registerIcon(GCMercury.ASSET_PREFIX + GCMercuryItemSchematic.names[i]);
         }
         
-    }
-
-    @Override
-    public Icon getIconFromDamage(int damage)
-    {
-        if (this.icons.length > damage)
-        {
-            return this.icons[damage];
-        }
-
-        return super.getIconFromDamage(damage);
-    }
-
-    @SuppressWarnings({ "unchecked", "rawtypes" })
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
-    {
-        if (par2EntityPlayer.worldObj.isRemote)
-        {
-            switch (par1ItemStack.getItemDamage())
-            {
-            case 0:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT4.name"));
-                break;
-            }
-        }
     }
 }

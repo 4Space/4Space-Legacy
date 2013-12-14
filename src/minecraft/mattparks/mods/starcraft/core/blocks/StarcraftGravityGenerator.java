@@ -23,12 +23,14 @@ public class StarcraftGravityGenerator extends Block
         this.setHardness(2.0F);
     }
     
-    public Icon getIcon(int par1, int par2)
+    @Override
+	public Icon getIcon(int par1, int par2)
     {
         return par1 == 0 ? this.field_94392_b : (par1 == 1 ? this.field_94393_a : this.blockIcon);
     }
     
-    public void registerIcons(IconRegister par1IconRegister)
+    @Override
+	public void registerIcons(IconRegister par1IconRegister)
     {
         this.blockIcon = par1IconRegister.registerIcon(this.getTextureName() + "_side");
         this.field_94393_a = par1IconRegister.registerIcon(this.getTextureName() + "_top");

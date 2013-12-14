@@ -189,12 +189,6 @@ public class StarcraftVenus
         public static CommonProxy proxy;
         
         @EventHandler
-        public void preInit(FMLPreInitializationEvent event) 
-        {
-        	;
-        }
-        
-        @EventHandler
         public void load(FMLInitializationEvent event) 
         {
                 GameRegistry.registerBlock(StarcraftVenus.VenusGrass, "VenusGrass");
@@ -221,6 +215,12 @@ public class StarcraftVenus
         
         @EventHandler
         public void postInit(FMLPostInitializationEvent event) 
+        {
+        	;
+        }
+        
+        @EventHandler
+        public void preInit(FMLPreInitializationEvent event) 
         {
         	;
         }

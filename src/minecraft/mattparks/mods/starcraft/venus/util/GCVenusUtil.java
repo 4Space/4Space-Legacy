@@ -10,6 +10,11 @@ import net.minecraft.item.ItemStack;
 
 public class GCVenusUtil
 {
+    public static void addRocketBenchT3Recipe(ItemStack result, HashMap<Integer, ItemStack> input)
+    {
+        GalacticraftRegistry.addT2RocketRecipe(new GCCoreNasaWorkbenchRecipe(result, input));
+    }
+
     public static ItemStack findMatchingSpaceshipT3Recipe(SCCoreInventoryRocketBenchT3 inventoryRocketBench)
     {
         for (INasaWorkbenchRecipe recipe : GalacticraftRegistry.getRocketT2Recipes())
@@ -21,10 +26,5 @@ public class GCVenusUtil
         }
 
         return null;
-    }
-
-    public static void addRocketBenchT3Recipe(ItemStack result, HashMap<Integer, ItemStack> input)
-    {
-        GalacticraftRegistry.addT2RocketRecipe(new GCCoreNasaWorkbenchRecipe(result, input));
     }
 }

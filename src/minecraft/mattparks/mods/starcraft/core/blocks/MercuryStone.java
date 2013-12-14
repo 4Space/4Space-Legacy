@@ -16,7 +16,8 @@ public class MercuryStone extends Block
         this.setHardness(2.0F);
     }
     
-    public int idDropped(int par1, Random par2Random, int par3)
+    @Override
+	public int idDropped(int par1, Random par2Random, int par3)
     {
         return StarcraftMercury.MercuryCobblestone.blockID;
     }

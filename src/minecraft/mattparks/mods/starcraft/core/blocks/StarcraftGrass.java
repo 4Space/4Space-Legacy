@@ -47,12 +47,6 @@ public class StarcraftGrass extends Block implements ITerraformableBlock, IPlant
     }
 
     @Override
-    public int requiredLiquidBlocksNearby()
-    {
-        return 4;
-    }
-
-    @Override
     public boolean isPlantable(int metadata)
     {
         if (metadata >= 5 && metadata <= 13)
@@ -74,5 +68,11 @@ public class StarcraftGrass extends Block implements ITerraformableBlock, IPlant
         }
 
         return false;
+    }
+
+    @Override
+    public int requiredLiquidBlocksNearby()
+    {
+        return 4;
     }
 }

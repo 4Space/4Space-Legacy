@@ -12,6 +12,70 @@ public class GCVenusConfigManager
 
     static Configuration configuration;
 
+    // DIMENSIONS
+    public static int dimensionIDVenus;
+
+    // ITEMS
+    public static int idItemVenusBasic;
+
+    // BLOCKS
+
+    public static int idItemVenusBattery;
+    public static int idTtemVenusT3Schematic;
+    public static int idVurnBerry;
+    
+    public static int idItemSpaceshipTier3;
+    
+    // ARMOR
+    public static int idArmorSulferHelmet;
+    
+    public static int idArmorSulferChestplate;
+    public static int idArmorSulferLeggings;
+    public static int idArmorSulferBoots;
+    public static int idArmorGemHelmet;
+    
+    public static int idArmorGemChestplate;
+    public static int idArmorGemLeggings;
+    public static int idArmorGemBoots;
+    // TOOLS
+    public static int idToolSulferSword;
+
+    public static int idToolSulferPickaxe;
+    public static int idToolSulferAxe;
+    public static int idToolSulferSpade;
+    public static int idToolSulferHoe;
+    public static int idToolGemSword;
+    
+    public static int idToolGemPickaxe;
+    public static int idToolGemAxe;
+    public static int idToolGemSpade;
+    public static int idToolGemHoe;
+    // ENTITIES
+    public static int idEntitySpaceshipTier3;
+
+    // GUI
+    public static int idGuiRocketCraftingBenchT3;
+    
+    // SCHEMATIC
+    public static int idSchematicRocketT3;
+    
+    // ACHIEVEMENTS
+    public static int idEntityEvolvedBlaze;
+
+    public static int idEntityVenusianVillager;
+    public static int idEntityFlameling;
+    // GENERAL
+    public static boolean disableGemOreVenus;
+    
+    public static boolean disableSulferOreVenus;
+    public static boolean disableMeteorOreVenus;
+    public static boolean disableIronOreVenus;
+    public static boolean disableCoalOreVenus;
+    public static boolean disableTinOreVenus;  
+    public static boolean disableCopperOreVenus;
+    public static boolean generateOtherMods;
+  
+    public static boolean disableVenusVillageGen;
     public GCVenusConfigManager(File file)
     {
         if (!GCVenusConfigManager.loaded)
@@ -20,70 +84,6 @@ public class GCVenusConfigManager
             this.setDefaultValues();
         }
     }
-
-    // DIMENSIONS
-    public static int dimensionIDVenus;
-
-    // BLOCKS
-
-    // ITEMS
-    public static int idItemVenusBasic;
-    public static int idItemVenusBattery;
-    public static int idTtemVenusT3Schematic;
-    
-    public static int idVurnBerry;
-    
-    public static int idItemSpaceshipTier3;
-    
-    // ARMOR
-    public static int idArmorSulferHelmet;
-    public static int idArmorSulferChestplate;
-    public static int idArmorSulferLeggings;
-    public static int idArmorSulferBoots;
-    
-    public static int idArmorGemHelmet;
-    public static int idArmorGemChestplate;
-    public static int idArmorGemLeggings;
-    public static int idArmorGemBoots;
-
-    // TOOLS
-    public static int idToolSulferSword;
-    public static int idToolSulferPickaxe;
-    public static int idToolSulferAxe;
-    public static int idToolSulferSpade;
-    public static int idToolSulferHoe;
-    
-    public static int idToolGemSword;
-    public static int idToolGemPickaxe;
-    public static int idToolGemAxe;
-    public static int idToolGemSpade;
-    public static int idToolGemHoe;
-
-    // ENTITIES
-    public static int idEntitySpaceshipTier3;
-    
-    // GUI
-    public static int idGuiRocketCraftingBenchT3;
-    
-    // SCHEMATIC
-    public static int idSchematicRocketT3;
-
-    // ACHIEVEMENTS
-    public static int idEntityEvolvedBlaze;
-    public static int idEntityVenusianVillager;
-    public static int idEntityFlameling;
-    
-    // GENERAL
-    public static boolean disableGemOreVenus;
-    public static boolean disableSulferOreVenus;
-    public static boolean disableMeteorOreVenus;
-    public static boolean disableIronOreVenus;
-    public static boolean disableCoalOreVenus;  
-    public static boolean disableTinOreVenus;
-    public static boolean disableCopperOreVenus;
-  
-    public static boolean generateOtherMods;
-    public static boolean disableVenusVillageGen;
 
     private void setDefaultValues()
     {

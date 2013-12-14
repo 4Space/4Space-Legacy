@@ -58,22 +58,13 @@ public class GCJupiter
     public static long slowTick;
     
 	public static CreativeTabs starcraftGasTab = new CreativeTabs("starcraftGasTab") {
+		@Override
 		public ItemStack getIconItemStack() {
 			return new ItemStack(GCJupiterItems.spaceshipT5, 1, 0);
 		}
 	};
     
     public static HashMap<String, ItemStack> blocksList = new HashMap<String, ItemStack>();
-
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
-        new GCJupiterConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/jupiter.conf"));
-
-        GCJupiterItems.initItems();
-        
-        GCJupiter.proxy.preInit(event);
-    }
 
     @EventHandler
     public void load(FMLInitializationEvent event)
@@ -124,31 +115,25 @@ public class GCJupiter
     }
 
     @EventHandler
-    public void serverStarting(FMLServerStartingEvent event)
+    public void postLoad(FMLPostInitializationEvent event)
     {
-        NetworkRegistry.instance().registerChannel(new GCJupiterPacketHandlerServer(), GCJupiter.CHANNEL, Side.SERVER);
+        GCJupiter.proxy.postInit(event);
+        GCJupiter.proxy.registerRenderInformation();
     }
 
-    public void registerTileEntities()
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event)
     {
-    	;
+        new GCJupiterConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/jupiter.conf"));
+
+        GCJupiterItems.initItems();
+        
+        GCJupiter.proxy.preInit(event);
     }
 
     public void registerCreatures()
     {
     	;
-    }
-
-    public void registerOtherEntities()
-    {
-    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT5.class, "SpaceshipT5", GCJupiterConfigManager.idEntitySpaceshipTier5, 150, 1, true);
-    }
-    
-    @EventHandler
-    public void postLoad(FMLPostInitializationEvent event)
-    {
-        GCJupiter.proxy.postInit(event);
-        GCJupiter.proxy.registerRenderInformation();
     }
 
     public void registerGalacticraftCreature(Class<? extends Entity> var0, String var1, int id, int back, int fore)
@@ -160,5 +145,21 @@ public class GCJupiter
     public void registerGalacticraftNonMobEntity(Class<? extends Entity> var0, String var1, int id, int trackingDistance, int updateFreq, boolean sendVel)
     {
         EntityRegistry.registerModEntity(var0, var1, id, this, trackingDistance, updateFreq, sendVel);
+    }
+    
+    public void registerOtherEntities()
+    {
+    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT5.class, "SpaceshipT5", GCJupiterConfigManager.idEntitySpaceshipTier5, 150, 1, true);
+    }
+
+    public void registerTileEntities()
+    {
+    	;
+    }
+
+    @EventHandler
+    public void serverStarting(FMLServerStartingEvent event)
+    {
+        NetworkRegistry.instance().registerChannel(new GCJupiterPacketHandlerServer(), GCJupiter.CHANNEL, Side.SERVER);
     }
 }

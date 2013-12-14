@@ -19,16 +19,16 @@ public class SCCoreItemGemAxe extends ItemAxe
     }
 
     @Override
+    public CreativeTabs getCreativeTab()
+    {
+        return GCPluto.starcraftPlutoTab;
+    }
+
+    @Override
     @SideOnly(Side.CLIENT)
     public EnumRarity getRarity(ItemStack par1ItemStack)
     {
         return ClientProxyCore.galacticraftItem;
-    }
-
-    @Override
-    public CreativeTabs getCreativeTab()
-    {
-        return GCPluto.starcraftPlutoTab;
     }
 
     @Override

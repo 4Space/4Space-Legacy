@@ -50,17 +50,6 @@ public class GCMercuryBiomeDecorator
         }
     }
 
-    protected void genOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY)
-    {
-        for (int var5 = 0; var5 < amountPerChunk; ++var5)
-        {
-            final int var6 = this.chunkX + this.randomGenerator.nextInt(16);
-            final int var7 = this.randomGenerator.nextInt(maxY - minY) + minY;
-            final int var8 = this.chunkZ + this.randomGenerator.nextInt(16);
-            worldGenerator.generate(this.worldObj, this.randomGenerator, var6, var7, var8);
-        }
-    }
-
     protected void generateVenus()
     {
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Pre(this.worldObj, this.randomGenerator, this.chunkX, this.chunkZ));
@@ -70,5 +59,16 @@ public class GCMercuryBiomeDecorator
         this.genOre(35, this.tinGen, 0, 128);
         this.genOre(36, this.copperGen, 0, 128);
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Post(this.worldObj, this.randomGenerator, this.chunkX, this.chunkZ));
+    }
+
+    protected void genOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY)
+    {
+        for (int var5 = 0; var5 < amountPerChunk; ++var5)
+        {
+            final int var6 = this.chunkX + this.randomGenerator.nextInt(16);
+            final int var7 = this.randomGenerator.nextInt(maxY - minY) + minY;
+            final int var8 = this.chunkZ + this.randomGenerator.nextInt(16);
+            worldGenerator.generate(this.worldObj, this.randomGenerator, var6, var7, var8);
+        }
     }
 }

@@ -12,35 +12,28 @@ public class GCPlutoConfigManager
 
     static Configuration configuration;
 
-    public GCPlutoConfigManager(File file)
-    {
-        if (!GCPlutoConfigManager.loaded)
-        {
-            GCPlutoConfigManager.configuration = new Configuration(file);
-            this.setDefaultValues();
-        }
-    }
-
     // DIMENSIONS
     public static int dimensionIDPluto;
 
-    // BLOCKS
-
     // ITEMS
     public static int idItemPlutoBasic;
-    
+
+    // BLOCKS
+
     // ARMOR
     public static int idArmorBlueGemHelmet;
+    
     public static int idArmorBlueGemChestplate;
     public static int idArmorBlueGemLeggings;
     public static int idArmorBlueGemBoots;
-
     // TOOLS
     public static int idToolBlueGemSword;
+
     public static int idToolBlueGemPickaxe;
     public static int idToolBlueGemAxe;
     public static int idToolBlueGemSpade;
     public static int idToolBlueGemHoe;
+    public static boolean generateOtherMods;
 
     // ENTITIES
 
@@ -52,7 +45,14 @@ public class GCPlutoConfigManager
 
     // GENERAL
   
-    public static boolean generateOtherMods;
+    public GCPlutoConfigManager(File file)
+    {
+        if (!GCPlutoConfigManager.loaded)
+        {
+            GCPlutoConfigManager.configuration = new Configuration(file);
+            this.setDefaultValues();
+        }
+    }
 
     private void setDefaultValues()
     {

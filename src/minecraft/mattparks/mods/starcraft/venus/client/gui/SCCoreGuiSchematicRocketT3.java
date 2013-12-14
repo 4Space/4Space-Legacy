@@ -24,16 +24,6 @@ public class SCCoreGuiSchematicRocketT3 extends GuiContainer implements ISchemat
         this.ySize = 238;
     }
 
-    @SuppressWarnings("unchecked")
-    @Override
-    public void initGui()
-    {
-        super.initGui();
-        this.buttonList.clear();
-        this.buttonList.add(new GuiButton(0, this.width / 2 - 130, this.height / 2 - 30 + 27 - 12, 40, 20, "Back"));
-        this.buttonList.add(new GuiButton(1, this.width / 2 - 130, this.height / 2 - 30 + 27 + 12, 40, 20, "Next"));
-    }
-
     @Override
     protected void actionPerformed(GuiButton par1GuiButton)
     {
@@ -52,13 +42,6 @@ public class SCCoreGuiSchematicRocketT3 extends GuiContainer implements ISchemat
     }
 
     @Override
-    protected void drawGuiContainerForegroundLayer(int par1, int par2)
-    {
-        this.fontRenderer.drawString("Tier 3 Rocket", 7, -20 + 27, 4210752);
-        this.fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), 8, 220 - 104 + 2 + 27, 4210752);
-    }
-
-    @Override
     protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)
     {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -66,6 +49,23 @@ public class SCCoreGuiSchematicRocketT3 extends GuiContainer implements ISchemat
         final int var5 = (this.width - this.xSize) / 2;
         final int var6 = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(var5, var6, 0, 0, this.xSize, this.ySize);
+    }
+
+    @Override
+    protected void drawGuiContainerForegroundLayer(int par1, int par2)
+    {
+        this.fontRenderer.drawString("Tier 3 Rocket", 7, -20 + 27, 4210752);
+        this.fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), 8, 220 - 104 + 2 + 27, 4210752);
+    }
+
+    @SuppressWarnings("unchecked")
+    @Override
+    public void initGui()
+    {
+        super.initGui();
+        this.buttonList.clear();
+        this.buttonList.add(new GuiButton(0, this.width / 2 - 130, this.height / 2 - 30 + 27 - 12, 40, 20, "Back"));
+        this.buttonList.add(new GuiButton(1, this.width / 2 - 130, this.height / 2 - 30 + 27 + 12, 40, 20, "Next"));
     }
 
     @Override

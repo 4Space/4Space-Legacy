@@ -10,24 +10,10 @@ import cpw.mods.fml.common.network.IGuiHandler;
 
 public class CommonProxyEris implements IGuiHandler
 {
-    public void preInit(FMLPreInitializationEvent event)
+    @Override
+    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
     {
-
-    }
-
-    public void init(FMLInitializationEvent event)
-    {
-
-    }
-
-    public void postInit(FMLPostInitializationEvent event)
-    {
-
-    }
-
-    public void registerRenderInformation()
-    {
-
+        return null;
     }
 
     @Override
@@ -45,9 +31,23 @@ public class CommonProxyEris implements IGuiHandler
         return null;
     }
 
-    @Override
-    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
+    public void init(FMLInitializationEvent event)
     {
-        return null;
+
+    }
+
+    public void postInit(FMLPostInitializationEvent event)
+    {
+
+    }
+
+    public void preInit(FMLPreInitializationEvent event)
+    {
+
+    }
+
+    public void registerRenderInformation()
+    {
+
     }
 }

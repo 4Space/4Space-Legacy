@@ -38,6 +38,12 @@ public class SCCoreEntityRocketT5 extends EntityTieredRocket
         super(par1World);
     }
 
+    public SCCoreEntityRocketT5(World par1World, double par2, double par4, double par6, boolean reversed, EnumRocketType rocketType, ItemStack[] inv)
+    {
+        this(par1World, par2, par4, par6, rocketType);
+        this.cargoItems = inv;
+    }
+
     public SCCoreEntityRocketT5(World par1World, double par2, double par4, double par6, EnumRocketType rocketType)
     {
         super(par1World, par2, par4, par6);
@@ -45,10 +51,29 @@ public class SCCoreEntityRocketT5 extends EntityTieredRocket
         this.cargoItems = new ItemStack[this.getSizeInventory()];
     }
 
-    public SCCoreEntityRocketT5(World par1World, double par2, double par4, double par6, boolean reversed, EnumRocketType rocketType, ItemStack[] inv)
+    @RuntimeInterface(clazz = "icbm.api.sentry.IAATarget", modID = "ICBM|Explosion")
+    public boolean canBeTargeted(Object entity)
     {
-        this(par1World, par2, par4, par6, rocketType);
-        this.cargoItems = inv;
+        return this.launchPhase == EnumLaunchPhase.LAUNCHED.getPhase() && this.timeSinceLaunch > 50;
+    }
+
+    @RuntimeInterface(clazz = "icbm.api.IMissileLockable", modID = "ICBM|Explosion")
+    public boolean canLock(IMissile missile)
+    {
+        return true;
+    }
+
+    @RuntimeInterface(clazz = "icbm.api.sentry.IAATarget", modID = "ICBM|Explosion")
+    public void destroyCraft()
+    {
+        this.setDead();
+    }
+
+    @RuntimeInterface(clazz = "icbm.api.sentry.IAATarget", modID = "ICBM|Explosion")
+    public int doDamage(int damage)
+    {
+        this.shipDamage += damage;
+        return damage;
     }
 
     @Override
@@ -58,13 +83,82 @@ public class SCCoreEntityRocketT5 extends EntityTieredRocket
     }
 
     @Override
-    public void setDead()
+    public int getFuelTankCapacity()
     {
-        super.setDead();
+        return 12000;
+    }
 
-        if (this.rocketSoundUpdater != null)
+    @RuntimeInterface(clazz = "icbm.api.IMissileLockable", modID = "ICBM|Explosion")
+    public Vector3 getPredictedPosition(int ticks)
+    {
+        return new Vector3(this);
+    }
+
+    @Override
+    public int getPreLaunchWait()
+    {
+        return 400;
+    }
+
+    @Override
+    public int getRocketTier()
+    {
+        return 5;
+    }
+
+    @Override
+    public boolean isDockValid(IFuelDock dock)
+    {
+        return dock instanceof GCCoreTileEntityLandingPad;
+    }
+
+    @Override
+    public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer)
+    {
+        return this.isDead ? false : par1EntityPlayer.getDistanceSqToEntity(this) <= 64.0D;
+    }
+
+    @Override
+    public void onPadDestroyed()
+    {
+        if (!this.isDead && this.launchPhase != EnumLaunchPhase.LAUNCHED.getPhase())
         {
-            this.rocketSoundUpdater.update();
+            this.dropShipAsItem();
+            this.setDead();
+        }
+    }
+
+    @Override
+    protected void onRocketLand(int x, int y, int z)
+    {
+        super.onRocketLand(x, y, z);
+
+        if (this.rocketSoundUpdater instanceof GCCoreSoundUpdaterSpaceship)
+        {
+            ((GCCoreSoundUpdaterSpaceship) this.rocketSoundUpdater).stopRocketSound();
+        }
+    }
+
+    @Override
+    public void onTeleport(EntityPlayerMP player)
+    {
+        final GCCorePlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player);
+
+        player.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumPacketClient.ZOOM_CAMERA, new Object[] { 0 }));
+
+        if (playerBase != null)
+        {
+            if (this.cargoItems == null || this.cargoItems.length == 0)
+            {
+                playerBase.setRocketStacks(new ItemStack[3]);
+            }
+            else
+            {
+                playerBase.setRocketStacks(this.cargoItems);
+            }
+
+            playerBase.setRocketType(this.rocketType.getIndex());
+            playerBase.setFuelLevel(this.fuelTank.getFluidAmount());
         }
     }
 
@@ -161,25 +255,19 @@ public class SCCoreEntityRocketT5 extends EntityTieredRocket
     }
 
     @Override
-    public void onTeleport(EntityPlayerMP player)
+    protected void readEntityFromNBT(NBTTagCompound par1NBTTagCompound)
     {
-        final GCCorePlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player);
+        super.readEntityFromNBT(par1NBTTagCompound);
+    }
 
-        player.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumPacketClient.ZOOM_CAMERA, new Object[] { 0 }));
+    @Override
+    public void setDead()
+    {
+        super.setDead();
 
-        if (playerBase != null)
+        if (this.rocketSoundUpdater != null)
         {
-            if (this.cargoItems == null || this.cargoItems.length == 0)
-            {
-                playerBase.setRocketStacks(new ItemStack[3]);
-            }
-            else
-            {
-                playerBase.setRocketStacks(this.cargoItems);
-            }
-
-            playerBase.setRocketType(this.rocketType.getIndex());
-            playerBase.setFuelLevel(this.fuelTank.getFluidAmount());
+            this.rocketSoundUpdater.update();
         }
     }
 
@@ -210,96 +298,8 @@ public class SCCoreEntityRocketT5 extends EntityTieredRocket
     }
 
     @Override
-    protected void onRocketLand(int x, int y, int z)
-    {
-        super.onRocketLand(x, y, z);
-
-        if (this.rocketSoundUpdater instanceof GCCoreSoundUpdaterSpaceship)
-        {
-            ((GCCoreSoundUpdaterSpaceship) this.rocketSoundUpdater).stopRocketSound();
-        }
-    }
-
-    @Override
-    public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer)
-    {
-        return this.isDead ? false : par1EntityPlayer.getDistanceSqToEntity(this) <= 64.0D;
-    }
-
-    @Override
     protected void writeEntityToNBT(NBTTagCompound par1NBTTagCompound)
     {
         super.writeEntityToNBT(par1NBTTagCompound);
-    }
-
-    @Override
-    protected void readEntityFromNBT(NBTTagCompound par1NBTTagCompound)
-    {
-        super.readEntityFromNBT(par1NBTTagCompound);
-    }
-
-    @RuntimeInterface(clazz = "icbm.api.IMissileLockable", modID = "ICBM|Explosion")
-    public boolean canLock(IMissile missile)
-    {
-        return true;
-    }
-
-    @RuntimeInterface(clazz = "icbm.api.IMissileLockable", modID = "ICBM|Explosion")
-    public Vector3 getPredictedPosition(int ticks)
-    {
-        return new Vector3(this);
-    }
-
-    @Override
-    public void onPadDestroyed()
-    {
-        if (!this.isDead && this.launchPhase != EnumLaunchPhase.LAUNCHED.getPhase())
-        {
-            this.dropShipAsItem();
-            this.setDead();
-        }
-    }
-
-    @Override
-    public boolean isDockValid(IFuelDock dock)
-    {
-        return dock instanceof GCCoreTileEntityLandingPad;
-    }
-
-    @RuntimeInterface(clazz = "icbm.api.sentry.IAATarget", modID = "ICBM|Explosion")
-    public void destroyCraft()
-    {
-        this.setDead();
-    }
-
-    @RuntimeInterface(clazz = "icbm.api.sentry.IAATarget", modID = "ICBM|Explosion")
-    public int doDamage(int damage)
-    {
-        this.shipDamage += damage;
-        return damage;
-    }
-
-    @RuntimeInterface(clazz = "icbm.api.sentry.IAATarget", modID = "ICBM|Explosion")
-    public boolean canBeTargeted(Object entity)
-    {
-        return this.launchPhase == EnumLaunchPhase.LAUNCHED.getPhase() && this.timeSinceLaunch > 50;
-    }
-
-    @Override
-    public int getRocketTier()
-    {
-        return 5;
-    }
-
-    @Override
-    public int getFuelTankCapacity()
-    {
-        return 12000;
-    }
-
-    @Override
-    public int getPreLaunchWait()
-    {
-        return 400;
     }
 }

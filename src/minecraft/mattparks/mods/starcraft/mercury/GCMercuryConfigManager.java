@@ -12,15 +12,6 @@ public class GCMercuryConfigManager
 
     static Configuration configuration;
 
-    public GCMercuryConfigManager(File file)
-    {
-        if (!GCMercuryConfigManager.loaded)
-        {
-            GCMercuryConfigManager.configuration = new Configuration(file);
-            this.setDefaultValues();
-        }
-    }
-
     // DIMENSIONS
     public static int dimensionIDMercury;
 
@@ -29,25 +20,25 @@ public class GCMercuryConfigManager
 
     // ITEMS
     public static int idItemMercuryBasic;
+
     public static int idTtemMercuryT4Schematic;
     public static int idItemSpaceshipTier4;
-    
     // ARMOR
     public static int idArmorJetpack;
- 
+    
     public static int idArmorIridiumHelmet;
+ 
     public static int idArmorIridiumChestplate;
     public static int idArmorIridiumLeggings;
     public static int idArmorIridiumBoots;
+    public static int idToolIridiumSword;
 
     // TOOLS
  
-    public static int idToolIridiumSword;
     public static int idToolIridiumPickaxe;
     public static int idToolIridiumAxe;
     public static int idToolIridiumSpade;
     public static int idToolIridiumHoe;
-
     // ENTITIES
     public static int idEntitySpaceshipTier4;
 
@@ -57,16 +48,25 @@ public class GCMercuryConfigManager
     // SCHEMATIC
     public static int idSchematicRocketT4;
 
-    // ACHIEVEMENTS
-
     // GENERAL
     public static boolean disableGemOreMercury;
-    public static boolean disableCoalOreMercury;  
-    public static boolean disableTinOreMercury;
+
+    // ACHIEVEMENTS
+
+    public static boolean disableCoalOreMercury;
+    public static boolean disableTinOreMercury;  
     public static boolean disableCopperOreMercury;
-  
     public static boolean generateOtherMods;
+  
     public static boolean disableMercuryVillageGen;
+    public GCMercuryConfigManager(File file)
+    {
+        if (!GCMercuryConfigManager.loaded)
+        {
+            GCMercuryConfigManager.configuration = new Configuration(file);
+            this.setDefaultValues();
+        }
+    }
 
     private void setDefaultValues()
     {

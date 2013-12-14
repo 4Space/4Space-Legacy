@@ -8,15 +8,15 @@ import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 public class GCVenusMapPlanet implements IMapObject
 {
     @Override
-    public float getPlanetSize()
-    {
-        return 0.53191489361702127659574468085106F;
-    }
-
-    @Override
     public float getDistanceFromCenter()
     {
         return 0.72F;
+    }
+
+    @Override
+    public IGalaxy getParentGalaxy()
+    {
+        return GalacticraftCore.galaxyMilkyWay;
     }
 
     @Override
@@ -26,9 +26,9 @@ public class GCVenusMapPlanet implements IMapObject
     }
     
     @Override
-    public float getStretchValue()
+    public float getPlanetSize()
     {
-        return 1.5F;
+        return 0.53191489361702127659574468085106F;
     }
 
     @Override
@@ -38,8 +38,8 @@ public class GCVenusMapPlanet implements IMapObject
     }
 
     @Override
-    public IGalaxy getParentGalaxy()
+    public float getStretchValue()
     {
-        return GalacticraftCore.galaxyMilkyWay;
+        return 1.5F;
     }
 }

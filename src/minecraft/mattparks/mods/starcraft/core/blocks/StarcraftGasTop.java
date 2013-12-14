@@ -18,29 +18,32 @@ public class StarcraftGasTop extends Block implements ITerraformableBlock
     }
 
 	@Override
-	public void initializeBlock()
-    {
-		this.setBurnProperties(StarcraftGas.JupiterNitrogen.blockID, 5, 5);
-		this.setBurnProperties(StarcraftGas.NeptuneNitrogen.blockID, 5, 5);
-		this.setBurnProperties(StarcraftGas.UranusNitrogen.blockID, 5, 5);
-    }
-	
-	@Override
-	public boolean isTerraformable(World world, int x, int y, int z) {
-		return true;
-	}	
-	
 	public AxisAlignedBB getCollisionBoundingBoxFromPool(World par1World, int par2, int par3, int par4)
     {
         return null;
     }
-
-    public boolean isOpaqueCube()
+	
+	@Override
+	public void initializeBlock()
+    {
+		Block.setBurnProperties(StarcraftGas.JupiterNitrogen.blockID, 5, 5);
+		Block.setBurnProperties(StarcraftGas.NeptuneNitrogen.blockID, 5, 5);
+		Block.setBurnProperties(StarcraftGas.UranusNitrogen.blockID, 5, 5);
+    }	
+	
+	@Override
+	public boolean isOpaqueCube()
     {
         return false;
     }
 
-    public boolean renderAsNormalBlock()
+    @Override
+	public boolean isTerraformable(World world, int x, int y, int z) {
+		return true;
+	}
+
+    @Override
+	public boolean renderAsNormalBlock()
     {
         return false;
     }

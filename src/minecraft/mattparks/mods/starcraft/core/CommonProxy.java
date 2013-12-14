@@ -10,34 +10,14 @@ import cpw.mods.fml.common.network.IGuiHandler;
 
 public class CommonProxy implements IGuiHandler
 {
-    public void preInit(FMLPreInitializationEvent event)
-    {
-
-    }
-
-    public void init(FMLInitializationEvent event)
-    {
-
-    }
-
-    public void postInit(FMLPostInitializationEvent event)
-    {
-
-    }
-
-    public void registerRenderInformation()
-    {
-
-    }
-
-
-    public void spawnParticle(String var1, double var2, double var4, double var6)
     {
         ;
     }
 
+    @Override
+    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
     {
-        ;
+        return null;
     }
 
     @Override
@@ -55,9 +35,29 @@ public class CommonProxy implements IGuiHandler
         return null;
     }
 
-    @Override
-    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
+    public void init(FMLInitializationEvent event)
     {
-        return null;
+
+    }
+
+
+    public void postInit(FMLPostInitializationEvent event)
+    {
+
+    }
+
+    public void preInit(FMLPreInitializationEvent event)
+    {
+
+    }
+
+    public void registerRenderInformation()
+    {
+
+    }
+
+    public void spawnParticle(String var1, double var2, double var4, double var6)
+    {
+        ;
     }
 }

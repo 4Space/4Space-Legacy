@@ -13,27 +13,9 @@ public class GCVenusPlanet implements IPlanet
     private final IMapObject Venus = new GCVenusMapPlanet();
 
     @Override
-    public String getName()
+    public boolean addToList()
     {
-        return "Venus";
-    }
-
-    @Override
-    public boolean isReachable()
-    {
-        return true;
-    }
-
-    @Override
-    public IGalaxy getParentGalaxy()
-    {
-        return GalacticraftCore.galaxyMilkyWay;
-    }
-
-    @Override
-    public IMapObject getMapObject()
-    {
-        return this.Venus;
+        return false;
     }
 
     @Override
@@ -43,9 +25,27 @@ public class GCVenusPlanet implements IPlanet
     }
 
     @Override
-    public boolean addToList()
+    public int getDimensionID()
     {
-        return false;
+        return GCVenusConfigManager.dimensionIDVenus;
+    }
+
+    @Override
+    public IMapObject getMapObject()
+    {
+        return this.Venus;
+    }
+
+    @Override
+    public String getName()
+    {
+        return "Venus";
+    }
+
+    @Override
+    public IGalaxy getParentGalaxy()
+    {
+        return GalacticraftCore.galaxyMilkyWay;
     }
 
     @Override
@@ -55,8 +55,8 @@ public class GCVenusPlanet implements IPlanet
     }
 
     @Override
-    public int getDimensionID()
+    public boolean isReachable()
     {
-        return GCVenusConfigManager.dimensionIDVenus;
+        return true;
     }
 }

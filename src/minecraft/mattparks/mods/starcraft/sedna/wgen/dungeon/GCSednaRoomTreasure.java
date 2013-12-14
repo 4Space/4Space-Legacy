@@ -79,10 +79,17 @@ public class GCSednaRoomTreasure extends GCCoreDungeonRoom
         return new GCCoreDungeonBoundingBox(this.posX, this.posZ, this.posX + this.sizeX, this.posZ + this.sizeZ);
     }
 
-    @Override
-    protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
+    public ItemStack getGuaranteedLoot(Random rand)
     {
-        return new GCSednaRoomTreasure(dungeon, x, y, z, dir);
+        switch (rand.nextInt(2))
+        {
+        case 0:
+            return new ItemStack(GCCoreItems.schematic, 1, 0);
+        case 1:
+            return new ItemStack(GCCoreItems.schematic, 1, 1);
+        }
+
+        return null;
     }
 
     @Override
@@ -102,16 +109,9 @@ public class GCSednaRoomTreasure extends GCCoreDungeonRoom
         }
     }
 
-    public ItemStack getGuaranteedLoot(Random rand)
+    @Override
+    protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
     {
-        switch (rand.nextInt(2))
-        {
-        case 0:
-            return new ItemStack(GCCoreItems.schematic, 1, 0);
-        case 1:
-            return new ItemStack(GCCoreItems.schematic, 1, 1);
-        }
-
-        return null;
+        return new GCSednaRoomTreasure(dungeon, x, y, z, dir);
     }
 }

@@ -54,6 +54,7 @@ public class GCMercury
     public static GCMercury instance;
     
 	public static CreativeTabs starcraftMercuryTab = new CreativeTabs("starcraftMercuryTab") {
+		@Override
 		public ItemStack getIconItemStack() {
 			return new ItemStack(StarcraftMercury.BlueGlowstone, 1, 0);
 		}
@@ -66,16 +67,6 @@ public class GCMercury
     public static long slowTick;
     
     public static HashMap<String, ItemStack> blocksList = new HashMap<String, ItemStack>();
-
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
-        new GCMercuryConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/mercury.conf"));
-
-        GCMercuryItems.initItems();
-
-        GCMercury.proxy.preInit(event);
-    }
 
     @EventHandler
     public void load(FMLInitializationEvent event)
@@ -125,33 +116,27 @@ public class GCMercury
     }
 
     @EventHandler
-    public void serverStarting(FMLServerStartingEvent event)
-    {
-        NetworkRegistry.instance().registerChannel(new GCMercuryPacketHandlerServer(), GCMercury.CHANNEL, Side.SERVER);
-    }
-
-    public void registerTileEntities()
-    {
-    	;
-    }
-
-    public void registerCreatures()
-    {
-    	;
-    }
-
-    public void registerOtherEntities()
-    {
-    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT4.class, "SpaceshipT4", GCMercuryConfigManager.idEntitySpaceshipTier4, 150, 1, true);
-    }
-    
-    @EventHandler
     public void postLoad(FMLPostInitializationEvent event)
     {
         GCMercury.proxy.postInit(event);
         GCMercury.proxy.registerRenderInformation();
         
         GCMercuryRecipeManager.loadRecipes();
+    }
+
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event)
+    {
+        new GCMercuryConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/mercury.conf"));
+
+        GCMercuryItems.initItems();
+
+        GCMercury.proxy.preInit(event);
+    }
+
+    public void registerCreatures()
+    {
+    	;
     }
 
     public void registerGalacticraftCreature(Class<? extends Entity> var0, String var1, int id, int back, int fore)
@@ -163,5 +148,21 @@ public class GCMercury
     public void registerGalacticraftNonMobEntity(Class<? extends Entity> var0, String var1, int id, int trackingDistance, int updateFreq, boolean sendVel)
     {
         EntityRegistry.registerModEntity(var0, var1, id, this, trackingDistance, updateFreq, sendVel);
+    }
+    
+    public void registerOtherEntities()
+    {
+    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT4.class, "SpaceshipT4", GCMercuryConfigManager.idEntitySpaceshipTier4, 150, 1, true);
+    }
+
+    public void registerTileEntities()
+    {
+    	;
+    }
+
+    @EventHandler
+    public void serverStarting(FMLServerStartingEvent event)
+    {
+        NetworkRegistry.instance().registerChannel(new GCMercuryPacketHandlerServer(), GCMercury.CHANNEL, Side.SERVER);
     }
 }

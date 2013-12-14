@@ -23,16 +23,6 @@ public class StarcraftOre extends Block implements IDetectableResource
     }
 
     @Override
-    public boolean isValueable(int metadata)
-    {
-        switch (metadata)
-        {
-        default:
-            return true;
-        }
-    }
-    
-    @Override
     public int idDropped(int par1, Random par2Random, int par3)
     {
     	if(StarcraftMercury.MercuryIridiumOre.blockID == this.blockID)
@@ -51,5 +41,15 @@ public class StarcraftOre extends Block implements IDetectableResource
     	}
     	
         return this.blockID;
+    }
+    
+    @Override
+    public boolean isValueable(int metadata)
+    {
+        switch (metadata)
+        {
+        default:
+            return true;
+        }
     }
 }

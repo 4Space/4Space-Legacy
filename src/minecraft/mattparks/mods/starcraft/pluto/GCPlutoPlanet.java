@@ -13,27 +13,9 @@ public class GCPlutoPlanet implements IPlanet
     private final IMapObject Pluto = new GCPlutoMapPlanet();
 
     @Override
-    public String getName()
+    public boolean addToList()
     {
-        return "Pluto";
-    }
-
-    @Override
-    public boolean isReachable()
-    {
-        return true;
-    }
-
-    @Override
-    public IGalaxy getParentGalaxy()
-    {
-        return GalacticraftCore.galaxyMilkyWay;
-    }
-
-    @Override
-    public IMapObject getMapObject()
-    {
-        return this.Pluto;
+        return false;
     }
 
     @Override
@@ -43,9 +25,27 @@ public class GCPlutoPlanet implements IPlanet
     }
 
     @Override
-    public boolean addToList()
+    public int getDimensionID()
     {
-        return false;
+        return GCPlutoConfigManager.dimensionIDPluto;
+    }
+
+    @Override
+    public IMapObject getMapObject()
+    {
+        return this.Pluto;
+    }
+
+    @Override
+    public String getName()
+    {
+        return "Pluto";
+    }
+
+    @Override
+    public IGalaxy getParentGalaxy()
+    {
+        return GalacticraftCore.galaxyMilkyWay;
     }
 
     @Override
@@ -55,8 +55,8 @@ public class GCPlutoPlanet implements IPlanet
     }
 
     @Override
-    public int getDimensionID()
+    public boolean isReachable()
     {
-        return GCPlutoConfigManager.dimensionIDPluto;
+        return true;
     }
 }

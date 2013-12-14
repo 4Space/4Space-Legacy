@@ -27,29 +27,26 @@ public class GCErisItem extends Item
         this.setHasSubtypes(true);
     }
 
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
+    {
+        if (par2EntityPlayer.worldObj.isRemote)
+        {
+            switch (par1ItemStack.getItemDamage())
+            {
+            case 0:
+                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier7.desc"));
+                break;
+            }
+        }
+    }
+
     @Override
     public CreativeTabs getCreativeTab()
     {
         return GCEris.starcraftErisTab;
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public EnumRarity getRarity(ItemStack par1ItemStack)
-    {
-        return ClientProxyCore.galacticraftItem;
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
-    {
-        int i = 0;
-
-        for (String name : GCErisItem.names)
-        {
-            this.icons[i++] = iconRegister.registerIcon(GCEris.ASSET_PREFIX + name);
-        }
     }
 
     @Override
@@ -61,6 +58,19 @@ public class GCErisItem extends Item
         }
 
         return super.getIconFromDamage(damage);
+    }
+
+    @Override
+    public int getMetadata(int par1)
+    {
+        return par1;
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public EnumRarity getRarity(ItemStack par1ItemStack)
+    {
+        return ClientProxyCore.galacticraftItem;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -83,26 +93,16 @@ public class GCErisItem extends Item
 
         return "unnamed";
     }
-
-    @Override
-    public int getMetadata(int par1)
-    {
-        return par1;
-    }
     
-    @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
+    public void registerIcons(IconRegister iconRegister)
     {
-        if (par2EntityPlayer.worldObj.isRemote)
+        int i = 0;
+
+        for (String name : GCErisItem.names)
         {
-            switch (par1ItemStack.getItemDamage())
-            {
-            case 0:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier7.desc"));
-                break;
-            }
+            this.icons[i++] = iconRegister.registerIcon(GCEris.ASSET_PREFIX + name);
         }
     }
 }

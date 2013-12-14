@@ -13,27 +13,9 @@ public class GCMercuryPlanet implements IPlanet
     private final IMapObject Mercury = new GCMercuryMapPlanet();
 
     @Override
-    public String getName()
+    public boolean addToList()
     {
-        return "Mercury";
-    }
-
-    @Override
-    public boolean isReachable()
-    {
-        return true;
-    }
-
-    @Override
-    public IGalaxy getParentGalaxy()
-    {
-        return GalacticraftCore.galaxyMilkyWay;
-    }
-
-    @Override
-    public IMapObject getMapObject()
-    {
-        return this.Mercury;
+        return false;
     }
 
     @Override
@@ -43,9 +25,27 @@ public class GCMercuryPlanet implements IPlanet
     }
 
     @Override
-    public boolean addToList()
+    public int getDimensionID()
     {
-        return false;
+        return GCMercuryConfigManager.dimensionIDMercury;
+    }
+
+    @Override
+    public IMapObject getMapObject()
+    {
+        return this.Mercury;
+    }
+
+    @Override
+    public String getName()
+    {
+        return "Mercury";
+    }
+
+    @Override
+    public IGalaxy getParentGalaxy()
+    {
+        return GalacticraftCore.galaxyMilkyWay;
     }
 
     @Override
@@ -55,8 +55,8 @@ public class GCMercuryPlanet implements IPlanet
     }
 
     @Override
-    public int getDimensionID()
+    public boolean isReachable()
     {
-        return GCMercuryConfigManager.dimensionIDMercury;
+        return true;
     }
 }

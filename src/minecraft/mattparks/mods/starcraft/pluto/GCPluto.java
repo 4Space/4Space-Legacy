@@ -58,22 +58,13 @@ public class GCPluto
     public static long slowTick;
     
 	public static CreativeTabs starcraftPlutoTab = new CreativeTabs("starcraftPlutoTab") {
+		@Override
 		public ItemStack getIconItemStack() {
 			return new ItemStack(StarcraftPluto.PlutoBrick, 1, 0);
 		}
 	};
     
     public static HashMap<String, ItemStack> blocksList = new HashMap<String, ItemStack>();
-
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
-        new GCPlutoConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/pluto.conf"));
-
-        GCPlutoItems.initItems();
-
-        GCPluto.proxy.preInit(event);
-    }
 
     @EventHandler
     public void load(FMLInitializationEvent event)
@@ -124,31 +115,25 @@ public class GCPluto
     }
 
     @EventHandler
-    public void serverStarting(FMLServerStartingEvent event)
+    public void postLoad(FMLPostInitializationEvent event)
     {
-        NetworkRegistry.instance().registerChannel(new GCPlutoPacketHandlerServer(), GCPluto.CHANNEL, Side.SERVER);
+        GCPluto.proxy.postInit(event);
+        GCPluto.proxy.registerRenderInformation();
     }
 
-    public void registerTileEntities()
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event)
     {
-    	;
+        new GCPlutoConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/pluto.conf"));
+
+        GCPlutoItems.initItems();
+
+        GCPluto.proxy.preInit(event);
     }
 
     public void registerCreatures()
     {
     	;
-    }
-
-    public void registerOtherEntities()
-    {
-    	;
-    }
-    
-    @EventHandler
-    public void postLoad(FMLPostInitializationEvent event)
-    {
-        GCPluto.proxy.postInit(event);
-        GCPluto.proxy.registerRenderInformation();
     }
 
     public void registerGalacticraftCreature(Class<? extends Entity> var0, String var1, int id, int back, int fore)
@@ -160,5 +145,21 @@ public class GCPluto
     public void registerGalacticraftNonMobEntity(Class<? extends Entity> var0, String var1, int id, int trackingDistance, int updateFreq, boolean sendVel)
     {
         EntityRegistry.registerModEntity(var0, var1, id, this, trackingDistance, updateFreq, sendVel);
+    }
+    
+    public void registerOtherEntities()
+    {
+    	;
+    }
+
+    public void registerTileEntities()
+    {
+    	;
+    }
+
+    @EventHandler
+    public void serverStarting(FMLServerStartingEvent event)
+    {
+        NetworkRegistry.instance().registerChannel(new GCPlutoPacketHandlerServer(), GCPluto.CHANNEL, Side.SERVER);
     }
 }

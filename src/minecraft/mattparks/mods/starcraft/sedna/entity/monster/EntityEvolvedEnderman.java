@@ -47,7 +47,8 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
         this.stepHeight = 1.0F;
     }
 
-    protected void applyEntityAttributes()
+    @Override
+	protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(40.0D);
@@ -55,7 +56,74 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
         this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(7.0D);
     }
 
-    protected void entityInit()
+    /**
+     * Called when the entity is attacked.
+     */
+    @Override
+	public boolean attackEntityFrom(DamageSource par1DamageSource, float par2)
+    {
+        if (this.isEntityInvulnerable())
+        {
+            return false;
+        }
+        else
+        {
+            this.setScreaming(true);
+
+            if (par1DamageSource instanceof EntityDamageSource && par1DamageSource.getEntity() instanceof EntityPlayer)
+            {
+                this.isAggressive = true;
+            }
+
+            if (par1DamageSource instanceof EntityDamageSourceIndirect)
+            {
+                this.isAggressive = false;
+
+                for (int i = 0; i < 64; ++i)
+                {
+                    if (this.teleportRandomly())
+                    {
+                        return true;
+                    }
+                }
+
+                return super.attackEntityFrom(par1DamageSource, par2);
+            }
+            else
+            {
+                return super.attackEntityFrom(par1DamageSource, par2);
+            }
+        }
+    }
+
+    @Override
+    public boolean canBreath()
+    {
+        return true;
+    }
+
+    /**
+     * Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param
+     * par2 - Level of Looting used to kill this mob.
+     */
+    @Override
+	protected void dropFewItems(boolean par1, int par2)
+    {
+        int j = this.getDropItemId();
+
+        if (j > 0)
+        {
+            int k = this.rand.nextInt(2 + par2);
+
+            for (int l = 0; l < k; ++l)
+            {
+                this.dropItem(j, 1);
+            }
+        }
+    }
+
+    @Override
+	protected void entityInit()
     {
         super.entityInit();
         this.dataWatcher.addObject(16, new Byte((byte)0));
@@ -64,30 +132,11 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
     }
 
     /**
-     * (abstract) Protected helper method to write subclass entity data to NBT.
-     */
-    public void writeEntityToNBT(NBTTagCompound par1NBTTagCompound)
-    {
-        super.writeEntityToNBT(par1NBTTagCompound);
-        par1NBTTagCompound.setShort("carried", (short)this.getCarried());
-        par1NBTTagCompound.setShort("carriedData", (short)this.getCarryingData());
-    }
-
-    /**
-     * (abstract) Protected helper method to read subclass entity data from NBT.
-     */
-    public void readEntityFromNBT(NBTTagCompound par1NBTTagCompound)
-    {
-        super.readEntityFromNBT(par1NBTTagCompound);
-        this.setCarried(par1NBTTagCompound.getShort("carried"));
-        this.setCarryingData(par1NBTTagCompound.getShort("carriedData"));
-    }
-
-    /**
      * Finds the closest player within 16 blocks to attack, or null if this Entity isn't interested in attacking
      * (Animals, Spiders at day, peaceful PigZombies).
      */
-    protected Entity findPlayerToAttack()
+    @Override
+	protected Entity findPlayerToAttack()
     {
         EntityPlayer entityplayer = this.worldObj.getClosestVulnerablePlayerToEntity(this, 64.0D);
 
@@ -119,32 +168,68 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
     }
 
     /**
-     * Checks to see if this enderman should be attacking this player
+     * Get the id of the block an enderman carries
      */
-    private boolean shouldAttackPlayer(EntityPlayer par1EntityPlayer)
+    public int getCarried()
     {
-        ItemStack itemstack = par1EntityPlayer.inventory.armorInventory[3];
+        return this.dataWatcher.getWatchableObjectByte(16);
+    }
 
-        if (itemstack != null && itemstack.itemID == Block.pumpkin.blockID)
-        {
-            return false;
-        }
-        else
-        {
-            Vec3 vec3 = par1EntityPlayer.getLook(1.0F).normalize();
-            Vec3 vec31 = this.worldObj.getWorldVec3Pool().getVecFromPool(this.posX - par1EntityPlayer.posX, this.boundingBox.minY + (double)(this.height / 2.0F) - (par1EntityPlayer.posY + (double)par1EntityPlayer.getEyeHeight()), this.posZ - par1EntityPlayer.posZ);
-            double d0 = vec31.lengthVector();
-            vec31 = vec31.normalize();
-            double d1 = vec3.dotProduct(vec31);
-            return d1 > 1.0D - 0.025D / d0 ? par1EntityPlayer.canEntityBeSeen(this) : false;
-        }
+    /**
+     * Get the metadata of the block an enderman carries
+     */
+    public int getCarryingData()
+    {
+        return this.dataWatcher.getWatchableObjectByte(17);
+    }
+
+    /**
+     * Returns the sound this mob makes on death.
+     */
+    @Override
+	protected String getDeathSound()
+    {
+        return "mob.endermen.death";
+    }
+
+    /**
+     * Returns the item ID for the item the mob drops on death.
+     */
+    @Override
+	protected int getDropItemId()
+    {
+        return Item.enderPearl.itemID;
+    }
+
+    /**
+     * Returns the sound this mob makes when it is hurt.
+     */
+    @Override
+	protected String getHurtSound()
+    {
+        return "mob.endermen.hit";
+    }
+
+    /**
+     * Returns the sound this mob makes while it's alive.
+     */
+    @Override
+	protected String getLivingSound()
+    {
+        return this.isScreaming() ? "mob.endermen.scream" : "mob.endermen.idle";
+    }
+
+    public boolean isScreaming()
+    {
+        return this.dataWatcher.getWatchableObjectByte(18) > 0;
     }
 
     /**
      * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons
      * use this to react to sunlight and start to burn.
      */
-    public void onLivingUpdate()
+    @Override
+	public void onLivingUpdate()
     {
         if (this.isWet())
         {
@@ -189,7 +274,7 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 
         for (i = 0; i < 2; ++i)
         {
-            this.worldObj.spawnParticle("portal", this.posX + (this.rand.nextDouble() - 0.5D) * (double)this.width, this.posY + this.rand.nextDouble() * (double)this.height - 0.25D, this.posZ + (this.rand.nextDouble() - 0.5D) * (double)this.width, (this.rand.nextDouble() - 0.5D) * 2.0D, -this.rand.nextDouble(), (this.rand.nextDouble() - 0.5D) * 2.0D);
+            this.worldObj.spawnParticle("portal", this.posX + (this.rand.nextDouble() - 0.5D) * this.width, this.posY + this.rand.nextDouble() * this.height - 0.25D, this.posZ + (this.rand.nextDouble() - 0.5D) * this.width, (this.rand.nextDouble() - 0.5D) * 2.0D, -this.rand.nextDouble(), (this.rand.nextDouble() - 0.5D) * 2.0D);
         }
 
         if (this.worldObj.isDaytime() && !this.worldObj.isRemote)
@@ -254,28 +339,68 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
     }
 
     /**
+     * (abstract) Protected helper method to read subclass entity data from NBT.
+     */
+    @Override
+	public void readEntityFromNBT(NBTTagCompound par1NBTTagCompound)
+    {
+        super.readEntityFromNBT(par1NBTTagCompound);
+        this.setCarried(par1NBTTagCompound.getShort("carried"));
+        this.setCarryingData(par1NBTTagCompound.getShort("carriedData"));
+    }
+
+    /**
+     * Set the id of the block an enderman carries
+     */
+    public void setCarried(int par1)
+    {
+        this.dataWatcher.updateObject(16, Byte.valueOf((byte)(par1 & 255)));
+    }
+
+    /**
+     * Set the metadata of the block an enderman carries
+     */
+    public void setCarryingData(int par1)
+    {
+        this.dataWatcher.updateObject(17, Byte.valueOf((byte)(par1 & 255)));
+    }
+
+    public void setScreaming(boolean par1)
+    {
+        this.dataWatcher.updateObject(18, Byte.valueOf((byte)(par1 ? 1 : 0)));
+    }
+
+    /**
+     * Checks to see if this enderman should be attacking this player
+     */
+    private boolean shouldAttackPlayer(EntityPlayer par1EntityPlayer)
+    {
+        ItemStack itemstack = par1EntityPlayer.inventory.armorInventory[3];
+
+        if (itemstack != null && itemstack.itemID == Block.pumpkin.blockID)
+        {
+            return false;
+        }
+        else
+        {
+            Vec3 vec3 = par1EntityPlayer.getLook(1.0F).normalize();
+            Vec3 vec31 = this.worldObj.getWorldVec3Pool().getVecFromPool(this.posX - par1EntityPlayer.posX, this.boundingBox.minY + this.height / 2.0F - (par1EntityPlayer.posY + par1EntityPlayer.getEyeHeight()), this.posZ - par1EntityPlayer.posZ);
+            double d0 = vec31.lengthVector();
+            vec31 = vec31.normalize();
+            double d1 = vec3.dotProduct(vec31);
+            return d1 > 1.0D - 0.025D / d0 ? par1EntityPlayer.canEntityBeSeen(this) : false;
+        }
+    }
+
+    /**
      * Teleport the enderman to a random nearby position
      */
     protected boolean teleportRandomly()
     {
         double d0 = this.posX + (this.rand.nextDouble() - 0.5D) * 64.0D;
-        double d1 = this.posY + (double)(this.rand.nextInt(64) - 32);
+        double d1 = this.posY + (this.rand.nextInt(64) - 32);
         double d2 = this.posZ + (this.rand.nextDouble() - 0.5D) * 64.0D;
         return this.teleportTo(d0, d1, d2);
-    }
-
-    /**
-     * Teleport the enderman to another entity
-     */
-    protected boolean teleportToEntity(Entity par1Entity)
-    {
-        Vec3 vec3 = this.worldObj.getWorldVec3Pool().getVecFromPool(this.posX - par1Entity.posX, this.boundingBox.minY + (double)(this.height / 2.0F) - par1Entity.posY + (double)par1Entity.getEyeHeight(), this.posZ - par1Entity.posZ);
-        vec3 = vec3.normalize();
-        double d0 = 16.0D;
-        double d1 = this.posX + (this.rand.nextDouble() - 0.5D) * 8.0D - vec3.xCoord * d0;
-        double d2 = this.posY + (double)(this.rand.nextInt(16) - 8) - vec3.yCoord * d0;
-        double d3 = this.posZ + (this.rand.nextDouble() - 0.5D) * 8.0D - vec3.zCoord * d0;
-        return this.teleportTo(d1, d2, d3);
     }
 
     /**
@@ -341,14 +466,14 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 
             for (l = 0; l < short1; ++l)
             {
-                double d6 = (double)l / ((double)short1 - 1.0D);
+                double d6 = l / (short1 - 1.0D);
                 float f = (this.rand.nextFloat() - 0.5F) * 0.2F;
                 float f1 = (this.rand.nextFloat() - 0.5F) * 0.2F;
                 float f2 = (this.rand.nextFloat() - 0.5F) * 0.2F;
-                double d7 = d3 + (this.posX - d3) * d6 + (this.rand.nextDouble() - 0.5D) * (double)this.width * 2.0D;
-                double d8 = d4 + (this.posY - d4) * d6 + this.rand.nextDouble() * (double)this.height;
-                double d9 = d5 + (this.posZ - d5) * d6 + (this.rand.nextDouble() - 0.5D) * (double)this.width * 2.0D;
-                this.worldObj.spawnParticle("portal", d7, d8, d9, (double)f, (double)f1, (double)f2);
+                double d7 = d3 + (this.posX - d3) * d6 + (this.rand.nextDouble() - 0.5D) * this.width * 2.0D;
+                double d8 = d4 + (this.posY - d4) * d6 + this.rand.nextDouble() * this.height;
+                double d9 = d5 + (this.posZ - d5) * d6 + (this.rand.nextDouble() - 0.5D) * this.width * 2.0D;
+                this.worldObj.spawnParticle("portal", d7, d8, d9, f, f1, f2);
             }
 
             this.worldObj.playSoundEffect(d3, d4, d5, "mob.endermen.portal", 1.0F, 1.0F);
@@ -358,140 +483,27 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
     }
 
     /**
-     * Returns the sound this mob makes while it's alive.
+     * Teleport the enderman to another entity
      */
-    protected String getLivingSound()
+    protected boolean teleportToEntity(Entity par1Entity)
     {
-        return this.isScreaming() ? "mob.endermen.scream" : "mob.endermen.idle";
+        Vec3 vec3 = this.worldObj.getWorldVec3Pool().getVecFromPool(this.posX - par1Entity.posX, this.boundingBox.minY + this.height / 2.0F - par1Entity.posY + par1Entity.getEyeHeight(), this.posZ - par1Entity.posZ);
+        vec3 = vec3.normalize();
+        double d0 = 16.0D;
+        double d1 = this.posX + (this.rand.nextDouble() - 0.5D) * 8.0D - vec3.xCoord * d0;
+        double d2 = this.posY + (this.rand.nextInt(16) - 8) - vec3.yCoord * d0;
+        double d3 = this.posZ + (this.rand.nextDouble() - 0.5D) * 8.0D - vec3.zCoord * d0;
+        return this.teleportTo(d1, d2, d3);
     }
 
     /**
-     * Returns the sound this mob makes when it is hurt.
+     * (abstract) Protected helper method to write subclass entity data to NBT.
      */
-    protected String getHurtSound()
-    {
-        return "mob.endermen.hit";
-    }
-
-    /**
-     * Returns the sound this mob makes on death.
-     */
-    protected String getDeathSound()
-    {
-        return "mob.endermen.death";
-    }
-
-    /**
-     * Returns the item ID for the item the mob drops on death.
-     */
-    protected int getDropItemId()
-    {
-        return Item.enderPearl.itemID;
-    }
-
-    /**
-     * Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param
-     * par2 - Level of Looting used to kill this mob.
-     */
-    protected void dropFewItems(boolean par1, int par2)
-    {
-        int j = this.getDropItemId();
-
-        if (j > 0)
-        {
-            int k = this.rand.nextInt(2 + par2);
-
-            for (int l = 0; l < k; ++l)
-            {
-                this.dropItem(j, 1);
-            }
-        }
-    }
-
-    /**
-     * Set the id of the block an enderman carries
-     */
-    public void setCarried(int par1)
-    {
-        this.dataWatcher.updateObject(16, Byte.valueOf((byte)(par1 & 255)));
-    }
-
-    /**
-     * Get the id of the block an enderman carries
-     */
-    public int getCarried()
-    {
-        return this.dataWatcher.getWatchableObjectByte(16);
-    }
-
-    /**
-     * Set the metadata of the block an enderman carries
-     */
-    public void setCarryingData(int par1)
-    {
-        this.dataWatcher.updateObject(17, Byte.valueOf((byte)(par1 & 255)));
-    }
-
-    /**
-     * Get the metadata of the block an enderman carries
-     */
-    public int getCarryingData()
-    {
-        return this.dataWatcher.getWatchableObjectByte(17);
-    }
-
-    /**
-     * Called when the entity is attacked.
-     */
-    public boolean attackEntityFrom(DamageSource par1DamageSource, float par2)
-    {
-        if (this.isEntityInvulnerable())
-        {
-            return false;
-        }
-        else
-        {
-            this.setScreaming(true);
-
-            if (par1DamageSource instanceof EntityDamageSource && par1DamageSource.getEntity() instanceof EntityPlayer)
-            {
-                this.isAggressive = true;
-            }
-
-            if (par1DamageSource instanceof EntityDamageSourceIndirect)
-            {
-                this.isAggressive = false;
-
-                for (int i = 0; i < 64; ++i)
-                {
-                    if (this.teleportRandomly())
-                    {
-                        return true;
-                    }
-                }
-
-                return super.attackEntityFrom(par1DamageSource, par2);
-            }
-            else
-            {
-                return super.attackEntityFrom(par1DamageSource, par2);
-            }
-        }
-    }
-
-    public boolean isScreaming()
-    {
-        return this.dataWatcher.getWatchableObjectByte(18) > 0;
-    }
-
-    public void setScreaming(boolean par1)
-    {
-        this.dataWatcher.updateObject(18, Byte.valueOf((byte)(par1 ? 1 : 0)));
-    }
-
     @Override
-    public boolean canBreath()
+	public void writeEntityToNBT(NBTTagCompound par1NBTTagCompound)
     {
-        return true;
+        super.writeEntityToNBT(par1NBTTagCompound);
+        par1NBTTagCompound.setShort("carried", (short)this.getCarried());
+        par1NBTTagCompound.setShort("carriedData", (short)this.getCarryingData());
     }
 }

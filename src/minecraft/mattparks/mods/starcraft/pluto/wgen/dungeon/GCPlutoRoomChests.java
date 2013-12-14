@@ -69,12 +69,6 @@ public class GCPlutoRoomChests extends GCCoreDungeonRoom
     }
 
     @Override
-    protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
-    {
-        return new GCPlutoRoomChests(dungeon, x, y, z, dir);
-    }
-
-    @Override
     protected void handleTileEntities(Random rand)
     {
         for (final ChunkCoordinates chestCoords : this.chests)
@@ -87,5 +81,11 @@ public class GCPlutoRoomChests extends GCCoreDungeonRoom
                 WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
             }
         }
+    }
+
+    @Override
+    protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
+    {
+        return new GCPlutoRoomChests(dungeon, x, y, z, dir);
     }
 }

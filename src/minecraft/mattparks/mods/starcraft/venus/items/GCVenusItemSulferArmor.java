@@ -26,14 +26,6 @@ public class GCVenusItemSulferArmor extends ItemArmor
     }
 
     @Override
-    public Item setUnlocalizedName(String par1Str)
-    {
-        super.setTextureName(par1Str);
-        super.setUnlocalizedName(par1Str);
-        return this;
-    }
-
-    @Override
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
     {
         if (this.material == GCVenusItems.ARMORSULFER)
@@ -73,5 +65,13 @@ public class GCVenusItemSulferArmor extends ItemArmor
     public void registerIcons(IconRegister par1IconRegister)
     {
         this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "starcraftvenus:"));
+    }
+
+    @Override
+    public Item setUnlocalizedName(String par1Str)
+    {
+        super.setTextureName(par1Str);
+        super.setUnlocalizedName(par1Str);
+        return this;
     }
 }

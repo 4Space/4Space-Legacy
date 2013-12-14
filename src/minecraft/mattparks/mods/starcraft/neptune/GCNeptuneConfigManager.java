@@ -12,17 +12,10 @@ public class GCNeptuneConfigManager
 
     static Configuration configuration;
 
-    public GCNeptuneConfigManager(File file)
-    {
-        if (!GCNeptuneConfigManager.loaded)
-        {
-            GCNeptuneConfigManager.configuration = new Configuration(file);
-            this.setDefaultValues();
-        }
-    }
-
     // DIMENSIONS
     public static int dimensionIDNeptune;
+
+    public static boolean generateOtherMods;
 
     // BLOCKS
 
@@ -42,7 +35,14 @@ public class GCNeptuneConfigManager
 
     // GENERAL
   
-    public static boolean generateOtherMods;
+    public GCNeptuneConfigManager(File file)
+    {
+        if (!GCNeptuneConfigManager.loaded)
+        {
+            GCNeptuneConfigManager.configuration = new Configuration(file);
+            this.setDefaultValues();
+        }
+    }
 
     private void setDefaultValues()
     {

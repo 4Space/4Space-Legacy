@@ -21,23 +21,22 @@ public class SCCoreItemGemPickaxe extends ItemPickaxe
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public EnumRarity getRarity(ItemStack par1ItemStack)
-    {
-        return ClientProxyCore.galacticraftItem;
-    }
-
-    @Override
     public CreativeTabs getCreativeTab()
     {
         return GCPluto.starcraftPlutoTab;
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister par1IconRegister)
+    public int getMetadata(int par1)
     {
-        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "starcraftpluto:"));
+        return par1;
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public EnumRarity getRarity(ItemStack par1ItemStack)
+    {
+        return ClientProxyCore.galacticraftItem;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -48,8 +47,9 @@ public class SCCoreItemGemPickaxe extends ItemPickaxe
     }
 
     @Override
-    public int getMetadata(int par1)
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister)
     {
-        return par1;
+        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "starcraftpluto:"));
     }
 }

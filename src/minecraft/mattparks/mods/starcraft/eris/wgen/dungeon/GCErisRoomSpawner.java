@@ -13,9 +13,22 @@ import net.minecraftforge.common.ForgeDirection;
 
 public class GCErisRoomSpawner extends GCCoreDungeonRoom
 {
+    private static String getMob(Random rand)
+    {
+        switch (rand.nextInt(2))
+        {
+        case 0:
+            return "Evolved Spider";
+        case 1:
+            return "Evolved Skeleton";
+        default:
+            return "Evolved Zombie";
+        }
+    }
     int sizeX;
     int sizeY;
     int sizeZ;
+
     Random rand;
 
     private final ArrayList<ChunkCoordinates> spawners = new ArrayList<ChunkCoordinates>();
@@ -73,12 +86,6 @@ public class GCErisRoomSpawner extends GCCoreDungeonRoom
     }
 
     @Override
-    protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
-    {
-        return new GCErisRoomSpawner(dungeon, x, y, z, dir);
-    }
-
-    @Override
     protected void handleTileEntities(Random rand)
     {
         for (final ChunkCoordinates spawnerCoords : this.spawners)
@@ -91,16 +98,9 @@ public class GCErisRoomSpawner extends GCCoreDungeonRoom
         }
     }
 
-    private static String getMob(Random rand)
+    @Override
+    protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
     {
-        switch (rand.nextInt(2))
-        {
-        case 0:
-            return "Evolved Spider";
-        case 1:
-            return "Evolved Skeleton";
-        default:
-            return "Evolved Zombie";
-        }
+        return new GCErisRoomSpawner(dungeon, x, y, z, dir);
     }
 }

@@ -38,7 +38,17 @@ public class GCVenusEntityFlameling extends EntityMob implements IEntityBreathab
     }
 
     @Override
-    public boolean isAIEnabled()
+    protected void attackEntity(Entity par1Entity, float par2)
+    {
+        if (this.attackTime <= 0 && par2 < 1.2F && par1Entity.boundingBox.maxY > this.boundingBox.minY && par1Entity.boundingBox.minY < this.boundingBox.maxY)
+        {
+            this.attackTime = 20;
+            par1Entity.attackEntityFrom(DamageSource.causeMobDamage(this), par2);
+        }
+    }
+
+    @Override
+    public boolean canBreath()
     {
         return true;
     }
@@ -57,21 +67,17 @@ public class GCVenusEntityFlameling extends EntityMob implements IEntityBreathab
     }
 
     @Override
-    protected String getLivingSound()
+    public boolean getCanSpawnHere()
     {
-        return "mob.silverfish.say";
-    }
-
-    @Override
-    protected String getHurtSound()
-    {
-        return "mob.silverfish.hit";
-    }
-
-    @Override
-    protected String getDeathSound()
-    {
-        return "mob.silverfish.kill";
+        if (super.getCanSpawnHere())
+        {
+            EntityPlayer var1 = this.worldObj.getClosestPlayerToEntity(this, 5.0D);
+            return var1 == null;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public EntityPlayer getClosestEntityToAttack(double par1, double par3, double par5, double par7)
@@ -95,25 +101,45 @@ public class GCVenusEntityFlameling extends EntityMob implements IEntityBreathab
     }
 
     @Override
-    protected void attackEntity(Entity par1Entity, float par2)
+    public EnumCreatureAttribute getCreatureAttribute()
     {
-        if (this.attackTime <= 0 && par2 < 1.2F && par1Entity.boundingBox.maxY > this.boundingBox.minY && par1Entity.boundingBox.minY < this.boundingBox.maxY)
-        {
-            this.attackTime = 20;
-            par1Entity.attackEntityFrom(DamageSource.causeMobDamage(this), par2);
-        }
+        return EnumCreatureAttribute.ARTHROPOD;
     }
 
     @Override
-    protected void playStepSound(int par1, int par2, int par3, int par4)
+    protected String getDeathSound()
     {
-        this.worldObj.playSoundAtEntity(this, "mob.silverfish.step", 1.0F, 1.0F);
+        return "mob.silverfish.kill";
     }
 
     @Override
     protected int getDropItemId()
     {
         return 0;
+    }
+
+    @Override
+    protected String getHurtSound()
+    {
+        return "mob.silverfish.hit";
+    }
+
+    @Override
+    protected String getLivingSound()
+    {
+        return "mob.silverfish.say";
+    }
+
+    @Override
+    public boolean isAIEnabled()
+    {
+        return true;
+    }
+
+    @Override
+    protected boolean isValidLightLevel()
+    {
+        return true;
     }
 
     @Override
@@ -124,34 +150,8 @@ public class GCVenusEntityFlameling extends EntityMob implements IEntityBreathab
     }
 
     @Override
-    protected boolean isValidLightLevel()
+    protected void playStepSound(int par1, int par2, int par3, int par4)
     {
-        return true;
-    }
-
-    @Override
-    public boolean getCanSpawnHere()
-    {
-        if (super.getCanSpawnHere())
-        {
-            EntityPlayer var1 = this.worldObj.getClosestPlayerToEntity(this, 5.0D);
-            return var1 == null;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    @Override
-    public EnumCreatureAttribute getCreatureAttribute()
-    {
-        return EnumCreatureAttribute.ARTHROPOD;
-    }
-
-    @Override
-    public boolean canBreath()
-    {
-        return true;
+        this.worldObj.playSoundAtEntity(this, "mob.silverfish.step", 1.0F, 1.0F);
     }
 }

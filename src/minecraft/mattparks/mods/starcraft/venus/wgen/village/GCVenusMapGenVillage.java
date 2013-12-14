@@ -87,15 +87,15 @@ public class GCVenusMapGenVillage extends MapGenStructure
     }
 
     @Override
+    public String func_143025_a()
+    {
+        return "VenusVillage";
+    }
+
+    @Override
     protected StructureStart getStructureStart(int par1, int par2)
     {
         FMLLog.info("Generating Venus Village at x" + par1 * 16 + " z" + par2 * 16);
         return new GCVenusStructureVillageStart(this.worldObj, this.rand, par1, par2, this.terrainType);
-    }
-
-    @Override
-    public String func_143025_a()
-    {
-        return "VenusVillage";
     }
 }

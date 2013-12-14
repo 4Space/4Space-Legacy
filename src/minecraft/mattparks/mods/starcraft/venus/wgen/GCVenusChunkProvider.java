@@ -95,6 +95,23 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
         this.noiseGen4 = new Gradient(this.rand.nextLong(), 1, 0.25);
     }
 
+    @Override
+    public boolean canSave()
+    {
+        return true;
+    }
+
+    @Override
+    public boolean chunkExists(int par1, int par2)
+    {
+        return true;
+    }
+
+    public void decoratePlanet(World par1World, Random par2Random, int par3, int par4)
+    {
+        this.biomedecoratorplanet.decorate(par1World, par2Random, par3, par4);
+    }
+
     public void generateTerrain(int chunkX, int chunkZ, short[] idArray, byte[] metaArray)
     {
         this.noiseGen1.frequency = 0.0125;
@@ -135,6 +152,108 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
                     }
                 }
             }
+        }
+    }
+
+    private int getIndex(int x, int y, int z)
+    {
+        return y << 8 | z << 4 | x;
+    }
+
+    @Override
+    public int getLoadedChunkCount()
+    {
+        return 0;
+    }
+
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    @Override
+    public List getPossibleCreatures(EnumCreatureType par1EnumCreatureType, int i, int j, int k)
+    {
+        if (par1EnumCreatureType == EnumCreatureType.monster)
+        {
+            final List monsters = new ArrayList();
+            monsters.add(new SpawnListEntry(GCCoreEntityZombie.class, 8, 2, 3));
+            monsters.add(new SpawnListEntry(GCCoreEntitySpider.class, 8, 2, 3));
+            monsters.add(new SpawnListEntry(GCVenusEntityEvolvedBlaze.class, 8, 2, 3));
+            monsters.add(new SpawnListEntry(GCCoreEntitySkeleton.class, 8, 2, 3));
+            monsters.add(new SpawnListEntry(GCCoreEntityCreeper.class, 8, 2, 3));
+            return monsters;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    @Override
+    public String makeString()
+    {
+        return GCVenusConfigManager.generateOtherMods ? "RandomLevelSource" : "VenusLevelSource";
+    }
+
+    @Override
+    public void populate(IChunkProvider par1IChunkProvider, int par2, int par3)
+    {
+        BlockSand.fallInstantly = true;
+        final int var4 = par2 * 16;
+        final int var5 = par3 * 16;
+        this.worldObj.getBiomeGenForCoords(var4 + 16, var5 + 16);
+        this.rand.setSeed(this.worldObj.getSeed());
+        final long var7 = this.rand.nextLong() / 2L * 2L + 1L;
+        final long var9 = this.rand.nextLong() / 2L * 2L + 1L;
+        this.rand.setSeed(par2 * var7 + par3 * var9 ^ this.worldObj.getSeed());
+
+        this.decoratePlanet(this.worldObj, this.rand, var4, var5);
+        
+        this.dungeonGenerator.handleTileEntities(this.rand);
+
+        if (!GCVenusConfigManager.disableVenusVillageGen)
+        {
+            this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, par2, par3);
+        }
+   
+        BlockSand.fallInstantly = false;
+    }
+
+    @Override
+    public Chunk provideChunk(int par1, int par2)
+    {
+        this.rand.setSeed(par1 * 341873128712L + par2 * 132897987541L);
+        final short[] ids = new short[32768 * 2];
+        final byte[] meta = new byte[32768 * 2];
+        this.generateTerrain(par1, par2, ids, meta);
+        this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
+        this.replaceBlocksForBiome(par1, par2, ids, meta, this.biomesForGeneration);
+        this.caveGenerator.generate(this, this.worldObj, par1, par2, ids, meta);
+        this.dungeonGenerator.generateUsingArrays(this.worldObj, this.worldObj.getSeed(), par1 * 16, 25, par2 * 16, par1, par2, ids, meta);
+
+        final Chunk var4 = new Chunk(this.worldObj, ids, meta, par1, par2);
+
+         if (!var4.isTerrainPopulated &&
+         GCVenusConfigManager.generateOtherMods)
+         {
+         var4.isTerrainPopulated = true;
+         }
+
+        var4.generateSkylightMap();
+        return var4;
+    }
+
+    private double randFromPoint(int x, int z)
+    {
+        int n;
+        n = x + z * 57;
+        n = n << 13 ^ n;
+        return 1.0 - (n * (n * n * 15731 + 789221) + 1376312589 & 0x7fffffff) / 1073741824.0;
+    }
+
+    @Override
+    public void recreateStructures(int par1, int par2)
+    {
+        if (!GCVenusConfigManager.disableVenusVillageGen)
+        {
+            this.villageGenerator.generate(this, this.worldObj, par1, par2, (byte[]) null);
         }
     }
 
@@ -216,31 +335,7 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
     }
 
     @Override
-    public Chunk provideChunk(int par1, int par2)
-    {
-        this.rand.setSeed(par1 * 341873128712L + par2 * 132897987541L);
-        final short[] ids = new short[32768 * 2];
-        final byte[] meta = new byte[32768 * 2];
-        this.generateTerrain(par1, par2, ids, meta);
-        this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
-        this.replaceBlocksForBiome(par1, par2, ids, meta, this.biomesForGeneration);
-        this.caveGenerator.generate(this, this.worldObj, par1, par2, ids, meta);
-        this.dungeonGenerator.generateUsingArrays(this.worldObj, this.worldObj.getSeed(), par1 * 16, 25, par2 * 16, par1, par2, ids, meta);
-
-        final Chunk var4 = new Chunk(this.worldObj, ids, meta, par1, par2);
-
-         if (!var4.isTerrainPopulated &&
-         GCVenusConfigManager.generateOtherMods)
-         {
-         var4.isTerrainPopulated = true;
-         }
-
-        var4.generateSkylightMap();
-        return var4;
-    }
-
-    @Override
-    public boolean chunkExists(int par1, int par2)
+    public boolean saveChunks(boolean par1, IProgressUpdate par2IProgressUpdate)
     {
         return true;
     }
@@ -249,100 +344,5 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
     public boolean unloadQueuedChunks()
     {
         return false;
-    }
-
-    @Override
-    public int getLoadedChunkCount()
-    {
-        return 0;
-    }
-
-    private int getIndex(int x, int y, int z)
-    {
-        return y << 8 | z << 4 | x;
-    }
-
-    private double randFromPoint(int x, int z)
-    {
-        int n;
-        n = x + z * 57;
-        n = n << 13 ^ n;
-        return 1.0 - (n * (n * n * 15731 + 789221) + 1376312589 & 0x7fffffff) / 1073741824.0;
-    }
-
-    public void decoratePlanet(World par1World, Random par2Random, int par3, int par4)
-    {
-        this.biomedecoratorplanet.decorate(par1World, par2Random, par3, par4);
-    }
-
-    @Override
-    public void populate(IChunkProvider par1IChunkProvider, int par2, int par3)
-    {
-        BlockSand.fallInstantly = true;
-        final int var4 = par2 * 16;
-        final int var5 = par3 * 16;
-        this.worldObj.getBiomeGenForCoords(var4 + 16, var5 + 16);
-        this.rand.setSeed(this.worldObj.getSeed());
-        final long var7 = this.rand.nextLong() / 2L * 2L + 1L;
-        final long var9 = this.rand.nextLong() / 2L * 2L + 1L;
-        this.rand.setSeed(par2 * var7 + par3 * var9 ^ this.worldObj.getSeed());
-
-        this.decoratePlanet(this.worldObj, this.rand, var4, var5);
-        
-        this.dungeonGenerator.handleTileEntities(this.rand);
-
-        if (!GCVenusConfigManager.disableVenusVillageGen)
-        {
-            this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, par2, par3);
-        }
-   
-        BlockSand.fallInstantly = false;
-    }
-
-    @Override
-    public boolean saveChunks(boolean par1, IProgressUpdate par2IProgressUpdate)
-    {
-        return true;
-    }
-
-    @Override
-    public boolean canSave()
-    {
-        return true;
-    }
-
-    @Override
-    public String makeString()
-    {
-        return GCVenusConfigManager.generateOtherMods ? "RandomLevelSource" : "VenusLevelSource";
-    }
-
-    @SuppressWarnings({ "unchecked", "rawtypes" })
-    @Override
-    public List getPossibleCreatures(EnumCreatureType par1EnumCreatureType, int i, int j, int k)
-    {
-        if (par1EnumCreatureType == EnumCreatureType.monster)
-        {
-            final List monsters = new ArrayList();
-            monsters.add(new SpawnListEntry(GCCoreEntityZombie.class, 8, 2, 3));
-            monsters.add(new SpawnListEntry(GCCoreEntitySpider.class, 8, 2, 3));
-            monsters.add(new SpawnListEntry(GCVenusEntityEvolvedBlaze.class, 8, 2, 3));
-            monsters.add(new SpawnListEntry(GCCoreEntitySkeleton.class, 8, 2, 3));
-            monsters.add(new SpawnListEntry(GCCoreEntityCreeper.class, 8, 2, 3));
-            return monsters;
-        }
-        else
-        {
-            return null;
-        }
-    }
-
-    @Override
-    public void recreateStructures(int par1, int par2)
-    {
-        if (!GCVenusConfigManager.disableVenusVillageGen)
-        {
-            this.villageGenerator.generate(this, this.worldObj, par1, par2, (byte[]) null);
-        }
     }
 }

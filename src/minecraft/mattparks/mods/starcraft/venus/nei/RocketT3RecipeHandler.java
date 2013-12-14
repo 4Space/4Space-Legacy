@@ -18,23 +18,37 @@ import codechicken.nei.recipe.TemplateRecipeHandler;
 
 public class RocketT3RecipeHandler extends TemplateRecipeHandler
 {
+    public class CachedRocketRecipe extends TemplateRecipeHandler.CachedRecipe
+    {
+        public ArrayList<PositionedStack> input;
+        public PositionedStack output;
+
+        public CachedRocketRecipe(ArrayList<PositionedStack> pstack1, PositionedStack pstack2)
+        {
+            super();
+            this.input = pstack1;
+            this.output = pstack2;
+        }
+
+        public CachedRocketRecipe(Map.Entry<ArrayList<PositionedStack>, PositionedStack> recipe)
+        {
+            this(recipe.getKey(), recipe.getValue());
+        }
+
+        @Override
+        public ArrayList<PositionedStack> getIngredients()
+        {
+            return this.input;
+        }
+
+        @Override
+        public PositionedStack getResult()
+        {
+            return this.output;
+        }
+    }
+
     private static final ResourceLocation rocketGuiTexture = new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/gui/schematic_rocket_T3.png");
-
-    public String getRecipeId()
-    {
-        return "galacticraft.rocketT3";
-    }
-
-    @Override
-    public int recipiesPerPage()
-    {
-        return 1;
-    }
-
-    public Set<Entry<ArrayList<PositionedStack>, PositionedStack>> getRecipes()
-    {
-        return NEIVenusConfig.getRocketBenchRecipes();
-    }
 
     @Override
     public void drawBackground(int i)
@@ -50,14 +64,37 @@ public class RocketT3RecipeHandler extends TemplateRecipeHandler
     }
 
     @Override
-    public void onUpdate()
+    public String getGuiTexture()
     {
-        super.onUpdate();
+        return "/mods/galacticraftmars/textures/gui/schematic_rocket_T3.png";
+    }
+
+    public String getRecipeId()
+    {
+        return "galacticraft.rocketT3";
     }
 
     @Override
-    public void loadTransferRects()
+    public String getRecipeName()
     {
+        return "NASA Workbench";
+    }
+
+    public Set<Entry<ArrayList<PositionedStack>, PositionedStack>> getRecipes()
+    {
+        return NEIVenusConfig.getRocketBenchRecipes();
+    }
+
+    @Override
+    public void loadCraftingRecipes(ItemStack result)
+    {
+        for (final Map.Entry<ArrayList<PositionedStack>, PositionedStack> irecipe : this.getRecipes())
+        {
+            if (NEIServerUtils.areStacksSameTypeCrafting(irecipe.getValue().item, result))
+            {
+                this.arecipes.add(new CachedRocketRecipe(irecipe));
+            }
+        }
     }
 
     @Override
@@ -77,15 +114,8 @@ public class RocketT3RecipeHandler extends TemplateRecipeHandler
     }
 
     @Override
-    public void loadCraftingRecipes(ItemStack result)
+    public void loadTransferRects()
     {
-        for (final Map.Entry<ArrayList<PositionedStack>, PositionedStack> irecipe : this.getRecipes())
-        {
-            if (NEIServerUtils.areStacksSameTypeCrafting(irecipe.getValue().item, result))
-            {
-                this.arecipes.add(new CachedRocketRecipe(irecipe));
-            }
-        }
     }
 
     @Override
@@ -104,45 +134,15 @@ public class RocketT3RecipeHandler extends TemplateRecipeHandler
         }
     }
 
-    public class CachedRocketRecipe extends TemplateRecipeHandler.CachedRecipe
+    @Override
+    public void onUpdate()
     {
-        public ArrayList<PositionedStack> input;
-        public PositionedStack output;
-
-        @Override
-        public ArrayList<PositionedStack> getIngredients()
-        {
-            return this.input;
-        }
-
-        @Override
-        public PositionedStack getResult()
-        {
-            return this.output;
-        }
-
-        public CachedRocketRecipe(ArrayList<PositionedStack> pstack1, PositionedStack pstack2)
-        {
-            super();
-            this.input = pstack1;
-            this.output = pstack2;
-        }
-
-        public CachedRocketRecipe(Map.Entry<ArrayList<PositionedStack>, PositionedStack> recipe)
-        {
-            this(recipe.getKey(), recipe.getValue());
-        }
+        super.onUpdate();
     }
 
     @Override
-    public String getRecipeName()
+    public int recipiesPerPage()
     {
-        return "NASA Workbench";
-    }
-
-    @Override
-    public String getGuiTexture()
-    {
-        return "/mods/galacticraftmars/textures/gui/schematic_rocket_T3.png";
+        return 1;
     }
 }

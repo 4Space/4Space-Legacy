@@ -9,15 +9,15 @@ public class GCErisSlotRenderer implements ICelestialBodyRenderer
 {
 
     @Override
-    public ResourceLocation getPlanetSprite()
-    {
-        return new ResourceLocation(GCEris.ASSET_DOMAIN, "textures/gui/planets/eris.png");
-    }
-
-    @Override
     public String getPlanetName()
     {
         return "Eris";
+    }
+
+    @Override
+    public ResourceLocation getPlanetSprite()
+    {
+        return new ResourceLocation(GCEris.ASSET_DOMAIN, "textures/gui/planets/eris.png");
     }
 
     @Override

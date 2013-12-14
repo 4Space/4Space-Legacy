@@ -18,10 +18,77 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class GCUranusWorldProvider extends WorldProvider implements IGalacticraftWorldProvider, ISolarLevel
 {
     @Override
-    public void setDimension(int var1)
+    public float[] calcSunriseSunsetColors(float var1, float var2)
     {
-        this.dimensionId = var1;
-        super.setDimension(var1);
+        return null;
+    }
+
+    @Override
+    public float calculateCelestialAngle(long par1, float par3)
+    {
+        return super.calculateCelestialAngle(par1, par3);
+    }
+
+    public float calculateDeimosAngle(long par1, float par3)
+    {
+        return this.calculatePhobosAngle(par1, par3) * 0.0000000001F;
+    }
+
+    public float calculatePhobosAngle(long par1, float par3)
+    {
+        return this.calculateCelestialAngle(par1, par3) * 3000;
+    }
+    
+    // This code adds a filter to your vision making blocks look slightly tinted (e.g with a blue filter stone would appear slightly blue) It uses RGB color where the 225Fs are ignore the 0Fs
+
+    @Override
+    public boolean canBlockFreeze(int x, int y, int z, boolean byWater)
+    {
+        return false;
+    }
+
+// This code changes the sky color and adds a fog to it. Change the 0s in the .getVecFromPool to an RGB code. I find darker colors work better
+
+    @Override
+    public boolean canCoordinateBeSpawn(int var1, int var2)
+    {
+        return true;
+    }
+
+    @Override
+    public boolean canDoLightning(Chunk chunk)
+    {
+        return false;
+    }
+
+    @Override
+    public boolean canDoRainSnowIce(Chunk chunk)
+    {
+        return false;
+    }
+
+    @Override
+    public boolean canRespawnHere()
+    {
+        return !GCCoreConfigManager.forceOverworldRespawn;
+    }
+
+    @Override
+    public boolean canSnowAt(int x, int y, int z)
+    {
+        return false;
+    }
+
+    @Override
+    public boolean canSpaceshipTierPass(int tier)
+    {
+        return tier >= 4;
+    }
+
+    @Override
+    public IChunkProvider createChunkGenerator()
+    {
+        return new GCUranusChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
     }
 
     @Override
@@ -37,18 +104,28 @@ public class GCUranusWorldProvider extends WorldProvider implements IGalacticraf
     }
 
     @Override
-    public float[] calcSunriseSunsetColors(float var1, float var2)
+    public int getAverageGroundLevel()
     {
-        return null;
+        return 44;
     }
 
     @Override
-    public void registerWorldChunkManager()
+    public String getDepartMessage()
     {
-        this.worldChunkMgr = new GCUranusWorldChunkManager();
+        return "Leaving Uranus";
     }
-    
-    // This code adds a filter to your vision making blocks look slightly tinted (e.g with a blue filter stone would appear slightly blue) It uses RGB color where the 225Fs are ignore the 0Fs
+
+    @Override
+    public String getDimensionName()
+    {
+        return "Uranus";
+    }
+
+    @Override
+    public float getFallDamageModifier()
+    {
+        return 0.38F;
+    }
 
     @SideOnly(Side.CLIENT)
     @Override
@@ -57,12 +134,58 @@ public class GCUranusWorldProvider extends WorldProvider implements IGalacticraf
         return this.worldObj.getWorldVec3Pool().getVecFromPool((double) 0F / 255F, (double) 0F / 255F, (double) 0F / 255F);
     }
 
-// This code changes the sky color and adds a fog to it. Change the 0s in the .getVecFromPool to an RGB code. I find darker colors work better
+    @Override
+    public double getFuelUsageMultiplier()
+    {
+        return 0.9D;
+    }
+
+    @Override
+    public float getGravity()
+    {
+        return 0.058F;
+    }
+
+    @Override
+    public int getHeight()
+    {
+        return 800;
+    }
+
+    @Override
+    public double getHorizon()
+    {
+        return 44.0D;
+    }
+
+    @Override
+    public double getMeteorFrequency()
+    {
+        return 10.0D;
+    }
+
+    @Override
+    public String getSaveFolder()
+    {
+        return "DIM" + GCUranusConfigManager.dimensionIDUranus;
+    }
 
     @Override
     public Vec3 getSkyColor(Entity cameraEntity, float partialTicks)
     {
         return this.worldObj.getWorldVec3Pool().getVecFromPool(0, 0, 0);
+    }
+
+    @Override
+    public double getSolarEnergyMultiplier()
+    {
+        return 2.5D;
+    }
+
+    @Override
+    public float getSoundVolReductionAmount()
+    {
+        return 10.0F;
     }
 
     @Override
@@ -86,34 +209,9 @@ public class GCUranusWorldProvider extends WorldProvider implements IGalacticraf
     }
 
     @Override
-    public float calculateCelestialAngle(long par1, float par3)
+    public String getWelcomeMessage()
     {
-        return super.calculateCelestialAngle(par1, par3);
-    }
-
-    public float calculatePhobosAngle(long par1, float par3)
-    {
-        return this.calculateCelestialAngle(par1, par3) * 3000;
-    }
-
-    public float calculateDeimosAngle(long par1, float par3)
-    {
-        return this.calculatePhobosAngle(par1, par3) * 0.0000000001F;
-    }
-
-    @Override
-    public IChunkProvider createChunkGenerator()
-    {
-        return new GCUranusChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
-    }
-
-    @Override
-    public void updateWeather()
-    {
-        this.worldObj.getWorldInfo().setRainTime(0);
-        this.worldObj.getWorldInfo().setRaining(false);
-        this.worldObj.getWorldInfo().setThunderTime(0);
-        this.worldObj.getWorldInfo().setThundering(false);
+        return "Entering Uranus";
     }
 
     @Override
@@ -123,128 +221,30 @@ public class GCUranusWorldProvider extends WorldProvider implements IGalacticraf
     }
 
     @Override
-    public double getHorizon()
-    {
-        return 44.0D;
-    }
-
-    @Override
-    public int getAverageGroundLevel()
-    {
-        return 44;
-    }
-
-    @Override
     public boolean isSurfaceWorld()
     {
         return true;
     }
 
     @Override
-    public boolean canCoordinateBeSpawn(int var1, int var2)
+    public void registerWorldChunkManager()
     {
-        return true;
+        this.worldChunkMgr = new GCUranusWorldChunkManager();
     }
 
     @Override
-    public boolean canRespawnHere()
+    public void setDimension(int var1)
     {
-        return !GCCoreConfigManager.forceOverworldRespawn;
+        this.dimensionId = var1;
+        super.setDimension(var1);
     }
 
     @Override
-    public String getSaveFolder()
+    public void updateWeather()
     {
-        return "DIM" + GCUranusConfigManager.dimensionIDUranus;
-    }
-
-    @Override
-    public String getWelcomeMessage()
-    {
-        return "Entering Uranus";
-    }
-
-    @Override
-    public String getDepartMessage()
-    {
-        return "Leaving Uranus";
-    }
-
-    @Override
-    public String getDimensionName()
-    {
-        return "Uranus";
-    }
-
-    @Override
-    public boolean canSnowAt(int x, int y, int z)
-    {
-        return false;
-    }
-
-    @Override
-    public boolean canBlockFreeze(int x, int y, int z, boolean byWater)
-    {
-        return false;
-    }
-
-    @Override
-    public boolean canDoLightning(Chunk chunk)
-    {
-        return false;
-    }
-
-    @Override
-    public boolean canDoRainSnowIce(Chunk chunk)
-    {
-        return false;
-    }
-
-    @Override
-    public float getGravity()
-    {
-        return 0.058F;
-    }
-
-    @Override
-    public int getHeight()
-    {
-        return 800;
-    }
-
-    @Override
-    public double getMeteorFrequency()
-    {
-        return 10.0D;
-    }
-
-    @Override
-    public double getFuelUsageMultiplier()
-    {
-        return 0.9D;
-    }
-
-    @Override
-    public double getSolarEnergyMultiplier()
-    {
-        return 2.5D;
-    }
-
-    @Override
-    public boolean canSpaceshipTierPass(int tier)
-    {
-        return tier >= 4;
-    }
-
-    @Override
-    public float getFallDamageModifier()
-    {
-        return 0.38F;
-    }
-
-    @Override
-    public float getSoundVolReductionAmount()
-    {
-        return 10.0F;
+        this.worldObj.getWorldInfo().setRainTime(0);
+        this.worldObj.getWorldInfo().setRaining(false);
+        this.worldObj.getWorldInfo().setThunderTime(0);
+        this.worldObj.getWorldInfo().setThundering(false);
     }
 }

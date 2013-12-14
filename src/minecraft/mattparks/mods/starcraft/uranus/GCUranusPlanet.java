@@ -13,27 +13,9 @@ public class GCUranusPlanet implements IPlanet
     private final IMapObject Uranus = new GCUranusMapPlanet();
 
     @Override
-    public String getName()
-    {
-        return "Uranus";
-    }
-
-    @Override
-    public boolean isReachable()
+    public boolean addToList()
     {
         return false;
-    }
-
-    @Override
-    public IGalaxy getParentGalaxy()
-    {
-        return GalacticraftCore.galaxyMilkyWay;
-    }
-
-    @Override
-    public IMapObject getMapObject()
-    {
-        return this.Uranus;
     }
 
     @Override
@@ -43,9 +25,27 @@ public class GCUranusPlanet implements IPlanet
     }
 
     @Override
-    public boolean addToList()
+    public int getDimensionID()
     {
-        return false;
+        return GCUranusConfigManager.dimensionIDUranus;
+    }
+
+    @Override
+    public IMapObject getMapObject()
+    {
+        return this.Uranus;
+    }
+
+    @Override
+    public String getName()
+    {
+        return "Uranus";
+    }
+
+    @Override
+    public IGalaxy getParentGalaxy()
+    {
+        return GalacticraftCore.galaxyMilkyWay;
     }
 
     @Override
@@ -55,8 +55,8 @@ public class GCUranusPlanet implements IPlanet
     }
 
     @Override
-    public int getDimensionID()
+    public boolean isReachable()
     {
-        return GCUranusConfigManager.dimensionIDUranus;
+        return false;
     }
 }

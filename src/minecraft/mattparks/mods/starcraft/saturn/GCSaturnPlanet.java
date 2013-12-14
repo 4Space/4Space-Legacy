@@ -13,27 +13,9 @@ public class GCSaturnPlanet implements IPlanet
     private final IMapObject Saturn = new GCSaturnMapPlanet();
 
     @Override
-    public String getName()
-    {
-        return "Saturn";
-    }
-
-    @Override
-    public boolean isReachable()
+    public boolean addToList()
     {
         return false;
-    }
-
-    @Override
-    public IGalaxy getParentGalaxy()
-    {
-        return GalacticraftCore.galaxyMilkyWay;
-    }
-
-    @Override
-    public IMapObject getMapObject()
-    {
-        return this.Saturn;
     }
 
     @Override
@@ -43,9 +25,27 @@ public class GCSaturnPlanet implements IPlanet
     }
 
     @Override
-    public boolean addToList()
+    public int getDimensionID()
     {
-        return false;
+        return GCSaturnConfigManager.dimensionIDSaturn;
+    }
+
+    @Override
+    public IMapObject getMapObject()
+    {
+        return this.Saturn;
+    }
+
+    @Override
+    public String getName()
+    {
+        return "Saturn";
+    }
+
+    @Override
+    public IGalaxy getParentGalaxy()
+    {
+        return GalacticraftCore.galaxyMilkyWay;
     }
 
     @Override
@@ -55,8 +55,8 @@ public class GCSaturnPlanet implements IPlanet
     }
 
     @Override
-    public int getDimensionID()
+    public boolean isReachable()
     {
-        return GCSaturnConfigManager.dimensionIDSaturn;
+        return false;
     }
 }

@@ -114,12 +114,6 @@ public class StarcraftEris
         public static CommonProxy proxy;
         
         @EventHandler
-        public void preInit(FMLPreInitializationEvent event) 
-        {
-        	;
-        }
-        
-        @EventHandler
         public void load(FMLInitializationEvent event) 
         {
                 GameRegistry.registerBlock(StarcraftEris.ErisGrass, "ErisGrass");
@@ -137,6 +131,12 @@ public class StarcraftEris
         
         @EventHandler
         public void postInit(FMLPostInitializationEvent event) 
+        {
+        	;
+        }
+        
+        @EventHandler
+        public void preInit(FMLPreInitializationEvent event) 
         {
         	;
         }

@@ -19,16 +19,16 @@ public class SCCoreItemGemSpade extends ItemSpade
     }
 
     @Override
+    public CreativeTabs getCreativeTab()
+    {
+        return GCVenus.starcraftVenusTab;
+    }
+
+    @Override
     @SideOnly(Side.CLIENT)
     public EnumRarity getRarity(ItemStack par1ItemStack)
     {
         return ClientProxyCore.galacticraftItem;
-    }
-
-    @Override
-    public CreativeTabs getCreativeTab()
-    {
-        return GCVenus.starcraftVenusTab;
     }
 
     @Override

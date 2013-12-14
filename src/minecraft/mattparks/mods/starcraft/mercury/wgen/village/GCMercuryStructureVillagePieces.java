@@ -11,26 +11,6 @@ import net.minecraft.world.gen.structure.StructureComponent;
 
 public class GCMercuryStructureVillagePieces
 {
-    public static ArrayList<GCMercuryStructureVillagePieceWeight> getStructureVillageWeightedPieceList(Random par0Random, int par1)
-    {
-        final ArrayList<GCMercuryStructureVillagePieceWeight> var2 = new ArrayList<GCMercuryStructureVillagePieceWeight>();
-        var2.add(new GCMercuryStructureVillagePieceWeight(GCMercuryComponentVillageWoodHut.class, 5, MathHelper.getRandomIntegerInRange(par0Random, 2 + par1, 5 + par1 * 3)));
-        var2.add(new GCMercuryStructureVillagePieceWeight(GCMercuryComponentVillageField.class, 5, MathHelper.getRandomIntegerInRange(par0Random, 3 + par1, 5 + par1)));
-        var2.add(new GCMercuryStructureVillagePieceWeight(GCMercuryComponentVillageHouse.class, 5, MathHelper.getRandomIntegerInRange(par0Random, 3 + par1, 4 + par1 * 2)));
-
-        final Iterator<GCMercuryStructureVillagePieceWeight> var3 = var2.iterator();
-
-        while (var3.hasNext())
-        {
-            if (var3.next().villagePiecesLimit == 0)
-            {
-                var3.remove();
-            }
-        }
-
-        return var2;
-    }
-
     private static int func_75079_a(List<GCMercuryStructureVillagePieceWeight> par0List)
     {
         boolean var1 = false;
@@ -69,6 +49,46 @@ public class GCMercuryStructureVillagePieces
         }
 
         return (GCMercuryComponentVillage) var10;
+    }
+
+    private static StructureComponent getNextComponentVillagePath(GCMercuryComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7)
+    {
+        if (par7 > 3 + par0ComponentVillageStartPiece.terrainType)
+        {
+            return null;
+        }
+        else if (Math.abs(par3 - par0ComponentVillageStartPiece.getBoundingBox().minX) <= 112 && Math.abs(par5 - par0ComponentVillageStartPiece.getBoundingBox().minZ) <= 112)
+        {
+            final StructureBoundingBox var8 = GCMercuryComponentVillagePathGen.func_74933_a(par0ComponentVillageStartPiece, par1List, par2Random, par3, par4, par5, par6);
+
+            if (var8 != null && var8.minY > 10)
+            {
+                final GCMercuryComponentVillagePathGen var9 = new GCMercuryComponentVillagePathGen(par0ComponentVillageStartPiece, par7, par2Random, var8, par6);
+
+                par1List.add(var9);
+                par0ComponentVillageStartPiece.field_74930_j.add(var9);
+                return var9;
+            }
+
+            return null;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    /**
+     * attempts to find a next Structure Component to be spawned
+     */
+    static StructureComponent getNextStructureComponent(GCMercuryComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7)
+    {
+        return GCMercuryStructureVillagePieces.getNextVillageStructureComponent(par0ComponentVillageStartPiece, par1List, par2Random, par3, par4, par5, par6, par7);
+    }
+
+    static StructureComponent getNextStructureComponentVillagePath(GCMercuryComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7)
+    {
+        return GCMercuryStructureVillagePieces.getNextComponentVillagePath(par0ComponentVillageStartPiece, par1List, par2Random, par3, par4, par5, par6, par7);
     }
 
     private static GCMercuryComponentVillage getNextVillageComponent(GCMercuryComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7)
@@ -161,43 +181,23 @@ public class GCMercuryStructureVillagePieces
         }
     }
 
-    private static StructureComponent getNextComponentVillagePath(GCMercuryComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7)
+    public static ArrayList<GCMercuryStructureVillagePieceWeight> getStructureVillageWeightedPieceList(Random par0Random, int par1)
     {
-        if (par7 > 3 + par0ComponentVillageStartPiece.terrainType)
-        {
-            return null;
-        }
-        else if (Math.abs(par3 - par0ComponentVillageStartPiece.getBoundingBox().minX) <= 112 && Math.abs(par5 - par0ComponentVillageStartPiece.getBoundingBox().minZ) <= 112)
-        {
-            final StructureBoundingBox var8 = GCMercuryComponentVillagePathGen.func_74933_a(par0ComponentVillageStartPiece, par1List, par2Random, par3, par4, par5, par6);
+        final ArrayList<GCMercuryStructureVillagePieceWeight> var2 = new ArrayList<GCMercuryStructureVillagePieceWeight>();
+        var2.add(new GCMercuryStructureVillagePieceWeight(GCMercuryComponentVillageWoodHut.class, 5, MathHelper.getRandomIntegerInRange(par0Random, 2 + par1, 5 + par1 * 3)));
+        var2.add(new GCMercuryStructureVillagePieceWeight(GCMercuryComponentVillageField.class, 5, MathHelper.getRandomIntegerInRange(par0Random, 3 + par1, 5 + par1)));
+        var2.add(new GCMercuryStructureVillagePieceWeight(GCMercuryComponentVillageHouse.class, 5, MathHelper.getRandomIntegerInRange(par0Random, 3 + par1, 4 + par1 * 2)));
 
-            if (var8 != null && var8.minY > 10)
+        final Iterator<GCMercuryStructureVillagePieceWeight> var3 = var2.iterator();
+
+        while (var3.hasNext())
+        {
+            if (var3.next().villagePiecesLimit == 0)
             {
-                final GCMercuryComponentVillagePathGen var9 = new GCMercuryComponentVillagePathGen(par0ComponentVillageStartPiece, par7, par2Random, var8, par6);
-
-                par1List.add(var9);
-                par0ComponentVillageStartPiece.field_74930_j.add(var9);
-                return var9;
+                var3.remove();
             }
-
-            return null;
         }
-        else
-        {
-            return null;
-        }
-    }
 
-    /**
-     * attempts to find a next Structure Component to be spawned
-     */
-    static StructureComponent getNextStructureComponent(GCMercuryComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7)
-    {
-        return GCMercuryStructureVillagePieces.getNextVillageStructureComponent(par0ComponentVillageStartPiece, par1List, par2Random, par3, par4, par5, par6, par7);
-    }
-
-    static StructureComponent getNextStructureComponentVillagePath(GCMercuryComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7)
-    {
-        return GCMercuryStructureVillagePieces.getNextComponentVillagePath(par0ComponentVillageStartPiece, par1List, par2Random, par3, par4, par5, par6, par7);
+        return var2;
     }
 }

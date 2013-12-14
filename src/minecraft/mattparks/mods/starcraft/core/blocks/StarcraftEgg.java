@@ -20,21 +20,22 @@ public class StarcraftEgg extends BlockDragonEgg
     }
 
     @Override
-    public boolean isOpaqueCube()
-    {
-        return false;
-    }
-
-    @Override
-    public boolean renderAsNormalBlock()
-    {
-        return false;
-    }
-
-    @Override
     public int getRenderType()
     {
         return 27;
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public int idPicked(World par1World, int par2, int par3, int par4)
+    {
+        return 1;
+    }
+
+    @Override
+    public boolean isOpaqueCube()
+    {
+        return false;
     }
 
     @Override
@@ -50,13 +51,6 @@ public class StarcraftEgg extends BlockDragonEgg
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public int idPicked(World par1World, int par2, int par3, int par4)
-    {
-        return 1;
-    }
-
-    @Override
     public void onBlockExploded(World world, int x, int y, int z, Explosion explosion)
     {
         if (!world.isRemote)
@@ -68,5 +62,11 @@ public class StarcraftEgg extends BlockDragonEgg
 
         world.setBlockToAir(x, y, z);
         this.onBlockDestroyedByExplosion(world, x, y, z, explosion);
+    }
+
+    @Override
+    public boolean renderAsNormalBlock()
+    {
+        return false;
     }
 }

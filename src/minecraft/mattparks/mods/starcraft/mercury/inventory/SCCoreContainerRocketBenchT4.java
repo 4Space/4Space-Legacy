@@ -80,6 +80,12 @@ public class SCCoreContainerRocketBenchT4 extends Container
     }
 
     @Override
+    public boolean canInteractWith(EntityPlayer par1EntityPlayer)
+    {
+        return true;
+    }
+
+    @Override
     public void onContainerClosed(EntityPlayer par1EntityPlayer)
     {
         super.onContainerClosed(par1EntityPlayer);
@@ -102,12 +108,6 @@ public class SCCoreContainerRocketBenchT4 extends Container
     public void onCraftMatrixChanged(IInventory par1IInventory)
     {
         this.craftResult.setInventorySlotContents(0, RecipeUtilGCMercury.findMatchingSpaceshipT4Recipe(this.craftMatrix));
-    }
-
-    @Override
-    public boolean canInteractWith(EntityPlayer par1EntityPlayer)
-    {
-        return true;
     }
 
     @Override

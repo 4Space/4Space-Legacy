@@ -18,12 +18,9 @@ public class NEIVenusConfig implements IConfigureNEI
 {
     private static HashMap<ArrayList<PositionedStack>, PositionedStack> rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
 
-    @Override
-    public void loadConfig()
+    public static Set<Entry<ArrayList<PositionedStack>, PositionedStack>> getRocketBenchRecipes()
     {
-        this.registerRecipes();
-        API.registerRecipeHandler(new RocketT3RecipeHandler());
-        API.registerUsageHandler(new RocketT3RecipeHandler());
+        return NEIVenusConfig.rocketBenchRecipes.entrySet();
     }
 
     @Override
@@ -38,14 +35,12 @@ public class NEIVenusConfig implements IConfigureNEI
         return GalacticraftCore.LOCALMAJVERSION + "." + GalacticraftCore.LOCALMINVERSION + "." + GalacticraftCore.LOCALBUILDVERSION;
     }
 
-    public void registerRocketBenchRecipe(ArrayList<PositionedStack> input, PositionedStack output)
+    @Override
+    public void loadConfig()
     {
-        NEIVenusConfig.rocketBenchRecipes.put(input, output);
-    }
-
-    public static Set<Entry<ArrayList<PositionedStack>, PositionedStack>> getRocketBenchRecipes()
-    {
-        return NEIVenusConfig.rocketBenchRecipes.entrySet();
+        this.registerRecipes();
+        API.registerRecipeHandler(new RocketT3RecipeHandler());
+        API.registerUsageHandler(new RocketT3RecipeHandler());
     }
 
     public void registerRecipes()
@@ -106,5 +101,10 @@ public class NEIVenusConfig implements IConfigureNEI
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 1 * 26, -15 + changey));
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 2 * 26, -15 + changey));
         this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(GCVenusItems.spaceshipT3, 1, 3), 139, 87 + changey));
+    }
+
+    public void registerRocketBenchRecipe(ArrayList<PositionedStack> input, PositionedStack output)
+    {
+        NEIVenusConfig.rocketBenchRecipes.put(input, output);
     }
 }

@@ -43,54 +43,6 @@ import cpw.mods.fml.relauncher.Side;
 
 public class ClientProxyJupiter extends CommonProxyJupiter
 {
-    public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
-    
-    @Override
-    public void preInit(FMLPreInitializationEvent event)
-    {
-
-    }
-    
-    @Override
-    public void init(FMLInitializationEvent event)
-    {
-        TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCJupiter.CHANNEL, Side.CLIENT);
-    }
-
-    @Override
-    public void registerRenderInformation()
-    {
-        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
-        // TODO remove internal cargo rocket codes
-        
-        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT5.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier5(), GCJupiter.ASSET_DOMAIN, "rocketT5"));
-        MinecraftForgeClient.registerItemRenderer(GCJupiterItems.spaceshipT5.itemID, new SCCoreItemRendererSpaceshipT5(cargoRocketModel));
-    }
-
-
-    @Override
-    public void spawnParticle(String var1, double var2, double var4, double var6)
-    {
-        final Minecraft var14 = FMLClientHandler.instance().getClient();
-
-        if (var14 != null && var14.renderViewEntity != null && var14.effectRenderer != null)
-        {
-            final double var15 = var14.renderViewEntity.posX - var2;
-            final double var17 = var14.renderViewEntity.posY - var4;
-            final double var19 = var14.renderViewEntity.posZ - var6;
-            Object var21 = null;
-            final double var22 = 64.0D;
-
-            if (var15 * var15 + var17 * var17 + var19 * var19 < var22 * var22)
-            {
-                if (var1.equals("sludgeDrip"))
-                {
-                }
-            }
-        }
-    }
-
     public class ClientPacketHandler implements IPacketHandler
     {
         @Override
@@ -132,25 +84,26 @@ public class ClientProxyJupiter extends CommonProxyJupiter
             }
         }
     }
-
-    {
-    }
-
-    public static boolean handleLavaMovement(EntityPlayer player)
-    {
-        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.lava);
-    }
-
-    public static boolean handleWaterMovement(EntityPlayer player)
-    {
-        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.water);
-    }
-
-    {
-    }
-
+    
     public static class TickHandlerClient implements ITickHandler
     {
+        @Override
+        public String getLabel()
+        {
+            return "Galacticraft Jupiter Client";
+        }
+
+        @Override
+        public void tickEnd(EnumSet<TickType> type, Object... tickData)
+        {
+        }
+
+        @Override
+        public EnumSet<TickType> ticks()
+        {
+            return EnumSet.of(TickType.CLIENT);
+        }
+
         @Override
         public void tickStart(EnumSet<TickType> type, Object... tickData)
         {
@@ -195,23 +148,25 @@ public class ClientProxyJupiter extends CommonProxyJupiter
                 }
             }
         }
+    }
+    
+    public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
 
-        @Override
-        public void tickEnd(EnumSet<TickType> type, Object... tickData)
-        {
-        }
+    public static boolean handleLavaMovement(EntityPlayer player)
+    {
+        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.lava);
+    }
 
-        @Override
-        public String getLabel()
-        {
-            return "Galacticraft Jupiter Client";
-        }
 
-        @Override
-        public EnumSet<TickType> ticks()
-        {
-            return EnumSet.of(TickType.CLIENT);
-        }
+    public static boolean handleWaterMovement(EntityPlayer player)
+    {
+        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.water);
+    }
+
+    {
+    }
+
+    {
     }
 
     @Override
@@ -220,5 +175,50 @@ public class ClientProxyJupiter extends CommonProxyJupiter
         TileEntity tile = world.getBlockTileEntity(x, y, z);
 
         return null;
+    }
+
+    @Override
+    public void init(FMLInitializationEvent event)
+    {
+        TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCJupiter.CHANNEL, Side.CLIENT);
+    }
+
+    @Override
+    public void preInit(FMLPreInitializationEvent event)
+    {
+
+    }
+
+    @Override
+    public void registerRenderInformation()
+    {
+        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
+        // TODO remove internal cargo rocket codes
+        
+        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT5.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier5(), GCJupiter.ASSET_DOMAIN, "rocketT5"));
+        MinecraftForgeClient.registerItemRenderer(GCJupiterItems.spaceshipT5.itemID, new SCCoreItemRendererSpaceshipT5(cargoRocketModel));
+    }
+
+    @Override
+    public void spawnParticle(String var1, double var2, double var4, double var6)
+    {
+        final Minecraft var14 = FMLClientHandler.instance().getClient();
+
+        if (var14 != null && var14.renderViewEntity != null && var14.effectRenderer != null)
+        {
+            final double var15 = var14.renderViewEntity.posX - var2;
+            final double var17 = var14.renderViewEntity.posY - var4;
+            final double var19 = var14.renderViewEntity.posZ - var6;
+            Object var21 = null;
+            final double var22 = 64.0D;
+
+            if (var15 * var15 + var17 * var17 + var19 * var19 < var22 * var22)
+            {
+                if (var1.equals("sludgeDrip"))
+                {
+                }
+            }
+        }
     }
 }

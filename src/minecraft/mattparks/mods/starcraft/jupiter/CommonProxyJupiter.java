@@ -10,9 +10,18 @@ import cpw.mods.fml.common.network.IGuiHandler;
 
 public class CommonProxyJupiter implements IGuiHandler
 {
-    public void preInit(FMLPreInitializationEvent event)
+    @Override
+    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
     {
-    	;
+        return null;
+    }
+
+    @Override
+    public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
+    {
+        TileEntity tile = world.getBlockTileEntity(x, y, z);
+
+        return null;
     }
 
     public void init(FMLInitializationEvent event)
@@ -25,6 +34,11 @@ public class CommonProxyJupiter implements IGuiHandler
     	;
     }
 
+    public void preInit(FMLPreInitializationEvent event)
+    {
+    	;
+    }
+
     public void registerRenderInformation()
     {
     	;
@@ -33,19 +47,5 @@ public class CommonProxyJupiter implements IGuiHandler
     public void spawnParticle(String var1, double var2, double var4, double var6)
     {
         ;
-    }
-
-    @Override
-    public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
-    {
-        TileEntity tile = world.getBlockTileEntity(x, y, z);
-
-        return null;
-    }
-
-    @Override
-    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
-    {
-        return null;
     }
 }

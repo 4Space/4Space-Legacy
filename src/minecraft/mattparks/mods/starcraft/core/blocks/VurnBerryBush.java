@@ -17,7 +17,17 @@ public class VurnBerryBush extends BlockCrops
         super(par1);
     }
 
-    @SideOnly(Side.CLIENT)
+    /**
+     * Generate a crop produce ItemStack for this crop.
+     */
+    @Override
+	protected int getCropItem()
+    {
+      return GCVenusItems.vurnBerry.itemID;
+    }
+
+    @Override
+	@SideOnly(Side.CLIENT)
 
     /**
      * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
@@ -42,20 +52,14 @@ public class VurnBerryBush extends BlockCrops
     /**
      * Generate a seed ItemStack for this crop.
      */
-    protected int getSeedItem()
+    @Override
+	protected int getSeedItem()
     {
         return GCVenusItems.vurnBerry.itemID;
     }
 
-    /**
-     * Generate a crop produce ItemStack for this crop.
-     */
-    protected int getCropItem()
-    {
-      return GCVenusItems.vurnBerry.itemID;
-    }
-
-    @SideOnly(Side.CLIENT)
+    @Override
+	@SideOnly(Side.CLIENT)
 
     /**
      * When this method is called, your block should register all the icons it needs with the given IconRegister. This

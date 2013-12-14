@@ -15,37 +15,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class GCVenusSchematicRocketT3 implements ISchematicPage
 {
     @Override
-    public int getPageID()
-    {
-        return GCVenusConfigManager.idSchematicRocketT3;
-    }
-
-    @Override
-    public int getGuiID()
-    {
-        return GCVenusConfigManager.idGuiRocketCraftingBenchT3;
-    }
-
-    @Override
-    public ItemStack getRequiredItem()
-    {
-        return new ItemStack(GCCoreItems.schematic.itemID, 1, 1);
-    }
-
-    @SideOnly(Side.CLIENT)
-    @Override
-    public GuiScreen getResultScreen(EntityPlayer player, int x, int y, int z)
-    {
-        return new SCCoreGuiSchematicRocketT3(player.inventory, x, y, z);
-    }
-
-    @Override
-    public Container getResultContainer(EntityPlayer player, int x, int y, int z)
-    {
-        return new SCCoreContainerRocketBenchT3(player.inventory, x, y, z);
-    }
-
-    @Override
     public int compareTo(ISchematicPage o)
     {
         if (this.getPageID() > o.getPageID())
@@ -56,5 +25,36 @@ public class GCVenusSchematicRocketT3 implements ISchematicPage
         {
             return -1;
         }
+    }
+
+    @Override
+    public int getGuiID()
+    {
+        return GCVenusConfigManager.idGuiRocketCraftingBenchT3;
+    }
+
+    @Override
+    public int getPageID()
+    {
+        return GCVenusConfigManager.idSchematicRocketT3;
+    }
+
+    @Override
+    public ItemStack getRequiredItem()
+    {
+        return new ItemStack(GCCoreItems.schematic.itemID, 1, 1);
+    }
+
+    @Override
+    public Container getResultContainer(EntityPlayer player, int x, int y, int z)
+    {
+        return new SCCoreContainerRocketBenchT3(player.inventory, x, y, z);
+    }
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    public GuiScreen getResultScreen(EntityPlayer player, int x, int y, int z)
+    {
+        return new SCCoreGuiSchematicRocketT3(player.inventory, x, y, z);
     }
 }

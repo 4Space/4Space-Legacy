@@ -8,16 +8,16 @@ import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 public class GCMercuryMapPlanet implements IMapObject
 {
 	@Override
-	public float getPlanetSize() 
-	{
-		return 0.33191489361702127659574468085106F;
-	}
-
-	@Override
 	public float getDistanceFromCenter() 
 	{
 		return 0.38F;
 	}
+
+	@Override
+    public IGalaxy getParentGalaxy()
+    {
+        return GalacticraftCore.galaxyMilkyWay;
+    }
 
 	@Override
 	public float getPhaseShift() 
@@ -26,9 +26,9 @@ public class GCMercuryMapPlanet implements IMapObject
 	}
 
 	@Override
-	public float getStretchValue() 
+	public float getPlanetSize() 
 	{
-		return 11.86F;
+		return 0.33191489361702127659574468085106F;
 	}
 
     @Override
@@ -38,8 +38,8 @@ public class GCMercuryMapPlanet implements IMapObject
     }
 
     @Override
-    public IGalaxy getParentGalaxy()
-    {
-        return GalacticraftCore.galaxyMilkyWay;
-    }
+	public float getStretchValue() 
+	{
+		return 11.86F;
+	}
 }

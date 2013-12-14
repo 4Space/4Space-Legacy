@@ -9,15 +9,15 @@ public class GCJupiterSlotRenderer implements ICelestialBodyRenderer
 {
 
     @Override
-    public ResourceLocation getPlanetSprite()
-    {
-        return new ResourceLocation(GCJupiter.ASSET_DOMAIN, "textures/gui/planets/jupiter.png");
-    }
-
-    @Override
     public String getPlanetName()
     {
         return "Jupiter";
+    }
+
+    @Override
+    public ResourceLocation getPlanetSprite()
+    {
+        return new ResourceLocation(GCJupiter.ASSET_DOMAIN, "textures/gui/planets/jupiter.png");
     }
 
     @Override

@@ -36,27 +36,6 @@ import cpw.mods.fml.relauncher.Side;
 
 public class ClientProxySedna extends CommonProxySedna
 {
-    public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
-    
-    @Override
-    public void preInit(FMLPreInitializationEvent event)
-    {
-        MinecraftForge.EVENT_BUS.register(new GCSednaSounds());
-    }
-    
-    @Override
-    public void init(FMLInitializationEvent event)
-    {
-        TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCSedna.CHANNEL, Side.CLIENT);
-    }
-
-    @Override
-    public void registerRenderInformation()
-    {
-        RenderingRegistry.addNewArmourRendererPrefix("gravity");
-    }
-
     public class ClientPacketHandler implements IPacketHandler
     {
         @Override
@@ -98,25 +77,26 @@ public class ClientProxySedna extends CommonProxySedna
             }
         }
     }
-
-    {
-    }
-
-    public static boolean handleLavaMovement(EntityPlayer player)
-    {
-        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.lava);
-    }
-
-    public static boolean handleWaterMovement(EntityPlayer player)
-    {
-        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.water);
-    }
-
-    {
-    }
-
+    
     public static class TickHandlerClient implements ITickHandler
     {
+        @Override
+        public String getLabel()
+        {
+            return "Starcraft Mercury Client";
+        }
+
+        @Override
+        public void tickEnd(EnumSet<TickType> type, Object... tickData)
+        {
+        }
+
+        @Override
+        public EnumSet<TickType> ticks()
+        {
+            return EnumSet.of(TickType.CLIENT);
+        }
+
         @Override
         public void tickStart(EnumSet<TickType> type, Object... tickData)
         {
@@ -157,23 +137,24 @@ public class ClientProxySedna extends CommonProxySedna
                 }
             }
         }
+    }
+    
+    public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
 
-        @Override
-        public void tickEnd(EnumSet<TickType> type, Object... tickData)
-        {
-        }
+    public static boolean handleLavaMovement(EntityPlayer player)
+    {
+        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.lava);
+    }
 
-        @Override
-        public String getLabel()
-        {
-            return "Starcraft Mercury Client";
-        }
+    public static boolean handleWaterMovement(EntityPlayer player)
+    {
+        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.water);
+    }
 
-        @Override
-        public EnumSet<TickType> ticks()
-        {
-            return EnumSet.of(TickType.CLIENT);
-        }
+    {
+    }
+
+    {
     }
 
     @Override
@@ -182,5 +163,24 @@ public class ClientProxySedna extends CommonProxySedna
         TileEntity tile = world.getBlockTileEntity(x, y, z);
 
         return null;
+    }
+
+    @Override
+    public void init(FMLInitializationEvent event)
+    {
+        TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCSedna.CHANNEL, Side.CLIENT);
+    }
+
+    @Override
+    public void preInit(FMLPreInitializationEvent event)
+    {
+        MinecraftForge.EVENT_BUS.register(new GCSednaSounds());
+    }
+
+    @Override
+    public void registerRenderInformation()
+    {
+        RenderingRegistry.addNewArmourRendererPrefix("gravity");
     }
 }

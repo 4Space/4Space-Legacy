@@ -34,6 +34,30 @@ public class SCCoreItemSpaceshipTier5 extends Item implements IHoldableItem
         this.setMaxStackSize(16);
     }
 
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer player, List par2List, boolean b)
+    {
+        EnumRocketType type = EnumRocketType.values()[par1ItemStack.getItemDamage()];
+
+        if (!type.getTooltip().isEmpty())
+        {
+            par2List.add(type.getTooltip());
+        }
+
+        if (type.getPreFueled())
+        {
+            par2List.add(EnumColor.RED + "\u00a7o" + "Creative Only");
+        }
+    }
+
+    @Override
+    public CreativeTabs getCreativeTab()
+    {
+        return GCJupiter.starcraftGasTab;
+    }
+
     @Override
     @SideOnly(Side.CLIENT)
     public EnumRarity getRarity(ItemStack par1ItemStack)
@@ -41,10 +65,14 @@ public class SCCoreItemSpaceshipTier5 extends Item implements IHoldableItem
         return ClientProxyCore.galacticraftItem;
     }
 
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
-    public CreativeTabs getCreativeTab()
+    public void getSubItems(int par1, CreativeTabs par2CreativeTabs, List par3List)
     {
-        return GCJupiter.starcraftGasTab;
+        for (int i = 0; i < EnumRocketType.values().length; i++)
+        {
+            par3List.add(new ItemStack(par1, 1, i));
+        }
     }
 
     @Override
@@ -116,32 +144,16 @@ public class SCCoreItemSpaceshipTier5 extends Item implements IHoldableItem
         return true;
     }
 
-    @SuppressWarnings({ "unchecked", "rawtypes" })
-    @Override
-    public void getSubItems(int par1, CreativeTabs par2CreativeTabs, List par3List)
-    {
-        for (int i = 0; i < EnumRocketType.values().length; i++)
-        {
-            par3List.add(new ItemStack(par1, 1, i));
-        }
-    }
-
-    @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack par1ItemStack, EntityPlayer player, List par2List, boolean b)
+    public void registerIcons(IconRegister par1IconRegister)
     {
-        EnumRocketType type = EnumRocketType.values()[par1ItemStack.getItemDamage()];
+    }
 
-        if (!type.getTooltip().isEmpty())
-        {
-            par2List.add(type.getTooltip());
-        }
-
-        if (type.getPreFueled())
-        {
-            par2List.add(EnumColor.RED + "\u00a7o" + "Creative Only");
-        }
+    @Override
+    public boolean shouldCrouch(EntityPlayer player)
+    {
+        return true;
     }
 
     @Override
@@ -154,17 +166,5 @@ public class SCCoreItemSpaceshipTier5 extends Item implements IHoldableItem
     public boolean shouldHoldRightHandUp(EntityPlayer player)
     {
         return true;
-    }
-
-    @Override
-    public boolean shouldCrouch(EntityPlayer player)
-    {
-        return true;
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister par1IconRegister)
-    {
     }
 }

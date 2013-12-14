@@ -27,14 +27,16 @@ public class GCVenusRenderVenusianVillager extends RenderLiving
         this.villagerModel = (GCVenusModelVenusianVillager) this.mainModel;
     }
 
-    protected int shouldVillagerRenderPass(GCVenusEntityVenusianVillager par1EntityVillager, int par2, float par3)
+    @Override
+    public void doRender(Entity par1Entity, double par2, double par4, double par6, float par8, float par9)
     {
-        return -1;
+        this.renderVillager((GCVenusEntityVenusianVillager) par1Entity, par2, par4, par6, par8, par9);
     }
 
-    public void renderVillager(GCVenusEntityVenusianVillager par1EntityVillager, double par2, double par4, double par6, float par8, float par9)
+    @Override
+    public void doRenderLiving(EntityLiving par1EntityLiving, double par2, double par4, double par6, float par8, float par9)
     {
-        super.doRenderLiving(par1EntityVillager, par2, par4, par6, par8, par9);
+        this.renderVillager((GCVenusEntityVenusianVillager) par1EntityLiving, par2, par4, par6, par8, par9);
     }
 
     protected ResourceLocation func_110902_a(GCVenusEntityVenusianVillager par1EntityVillager)
@@ -42,9 +44,16 @@ public class GCVenusRenderVenusianVillager extends RenderLiving
         return GCVenusRenderVenusianVillager.villagerTexture;
     }
 
-    protected void renderVillagerEquipedItems(GCVenusEntityVenusianVillager par1EntityVillager, float par2)
+    @Override
+    protected ResourceLocation getEntityTexture(Entity par1Entity)
     {
-        super.renderEquippedItems(par1EntityVillager, par2);
+        return this.func_110902_a((GCVenusEntityVenusianVillager) par1Entity);
+    }
+
+    @Override
+    protected void preRenderCallback(EntityLivingBase par1EntityLivingBase, float par2)
+    {
+        this.preRenderVillager((GCVenusEntityVenusianVillager) par1EntityLivingBase, par2);
     }
 
     protected void preRenderVillager(GCVenusEntityVenusianVillager par1EntityVillager, float par2)
@@ -65,24 +74,6 @@ public class GCVenusRenderVenusianVillager extends RenderLiving
     }
 
     @Override
-    public void doRenderLiving(EntityLiving par1EntityLiving, double par2, double par4, double par6, float par8, float par9)
-    {
-        this.renderVillager((GCVenusEntityVenusianVillager) par1EntityLiving, par2, par4, par6, par8, par9);
-    }
-
-    @Override
-    protected void preRenderCallback(EntityLivingBase par1EntityLivingBase, float par2)
-    {
-        this.preRenderVillager((GCVenusEntityVenusianVillager) par1EntityLivingBase, par2);
-    }
-
-    @Override
-    protected int shouldRenderPass(EntityLivingBase par1EntityLivingBase, int par2, float par3)
-    {
-        return this.shouldVillagerRenderPass((GCVenusEntityVenusianVillager) par1EntityLivingBase, par2, par3);
-    }
-
-    @Override
     protected void renderEquippedItems(EntityLivingBase par1EntityLivingBase, float par2)
     {
         this.renderVillagerEquipedItems((GCVenusEntityVenusianVillager) par1EntityLivingBase, par2);
@@ -94,15 +85,24 @@ public class GCVenusRenderVenusianVillager extends RenderLiving
         this.renderVillager((GCVenusEntityVenusianVillager) par1EntityLivingBase, par2, par4, par6, par8, par9);
     }
 
-    @Override
-    protected ResourceLocation getEntityTexture(Entity par1Entity)
+    public void renderVillager(GCVenusEntityVenusianVillager par1EntityVillager, double par2, double par4, double par6, float par8, float par9)
     {
-        return this.func_110902_a((GCVenusEntityVenusianVillager) par1Entity);
+        super.doRenderLiving(par1EntityVillager, par2, par4, par6, par8, par9);
+    }
+
+    protected void renderVillagerEquipedItems(GCVenusEntityVenusianVillager par1EntityVillager, float par2)
+    {
+        super.renderEquippedItems(par1EntityVillager, par2);
     }
 
     @Override
-    public void doRender(Entity par1Entity, double par2, double par4, double par6, float par8, float par9)
+    protected int shouldRenderPass(EntityLivingBase par1EntityLivingBase, int par2, float par3)
     {
-        this.renderVillager((GCVenusEntityVenusianVillager) par1Entity, par2, par4, par6, par8, par9);
+        return this.shouldVillagerRenderPass((GCVenusEntityVenusianVillager) par1EntityLivingBase, par2, par3);
+    }
+
+    protected int shouldVillagerRenderPass(GCVenusEntityVenusianVillager par1EntityVillager, int par2, float par3)
+    {
+        return -1;
     }
 }

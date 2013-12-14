@@ -10,9 +10,18 @@ import cpw.mods.fml.common.network.IGuiHandler;
 
 public class CommonProxyMercury implements IGuiHandler
 {
-    public void preInit(FMLPreInitializationEvent event)
+    @Override
+    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
     {
-    	;
+        return null;
+    }
+
+    @Override
+    public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
+    {
+        TileEntity tile = world.getBlockTileEntity(x, y, z);
+
+        return null;
     }
 
     public void init(FMLInitializationEvent event)
@@ -25,23 +34,14 @@ public class CommonProxyMercury implements IGuiHandler
     	;
     }
 
-    public void registerRenderInformation()
+
+    public void preInit(FMLPreInitializationEvent event)
     {
     	;
     }
 
-
-    @Override
-    public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
+    public void registerRenderInformation()
     {
-        TileEntity tile = world.getBlockTileEntity(x, y, z);
-
-        return null;
-    }
-
-    @Override
-    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
-    {
-        return null;
+    	;
     }
 }

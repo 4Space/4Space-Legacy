@@ -18,9 +18,15 @@ import net.minecraft.world.WorldServer;
 public class GCNeptuneTeleportType implements ITeleportType
 {
     @Override
-    public boolean useParachute()
+    public Vector3 getEntitySpawnLocation(WorldServer world, Entity entity)
     {
-        return false;
+        return new Vector3(entity.posX, GCCoreConfigManager.disableLander ? 250.0 : 900.0, entity.posZ);
+    }
+
+    @Override
+    public Vector3 getParaChestSpawnLocation(WorldServer world, EntityPlayerMP player, Random rand)
+    {
+        return null;
     }
 
     @Override
@@ -31,18 +37,6 @@ public class GCNeptuneTeleportType implements ITeleportType
             return new Vector3(((GCCorePlayerMP) player).getCoordsTeleportedFromX(), GCCoreConfigManager.disableLander ? 250.0 : 900.0, ((GCCorePlayerMP) player).getCoordsTeleportedFromZ());
         }
 
-        return null;
-    }
-
-    @Override
-    public Vector3 getEntitySpawnLocation(WorldServer world, Entity entity)
-    {
-        return new Vector3(entity.posX, GCCoreConfigManager.disableLander ? 250.0 : 900.0, entity.posZ);
-    }
-
-    @Override
-    public Vector3 getParaChestSpawnLocation(WorldServer world, EntityPlayerMP player, Random rand)
-    {
         return null;
     }
 
@@ -71,5 +65,11 @@ public class GCNeptuneTeleportType implements ITeleportType
 
             gcPlayer.setTeleportCooldown(10);
         }
+    }
+
+    @Override
+    public boolean useParachute()
+    {
+        return false;
     }
 }

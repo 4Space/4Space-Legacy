@@ -58,6 +58,7 @@ public class GCVenus
     public static GCVenus instance;
 	
 	public static CreativeTabs starcraftVenusTab = new CreativeTabs("starcraftVenusTab") {
+		@Override
 		public ItemStack getIconItemStack() {
 			return new ItemStack(StarcraftVenus.EvolvedBlazeEgg, 1, 0);
 		}
@@ -70,16 +71,6 @@ public class GCVenus
     public static long slowTick;
     
     public static HashMap<String, ItemStack> blocksList = new HashMap<String, ItemStack>();
-
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
-        new GCVenusConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/venus.conf"));
-
-        GCVenusItems.initItems();
-
-        GCVenus.proxy.preInit(event);
-    }
 
     @EventHandler
     public void load(FMLInitializationEvent event)
@@ -129,14 +120,21 @@ public class GCVenus
     }
 
     @EventHandler
-    public void serverStarting(FMLServerStartingEvent event)
+    public void postLoad(FMLPostInitializationEvent event)
     {
-        NetworkRegistry.instance().registerChannel(new GCVenusPacketHandlerServer(), GCVenus.CHANNEL, Side.SERVER);
+        GCVenus.proxy.postInit(event);
+        GCVenus.proxy.registerRenderInformation();
+        GCVenusRecipeManager.loadRecipes();
     }
 
-    public void registerTileEntities()
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event)
     {
-            ;
+        new GCVenusConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/venus.conf"));
+
+        GCVenusItems.initItems();
+
+        GCVenus.proxy.preInit(event);
     }
 
     public void registerCreatures()
@@ -144,19 +142,6 @@ public class GCVenus
         GCCoreUtil.registerGalacticraftCreature(GCVenusEntityVenusianVillager.class, "VenusianVillager", GCVenusConfigManager.idEntityVenusianVillager, GCCoreUtil.convertTo32BitColor(255, 103, 181, 145), 12422002);
         GCCoreUtil.registerGalacticraftCreature(GCVenusEntityEvolvedBlaze.class, "EvolvedBlaze", GCVenusConfigManager.idEntityEvolvedBlaze, 44975, 7969893);
         GCCoreUtil.registerGalacticraftCreature(GCVenusEntityFlameling.class, "Flameling", GCVenusConfigManager.idEntityFlameling, 44975, 7969893);
-    }
-
-    public void registerOtherEntities()
-    {
-    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT3.class, "SpaceshipT3", GCVenusConfigManager.idEntitySpaceshipTier3, 150, 1, true);
-    }
-    
-    @EventHandler
-    public void postLoad(FMLPostInitializationEvent event)
-    {
-        GCVenus.proxy.postInit(event);
-        GCVenus.proxy.registerRenderInformation();
-        GCVenusRecipeManager.loadRecipes();
     }
 
     public void registerGalacticraftCreature(Class<? extends Entity> var0, String var1, int id, int back, int fore)
@@ -168,5 +153,21 @@ public class GCVenus
     public void registerGalacticraftNonMobEntity(Class<? extends Entity> var0, String var1, int id, int trackingDistance, int updateFreq, boolean sendVel)
     {
         EntityRegistry.registerModEntity(var0, var1, id, this, trackingDistance, updateFreq, sendVel);
+    }
+    
+    public void registerOtherEntities()
+    {
+    	this.registerGalacticraftNonMobEntity(SCCoreEntityRocketT3.class, "SpaceshipT3", GCVenusConfigManager.idEntitySpaceshipTier3, 150, 1, true);
+    }
+
+    public void registerTileEntities()
+    {
+            ;
+    }
+
+    @EventHandler
+    public void serverStarting(FMLServerStartingEvent event)
+    {
+        NetworkRegistry.instance().registerChannel(new GCVenusPacketHandlerServer(), GCVenus.CHANNEL, Side.SERVER);
     }
 }

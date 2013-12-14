@@ -36,6 +36,38 @@ public class RenderEvolvedEnderman extends RenderLiving
    
 
     /**
+     * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then
+     * handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic
+     * (Render<T extends Entity) and this method has signature public void doRender(T entity, double d, double d1,
+     * double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
+     */
+    @Override
+	public void doRender(Entity par1Entity, double par2, double par4, double par6, float par8, float par9)
+    {
+        this.renderEvolvedEnderman((EntityEvolvedEnderman)par1Entity, par2, par4, par6, par8, par9);
+    }
+
+    @Override
+	public void doRenderLiving(EntityLiving par1EntityLiving, double par2, double par4, double par6, float par8, float par9)
+    {
+        this.renderEvolvedEnderman((EntityEvolvedEnderman)par1EntityLiving, par2, par4, par6, par8, par9);
+    }
+
+    /**
+     * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
+     */
+    @Override
+	protected ResourceLocation getEntityTexture(Entity par1Entity)
+    {
+        return this.getEvolvedEndermanTextures((EntityEvolvedEnderman)par1Entity);
+    }
+
+    protected ResourceLocation getEvolvedEndermanTextures(EntityEvolvedEnderman par1EntityEvolvedEnderman)
+    {
+        return EvolvedEndermanTextures;
+    }
+
+    /**
      * Renders the EvolvedEnderman
      */
     public void renderEvolvedEnderman(EntityEvolvedEnderman par1EntityEvolvedEnderman, double par2, double par4, double par6, float par8, float par9)
@@ -52,10 +84,6 @@ public class RenderEvolvedEnderman extends RenderLiving
         super.doRenderLiving(par1EntityEvolvedEnderman, par2, par4, par6, par8, par9);
     }
 
-    protected ResourceLocation getEvolvedEndermanTextures(EntityEvolvedEnderman par1EntityEvolvedEnderman)
-    {
-        return EvolvedEndermanTextures;
-    }
 
     /**
      * Render the EvolvedEndermans eyes
@@ -87,7 +115,7 @@ public class RenderEvolvedEnderman extends RenderLiving
             char c0 = 61680;
             int j = c0 % 65536;
             int k = c0 / 65536;
-            OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, (float)j / 1.0F, (float)k / 1.0F);
+            OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, j / 1.0F, k / 1.0F);
             GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
             GL11.glEnable(GL11.GL_LIGHTING);
             GL11.glColor4f(1.0F, 1.0F, 1.0F, f1);
@@ -95,41 +123,18 @@ public class RenderEvolvedEnderman extends RenderLiving
         }
     }
 
-    public void doRenderLiving(EntityLiving par1EntityLiving, double par2, double par4, double par6, float par8, float par9)
-    {
-        this.renderEvolvedEnderman((EntityEvolvedEnderman)par1EntityLiving, par2, par4, par6, par8, par9);
-    }
-
-    /**
-     * Queries whether should render the specified pass or not.
-     */
-    protected int shouldRenderPass(EntityLivingBase par1EntityLivingBase, int par2, float par3)
-    {
-        return this.renderEyes((EntityEvolvedEnderman)par1EntityLivingBase, par2, par3);
-    }
-
-
-    public void renderPlayer(EntityLivingBase par1EntityLivingBase, double par2, double par4, double par6, float par8, float par9)
+    @Override
+	public void renderPlayer(EntityLivingBase par1EntityLivingBase, double par2, double par4, double par6, float par8, float par9)
     {
         this.renderEvolvedEnderman((EntityEvolvedEnderman)par1EntityLivingBase, par2, par4, par6, par8, par9);
     }
 
     /**
-     * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
+     * Queries whether should render the specified pass or not.
      */
-    protected ResourceLocation getEntityTexture(Entity par1Entity)
+    @Override
+	protected int shouldRenderPass(EntityLivingBase par1EntityLivingBase, int par2, float par3)
     {
-        return this.getEvolvedEndermanTextures((EntityEvolvedEnderman)par1Entity);
-    }
-
-    /**
-     * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then
-     * handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic
-     * (Render<T extends Entity) and this method has signature public void doRender(T entity, double d, double d1,
-     * double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
-     */
-    public void doRender(Entity par1Entity, double par2, double par4, double par6, float par8, float par9)
-    {
-        this.renderEvolvedEnderman((EntityEvolvedEnderman)par1Entity, par2, par4, par6, par8, par9);
+        return this.renderEyes((EntityEvolvedEnderman)par1EntityLivingBase, par2, par3);
     }
 }

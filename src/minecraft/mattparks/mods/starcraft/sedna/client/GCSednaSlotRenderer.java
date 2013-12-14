@@ -9,15 +9,15 @@ public class GCSednaSlotRenderer implements ICelestialBodyRenderer
 {
 
     @Override
-    public ResourceLocation getPlanetSprite()
-    {
-        return new ResourceLocation(GCSedna.ASSET_DOMAIN, "textures/gui/planets/sedna.png");
-    }
-
-    @Override
     public String getPlanetName()
     {
         return "Sedna";
+    }
+
+    @Override
+    public ResourceLocation getPlanetSprite()
+    {
+        return new ResourceLocation(GCSedna.ASSET_DOMAIN, "textures/gui/planets/sedna.png");
     }
 
     @Override

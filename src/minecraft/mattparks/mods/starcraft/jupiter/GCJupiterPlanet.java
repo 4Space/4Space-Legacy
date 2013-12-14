@@ -13,27 +13,9 @@ public class GCJupiterPlanet implements IPlanet
     private final IMapObject Jupiter = new GCJupiterMapPlanet();
 
     @Override
-    public String getName()
+    public boolean addToList()
     {
-        return "Jupiter";
-    }
-
-    @Override
-    public boolean isReachable()
-    {
-        return true;
-    }
-
-    @Override
-    public IGalaxy getParentGalaxy()
-    {
-        return GalacticraftCore.galaxyMilkyWay;
-    }
-
-    @Override
-    public IMapObject getMapObject()
-    {
-        return this.Jupiter;
+        return false;
     }
 
     @Override
@@ -43,9 +25,27 @@ public class GCJupiterPlanet implements IPlanet
     }
 
     @Override
-    public boolean addToList()
+    public int getDimensionID()
     {
-        return false;
+        return GCJupiterConfigManager.dimensionIDJupiter;
+    }
+
+    @Override
+    public IMapObject getMapObject()
+    {
+        return this.Jupiter;
+    }
+
+    @Override
+    public String getName()
+    {
+        return "Jupiter";
+    }
+
+    @Override
+    public IGalaxy getParentGalaxy()
+    {
+        return GalacticraftCore.galaxyMilkyWay;
     }
 
     @Override
@@ -55,8 +55,8 @@ public class GCJupiterPlanet implements IPlanet
     }
 
     @Override
-    public int getDimensionID()
+    public boolean isReachable()
     {
-        return GCJupiterConfigManager.dimensionIDJupiter;
+        return true;
     }
 }
