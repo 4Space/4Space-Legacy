@@ -1,6 +1,7 @@
 package mattparks.mods.starcraft.sedna.wgen;
 
 import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.world.EnumSkyBlock;

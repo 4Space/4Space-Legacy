@@ -7,7 +7,6 @@ import mattparks.mods.starcraft.mercury.dimension.GCMercuryWorldProvider;
 import mattparks.mods.starcraft.venus.GCVenus;
 //TODO remove Venus dependency
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.GLAllocation;

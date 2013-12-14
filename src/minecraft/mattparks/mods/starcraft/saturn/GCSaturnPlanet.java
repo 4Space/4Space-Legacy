@@ -1,7 +1,7 @@
 package mattparks.mods.starcraft.saturn;
 
 import mattparks.mods.starcraft.saturn.client.GCSaturnMapPlanet;
-import mattparks.mods.starcraft.saturn.dimension.*;
+import mattparks.mods.starcraft.saturn.dimension.GCSaturnWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.IGalaxy;
 import micdoodle8.mods.galacticraft.api.world.IMapObject;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;

@@ -5,7 +5,6 @@ import java.util.Random;
 import mattparks.mods.starcraft.eris.GCEris;
 import mattparks.mods.starcraft.eris.dimension.GCErisWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.GLAllocation;

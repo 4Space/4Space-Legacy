@@ -10,7 +10,6 @@ import mattparks.mods.starcraft.mercury.GCMercury;
 import mattparks.mods.starcraft.mercury.client.model.SCCoreModelSpaceshipTier4;
 import mattparks.mods.starcraft.mercury.client.render.item.SCCoreItemRendererSpaceshipT4;
 import mattparks.mods.starcraft.mercury.client.sounds.GCMercurySounds;
-import mattparks.mods.starcraft.mercury.dimension.GCMercuryWorldProvider;
 import mattparks.mods.starcraft.mercury.entities.SCCoreEntityRocketT4;
 import mattparks.mods.starcraft.mercury.items.GCMercuryItems;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;

@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.eris.wgen;
 import java.util.Random;
 
 import mattparks.mods.starcraft.core.StarcraftEris;
-import mattparks.mods.starcraft.eris.GCEris;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;

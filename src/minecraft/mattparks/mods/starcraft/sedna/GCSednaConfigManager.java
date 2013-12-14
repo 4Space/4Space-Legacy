@@ -3,8 +3,6 @@ package mattparks.mods.starcraft.sedna;
 import java.io.File;
 import java.util.logging.Level;
 
-import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
-import net.minecraft.item.Item;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 

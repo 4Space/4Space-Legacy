@@ -1,24 +1,21 @@
 package mattparks.mods.starcraft.sedna.client.renderer.entity;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
 import java.util.Random;
 
-import net.minecraft.block.Block;
 import mattparks.mods.starcraft.sedna.GCSedna;
 import mattparks.mods.starcraft.sedna.client.renderer.model.ModelEvolvedEnderman;
+import mattparks.mods.starcraft.sedna.entity.monster.EntityEvolvedEnderman;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.entity.RenderLiving;
-import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
-import mattparks.mods.starcraft.sedna.entity.monster.EntityEvolvedEnderman;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL12;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedEnderman extends RenderLiving

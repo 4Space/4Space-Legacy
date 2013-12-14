@@ -1,6 +1,5 @@
 package mattparks.mods.starcraft.core.blocks;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import net.minecraft.block.BlockStationary;
 import net.minecraft.block.material.Material;
 

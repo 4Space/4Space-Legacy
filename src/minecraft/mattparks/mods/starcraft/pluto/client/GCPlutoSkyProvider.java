@@ -7,7 +7,6 @@ import mattparks.mods.starcraft.eris.GCEris;
 import mattparks.mods.starcraft.pluto.GCPluto;
 import mattparks.mods.starcraft.pluto.dimension.GCPlutoWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.GLAllocation;

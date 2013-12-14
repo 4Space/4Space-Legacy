@@ -4,13 +4,13 @@ import ic2.api.item.Items;
 
 import java.util.Random;
 
-import universalelectricity.compatibility.Compatibility;
 import mattparks.mods.starcraft.core.StarcraftMercury;
 import mattparks.mods.starcraft.core.StarcraftVenus;
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
+import universalelectricity.compatibility.Compatibility;
 
 public class StarcraftOre extends Block implements IDetectableResource
 {

@@ -7,7 +7,6 @@ import mattparks.mods.starcraft.neptune.GCNeptune;
 import mattparks.mods.starcraft.uranus.GCUranus;
 import mattparks.mods.starcraft.uranus.dimension.GCUranusWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.GLAllocation;

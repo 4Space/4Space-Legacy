@@ -3,7 +3,6 @@ package mattparks.mods.starcraft.eris.wgen;
 import java.util.Random;
 
 import mattparks.mods.starcraft.core.StarcraftEris;
-import mattparks.mods.starcraft.eris.GCEris;
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreWorldGenMinableMeta;
 import net.minecraft.world.World;

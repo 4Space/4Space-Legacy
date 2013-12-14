@@ -3,8 +3,8 @@ package mattparks.mods.starcraft.pluto;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.StarcraftPluto;
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.core.StarcraftPluto;
 import mattparks.mods.starcraft.pluto.dimension.GCPlutoTeleportType;
 import mattparks.mods.starcraft.pluto.dimension.GCPlutoWorldProvider;
 import mattparks.mods.starcraft.pluto.items.GCPlutoItems;

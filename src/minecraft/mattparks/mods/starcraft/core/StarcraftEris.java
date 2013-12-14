@@ -1,23 +1,14 @@
 package mattparks.mods.starcraft.core;
 
-import mattparks.mods.starcraft.core.blocks.*;
+import mattparks.mods.starcraft.core.blocks.PlutoStone;
+import mattparks.mods.starcraft.core.blocks.StarcraftBlock;
+import mattparks.mods.starcraft.core.blocks.StarcraftGrass;
+import mattparks.mods.starcraft.core.blocks.StarcraftOre;
 import mattparks.mods.starcraft.eris.GCEris;
-import mattparks.mods.starcraft.jupiter.GCJupiter;
-import mattparks.mods.starcraft.mercury.GCMercury;
-import mattparks.mods.starcraft.pluto.GCPluto;
-import mattparks.mods.starcraft.sedna.GCSedna;
-import mattparks.mods.starcraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockStone;
-import net.minecraft.block.BlockStoneBrick;
-import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -27,7 +18,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(name = StarcraftEris.NAME, version = StarcraftCore.LOCALMAJVERSION + "." + StarcraftCore.LOCALMINVERSION + "." + StarcraftCore.LOCALBUILDVERSION, useMetadata = true, modid = StarcraftEris.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
 @NetworkMod(channels = { StarcraftEris.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)

@@ -1,9 +1,7 @@
 package mattparks.mods.starcraft.core.blocks;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityEvolvedBlaze;
 import net.minecraft.block.BlockDragonEgg;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;

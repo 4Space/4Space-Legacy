@@ -3,8 +3,8 @@ package mattparks.mods.starcraft.mercury;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.StarcraftMercury;
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.core.StarcraftMercury;
 import mattparks.mods.starcraft.mercury.dimension.GCMercuryTeleportType;
 import mattparks.mods.starcraft.mercury.dimension.GCMercuryWorldProvider;
 import mattparks.mods.starcraft.mercury.entities.SCCoreEntityRocketT4;

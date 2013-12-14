@@ -1,18 +1,15 @@
 package mattparks.mods.starcraft.venus.client.render.entities;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import mattparks.mods.starcraft.venus.GCVenus;
 import mattparks.mods.starcraft.venus.client.model.GCVenusModelEvolvedBlaze;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityEvolvedBlaze;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import net.minecraft.client.model.ModelBlaze;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.util.ResourceLocation;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class GCVenusRenderEvolvedBlaze extends RenderLiving

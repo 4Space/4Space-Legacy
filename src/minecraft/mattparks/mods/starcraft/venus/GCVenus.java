@@ -3,8 +3,8 @@ package mattparks.mods.starcraft.venus;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.StarcraftVenus;
 import mattparks.mods.starcraft.core.StarcraftCore;
+import mattparks.mods.starcraft.core.StarcraftVenus;
 import mattparks.mods.starcraft.venus.dimension.GCVenusTeleportType;
 import mattparks.mods.starcraft.venus.dimension.GCVenusWorldProvider;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityEvolvedBlaze;
@@ -20,7 +20,6 @@ import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import micdoodle8.mods.galacticraft.core.world.gen.GCCoreOverworldGenerator;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
@@ -37,7 +36,6 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 

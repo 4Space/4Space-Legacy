@@ -5,13 +5,13 @@ import java.io.DataInputStream;
 import java.util.ArrayList;
 import java.util.EnumSet;
 
-import mattparks.mods.starcraft.venus.client.model.SCCoreModelSpaceshipTier3;
-import mattparks.mods.starcraft.venus.client.render.item.SCCoreItemRendererSpaceshipT3;
 import mattparks.mods.starcraft.venus.CommonProxyVenus;
 import mattparks.mods.starcraft.venus.GCVenus;
+import mattparks.mods.starcraft.venus.client.model.SCCoreModelSpaceshipTier3;
 import mattparks.mods.starcraft.venus.client.render.entities.GCVenusRenderEvolvedBlaze;
 import mattparks.mods.starcraft.venus.client.render.entities.GCVenusRenderFlameling;
 import mattparks.mods.starcraft.venus.client.render.entities.GCVenusRenderVenusianVillager;
+import mattparks.mods.starcraft.venus.client.render.item.SCCoreItemRendererSpaceshipT3;
 import mattparks.mods.starcraft.venus.client.sounds.GCVenusSounds;
 import mattparks.mods.starcraft.venus.dimension.GCVenusWorldProvider;
 import mattparks.mods.starcraft.venus.entities.GCVenusEntityEvolvedBlaze;

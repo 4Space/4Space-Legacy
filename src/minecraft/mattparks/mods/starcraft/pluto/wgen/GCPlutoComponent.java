@@ -1,6 +1,7 @@
 package mattparks.mods.starcraft.pluto.wgen;
 
 import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.world.EnumSkyBlock;

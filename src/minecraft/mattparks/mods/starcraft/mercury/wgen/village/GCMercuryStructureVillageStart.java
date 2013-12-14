@@ -3,6 +3,7 @@ package mattparks.mods.starcraft.mercury.wgen.village;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
+
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureComponent;
 import net.minecraft.world.gen.structure.StructureStart;

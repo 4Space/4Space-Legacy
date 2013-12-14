@@ -2,10 +2,9 @@ package mattparks.mods.starcraft.venus.recipe;
 
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.venus.util.GCVenusUtil;
 import mattparks.mods.starcraft.core.StarcraftVenus;
 import mattparks.mods.starcraft.venus.items.GCVenusItems;
-import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
+import mattparks.mods.starcraft.venus.util.GCVenusUtil;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.util.RecipeUtil;
 import net.minecraft.block.Block;

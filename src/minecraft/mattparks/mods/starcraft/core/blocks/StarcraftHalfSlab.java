@@ -2,7 +2,6 @@ package mattparks.mods.starcraft.core.blocks;
 
 import java.util.List;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;

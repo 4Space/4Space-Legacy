@@ -1,7 +1,6 @@
 package mattparks.mods.starcraft.mercury.items;
 
 import mattparks.mods.starcraft.mercury.GCMercury;
-import mattparks.mods.starcraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
