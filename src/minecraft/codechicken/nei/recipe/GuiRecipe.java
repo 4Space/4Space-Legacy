@@ -38,8 +38,7 @@ public abstract class GuiRecipe extends GuiContainer implements IGuiContainerOve
         }
     }
     
-//    @Override
-// Modified By Mattparks
+    @Override
     public boolean isClientOnly()
     {
         return true;
@@ -150,8 +149,7 @@ public abstract class GuiRecipe extends GuiContainer implements IGuiContainerOve
         refreshPage();
     }
     
-//    @Override
-// Modified By Mattparks
+    @Override
     public List<String> handleTooltip(int mousex, int mousey, List<String> currenttip)
     {
         IRecipeHandler recipehandler = currenthandlers.get(recipetype);
@@ -162,8 +160,7 @@ public abstract class GuiRecipe extends GuiContainer implements IGuiContainerOve
         return currenttip;
     }
     
-//    @Override
-// Modified By Mattparks
+    @Override
     public List<String> handleItemTooltip(ItemStack stack, int mousex, int mousey, List<String> currenttip)
     {
         IRecipeHandler recipehandler = currenthandlers.get(recipetype);
@@ -334,8 +331,7 @@ public abstract class GuiRecipe extends GuiContainer implements IGuiContainerOve
         return new Point(5, 16 + (recipe % currenthandlers.get(recipetype).recipiesPerPage()) * 65);
     }
     
-//    @Override
-// Modified By Mattparks
+    @Override
     public void mouseScrolled(int i)
     {
         if(new Rectangle(guiLeft, guiTop, xSize, ySize).contains(GuiDraw.getMousePosition()))

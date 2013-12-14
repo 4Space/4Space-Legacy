@@ -130,7 +130,7 @@ public class NEIController implements IContainerSlotClickHandler, IContainerInpu
         {
             for(int i1 = 0; i1 < 64; i1++)//click this slot 64 times
                 gui.handleMouseClick(slot, slotIndex, button, 0);
-// Modified By Mattparks
+         // Modified By Mattparks
             return true;
         }
         
@@ -138,7 +138,7 @@ public class NEIController implements IContainerSlotClickHandler, IContainerInpu
         {
             ItemStack held = NEIClientUtils.getHeldItem();
             gui.handleMouseClick(slot, slotIndex, button, 0);
-// Modified By Mattparks
+         // Modified By Mattparks
             if(slot.isItemValid(held) && !ItemInfo.fastTransferExemptions.contains(slot.getClass()))
             {
                 fastTransferManager.performMassTransfer(gui, pickedUpFromSlot, slotIndex, held);

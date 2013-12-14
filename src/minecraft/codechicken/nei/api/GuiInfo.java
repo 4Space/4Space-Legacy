@@ -35,7 +35,7 @@ public class GuiInfo
         Minecraft mc = Minecraft.getMinecraft();
         if(mc.currentScreen instanceof GuiContainer)
             ((GuiContainer)mc.currentScreen).handleMouseClick(null, -999, 0, 0);
-// Modified By Mattparks
+     // Modified By Mattparks
         
         mc.displayGuiScreen(gui);
         if(gui instanceof GuiContainer)

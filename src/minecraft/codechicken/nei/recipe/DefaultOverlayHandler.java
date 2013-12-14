@@ -315,7 +315,7 @@ public class DefaultOverlayHandler implements IOverlayHandler
             slot = container.getSlot(slotIndex);
 
         window.handleMouseClick(slot, slotIndex, button, modifier);
-// Modified By Mattparks
+     // Modified By Mattparks
     }
 
     public DistributedIngred findIngred(List<DistributedIngred> ingredStacks, ItemStack pstack)

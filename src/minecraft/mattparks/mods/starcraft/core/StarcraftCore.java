@@ -2,9 +2,9 @@ package mattparks.mods.starcraft.core;
 
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.network.SCCorePacketHandlerServer;
-import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
-import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
+import mattparks.mods.starcraft.core.network.GCCorePacketHandlerServer;
+import mattparks.mods.starcraft.core.network.GCCoreConnectionHandler;
+import mattparks.mods.starcraft.core.network.GCCorePacketManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
@@ -98,6 +98,6 @@ public class StarcraftCore
     @EventHandler
     public void serverStarting(FMLServerStartingEvent event)
     {
-        NetworkRegistry.instance().registerChannel(new SCCorePacketHandlerServer(), StarcraftCore.CHANNEL, Side.SERVER);
+        NetworkRegistry.instance().registerChannel(new GCCorePacketHandlerServer(), StarcraftCore.CHANNEL, Side.SERVER);
     }
 }

@@ -328,7 +328,7 @@ public class FastTransferManager
             slot = container.getSlot(slotIndex);
 
         window.handleMouseClick(slot, slotIndex, button, modifier);
-// Modified By Mattparks
+     // Modified By Mattparks
     }
 
     private boolean fillZoneWithHeldItem(GuiContainer window, int zoneIndex)

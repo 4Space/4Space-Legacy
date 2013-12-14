@@ -15,7 +15,7 @@ public class DefaultSlotClickHandler implements IContainerSlotClickHandler
     {
         if(!eventconsumed)
             gui.handleMouseClick(slot, slotIndex, button, slotIndex != -999 ? modifier : 0);
-// Modified By Mattparks
+     // Modified By Mattparks
         return true;
     }
 
