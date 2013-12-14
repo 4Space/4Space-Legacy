@@ -6,6 +6,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import mattparks.mods.starcraft.sedna.GCSedna;
 import mattparks.mods.starcraft.sedna.client.renderer.model.ModelEvolvedEnderman;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.entity.RenderLiving;
@@ -22,8 +23,8 @@ import org.lwjgl.opengl.GL12;
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedEnderman extends RenderLiving
 {
-    private static final ResourceLocation EvolvedEndermanEyesTexture = new ResourceLocation("textures/entity/enderman/enderman_eyes.png");
-    private static final ResourceLocation EvolvedEndermanTextures = new ResourceLocation("textures/entity/enderman/enderman.png");
+    private static final ResourceLocation EvolvedEndermanEyesTexture = new ResourceLocation(GCSedna.ASSET_DOMAIN, "textures/model/evolvedEnderman_eyes.png");
+    private static final ResourceLocation EvolvedEndermanTextures = new ResourceLocation(GCSedna.ASSET_DOMAIN, "textures/model/evolvedEnderman.png");
 
     /** The model of the EvolvedEnderman */
     private ModelEvolvedEnderman EvolvedEndermanModel;

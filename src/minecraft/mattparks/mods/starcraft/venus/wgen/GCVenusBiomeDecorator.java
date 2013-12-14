@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreWorldGenMinableMeta;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -40,8 +39,7 @@ public class GCVenusBiomeDecorator
         this.coalGen = new GCCoreWorldGenMinableMeta(StarcraftVenus.VenusCoalOre.blockID, 9, 5, false, StarcraftVenus.VenusStone.blockID, 4);     
         this.tinGen = new GCCoreWorldGenMinableMeta(StarcraftVenus.VenusTinOre.blockID, 5, 6, false, StarcraftVenus.VenusStone.blockID, 4);  
         this.copperGen = new GCCoreWorldGenMinableMeta(StarcraftVenus.VenusCopperOre.blockID, 5, 7, false, StarcraftVenus.VenusStone.blockID, 4);      
-    
-        this.lavaGen = new GCCoreWorldGenMinableMeta(Block.lavaMoving.blockID, 32, 0, false, StarcraftVenus.VenusGrass.blockID, 4); 
+        this.lavaGen = new GCCoreWorldGenMinableMeta(Block.lavaMoving.blockID, 45, 3, false, StarcraftVenus.VenusStone.blockID, 4);
     }
 
     public void decorate(World worldObj, Random rand, int chunkX, int chunkZ)
@@ -62,17 +60,6 @@ public class GCVenusBiomeDecorator
         }
     }
 
-    protected void genOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY)
-    {
-        for (int var5 = 0; var5 < amountPerChunk; ++var5)
-        {
-            final int var6 = this.chunkX + this.randomGenerator.nextInt(16);
-            final int var7 = this.randomGenerator.nextInt(maxY - minY) + minY;
-            final int var8 = this.chunkZ + this.randomGenerator.nextInt(16);
-            worldGenerator.generate(this.worldObj, this.randomGenerator, var6, var7, var8);
-        }
-    }
-
     protected void generateVenus()
     {
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Pre(this.worldObj, this.randomGenerator, this.chunkX, this.chunkZ));
@@ -84,9 +71,19 @@ public class GCVenusBiomeDecorator
         this.genOre(36, this.coalGen, 0, 128);
         this.genOre(35, this.tinGen, 0, 128);
         this.genOre(36, this.copperGen, 0, 128);
-        
-        this.genOre(36, this.lavaGen, 0, 128);
+        this.genOre(36, this.lavaGen, 0, 200);
         
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Post(this.worldObj, this.randomGenerator, this.chunkX, this.chunkZ));
+    }
+
+    protected void genOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY)
+    {
+        for (int var5 = 0; var5 < amountPerChunk; ++var5)
+        {
+            final int var6 = this.chunkX + this.randomGenerator.nextInt(16);
+            final int var7 = this.randomGenerator.nextInt(maxY - minY) + minY;
+            final int var8 = this.chunkZ + this.randomGenerator.nextInt(16);
+            worldGenerator.generate(this.worldObj, this.randomGenerator, var6, var7, var8);
+        }
     }
 }
