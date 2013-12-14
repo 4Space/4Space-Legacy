@@ -53,14 +53,10 @@ import cpw.mods.fml.common.network.Player;
 import cpw.mods.fml.relauncher.Side;
 
 /**
- * GCCorePacketHandlerClient.java
- *
- * This file is part of the Galacticraft project
- *
- * @author micdoodle8
- * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
- * 
- */
+*
+* Original code by micdoodle8
+* 
+*/
 public class GCCorePacketHandlerClient implements IPacketHandler
 {
     public static enum EnumPacketClient
@@ -316,7 +312,7 @@ public class GCCorePacketHandlerClient implements IPacketHandler
         case UPDATE_CONTROLLABLE_ENTITY:
             try
             {
-                new GCCorePacketEntityUpdate().handlePacket(data, new Object[] { player }, Side.SERVER);
+//                new GCCorePacketEntityUpdate().handlePacket(data, new Object[] { player }, Side.SERVER);
             }
             catch (final Exception e)
             {
@@ -493,7 +489,7 @@ public class GCCorePacketHandlerClient implements IPacketHandler
         case UPDATE_LANDER:
             try
             {
-                new GCCorePacketLanderUpdate().handlePacket(data, new Object[] { player }, Side.CLIENT);
+//                new GCCorePacketLanderUpdate().handlePacket(data, new Object[] { player }, Side.CLIENT);
             }
             catch (Exception e1)
             {
@@ -503,7 +499,7 @@ public class GCCorePacketHandlerClient implements IPacketHandler
         case UPDATE_PARACHEST:
             try
             {
-                new GCCorePacketParachestUpdate().handlePacket(data, new Object[] { player }, Side.CLIENT);
+//                new GCCorePacketParachestUpdate().handlePacket(data, new Object[] { player }, Side.CLIENT);
             }
             catch (Exception e)
             {

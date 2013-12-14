@@ -1,10 +1,5 @@
 package mattparks.mods.starcraft.core.network;
 
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.entities.player.GCCorePlayerMP;
-import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerClient.EnumPacketClient;
-import micdoodle8.mods.galacticraft.core.util.PacketUtil;
-import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import net.minecraft.network.INetworkManager;
 import net.minecraft.network.NetLoginHandler;
 import net.minecraft.network.packet.NetHandler;
@@ -15,12 +10,8 @@ import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.common.network.Player;
 
 /**
- * GCCoreConnectionHandler.java
  *
- * This file is part of the Galacticraft project
- *
- * @author micdoodle8
- * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * Original code by micdoodle8
  * 
  */
 public class GCCoreConnectionHandler implements IConnectionHandler
@@ -38,8 +29,8 @@ public class GCCoreConnectionHandler implements IConnectionHandler
         if (GCCoreConnectionHandler.clientConnected)
         {
             GCCoreConnectionHandler.clientConnected = false;
-            WorldUtil.unregisterPlanets();
-            WorldUtil.unregisterSpaceStations();
+//            WorldUtil.unregisterPlanets();
+//            WorldUtil.unregisterSpaceStations();
         }
     }
 
@@ -57,19 +48,19 @@ public class GCCoreConnectionHandler implements IConnectionHandler
     @Override
     public String connectionReceived(NetLoginHandler netHandler, INetworkManager manager)
     {
-        manager.addToSendQueue(GCCorePacketDimensionListSpaceStations.buildDimensionListPacket(WorldUtil.registeredSpaceStations));
-        manager.addToSendQueue(GCCorePacketDimensionListPlanets.buildDimensionListPacket(WorldUtil.registeredPlanets));
+//        manager.addToSendQueue(GCCorePacketDimensionListSpaceStations.buildDimensionListPacket(WorldUtil.registeredSpaceStations));
+//        manager.addToSendQueue(GCCorePacketDimensionListPlanets.buildDimensionListPacket(WorldUtil.registeredPlanets));
         return null;
     }
 
     @Override
     public void playerLoggedIn(Player player, NetHandler netHandler, INetworkManager manager)
     {
-        if (player instanceof GCCorePlayerMP)
+//        if (player instanceof GCCorePlayerMP)
         {
-            final GCCorePlayerMP playerMP = (GCCorePlayerMP) player;
-            PacketDispatcher.sendPacketToPlayer(GCCorePacketSchematicList.buildSchematicListPacket(playerMP.getUnlockedSchematics()), player);
-            PacketDispatcher.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumPacketClient.UPDATE_SPACESTATION_CLIENT_ID, new Object[] { ((GCCorePlayerMP) player).getSpaceStationDimensionID() }), player);
+//            final GCCorePlayerMP playerMP = (GCCorePlayerMP) player;
+//            PacketDispatcher.sendPacketToPlayer(GCCorePacketSchematicList.buildSchematicListPacket(playerMP.getUnlockedSchematics()), player);
+//            PacketDispatcher.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumPacketClient.UPDATE_SPACESTATION_CLIENT_ID, new Object[] { ((GCCorePlayerMP) player).getSpaceStationDimensionID() }), player);
         }
     }
 }

@@ -24,14 +24,10 @@ import cpw.mods.fml.common.network.IPacketHandler;
 import cpw.mods.fml.common.network.Player;
 
 /**
- * GCCorePacketManager.java
- *
- * This file is part of the Galacticraft project
- *
- * @author micdoodle8
- * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
- * 
- */
+*
+* Original code by micdoodle8
+* 
+*/
 public class GCCorePacketManager extends PacketManager implements IPacketHandler, IPacketReceiver
 {
     public enum GCCorePacketType
