@@ -34,6 +34,7 @@ public class GCVenusItems
     public static Item gemBoots;
     
     public static Item vurnBerry;
+    public static Item VurnBerryOnAStick;
     
 //    public static Item venusBattery;
     
@@ -75,6 +76,8 @@ public class GCVenusItems
 
         GCVenusItems.vurnBerry = (new GCVenusVurnBerry(GCVenusConfigManager.idVurnBerry, 4, 0.6F, StarcraftVenus.VurnBerryBush.blockID, Block.tilledField.blockID)).setUnlocalizedName("vurnBerry").setTextureName("starcraftvenus:vurnBerry");
 
+        GCVenusItems.VurnBerryOnAStick = new ItemVurnBerryOnAStick(GCVenusConfigManager.idVurnBerryOnAStick).setUnlocalizedName("vurnBerryOnAStick").setTextureName("starcraftvenus:vurnBerryOnAStick");
+        
         GCVenusItems.T3Schematic = new GCVenusItemSchematic(GCVenusConfigManager.idTtemVenusT3Schematic);
         GCVenusItems.spaceshipT3 = new GCVenusItemSpaceshipTier3(GCVenusConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");
     }

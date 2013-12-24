@@ -9,6 +9,7 @@ item.rawUnunpetium.name=Raw Ununpetium
 item.rayGun.name=Ray Gun
 item.blueGem.name=Blue Gem
 item.blueGemPlate.name=Blue Gem Plate
+item.ingotFrozenIron.name=Frozen iron Ingot
 
 # TOOLS
 item.blueGemPick.name=Blue Gem Pickaxe
@@ -33,6 +34,8 @@ tile.BlockUnunpetium.name=Ununpetium Block
 tile.UnunpentiumOre.name=Ununpentium Ore
 tile.BlueGemOre.name=Blue Gem Ore
 tile.FrozenIronOre.name=Frozen Iron Ore
+tile.FrozenIronBlock.name=Frozen Iron Block
+tile.BlockBlueGem.name=Blue Gem Block
 
 				
 # ENTITYS

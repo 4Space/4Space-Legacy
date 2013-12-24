@@ -78,8 +78,7 @@ public class StarcraftSedna
 			.setUnlocalizedName("PalladiumBlock")
 			.setTextureName("starcraftsedna:palladiumBlock")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
-		
-		
+
         @Instance(value = "StarcraftSedna")
         public static StarcraftSedna instance;
         

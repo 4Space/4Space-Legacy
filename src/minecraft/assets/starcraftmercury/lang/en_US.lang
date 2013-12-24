@@ -10,6 +10,7 @@ item.jetpack.name=Jetpack
 item.jetpackFuel.name=Jetpack Fuel
 item.gravityGeneratorCore.name=Gravity Generator Core
 item.iridiumCrystals.name=Iridium Crystals
+item.ingotIridium.name=Iridium Ingot
 
 # TOOLS
 item.iridiumPick.name=Iridium Pickaxe
@@ -35,6 +36,7 @@ tile.MercuryCoalOre.name=Mercury Coal Ore
 tile.MercuryTinOre.name=Mercury Tin Ore
 tile.MercuryIridiumOre.name=Mercury Iridium Ore
 tile.MercuryCopperOre.name=Mercury Copper Ore
+tile.IridiumBlock.name=Iridium Block
 
 tile.caravanModule.name=Portable Space Tent
 tile.GravityGenerator.name=Gravity Generator

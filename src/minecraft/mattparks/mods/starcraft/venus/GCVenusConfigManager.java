@@ -17,6 +17,7 @@ public class GCVenusConfigManager
 
     // ITEMS
     public static int idItemVenusBasic;
+    public static int idVurnBerryOnAStick;
 
     // BLOCKS
 
@@ -119,7 +120,9 @@ public class GCVenusConfigManager
             GCVenusConfigManager.idItemVenusBattery = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemVenusBattery", 7871).getInt(7871);
             
             GCVenusConfigManager.idVurnBerry = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idVurnBerry", 7872).getInt(7872);
+            GCVenusConfigManager.idVurnBerryOnAStick = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idVurnBerryOnAStick", 7879).getInt(7879);
 
+            
             GCVenusConfigManager.idTtemVenusT3Schematic = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idTtemVenusT3Schematic", 7873).getInt(7873);
             GCVenusConfigManager.idItemSpaceshipTier3 = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier3", 7874).getInt(7874);
             

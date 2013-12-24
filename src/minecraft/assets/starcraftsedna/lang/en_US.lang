@@ -7,6 +7,8 @@ item.tier8.desc=Tier 8
 item.plateHeavyT8.name=Heavy-Duty Plate
 item.rawPalladium.name=Raw Palladium
 item.refinedPalladium.name=Refined Palladium
+item.ingotPalladuim.name=Palladuim Ingot
+item.palladiumPlate.name=Palladuim Plate
 
 # TOOLS
 

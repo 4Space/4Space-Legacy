@@ -20,10 +20,7 @@ item.plateHeavyT3.name=Heavy-Duty Plate
 
 item.sulferDust.name=Sulfer Dust
 item.venusPowerCrystal.name=Power Crystal
-item.lazerCore.name=Lazer Core
-item.blueLazer.name=Blue Lazer
-item.redLazer.name=Red Lazer
-item.greenLazer.name=Green Lazer
+item.vurnBerryOnAStick.name=Vurn Berry On A Stick
 
 # TOOLS
 item.sulferPick.name=Sulfer Pickaxe

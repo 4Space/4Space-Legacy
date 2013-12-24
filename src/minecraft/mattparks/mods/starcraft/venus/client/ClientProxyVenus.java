@@ -20,7 +20,7 @@ import mattparks.mods.starcraft.venus.entities.GCVenusEntityVenusianVillager;
 import mattparks.mods.starcraft.venus.entities.SCCoreEntityRocketT3;
 import mattparks.mods.starcraft.venus.items.GCVenusItems;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
-import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
+import mattparks.mods.starcraft.core.client.render.entities.GCCoreRenderSpaceship;
 import micdoodle8.mods.galacticraft.core.client.sounds.GCCoreSoundUpdaterSpaceship;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
