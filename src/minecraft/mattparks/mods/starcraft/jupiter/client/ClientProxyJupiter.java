@@ -13,7 +13,7 @@ import mattparks.mods.starcraft.jupiter.dimension.GCJupiterWorldProvider;
 import mattparks.mods.starcraft.jupiter.entities.SCCoreEntityRocketT5;
 import mattparks.mods.starcraft.jupiter.items.GCJupiterItems;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
-import mattparks.mods.starcraft.core.client.render.entities.GCCoreRenderSpaceship;
+import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
 import micdoodle8.mods.galacticraft.core.client.sounds.GCCoreSoundUpdaterSpaceship;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;

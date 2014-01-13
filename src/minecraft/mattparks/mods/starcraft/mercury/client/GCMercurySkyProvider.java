@@ -5,8 +5,8 @@ import java.util.Random;
 import mattparks.mods.starcraft.mercury.GCMercury;
 import mattparks.mods.starcraft.mercury.dimension.GCMercuryWorldProvider;
 import mattparks.mods.starcraft.venus.GCVenus;
-//TODO remove Venus dependency
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.GLAllocation;
@@ -25,7 +25,7 @@ public class GCMercurySkyProvider extends IRenderHandler
 {
     private static final ResourceLocation venusTexture = new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/gui/planets/venus.png");
     private static final ResourceLocation sunTexture = new ResourceLocation(GCMercury.ASSET_DOMAIN, "textures/gui/planets/sun.png");
-
+    
     public int starGLCallList = GLAllocation.generateDisplayLists(3);
     public int glSkyList;
     public int glSkyList2;
@@ -157,7 +157,6 @@ public class GCMercurySkyProvider extends IRenderHandler
 
         GL11.glEnable(GL11.GL_TEXTURE_2D);
 
-        // STARS:
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         GL11.glDisable(GL11.GL_BLEND);
         GL11.glEnable(GL11.GL_ALPHA_TEST);
@@ -196,7 +195,7 @@ public class GCMercurySkyProvider extends IRenderHandler
 
         GL11.glDisable(GL11.GL_BLEND);
 
-        // VENUS:
+        // OVERWORLD:
         var12 = 0.5F;
         GL11.glScalef(0.6F, 0.6F, 0.6F);
         GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
