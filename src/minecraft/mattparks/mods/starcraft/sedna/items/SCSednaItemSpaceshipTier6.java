@@ -2,8 +2,8 @@ package mattparks.mods.starcraft.sedna.items;
 
 import java.util.List;
 
-import mattparks.mods.starcraft.jupiter.GCJupiter;
-import mattparks.mods.starcraft.jupiter.entities.SCCoreEntityRocketT5;
+import mattparks.mods.starcraft.sedna.GCSedna;
+import mattparks.mods.starcraft.sedna.entities.SCSednaEntityRocketT6;
 import mattparks.mods.starcraft.sedna.GCSedna;
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType;
@@ -114,7 +114,7 @@ public class SCSednaItemSpaceshipTier6 extends Item implements IHoldableItem
 
                 if (par1ItemStack.getItemDamage() < 10)
                 {
-                    rocket = new SCCoreEntityRocketT5(par3World, centerX, centerY + 4.2D, centerZ, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
+                    rocket = new SCSednaEntityRocketT6(par3World, centerX, centerY + 4.2D, centerZ, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
                 }
 
                 par3World.spawnEntityInWorld(rocket);
