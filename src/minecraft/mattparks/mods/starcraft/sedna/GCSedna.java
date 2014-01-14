@@ -6,6 +6,7 @@ import java.util.HashMap;
 import mattparks.mods.starcraft.core.StarcraftCore;
 import mattparks.mods.starcraft.sedna.dimension.GCSednaTeleportType;
 import mattparks.mods.starcraft.sedna.dimension.GCSednaWorldProvider;
+import mattparks.mods.starcraft.sedna.entities.SCSednaEntityRocketT6;
 import mattparks.mods.starcraft.sedna.entity.monster.EntityEvolvedEnderman;
 import mattparks.mods.starcraft.sedna.items.GCSednaItems;
 import mattparks.mods.starcraft.sedna.network.GCSednaPacketHandlerServer;
@@ -150,7 +151,7 @@ public class GCSedna
     
     public void registerOtherEntities()
     {
-    	;
+    	this.registerGalacticraftNonMobEntity(SCSednaEntityRocketT6.class, "SpaceshipT6", GCSednaConfigManager.idEntitySpaceshipTier6, 150, 1, true);
     }
 
     public void registerTileEntities()

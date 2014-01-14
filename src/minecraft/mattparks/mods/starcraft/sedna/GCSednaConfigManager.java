@@ -20,6 +20,7 @@ public class GCSednaConfigManager
 
     // ITEMS
     public static int idItemSednaBasic;
+    public static int idItemSpaceshipTier6;
 
     // ARMOR
     public static int idArmorGravityHelmet;
@@ -33,10 +34,13 @@ public class GCSednaConfigManager
     // TOOLS
 
     // ENTITIES
+    public static int idEntitySpaceshipTier6;
 
     // GUI
+    public static int idGuiRocketCraftingBenchT5;
 
     // SCHEMATIC
+    public static int idSchematicRocketT5;
 
     public static boolean generateOtherMods;
 
@@ -68,7 +72,15 @@ public class GCSednaConfigManager
             GCSednaConfigManager.idArmorGravityLeggings = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGravityLeggings", 6869).getInt(6869);
             GCSednaConfigManager.idArmorGravityBoots = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGravityBoots", 6870).getInt(6870);
 
-            GCSednaConfigManager.idEntityEvolvedEnderman = GCSednaConfigManager.configuration.get("Entities", "idEntityEvolvedEnderman", 293).getInt(293);
+            GCSednaConfigManager.idEntityEvolvedEnderman = GCSednaConfigManager.configuration.get("Entities", "idEntityEvolvedEnderman", 693).getInt(693);
+            
+            GCSednaConfigManager.idItemSpaceshipTier6 = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier6", 6545).getInt(6545);
+            
+            GCSednaConfigManager.idEntitySpaceshipTier6 = GCSednaConfigManager.configuration.get("Entities", "idEntitySpaceshipTier6", 675).getInt(675);
+            
+            GCSednaConfigManager.idGuiRocketCraftingBenchT5 = GCSednaConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT5", 645).getInt(645);
+            
+            GCSednaConfigManager.idSchematicRocketT5 = GCSednaConfigManager.configuration.get("Schematic", "idSchematicRocketT5", 6).getInt(6);
             
             //Block id's 7755-7756 are used by Starcraft mercury
             
