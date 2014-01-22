@@ -1,6 +1,6 @@
 package mattparks.mods.starcraft.vesta.client;
 
-import mattparks.mods.starcraft.saturn.GCSaturn;
+import mattparks.mods.starcraft.vesta.GCVesta;
 import micdoodle8.mods.galacticraft.api.world.ICelestialBodyRenderer;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.util.ResourceLocation;
@@ -11,13 +11,13 @@ public class GCVestaSlotRenderer implements ICelestialBodyRenderer
     @Override
     public String getPlanetName()
     {
-        return "Saturn";
+        return "Vesta";
     }
 
     @Override
     public ResourceLocation getPlanetSprite()
     {
-        return new ResourceLocation(GCSaturn.ASSET_DOMAIN, "textures/gui/planets/saturn.png");
+        return new ResourceLocation(GCVesta.ASSET_DOMAIN, "textures/gui/planets/vesta.png");
     }
 
     @Override

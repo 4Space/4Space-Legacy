@@ -14,14 +14,14 @@ public class GCVestaWorldChunkManager extends WorldChunkManager
     @Override
     public boolean areBiomesViable(int par1, int par2, int par3, List par4List)
     {
-        return par4List.contains(GCVestaBiomeGenBase.venusFlat);
+        return par4List.contains(GCVestaBiomeGenBase.vestaFlat);
     }
 
     @SuppressWarnings("rawtypes")
     @Override
     public ChunkPosition findBiomePosition(int par1, int par2, int par3, List par4List, Random par5Random)
     {
-        return par4List.contains(GCVestaBiomeGenBase.venusFlat) ? new ChunkPosition(par1 - par3 + par5Random.nextInt(par3 * 2 + 1), 0, par2 - par3 + par5Random.nextInt(par3 * 2 + 1)) : null;
+        return par4List.contains(GCVestaBiomeGenBase.vestaFlat) ? new ChunkPosition(par1 - par3 + par5Random.nextInt(par3 * 2 + 1), 0, par2 - par3 + par5Random.nextInt(par3 * 2 + 1)) : null;
     }
 
     @Override
@@ -33,7 +33,7 @@ public class GCVestaWorldChunkManager extends WorldChunkManager
     @Override
     public BiomeGenBase getBiomeGenAt(int par1, int par2)
     {
-        return GCVestaBiomeGenBase.venusFlat;
+        return GCVestaBiomeGenBase.vestaFlat;
     }
 
     @Override
@@ -44,7 +44,7 @@ public class GCVestaWorldChunkManager extends WorldChunkManager
             par1ArrayOfBiomeGenBase = new BiomeGenBase[par4 * par5];
         }
 
-        Arrays.fill(par1ArrayOfBiomeGenBase, 0, par4 * par5, GCVestaBiomeGenBase.venusFlat);
+        Arrays.fill(par1ArrayOfBiomeGenBase, 0, par4 * par5, GCVestaBiomeGenBase.vestaFlat);
         return par1ArrayOfBiomeGenBase;
     }
 
@@ -80,7 +80,7 @@ public class GCVestaWorldChunkManager extends WorldChunkManager
             par1ArrayOfBiomeGenBase = new BiomeGenBase[par4 * par5];
         }
 
-        Arrays.fill(par1ArrayOfBiomeGenBase, 0, par4 * par5, GCVestaBiomeGenBase.venusFlat);
+        Arrays.fill(par1ArrayOfBiomeGenBase, 0, par4 * par5, GCVestaBiomeGenBase.vestaFlat);
         return par1ArrayOfBiomeGenBase;
     }
 }

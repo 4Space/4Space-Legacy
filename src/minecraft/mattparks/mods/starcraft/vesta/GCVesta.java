@@ -3,15 +3,15 @@ package mattparks.mods.starcraft.vesta;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.core.StarcraftCore;
-import mattparks.mods.starcraft.saturn.dimension.GCSaturnTeleportType;
-import mattparks.mods.starcraft.saturn.dimension.GCSaturnWorldProvider;
-import mattparks.mods.starcraft.saturn.network.GCSaturnPacketHandlerServer;
+import mattparks.mods.starcraft.vesta.dimension.GCVestaTeleportType;
+import mattparks.mods.starcraft.vesta.dimension.GCVestaWorldProvider;
+import mattparks.mods.starcraft.vesta.network.GCVestaPacketHandlerServer;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -30,29 +30,36 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-@Mod(name = GCVesta.NAME, version = StarcraftCore.LOCALMAJVERSION + "." + StarcraftCore.LOCALMINVERSION + "." + StarcraftCore.LOCALBUILDVERSION, useMetadata = true, modid = GCVesta.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
-@NetworkMod(channels = { GCVesta.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
+@Mod(modid="StarcraftVesta", name="StarcraftVesta", version="0.0.1", dependencies = "required-after:GalacticraftCore")
+@NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class GCVesta
 {
-    public static final String NAME = "Starcraft Saturn";
-    public static final String MODID = "GCSaturn";
-    public static final String CHANNEL = "GCSaturn";
-    public static final String CHANNELENTITIES = "GCSaturnEntities";
+    public static final String NAME = "Starcraft Vesta";
+    public static final String MODID = "GCVesta";
+    public static final String CHANNEL = "GCVesta";
+    public static final String CHANNELENTITIES = "GCVestaEntities";
 
-    public static final String LANGUAGE_PATH = "/assets/starcraftsaturn/lang/";
-    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US", "ru_RU" };
+    public static final String LANGUAGE_PATH = "/assets/starcraftvesta/lang/";
+    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
 
-    @SidedProxy(clientSide = "mattparks.mods.starcraft.saturn.client.ClientProxySaturn", serverSide = "mattparks.mods.starcraft.saturn.CommonProxySaturn")
+    @SidedProxy(clientSide = "mattparks.mods.starcraft.vesta.client.ClientProxyVesta", serverSide = "mattparks.mods.starcraft.vesta.CommonProxyVesta")
     public static CommonProxyVesta proxy;
 
     @Instance(GCVesta.MODID)
     public static GCVesta instance;
 
-    public static final String ASSET_DOMAIN = "starcraftsaturn";
+    public static final String ASSET_DOMAIN = "starcraftvesta";
     public static final String ASSET_PREFIX = GCVesta.ASSET_DOMAIN + ":";
     
     public static long tick;
     public static long slowTick;
+    
+	public static CreativeTabs starcraftVestaTab = new CreativeTabs("starcraftVestaTab") {
+		@Override
+		public ItemStack getIconItemStack() {
+			return new ItemStack(GCVestaBlocks.VestaDirt, 1, 0);
+		}
+	};
     
     public static HashMap<String, ItemStack> blocksList = new HashMap<String, ItemStack>();
 
@@ -98,9 +105,9 @@ public class GCVesta
         this.registerOtherEntities();
         GCVesta.proxy.init(event);
 
-        GalacticraftRegistry.registerTeleportType(GCSaturnWorldProvider.class, new GCSaturnTeleportType());
+        GalacticraftRegistry.registerTeleportType(GCVestaWorldProvider.class, new GCVestaTeleportType());
         GalacticraftRegistry.registerCelestialBody(new GCVestaPlanet());
-        GalacticraftRegistry.registerRocketGui(GCSaturnWorldProvider.class, new ResourceLocation(GCVesta.ASSET_DOMAIN, "textures/gui/saturnRocketGui.png"));
+        GalacticraftRegistry.registerRocketGui(GCVestaWorldProvider.class, new ResourceLocation(GCVesta.ASSET_DOMAIN, "textures/gui/vestaRocketGui.png"));
     }
 
     @EventHandler
@@ -147,6 +154,6 @@ public class GCVesta
     @EventHandler
     public void serverStarting(FMLServerStartingEvent event)
     {
-        NetworkRegistry.instance().registerChannel(new GCSaturnPacketHandlerServer(), GCVesta.CHANNEL, Side.SERVER);
+        NetworkRegistry.instance().registerChannel(new GCVestaPacketHandlerServer(), GCVesta.CHANNEL, Side.SERVER);
     }
 }

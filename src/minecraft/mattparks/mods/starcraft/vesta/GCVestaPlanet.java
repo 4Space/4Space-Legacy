@@ -1,7 +1,7 @@
 package mattparks.mods.starcraft.vesta;
 
-import mattparks.mods.starcraft.saturn.client.GCSaturnMapPlanet;
-import mattparks.mods.starcraft.saturn.dimension.GCSaturnWorldProvider;
+import mattparks.mods.starcraft.vesta.client.GCVestaMapPlanet;
+import mattparks.mods.starcraft.vesta.dimension.GCVestaWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.IGalaxy;
 import micdoodle8.mods.galacticraft.api.world.IMapObject;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;
@@ -10,7 +10,7 @@ import net.minecraft.world.WorldProvider;
 
 public class GCVestaPlanet implements IPlanet
 {
-    private final IMapObject Saturn = new GCSaturnMapPlanet();
+    private final IMapObject Vesta = new GCVestaMapPlanet();
 
     @Override
     public boolean addToList()
@@ -27,19 +27,19 @@ public class GCVestaPlanet implements IPlanet
     @Override
     public int getDimensionID()
     {
-        return GCVestaConfigManager.dimensionIDSaturn;
+        return GCVestaConfigManager.dimensionIDVesta;
     }
 
     @Override
     public IMapObject getMapObject()
     {
-        return this.Saturn;
+        return this.Vesta;
     }
 
     @Override
     public String getName()
     {
-        return "Saturn";
+        return "Vesta";
     }
 
     @Override
@@ -51,7 +51,7 @@ public class GCVestaPlanet implements IPlanet
     @Override
     public Class<? extends WorldProvider> getWorldProvider()
     {
-        return GCSaturnWorldProvider.class;
+        return GCVestaWorldProvider.class;
     }
 
     @Override

@@ -1,8 +1,8 @@
 package mattparks.mods.starcraft.vesta.dimension;
 
-import mattparks.mods.starcraft.saturn.GCSaturnConfigManager;
-import mattparks.mods.starcraft.saturn.wgen.GCSaturnChunkProvider;
-import mattparks.mods.starcraft.saturn.wgen.GCSaturnWorldChunkManager;
+import mattparks.mods.starcraft.vesta.GCVestaConfigManager;
+import mattparks.mods.starcraft.vesta.wgen.GCVestaChunkProvider;
+import mattparks.mods.starcraft.vesta.wgen.GCVestaWorldChunkManager;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
@@ -84,7 +84,7 @@ public class GCVestaWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public IChunkProvider createChunkGenerator()
     {
-        return new GCSaturnChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
+        return new GCVestaChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
     }
 
     @Override
@@ -108,13 +108,13 @@ public class GCVestaWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public String getDepartMessage()
     {
-        return "Leaving Saturn";
+        return "Leaving Vesta";
     }
 
     @Override
     public String getDimensionName()
     {
-        return "Saturn";
+        return "Vesta";
     }
 
     @Override
@@ -163,7 +163,7 @@ public class GCVestaWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public String getSaveFolder()
     {
-        return "DIM" + GCSaturnConfigManager.dimensionIDSaturn;
+        return "DIM" + GCVestaConfigManager.dimensionIDVesta;
     }
 
     @Override
@@ -207,7 +207,7 @@ public class GCVestaWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public String getWelcomeMessage()
     {
-        return "Entering Saturn";
+        return "Entering Vesta";
     }
 
     @Override
@@ -225,7 +225,7 @@ public class GCVestaWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public void registerWorldChunkManager()
     {
-        this.worldChunkMgr = new GCSaturnWorldChunkManager();
+        this.worldChunkMgr = new GCVestaWorldChunkManager();
     }
 
     @Override

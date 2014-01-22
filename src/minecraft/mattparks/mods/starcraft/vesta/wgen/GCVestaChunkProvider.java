@@ -4,15 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import mattparks.mods.starcraft.core.StarcraftGas;
-import mattparks.mods.starcraft.saturn.GCSaturnConfigManager;
+import mattparks.mods.starcraft.vesta.GCVestaConfigManager;
+import mattparks.mods.starcraft.vesta.GCVestaBlocks;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityZombie;
 import micdoodle8.mods.galacticraft.core.perlin.NoiseModule;
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.entity.EnumCreatureType;
@@ -26,11 +25,11 @@ import net.minecraft.world.gen.ChunkProviderGenerate;
 
 public class GCVestaChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) StarcraftGas.SaturnNitrogen.blockID;
+    final short topBlockID = (short) GCVestaBlocks.VestaGrass.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) StarcraftGas.SaturnHelium.blockID;
+    final short fillBlockID = (short) GCVestaBlocks.VestaDirt.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) StarcraftGas.SaturnHydrogen.blockID;
+    final short lowerBlockID = (short) GCVestaBlocks.VestaStone.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
@@ -40,15 +39,14 @@ public class GCVestaChunkProvider extends ChunkProviderGenerate
     private final NoiseModule noiseGen3;
     private final NoiseModule noiseGen4;
 
-    public GCVestaBiomeDecorator biomedecoratorplanet = new GCVestaBiomeDecorator(GCVestaBiomeGenBase.venusFlat);
+    public GCVestaBiomeDecorator biomedecoratorplanet = new GCVestaBiomeDecorator(GCVestaBiomeGenBase.vestaFlat);
 
     private final World worldObj;
-    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(StarcraftGas.SaturnHydrogen.blockID, 14, 8, 16, 3);
-    //Need to make Jupiter Brick
     {
     }
 
-    private BiomeGenBase[] biomesForGeneration = { GCVestaBiomeGenBase.venusFlat };
+    private BiomeGenBase[] biomesForGeneration = { GCVestaBiomeGenBase.vestaFlat };
+
 
     private static final int CRATER_PROB = 300;
 
@@ -162,7 +160,7 @@ public class GCVestaChunkProvider extends ChunkProviderGenerate
     @Override
     public String makeString()
     {
-        return GCSaturnConfigManager.generateOtherMods ? "RandomLevelSource" : "VenusLevelSource";
+        return GCVestaConfigManager.generateOtherMods ? "RandomLevelSource" : "VenusLevelSource";
     }
 
     @Override
@@ -176,8 +174,6 @@ public class GCVestaChunkProvider extends ChunkProviderGenerate
         final long var7 = this.rand.nextLong() / 2L * 2L + 1L;
         final long var9 = this.rand.nextLong() / 2L * 2L + 1L;
         this.rand.setSeed(par2 * var7 + par3 * var9 ^ this.worldObj.getSeed());
-
-        this.dungeonGenerator.handleTileEntities(this.rand);
 
         {
         }
@@ -199,7 +195,7 @@ public class GCVestaChunkProvider extends ChunkProviderGenerate
         final Chunk var4 = new Chunk(this.worldObj, ids, meta, par1, par2);
 
          if (!var4.isTerrainPopulated &&
-         GCSaturnConfigManager.generateOtherMods)
+         GCVestaConfigManager.generateOtherMods)
          {
          var4.isTerrainPopulated = true;
          }

@@ -2,10 +2,8 @@ package mattparks.mods.starcraft.vesta.client;
 
 import java.util.Random;
 
-import mattparks.mods.starcraft.saturn.GCSaturn;
-import mattparks.mods.starcraft.saturn.dimension.GCSaturnWorldProvider;
-import mattparks.mods.starcraft.uranus.GCUranus;
-//TODO remove Uranus dependency
+import mattparks.mods.starcraft.vesta.GCVesta;
+import mattparks.mods.starcraft.vesta.dimension.GCVestaWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
@@ -23,8 +21,7 @@ import cpw.mods.fml.client.FMLClientHandler;
 
 public class GCVestaSkyProvider extends IRenderHandler
 {
-    private static final ResourceLocation uranusTexture = new ResourceLocation(GCUranus.ASSET_DOMAIN, "textures/gui/planets/uranus.png");
-    private static final ResourceLocation sunTexture = new ResourceLocation(GCSaturn.ASSET_DOMAIN, "textures/gui/planets/sun.png");
+    private static final ResourceLocation sunTexture = new ResourceLocation(GCVesta.ASSET_DOMAIN, "textures/gui/planets/sun.png");
 
     public int starGLCallList = GLAllocation.generateDisplayLists(3);
     public int glSkyList;
@@ -104,11 +101,11 @@ public class GCVestaSkyProvider extends IRenderHandler
     @Override
     public void render(float partialTicks, WorldClient world, Minecraft mc)
     {
-        GCSaturnWorldProvider gcProvider = null;
+        GCVestaWorldProvider gcProvider = null;
 
-        if (world.provider instanceof GCSaturnWorldProvider)
+        if (world.provider instanceof GCVestaWorldProvider)
         {
-            gcProvider = (GCSaturnWorldProvider) world.provider;
+            gcProvider = (GCVestaWorldProvider) world.provider;
         }
 
         float var10;
@@ -195,20 +192,6 @@ public class GCVestaSkyProvider extends IRenderHandler
         GL11.glPushMatrix();
 
         GL11.glDisable(GL11.GL_BLEND);
-
-        // URANUS:
-        var12 = 0.5F;
-        GL11.glScalef(0.6F, 0.6F, 0.6F);
-        GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
-        GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
-        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCVestaSkyProvider.uranusTexture);
-        var23.startDrawingQuads();
-        var23.addVertexWithUV(-var12, -100.0D, var12, 0, 1);
-        var23.addVertexWithUV(var12, -100.0D, var12, 1, 1);
-        var23.addVertexWithUV(var12, -100.0D, -var12, 1, 0);
-        var23.addVertexWithUV(-var12, -100.0D, -var12, 0, 0);
-        var23.draw();
 
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         GL11.glDisable(GL11.GL_BLEND);

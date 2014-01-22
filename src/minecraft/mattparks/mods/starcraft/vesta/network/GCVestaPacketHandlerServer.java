@@ -88,11 +88,11 @@ public class GCVestaPacketHandlerServer implements IPacketHandler
         }
         else if (packetType == 1)
         {
-            FMLLog.severe("Galacticraft Saturn: Received bad packet!");
+            FMLLog.severe("Starcraft Vesta: Received bad packet!");
         }
         else if (packetType == 2)
         {
-            FMLLog.severe("Galacticraft Saturn: Received bad packet!");
+            FMLLog.severe("Starcraft Vesta: Received bad packet!");
         }
         else if (packetType == 3)
         {

@@ -8,7 +8,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCVestaBiomeGenBase extends BiomeGenBase
 {
-    public static final BiomeGenBase venusFlat = new GCVestaBiomeGenFlat(102).setBiomeName("venus");
+    public static final BiomeGenBase vestaFlat = new GCVestaBiomeGenFlat(102).setBiomeName("vesta");
 
     public GCVestaBiomeGenBase(int var1)
     {

@@ -5,9 +5,9 @@ import java.io.DataInputStream;
 import java.util.ArrayList;
 import java.util.EnumSet;
 
-import mattparks.mods.starcraft.saturn.CommonProxySaturn;
-import mattparks.mods.starcraft.saturn.GCSaturn;
-import mattparks.mods.starcraft.saturn.dimension.GCSaturnWorldProvider;
+import mattparks.mods.starcraft.vesta.CommonProxyVesta;
+import mattparks.mods.starcraft.vesta.GCVesta;
+import mattparks.mods.starcraft.vesta.dimension.GCVestaWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
@@ -31,7 +31,7 @@ import cpw.mods.fml.common.network.Player;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-public class ClientProxyVesta extends CommonProxySaturn
+public class ClientProxyVesta extends CommonProxyVesta
 {
     public class ClientPacketHandler implements IPacketHandler
     {
@@ -65,7 +65,7 @@ public class ClientProxyVesta extends CommonProxySaturn
         @Override
         public String getLabel()
         {
-            return "Starcraft Saturn Client";
+            return "Starcraft Vesta Client";
         }
 
         @Override
@@ -90,7 +90,7 @@ public class ClientProxyVesta extends CommonProxySaturn
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCSaturnWorldProvider)
+                    if (world.provider instanceof GCVestaWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
@@ -151,7 +151,7 @@ public class ClientProxyVesta extends CommonProxySaturn
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCSaturn.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCVesta.CHANNEL, Side.CLIENT);
     }
 
     @Override

@@ -13,13 +13,14 @@ public class GCVestaConfigManager
     static Configuration configuration;
 
     // DIMENSIONS
-    public static int dimensionIDSaturn;
+    public static int dimensionIDVesta;
 
     public static boolean generateOtherMods;
 
     // BLOCKS
 
     // ITEMS
+    public static int idItemVestaBasic;
     
     // ARMOR
 
@@ -50,11 +51,13 @@ public class GCVestaConfigManager
         {
             GCVestaConfigManager.configuration.load();
 
-            GCVestaConfigManager.dimensionIDSaturn = GCVestaConfigManager.configuration.get("Dimensions", "Saturn Dimension ID", -45).getInt(-45);
+            GCVestaConfigManager.dimensionIDVesta = GCVestaConfigManager.configuration.get("Dimensions", "Vesta Dimension ID", -50).getInt(-50);
+        
+            GCVestaConfigManager.idItemVestaBasic = GCVestaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemVestaItemBasic", 6756).getInt(6756);
         }
         catch (final Exception e)
         {
-            FMLLog.log(Level.SEVERE, e, "Galacticraft Saturn has a problem loading it's configuration");
+            FMLLog.log(Level.SEVERE, e, "Starcraft Vesta has a problem loading it's configuration");
         }
         finally
         {
