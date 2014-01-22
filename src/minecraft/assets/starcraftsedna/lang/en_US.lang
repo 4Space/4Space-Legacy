@@ -1,14 +1,15 @@
 # Starcraft Sedna Language File = UNITED STATES ENGLISH
 
 # GENERAL ITEMS
-item.tier8.desc=Tier 8
+item.tier5.desc=Tier 5
 
 # ITEMS
 item.plateHeavyT8.name=Heavy-Duty Plate
 item.rawPalladium.name=Raw Palladium
 item.refinedPalladium.name=Refined Palladium
-item.ingotPalladuim.name=Palladuim Ingot
-item.palladiumPlate.name=Palladuim Plate
+item.ingotPalladium.name=Palladium Ingot
+item.palladiumPlate.name=Palladium Plate
+item.spaceshipTier6.name=Tier 6 Rocket
 
 # TOOLS
 
@@ -36,3 +37,6 @@ itemGroup.starcraftSednaTab=Spacecraft Sedna
 gui.choosePlanet.desc.sedna=No Life#*Very Far Away#*Gravity: 0.27%
 
 dimension.Sedna.name=Sedna
+
+# Schematics
+schematic.rocketT6.name=Tier 6 Rocket

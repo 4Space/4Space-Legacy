@@ -11,6 +11,7 @@ item.jetpackFuel.name=Jetpack Fuel
 item.gravityGeneratorCore.name=Gravity Generator Core
 item.iridiumCrystals.name=Iridium Crystals
 item.ingotIridium.name=Iridium Ingot
+item.iridiumPlate.name=Iridium Plate
 
 # TOOLS
 item.iridiumPick.name=Iridium Pickaxe

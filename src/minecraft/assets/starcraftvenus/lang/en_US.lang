@@ -6,7 +6,7 @@ item.tier3.desc=Tier 3
 # ITEMS
 item.spaceshipTier3.name=Tier 3 Rocket
 item.ingotGem.name=Gem Ingot
-item.itemGem.name=Gem
+item.redGem.name=Red Gem
 item.redGemPlate.name=Red Gem Plate
 item.ingotSulfer.name=Sulfer Ingot
 item.sulferPlate.name=Sulfer Plate
