@@ -10,7 +10,7 @@ public class GCVestaMapPlanet implements IMapObject
 	@Override
 	public float getDistanceFromCenter() 
 	{
-		return 7.54F;
+		return 3.36F;
 	}
 
 	@Override

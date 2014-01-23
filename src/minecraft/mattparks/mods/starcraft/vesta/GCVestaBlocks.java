@@ -26,31 +26,31 @@ public class GCVestaBlocks
 
     
 	// Block Vesta, Grass
-	public static final Block VestaGrass = new StarcraftGrass(650, null)
+	public static final Block VestaGrass = new StarcraftGrass(632, null)
 			.setHardness(1.5F).setStepSound(Block.soundGrassFootstep)
 			.setUnlocalizedName("VestaGrass")
-			.setTextureName("starcraftjupiter:VestaGrass")
+			.setTextureName("starcraftvesta:VestaGrass")
 			.setCreativeTab(GCVesta.starcraftVestaTab);
 
 	// Block Vesta, Dirt
-	public static final Block VestaDirt = new StarcraftBlock(651, null)
+	public static final Block VestaDirt = new StarcraftBlock(633, null)
 			.setHardness(0.4F).setStepSound(Block.soundGravelFootstep)
 			.setUnlocalizedName("VestaDirt")
-			.setTextureName("starcraftjupiter:VestaDirt")
+			.setTextureName("starcraftvesta:VestaDirt")
 			.setCreativeTab(GCVesta.starcraftVestaTab);
 
 	// Block Vesta, Stone
-	public static final Block VestaStone = new VestaStone(652, null)
+	public static final Block VestaStone = new VestaStone(634, null)
 			.setHardness(0.3F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VestaStone")
-			.setTextureName("starcraftjupiter:VestaStone")
+			.setTextureName("starcraftvesta:VestaStone")
 			.setCreativeTab(GCVesta.starcraftVestaTab);
 
 	// Block Vesta, Brick
-	public static final Block VestaBrick = new StarcraftBlock(653, null)
+	public static final Block VestaBrick = new StarcraftBlock(635, null)
 			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("VestaBrick")
-			.setTextureName("starcraftjupiter:VestaBrick")
+			.setTextureName("starcraftvesta:VestaBrick")
 			.setCreativeTab(GCVesta.starcraftVestaTab)
 			.setBlockUnbreakable();
 	
