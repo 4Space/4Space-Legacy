@@ -63,6 +63,8 @@ public class GCJupiter
 			return new ItemStack(GCJupiterItems.spaceshipT5, 1, 0);
 		}
 	};
+	
+	public static GCJupiterPlanet jupiter;
     
     public static HashMap<String, ItemStack> blocksList = new HashMap<String, ItemStack>();
 
@@ -107,9 +109,9 @@ public class GCJupiter
         this.registerCreatures();
         this.registerOtherEntities();
         GCJupiter.proxy.init(event);
-
+        GCJupiter.jupiter = new GCJupiterPlanet();
         GalacticraftRegistry.registerTeleportType(GCJupiterWorldProvider.class, new GCJupiterTeleportType());
-        GalacticraftRegistry.registerCelestialBody(new GCJupiterPlanet());
+        GalacticraftRegistry.registerCelestialBody(GCJupiter.jupiter);
         GalacticraftRegistry.registerRocketGui(GCJupiterWorldProvider.class, new ResourceLocation(GCJupiter.ASSET_DOMAIN, "textures/gui/mercuryRocketGui.png"));
 
     }
