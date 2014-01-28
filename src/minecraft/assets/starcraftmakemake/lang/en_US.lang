@@ -17,10 +17,10 @@ tile.MakemakeBrick.name=Makemake Brick
 # ENTITYS
 
 # GUI
-gui.choosePlanet.desc.vesta=Dwarf Planet#Far Away#Gravity:??%
+gui.choosePlanet.desc.makemake=Dwarf Planet#Far Away#*Gravity: ?%
 
 itemGroup.starcraftMakemakeTab=Spacecraft Makemake
 
-dimension.Vesta.name=Makemake
+dimension.Makemake.name=Makemake
 
 # Schematics
