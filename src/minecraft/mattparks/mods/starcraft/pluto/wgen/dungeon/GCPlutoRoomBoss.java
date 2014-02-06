@@ -11,7 +11,7 @@ import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.ForgeDirection;
-import universalelectricity.core.vector.Vector3;
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
 
 public class GCPlutoRoomBoss extends GCCoreDungeonRoom
 {

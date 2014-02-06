@@ -10,7 +10,6 @@ import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
-import universalelectricity.compatibility.Compatibility;
 
 public class StarcraftOre extends Block implements IDetectableResource
 {
@@ -22,27 +21,6 @@ public class StarcraftOre extends Block implements IDetectableResource
         this.setHardness(2.0F);
     }
 
-    @Override
-    public int idDropped(int par1, Random par2Random, int par3)
-    {
-    	if(StarcraftMercury.MercuryIridiumOre.blockID == this.blockID)
-    	{
-    		if(Compatibility.isIndustrialCraft2Loaded())
-    		{
-    			return Items.getItem("iridiumOre").itemID;
-    		}
-    		
-    		return this.blockID;
-    	}
-    	
-    	if(StarcraftMercury.MercuryCoalOre.blockID == this.blockID || StarcraftVenus.VenusCoalOre.blockID == this.blockID)
-    	{
-    		return Item.coal.itemID;
-    	}
-    	
-        return this.blockID;
-    }
-    
     @Override
     public boolean isValueable(int metadata)
     {
