@@ -110,8 +110,7 @@ public class GCEris
 
         GalacticraftRegistry.registerTeleportType(GCErisWorldProvider.class, new GCErisTeleportType());
         GalacticraftRegistry.registerCelestialBody(new GCErisPlanet());
-        GalacticraftRegistry.registerRocketGui(GCErisWorldProvider.class, new ResourceLocation(GCEris.ASSET_DOMAIN, "textures/gui/erisRocketGui.png"));
-        
+        GalacticraftRegistry.registerRocketGui(GCErisWorldProvider.class, new ResourceLocation(GCEris.ASSET_DOMAIN, "textures/gui/erisRocketGui.png"));    
     }
 
     @EventHandler

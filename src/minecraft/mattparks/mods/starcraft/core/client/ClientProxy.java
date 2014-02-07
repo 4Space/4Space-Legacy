@@ -59,6 +59,7 @@ public class ClientProxy extends CommonProxy
                     entity = player.worldObj.getEntityByID(entityID);
 
                     {
+                    	;
                     }
 
                     player.openContainer.windowId = (Integer) packetReadout[0];
@@ -68,6 +69,7 @@ public class ClientProxy extends CommonProxy
                     entity = player.worldObj.getEntityByID(entityID);
 
                     {
+                    	;
                     }
 
                     player.openContainer.windowId = (Integer) packetReadout[0];
@@ -88,6 +90,7 @@ public class ClientProxy extends CommonProxy
         @Override
         public void tickEnd(EnumSet<TickType> type, Object... tickData)
         {
+        	;
         }
 
         @Override
@@ -124,13 +127,9 @@ public class ClientProxy extends CommonProxy
 
                         if (e != null)
                         {
-//                            if (e instanceof SCCoreEntityRocketT4)
                             {
-//                                final SCCoreEntityRocketT4 eship = (SCCoreEntityRocketT4) e;
 
-//                                if (eship.rocketSoundUpdater == null)
                                 {
-//                                    eship.rocketSoundUpdater = new GCCoreSoundUpdaterSpaceship(FMLClientHandler.instance().getClient().sndManager, eship, FMLClientHandler.instance().getClient().thePlayer);
                                 }
                             }
                         }
@@ -155,12 +154,6 @@ public class ClientProxy extends CommonProxy
         return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.water);
     }
 
-    {
-    }
-
-    {
-    }
-
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
     {
@@ -176,35 +169,39 @@ public class ClientProxy extends CommonProxy
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), StarcraftCore.CHANNEL, Side.CLIENT);
 
         //Blue Cape
-        String capeBlueString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeBlue.png";
+        String capeBlueString = "https://raw.github.com/4-Space/4-Space/master/capes/capeBlue.png";
         //Green Cape
-        String capeGreenString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeGreen.png";
+        String capeGreenString = "https://raw.github.com/4-Space/4-Space/master/capes/capeGreen.png";
         //Orange Cape
-        String capeOrangeString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeOrange.png";
+        String capeOrangeString = "https://raw.github.com/4-Space/4-Space/master/capes/capeOrange.png";
         //Red Cape
-        String capeRedString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeRed.png";
+        String capeRedString = "https://raw.github.com/4-Space/4-Space/master/capes/capeRed.png";
         //Violet Cape
-        String capeVioletString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeViolet.png";
+        String capeVioletString = "https://raw.github.com/4-Space/4-Space/master/capes/capeViolet.png";
         //Yellow Cape
-        String capeYellowString = "https://raw.github.com/mattparks/Starcraft-2/master/capes/capeYellow.png";
+        String capeYellowString = "https://raw.github.com/4-Space/4-Space/master/capes/capeYellow.png";
 
-        ClientProxyCore.capeMap.put("mattparks", capeBlueString);     
+        // Coders
+        ClientProxyCore.capeMap.put("mattparks", capeRedString);     
+        ClientProxyCore.capeMap.put("decaxon", capeGreenString); 
+        ClientProxyCore.capeMap.put("KingFluffy99", capeVioletString);
+        
+        // Supporters
+        ClientProxyCore.capeMap.put("langjam350roxsox", capeBlueString); 
+        ClientProxyCore.capeMap.put("Arilarin", capeYellowString);
+        ClientProxyCore.capeMap.put("Zebstrika64", capeVioletString);
+        ClientProxyCore.capeMap.put("goldenkat99", capeOrangeString); 
+        
+        // Texturers
         ClientProxyCore.capeMap.put("flashy3", capeOrangeString); 
         ClientProxyCore.capeMap.put("Dinammar", capeVioletString); 
-        ClientProxyCore.capeMap.put("imac123456", capeOrangeString); 
-        ClientProxyCore.capeMap.put("decaxon", capeGreenString); 
-        ClientProxyCore.capeMap.put("Henry33russian", capeBlueString); 
-        
-        ClientProxyCore.capeMap.put("ghostheart305", capeRedString); 
-        ClientProxyCore.capeMap.put("langjam350roxsox", capeBlueString); 
-        ClientProxyCore.capeMap.put("_Ja1m3", capeRedString); 
-        ClientProxyCore.capeMap.put("goldenkat99", capeOrangeString); 
-
+        ClientProxyCore.capeMap.put("ComradeCooper", capeBlueString);
     }
 
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
+    	;
     }
 
     @Override

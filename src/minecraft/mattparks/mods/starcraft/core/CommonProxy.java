@@ -26,10 +26,7 @@ public class CommonProxy implements IGuiHandler
         TileEntity tile = world.getBlockTileEntity(x, y, z);
 
         {
-            {
-            }
-            {
-            }
+        	;
         }
 
         return null;
@@ -37,23 +34,23 @@ public class CommonProxy implements IGuiHandler
 
     public void init(FMLInitializationEvent event)
     {
-
+    	;
     }
 
 
     public void postInit(FMLPostInitializationEvent event)
     {
-
+    	;
     }
 
     public void preInit(FMLPreInitializationEvent event)
     {
-
+    	;
     }
 
     public void registerRenderInformation()
     {
-
+    	;
     }
 
     public void spawnParticle(String var1, double var2, double var4, double var6)

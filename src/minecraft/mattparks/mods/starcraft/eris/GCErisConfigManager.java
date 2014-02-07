@@ -59,7 +59,7 @@ public class GCErisConfigManager
         }
         catch (final Exception e)
         {
-            FMLLog.log(Level.SEVERE, e, "Starcrfat Eris has a problem loading it's configuration");
+            FMLLog.log(Level.SEVERE, e, "Starcraft Eris has a problem loading it's configuration");
         }
         finally
         {

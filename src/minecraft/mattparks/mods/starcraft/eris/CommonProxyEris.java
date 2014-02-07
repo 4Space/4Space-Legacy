@@ -22,10 +22,7 @@ public class CommonProxyEris implements IGuiHandler
         TileEntity tile = world.getBlockTileEntity(x, y, z);
 
         {
-            {
-            }
-            {
-            }
+        	;
         }
 
         return null;
@@ -33,21 +30,21 @@ public class CommonProxyEris implements IGuiHandler
 
     public void init(FMLInitializationEvent event)
     {
-
+    	;
     }
 
     public void postInit(FMLPostInitializationEvent event)
     {
-
+    	;
     }
 
     public void preInit(FMLPreInitializationEvent event)
     {
-
+    	;
     }
 
     public void registerRenderInformation()
     {
-
+    	;
     }
 }

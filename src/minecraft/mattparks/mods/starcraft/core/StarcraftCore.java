@@ -64,8 +64,6 @@ public class StarcraftCore
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
- //       new StarcraftCoreConfigManager(new File(event.getModConfigurationDirectory(), "starcraft/core.conf"));
-
         StarcraftCore.proxy.preInit(event);
     }
 
