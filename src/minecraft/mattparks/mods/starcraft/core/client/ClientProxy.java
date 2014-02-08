@@ -140,8 +140,6 @@ public class ClientProxy extends CommonProxy
     }
     
     public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
-    
-    public static Map<String, String> capeMap = new HashMap<String, String>();
 
     public static boolean handleLavaMovement(EntityPlayer player)
     {
@@ -167,35 +165,6 @@ public class ClientProxy extends CommonProxy
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), StarcraftCore.CHANNEL, Side.CLIENT);
-
-        //Blue Cape
-        String capeBlueString = "https://raw.github.com/4-Space/4-Space/master/capes/capeBlue.png";
-        //Green Cape
-        String capeGreenString = "https://raw.github.com/4-Space/4-Space/master/capes/capeGreen.png";
-        //Orange Cape
-        String capeOrangeString = "https://raw.github.com/4-Space/4-Space/master/capes/capeOrange.png";
-        //Red Cape
-        String capeRedString = "https://raw.github.com/4-Space/4-Space/master/capes/capeRed.png";
-        //Violet Cape
-        String capeVioletString = "https://raw.github.com/4-Space/4-Space/master/capes/capeViolet.png";
-        //Yellow Cape
-        String capeYellowString = "https://raw.github.com/4-Space/4-Space/master/capes/capeYellow.png";
-
-        // Coders
-        ClientProxyCore.capeMap.put("mattparks", capeRedString);     
-        ClientProxyCore.capeMap.put("decaxon", capeGreenString); 
-        ClientProxyCore.capeMap.put("KingFluffy99", capeVioletString);
-        
-        // Supporters
-        ClientProxyCore.capeMap.put("langjam350roxsox", capeBlueString); 
-        ClientProxyCore.capeMap.put("Arilarin", capeYellowString);
-        ClientProxyCore.capeMap.put("Zebstrika64", capeVioletString);
-        ClientProxyCore.capeMap.put("goldenkat99", capeOrangeString); 
-        
-        // Texturers
-        ClientProxyCore.capeMap.put("flashy3", capeOrangeString); 
-        ClientProxyCore.capeMap.put("Dinammar", capeVioletString); 
-        ClientProxyCore.capeMap.put("ComradeCooper", capeBlueString);
     }
 
     @Override
@@ -227,6 +196,7 @@ public class ClientProxy extends CommonProxy
             {
                 if (var1.equals("sludgeDrip"))
                 {
+                	;
                 }
             }
         }

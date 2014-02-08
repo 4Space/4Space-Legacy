@@ -5,6 +5,7 @@ import mattparks.mods.starcraft.core.blocks.StarcraftBlock;
 import mattparks.mods.starcraft.core.blocks.StarcraftGrass;
 import mattparks.mods.starcraft.core.blocks.StarcraftOre;
 import mattparks.mods.starcraft.eris.GCEris;
+import mattparks.mods.starcraft.eris.GCErisConfigManager;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
@@ -29,35 +30,35 @@ public class StarcraftEris
     public static final String CHANNELENTITIES = "StarcraftErisEntities";
 
 	// Block Eris Grass
-	public static final Block ErisGrass = new StarcraftGrass(922, null)
+	public static final Block ErisGrass = new StarcraftGrass((GCErisConfigManager.idErisGrass), null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("grassEris")
 			.setTextureName("starcrafteris:grassEris")
 			.setCreativeTab(GCEris.starcraftErisTab);
 
 	// Block Pluto Dirt
-	public static final Block ErisDirt = new StarcraftBlock(923, null)
+	public static final Block ErisDirt = new StarcraftBlock((GCErisConfigManager.idErisDirt), null)
 			.setHardness(0.3F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("dirtEris")
 			.setTextureName("starcrafteris:dirtEris")
 			.setCreativeTab(GCEris.starcraftErisTab);
 
 	// Block Eris Stone
-	public static final Block ErisStone = new PlutoStone(924, null)
+	public static final Block ErisStone = new PlutoStone((GCErisConfigManager.idErisStone), null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("stoneEris")
 			.setTextureName("starcrafteris:stoneEris")
 			.setCreativeTab(GCEris.starcraftErisTab);
 
 	// Block Eris Cobblestone
-	public static final Block ErisCobblestone = new StarcraftBlock(925, null)
+	public static final Block ErisCobblestone = new StarcraftBlock((GCErisConfigManager.idErisCobblestone), null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("cobblestoneEris")
 			.setTextureName("starcrafteris:cobblestoneEris")
 			.setCreativeTab(GCEris.starcraftErisTab);
 
 	// Block Eris Brick
-	public static final Block ErisBrick = new StarcraftBlock(926, null)
+	public static final Block ErisBrick = new StarcraftBlock((GCErisConfigManager.idErisBrick), null)
 			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("erisBrick")
 			.setTextureName("starcrafteris:erisBrick")
@@ -65,42 +66,42 @@ public class StarcraftEris
 			.setBlockUnbreakable();
 	
 	// Block Eris Coal Ore
-	public static final Block ErisCoalOre = new StarcraftOre(1930, null)
+	public static final Block ErisCoalOre = new StarcraftOre((GCErisConfigManager.idErisCoalOre), null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("ErisCoalOre")
 			.setTextureName("starcrafteris:oreCoal")
 			.setCreativeTab(GCEris.starcraftErisTab);
 			
 	// Block Eris Green Gem Ore
-	public static final Block ErisGreenGemOre = new StarcraftOre(1931, null)
+	public static final Block ErisGreenGemOre = new StarcraftOre((GCErisConfigManager.idErisGreenGemOre), null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("ErisGreenGemOre")
 			.setTextureName("starcrafteris:oreGreenGem")
 			.setCreativeTab(GCEris.starcraftErisTab);
 			
 	// Block Eris Iron Ore
-	public static final Block ErisIronOre = new StarcraftOre(1932, null)
+	public static final Block ErisIronOre = new StarcraftOre((GCErisConfigManager.idErisIronOre), null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("ErisIronOre")
 			.setTextureName("starcrafteris:oreIron")
 			.setCreativeTab(GCEris.starcraftErisTab);
 			
 	// Block Eris Meteor Ore
-	public static final Block ErisMeteorOre = new StarcraftOre(1933, null)
+	public static final Block ErisMeteorOre = new StarcraftOre((GCErisConfigManager.idErisMeteorOre), null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("ErisMeteorOre")
 			.setTextureName("starcrafteris:oreMeteor")
 			.setCreativeTab(GCEris.starcraftErisTab);
 			
 	// Block Eris Tin Ore
-	public static final Block ErisTinOre = new StarcraftOre(1934, null)
+	public static final Block ErisTinOre = new StarcraftOre((GCErisConfigManager.idErisTinOre), null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("ErisTinOre")
 			.setTextureName("starcrafteris:oreTin")
 			.setCreativeTab(GCEris.starcraftErisTab);
 	
 	// Block Eris Green Gem Block
-	public static final Block GreenGemBlock = new StarcraftOre(1935, null)
+	public static final Block GreenGemBlock = new StarcraftOre((GCErisConfigManager.idGreenGemBlock), null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("GreenGemBlock")
 			.setTextureName("starcrafteris:greenGemBlock")

@@ -72,7 +72,7 @@ public class GCSednaConfigManager
             GCSednaConfigManager.idArmorGravityLeggings = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGravityLeggings", 6869).getInt(6869);
             GCSednaConfigManager.idArmorGravityBoots = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGravityBoots", 6870).getInt(6870);
 
-            GCSednaConfigManager.idEntityEvolvedEnderman = GCSednaConfigManager.configuration.get("Entities", "idEntityEvolvedEnderman", 693).getInt(693);
+            GCSednaConfigManager.idEntityEvolvedEnderman = GCSednaConfigManager.configuration.get("Entities", "idEntityEvolvedEnderman", 6193).getInt(6193);
             
             GCSednaConfigManager.idItemSpaceshipTier6 = GCSednaConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier6", 6545).getInt(6545);
             

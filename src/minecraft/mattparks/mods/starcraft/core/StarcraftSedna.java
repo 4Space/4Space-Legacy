@@ -30,35 +30,35 @@ public class StarcraftSedna
 
     
 	// Block Sedna Grass
-	public static final Block SednaGrass = new StarcraftGrass(932, null)
+	public static final Block SednaGrass = new StarcraftGrass(781, null)
 			.setHardness(0.4F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("grassSedna")
 			.setTextureName("starcraftsedna:grassSedna")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
 
 	// Block Sedna Dirt
-	public static final Block SednaDirt = new StarcraftBlock(933, null)
+	public static final Block SednaDirt = new StarcraftBlock(782, null)
 			.setHardness(0.3F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("dirtSedna")
 			.setTextureName("starcraftsedna:dirtSedna")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
 
 	// Block Sedna Stone
-	public static final Block SednaStone = new PlutoStone(934, null)
+	public static final Block SednaStone = new PlutoStone(783, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("stoneSedna")
 			.setTextureName("starcraftsedna:stoneSedna")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
 
 	// Block Sedna Cobblestone
-	public static final Block SednaCobblestone = new StarcraftBlock(935, null)
+	public static final Block SednaCobblestone = new StarcraftBlock(784, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("cobblestoneSedna")
 			.setTextureName("starcraftsedna:cobblestoneSedna")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
 
 	// Block Sedna Brick
-	public static final Block SednaBrick = new StarcraftBlock(936, null)
+	public static final Block SednaBrick = new StarcraftBlock(785, null)
 			.setHardness(1000.0F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("sednaBrick")
 			.setTextureName("starcraftsedna:sednaBrick")
@@ -66,14 +66,14 @@ public class StarcraftSedna
 			.setBlockUnbreakable();
 	
 	// Block Sedna Ore Palladium
-	public static final Block PalladiumOre = new StarcraftOre(937, null)
+	public static final Block PalladiumOre = new StarcraftOre(786, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("PalladiumOre")
 			.setTextureName("starcraftsedna:orePalladium")
 			.setCreativeTab(GCSedna.starcraftSednaTab);
 	
 	// Block Sedna Palladium Block
-	public static final Block PalladiumBlock = new StarcraftBlock(938, null)
+	public static final Block PalladiumBlock = new StarcraftBlock(787, null)
 			.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 			.setUnlocalizedName("PalladiumBlock")
 			.setTextureName("starcraftsedna:palladiumBlock")
