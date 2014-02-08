@@ -1,7 +1,5 @@
 package mattparks.mods.starcraft.makemake.blocks;
 
-import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 

@@ -1,10 +1,7 @@
 package mattparks.mods.starcraft.europa.items;
 
 import mattparks.mods.starcraft.europa.GCEuropaConfigManager;
-import net.minecraft.item.EnumArmorMaterial;
-import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
-import net.minecraftforge.common.EnumHelper;
 
 public class GCEuropaItems
 {

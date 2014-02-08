@@ -4,12 +4,9 @@ import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.util.ArrayList;
 import java.util.EnumSet;
-import java.util.HashMap;
-import java.util.Map;
 
 import mattparks.mods.starcraft.core.CommonProxy;
 import mattparks.mods.starcraft.core.StarcraftCore;
-import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;

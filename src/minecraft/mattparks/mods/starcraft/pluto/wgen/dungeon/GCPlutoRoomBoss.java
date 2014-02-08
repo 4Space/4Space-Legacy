@@ -2,6 +2,7 @@ package mattparks.mods.starcraft.pluto.wgen.dungeon;
 
 import java.util.Random;
 
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityDungeonSpawner;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonBoundingBox;
@@ -11,7 +12,6 @@ import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.ForgeDirection;
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
 
 public class GCPlutoRoomBoss extends GCCoreDungeonRoom
 {

@@ -1,14 +1,13 @@
 package mattparks.mods.starcraft.venus.items;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import mattparks.mods.starcraft.venus.GCVenus;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemVurnBerryOnAStick extends Item
 {
@@ -20,7 +19,8 @@ public class ItemVurnBerryOnAStick extends Item
         this.setMaxDamage(25);
     }
 
-    @SideOnly(Side.CLIENT)
+    @Override
+	@SideOnly(Side.CLIENT)
 
     /**
      * Returns True is the item is renderer in full 3D when hold.
@@ -30,7 +30,8 @@ public class ItemVurnBerryOnAStick extends Item
         return true;
     }
 
-    @SideOnly(Side.CLIENT)
+    @Override
+	@SideOnly(Side.CLIENT)
 
     /**
      * Returns true if this item should be rotated by 180 degrees around the Y axis when being held in an entities
@@ -44,7 +45,8 @@ public class ItemVurnBerryOnAStick extends Item
     /**
      * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
      */
-    public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
+    @Override
+	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
         if (par3EntityPlayer.isRiding() && par3EntityPlayer.ridingEntity instanceof EntityPig)
         {

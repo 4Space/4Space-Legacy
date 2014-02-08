@@ -1,9 +1,8 @@
 package mattparks.mods.starcraft.vesta;
 
-import mattparks.mods.starcraft.vesta.blocks.*;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
-import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
+import mattparks.mods.starcraft.vesta.blocks.StarcraftBlock;
+import mattparks.mods.starcraft.vesta.blocks.StarcraftGrass;
+import mattparks.mods.starcraft.vesta.blocks.VestaStone;
 import net.minecraft.block.Block;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;

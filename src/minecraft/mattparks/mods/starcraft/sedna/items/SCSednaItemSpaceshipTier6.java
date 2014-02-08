@@ -4,7 +4,6 @@ import java.util.List;
 
 import mattparks.mods.starcraft.sedna.GCSedna;
 import mattparks.mods.starcraft.sedna.entities.SCSednaEntityRocketT6;
-import mattparks.mods.starcraft.sedna.GCSedna;
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;

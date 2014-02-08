@@ -1,9 +1,8 @@
 package mattparks.mods.starcraft.makemake;
 
-import mattparks.mods.starcraft.makemake.blocks.*;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
-import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
+import mattparks.mods.starcraft.makemake.blocks.MakemakeStone;
+import mattparks.mods.starcraft.makemake.blocks.StarcraftBlock;
+import mattparks.mods.starcraft.makemake.blocks.StarcraftGrass;
 import net.minecraft.block.Block;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
 import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreAnnotations.RuntimeInterface;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
@@ -24,7 +25,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.gui.IUpdatePlayerListBox;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.Side;

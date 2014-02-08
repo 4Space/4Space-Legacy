@@ -1,15 +1,8 @@
 package mattparks.mods.starcraft.core.blocks;
 
-import ic2.api.item.Items;
-
-import java.util.Random;
-
-import mattparks.mods.starcraft.core.StarcraftMercury;
-import mattparks.mods.starcraft.core.StarcraftVenus;
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 
 public class StarcraftOre extends Block implements IDetectableResource
 {

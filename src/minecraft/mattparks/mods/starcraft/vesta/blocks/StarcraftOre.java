@@ -1,13 +1,8 @@
 package mattparks.mods.starcraft.vesta.blocks;
 
-import ic2.api.item.Items;
-
-import java.util.Random;
-
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 
 public class StarcraftOre extends Block implements IDetectableResource
 {

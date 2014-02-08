@@ -3,12 +3,9 @@ package mattparks.mods.starcraft.europa;
 import mattparks.mods.starcraft.europa.client.GCEuropaMapPlanet;
 import mattparks.mods.starcraft.europa.dimension.GCEuropaWorldProvider;
 import mattparks.mods.starcraft.jupiter.GCJupiter;
-
-import micdoodle8.mods.galacticraft.api.world.IGalaxy;
 import micdoodle8.mods.galacticraft.api.world.IMapObject;
 import micdoodle8.mods.galacticraft.api.world.IMoon;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.world.WorldProvider;
 
 

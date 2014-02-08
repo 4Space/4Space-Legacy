@@ -2,8 +2,8 @@ package mattparks.mods.starcraft.core;
 
 import java.util.HashMap;
 
-import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerServer;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
+import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerServer;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;

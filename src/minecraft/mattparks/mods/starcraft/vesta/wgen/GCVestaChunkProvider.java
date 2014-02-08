@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import mattparks.mods.starcraft.vesta.GCVestaConfigManager;
 import mattparks.mods.starcraft.vesta.GCVestaBlocks;
+import mattparks.mods.starcraft.vesta.GCVestaConfigManager;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
