@@ -11,6 +11,7 @@ import micdoodle8.mods.galacticraft.core.util.RecipeUtil;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class GCMercuryRecipeManager
@@ -80,7 +81,14 @@ public class GCMercuryRecipeManager
         GameRegistry.addShapelessRecipe(new ItemStack(StarcraftMercury.WhiteGlowstone, 1, 0), new ItemStack(Item.dyePowder, 1, 15), new ItemStack(Block.glowStone, 1, 0));
         
         GameRegistry.addShapelessRecipe(new ItemStack(StarcraftMercury.YellowGlowstone, 1, 0), new ItemStack(Item.dyePowder, 1, 11), new ItemStack(Block.glowStone, 1, 0));        
-        }
+
+        // Smelting
+
+        FurnaceRecipes.smelting().addSmelting(StarcraftMercury.MercuryCoalOre.blockID, 0, new ItemStack(Item.coal), 0.2F);
+        FurnaceRecipes.smelting().addSmelting(StarcraftMercury.MercuryCopperOre.blockID, 0, OreDictionary.getOres("ingotCopper").get(0), 0.2F);
+        FurnaceRecipes.smelting().addSmelting(StarcraftMercury.MercuryTinOre.blockID, 0, OreDictionary.getOres("ingotTin").get(0), 0.2F);
+        FurnaceRecipes.smelting().addSmelting(StarcraftMercury.MercuryIridiumOre.blockID, 0, new ItemStack(GCMercuryItems.mercuryItemBasic, 1, 3), 0.2F);
+    }
     
 
     public static void loadRecipes()
