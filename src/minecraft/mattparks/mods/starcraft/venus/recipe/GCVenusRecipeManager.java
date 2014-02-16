@@ -79,13 +79,13 @@ public class GCVenusRecipeManager
         
         RecipeUtil.addRecipe(new ItemStack(StarcraftVenus.VenusSulferBlock, 1, 0), new Object[] { "TTT", "TTT", "TTT", 'T', "ingotSulfer" });
         
-        RecipeUtil.addRecipe(new ItemStack(StarcraftVenus.VenusRedGemBlock, 1, 0), new Object[] { "TTT", "TTT", "TTT", 'T', new ItemStack(GCVenusItems.venusItemBasic, 1, 0)});
+        RecipeUtil.addRecipe(new ItemStack(StarcraftVenus.VenusRedGemBlock, 1, 0), new Object[] { "TTT", "TTT", "TTT", 'T', "redGem"});
         
         RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new Object[] { "WXW", "WYW", "WZW", 'X', "compressedSteel", 'Y', Block.glass, 'Z', new ItemStack(GCCoreItems.canister, 1, 0), 'W', "plateSulfer" });
         
         GameRegistry.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 0), new ItemStack(StarcraftVenus.VenusSulferBlock, 1, 0));
         
-        GameRegistry.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 0), new ItemStack(StarcraftVenus.VenusRedGemBlock, 1, 0));
+        GameRegistry.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 3), new ItemStack(StarcraftVenus.VenusRedGemBlock, 1, 0));
         
         GameRegistry.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 4), new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
         
