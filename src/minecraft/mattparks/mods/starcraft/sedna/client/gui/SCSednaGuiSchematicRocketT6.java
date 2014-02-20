@@ -1,6 +1,6 @@
 package mattparks.mods.starcraft.sedna.client.gui;
 
-import mattparks.mods.starcraft.sedna.GCSedna;
+import mattparks.mods.starcraft.sedna.SednaCore;
 import mattparks.mods.starcraft.sedna.inventory.SCSednaContainerRocketBenchT6;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -14,7 +14,7 @@ import org.lwjgl.opengl.GL11;
 
 public class SCSednaGuiSchematicRocketT6 extends GuiContainer implements ISchematicResultPage
 {
-    private static final ResourceLocation tier6SchematicTexture = new ResourceLocation(GCSedna.ASSET_DOMAIN, "textures/gui/schematic_rocket_T6.png");
+    private static final ResourceLocation tier6SchematicTexture = new ResourceLocation(SednaCore.ASSET_DOMAIN, "textures/gui/schematic_rocket_T6.png");
 
     private int pageIndex;
 

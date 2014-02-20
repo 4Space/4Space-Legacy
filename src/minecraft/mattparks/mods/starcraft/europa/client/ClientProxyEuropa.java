@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 
 import mattparks.mods.starcraft.europa.CommonProxyEuropa;
-import mattparks.mods.starcraft.europa.GCEuropa;
-import mattparks.mods.starcraft.europa.dimension.GCEuropaWorldProvider;
+import mattparks.mods.starcraft.europa.EuropaCore;
+import mattparks.mods.starcraft.europa.dimension.SCEuropaWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
@@ -90,11 +90,11 @@ public class ClientProxyEuropa extends CommonProxyEuropa
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCEuropaWorldProvider)
+                    if (world.provider instanceof SCEuropaWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
-                            world.provider.setSkyRenderer(new GCEuropaSkyProvider());
+                            world.provider.setSkyRenderer(new SCEuropaSkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -151,7 +151,7 @@ public class ClientProxyEuropa extends CommonProxyEuropa
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCEuropa.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), EuropaCore.CHANNEL, Side.CLIENT);
     }
 
     @Override

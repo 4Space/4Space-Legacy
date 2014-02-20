@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 
 import mattparks.mods.starcraft.vesta.CommonProxyVesta;
-import mattparks.mods.starcraft.vesta.GCVesta;
-import mattparks.mods.starcraft.vesta.dimension.GCVestaWorldProvider;
+import mattparks.mods.starcraft.vesta.VestaCore;
+import mattparks.mods.starcraft.vesta.dimension.SCVestaWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
@@ -90,11 +90,11 @@ public class ClientProxyVesta extends CommonProxyVesta
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCVestaWorldProvider)
+                    if (world.provider instanceof SCVestaWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
-                            world.provider.setSkyRenderer(new GCVestaSkyProvider());
+                            world.provider.setSkyRenderer(new SCVestaSkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -151,7 +151,7 @@ public class ClientProxyVesta extends CommonProxyVesta
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCVesta.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), VestaCore.CHANNEL, Side.CLIENT);
     }
 
     @Override

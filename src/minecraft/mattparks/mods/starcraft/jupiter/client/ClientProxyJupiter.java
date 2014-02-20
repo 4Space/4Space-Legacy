@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 
 import mattparks.mods.starcraft.jupiter.CommonProxyJupiter;
-import mattparks.mods.starcraft.jupiter.GCJupiter;
-import mattparks.mods.starcraft.jupiter.client.model.SCCoreModelSpaceshipTier5;
-import mattparks.mods.starcraft.jupiter.client.render.item.SCCoreItemRendererSpaceshipT5;
-import mattparks.mods.starcraft.jupiter.dimension.GCJupiterWorldProvider;
-import mattparks.mods.starcraft.jupiter.entities.SCCoreEntityRocketT5;
-import mattparks.mods.starcraft.jupiter.items.GCJupiterItems;
+import mattparks.mods.starcraft.jupiter.JupiterCore;
+import mattparks.mods.starcraft.jupiter.client.model.SCJupiterModelSpaceshipTier5;
+import mattparks.mods.starcraft.jupiter.client.render.item.SCJupiterItemRendererSpaceshipT5;
+import mattparks.mods.starcraft.jupiter.dimension.SCJupiterWorldProvider;
+import mattparks.mods.starcraft.jupiter.entities.SCJupiterEntityRocketT5;
+import mattparks.mods.starcraft.jupiter.items.JupiterItems;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
 import micdoodle8.mods.galacticraft.core.client.sounds.GCCoreSoundUpdaterSpaceship;
@@ -115,11 +115,11 @@ public class ClientProxyJupiter extends CommonProxyJupiter
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCJupiterWorldProvider)
+                    if (world.provider instanceof SCJupiterWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
-                            world.provider.setSkyRenderer(new GCJupiterSkyProvider());
+                            world.provider.setSkyRenderer(new SCJupiterSkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -134,9 +134,9 @@ public class ClientProxyJupiter extends CommonProxyJupiter
 
                         if (e != null)
                         {
-                            if (e instanceof SCCoreEntityRocketT5)
+                            if (e instanceof SCJupiterEntityRocketT5)
                             {
-                                final SCCoreEntityRocketT5 eship = (SCCoreEntityRocketT5) e;
+                                final SCJupiterEntityRocketT5 eship = (SCJupiterEntityRocketT5) e;
 
                                 if (eship.rocketSoundUpdater == null)
                                 {
@@ -181,7 +181,7 @@ public class ClientProxyJupiter extends CommonProxyJupiter
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCJupiter.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), JupiterCore.CHANNEL, Side.CLIENT);
     }
 
     @Override
@@ -196,8 +196,8 @@ public class ClientProxyJupiter extends CommonProxyJupiter
         IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
         // TODO remove internal cargo rocket codes
         
-        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT5.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier5(), GCJupiter.ASSET_DOMAIN, "rocketT5"));
-        MinecraftForgeClient.registerItemRenderer(GCJupiterItems.spaceshipT5.itemID, new SCCoreItemRendererSpaceshipT5(cargoRocketModel));
+        RenderingRegistry.registerEntityRenderingHandler(SCJupiterEntityRocketT5.class, new GCCoreRenderSpaceship(new SCJupiterModelSpaceshipTier5(), JupiterCore.ASSET_DOMAIN, "rocketT5"));
+        MinecraftForgeClient.registerItemRenderer(JupiterItems.spaceshipT5.itemID, new SCJupiterItemRendererSpaceshipT5(cargoRocketModel));
     }
 
     @Override

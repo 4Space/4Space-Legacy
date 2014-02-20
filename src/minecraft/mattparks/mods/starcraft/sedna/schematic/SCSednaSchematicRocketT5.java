@@ -1,8 +1,8 @@
 package mattparks.mods.starcraft.sedna.schematic;
 
-import mattparks.mods.starcraft.jupiter.GCJupiterConfigManager;
-import mattparks.mods.starcraft.jupiter.client.gui.SCCoreGuiSchematicRocketT5;
-import mattparks.mods.starcraft.jupiter.inventory.SCCoreContainerRocketBenchT5;
+import mattparks.mods.starcraft.sedna.SCSednaConfigManager;
+import mattparks.mods.starcraft.sedna.client.gui.SCSednaGuiSchematicRocketT6;
+import mattparks.mods.starcraft.sedna.inventory.SCSednaContainerRocketBenchT6;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.client.gui.GuiScreen;
@@ -30,13 +30,13 @@ public class SCSednaSchematicRocketT5 implements ISchematicPage
     @Override
     public int getGuiID()
     {
-        return GCJupiterConfigManager.idGuiRocketCraftingBenchT5;
+        return SCSednaConfigManager.idGuiRocketCraftingBenchT5;
     }
 
     @Override
     public int getPageID()
     {
-        return GCJupiterConfigManager.idSchematicRocketT5;
+        return SCSednaConfigManager.idSchematicRocketT5;
     }
 
     @Override
@@ -48,13 +48,13 @@ public class SCSednaSchematicRocketT5 implements ISchematicPage
     @Override
     public Container getResultContainer(EntityPlayer player, int x, int y, int z)
     {
-        return new SCCoreContainerRocketBenchT5(player.inventory, x, y, z);
+        return new SCSednaContainerRocketBenchT6(player.inventory, x, y, z);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public GuiScreen getResultScreen(EntityPlayer player, int x, int y, int z)
     {
-        return new SCCoreGuiSchematicRocketT5(player.inventory, x, y, z);
+        return new SCSednaGuiSchematicRocketT6(player.inventory, x, y, z);
     }
 }

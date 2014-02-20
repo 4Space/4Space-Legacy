@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 
 import mattparks.mods.starcraft.makemake.CommonProxyMakemake;
-import mattparks.mods.starcraft.makemake.GCMakemake;
-import mattparks.mods.starcraft.makemake.dimension.GCMakemakeWorldProvider;
+import mattparks.mods.starcraft.makemake.MakemakeCore;
+import mattparks.mods.starcraft.makemake.dimension.SCMakemakeWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
@@ -90,11 +90,11 @@ public class ClientProxyMakemake extends CommonProxyMakemake
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCMakemakeWorldProvider)
+                    if (world.provider instanceof SCMakemakeWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
-                            world.provider.setSkyRenderer(new GCMakemakeSkyProvider());
+                            world.provider.setSkyRenderer(new SCMakemakeSkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -151,7 +151,7 @@ public class ClientProxyMakemake extends CommonProxyMakemake
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCMakemake.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), MakemakeCore.CHANNEL, Side.CLIENT);
     }
 
     @Override

@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 
 import mattparks.mods.starcraft.saturn.CommonProxySaturn;
-import mattparks.mods.starcraft.saturn.GCSaturn;
-import mattparks.mods.starcraft.saturn.dimension.GCSaturnWorldProvider;
+import mattparks.mods.starcraft.saturn.SaturnCore;
+import mattparks.mods.starcraft.saturn.dimension.SCSaturnWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
@@ -90,11 +90,11 @@ public class ClientProxySaturn extends CommonProxySaturn
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCSaturnWorldProvider)
+                    if (world.provider instanceof SCSaturnWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
-                            world.provider.setSkyRenderer(new GCSaturnSkyProvider());
+                            world.provider.setSkyRenderer(new SCSaturnSkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -151,7 +151,7 @@ public class ClientProxySaturn extends CommonProxySaturn
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCSaturn.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), SaturnCore.CHANNEL, Side.CLIENT);
     }
 
     @Override

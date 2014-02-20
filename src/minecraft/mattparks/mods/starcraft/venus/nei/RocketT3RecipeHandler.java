@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import mattparks.mods.starcraft.venus.GCVenus;
+import mattparks.mods.starcraft.venus.VenusCore;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
@@ -48,7 +48,7 @@ public class RocketT3RecipeHandler extends TemplateRecipeHandler
         }
     }
 
-    private static final ResourceLocation rocketGuiTexture = new ResourceLocation(GCVenus.ASSET_DOMAIN, "textures/gui/schematic_rocket_T3.png");
+    private static final ResourceLocation rocketGuiTexture = new ResourceLocation(VenusCore.ASSET_DOMAIN, "textures/gui/schematic_rocket_T3.png");
 
     @Override
     public void drawBackground(int i)

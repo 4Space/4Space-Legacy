@@ -2,7 +2,7 @@ package mattparks.mods.starcraft.sedna.items;
 
 import java.util.List;
 
-import mattparks.mods.starcraft.sedna.GCSedna;
+import mattparks.mods.starcraft.sedna.SednaCore;
 import mattparks.mods.starcraft.sedna.entities.SCSednaEntityRocketT6;
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType;
@@ -55,7 +55,7 @@ public class SCSednaItemSpaceshipTier6 extends Item implements IHoldableItem
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCSedna.starcraftSednaTab;
+        return SednaCore.starcraftSednaTab;
     }
 
     @Override

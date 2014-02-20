@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import mattparks.mods.starcraft.venus.items.GCVenusItems;
+import mattparks.mods.starcraft.venus.items.VenusItems;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.block.Block;
@@ -50,16 +50,16 @@ public class NEIVenusConfig implements IConfigureNEI
         ArrayList<PositionedStack> input1 = new ArrayList<PositionedStack>();
 
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.partNoseCone), 45, -8 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 36, -6 + 0 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 36, -6 + 1 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 36, -6 + 2 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 36, -6 + 3 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 36, -6 + 4 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 54, -6 + 0 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 54, -6 + 1 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 54, -6 + 2 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 54, -6 + 3 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), 54, -6 + 4 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(VenusItems.venusItemBasic, 1, 3), 36, -6 + 0 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(VenusItems.venusItemBasic, 1, 3), 36, -6 + 1 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(VenusItems.venusItemBasic, 1, 3), 36, -6 + 2 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(VenusItems.venusItemBasic, 1, 3), 36, -6 + 3 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(VenusItems.venusItemBasic, 1, 3), 36, -6 + 4 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(VenusItems.venusItemBasic, 1, 3), 54, -6 + 0 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(VenusItems.venusItemBasic, 1, 3), 54, -6 + 1 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(VenusItems.venusItemBasic, 1, 3), 54, -6 + 2 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(VenusItems.venusItemBasic, 1, 3), 54, -6 + 3 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(VenusItems.venusItemBasic, 1, 3), 54, -6 + 4 * 18 + 16 + changey));
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.rocketEngine), 45, 100 + changey));
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.rocketEngine, 1, 1), 18, 64 + changey));
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.rocketEngine, 1, 1), 72, 64 + changey));
@@ -67,40 +67,40 @@ public class NEIVenusConfig implements IConfigureNEI
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.partFins), 18, 100 + changey));
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.partFins), 72, 82 + changey));
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.partFins), 72, 100 + changey));
-        this.registerRocketBenchRecipe(input1, new PositionedStack(new ItemStack(GCVenusItems.spaceshipT3, 1, 0), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input1, new PositionedStack(new ItemStack(VenusItems.spaceshipT3, 1, 0), 139, 87 + changey));
 
         ArrayList<PositionedStack> input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 0 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(GCVenusItems.spaceshipT3, 1, 1), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(VenusItems.spaceshipT3, 1, 1), 139, 87 + changey));
 
         input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 1 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(GCVenusItems.spaceshipT3, 1, 1), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(VenusItems.spaceshipT3, 1, 1), 139, 87 + changey));
 
         input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 2 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(GCVenusItems.spaceshipT3, 1, 1), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(VenusItems.spaceshipT3, 1, 1), 139, 87 + changey));
 
         input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 0 * 26, -15 + changey));
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 1 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(GCVenusItems.spaceshipT3, 1, 2), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(VenusItems.spaceshipT3, 1, 2), 139, 87 + changey));
 
         input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 1 * 26, -15 + changey));
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 2 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(GCVenusItems.spaceshipT3, 1, 2), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(VenusItems.spaceshipT3, 1, 2), 139, 87 + changey));
 
         input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 0 * 26, -15 + changey));
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 2 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(GCVenusItems.spaceshipT3, 1, 2), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(VenusItems.spaceshipT3, 1, 2), 139, 87 + changey));
 
         input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 0 * 26, -15 + changey));
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 1 * 26, -15 + changey));
         input2.add(new PositionedStack(new ItemStack(Block.chest), 90 + 2 * 26, -15 + changey));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(GCVenusItems.spaceshipT3, 1, 3), 139, 87 + changey));
+        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(VenusItems.spaceshipT3, 1, 3), 139, 87 + changey));
     }
 
     public void registerRocketBenchRecipe(ArrayList<PositionedStack> input, PositionedStack output)

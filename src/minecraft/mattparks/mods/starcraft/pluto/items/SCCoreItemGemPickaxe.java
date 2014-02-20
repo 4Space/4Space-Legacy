@@ -2,7 +2,7 @@ package mattparks.mods.starcraft.pluto.items;
 
 import java.util.List;
 
-import mattparks.mods.starcraft.pluto.GCPluto;
+import mattparks.mods.starcraft.pluto.PlutoCore;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -23,7 +23,7 @@ public class SCCoreItemGemPickaxe extends ItemPickaxe
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCPluto.starcraftPlutoTab;
+        return PlutoCore.starcraftPlutoTab;
     }
 
     @Override

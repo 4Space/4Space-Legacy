@@ -6,13 +6,12 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 
 import mattparks.mods.starcraft.sedna.CommonProxySedna;
-import mattparks.mods.starcraft.sedna.GCSedna;
+import mattparks.mods.starcraft.sedna.SednaCore;
 import mattparks.mods.starcraft.sedna.client.model.SCSednaModelSpaceshipTier6;
 import mattparks.mods.starcraft.sedna.client.render.item.SCSednaItemRendererSpaceshipT6;
-import mattparks.mods.starcraft.sedna.client.sounds.GCSednaSounds;
-import mattparks.mods.starcraft.sedna.dimension.GCSednaWorldProvider;
+import mattparks.mods.starcraft.sedna.dimension.SCSednaWorldProvider;
 import mattparks.mods.starcraft.sedna.entities.SCSednaEntityRocketT6;
-import mattparks.mods.starcraft.sedna.items.GCSednaItems;
+import mattparks.mods.starcraft.sedna.items.SednaItems;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
 import micdoodle8.mods.galacticraft.core.client.sounds.GCCoreSoundUpdaterSpaceship;
@@ -30,7 +29,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
-import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.ITickHandler;
@@ -117,11 +115,11 @@ public class ClientProxySedna extends CommonProxySedna
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCSednaWorldProvider)
+                    if (world.provider instanceof SCSednaWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
-                            world.provider.setSkyRenderer(new GCSednaSkyProvider());
+                            world.provider.setSkyRenderer(new SCSednaSkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -182,13 +180,13 @@ public class ClientProxySedna extends CommonProxySedna
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCSedna.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), SednaCore.CHANNEL, Side.CLIENT);
     }
 
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(new GCSednaSounds());
+    	;
     }
 
     @Override
@@ -199,7 +197,7 @@ public class ClientProxySedna extends CommonProxySedna
         IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
         // TODO remove internal cargo rocket codes
             
-        RenderingRegistry.registerEntityRenderingHandler(SCSednaEntityRocketT6.class, new GCCoreRenderSpaceship(new SCSednaModelSpaceshipTier6(), GCSedna.ASSET_DOMAIN, "rocketT6"));
-        MinecraftForgeClient.registerItemRenderer(GCSednaItems.spaceshipT6.itemID, new SCSednaItemRendererSpaceshipT6(cargoRocketModel));
+        RenderingRegistry.registerEntityRenderingHandler(SCSednaEntityRocketT6.class, new GCCoreRenderSpaceship(new SCSednaModelSpaceshipTier6(), SednaCore.ASSET_DOMAIN, "rocketT6"));
+        MinecraftForgeClient.registerItemRenderer(SednaItems.spaceshipT6.itemID, new SCSednaItemRendererSpaceshipT6(cargoRocketModel));
     }
 }

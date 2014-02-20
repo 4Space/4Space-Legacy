@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 
 import mattparks.mods.starcraft.neptune.CommonProxyNeptune;
-import mattparks.mods.starcraft.neptune.GCNeptune;
-import mattparks.mods.starcraft.neptune.dimension.GCNeptuneWorldProvider;
+import mattparks.mods.starcraft.neptune.NeptuneCore;
+import mattparks.mods.starcraft.neptune.dimension.SCNeptuneWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
@@ -105,11 +105,11 @@ public class ClientProxyNeptune extends CommonProxyNeptune
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCNeptuneWorldProvider)
+                    if (world.provider instanceof SCNeptuneWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
-                            world.provider.setSkyRenderer(new GCNeptuneSkyProvider());
+                            world.provider.setSkyRenderer(new SCNeptuneSkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -167,7 +167,7 @@ public class ClientProxyNeptune extends CommonProxyNeptune
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCNeptune.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), NeptuneCore.CHANNEL, Side.CLIENT);
     }
 
     @Override

@@ -6,12 +6,11 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 
 import mattparks.mods.starcraft.mercury.CommonProxyMercury;
-import mattparks.mods.starcraft.mercury.GCMercury;
-import mattparks.mods.starcraft.mercury.client.model.SCCoreModelSpaceshipTier4;
-import mattparks.mods.starcraft.mercury.client.render.item.SCCoreItemRendererSpaceshipT4;
-import mattparks.mods.starcraft.mercury.client.sounds.GCMercurySounds;
-import mattparks.mods.starcraft.mercury.entities.SCCoreEntityRocketT4;
-import mattparks.mods.starcraft.mercury.items.GCMercuryItems;
+import mattparks.mods.starcraft.mercury.MercuryCore;
+import mattparks.mods.starcraft.mercury.client.model.SCMercuryModelSpaceshipTier4;
+import mattparks.mods.starcraft.mercury.client.render.item.SCMercuryItemRendererSpaceshipT4;
+import mattparks.mods.starcraft.mercury.entities.SCMercuryEntityRocketT4;
+import mattparks.mods.starcraft.mercury.items.MercuryItems;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
 import micdoodle8.mods.galacticraft.core.client.sounds.GCCoreSoundUpdaterSpaceship;
@@ -29,7 +28,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
-import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.ITickHandler;
@@ -133,9 +131,9 @@ public class ClientProxyMercury extends CommonProxyMercury
 
                         if (e != null)
                         {
-                            if (e instanceof SCCoreEntityRocketT4)
+                            if (e instanceof SCMercuryEntityRocketT4)
                             {
-                                final SCCoreEntityRocketT4 eship = (SCCoreEntityRocketT4) e;
+                                final SCMercuryEntityRocketT4 eship = (SCMercuryEntityRocketT4) e;
 
                                 if (eship.rocketSoundUpdater == null)
                                 {
@@ -176,13 +174,13 @@ public class ClientProxyMercury extends CommonProxyMercury
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCMercury.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), MercuryCore.CHANNEL, Side.CLIENT);
     }
 
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(new GCMercurySounds());
+    	;
     }
 
     @Override
@@ -191,7 +189,7 @@ public class ClientProxyMercury extends CommonProxyMercury
         IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
         // TODO remove internal cargo rocket codes
         
-        RenderingRegistry.registerEntityRenderingHandler(SCCoreEntityRocketT4.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier4(), GCMercury.ASSET_DOMAIN, "rocketT4"));
-        MinecraftForgeClient.registerItemRenderer(GCMercuryItems.spaceshipT4.itemID, new SCCoreItemRendererSpaceshipT4(cargoRocketModel));
+        RenderingRegistry.registerEntityRenderingHandler(SCMercuryEntityRocketT4.class, new GCCoreRenderSpaceship(new SCMercuryModelSpaceshipTier4(), MercuryCore.ASSET_DOMAIN, "rocketT4"));
+        MinecraftForgeClient.registerItemRenderer(MercuryItems.spaceshipT4.itemID, new SCMercuryItemRendererSpaceshipT4(cargoRocketModel));
     }
 }

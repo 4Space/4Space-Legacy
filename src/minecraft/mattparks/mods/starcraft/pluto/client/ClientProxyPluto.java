@@ -6,9 +6,8 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 
 import mattparks.mods.starcraft.pluto.CommonProxyPluto;
-import mattparks.mods.starcraft.pluto.GCPluto;
-import mattparks.mods.starcraft.pluto.client.sounds.GCPlutoSounds;
-import mattparks.mods.starcraft.pluto.dimension.GCPlutoWorldProvider;
+import mattparks.mods.starcraft.pluto.PlutoCore;
+import mattparks.mods.starcraft.pluto.dimension.SCPlutoWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
@@ -21,7 +20,6 @@ import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.TickType;
@@ -107,11 +105,11 @@ public class ClientProxyPluto extends CommonProxyPluto
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCPlutoWorldProvider)
+                    if (world.provider instanceof SCPlutoWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
-                            world.provider.setSkyRenderer(new GCPlutoSkyProvider());
+                            world.provider.setSkyRenderer(new SCPlutoSkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -168,13 +166,13 @@ public class ClientProxyPluto extends CommonProxyPluto
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCPluto.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), PlutoCore.CHANNEL, Side.CLIENT);
     }
 
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(new GCPlutoSounds());
+    	;
     }
 
     @Override

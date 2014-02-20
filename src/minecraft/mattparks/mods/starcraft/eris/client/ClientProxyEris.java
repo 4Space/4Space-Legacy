@@ -6,9 +6,8 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 
 import mattparks.mods.starcraft.eris.CommonProxyEris;
-import mattparks.mods.starcraft.eris.GCEris;
-import mattparks.mods.starcraft.eris.client.sounds.GCErisSounds;
-import mattparks.mods.starcraft.eris.dimension.GCErisWorldProvider;
+import mattparks.mods.starcraft.eris.ErisCore;
+import mattparks.mods.starcraft.eris.dimension.SCErisWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
@@ -21,7 +20,6 @@ import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.TickType;
@@ -95,11 +93,11 @@ public class ClientProxyEris extends CommonProxyEris
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCErisWorldProvider)
+                    if (world.provider instanceof SCErisWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
-                            world.provider.setSkyRenderer(new GCErisSkyProvider());
+                            world.provider.setSkyRenderer(new SCErisSkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -157,13 +155,13 @@ public class ClientProxyEris extends CommonProxyEris
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCEris.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), ErisCore.CHANNEL, Side.CLIENT);
     }
 
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(new GCErisSounds());
+    	;
     }
 
     @Override

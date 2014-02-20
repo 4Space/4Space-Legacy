@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 
 import mattparks.mods.starcraft.uranus.CommonProxyUranus;
-import mattparks.mods.starcraft.uranus.GCUranus;
-import mattparks.mods.starcraft.uranus.dimension.GCUranusWorldProvider;
+import mattparks.mods.starcraft.uranus.UranusCore;
+import mattparks.mods.starcraft.uranus.dimension.SCUranusWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
@@ -105,11 +105,11 @@ public class ClientProxyUranus extends CommonProxyUranus
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCUranusWorldProvider)
+                    if (world.provider instanceof SCUranusWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
-                            world.provider.setSkyRenderer(new GCUranusSkyProvider());
+                            world.provider.setSkyRenderer(new SCUranusSkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -166,7 +166,7 @@ public class ClientProxyUranus extends CommonProxyUranus
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCUranus.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), UranusCore.CHANNEL, Side.CLIENT);
     }
 
     @Override

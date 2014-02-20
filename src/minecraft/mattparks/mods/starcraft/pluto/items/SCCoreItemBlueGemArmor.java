@@ -1,6 +1,6 @@
 package mattparks.mods.starcraft.pluto.items;
 
-import mattparks.mods.starcraft.pluto.GCPluto;
+import mattparks.mods.starcraft.pluto.PlutoCore;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -28,17 +28,17 @@ public class SCCoreItemBlueGemArmor extends ItemArmor
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
     {
-        if (this.material == GCPlutoItems.ARMORBLUEGEM)
+        if (this.material == PlutoItems.ARMORBLUEGEM)
         {
-            if (stack.getItem().itemID == GCPlutoItems.blueGemHelmet.itemID)
+            if (stack.getItem().itemID == PlutoItems.blueGemHelmet.itemID)
             {
                 return "textures/model/armor/blueGem_1.png";
             }
-            else if (stack.getItem().itemID == GCPlutoItems.blueGemChestplate.itemID || stack.getItem().itemID == GCPlutoItems.blueGemBoots.itemID)
+            else if (stack.getItem().itemID == PlutoItems.blueGemChestplate.itemID || stack.getItem().itemID == PlutoItems.blueGemBoots.itemID)
             {
                 return "textures/model/armor/blueGem_2.png";
             }
-            else if (stack.getItem().itemID == GCPlutoItems.blueGemLeggings.itemID)
+            else if (stack.getItem().itemID == PlutoItems.blueGemLeggings.itemID)
             {
                 return "textures/model/armor/blueGem_3.png";
             }
@@ -50,7 +50,7 @@ public class SCCoreItemBlueGemArmor extends ItemArmor
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCPluto.starcraftPlutoTab;
+        return PlutoCore.starcraftPlutoTab;
     }
 
     @Override

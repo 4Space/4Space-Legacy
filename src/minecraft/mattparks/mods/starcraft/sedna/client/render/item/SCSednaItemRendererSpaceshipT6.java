@@ -1,6 +1,6 @@
 package mattparks.mods.starcraft.sedna.client.render.item;
 
-import mattparks.mods.starcraft.sedna.GCSedna;
+import mattparks.mods.starcraft.sedna.SednaCore;
 import mattparks.mods.starcraft.sedna.client.model.SCSednaModelSpaceshipTier6;
 import mattparks.mods.starcraft.sedna.entities.SCSednaEntityRocketT6;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
@@ -26,7 +26,7 @@ public class SCSednaItemRendererSpaceshipT6 extends GCCoreItemRendererSpaceship
 
     public SCSednaItemRendererSpaceshipT6(IModelCustom cargoRocketModel)
     {
-        super(new SCSednaEntityRocketT6(FMLClientHandler.instance().getClient().theWorld), new SCSednaModelSpaceshipTier6(), new ResourceLocation(GCSedna.ASSET_DOMAIN, "textures/model/rocketT6.png"));
+        super(new SCSednaEntityRocketT6(FMLClientHandler.instance().getClient().theWorld), new SCSednaModelSpaceshipTier6(), new ResourceLocation(SednaCore.ASSET_DOMAIN, "textures/model/rocketT6.png"));
         this.cargoRocketModel = cargoRocketModel;
     }
 
