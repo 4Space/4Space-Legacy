@@ -5,6 +5,9 @@ item.tier7.desc=Tier 7
 
 # ITEMS
 item.plateHeavyT7.name=Heavy-Duty Plate
+item.greenGem.name=Green Gem
+item.greenGemPlate.name=Green Gem Plate
+item.potatoSpace.name=Space Potato
 
 # TOOLS
 
