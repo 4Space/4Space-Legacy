@@ -1,0 +1,87 @@
+# Starcraft Venus Language File = TURKEY TURKISH
+
+# GENERAL ITEMS
+item.tier3.desc = Tier 3
+
+# ITEMS
+item.spaceshipTier3.name = Tier 3 Roket
+item.ingotGem.name = Gem Külçe
+item.redGem.name = Red Gem
+item.redGemPlate.name = Red Gem Plate
+item.ingotSulfer.name = azot, Kükürt Külçe
+item.sulferPlate.name = azot, Kükürt Plakalı
+item.rawBasalt.name = Ham Bazalt
+item.basaltBrick.name = Bazalt Tuğla
+item.vurnBerry.name = Vurn Berry
+item.venusRod.name = Venüs Rod
+item.venusRodDust.name = Venüs Rod Toz
+item.venusBattery.name = Venüs Pil
+item.plateHeavyT3.name Ağır plaka =
+item.FossilizedPlant.name Fosilleşmiş Tesisi =
+item.VenusCrystal.name = Venüs Crystal
+item.sulferDust.name = azot, Kükürt Toz
+item.venusPowerCrystal.name = Güç Kristal
+On A Stick item.vurnBerryOnAStick.name = Vurn Berry
+
+# TOOLS
+item.sulferPick.name = azot, Kükürt Kazma
+item.sulferAxe.name = azot, Kükürt Axe
+item.sulferHoe.name = azot, Kükürt Hoe
+item.sulferSpade.name = azot, Kükürt Küreği
+item.sulferSword.name = azot, Kükürt Kılıç
+item.gemPick.name = Red Gem Kazma
+item.gemAxe.name = Red Gem Axe
+item.gemHoe.name = Red Gem Hoe
+item.gemSpade.name = Red Gem Küreği
+item.gemSword.name = Red Gem Kılıç
+
+# ARMOR
+item.sulferHelmet.name = azot, Kükürt Kask
+item.sulferChestplate.name = azot, Kükürt Chestplate
+item.sulferLeggings.name = azot, Kükürt Tayt
+item.sulferBoots.name = azot, Kükürt Boots
+item.gemHelmet.name = Red Gem Kask
+item.gemChestplate.name = Red Gem Chestplate
+item.gemLeggings.name = Red Gem Tayt
+item.gemBoots.name = Red Gem Boots
+
+# BLOCKS
+tile.VenusGrass.name = Venüs Çim
+tile.VenusDirt.name = Venüs Dirt
+tile.VenusStone.name = Venüs Taş
+tile.VenusBurnStone.name = Venüs Stone Yanık
+tile.VenusCobblestone.name = Venüs Cobblestone
+tile.VenusGem.name = Red Gem Blok
+tile.VenusMeteor.name = Meteor Blok
+tile.VenusBrick.name = Venüs Tuğla
+tile.VenusSulfer.name = azot, Kükürt Blok
+tile.VenusGemOre.name = Red Gem Cevher
+tile.VenusMeteorOre.name = Meteor Cevher
+tile.VenusSulferOre.name = azot, Kükürt Cevheri
+tile.VenusIronOre.name = Demir Cevheri
+tile.VenusCoalOre.name = Kömür Cevher
+tile.VenusTinOre.name = Tin Ore
+tile.VenusCopperOre.name = Bakır Cevheri
+tile.VenusBasalt.name = Bazalt
+tile.VenusHalfBasalt.name = Bazalt Slab
+tile.EvolvedBlazeEgg.name = Evolved Blaze Yumurta
+tile.VenusianTNT.name = Venüs TNT
+tile.CrystalBlock.name = Kristal Blok
+tile.VenusDecorationBlock.name = Venüs Dekorasyon Bloğu
+tile.VenusCrystalOre.name = Venüs Crystal Cevher
+tile.FossilizedPlantOre.name = Fosilleşmiş Bitki Cevher
+
+# ENTITYS
+entity.GalacticraftCore.VenusianVillager.name = Venüs Köylü
+entity.GalacticraftCore.Flameling.name = Flameling
+entity.GalacticraftCore.EvolvedBlaze.name = Evolved Blaze
+
+# GUI
+itemGroup.starcraftVenusTab = Uzay Venüs
+
+gui.choosePlanet.desc.venus = Yaşanabilir # No Oksijen # Yerçekimi : 90 %
+
+dimension.Venus.name = Venüs
+
+# Schematics
+schematic.rocketT3.name = Tier 3 Roket

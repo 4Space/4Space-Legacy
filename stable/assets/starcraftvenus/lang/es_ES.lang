@@ -1,0 +1,87 @@
+# Starcraft Venus Language File = SPAIN SPANISH
+
+# GENERAL ITEMS
+item.tier3.desc = Nivel 3
+
+# ITEMS
+item.spaceshipTier3.name = Nivel 3 Rocket
+item.ingotGem.name = Gem Lingote
+item.redGem.name = Red Gem
+item.redGemPlate.name = Red Gem Plate
+item.ingotSulfer.name = Sulfer Lingote
+item.sulferPlate.name = Sulfer Plate
+item.rawBasalt.name = Raw Basalt
+item.basaltBrick.name = Basalto ladrillo
+item.vurnBerry.name = Vurn Berry
+item.venusRod.name = Venus Vara
+item.venusRodDust.name = Venus Vara polvo
+item.venusBattery.name = Venus batería
+item.plateHeavyT3.name = Placa Pesados
+item.FossilizedPlant.name = Planta fosilizado
+item.VenusCrystal.name = Venus Crystal
+item.sulferDust.name = Sulfer polvo
+item.venusPowerCrystal.name = poder de los cristales
+item.vurnBerryOnAStick.name = Vurn Berry en un palillo
+
+# TOOLS
+item.sulferPick.name = Sulfer Piqueta
+item.sulferAxe.name = Sulfer Axe
+item.sulferHoe.name = Sulfer Hoe
+item.sulferSpade.name = Sulfer Pala
+item.sulferSword.name = Sulfer Espada
+item.gemPick.name = Red Gem Piqueta
+item.gemAxe.name = Red Gem Axe
+item.gemHoe.name = Red Gem Hoe
+item.gemSpade.name = Red Gem Pala
+item.gemSword.name = Red Gem Espada
+
+# ARMOR
+item.sulferHelmet.name = Sulfer Casco
+item.sulferChestplate.name = Sulfer Peto
+item.sulferLeggings.name = Sulfer Leggings
+item.sulferBoots.name = Sulfer Botas
+item.gemHelmet.name = Red Gem Casco
+item.gemChestplate.name = Red Gem Peto
+item.gemLeggings.name = Red Gem Leggings
+item.gemBoots.name = Red Gem Botas
+
+# BLOCKS
+tile.VenusGrass.name = Venus Grass
+tile.VenusDirt.name = Venus Dirt
+tile.VenusStone.name = Venus Piedra
+tile.VenusBurnStone.name = Venus Burn Piedra
+tile.VenusCobblestone.name = Venus Adoquinado
+tile.VenusGem.name = Red Gem Bloquear
+tile.VenusMeteor.name = Meteor Bloquear
+tile.VenusBrick.name = Venus ladrillo
+tile.VenusSulfer.name = Sulfer Bloquear
+tile.VenusGemOre.name = Red Gem Ore
+tile.VenusMeteorOre.name = Meteor Ore
+tile.VenusSulferOre.name = Sulfer Ore
+tile.VenusIronOre.name = Mineral de Hierro
+tile.VenusCoalOre.name = Carbón Mineral
+tile.VenusTinOre.name = Mineral de Estaño
+tile.VenusCopperOre.name = Copper Ore
+tile.VenusBasalt.name = Basalt
+tile.VenusHalfBasalt.name = Basalto Slab
+tile.EvolvedBlazeEgg.name = Evolved Blaze Huevo
+tile.VenusianTNT.name = TNT venusiana
+tile.CrystalBlock.name = Crystal Bloquear
+tile.VenusDecorationBlock.name = Venus Decoración Bloquear
+tile.VenusCrystalOre.name = Venus Crystal Ore
+tile.FossilizedPlantOre.name = fosilizado Planta Ore
+
+# ENTITYS
+entity.GalacticraftCore.VenusianVillager.name = Villager venusiana
+entity.GalacticraftCore.Flameling.name = Flameling
+entity.GalacticraftCore.EvolvedBlaze.name = Evolved Blaze
+
+# GUI
+itemGroup.starcraftVenusTab = nave espacial Venus
+
+gui.choosePlanet.desc.venus = Habitable # No Oxygen # Gravedad : 90 %
+
+dimension.Venus.name = Venus
+
+# Schematics
+schematic.rocketT3.name = Nivel 3 Rocket

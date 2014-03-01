@@ -1,0 +1,87 @@
+# Starcraft Venus Language File = JAPANESE
+
+# GENERAL ITEMS
+item.tier3.desc =ティア3
+
+# ITEMS
+item.spaceshipTier3.name =ティア3ロケット
+item.ingotGem.name =宝石インゴット
+item.redGem.name =赤い宝石
+item.redGemPlate.name =赤い宝石プレート
+item.ingotSulfer.name = Sulferインゴット
+item.sulferPlate.name = Sulferプレート
+item.rawBasalt.name =生玄武岩
+item.basaltBrick.name =玄武岩ブリック
+item.vurnBerry.name = Vurnベリー
+item.venusRod.name =金星ロッド
+item.venusRodDust.name =金星ロッドダスト
+item.venusBattery.name =金星バッテリー
+item.plateHeavyT3.nameは大型プレートを=
+item.FossilizedPlant.nameは化石工場=
+item.VenusCrystal.name =ヴィーナスクリスタル
+item.sulferDust.name = Sulferダスト
+item.venusPowerCrystal.name =パワークリスタル
+スティックにitem.vurnBerryOnAStick.name = Vurnベリー
+
+# TOOLS
+item.sulferPick.name = Sulferつるはし
+item.sulferAxe.name = Sulferアックス
+item.sulferHoe.name = Sulfer鍬
+item.sulferSpade.name = Sulferシャベル
+item.sulferSword.name = Sulfer剣
+item.gemPick.name =赤い宝石つるはし
+item.gemAxe.name =赤い宝石アックス
+item.gemHoe.name =赤い宝石鍬
+item.gemSpade.name =赤い宝石シャベル
+item.gemSword.name =赤い宝石剣
+
+# ARMOR
+item.sulferHelmet.name = Sulferヘルメット
+item.sulferChestplate.name = Sulfer Chestplate
+item.sulferLeggings.name = Sulferレギンス
+item.sulferBoots.name = Sulferブーツ
+item.gemHelmet.name =赤い宝石ヘルメット
+item.gemChestplate.name =赤い宝石Chestplate
+item.gemLeggings.name =赤い宝石レギンス
+item.gemBoots.name =赤い宝石ブーツ
+
+# BLOCKS
+tile.VenusGrass.name =金星草
+tile.VenusDirt.name =金星ダート
+tile.VenusStone.name =ヴィーナス·ストーン
+tile.VenusBurnStone.name =金星はストーンバーン
+tile.VenusCobblestone.name =金星玉石
+tile.VenusGem.name =赤い宝石ブロック
+tile.VenusMeteor.name =流星ブロック
+tile.VenusBrick.name =金星ブリック
+tile.VenusSulfer.name = Sulferブロック
+tile.VenusGemOre.name =赤い宝石の原石
+tile.VenusMeteorOre.name =流星鉱石
+tile.VenusSulferOre.name = Sulfer鉱石
+tile.VenusIronOre.name =鉄鉱石
+tile.VenusCoalOre.name =石炭鉱石
+tile.VenusTinOre.name =スズ鉱石
+tile.VenusCopperOre.name =銅鉱石
+tile.VenusBasalt.name =玄武岩
+tile.VenusHalfBasalt.name =玄武岩スラブ
+tile.EvolvedBlazeEgg.name =進化ブレイズエッグ
+tile.VenusianTNT.nameは=金星TNT
+tile.CrystalBlock.name =クリスタルブロック
+tile.VenusDecorationBlock.name =金星デコレーションブロック
+tile.VenusCrystalOre.name =ヴィーナスクリスタルの原石
+tile.FossilizedPlantOre.name = Fossilised工場鉱石
+
+# ENTITYS
+entity.GalacticraftCore.VenusianVillager.nameは=金星村人
+entity.GalacticraftCore.Flameling.name = Flameling
+entity.GalacticraftCore.EvolvedBlaze.name =進化ブレイズ
+
+# GUI
+itemGroup.starcraftVenusTab =宇宙船金星
+
+gui.choosePlanet.desc.venusは=居住＃酸素中の重力ん： 90％
+
+dimension.Venus.name =金星
+
+# Schematics
+schematic.rocketT3.name =ティア3ロケット

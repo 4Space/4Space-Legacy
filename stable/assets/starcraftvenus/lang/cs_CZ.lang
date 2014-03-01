@@ -1,0 +1,87 @@
+# Starcraft Venus Language File = CZECH REPUBLIC CZECH
+
+# OBECNÉ BODY
+item.tier3.desc = Tier 3
+
+# ITEMS
+item.spaceshipTier3.name = Tier 3 Rocket
+item.ingotGem.name = Gem ingotů
+item.redGem.name = Red Gem
+item.redGemPlate.name = Red Gem Plate
+item.ingotSulfer.name = sulfer ingotů
+item.sulferPlate.name = sulfer Plate
+item.rawBasalt.name = Raw Čedič
+item.basaltBrick.name = Basalt Brick
+item.vurnBerry.name = Vurn Berry
+item.venusRod.name = Venus Rod
+item.venusRodDust.name = Venus Rod prachu
+item.venusBattery.name = Venus baterie
+item.plateHeavyT3.name = Heavy - Duty Plate
+item.FossilizedPlant.name = zkamenělých rostlin
+item.VenusCrystal.name = Venuše Crystal
+item.sulferDust.name = sulfer prachu
+item.venusPowerCrystal.name = Power Crystal
+item.vurnBerryOnAStick.name = Vurn Berry na tyči
+
+# TOOLS
+item.sulferPick.name = sulfer Krumpáč
+item.sulferAxe.name = sulfer Axe
+item.sulferHoe.name = sulfer Hoe
+item.sulferSpade.name = sulfer Shovel
+item.sulferSword.name = sulfer Sword
+item.gemPick.name = Red Gem Krumpáč
+item.gemAxe.name = Red Gem Axe
+item.gemHoe.name = Red Gem Hoe
+item.gemSpade.name = Red Gem Shovel
+item.gemSword.name = Red Gem Sword
+
+# ARMOR
+item.sulferHelmet.name = sulfer přilba
+item.sulferChestplate.name = sulfer Chestplate
+item.sulferLeggings.name = sulfer Legíny
+item.sulferBoots.name = sulfer boty
+item.gemHelmet.name = Red Gem Helmet
+item.gemChestplate.name = Red Gem Chestplate
+item.gemLeggings.name = Red Gem Legíny
+item.gemBoots.name = Red Gem boty
+
+# BLOCKS
+tile.VenusGrass.name = Venus Grass
+tile.VenusDirt.name = Venus Dirt
+tile.VenusStone.name = Venus kámen
+tile.VenusBurnStone.name = Venus Vypálit kámen
+tile.VenusCobblestone.name = Venus dlažební kostky
+tile.VenusGem.name = Red Gem bloku
+tile.VenusMeteor.name = Meteor bloku
+tile.VenusBrick.name = Venus Brick
+tile.VenusSulfer.name = sulfer bloku
+tile.VenusGemOre.name = Red Gem Ore
+tile.VenusMeteorOre.name = Meteor Ore
+tile.VenusSulferOre.name = sulfer Ore
+tile.VenusIronOre.name = železné rudy
+tile.VenusCoalOre.name = Coal Ore
+tile.VenusTinOre.name = Tin Ore
+tile.VenusCopperOre.name = Copper Ore
+tile.VenusBasalt.name = Basalt
+tile.VenusHalfBasalt.name = čedičové desky
+tile.EvolvedBlazeEgg.name = Evolved Blaze Egg
+tile.VenusianTNT.name = Venuše TNT
+tile.CrystalBlock.name = Crystal Block
+tile.VenusDecorationBlock.name = Venus dekorace bloku
+tile.VenusCrystalOre.name = Venuše Crystal Ore
+tile.FossilizedPlantOre.name = Zkamenělá rostlin Ore
+
+# ENTITYS
+entity.GalacticraftCore.VenusianVillager.name = Venuše Villager
+entity.GalacticraftCore.Flameling.name = Flameling
+entity.GalacticraftCore.EvolvedBlaze.name = Evolved Blaze
+
+# GUI
+itemGroup.starcraftVenusTab = Spacecraft Venus
+
+gui.choosePlanet.desc.venus = Obytný # Bez kyslíku # hmotnost: 90 %
+
+dimension.Venus.name = Venus
+
+# Schémata
+schematic.rocketT3.name = Tier 3 Rocket

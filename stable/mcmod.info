@@ -1,0 +1,19 @@
+[
+{
+  "modid": "StarcraftCore",
+  "name": "Starcraft Core",
+  "description": "Starcraft-2 addon adds all of our solar systems planets, and some moons soon! More info can be found at http://axiz.weebly.com",
+  "version": "0.0.2",
+  "mcversion": "1.6.4",
+  "url": "http://www.axiz.weebly.com/",
+  "updateUrl": "",
+  "authors": [
+    "mattparks"
+  ],
+  "credits": "",
+  "logoFile": "/mattparks/mods/starcraft/starcraft_logo.png",
+  "screenshots": [
+  ],
+  "parent":""
+}
+]

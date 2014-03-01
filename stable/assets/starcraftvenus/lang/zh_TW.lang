@@ -1,0 +1,87 @@
+# Starcraft Venus Language File = TRADITIONAL CHINESE
+
+# GENERAL ITEMS
+item.tier3.desc =第三
+
+# ITEMS
+item.spaceshipTier3.name =三級火箭
+item.ingotGem.name =寶石錠
+item.redGem.name =紅色寶石
+item.redGemPlate.name =紅色寶石板
+item.ingotSulfer.name =硫錠
+item.sulferPlate.name =硫板
+item.rawBasalt.name =原始玄武岩
+item.basaltBrick.name =玄武岩磚
+item.vurnBerry.name = Vurn貝瑞
+item.venusRod.name =金星棒
+item.venusRodDust.name =金星塵棒
+item.venusBattery.name =金星電池
+item.plateHeavyT3.name =重型鋼板
+item.FossilizedPlant.name =植物化石
+item.VenusCrystal.name =維納斯水晶
+item.sulferDust.name =硫塵
+item.venusPowerCrystal.name =功率晶體
+item.vurnBerryOnAStick.name = Vurn貝瑞一棒
+
+# TOOLS
+item.sulferPick.name =硫鎬
+item.sulferAxe.name =硫斧
+item.sulferHoe.name =硫鋤
+item.sulferSpade.name =硫鏟
+item.sulferSword.name =硫劍
+item.gemPick.name =紅色寶石鎬
+item.gemAxe.name =紅色寶石斧
+item.gemHoe.name =紅色寶石鋤頭
+item.gemSpade.name =紅色寶石鏟
+item.gemSword.name =紅色寶石劍
+
+# ARMOR
+item.sulferHelmet.name =硫頭盔
+item.sulferChestplate.name =硫胸甲
+item.sulferLeggings.name =硫護腿
+item.sulferBoots.name =硫靴
+item.gemHelmet.name =紅色寶石頭盔
+item.gemChestplate.name =紅色寶石胸鎧
+item.gemLeggings.name =紅色寶石護腿
+item.gemBoots.name =紅色寶石靴
+
+# BLOCKS
+tile.VenusGrass.name =金星草
+tile.VenusDirt.name =金星污垢
+tile.VenusStone.name =金星石
+tile.VenusBurnStone.name =金星石燒
+tile.VenusCobblestone.name =金星鵝卵石
+tile.VenusGem.name =紅色寶石座
+tile.VenusMeteor.name =座流星
+tile.VenusBrick.name =金星磚
+tile.VenusSulfer.name =硫座
+tile.VenusGemOre.name =紅色寶石礦
+tile.VenusMeteorOre.name =流星礦石
+tile.VenusSulferOre.name =硫礦石
+tile.VenusIronOre.name =鐵礦
+tile.VenusCoalOre.name =煤炭礦石
+tile.VenusTinOre.name =錫礦石
+tile.VenusCopperOre.name =銅礦
+tile.VenusBasalt.name =玄武岩
+tile.VenusHalfBasalt.name =玄武岩板
+tile.EvolvedBlazeEgg.name =演進火焰蛋
+tile.VenusianTNT.name =金星TNT
+tile.CrystalBlock.name =水晶座
+tile.VenusDecorationBlock.name =金星裝飾座
+tile.VenusCrystalOre.name =維納斯水晶礦石
+tile.FossilizedPlantOre.name = Fossilised廠礦石
+
+# ENTITYS
+entity.GalacticraftCore.VenusianVillager.name =金星村民
+entity.GalacticraftCore.Flameling.name = Flameling
+entity.GalacticraftCore.EvolvedBlaze.name =演進大火
+
+# GUI
+itemGroup.starcraftVenusTab =金星航天器
+
+gui.choosePlanet.desc.venus =可居住＃沒有氧氣＃比重： 90 ％
+
+dimension.Venus.name =金星
+
+# Schematics
+schematic.rocketT3.name =三級火箭
