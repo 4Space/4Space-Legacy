@@ -18,7 +18,8 @@ public class SCVenusConfigManager
     // ITEMS
     public static int idItemVenusBasic;
     public static int idVurnBerryOnAStick;
-//    public static int idItemVenusBattery;
+    public static int idJetpack;
+    public static int idItemVenusBattery;
     public static int idTtemVenusT3Schematic;
     public static int idVurnBerry;
     public static int idItemSpaceshipTier3;
@@ -155,9 +156,11 @@ public class SCVenusConfigManager
             SCVenusConfigManager.idToolSulferAxe = SCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolSulferAxe", 7869).getInt(7869);
 
             SCVenusConfigManager.idItemVenusBasic = SCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 7870).getInt(7870);
-//            SCVenusConfigManager.idItemVenusBattery = SCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemVenusBattery", 7871).getInt(7871);
+            SCVenusConfigManager.idItemVenusBattery = SCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemVenusBattery", 7871).getInt(7871);
             SCVenusConfigManager.idVurnBerry = SCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idVurnBerry", 7872).getInt(7872);
             SCVenusConfigManager.idVurnBerryOnAStick = SCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idVurnBerryOnAStick", 7879).getInt(7879);
+            
+            SCVenusConfigManager.idJetpack = SCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idJetpack", 8879).getInt(8879);
 
             
             SCVenusConfigManager.idTtemVenusT3Schematic = SCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idTtemVenusT3Schematic", 7873).getInt(7873);

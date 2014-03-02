@@ -1,87 +1,90 @@
-# Starcraft Venus Language File = Russia Russian
+# Starcraft Venus Language File = RUSSIA RUSSIAN
 
 # GENERAL ITEMS
-item.tier3.desc = Уровень 3
+item.tier3.desc=Уровень 3
 
 # ITEMS
-item.spaceshipTier3.name = Уровень 3 Ракетно
-item.ingotGem.name = Gem Слиток
-item.redGem.name = красный драгоценный камень
-item.redGemPlate.name = красный драгоценный камень плиты
-item.ingotSulfer.name = Sulfer Слиток
-item.sulferPlate.name = Sulfer плиты
-item.rawBasalt.name = сырье Базальт
-item.basaltBrick.name = Базальт Кирпич
-item.vurnBerry.name = Vurn Берри
-item.venusRod.name = Венера Род
-item.venusRodDust.name = Венера Род Пыль
-item.venusBattery.name = Венера батареи
-item.plateHeavyT3.name = сверхпрочных Plate
-item.FossilizedPlant.name = Ископаемый завод
-item.VenusCrystal.name = Венера Кристалл
-item.sulferDust.name = Sulfer Пыль
-item.venusPowerCrystal.name = кристалл силы
-item.vurnBerryOnAStick.name = Vurn Берри на палочке
+item.spaceshipTier3.name=Уровень 3 Ракетно
+item.ingotGem.name=Gem Слиток
+item.redGem.name=красный драгоценный камень
+item.redGemPlate.name=красный драгоценный камень плиты
+item.ingotSulfer.name=Sulfer Слиток
+item.sulferPlate.name=Sulfer плиты
+item.rawBasalt.name=сырье Базальт
+item.basaltBrick.name=Базальт Кирпич
+item.vurnBerry.name=Vurn Берри
+item.venusRod.name=Венера Род
+item.venusRodDust.name=Венера Род Пыль
+item.venusBattery.name=Венера батареи
+item.plateHeavyT3.name=сверхпрочных Plate
+item.FossilizedPlant.name=Ископаемый завод
+item.VenusCrystal.name=Венера Кристалл
+item.sulferDust.name=Sulfer Пыль
+item.venusPowerCrystal.name=кристалл силы
+item.vurnBerryOnAStick.name=Vurn Берри на палочке
+item.jetpack.name=Jetpack
 
 # TOOLS
-item.sulferPick.name = Sulfer Киркомотыга
-item.sulferAxe.name = Sulfer топор
-item.sulferHoe.name = Sulfer мотыга
-item.sulferSpade.name = Sulfer Лопата
-item.sulferSword.name = Sulfer Меч
-item.gemPick.name = красный драгоценный камень Киркомотыга
-item.gemAxe.name = красный драгоценный камень Топор
-item.gemHoe.name = красный драгоценный камень мотыга
-item.gemSpade.name = красный драгоценный камень Лопата
-item.gemSword.name = красный драгоценный камень Меч
+item.sulferPick.name=Sulfer Киркомотыга
+item.sulferAxe.name=Sulfer топор
+item.sulferHoe.name=Sulfer мотыга
+item.sulferSpade.name=Sulfer Лопата
+item.sulferSword.name=Sulfer Меч
+item.gemPick.name=красный драгоценный камень Киркомотыга
+item.gemAxe.name=красный драгоценный камень Топор
+item.gemHoe.name=красный драгоценный камень мотыга
+item.gemSpade.name=красный драгоценный камень Лопата
+item.gemSword.name=красный драгоценный камень Меч
 
 # ARMOR
-item.sulferHelmet.name = Sulfer шлем
-item.sulferChestplate.name = Sulfer Бригантина
-item.sulferLeggings.name = Sulfer Леггинсы
-item.sulferBoots.name = Sulfer Сапоги
-item.gemHelmet.name = красный драгоценный камень шлем
-item.gemChestplate.name = красный драгоценный камень Бригантина
-item.gemLeggings.name = красный драгоценный камень Леггинсы
-item.gemBoots.name = Сапоги Красный камень
+item.sulferHelmet.name=Sulfer шлем
+item.sulferChestplate.name=Sulfer Бригантина
+item.sulferLeggings.name=Sulfer Леггинсы
+item.sulferBoots.name=Sulfer Сапоги
+item.gemHelmet.name=красный драгоценный камень шлем
+item.gemChestplate.name=красный драгоценный камень Бригантина
+item.gemLeggings.name=красный драгоценный камень Леггинсы
+item.gemBoots.name=Сапоги Красный камень
 
 # BLOCKS
-tile.VenusGrass.name = Венера Трава
-tile.VenusDirt.name = Венера Грязь
-tile.VenusStone.name = Венера Камень
-tile.VenusBurnStone.name = Венера Запись камень
-tile.VenusCobblestone.name = Венера Булыжник
-tile.VenusGem.name = красный драгоценный камень Блок
-tile.VenusMeteor.name = Метеор Блок
-tile.VenusBrick.name = Венера Кирпич
-tile.VenusSulfer.name = Sulfer Блок
-tile.VenusGemOre.name = красный драгоценный камень руда
-tile.VenusMeteorOre.name = Метеор руды
-tile.VenusSulferOre.name = Sulfer руды
-tile.VenusIronOre.name = Железная руда
-tile.VenusCoalOre.name = Уголь Руда
-tile.VenusTinOre.name = Оловянная руда
-tile.VenusCopperOre.name = Медная руда
-tile.VenusBasalt.name = Базальт
-tile.VenusHalfBasalt.name = Базальт плиты
-tile.EvolvedBlazeEgg.name = Evolved Blaze Яйцо
-tile.VenusianTNT.name = венерианский ТНТ
-tile.CrystalBlock.name = Кристалл Блок
-tile.VenusDecorationBlock.name = Венера украшения Блок
-tile.VenusCrystalOre.name = Венера Кристальная руда
-tile.FossilizedPlantOre.name = Fossilised завод руды
+tile.VenusGrass.name=Венера Трава
+tile.VenusDirt.name=Венера Грязь
+tile.VenusStone.name=Венера Камень
+tile.VenusBurnStone.name=Венера Запись камень
+tile.VenusCobblestone.name=Венера Булыжник
+tile.VenusGem.name=красный драгоценный камень Блок
+tile.VenusMeteor.name=Метеор Блок
+tile.VenusBrick.name=Венера Кирпич
+tile.VenusSulfer.name=Sulfer Блок
+tile.VenusGemOre.name=красный драгоценный камень руда
+tile.VenusMeteorOre.name=Метеор руды
+tile.VenusSulferOre.name=Sulfer руды
+tile.VenusIronOre.name=Железная руда
+tile.VenusCoalOre.name=Уголь Руда
+tile.VenusTinOre.name=Оловянная руда
+tile.VenusCopperOre.name=Медная руда
+tile.VenusBasalt.name=Базальт
+tile.VenusHalfBasalt.name=Базальт плиты
+tile.EvolvedBlazeEgg.name=Evolved Blaze Яйцо
+tile.VenusianTNT.name=венерианский ТНТ
+tile.CrystalBlock.name=Кристалл Блок
+tile.VenusDecorationBlock.name=Венера украшения Блок
+tile.VenusCrystalOre.name=Венера Кристальная руда
+tile.FossilizedPlantOre.name=Fossilised завод руды
+tile.BasaltOre.name=Basalt Ore
+tile.VenusGlowstoneOre.name=Venus Glowstone Ore
 
 # ENTITYS
-entity.GalacticraftCore.VenusianVillager.name = венерианский Селянин
-entity.GalacticraftCore.Flameling.name = Flameling
-entity.GalacticraftCore.EvolvedBlaze.name = Evolved Blaze
+entity.GalacticraftCore.VenusianVillager.name=венерианский Селянин
+entity.GalacticraftCore.Flameling.name=Flameling
+entity.GalacticraftCore.EvolvedBlaze.name=Evolved Blaze
 
 # GUI
-itemGroup.starcraftVenusTab = Космический Венера
+itemGroup.starcraftVenusTab=Космический Венера
 
-gui.choosePlanet.desc.venus = Жилая # Нет Кислород # вес: 90%
+gui.choosePlanet.desc.venus=Жилая # Нет Кислород # вес: 90%
 
-dimension.Venus.name = Венера
+dimension.Venus.name=Венера
 
 # Schematics
-schematic.rocketT3.name = Уровень 3 Ракетно
+schematic.rocketT3.name=Уровень 3 Ракетно

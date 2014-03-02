@@ -1,8 +1,8 @@
 package mattparks.mods.starcraft.venus.dimension;
 
 import mattparks.mods.starcraft.venus.SCVenusConfigManager;
-import mattparks.mods.starcraft.venus.wgen.SCVenusChunkProvider;
-import mattparks.mods.starcraft.venus.wgen.SCVenusWorldChunkManager;
+import mattparks.mods.starcraft.venus.world.gen.SCVenusChunkProvider;
+import mattparks.mods.starcraft.venus.world.gen.SCVenusWorldChunkManager;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import net.minecraft.entity.Entity;

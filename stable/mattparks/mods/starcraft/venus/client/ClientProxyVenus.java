@@ -17,6 +17,7 @@ import mattparks.mods.starcraft.venus.entities.SCVenusEntityEvolvedBlaze;
 import mattparks.mods.starcraft.venus.entities.SCVenusEntityFlameling;
 import mattparks.mods.starcraft.venus.entities.SCVenusEntityRocketT3;
 import mattparks.mods.starcraft.venus.entities.SCVenusEntityVenusianVillager;
+import mattparks.mods.starcraft.venus.items.SCVenusItemJetpack;
 import mattparks.mods.starcraft.venus.items.VenusItems;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
@@ -25,6 +26,7 @@ import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SoundPoolEntry;
+import net.minecraft.client.entity.EntityClientPlayerMP;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -36,6 +38,7 @@ import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.client.registry.KeyBindingRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.TickType;
@@ -120,6 +123,19 @@ public class ClientProxyVenus extends CommonProxyVenus
 
             final WorldClient world = minecraft.theWorld;
 
+            final EntityClientPlayerMP player = minecraft.thePlayer;
+    		
+    		if (type.equals(EnumSet.of(TickType.CLIENT)))
+            {
+        		if (player != null && world != null && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem().itemID == VenusItems.jetpack.itemID && FMLClientHandler.instance().getClient().gameSettings.keyBindJump.pressed && player.posY < 360)
+        		{
+        			((SCVenusItemJetpack)player.inventory.armorItemInSlot(2).getItem()).setActive();
+        			player.motionY -= 0.062D;
+        			player.motionY += 0.07 + player.rotationPitch * 2 / 150 * 0.063;
+        			player.fallDistance = 3;
+            		world.spawnParticle("smoke", player.posX, player.posY - 1D, player.posZ, 5, -0.5, 5);
+        		}
+        		
             if (type.equals(EnumSet.of(TickType.CLIENT)))
             {
                 if (world != null)
@@ -157,6 +173,7 @@ public class ClientProxyVenus extends CommonProxyVenus
                 }
             }
         }
+    }
     }
     
     public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
@@ -197,6 +214,7 @@ public class ClientProxyVenus extends CommonProxyVenus
     {
         RenderingRegistry.addNewArmourRendererPrefix("gem");
         RenderingRegistry.addNewArmourRendererPrefix("sulfer");
+        RenderingRegistry.addNewArmourRendererPrefix("jetpack");
 
         RenderingRegistry.registerEntityRenderingHandler(SCVenusEntityVenusianVillager.class, new SCVenusRenderVenusianVillager());
         RenderingRegistry.registerEntityRenderingHandler(SCVenusEntityFlameling.class, new SCVenusRenderFlameling());
@@ -206,6 +224,5 @@ public class ClientProxyVenus extends CommonProxyVenus
 
         RenderingRegistry.registerEntityRenderingHandler(SCVenusEntityRocketT3.class, new GCCoreRenderSpaceship(new SCCoreModelSpaceshipTier3(), VenusCore.ASSET_DOMAIN, "rocketT3"));
         MinecraftForgeClient.registerItemRenderer(VenusItems.spaceshipT3.itemID, new SCVenusItemRendererSpaceshipT3(cargoRocketModel));
-    
     }
 }

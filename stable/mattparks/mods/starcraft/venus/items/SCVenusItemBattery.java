@@ -11,35 +11,35 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class SCVenusItemBattery extends ItemElectric
 {
-    public SCVenusItemBattery(int id, String assetName)
-    {
-        super(id);
-        this.setUnlocalizedName(assetName);
-        this.setTextureName(VenusCore.ASSET_PREFIX + assetName);
-    }
+	public SCVenusItemBattery(int id, String assetName)
+	{
+		super(id);
+		this.setUnlocalizedName(assetName);
+		this.setTextureName(VenusCore.ASSET_PREFIX + assetName);
+	}
 
-    @Override
-    public CreativeTabs getCreativeTab()
-    {
-        return VenusCore.starcraftVenusTab;
-    }
+	@Override
+	public CreativeTabs getCreativeTab()
+	{
+		return VenusCore.starcraftVenusTab;
+	}
 
-    @Override
-    public float getMaxElectricityStored(ItemStack itemStack)
-    {
-        return 7500;
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public EnumRarity getRarity(ItemStack par1ItemStack)
+	{
+		return ClientProxyCore.galacticraftItem;
+	}
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public EnumRarity getRarity(ItemStack par1ItemStack)
-    {
-        return ClientProxyCore.galacticraftItem;
-    }
+	@Override
+	public float getMaxElectricityStored(ItemStack itemStack)
+	{
+		return 7500;
+	}
 
-    @Override
-    public float getVoltage(ItemStack itemStack)
-    {
-        return 120;
-    }
+	@Override
+	public float getVoltage(ItemStack itemStack)
+	{
+		return 120;
+	}
 }

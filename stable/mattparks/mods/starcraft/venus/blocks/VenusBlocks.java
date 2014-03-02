@@ -32,52 +32,56 @@ public class VenusBlocks
 
 	public static final Block VenusDirt = new SCVenusBlock(761, null).setHardness(0.3F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusDirt").setTextureName("starcraftvenus:dirtVenus").setCreativeTab(VenusCore.starcraftVenusTab);
 
-	public static final Block VenusStone = new SCVenusStone(762, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusStone").setTextureName("starcraftvenus:stoneVenus").setCreativeTab(VenusCore.starcraftVenusTab);
+	public static final Block VenusStone = new SCVenusStone(762, null).setHardness(1.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusStone").setTextureName("starcraftvenus:stoneVenus").setCreativeTab(VenusCore.starcraftVenusTab);
 
 	public static final Block VenusCobblestone = new SCVenusBlock(763, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusCobblestone").setTextureName("starcraftvenus:cobblestoneVenus").setCreativeTab(VenusCore.starcraftVenusTab);
 
-	public static final Block VenusRedGemBlock = new SCVenusBlock(764, null).setHardness(2.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusGem").setTextureName("starcraftvenus:gemBlock").setCreativeTab(VenusCore.starcraftVenusTab);
+    public static final Block VenusBurnStone = new SCVenusBurnStone(764, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusBurnStone").setTextureName("starcraftvenus:burnStoneVenus").setCreativeTab(VenusCore.starcraftVenusTab);
 
-	public static final Block VenusMeteorBlock = new SCVenusBlock(765, null).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusMeteor").setTextureName("starcraftvenus:meteorBlock").setCreativeTab(VenusCore.starcraftVenusTab);
+	public static final Block VenusRedGemBlock = new SCVenusBlock(765, null).setHardness(2.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusGem").setTextureName("starcraftvenus:gemBlock").setCreativeTab(VenusCore.starcraftVenusTab);
 
-	public static final Block VenusBrick = new SCVenusBlock(766, null).setHardness(1000.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusBrick").setTextureName("starcraftvenus:venusBrick").setCreativeTab(VenusCore.starcraftVenusTab).setBlockUnbreakable();
+	public static final Block VenusMeteorBlock = new SCVenusBlock(766, null).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusMeteor").setTextureName("starcraftvenus:meteorBlock").setCreativeTab(VenusCore.starcraftVenusTab);
 
 	public static final Block VenusSulferBlock = new SCVenusOre(767, null).setHardness(2.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusSulfer").setTextureName("starcraftvenus:sulferBlock").setCreativeTab(VenusCore.starcraftVenusTab);
 
-	public static final Block VenusSulferOre = new SCVenusOre(768, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusSulferOre").setTextureName("starcraftvenus:sulferOre").setCreativeTab(VenusCore.starcraftVenusTab);
+	public static final Block VenusDecorationBlock = new SCVenusBlock(768, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusDecorationBlock").setTextureName("starcraftvenus:venusDecorationBlock").setCreativeTab(VenusCore.starcraftVenusTab);
+    
+    public static final Block CrystalBlock = new SCVenusBlock(769, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("CrystalBlock").setTextureName("starcraftvenus:crystalBlock").setCreativeTab(VenusCore.starcraftVenusTab);
 
-	public static final Block VenusMeteorOre = new SCVenusOre(769, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusMeteorOre").setTextureName("starcraftvenus:meteorOre").setCreativeTab(VenusCore.starcraftVenusTab);
-
-	public static final Block VenusRedGemOre = new SCVenusOre(770, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusGemOre").setTextureName("starcraftvenus:gemOre").setCreativeTab(VenusCore.starcraftVenusTab);
-
-	public static final Block VenusIronOre = new SCVenusOre(771, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusIronOre").setTextureName("starcraftvenus:ironOre").setCreativeTab(VenusCore.starcraftVenusTab);
-
-	public static final Block VenusCoalOre = new SCVenusOre(772, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusCoalOre").setTextureName("starcraftvenus:coalOre").setCreativeTab(VenusCore.starcraftVenusTab);
-
-	public static final Block VenusTinOre = new SCVenusOre(773, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusTinOre").setTextureName("starcraftvenus:tinOre").setCreativeTab(VenusCore.starcraftVenusTab);
-
-	public static final Block VenusCopperOre = new SCVenusOre(774, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusCopperOre").setTextureName("starcraftvenus:copperOre").setCreativeTab(VenusCore.starcraftVenusTab);
-
-	public static final Block VenusBasalt = new SCVenusBlock(775, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusBasalt").setTextureName("starcraftvenus:venusBasalt").setCreativeTab(VenusCore.starcraftVenusTab);
+	public static final Block VenusBasalt = new SCVenusBlock(770, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusBasalt").setTextureName("starcraftvenus:venusBasalt").setCreativeTab(VenusCore.starcraftVenusTab);
 	
-	public static final Block VenusHalfBasalt = new SCVenusHalfSlab(776, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusHalfBasalt").setTextureName("starcraftvenus:venusBasalt").setCreativeTab(VenusCore.starcraftVenusTab);
+	public static final Block VenusHalfBasalt = new SCVenusHalfSlab(771, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusHalfBasalt").setTextureName("starcraftvenus:venusBasalt").setCreativeTab(VenusCore.starcraftVenusTab);
 
-	public static final Block EvolvedBlazeEgg = new SCVenusEgg(777, 0, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("EvolvedBlazeEgg").setTextureName("starcraftvenus:evolvedBlazeEgg").setCreativeTab(VenusCore.starcraftVenusTab);
+	public static final Block VenusBrick = new SCVenusBlock(772, null).setHardness(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusBrick").setTextureName("starcraftvenus:venusBrick").setCreativeTab(VenusCore.starcraftVenusTab);
 
-	public static final Block VenusianTNT = new SCVenusVenusianTNT(778, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusianTNT").setTextureName("starcraftvenus:venusianTNT").setCreativeTab(VenusCore.starcraftVenusTab);
+	public static final Block VenusSulferOre = new SCVenusOre(773, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusSulferOre").setTextureName("starcraftvenus:sulferOre").setCreativeTab(VenusCore.starcraftVenusTab);
 
-	public static final Block VurnBerryBush = new SCVenusVurnBerryBush(779).setHardness(0.25F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VurnBerryBush").setTextureName("starcraftvenus:VurnBerryBush").setCreativeTab(VenusCore.starcraftVenusTab);
+	public static final Block VenusMeteorOre = new SCVenusOre(774, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusMeteorOre").setTextureName("starcraftvenus:meteorOre").setCreativeTab(VenusCore.starcraftVenusTab);
 
-    public static final Block VenusBurnStone = new SCVenusBurnStone(780, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusBurnStone").setTextureName("starcraftvenus:burnStoneVenus").setCreativeTab(VenusCore.starcraftVenusTab);
-		
-    public static final Block VenusCrystalOre = new SCVenusOre(781, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusCrystalOre").setTextureName("starcraftvenus:venusCrystalOre").setCreativeTab(VenusCore.starcraftVenusTab);
+	public static final Block VenusRedGemOre = new SCVenusOre(775, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusGemOre").setTextureName("starcraftvenus:gemOre").setCreativeTab(VenusCore.starcraftVenusTab);
+
+	public static final Block VenusIronOre = new SCVenusOre(776, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusIronOre").setTextureName("starcraftvenus:ironOre").setCreativeTab(VenusCore.starcraftVenusTab);
+
+	public static final Block VenusCoalOre = new SCVenusOre(777, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusCoalOre").setTextureName("starcraftvenus:coalOre").setCreativeTab(VenusCore.starcraftVenusTab);
+
+	public static final Block VenusTinOre = new SCVenusOre(778, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusTinOre").setTextureName("starcraftvenus:tinOre").setCreativeTab(VenusCore.starcraftVenusTab);
+
+	public static final Block VenusCopperOre = new SCVenusOre(779, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusCopperOre").setTextureName("starcraftvenus:copperOre").setCreativeTab(VenusCore.starcraftVenusTab);
+
+    public static final Block BasaltOre = new SCVenusOre(780, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("BasaltOre").setTextureName("starcraftvenus:basaltOre").setCreativeTab(VenusCore.starcraftVenusTab);
     
-    public static final Block FossilizedPlantOre = new SCVenusOre(782, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("FossilizedPlantOre").setTextureName("starcraftvenus:fossilizedPlantOre").setCreativeTab(VenusCore.starcraftVenusTab);
+    public static final Block VenusGlowstoneOre = new SCVenusOre(781, null).setHardness(0.5F).setStepSound(Block.soundGlassFootstep).setLightValue(0.75f).setUnlocalizedName("VenusGlowstoneOre").setTextureName("starcraftvenus:glowstoneOre").setCreativeTab(VenusCore.starcraftVenusTab);
+	
+    public static final Block VenusCrystalOre = new SCVenusOre(782, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusCrystalOre").setTextureName("starcraftvenus:venusCrystalOre").setCreativeTab(VenusCore.starcraftVenusTab);
+    
+    public static final Block FossilizedPlantOre = new SCVenusOre(783, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("FossilizedPlantOre").setTextureName("starcraftvenus:fossilizedPlantOre").setCreativeTab(VenusCore.starcraftVenusTab);
 
-    public static final Block VenusDecorationBlock = new SCVenusBlock(783, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusDecorationBlock").setTextureName("starcraftvenus:venusDecorationBlock").setCreativeTab(VenusCore.starcraftVenusTab);
-    
-    public static final Block CrystalBlock = new SCVenusBlock(784, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("CrystalBlock").setTextureName("starcraftvenus:crystalBlock").setCreativeTab(VenusCore.starcraftVenusTab);
-    
+	public static final Block EvolvedBlazeEgg = new SCVenusEgg(784, 0, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("EvolvedBlazeEgg").setTextureName("starcraftvenus:evolvedBlazeEgg").setCreativeTab(VenusCore.starcraftVenusTab);
+
+	public static final Block VenusianTNT = new SCVenusVenusianTNT(785, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusianTNT").setTextureName("starcraftvenus:venusianTNT").setCreativeTab(VenusCore.starcraftVenusTab);
+
+	public static final Block VurnBerryBush = new SCVenusVurnBerryBush(786).setHardness(0.25F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VurnBerryBush").setTextureName("starcraftvenus:VurnBerryBush").setCreativeTab(VenusCore.starcraftVenusTab);
+
         @Instance(value = "VenusBlocks")
         public static VenusBlocks instance;
         
@@ -111,6 +115,8 @@ public class VenusBlocks
                 GameRegistry.registerBlock(VenusBlocks.FossilizedPlantOre, "FossilizedPlantOre");
                 GameRegistry.registerBlock(VenusBlocks.VenusDecorationBlock, "VenusDecorationBlock");
                 GameRegistry.registerBlock(VenusBlocks.CrystalBlock, "CrystalBlock");
+                GameRegistry.registerBlock(VenusBlocks.BasaltOre, "BasaltOre");
+                GameRegistry.registerBlock(VenusBlocks.VenusGlowstoneOre, "VenusGlowstoneOre");
         }
         
         @EventHandler

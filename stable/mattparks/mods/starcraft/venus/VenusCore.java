@@ -14,12 +14,16 @@ import mattparks.mods.starcraft.venus.entities.SCVenusEntityVenusianVillager;
 import mattparks.mods.starcraft.venus.items.VenusItems;
 import mattparks.mods.starcraft.venus.network.SCVenusPacketHandlerServer;
 import mattparks.mods.starcraft.venus.recipe.SCVenusRecipeManager;
+import mattparks.mods.starcraft.venus.schematic.SCVenusSchematicRocketT3;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
+import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
+import micdoodle8.mods.galacticraft.core.schematic.GCCoreSchematicRocketT1;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import micdoodle8.mods.galacticraft.mars.items.GCMarsItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
@@ -43,13 +47,13 @@ import cpw.mods.fml.relauncher.Side;
 @NetworkMod(channels = { VenusCore.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
 public class VenusCore
 {
-    public static final String NAME = "Starcraft Venus";
-    public static final String MODID = "GCVenus";
-    public static final String CHANNEL = "GCVenus";
-    public static final String CHANNELENTITIES = "GCVenusEntities";
+    public static final String NAME = "Venus Core";
+    public static final String MODID = "SCVenusCore";
+    public static final String CHANNEL = "SCVenus";
+    public static final String CHANNELENTITIES = "SCVenusCoreEntities";
 
     public static final String LANGUAGE_PATH = "/assets/starcraftvenus/lang/";
-    private static final String[] LANGUAGES_SUPPORTED = new String[] { "cs_CZ", "de_DE", "en_US", "es_ES", "fi_FI", "fr_FR", "ja_JP", "nl_NL", "pl_PL", "ru_RU", "tr_TR", "zh_CN", "zh_TW" };
+    private static final String[] LANGUAGES_SUPPORTED = new String[] { "cs_CZ", "de_DE", "en_US", "es_ES", "fi_FI", "fr_FR", "nl_NL", "pl_PL", "ru_RU", "tr_TR" };
 
     @SidedProxy(clientSide = "mattparks.mods.starcraft.venus.client.ClientProxyVenus", serverSide = "mattparks.mods.starcraft.venus.CommonProxyVenus")
     public static CommonProxyVenus proxy;
@@ -77,6 +81,9 @@ public class VenusCore
     {
         int languages = 0;
 
+        SchematicRegistry.registerSchematicRecipe(new SCVenusSchematicRocketT3());
+        GalacticraftRegistry.addDungeonLoot(3, new ItemStack(VenusItems.T3Schematic, 1, 1));
+        
         for (String language : VenusCore.LANGUAGES_SUPPORTED)
         {
             LanguageRegistry.instance().loadLocalization(VenusCore.LANGUAGE_PATH + language + ".lang", language, false);

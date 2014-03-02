@@ -22,6 +22,7 @@ item.VenusCrystal.name=Venus Crystal
 item.sulferDust.name=Sulfer Dust
 item.venusPowerCrystal.name=Power Crystal
 item.vurnBerryOnAStick.name=Vurn Berry On A Stick
+item.jetpack.name=Jetpack
 
 # TOOLS
 item.sulferPick.name=Sulfer Pickaxe
@@ -70,6 +71,8 @@ tile.CrystalBlock.name=Crystal Block
 tile.VenusDecorationBlock.name=Venus Decoration Block
 tile.VenusCrystalOre.name=Venus Crystal Ore
 tile.FossilizedPlantOre.name=Fossilised Plant Ore
+tile.BasaltOre.name=Basalt Ore
+tile.VenusGlowstoneOre.name=Venus Glowstone Ore
 
 # ENTITYS
 entity.GalacticraftCore.VenusianVillager.name=Venusian Villager

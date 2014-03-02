@@ -2,6 +2,9 @@ package mattparks.mods.starcraft.venus.items;
 
 import mattparks.mods.starcraft.venus.SCVenusConfigManager;
 import mattparks.mods.starcraft.venus.blocks.VenusBlocks;
+import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
+import micdoodle8.mods.galacticraft.core.items.GCCoreItemBattery;
+import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.block.Block;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
@@ -23,6 +26,7 @@ public class VenusItems
     public static Item sulferLeggings;
     public static Item sulferBoots;
     
+    public static Item jetpack;
     public static Item gemPickaxe;
     public static Item gemAxe;
     public static Item gemHoe;
@@ -36,7 +40,7 @@ public class VenusItems
     public static Item vurnBerry;
     public static Item VurnBerryOnAStick;
     
-//    public static Item venusBattery;
+    public static Item venusBattery;
     
     public static Item T3Schematic;
     public static Item spaceshipT3;
@@ -44,13 +48,16 @@ public class VenusItems
     public static EnumArmorMaterial ARMORSULFER = EnumHelper.addArmorMaterial("SULFER", 42, new int[] { 4, 9, 7, 4 }, 12);
     public static EnumToolMaterial TOOLSULFER = EnumHelper.addToolMaterial("SULFER", 3, 1024, 5.0F, 2.5F, 8);
     
-    public static EnumArmorMaterial ARMORGEM = EnumHelper.addArmorMaterial("GEM", 42, new int[] { 4, 9, 7, 4 }, 12);
+    public static EnumArmorMaterial ARMORGEM = EnumHelper.addArmorMaterial("GEM", 42, new int[] { 3, 3, 3, 3 }, 12);
     public static EnumToolMaterial TOOLGEM = EnumHelper.addToolMaterial("GEM", 3, 1024, 5.0F, 2.5F, 8);
+    
+    public static EnumArmorMaterial ARMORJETPACK = EnumHelper.addArmorMaterial("JETPACK", 42, new int[] { 4, 9, 7, 4 }, 12);
     
     public static void initItems()
     {
         VenusItems.venusItemBasic = new SCVenusItem(SCVenusConfigManager.idItemVenusBasic);
-//        GCVenusItems.venusBattery = new GCVenusItemBattery(GCVenusConfigManager.idItemVenusBattery, "venusBattery");
+        
+		VenusItems.venusBattery = new SCVenusItemBattery(SCVenusConfigManager.idItemVenusBattery, "venusBattery");
 
         VenusItems.sulferPickaxe = new SCVenusItemSulferPickaxe(SCVenusConfigManager.idToolSulferPickaxe, VenusItems.TOOLSULFER).setUnlocalizedName("sulferPick");
         VenusItems.sulferAxe = new SCVenusItemSulferAxe(SCVenusConfigManager.idToolSulferAxe, VenusItems.TOOLSULFER).setUnlocalizedName("sulferAxe");
@@ -80,6 +87,8 @@ public class VenusItems
         
         VenusItems.T3Schematic = new SCVenusItemSchematic(SCVenusConfigManager.idTtemVenusT3Schematic);
         VenusItems.spaceshipT3 = new SCVenusItemSpaceshipTier3(SCVenusConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");
+    
+        VenusItems.jetpack = new SCVenusItemJetpack(SCVenusConfigManager.idJetpack, VenusItems.ARMORJETPACK, 7, 1, false).setUnlocalizedName("jetpack");
     }
     
     public static void registerHarvestLevels()
