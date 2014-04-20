@@ -3,7 +3,7 @@ package mattparks.mods.starcraft.eris;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.Version;
+import mattparks.mods.MattCore.Version;
 import mattparks.mods.starcraft.eris.blocks.ErisBlocks;
 import mattparks.mods.starcraft.eris.dimension.SCErisTeleportType;
 import mattparks.mods.starcraft.eris.dimension.SCErisWorldProvider;

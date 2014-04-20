@@ -17,6 +17,14 @@ import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.network.IPacketHandler;
 import cpw.mods.fml.common.network.Player;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class SCMercuryPacketHandlerServer implements IPacketHandler
 {
     @Override
@@ -40,7 +48,7 @@ public class SCMercuryPacketHandlerServer implements IPacketHandler
 
         final EntityPlayerMP player = (EntityPlayerMP) p;
 
-        GCCorePlayerMP gcPlayer = PlayerUtil.getPlayerBaseServerFromPlayer(player);
+        GCCorePlayerMP gcPlayer = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
 
         if (packetType == 0)
         {
@@ -88,11 +96,11 @@ public class SCMercuryPacketHandlerServer implements IPacketHandler
         }
         else if (packetType == 1)
         {
-            FMLLog.severe("Galacticraft Mercury: Received bad packet!");
+            FMLLog.severe("4-Space Mercury: Received bad packet!");
         }
         else if (packetType == 2)
         {
-            FMLLog.severe("Galacticraft Mercury: Received bad packet!");
+            FMLLog.severe("4-Space Mercury: Received bad packet!");
         }
         else if (packetType == 3)
         {

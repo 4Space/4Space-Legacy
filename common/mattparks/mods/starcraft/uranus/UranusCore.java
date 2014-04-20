@@ -2,7 +2,7 @@ package mattparks.mods.starcraft.uranus;
 
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.Version;
+import mattparks.mods.MattCore.Version;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;

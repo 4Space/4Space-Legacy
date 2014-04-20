@@ -3,7 +3,7 @@ package mattparks.mods.starcraft.venus;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.Version;
+import mattparks.mods.MattCore.Version;
 import mattparks.mods.starcraft.venus.blocks.VenusBlocks;
 import mattparks.mods.starcraft.venus.dimension.SCVenusTeleportType;
 import mattparks.mods.starcraft.venus.dimension.SCVenusWorldProvider;

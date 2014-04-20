@@ -59,4 +59,9 @@ public class SCErisPlanet implements IPlanet
     {
         return true;
     }
+	@Override
+	public boolean forceStaticLoad() 
+	{
+		return true;
+	}
 }

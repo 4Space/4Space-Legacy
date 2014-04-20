@@ -6,6 +6,14 @@ import java.util.logging.Level;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class SCEuropaConfigManager
 {
     public static boolean loaded;

@@ -56,4 +56,10 @@ public class SCUranusPlanet implements IPlanet
 	{
 		return -1;
 	}
+
+	@Override
+	public boolean forceStaticLoad() 
+	{
+		return true;
+	}
 }

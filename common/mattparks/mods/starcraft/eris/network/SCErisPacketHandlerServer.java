@@ -40,7 +40,7 @@ public class SCErisPacketHandlerServer implements IPacketHandler
 
         final EntityPlayerMP player = (EntityPlayerMP) p;
 
-        GCCorePlayerMP gcPlayer = PlayerUtil.getPlayerBaseServerFromPlayer(player);
+        GCCorePlayerMP gcPlayer = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
 
         if (packetType == 0)
         {

@@ -17,6 +17,14 @@ import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.network.IPacketHandler;
 import cpw.mods.fml.common.network.Player;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class SCGanymedePacketHandlerServer implements IPacketHandler
 {
     @Override
@@ -40,7 +48,7 @@ public class SCGanymedePacketHandlerServer implements IPacketHandler
 
         final EntityPlayerMP player = (EntityPlayerMP) p;
 
-        GCCorePlayerMP gcPlayer = PlayerUtil.getPlayerBaseServerFromPlayer(player);
+        GCCorePlayerMP gcPlayer = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
 
         if (packetType == 0)
         {

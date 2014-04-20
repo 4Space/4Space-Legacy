@@ -1,6 +1,6 @@
 package mattparks.mods.starcraft.sedna.blocks;
 
-import mattparks.mods.starcraft.Version;
+import mattparks.mods.MattCore.Version;
 import mattparks.mods.starcraft.sedna.CommonProxySedna;
 import mattparks.mods.starcraft.sedna.SednaCore;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;

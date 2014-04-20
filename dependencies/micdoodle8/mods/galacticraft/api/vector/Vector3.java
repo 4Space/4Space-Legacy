@@ -13,6 +13,9 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
  * Vector3 Class is used for defining objects in a 3D space.
  * 
@@ -445,6 +448,7 @@ public class Vector3 implements Cloneable
 	/**
 	 * Gets all entities inside of this position in block space.
 	 */
+	@SuppressWarnings("unchecked")
 	public List<Entity> getEntitiesWithin(World worldObj, Class<? extends Entity> par1Class)
 	{
 		return worldObj.getEntitiesWithinAABB(par1Class, AxisAlignedBB.getBoundingBox(this.intX(), this.intY(), this.intZ(), this.intX() + 1, this.intY() + 1, this.intZ() + 1));
@@ -835,7 +839,7 @@ public class Vector3 implements Cloneable
 	@Override
 	public int hashCode()
 	{
-		return ("X:" + this.x + "Y:" + this.y + "Z:" + this.z).hashCode();
+		return new HashCodeBuilder().append(this.x).append(this.y).append(this.z).hashCode();
 	}
 
 	@Override
@@ -844,7 +848,7 @@ public class Vector3 implements Cloneable
 		if (o instanceof Vector3)
 		{
 			Vector3 vector3 = (Vector3) o;
-			return this.x == vector3.x && this.y == vector3.y && this.z == vector3.z;
+			return new EqualsBuilder().append(this.x, vector3.x).append(this.y, vector3.y).append(this.z, vector3.z).isEquals();
 		}
 
 		return false;

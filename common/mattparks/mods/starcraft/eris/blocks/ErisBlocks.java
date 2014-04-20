@@ -1,6 +1,6 @@
 package mattparks.mods.starcraft.eris.blocks;
 
-import mattparks.mods.starcraft.Version;
+import mattparks.mods.MattCore.Version;
 import mattparks.mods.starcraft.eris.CommonProxyEris;
 import mattparks.mods.starcraft.eris.ErisCore;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;

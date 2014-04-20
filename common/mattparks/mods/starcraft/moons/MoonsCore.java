@@ -3,7 +3,7 @@ package mattparks.mods.starcraft.moons;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.Version;
+import mattparks.mods.MattCore.Version;
 import mattparks.mods.starcraft.moons.entities.SCJupiterEntityRocketT5;
 import mattparks.mods.starcraft.moons.items.JupiterItems;
 import micdoodle8.mods.galacticraft.core.GCLog;
@@ -39,8 +39,8 @@ public class MoonsCore
     public static final String LANGUAGE_PATH = "/assets/starcraftjupiter/lang/";
     private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US", "ru_RU" };
 
-    @SidedProxy(clientSide = "mattparks.mods.starcraft.moons.client.ClientProxyJupiter", serverSide = "mattparks.mods.starcraft.moons.CommonProxyJupiter")
-    public static CommonProxyJupiter proxy;
+    @SidedProxy(clientSide = "mattparks.mods.starcraft.moons.client.ClientProxyMoons", serverSide = "mattparks.mods.starcraft.moons.CommonProxyMoons")
+    public static CommonProxyMoons proxy;
 
     @Instance(MoonsCore.MODID)
     public static MoonsCore instance;

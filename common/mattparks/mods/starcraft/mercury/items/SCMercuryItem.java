@@ -15,6 +15,14 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class SCMercuryItem extends Item
 {
     public static String[] names = { "plateHeavyT4", "iridiumCrystals", "ingotIridium", "iridiumPlate" };

@@ -5,8 +5,8 @@ import java.io.DataInputStream;
 import java.util.ArrayList;
 import java.util.EnumSet;
 
-import mattparks.mods.starcraft.titan.TitanCore;
 import mattparks.mods.starcraft.titan.CommonProxyTitan;
+import mattparks.mods.starcraft.titan.TitanCore;
 import mattparks.mods.starcraft.titan.dimension.SCTitanWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;

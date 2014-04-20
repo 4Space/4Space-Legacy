@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 
 public class SCMercuryUtil
 {
-    public static void addRocketBenchT3Recipe(ItemStack result, HashMap<Integer, ItemStack> input)
+    public static void addRocketBenchT4Recipe(ItemStack result, HashMap<Integer, ItemStack> input)
     {
         GalacticraftRegistry.addT2RocketRecipe(new GCCoreNasaWorkbenchRecipe(result, input));
     }

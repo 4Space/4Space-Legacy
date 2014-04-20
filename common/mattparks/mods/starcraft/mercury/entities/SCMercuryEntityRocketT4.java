@@ -1,9 +1,8 @@
 package mattparks.mods.starcraft.mercury.entities;
 
-import icbm.api.IMissile;
-
 import java.util.ArrayList;
 
+import calclavia.api.icbm.IMissile;
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
 import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
@@ -28,6 +27,14 @@ import net.minecraft.world.World;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.Side;
+
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
 
 public class SCMercuryEntityRocketT4 extends EntityTieredRocket
 {
@@ -142,7 +149,7 @@ public class SCMercuryEntityRocketT4 extends EntityTieredRocket
     @Override
     public void onTeleport(EntityPlayerMP player)
     {
-        final GCCorePlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player);
+        final GCCorePlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, landing);
 
         player.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumPacketClient.ZOOM_CAMERA, new Object[] { 0 }));
 

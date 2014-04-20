@@ -1,6 +1,6 @@
 package mattparks.mods.starcraft.vesta.blocks;
 
-import mattparks.mods.starcraft.Version;
+import mattparks.mods.MattCore.Version;
 import mattparks.mods.starcraft.vesta.CommonProxyVesta;
 import mattparks.mods.starcraft.vesta.VestaCore;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;

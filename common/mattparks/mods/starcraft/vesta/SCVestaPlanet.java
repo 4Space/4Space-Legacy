@@ -59,4 +59,9 @@ public class SCVestaPlanet implements IPlanet
     {
         return false;
     }
+	@Override
+	public boolean forceStaticLoad() 
+	{
+		return true;
+	}
 }

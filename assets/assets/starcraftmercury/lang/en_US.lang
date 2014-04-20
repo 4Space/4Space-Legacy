@@ -38,9 +38,7 @@ tile.MercuryTinOre.name=Mercury Tin Ore
 tile.MercuryIridiumOre.name=Mercury Iridium Ore
 tile.MercuryCopperOre.name=Mercury Copper Ore
 tile.IridiumBlock.name=Iridium Block
-
 tile.caravanModule.name=Portable Space Tent
-tile.GravityGenerator.name=Gravity Generator
 
 tile.WhiteGlowstone.name=White Glowstone
 tile.OrangeGlowstone.name=Orange Glowstone

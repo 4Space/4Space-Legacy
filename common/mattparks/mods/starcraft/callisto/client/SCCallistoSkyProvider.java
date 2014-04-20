@@ -4,7 +4,6 @@ import java.util.Random;
 
 import mattparks.mods.starcraft.callisto.CallistoCore;
 import mattparks.mods.starcraft.callisto.dimension.SCCallistoWorldProvider;
-import mattparks.mods.starcraft.io.client.SCIoSkyProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
@@ -20,6 +19,14 @@ import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.client.FMLClientHandler;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+ 
 public class SCCallistoSkyProvider extends IRenderHandler
 {
 	private static final ResourceLocation jupiterTexture = new ResourceLocation(CallistoCore.ASSET_DOMAIN, "textures/gui/planets/jupiter.png");

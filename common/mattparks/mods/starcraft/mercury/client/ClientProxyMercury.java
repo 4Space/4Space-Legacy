@@ -1,9 +1,15 @@
 package mattparks.mods.starcraft.mercury.client;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.EnumSet;
+import java.util.Map.Entry;
 
 import mattparks.mods.starcraft.mercury.CommonProxyMercury;
 import mattparks.mods.starcraft.mercury.MercuryCore;
@@ -12,6 +18,7 @@ import mattparks.mods.starcraft.mercury.client.render.item.SCMercuryItemRenderer
 import mattparks.mods.starcraft.mercury.dimension.SCMercuryWorldProvider;
 import mattparks.mods.starcraft.mercury.entities.SCMercuryEntityRocketT4;
 import mattparks.mods.starcraft.mercury.items.MercuryItems;
+import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
 import micdoodle8.mods.galacticraft.core.client.sounds.GCCoreSoundUpdaterSpaceship;
@@ -31,7 +38,9 @@ import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.ITickHandler;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.TickType;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -40,6 +49,14 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.Player;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
+
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
 
 public class ClientProxyMercury extends CommonProxyMercury
 {
@@ -149,6 +166,59 @@ public class ClientProxyMercury extends CommonProxyMercury
             }
         }
     }
+    
+	public static void setupCapes()
+	{
+		try
+		{
+			ClientProxyMercury.updateCapeList();
+		}
+		catch (Exception e)
+		{
+			FMLLog.severe("Error while setting up 4-Space donor capes");
+			e.printStackTrace();
+		}
+
+		if (Loader.isModLoaded("CoFHCore"))
+		{
+			for (Entry<String, String> e : ClientProxyCore.capeMap.entrySet())
+			{
+				try
+				{
+					Object capeRegistry = Class.forName("cofh.api.core.RegistryAccess").getField("capeRegistry").get(null);
+					Class.forName("cofh.api.core.ISimpleRegistry").getMethod("register", String.class, String.class).invoke(capeRegistry, e.getKey(), e.getValue());
+				}
+				catch (Exception e1)
+				{
+					e1.printStackTrace();
+					break;
+				}
+			}
+		}
+	}
+
+	private static void updateCapeList() throws Exception
+	{
+		int timeout = 10000;
+		URL capeListUrl = new URL("https://raw.githubusercontent.com/4-Space/4-Space/master/capes.txt");
+		URLConnection connection = capeListUrl.openConnection();
+		connection.setConnectTimeout(timeout);
+		connection.setReadTimeout(timeout);
+		InputStream stream = connection.getInputStream();
+		BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+
+		String line;
+		while ((line = reader.readLine()) != null)
+		{
+			if (line.contains(":"))
+			{
+				int splitLocation = line.indexOf(":");
+				String username = line.substring(0, splitLocation);
+				String capeUrl = "https://raw.githubusercontent.com/4-Space/4-Space/master/" + line.substring(splitLocation + 1) + ".png";
+				ClientProxyCore.capeMap.put(username, capeUrl);
+			}
+		}
+	}
     
     public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
 

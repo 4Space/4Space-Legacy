@@ -1,6 +1,5 @@
 package mattparks.mods.starcraft.titan;
 
-import mattparks.mods.starcraft.jupiter.JupiterCore;
 import mattparks.mods.starcraft.saturn.SaturnCore;
 import mattparks.mods.starcraft.titan.client.SCTitanMapPlanet;
 import mattparks.mods.starcraft.titan.dimension.SCTitanWorldProvider;
@@ -61,4 +60,10 @@ public class SCTitanPlanet implements IMoon
     {
         return SCTitanConfigManager.dimensionIDTitan;
     }
+
+	@Override
+	public boolean forceStaticLoad() 
+	{
+		return true;
+	}
 }

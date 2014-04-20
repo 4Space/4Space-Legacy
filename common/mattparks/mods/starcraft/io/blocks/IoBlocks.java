@@ -1,13 +1,12 @@
 package mattparks.mods.starcraft.io.blocks;
 
-import mattparks.mods.starcraft.Version;
+import mattparks.mods.MattCore.Version;
 import mattparks.mods.starcraft.io.CommonProxyIo;
 import mattparks.mods.starcraft.moons.MoonsCore;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
 import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -17,6 +16,14 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
+
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
 
 @Mod(name = IoBlocks.NAME, version = Version.LOCALMAJVERSION + "." + Version.LOCALMINVERSION + "." + Version.LOCALBUILDVERSION, useMetadata = true, modid = IoBlocks.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
 @NetworkMod(channels = { IoBlocks.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
@@ -30,7 +37,7 @@ public class IoBlocks
 
 	public static final Block IoBasalt = new SCBlock(931, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("IoBasalt").setTextureName("starcraftio:ioBasalt").setCreativeTab(MoonsCore.starcraftMoonsTab);
 	
-	public static final Block IoHalfBasalt = new SCGasHalfSlab(932, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("IoHalfBasalt").setTextureName("starcraftio:ioBasalt").setCreativeTab(MoonsCore.starcraftMoonsTab);
+	public static final Block IoHalfBasalt = new SCHalfSlab(932, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("IoHalfBasalt").setTextureName("starcraftio:ioBasalt").setCreativeTab(MoonsCore.starcraftMoonsTab);
 
 	public static final Block IoStone = new SCBlock(933, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("IoStone").setTextureName("starcraftio:ioStone").setCreativeTab(MoonsCore.starcraftMoonsTab);
 

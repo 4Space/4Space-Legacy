@@ -11,6 +11,14 @@ import net.minecraft.item.ItemSword;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class SCMercuryItemIridiumSword extends ItemSword
 {
     public SCMercuryItemIridiumSword(int par1, EnumToolMaterial par2EnumToolMaterial)

@@ -1,6 +1,6 @@
 package mattparks.mods.starcraft.moons.entities;
 
-import icbm.api.IMissile;
+import calclavia.api.icbm.IMissile;
 
 import java.util.ArrayList;
 
@@ -142,7 +142,7 @@ public class SCJupiterEntityRocketT5 extends EntityTieredRocket
     @Override
     public void onTeleport(EntityPlayerMP player)
     {
-        final GCCorePlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player);
+        final GCCorePlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, landing);
 
         player.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumPacketClient.ZOOM_CAMERA, new Object[] { 0 }));
 

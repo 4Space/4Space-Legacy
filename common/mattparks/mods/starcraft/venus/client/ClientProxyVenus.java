@@ -132,7 +132,7 @@ public class ClientProxyVenus extends CommonProxyVenus
         			player.motionY -= 0.062D;
         			player.motionY += 0.07 + player.rotationPitch * 2 / 150 * 0.063;
         			player.fallDistance = 3;
-            		world.spawnParticle("smoke", player.posX, player.posY - 1D, player.posZ, 5, -0.5, 5);
+//            		world.spawnParticle("smoke", player.posX, player.posY - 1D, player.posZ, 5, -0.5, 5);
         		}
         		
             if (type.equals(EnumSet.of(TickType.CLIENT)))

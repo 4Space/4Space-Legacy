@@ -3,7 +3,7 @@ package mattparks.mods.starcraft.vesta;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.Version;
+import mattparks.mods.MattCore.Version;
 import mattparks.mods.starcraft.vesta.blocks.VestaBlocks;
 import mattparks.mods.starcraft.vesta.dimension.SCVestaTeleportType;
 import mattparks.mods.starcraft.vesta.dimension.SCVestaWorldProvider;

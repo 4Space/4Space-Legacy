@@ -4,7 +4,6 @@ import java.util.Random;
 
 import mattparks.mods.starcraft.europa.EuropaCore;
 import mattparks.mods.starcraft.europa.dimension.SCEuropaWorldProvider;
-import mattparks.mods.starcraft.io.client.SCIoSkyProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
@@ -19,6 +18,14 @@ import net.minecraftforge.client.IRenderHandler;
 import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.client.FMLClientHandler;
+
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
 
 public class SCEuropaSkyProvider extends IRenderHandler
 {

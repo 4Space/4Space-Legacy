@@ -1,6 +1,6 @@
 package mattparks.mods.starcraft.venus.blocks;
 
-import mattparks.mods.starcraft.Version;
+import mattparks.mods.MattCore.Version;
 import mattparks.mods.starcraft.venus.CommonProxyVenus;
 import mattparks.mods.starcraft.venus.VenusCore;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;

@@ -29,6 +29,14 @@ import cpw.mods.fml.common.network.Player;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class ClientProxyJupiter extends CommonProxyJupiter
 {
     public class ClientPacketHandler implements IPacketHandler
@@ -55,6 +63,7 @@ public class ClientProxyJupiter extends CommonProxyJupiter
                     entity = player.worldObj.getEntityByID(entityID);
 
                     {
+                    	
                     }
 
                     player.openContainer.windowId = (Integer) packetReadout[0];
@@ -64,6 +73,7 @@ public class ClientProxyJupiter extends CommonProxyJupiter
                     entity = player.worldObj.getEntityByID(entityID);
 
                     {
+                    	
                     }
 
                     player.openContainer.windowId = (Integer) packetReadout[0];
@@ -84,6 +94,7 @@ public class ClientProxyJupiter extends CommonProxyJupiter
         @Override
         public void tickEnd(EnumSet<TickType> type, Object... tickData)
         {
+        	;
         }
 
         @Override
@@ -134,12 +145,6 @@ public class ClientProxyJupiter extends CommonProxyJupiter
         return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.water);
     }
 
-    {
-    }
-
-    {
-    }
-
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
     {
@@ -158,7 +163,7 @@ public class ClientProxyJupiter extends CommonProxyJupiter
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
-
+    	;
     }
 
     @Override

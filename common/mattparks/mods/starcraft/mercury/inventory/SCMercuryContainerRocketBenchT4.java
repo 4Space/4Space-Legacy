@@ -13,6 +13,14 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class SCMercuryContainerRocketBenchT4 extends Container
 {
     public SCMercuryInventoryRocketBenchT4 craftMatrix = new SCMercuryInventoryRocketBenchT4(this);

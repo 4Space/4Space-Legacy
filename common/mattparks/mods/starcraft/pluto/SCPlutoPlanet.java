@@ -8,6 +8,14 @@ import micdoodle8.mods.galacticraft.api.world.IPlanet;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.world.WorldProvider;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class SCPlutoPlanet implements IPlanet
 {
     private final IMapObject Pluto = new SCPlutoMapPlanet();
@@ -59,4 +67,10 @@ public class SCPlutoPlanet implements IPlanet
     {
         return true;
     }
+
+	@Override
+	public boolean forceStaticLoad() 
+	{
+		return true;
+	}
 }

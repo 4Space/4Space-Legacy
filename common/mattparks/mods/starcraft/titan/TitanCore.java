@@ -3,7 +3,7 @@ package mattparks.mods.starcraft.titan;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.Version;
+import mattparks.mods.MattCore.Version;
 import mattparks.mods.starcraft.titan.dimension.SCTitanTeleportType;
 import mattparks.mods.starcraft.titan.dimension.SCTitanWorldProvider;
 import mattparks.mods.starcraft.titan.network.SCTitanPacketHandlerServer;

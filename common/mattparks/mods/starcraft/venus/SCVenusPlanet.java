@@ -59,4 +59,10 @@ public class SCVenusPlanet implements IPlanet
     {
         return true;
     }
+
+	@Override
+	public boolean forceStaticLoad() 
+	{
+		return true;
+	}
 }

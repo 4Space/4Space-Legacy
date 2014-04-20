@@ -1,6 +1,6 @@
 package mattparks.mods.starcraft.mercury.blocks;
 
-import mattparks.mods.starcraft.Version;
+import mattparks.mods.MattCore.Version;
 import mattparks.mods.starcraft.mercury.CommonProxyMercury;
 import mattparks.mods.starcraft.mercury.MercuryCore;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -16,6 +16,14 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
+
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
 
 @Mod(name = MercuryBlocks.NAME, version = Version.LOCALMAJVERSION + "." + Version.LOCALMINVERSION + "." + Version.LOCALBUILDVERSION, useMetadata = true, modid = MercuryBlocks.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
 @NetworkMod(channels = { MercuryBlocks.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
@@ -79,8 +87,6 @@ public class MercuryBlocks
 
     public static final Block YellowGlowstone = new SCBlock(517, null).setHardness(0.3F).setStepSound(Block.soundGlassFootstep).setUnlocalizedName("YellowGlowstone").setLightValue(1.0f).setTextureName("starcraftmercury:glowstone_yellow").setCreativeTab(MercuryCore.starcraftMercuryTab);
 
-	public static final Block gravityGenerator = new SCMercuryGravityGenerator(986, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("GravityGenerator").setTextureName("starcraftmercury:GravityGenerator").setCreativeTab(MercuryCore.starcraftMercuryTab);
-
 	public static final Block caravanModule = new SCCaravanModule(927, null).setHardness(0.4F).setStepSound(Block.soundClothFootstep).setUnlocalizedName("caravanModule").setTextureName("starcraftmercury:caravanModule").setCreativeTab(MercuryCore.starcraftMercuryTab);
 
 	public static final Block caravanModulePart = new SCBlock(928, null).setHardness(30.0F).setStepSound(Block.soundClothFootstep).setUnlocalizedName("caravanModulePart").setTextureName("starcraftmercury:caravanModulePart");
@@ -122,7 +128,6 @@ public class MercuryBlocks
             	GameRegistry.registerBlock(MercuryBlocks.RedGlowstone, "RedGlowstone");
             	GameRegistry.registerBlock(MercuryBlocks.WhiteGlowstone, "WhiteGlowstone");
             	GameRegistry.registerBlock(MercuryBlocks.YellowGlowstone, "YellowGlowstone");
-                GameRegistry.registerBlock(MercuryBlocks.gravityGenerator, "GravityGenerator");
                 GameRegistry.registerBlock(MercuryBlocks.caravanModule, "CaravanModule");
                 GameRegistry.registerBlock(MercuryBlocks.caravanModulePart, "CaravanModulePart");
         }

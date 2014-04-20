@@ -12,6 +12,14 @@ import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class SCMercuryGuiSchematicRocketT4 extends GuiContainer implements ISchematicResultPage
 {
     private static final ResourceLocation tier4SchematicTexture = new ResourceLocation(MercuryCore.ASSET_DOMAIN, "textures/gui/schematic_rocket_T3.png");

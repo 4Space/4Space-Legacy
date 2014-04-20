@@ -3,7 +3,7 @@ package mattparks.mods.starcraft.sedna;
 import java.io.File;
 import java.util.HashMap;
 
-import mattparks.mods.starcraft.Version;
+import mattparks.mods.MattCore.Version;
 import mattparks.mods.starcraft.sedna.dimension.SCSednaTeleportType;
 import mattparks.mods.starcraft.sedna.dimension.SCSednaWorldProvider;
 import mattparks.mods.starcraft.sedna.entities.SCSednaEntityRocketT6;
