@@ -20,8 +20,10 @@ import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityZombie;
 import micdoodle8.mods.galacticraft.core.perlin.NoiseModule;
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
+import micdoodle8.mods.galacticraft.core.world.gen.GCCoreCraterSize;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
+import micdoodle8.mods.galacticraft.moon.world.gen.GCMoonChunkProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.entity.EnumCreatureType;
@@ -45,10 +47,13 @@ public class SCVenusChunkProvider extends ChunkProviderGenerate
 
     private final Random rand;
 
-    private final NoiseModule noiseGen1;
-    private final NoiseModule noiseGen2;
-    private final NoiseModule noiseGen3;
-    private final NoiseModule noiseGen4;
+	private final Gradient noiseGen1;
+	private final Gradient noiseGen2;
+	private final Gradient noiseGen3;
+	private final Gradient noiseGen4;
+	private final Gradient noiseGen5;
+	private final Gradient noiseGen6;
+	private final Gradient noiseGen7;
 
     public SCVenusBiomeDecorator biomedecoratorplanet = new SCVenusBiomeDecorator();
 
@@ -80,26 +85,44 @@ public class SCVenusChunkProvider extends ChunkProviderGenerate
 
     private final GCCoreMapGenBaseMeta caveGenerator = new SCVenusGenCaves();
 
-    private static final int CRATER_PROB = 300;
+	double[] noise1;
+	double[] noise2;
+	double[] noise3;
+	double[] noise4;
+	double[] noise5;
+	double[] noise6;
+	float[] field_35388_l;
+	int[][] field_914_i = new int[32][32];
+	
+	private static final double TERRAIN_HEIGHT_MOD = 7;
+	private static final double SMALL_FEATURE_HEIGHT_MOD = 26;
+	private static final double MOUNTAIN_HEIGHT_MOD = 95;
+	private static final double VALLEY_HEIGHT_MOD = 50;
+	private static final int CRATER_PROB = 7500;
 
-    // DO NOT CHANGE
-    private static final int MID_HEIGHT = 63;
-    private static final int CHUNK_SIZE_X = 16;
-    private static final int CHUNK_SIZE_Y = 128;
-    private static final int CHUNK_SIZE_Z = 16;
+	// DO NOT CHANGE
+	private static final int MID_HEIGHT = 93;
+	private static final int CHUNK_SIZE_X = 16;
+	private static final int CHUNK_SIZE_Y = 256;
+	private static final int CHUNK_SIZE_Z = 16;
+	private static final double MAIN_FEATURE_FILTER_MOD = 4;
+	private static final double LARGE_FEATURE_FILTER_MOD = 8;
+	private static final double SMALL_FEATURE_FILTER_MOD = 8;
 
-    public SCVenusChunkProvider(World par1World, long par2, boolean par4)
-    {
-        super(par1World, par2, par4);
-        this.worldObj = par1World;
-        this.rand = new Random(par2);
-        this.noiseGen1 = new Gradient(this.rand.nextLong(), 4, 0.25);
-        this.noiseGen2 = new Gradient(this.rand.nextLong(), 4, 0.25);
-        this.noiseGen3 = new Gradient(this.rand.nextLong(), 1, 0.25);
-        this.noiseGen4 = new Gradient(this.rand.nextLong(), 1, 0.25);
-        
-        SCVenusChunkProvider.blazeDungeonLocations = new ArrayList();
-    }
+	public SCVenusChunkProvider(World par1World, long par2, boolean par4)
+	{
+		super(par1World, par2, par4);
+		this.worldObj = par1World;
+		this.rand = new Random(par2);
+
+		this.noiseGen1 = new Gradient(this.rand.nextLong(), 4, 0.25);
+		this.noiseGen2 = new Gradient(this.rand.nextLong(), 4, 0.25);
+		this.noiseGen3 = new Gradient(this.rand.nextLong(), 4, 0.25);
+		this.noiseGen4 = new Gradient(this.rand.nextLong(), 2, 0.25);
+		this.noiseGen5 = new Gradient(this.rand.nextLong(), 1, 0.25);
+		this.noiseGen6 = new Gradient(this.rand.nextLong(), 1, 0.25);
+		this.noiseGen7 = new Gradient(this.rand.nextLong(), 1, 0.25);
+	}
 
     @Override
     public boolean canSave()
@@ -118,49 +141,96 @@ public class SCVenusChunkProvider extends ChunkProviderGenerate
         this.biomedecoratorplanet.decorate(par1World, par2Random, par3, par4);
     }
 
-    public void generateTerrain(int chunkX, int chunkZ, short[] idArray, byte[] metaArray)
-    {
-        this.noiseGen1.frequency = 0.0125;
-        this.noiseGen2.frequency = 0.015;
-        this.noiseGen3.frequency = 0.01;
-        this.noiseGen4.frequency = 0.02;
+	public void generateTerrain(int chunkX, int chunkZ, short[] idArray, byte[] metaArray)
+	{
+		this.noiseGen1.frequency = 0.015;
+		this.noiseGen2.frequency = 0.01;
+		this.noiseGen3.frequency = 0.01;
+		this.noiseGen4.frequency = 0.01;
+		this.noiseGen5.frequency = 0.01;
+		this.noiseGen6.frequency = 0.001;
+		this.noiseGen7.frequency = 0.005;
 
-        for (int x = 0; x < SCVenusChunkProvider.CHUNK_SIZE_X; x++)
-        {
-            for (int z = 0; z < SCVenusChunkProvider.CHUNK_SIZE_Z; z++)
-            {
-                final double d = this.noiseGen1.getNoise(x + chunkX * 16, z + chunkZ * 16) * 8;
-                final double d2 = this.noiseGen2.getNoise(x + chunkX * 16, z + chunkZ * 16) * 24;
-                double d3 = this.noiseGen3.getNoise(x + chunkX * 16, z + chunkZ * 16) - 0.1;
-                d3 *= 4;
+		for (int x = 0; x < SCVenusChunkProvider.CHUNK_SIZE_X; x++)
+		{
+			for (int z = 0; z < SCVenusChunkProvider.CHUNK_SIZE_Z; z++)
+			{
+				final double baseHeight = this.noiseGen1.getNoise(chunkX * 16 + x, chunkZ * 16 + z) * SCVenusChunkProvider.TERRAIN_HEIGHT_MOD;
+				final double smallHillHeight = this.noiseGen2.getNoise(chunkX * 16 + x, chunkZ * 16 + z) * SCVenusChunkProvider.SMALL_FEATURE_HEIGHT_MOD;
+				double mountainHeight = Math.abs(this.noiseGen3.getNoise(chunkX * 16 + x, chunkZ * 16 + z));
+				double valleyHeight = Math.abs(this.noiseGen4.getNoise(chunkX * 16 + x, chunkZ * 16 + z));
+				final double featureFilter = this.noiseGen5.getNoise(chunkX * 16 + x, chunkZ * 16 + z) * SCVenusChunkProvider.MAIN_FEATURE_FILTER_MOD;
+				final double largeFilter = this.noiseGen6.getNoise(chunkX * 16 + x, chunkZ * 16 + z) * SCVenusChunkProvider.LARGE_FEATURE_FILTER_MOD;
+				final double smallFilter = this.noiseGen7.getNoise(chunkX * 16 + x, chunkZ * 16 + z) * SCVenusChunkProvider.SMALL_FEATURE_FILTER_MOD - 0.5;
+				/*
+				 * if(largeFilter < 0.0) { featureDev = valleyHeight; } else
+				 * if(largeFilter > 1.0) { featureDev = mountainHeight; } else {
+				 * featureDev = valleyHeight + (mountainHeight - valleyHeight) *
+				 * (largeFilter); }
+				 * 
+				 * if(smallFilter < 0.0) { featureDev = smallHillHeight; } else
+				 * if(smallFilter < 1.0) { featureDev = smallHillHeight +
+				 * (featureDev - smallHillHeight) * (smallFilter); }
+				 */
 
-                double yDev = 0;
+				/*
+				 * if(featureFilter < 0.0) { yDev = baseHeight; } else
+				 * if(featureFilter > 1.0) { yDev = featureDev; } else { yDev =
+				 * baseHeight + (featureDev - baseHeight) * (featureFilter); }
+				 */
+				mountainHeight = this.lerp(smallHillHeight, mountainHeight * SCVenusChunkProvider.MOUNTAIN_HEIGHT_MOD, this.fade(this.clamp(mountainHeight * 2, 0, 1)));
+				valleyHeight = this.lerp(smallHillHeight, valleyHeight * SCVenusChunkProvider.VALLEY_HEIGHT_MOD - SCVenusChunkProvider.VALLEY_HEIGHT_MOD + 9, this.fade(this.clamp((valleyHeight + 2) * 4, 0, 1)));
 
-                if (d3 < 0.0D)
-                {
-                    yDev = d;
-                }
-                else if (d3 > 1.0D)
-                {
-                    yDev = d2;
-                }
-                else
-                {
-                    yDev = d + (d2 - d) * d3;
-                }
+				double yDev = this.lerp(valleyHeight, mountainHeight, this.fade(largeFilter));
+				yDev = this.lerp(smallHillHeight, yDev, smallFilter);
+				yDev = this.lerp(baseHeight, yDev, featureFilter);
 
-                for (int y = 0; y < SCVenusChunkProvider.CHUNK_SIZE_Y; y++)
-                {
-                    if (y < SCVenusChunkProvider.MID_HEIGHT + yDev)
-                    {
-                        idArray[this.getIndex(x, y, z)] = this.lowerBlockID;
-                        metaArray[this.getIndex(x, y, z)] = this.lowerBlockMeta;
-                    }
-                }
-            }
-        }
-    }
+				for (int y = 0; y < SCVenusChunkProvider.CHUNK_SIZE_Y; y++)
+				{
+					if (y < SCVenusChunkProvider.MID_HEIGHT + yDev)
+					{
+						idArray[this.getIndex(x, y, z)] = this.lowerBlockID;
+						metaArray[this.getIndex(x, y, z)] = this.lowerBlockMeta;
+					}
+				}
+			}
+		}
+	}
 
+	private double lerp(double d1, double d2, double t)
+	{
+		if (t < 0.0)
+		{
+			return d1;
+		}
+		else if (t > 1.0)
+		{
+			return d2;
+		}
+		else
+		{
+			return d1 + (d2 - d1) * t;
+		}
+	}
+
+	private double fade(double n)
+	{
+		return n * n * n * (n * (n * 6 - 15) + 10);
+	}
+
+	private double clamp(double x, double min, double max)
+	{
+		if (x < min)
+		{
+			return min;
+		}
+		if (x > max)
+		{
+			return max;
+		}
+		return x;
+	}
+	
     private int getIndex(int x, int y, int z)
     {
         return y << 8 | z << 4 | x;
@@ -171,6 +241,63 @@ public class SCVenusChunkProvider extends ChunkProviderGenerate
     {
         return 0;
     }
+    
+	public void createCraters(int chunkX, int chunkZ, short[] chunkArray, byte[] metaArray)
+	{
+		for (int cx = chunkX - 2; cx <= chunkX + 2; cx++)
+		{
+			for (int cz = chunkZ - 2; cz <= chunkZ + 2; cz++)
+			{
+				for (int x = 0; x < SCVenusChunkProvider.CHUNK_SIZE_X; x++)
+				{
+					for (int z = 0; z < SCVenusChunkProvider.CHUNK_SIZE_Z; z++)
+					{
+						if (Math.abs(this.randFromPoint(cx * 16 + x, (cz * 16 + z) * 1000)) < this.noiseGen4.getNoise(x * SCVenusChunkProvider.CHUNK_SIZE_X + x, cz * SCVenusChunkProvider.CHUNK_SIZE_Z + z) / SCVenusChunkProvider.CRATER_PROB)
+						{
+							final Random random = new Random(cx * 16 + x + (cz * 16 + z) * 5000);
+							final GCCoreCraterSize cSize = GCCoreCraterSize.sizeArray[random.nextInt(GCCoreCraterSize.sizeArray.length)];
+							final int size = random.nextInt(cSize.MAX_SIZE - cSize.MIN_SIZE) + cSize.MIN_SIZE;
+							this.makeCrater(cx * 16 + x, cz * 16 + z, chunkX * 16, chunkZ * 16, size, chunkArray, metaArray);
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	public void makeCrater(int craterX, int craterZ, int chunkX, int chunkZ, int size, short[] chunkArray, byte[] metaArray)
+	{
+		for (int x = 0; x < SCVenusChunkProvider.CHUNK_SIZE_X; x++)
+		{
+			for (int z = 0; z < SCVenusChunkProvider.CHUNK_SIZE_Z; z++)
+			{
+				double xDev = craterX - (chunkX + x);
+				double zDev = craterZ - (chunkZ + z);
+				if (xDev * xDev + zDev * zDev < size * size)
+				{
+					xDev /= size;
+					zDev /= size;
+					final double sqrtY = xDev * xDev + zDev * zDev;
+					double yDev = sqrtY * sqrtY * 6;
+					yDev = 5 - yDev;
+					int helper = 0;
+					for (int y = 127; y > 0; y--)
+					{
+						if (chunkArray[this.getIndex(x, y, z)] != 0 && helper <= yDev)
+						{
+							chunkArray[this.getIndex(x, y, z)] = 0;
+							metaArray[this.getIndex(x, y, z)] = 0;
+							helper++;
+						}
+						if (helper > yDev)
+						{
+							break;
+						}
+					}
+				}
+			}
+		}
+	}
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
@@ -181,7 +308,7 @@ public class SCVenusChunkProvider extends ChunkProviderGenerate
             final List monsters = new ArrayList();
             monsters.add(new SpawnListEntry(GCCoreEntityZombie.class, 8, 2, 3));
             monsters.add(new SpawnListEntry(GCCoreEntitySpider.class, 8, 2, 3));
-            monsters.add(new SpawnListEntry(SCVenusEntityEvolvedBlaze.class, 8, 2, 3));
+            monsters.add(new SpawnListEntry(SCVenusEntityEvolvedBlaze.class, 1, 2, 3));
             monsters.add(new SpawnListEntry(GCCoreEntitySkeleton.class, 8, 2, 3));
             monsters.add(new SpawnListEntry(GCCoreEntityCreeper.class, 8, 2, 3));
             return monsters;
@@ -230,6 +357,7 @@ public class SCVenusChunkProvider extends ChunkProviderGenerate
         final short[] ids = new short[32768 * 2];
         final byte[] meta = new byte[32768 * 2];
         this.generateTerrain(par1, par2, ids, meta);
+        this.createCraters(par1, par2, ids, meta);
         this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
         this.replaceBlocksForBiome(par1, par2, ids, meta, this.biomesForGeneration);
         this.caveGenerator.generate(this, this.worldObj, par1, par2, ids, meta);

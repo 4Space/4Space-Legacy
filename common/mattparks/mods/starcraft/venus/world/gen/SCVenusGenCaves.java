@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 public class SCVenusGenCaves extends GCCoreMapGenBaseMeta
 {
 
-    public static final int BREAK_THROUGH_CHANCE = 25; // 1 in n chance
+    public static final int BREAK_THROUGH_CHANCE = 50; // 1 in n chance
 
     protected void generateCaveNode(long par1, int par3, int par4, short[] blockIdArray, byte[] metaArray, double par6, double par8, double par10, float par12, float par13, float par14, int par15, int par16, double par17)
     {
@@ -163,7 +163,7 @@ public class SCVenusGenCaves extends GCCoreMapGenBaseMeta
 
                                         if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
                                         {
-                                            if (blockIdArray[coords] == VenusBlocks.VenusDirt.blockID)
+                                            if (blockIdArray[coords] == VenusBlocks.VenusStone.blockID)
                                             {
                                                 if (metaArray[coords] == 3 || metaArray[coords] == 4)
                                                 {

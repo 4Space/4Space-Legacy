@@ -2,6 +2,7 @@ package mattparks.mods.starcraft.venus.items;
 
 import mattparks.mods.starcraft.venus.VenusCore;
 import micdoodle8.mods.galacticraft.api.transmission.core.item.ItemElectric;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;

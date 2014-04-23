@@ -1,5 +1,9 @@
 package mattparks.mods.starcraft.venus.world.gen;
 
+import java.util.Random;
+
+import net.minecraft.world.World;
+
 public class SCVenusBiomeGenFlat extends SCVenusBiomeGenBase
 {
     public SCVenusBiomeGenFlat(int par1)

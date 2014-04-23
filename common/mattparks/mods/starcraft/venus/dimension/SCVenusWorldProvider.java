@@ -23,17 +23,16 @@ public class SCVenusWorldProvider extends WorldProvider implements IGalacticraft
 		super.setDimension(var1);
 	}
 
-	@Override
-	protected void generateLightBrightnessTable()
-	{
-		final float var1 = 0.0F;
+    protected void generateLightBrightnessTable()
+    {
+        float f = 0.0F;
 
-		for (int var2 = 0; var2 <= 15; ++var2)
-		{
-			final float var3 = 1.0F - var2 / 15.0F;
-			this.lightBrightnessTable[var2] = (1.0F - var3) / (var3 * 3.0F + 1.0F) * (1.0F - var1) + var1;
-		}
-	}
+        for (int i = 0; i <= 15; ++i)
+        {
+            float f1 = 1.0F - (float)i / 15.0F;
+            this.lightBrightnessTable[i] = (1.0F - f1) / (f1 * 3.0F + 1.0F) * (1.0F - f) + f;
+        }
+    }
 
 	@Override
 	public float[] calcSunriseSunsetColors(float var1, float var2)
@@ -107,7 +106,7 @@ public class SCVenusWorldProvider extends WorldProvider implements IGalacticraft
 	{
 		this.worldObj.getWorldInfo().setRainTime(0);
 		this.worldObj.getWorldInfo().setRaining(false);
-		this.worldObj.getWorldInfo().setThunderTime(25);
+		this.worldObj.getWorldInfo().setThunderTime(999999999);
 		this.worldObj.getWorldInfo().setThundering(true);
 	}
 
@@ -192,7 +191,7 @@ public class SCVenusWorldProvider extends WorldProvider implements IGalacticraft
 	@Override
 	public float getGravity()
 	{
-		return 0.025F;
+		return 0.021F;
 	}
 
 	@Override
@@ -222,7 +221,7 @@ public class SCVenusWorldProvider extends WorldProvider implements IGalacticraft
 	@Override
 	public float getFallDamageModifier()
 	{
-		return 0.38F;
+		return 0.9F;
 	}
 
 	@Override
