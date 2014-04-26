@@ -3,11 +3,11 @@ package mattparks.mods.starcraft.venus.world.gen.dungeon;
 import java.util.HashSet;
 import java.util.Random;
 
+import mattparks.mods.starcraft.venus.blocks.VenusBlocks;
+import mattparks.mods.starcraft.venus.tile.SCVenusTileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonBoundingBox;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonRoom;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
-import micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlocks;
-import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntityTreasureChest;
 import net.minecraft.block.Block;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.ForgeDirection;
@@ -61,7 +61,7 @@ public class SCVenusRoomTreasure extends GCCoreDungeonRoom
 		}
 		final int hx = (this.posX + this.posX + this.sizeX) / 2;
 		final int hz = (this.posZ + this.posZ + this.sizeZ) / 2;
-		if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, GCMarsBlocks.tier2TreasureChest.blockID, 0))
+		if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, VenusBlocks.T3Chest.blockID, 0))
 		{
 			this.chests.add(new ChunkCoordinates(hx, this.posY, hz));
 		}
@@ -88,8 +88,8 @@ public class SCVenusRoomTreasure extends GCCoreDungeonRoom
 
 			for (ChunkCoordinates coords : this.chests)
 			{
-				this.worldObj.setBlock(coords.posX, coords.posY, coords.posZ, GCMarsBlocks.tier2TreasureChest.blockID, 0, 3);
-				this.worldObj.setBlockTileEntity(coords.posX, coords.posY, coords.posZ, new GCMarsTileEntityTreasureChest());
+				this.worldObj.setBlock(coords.posX, coords.posY, coords.posZ, VenusBlocks.T3Chest.blockID, 0, 3);
+				this.worldObj.setBlockTileEntity(coords.posX, coords.posY, coords.posZ, new SCVenusTileEntityTreasureChest());
 				removeList.add(coords);
 			}
 

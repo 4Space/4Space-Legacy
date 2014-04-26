@@ -43,4 +43,9 @@ public class CommonProxyVenus implements IGuiHandler
     {
     	;
     }
+
+	public int getTreasureRenderID()
+	{
+		return -1;
+	}
 }

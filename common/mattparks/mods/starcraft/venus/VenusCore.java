@@ -1,7 +1,9 @@
 package mattparks.mods.starcraft.venus;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import mattparks.mods.MattCore.Version;
 import mattparks.mods.starcraft.venus.blocks.VenusBlocks;
@@ -15,13 +17,17 @@ import mattparks.mods.starcraft.venus.items.VenusItems;
 import mattparks.mods.starcraft.venus.network.SCVenusPacketHandlerServer;
 import mattparks.mods.starcraft.venus.recipe.SCVenusRecipeManager;
 import mattparks.mods.starcraft.venus.schematic.SCVenusSchematicRocketT3;
+import mattparks.mods.starcraft.venus.tile.SCVenusTileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
+import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import micdoodle8.mods.galacticraft.mars.items.GCMarsItems;
+import micdoodle8.mods.galacticraft.mars.schematic.GCMarsSchematicRocketT2;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
@@ -38,6 +44,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
@@ -74,13 +81,26 @@ public class VenusCore
     
     public static HashMap<String, ItemStack> blocksList = new HashMap<String, ItemStack>();
 
+	private static List<INasaWorkbenchRecipe> rocketBenchT3Recipes = new ArrayList<INasaWorkbenchRecipe>();
+	
+	public static List<INasaWorkbenchRecipe> getRocketT3Recipes()
+	{
+		return VenusCore.rocketBenchT3Recipes;
+	}
+	
+	public static void addT3RocketRecipe(INasaWorkbenchRecipe recipe)
+	{
+		VenusCore.rocketBenchT3Recipes.add(recipe);
+	}
+	
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
+    	SchematicRegistry.registerSchematicRecipe(new SCVenusSchematicRocketT3());
+    	GalacticraftRegistry.addDungeonLoot(2, new ItemStack(VenusItems.T3Schematic, 1, 0));
+    	
+    	
         int languages = 0;
-
-        SchematicRegistry.registerSchematicRecipe(new SCVenusSchematicRocketT3());
-        GalacticraftRegistry.addDungeonLoot(3, new ItemStack(VenusItems.T3Schematic, 1, 1));
         
         for (String language : VenusCore.LANGUAGES_SUPPORTED)
         {
@@ -167,7 +187,7 @@ public class VenusCore
 
     public void registerTileEntities()
     {
-            ;
+    	GameRegistry.registerTileEntity(SCVenusTileEntityTreasureChest.class, "Tier 3 Treasure Chest");
     }
 
     @EventHandler

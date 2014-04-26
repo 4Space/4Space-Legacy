@@ -73,6 +73,8 @@ public class VenusBlocks
 	public static final Block VenusianTNT = new SCVenusVenusianTNT(785, null).setHardness(1.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VenusianTNT").setTextureName("starcraftvenus:venusianTNT").setCreativeTab(VenusCore.starcraftVenusTab);
 
 	public static final Block VurnBerryBush = new SCVenusVurnBerryBush(786).setHardness(0.25F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("VurnBerryBush").setTextureName("starcraftvenus:VurnBerryBush").setCreativeTab(VenusCore.starcraftVenusTab);
+	
+	public static final Block T3Chest = new SCVenusT3TreasureChest(787).setHardness(999999.99F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("T3Chest").setCreativeTab(VenusCore.starcraftVenusTab);
 
         @Instance(value = "VenusBlocks")
         public static VenusBlocks instance;
@@ -106,6 +108,7 @@ public class VenusBlocks
                 GameRegistry.registerBlock(VenusBlocks.VenusDecorationBlock, "VenusDecorationBlock");
                 GameRegistry.registerBlock(VenusBlocks.CrystalBlock, "CrystalBlock");
                 GameRegistry.registerBlock(VenusBlocks.VenusGlowstoneOre, "VenusGlowstoneOre");
+                GameRegistry.registerBlock(VenusBlocks.T3Chest, "T3Chest");
         }
         
         @EventHandler

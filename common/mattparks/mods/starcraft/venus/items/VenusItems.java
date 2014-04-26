@@ -2,6 +2,9 @@ package mattparks.mods.starcraft.venus.items;
 
 import mattparks.mods.starcraft.venus.SCVenusConfigManager;
 import mattparks.mods.starcraft.venus.blocks.VenusBlocks;
+import micdoodle8.mods.galacticraft.mars.GCMarsConfigManager;
+import micdoodle8.mods.galacticraft.mars.items.GCMarsItemSchematic;
+import micdoodle8.mods.galacticraft.mars.items.GCMarsItems;
 import net.minecraft.block.Block;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
@@ -41,6 +44,8 @@ public class VenusItems
     
     public static Item T3Schematic;
     public static Item spaceshipT3;
+    
+    public static Item key;
     
     public static EnumArmorMaterial ARMORSULFER = EnumHelper.addArmorMaterial("SULFER", 42, new int[] { 4, 9, 7, 4 }, 12);
     public static EnumToolMaterial TOOLSULFER = EnumHelper.addToolMaterial("SULFER", 3, 1024, 5.0F, 2.5F, 8);
@@ -82,10 +87,12 @@ public class VenusItems
 
         VenusItems.VurnBerryOnAStick = new SCVenusItemVurnBerryOnAStick(SCVenusConfigManager.idVurnBerryOnAStick).setUnlocalizedName("vurnBerryOnAStick").setTextureName("starcraftvenus:vurnBerryOnAStick");
         
-        VenusItems.T3Schematic = new SCVenusItemSchematic(SCVenusConfigManager.idTtemVenusT3Schematic);
+        VenusItems.T3Schematic = new SCVenusItemSchematic(SCVenusConfigManager.idSchematicRocketT3).setUnlocalizedName("T3Schematic");
         VenusItems.spaceshipT3 = new SCVenusItemSpaceshipTier3(SCVenusConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");
     
         VenusItems.jetpack = new SCVenusItemJetpack(SCVenusConfigManager.idJetpack, VenusItems.ARMORJETPACK, 7, 1, false).setUnlocalizedName("jetpack");
+
+        VenusItems.key = new SCVenusItemKey(SCVenusConfigManager.idItemKeyT3).setUnlocalizedName("key");
     }
     
     public static void registerHarvestLevels()

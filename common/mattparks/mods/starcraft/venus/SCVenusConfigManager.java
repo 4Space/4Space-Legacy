@@ -23,6 +23,7 @@ public class SCVenusConfigManager
     public static int idTtemVenusT3Schematic;
     public static int idVurnBerry;
     public static int idItemSpaceshipTier3;
+    public static int idItemKeyT3;
 
     // BLOCKS
 //    public static int idVenusGrass;
@@ -159,6 +160,8 @@ public class SCVenusConfigManager
             SCVenusConfigManager.idItemVenusBattery = SCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemVenusBattery", 7871).getInt(7871);
             SCVenusConfigManager.idVurnBerry = SCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idVurnBerry", 7872).getInt(7872);
             SCVenusConfigManager.idVurnBerryOnAStick = SCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idVurnBerryOnAStick", 7879).getInt(7879);
+            
+            SCVenusConfigManager.idItemKeyT3 = SCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemKeyT3", 8879).getInt(8879);
             
             SCVenusConfigManager.idJetpack = SCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idJetpack", 8879).getInt(8879);
 

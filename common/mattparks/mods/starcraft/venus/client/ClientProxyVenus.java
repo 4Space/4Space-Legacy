@@ -8,10 +8,12 @@ import java.util.EnumSet;
 import mattparks.mods.starcraft.venus.CommonProxyVenus;
 import mattparks.mods.starcraft.venus.VenusCore;
 import mattparks.mods.starcraft.venus.client.model.SCCoreModelSpaceshipTier3;
+import mattparks.mods.starcraft.venus.client.render.block.SCVenusBlockRendererTreasureChest;
 import mattparks.mods.starcraft.venus.client.render.entities.SCVenusRenderEvolvedBlaze;
 import mattparks.mods.starcraft.venus.client.render.entities.SCVenusRenderFlameling;
 import mattparks.mods.starcraft.venus.client.render.entities.SCVenusRenderVenusianVillager;
 import mattparks.mods.starcraft.venus.client.render.item.SCVenusItemRendererSpaceshipT3;
+import mattparks.mods.starcraft.venus.client.render.tile.SCVenusTileEntityTreasureChestRenderer;
 import mattparks.mods.starcraft.venus.dimension.SCVenusWorldProvider;
 import mattparks.mods.starcraft.venus.entities.SCVenusEntityEvolvedBlaze;
 import mattparks.mods.starcraft.venus.entities.SCVenusEntityFlameling;
@@ -19,10 +21,12 @@ import mattparks.mods.starcraft.venus.entities.SCVenusEntityRocketT3;
 import mattparks.mods.starcraft.venus.entities.SCVenusEntityVenusianVillager;
 import mattparks.mods.starcraft.venus.items.SCVenusItemJetpack;
 import mattparks.mods.starcraft.venus.items.VenusItems;
+import mattparks.mods.starcraft.venus.tile.SCVenusTileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
 import micdoodle8.mods.galacticraft.core.client.sounds.GCCoreSoundUpdaterSpaceship;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
+import micdoodle8.mods.galacticraft.mars.client.ClientProxyMars;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SoundPoolEntry;
@@ -38,6 +42,7 @@ import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.TickType;
@@ -51,6 +56,8 @@ import cpw.mods.fml.relauncher.Side;
 
 public class ClientProxyVenus extends CommonProxyVenus
 {
+	private static int treasureRenderID;
+	
     public class ClientPacketHandler implements IPacketHandler
     {
         @Override
@@ -205,12 +212,21 @@ public class ClientProxyVenus extends CommonProxyVenus
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
-    	;
+		ClientProxyVenus.treasureRenderID = RenderingRegistry.getNextAvailableRenderId();
+		RenderingRegistry.registerBlockHandler(new SCVenusBlockRendererTreasureChest(ClientProxyVenus.treasureRenderID));
     }
 
+	@Override
+	public int getTreasureRenderID()
+	{
+		return ClientProxyVenus.treasureRenderID;
+	}
+	
     @Override
     public void registerRenderInformation()
     {
+    	ClientRegistry.bindTileEntitySpecialRenderer(SCVenusTileEntityTreasureChest.class, new SCVenusTileEntityTreasureChestRenderer());
+    	
         RenderingRegistry.addNewArmourRendererPrefix("gem");
         RenderingRegistry.addNewArmourRendererPrefix("sulfer");
         RenderingRegistry.addNewArmourRendererPrefix("jetpack");
