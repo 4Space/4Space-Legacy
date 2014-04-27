@@ -8,6 +8,14 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.IGuiHandler;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+ 
 public class CommonProxyMoons implements IGuiHandler
 {
     @Override

@@ -19,6 +19,14 @@ import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.client.FMLClientHandler;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+ 
 public class SCErisSkyProvider extends IRenderHandler
 {
     private static final ResourceLocation sunTexture = new ResourceLocation(ErisCore.ASSET_DOMAIN, "textures/gui/planets/sun.png");

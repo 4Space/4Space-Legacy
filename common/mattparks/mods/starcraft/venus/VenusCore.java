@@ -25,6 +25,7 @@ import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
+import micdoodle8.mods.galacticraft.core.recipe.GCCoreNasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.mars.items.GCMarsItems;
 import micdoodle8.mods.galacticraft.mars.schematic.GCMarsSchematicRocketT2;
@@ -91,6 +92,11 @@ public class VenusCore
 	public static void addT3RocketRecipe(INasaWorkbenchRecipe recipe)
 	{
 		VenusCore.rocketBenchT3Recipes.add(recipe);
+	}
+	
+	public static void addT3RocketRecipe(GCCoreNasaWorkbenchRecipe recipe) 
+	{
+		;
 	}
 	
     @EventHandler

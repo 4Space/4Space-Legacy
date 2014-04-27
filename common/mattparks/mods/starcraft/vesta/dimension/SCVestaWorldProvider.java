@@ -78,7 +78,7 @@ public class SCVestaWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 4;
+        return tier >= 2;
     }
 
     @Override

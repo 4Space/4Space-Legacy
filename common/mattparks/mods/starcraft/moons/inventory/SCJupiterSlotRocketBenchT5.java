@@ -11,6 +11,14 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+ 
 public class SCJupiterSlotRocketBenchT5 extends Slot
 {
     private final int index;

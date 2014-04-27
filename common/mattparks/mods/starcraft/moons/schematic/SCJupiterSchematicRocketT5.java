@@ -12,6 +12,14 @@ import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+ 
 public class SCJupiterSchematicRocketT5 implements ISchematicPage
 {
     @Override

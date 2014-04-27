@@ -1,8 +1,8 @@
 package mattparks.mods.starcraft.europa.dimension;
 
 import mattparks.mods.starcraft.europa.SCEuropaConfigManager;
-import mattparks.mods.starcraft.europa.world.gen.SCEuropaChunkProvider;
-import mattparks.mods.starcraft.europa.world.gen.SCEuropaWorldChunkManager;
+import mattparks.mods.starcraft.europa.wgen.SCEuropaChunkProvider;
+import mattparks.mods.starcraft.europa.wgen.SCEuropaWorldChunkManager;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
@@ -86,7 +86,7 @@ public class SCEuropaWorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 5;
+        return tier >= 2;
     }
 
     @Override

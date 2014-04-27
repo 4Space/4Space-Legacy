@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.europa.world.gen;
+package mattparks.mods.starcraft.europa.wgen;
 
 /**
  * This file is part of the 4-Space project

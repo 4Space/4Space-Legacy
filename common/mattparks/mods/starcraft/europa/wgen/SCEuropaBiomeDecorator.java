@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.europa.world.gen;
+package mattparks.mods.starcraft.europa.wgen;
 
 import java.util.Random;
 

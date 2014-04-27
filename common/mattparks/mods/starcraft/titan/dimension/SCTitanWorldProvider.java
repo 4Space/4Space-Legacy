@@ -78,7 +78,7 @@ public class SCTitanWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 5;
+        return tier >= 2;
     }
 
     @Override
@@ -123,12 +123,18 @@ public class SCTitanWorldProvider extends WorldProvider implements IGalacticraft
         return 0.38F;
     }
 
-    @SideOnly(Side.CLIENT)
-    @Override
-    public Vec3 getFogColor(float var1, float var2)
-    {
-        return this.worldObj.getWorldVec3Pool().getVecFromPool((double) 0F / 255F, (double) 0F / 255F, (double) 0F / 255F);
-    }
+	@SideOnly(Side.CLIENT)
+	@Override
+	public Vec3 getFogColor(float var1, float var2)
+	{
+		return this.worldObj.getWorldVec3Pool().getVecFromPool((double) 100F / 255F, (double) 120F / 255F, (double) 59F / 255F);
+	}
+
+	@Override
+	public Vec3 getSkyColor(Entity cameraEntity, float partialTicks)
+	{
+		return this.worldObj.getWorldVec3Pool().getVecFromPool(145 / 300.0F, 125 / 200.0F, 50 / 255.0F);
+	}
 
     @Override
     public double getFuelUsageMultiplier()
@@ -164,12 +170,6 @@ public class SCTitanWorldProvider extends WorldProvider implements IGalacticraft
     public String getSaveFolder()
     {
         return "DIM" + SCTitanConfigManager.dimensionIDTitan;
-    }
-
-    @Override
-    public Vec3 getSkyColor(Entity cameraEntity, float partialTicks)
-    {
-        return this.worldObj.getWorldVec3Pool().getVecFromPool(0, 0, 0);
     }
 
     @Override

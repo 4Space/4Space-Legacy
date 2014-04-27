@@ -1,4 +1,4 @@
-package mattparks.mods.starcraft.europa.world.gen;
+package mattparks.mods.starcraft.europa.wgen;
 
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.ColorizerGrass;

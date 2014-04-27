@@ -86,7 +86,7 @@ public class SCCallistoWorldProvider extends WorldProvider implements IGalacticr
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 5;
+        return tier >= 2;
     }
 
     @Override

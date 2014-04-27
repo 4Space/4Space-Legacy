@@ -3,6 +3,14 @@ package mattparks.mods.starcraft.eris.items;
 import mattparks.mods.starcraft.eris.SCErisConfigManager;
 import net.minecraft.item.Item;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+ 
 public class ErisItems
 {
     public static Item erisItemBasic;

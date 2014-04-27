@@ -32,6 +32,14 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraftforge.common.ForgeDirection;
 
+/**
+ * This file is part of the 4-Space project
+ * 
+ * @author mattparks
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+ 
 public class SCErisChunkProvider extends ChunkProviderGenerate
 {
     final short topBlockID = (short) ErisBlocks.ErisGrass.blockID;
